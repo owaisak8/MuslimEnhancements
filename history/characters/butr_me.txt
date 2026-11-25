@@ -2,7 +2,7 @@
 me_butr_001 = {
 	name = "Arus" # Arus ibn Sindi, Ruled Biskara in 1066, his family may have been in power longer
 	dynasty = me_sindid_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 	trait = deceitful
 	trait = education_intrigue_3
@@ -19,7 +19,7 @@ me_butr_001 = {
 me_butr_002 = {
 	name = "Sindi" 
 	dynasty = me_sindid_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 
 	1000.1.1 = {
@@ -33,7 +33,7 @@ me_butr_002 = {
 me_butr_003 = {
 	name = "Musa" # Musa ibn Jalid, Leader of the Maghila Berbers during al-Bakri's time (around 1068) [idea shamelessly stolen from IBL]
 	dynasty = me_maghila_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 	trait = zenata
 	
@@ -49,7 +49,7 @@ me_butr_003 = {
 me_butr_004 = {
 	name = "Jalid"
 	dynasty = me_maghila_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 	trait = zenata
 	
@@ -64,7 +64,7 @@ me_butr_004 = {
 me_butr_005 = {
 	name = "Muhammad" # Muhammad ibn Aswad ibn Shu'ayb al-Sadini, was a Qadi in Sicily [idea shamelessly stolen from IBL]
 	dynasty = me_sadina_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 	trait = zenata
 	
@@ -83,7 +83,7 @@ me_butr_005 = {
 me_butr_006 = {
 	name = "Aswad"
 	dynasty = me_sadina_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 	trait = zenata
 	
@@ -102,7 +102,7 @@ me_butr_006 = {
 me_butr_007 = {
 	name = "Shu_ayb"
 	dynasty = me_sadina_dynasty
-	religion = ashari
+	rite = shafii
 	culture = butr
 	trait = zenata
 	
@@ -118,7 +118,7 @@ me_butr_007 = {
 me_zenata_001 = {
 	name = "Yaslatayn" # Forefather of the Ifranid and Maghrawid tribes
 	dynasty = me_zenata_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -134,7 +134,7 @@ me_zenata_001 = {
 me_zenata_002 = {
 	name = "Masra" 
 	dynasty = me_zenata_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -150,7 +150,7 @@ me_zenata_002 = {
 me_zenata_003 = {
 	name = "Zakya" 
 	dynasty = me_zenata_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -166,7 +166,7 @@ me_zenata_003 = {
 me_zenata_004 = {
 	name = "Warsik" 
 	dynasty = me_zenata_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -182,7 +182,7 @@ me_zenata_004 = {
 me_zenata_005 = {
 	name = "Aldayrat" 
 	dynasty = me_zenata_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -198,7 +198,7 @@ me_zenata_005 = {
 me_zenata_006 = {
 	name = "Ja_na_" # Also known as Zenata/Shana, Forefather of the Zenata
 	dynasty = me_zenata_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -214,7 +214,7 @@ me_zenata_006 = {
 me_zenata_007 = {
 	name = "Yarnayan" # Forefather of the Banu Yarnayan (Couldn't find any historical descendants outside of Marinid Vizier Ibrahim ibn Isa and his family)
 	dynasty = me_yarnayanid_dynasty
-	religion = pagan
+	rite = pagan
 	culture = butr
 	trait = zenata
 
@@ -231,7 +231,7 @@ me_zenata_007 = {
 me_khalafi_001 = {
 	name = "al-Samh" # al-Samh ibn Abu al-Khattab al Ma'afiri
 	dynasty = 1069090 #al-Ma'afiri
-	religion = wahbiya
+	rite = wahbiya
 	culture = maghrebi
 
 	father = 273125 # Abu al-Khattab al Ma'afiri (exists in butr.txt)
@@ -245,7 +245,7 @@ me_khalafi_001 = {
 me_khalafi_002 = {
 	name = "Khalaf" # Khalaf ibn al-Samh, founder of the Khalafiyya Ibadi sub-sect
 	dynasty = 1069090 #al-Ma'afiri
-	religion = ibadi # Khalafiyya
+	rite = ibadi # Khalafiyya
 	culture = maghrebi
 
 	father = me_khalafi_001 # al-Samh ibn Abu al-Khattab al Ma'afiri
@@ -259,7 +259,7 @@ me_khalafi_002 = {
 me_khalafi_003 = {
 	name = "al-Samh" # ibn Khalaf, first name is unknown
 	dynasty = 1069090 #al-Ma'afiri
-	religion = ibadi # Khalafiyya
+	rite = ibadi # Khalafiyya
 	culture = maghrebi
 
 	father = me_khalafi_002 # Khalaf ibn al-Samh
@@ -267,7 +267,7 @@ me_khalafi_003 = {
 		birth = yes
 	}
 	900.1.1 = {
-		religion = wahbiya # Converts to Wahbi soon after being captured
+		rite = wahbiya # Converts to Wahbi soon after being captured
 	}
 	905.1.1 = {
 		death = yes
@@ -278,7 +278,7 @@ me_khalafi_003 = {
 me_nefusa_001 = {
 	name = "Ayyub" # Abu al-Hassan Ayyub, First governer of Jabal Nefusa 
 	dynasty = me_nefusa_ayyubid # Ayyubid
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	770.1.1 = {
@@ -291,7 +291,7 @@ me_nefusa_001 = {
 me_nefusa_002 = {
 	name = "Ayyub" # al-Hassan ibn Ayyub
 	dynasty = me_nefusa_ayyubid # Ayyubid
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	father = me_nefusa_001 # Abu al-Hassan Ayyub
@@ -305,11 +305,11 @@ me_nefusa_002 = {
 me_nefusa_003 = {
 	name = "Abd_al-Hamid" # Abu 'Ubayda 'Abd al-Hamid al-Djanāwunī, Second governer of Jabal Nefusa 
 	dynasty = me_al_djanawuni # al-Djanāwunī
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 	trait = zealous
 	trait = education_learning_4
-	trait = scholar
+	trait = erudite
 
 	810.1.1 = {
 		birth = yes
@@ -327,7 +327,7 @@ me_nefusa_003 = {
 me_nefusa_004 = {
 	name = "Ubaydah" # Ubayda ibn 'Abd al-Hamid al-Djanāwunī
 	dynasty = me_al_djanawuni # al-Djanāwunī
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	father = me_nefusa_003 # Abu 'Ubayda 'Abd al-Hamid al-Djanāwunī
@@ -341,7 +341,7 @@ me_nefusa_004 = {
 me_nefusa_005 = {
 	name = "Ilyas" # Abu Mansur Ilyas, governer of Jabal Nefusa during the time of Ahmad ibn Tulun of Egypt
 	dynasty = me_nefusa_ilyasid # Ilyasid
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	840.1.1 = {
@@ -354,7 +354,7 @@ me_nefusa_005 = {
 me_nefusa_006 = {
 	name = "Ilyas" # Mansur ibn Ilyas
 	dynasty = me_nefusa_ilyasid # Ilyasid
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	father = me_nefusa_005 # Abu Mansur Ilyas
@@ -368,7 +368,7 @@ me_nefusa_006 = {
 me_nefusa_007 = {
 	name = "Zakariyya" # Abu Yahya Zakariyya al-Irdjānī, last Wahbi Imam of North Africa
 	dynasty = me_al_irdjani # al-Irdjānī
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	865.1.1 = {
@@ -383,7 +383,7 @@ me_nefusa_007 = {
 me_nefusa_008 = {
 	name = "Yahya" # Yahya ibn Zakariyya al-Irdjānī
 	dynasty = me_al_irdjani # al-Irdjānī
-	religion = wahbiya
+	rite = wahbiya
 	culture = butr 
 
 	father = me_nefusa_007
@@ -399,7 +399,7 @@ me_nefusa_008 = {
 me_syrte_001 = {
 	name = "Abdallah" # Ibn Ṣaghir al-Barbari al-Masmudi, First name is Unknown
 	dynasty = me_saghirid # Ṣaghirid
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = masmudi
 
@@ -414,7 +414,7 @@ me_syrte_001 = {
 me_syrte_002 = {
 	name = "Saghir" # Ibn Ṣaghir al-Barbari al-Masmudi
 	dynasty = me_saghirid # Ṣaghirid
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = masmudi
 
@@ -431,7 +431,7 @@ me_sijilmasa_001 = {
 	name = "Isa" # 'Isa ibn Mazyad al-Aswad, Founder of Sijilmasa
 	dynasty = sijilmasa_mazyadid
 	give_nickname = nick_al_aswad
-	religion = sufri
+	rite = sufri
 	culture = ethiopian # He was the son of a black african convert of unknown origin.
 
 	father = me_sijilmasa_020
@@ -447,7 +447,7 @@ me_sijilmasa_001 = {
 me_sijilmasa_020 = {
 	name = "Mazyad" # Mazyad , Father of 'Isa al-Aswad
 	dynasty = sijilmasa_mazyadid
-	religion = sufri
+	rite = sufri
 	culture = ethiopian # He was a black african convert of unknown origin.
 
 	700.1.1 = {
@@ -460,7 +460,7 @@ me_sijilmasa_020 = {
 me_sijilmasa_002 = {
 	name = "Samgu" # Abu al-Qasim Samgu ibn Wasul al-Miknasi, Second leader of Sijilmasa
 	dynasty = sijilmasa_miknasi # al-Miknasi
-	religion = "sufri"
+	rite = "sufri"
 	culture = butr
 	trait = miknasa
 	trait = education_learning_3
@@ -476,7 +476,7 @@ me_sijilmasa_002 = {
 #Post-Fatimid invasion rulers of Sijilmasa
 me_sijilmasa_003 = {
 	name = "Ibrahim" # Ibrahim ibn Ghaleb, Fatimid governer of Sijilmasa
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis #kutama
 	trait = kutama
 
@@ -490,7 +490,7 @@ me_sijilmasa_003 = {
 me_sijilmasa_004 = {
 	name = "al-Fath_Wasul" # 'al-Fath' Wasul ibn Maymún ibn Thakîya/Baqia
 	dynasty = 1101265
-	religion = "ibadi"
+	rite = "ibadi"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -508,7 +508,7 @@ me_sijilmasa_004 = {
 me_sijilmasa_005 = {
 	name = "Ahmad" # Ahmad ibn 'al-Fath' Wasul
 	dynasty = 1101265
-	religion = "ibadi"
+	rite = "ibadi"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -523,7 +523,7 @@ me_sijilmasa_005 = {
 me_sijilmasa_006 = {
 	name = "Saru" # Saru ibn Maymún ibn Thakîya/Baqia
 	dynasty = 1101265
-	religion = "sufri"
+	rite = "sufri"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -541,7 +541,7 @@ me_sijilmasa_006 = {
 me_sijilmasa_007 = {
 	name = "Muhammad" # Muhammad ibn Saru ibn Maymún ibn Thakîya/Baqia
 	dynasty = 1101265
-	religion = "sufri"
+	rite = "sufri"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -557,7 +557,7 @@ me_sijilmasa_008 = {
 	name = "Muhammad" # Muhammad 'al-Mu'tazz' ibn Muhammad ibn Saru
 	dynasty = 1101265
 	give_nickname = nick_al_mutazz
-	religion = "sufri"
+	rite = "sufri"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -572,7 +572,7 @@ me_sijilmasa_008 = {
 me_sijilmasa_009 = {
 	name = "Muhammad" # Muhammad ibn Muhammad 'al-Mu'tazz'
 	dynasty = 1101265
-	religion = "sufri"
+	rite = "sufri"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -587,7 +587,7 @@ me_sijilmasa_009 = {
 me_sijilmasa_010 = {
 	name = "Muhammad" #  Muhammad ibn Muhammad ibn Muhammad 'al-Mu'tazz'
 	dynasty = 1101265
-	religion = "sufri"
+	rite = "sufri"
 	culture = butr #zanata
 	trait = miknasa
 
@@ -602,7 +602,7 @@ me_sijilmasa_010 = {
 me_sijilmasa_011 = {
 	name = "Muhammad" # Muhammad ibn 'al-Fath' Wasul
 	dynasty = 1101265
-	religion = "ashari" #Technically Muwalladi
+	rite = "shafii" #Technically Muwalladi
 	culture = butr #zanata
 	trait = miknasa
 
@@ -620,7 +620,7 @@ me_sijilmasa_011 = {
 me_sijilmasa_012 = {
 	name = "Abdallah" # Abu Muhammad Abdallah ibn Muhammad ibn Muhammad ibn Muhammad 'al-Mu'tazz'
 	dynasty = 1101265
-	religion = "sufri" 
+	rite = "sufri" 
 	culture = butr #zanata
 	trait = miknasa
 
@@ -635,7 +635,7 @@ me_sijilmasa_012 = {
 
 me_sijilmasa_013 = {
 	name = "Hasan" # Placeholder for Fatimid Governer
-	religion = "ismaili" 
+	rite = "ismaili" 
 	culture = baranis #zanata
 
 	920.1.1 = {
@@ -651,7 +651,7 @@ me_sijilmasa_013 = {
 me_maghrawa_pre_1 = {
 	name = "Maghraw" # Maghrāw, founder of the Maghrawid dynasty
 	dynasty = 1027001 # Maghrawid dynasty
-	religion = "pagan"
+	rite = "pagan"
 	culture = butr #zanata
 	trait = zenata
 
@@ -666,7 +666,7 @@ me_maghrawa_pre_1 = {
 me_maghrawa_pre_2 = {
 	name = "Wanzamar" # Wanzamār/Wazmār ibn Maghrāw
 	dynasty = 1027001 # Maghrawid dynasty
-	religion = "catholic"
+	rite = roman_rite
 	culture = butr #zanata
 	trait = zenata
 
@@ -682,7 +682,7 @@ me_maghrawa_pre_2 = {
 me_maghrawa_001 = {
 	name = "Sulat" # Ṣūlāt ibn Wanzamār/Wazmār ibn Maghrāw, Apparently met Caliph Uthman ibn Affan who appointed him as leader of his people
 	dynasty = 1027001 # Maghrawid dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr #zanata
 	trait = zenata
 	trait = zealous
@@ -699,7 +699,7 @@ me_maghrawa_001 = {
 me_maghrawa_002 = {
 	name = "Khazar" # Khazar ibn Ḥafṣ of Banu Khazar
 	dynasty_house = house_me_khazarids # Banu Khazar
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -715,7 +715,7 @@ me_maghrawa_002 = {
 me_maghrawa_003 = {
 	name = "Muhammad" # Muhammad ibn Khazar ibn Ḥafṣ
 	dynasty_house = house_me_khazarids # Banu Khazar
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -731,7 +731,7 @@ me_maghrawa_003 = {
 me_maghrawa_004 = {
 	name = "Hamza" # Hamza ibn Muhammad ibn Khazar
 	dynasty_house = house_me_khazarids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -747,7 +747,7 @@ me_maghrawa_004 = {
 me_maghrawa_005 = {
 	name = "Futuh" # Futuh ibn al-Khayr ibn Muhammad
 	dynasty_house = house_me_khazarids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -763,7 +763,7 @@ me_maghrawa_005 = {
 me_maghrawa_006 = {
 	name = "al-Khayr" # al-Khayr ibn Muhammad ibn al-Khayr ibn Muhammad
 	dynasty_house = house_me_khazarids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -780,7 +780,7 @@ me_maghrawa_006 = {
 me_maghrawa_007 = {
 	name = "Muhammad" # Muhammad ibn al-Khayr Muhammad ibn al-Khayr ibn Muhammad
 	dynasty_house = house_me_khazarids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -796,7 +796,7 @@ me_maghrawa_007 = {
 me_maghrawa_008 = {
 	name = "Ma_bad" # Ma'abad ibn Khazar ibn Muhammad
 	dynasty_house = house_me_khazarids # Banu Khazar
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -808,7 +808,7 @@ me_maghrawa_008 = {
 		employer = 159506
 	}
 	940.1.1 = {
-		religion = "nukkari" # Joined Abu Yazid 'Sahib al-Himar' in his revolt
+		rite = "nukkari" # Joined Abu Yazid 'Sahib al-Himar' in his revolt
 	}
 	951.1.1 = {
 		death = {
@@ -821,7 +821,7 @@ me_maghrawa_008 = {
 me_maghrawa_009 = {
 	name = "Mas_ud" # Mas'ud ibn Wanudin
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -836,7 +836,7 @@ me_maghrawa_009 = {
 me_maghrawa_010 = {
 	name = "Muhammad" # Muhammad ibn Mas'ud
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = ashari 
+	rite = shafii 
 	culture = butr #zanata
 	trait = zenata
 
@@ -852,7 +852,7 @@ me_maghrawa_010 = {
 me_maghrawa_011 = {
 	name = "Umar" # Umar ibn Khazar, Led the Zenata tribes against the Fatimids, not much else is known
 	dynasty_house = house_me_khazarids # Banu Khazar
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -871,7 +871,7 @@ me_maghrawa_011 = {
 me_maghrawa_012 = {
 	name = "al-Mu_izz" # al-Mu'izz ibn Muhammad ibn Khazar, Governed Oran under his father
 	dynasty_house = house_me_khazarids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -887,7 +887,7 @@ me_maghrawa_012 = {
 me_maghrawa_013 = {
 	name = "Khazar" # al-Khayr ibn Muhammad ibn al-Khayr, Fought alongside his father against the Sanhaja
 	dynasty_house = house_me_khazarids
-	religion = ashari
+	rite = shafii
 	culture = butr #zanata
 	trait = zenata
 
@@ -903,7 +903,7 @@ me_maghrawa_013 = {
 me_maghrawa_014 = {
 	name = "Tabadalt" # Tabadalt, Mother of Abdullah ibn Khazar ibn Muhammad
 	female = yes
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 
 	840.1.1 = {
@@ -920,7 +920,7 @@ me_maghrawa_014 = {
 me_maghrawa_015 = {
 	name = "Muqatil" # Muqatil ibn Atiyyah ibn Abdullah, Ruled the Maghrawa before his brother Ziri
 	dynasty_house = house_me_atiyyids # Banu 'Aṭiyya
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr #zanata
 	trait = zenata
 	
@@ -936,7 +936,7 @@ me_maghrawa_015 = {
 me_maghrawa_016 = {
 	name = "al-Mu_izz" # al-Mu'izz ibn Atiyyah ibn Abdullah
 	dynasty_house = house_me_atiyyids # Banu 'Aṭiyya
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr #zanata
 	trait = zenata
 	
@@ -952,7 +952,7 @@ me_maghrawa_016 = {
 me_maghrawa_017 = {
 	name = "Hammad" # Hammad ibn Warru ibn Sa'id
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr #zanata
 	trait = zenata
 	
@@ -969,7 +969,7 @@ me_maghrawa_017 = {
 me_ibn_yasin_001 = {
 	name = "Yasin"
 	dynasty = 1069087 # al-Jazzuli
-	religion = ashari
+	rite = shafii
 	culture = butr #tagelmust
 	trait = sanhaja
 
@@ -989,7 +989,7 @@ me_ibn_yasin_002 = {
 	name = "Tin_Izamarren"
 	female = yes
 	dynasty = 1069087 # al-Jazzuli
-	religion = ashari
+	rite = shafii
 	culture = butr #tagelmust
 	trait = sanhaja
 
@@ -1004,7 +1004,7 @@ me_ibn_yasin_002 = {
 me_ibn_yasin_003 = {
 	name = "Makuk"
 	dynasty = 1069087 # al-Jazzuli
-	religion = ashari
+	rite = shafii
 	culture = butr #tagelmust
 	trait = sanhaja
 
@@ -1020,7 +1020,7 @@ me_ibn_yasin_003 = {
 me_ibn_yasin_004 = {
 	name = "Sayr"
 	dynasty = 1069087 # al-Jazzuli
-	religion = ashari
+	rite = shafii
 	culture = butr #tagelmust
 	trait = sanhaja
 
@@ -1036,7 +1036,7 @@ me_ibn_yasin_004 = {
 me_ibn_yasin_005 = {
 	name = "Ali"
 	dynasty = 1069087 # al-Jazzuli
-	religion = ashari
+	rite = shafii
 	culture = butr #tagelmust
 	trait = sanhaja
 

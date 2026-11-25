@@ -1,5 +1,7 @@
 ﻿l_english:
 
+ government_can_raid_rule:1 "#indent_newline:3 [government|E] allows the [raiding|E] of foreign [counties|E] for [loot|E]#! [GetPlayer.Custom('ME_ClanRaidingLoc')]"
+ 
  kurultai_rights: "[GetPlayer.Custom('ME_GetNomadicCouncilName')] Rights"
  
  kurultai_member: "[GetPlayer.Custom('ME_GetNomadicCouncilName')] Member"

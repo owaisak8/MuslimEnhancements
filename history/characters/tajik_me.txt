@@ -1,7 +1,7 @@
 ﻿1630_yaqub = {
 	name = "Yaqub"
 	dynasty_house = house_samanid
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "tajik"
 	father = 163154
 	835.4.9 = {

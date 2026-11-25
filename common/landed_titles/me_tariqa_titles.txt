@@ -1,0 +1,74 @@
+﻿### Tariqas - the Sufi orders
+# Landless titles held by the Shaykh of each order (see common/holy_orders/me_tariqas.txt)
+
+d_me_junaydiyya = { # the "sober" school of al-Junayd of Baghdad
+	type = title_type_holy_order
+	color = { 40 110 90 }
+
+	capital = c_baghdad
+
+}
+
+d_me_tayfuriyya = { # the school of Abu Yazid (Tayfur) of Bistam
+	type = title_type_holy_order
+	color = { 120 60 130 }
+
+	capital = c_damghan
+
+}
+
+d_me_sahliyya = { # the school of Sahl of Tustar
+	type = title_type_holy_order
+	color = { 170 140 60 }
+
+	capital = c_tustar
+
+}
+
+d_me_qadiriyya = { # the order of Abd al-Qadir al-Jilani, Baghdad
+	type = title_type_holy_order
+	color = { 30 120 50 }
+
+	capital = c_baghdad
+
+}
+
+d_me_rifaiyya = { # the order of Ahmad al-Rifa'i, in the marshes below Wasit
+	type = title_type_holy_order
+	color = { 30 30 30 }
+
+	capital = c_wasit
+
+}
+
+d_me_suhrawardiyya = { # the order of Abu al-Najib and Umar al-Suhrawardi, Baghdad
+	type = title_type_holy_order
+	color = { 150 40 40 }
+
+	capital = c_baghdad
+
+}
+
+d_me_chishtiyya = { # the order of the masters of Chisht, near Herat
+	type = title_type_holy_order
+	color = { 200 150 40 }
+
+	capital = c_herat
+
+}
+
+d_me_madyaniyya = { # the circle of Abu Madyan at Bijaya
+	type = title_type_holy_order
+	color = { 60 90 160 }
+
+	capital = c_bejaia
+
+}
+
+d_me_kubrawiyya = { # the order of Najm al-Din Kubra, Khwarazm (not present at any start date; can be founded later)
+	type = title_type_holy_order
+	color = { 90 150 170 }
+
+	capital = c_gurganj
+
+}

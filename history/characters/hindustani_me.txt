@@ -2,7 +2,7 @@
 	name = "Jatanpal"
 	dynasty = hind_khatri
 	culture = "hindustani"
-	religion = "kalikula_shaktism"
+	rite = "kalikula_shaktism"
 	1039.1.1 = {
 		birth = yes
 	}

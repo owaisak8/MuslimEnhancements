@@ -1,0 +1,426 @@
+﻿# Sharada Peeth (b_kaghan, province 7949): the temple of Sharada (Sarasvati) on the Kishanganga (Neelum),
+# at the mouth of the Madhumati stream. A map fit on 12 anchors puts Sharda village inside Kaghan, which
+# covers the Neelum valley. Sources: Nilamata Purana (earliest mention); Kalhana, Rajatarangini (Gauda
+# men in the guise of pilgrims under Lalitaditya; Jayasimha's war at Sirahsila by Sharada, 1140s);
+# al-Biruni, Kitab al-Hind (wooden image, much venerated and visited); Prabhavakacarita (Hemachandra's
+# grammars from the goddess's library in Kashmir); Jonaraja (Zayn al-Abidin's visit, 1422).
+# Whether it held a real school is debated (no school ruins survive); vanilla treats Somapura the same way.
+# Tier 1 shrine, 2 stone temple (867 start), 3 seat of learning (1066/1178), 4 the Sarvajna Pitha legend.
+
+sharada_peeth_01 = {
+	construction_time = very_slow_construction_time
+	type_icon = "special_buildings/cathedral_indian.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	cost_gold = 1000
+	next_building = sharada_peeth_02
+
+	county_holder_character_modifier = {
+		monthly_piety = 0.25
+		same_faith_opinion = 3
+	}
+	county_modifier = {
+		religious_tax_mult = 0.05
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = holy_building_hinduism
+	flag = religious_studies_location
+}
+
+sharada_peeth_02 = {
+	construction_time = very_slow_construction_time
+	type_icon = "special_buildings/cathedral_indian.dds"
+	effect_desc = {
+		desc = unlocks_building_desc
+		triggered_desc = {
+			trigger = { has_dlc_feature = tours_and_tournaments }
+			desc = university_toto_effect_desc
+		}
+		triggered_desc = {
+			trigger = { has_dlc_feature = royal_court }
+			desc = university_roco_effect_desc
+		}
+		desc = university_effect_desc
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct_showing_failures_only = {
+		holding_district_level_2_trigger = yes
+	}
+	can_construct = { building_religious_early_medieval_trigger = yes }
+
+	is_enabled = {
+		custom_description = {
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	cost_gold = 1000
+	next_building = sharada_peeth_03
+
+	county_holder_character_modifier = {
+		learning_per_piety_level = 1
+		monthly_piety = 0.5
+		same_faith_opinion = 5
+		monthly_lifestyle_xp_gain_mult = 0.05
+	}
+	county_modifier = {
+		religious_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = special_building_province_size_baseline
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	character_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		trade_competitiveness_mult = roman_law_university_competitiveness_value
+	}
+	province_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		popular_opinion_add = roman_law_university_popular_opinion_value
+	}
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_learning
+	flag = special_university
+	flag = holy_building
+	flag = holy_building_hinduism
+	flag = religious_studies_location
+}
+
+sharada_peeth_03 = {
+	construction_time = very_slow_construction_time
+	type_icon = "special_buildings/cathedral_indian.dds"
+	effect_desc = {
+		desc = unlocks_building_desc
+		triggered_desc = {
+			trigger = { has_dlc_feature = tours_and_tournaments }
+			desc = university_toto_effect_desc
+		}
+		triggered_desc = {
+			trigger = { has_dlc_feature = royal_court }
+			desc = university_roco_effect_desc
+		}
+		desc = university_effect_desc
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct_showing_failures_only = {
+		holding_district_level_3_trigger = yes
+	}
+	can_construct = { scope:holder.culture = { has_innovation = innovation_chronicle_writing } }
+
+	is_enabled = {
+		custom_description = {
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	cost_gold = 1000
+	next_building = sharada_peeth_04
+
+	county_holder_character_modifier = {
+		learning_per_piety_level = 1
+		monthly_piety = 0.75
+		same_faith_opinion = 5
+		monthly_lifestyle_xp_gain_mult = 0.1
+		cultural_head_fascination_mult = 0.05
+		monthly_dynasty_prestige = 0.25
+	}
+	county_modifier = {
+		religious_tax_mult = 0.15
+	}
+	province_modifier = {
+		province_size_baseline_add = special_building_province_size_baseline
+		trade_good_books_paper_production_add = special_building_books_output
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 3 }
+	}
+
+	character_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		trade_competitiveness_mult = roman_law_university_competitiveness_value
+	}
+	province_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		popular_opinion_add = roman_law_university_popular_opinion_value
+	}
+
+	market_modifier = {
+		trade_good_books_paper_buy_price_mult = special_building_production_buy_price
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+		trade_good_wood_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wood
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_learning
+	flag = special_university
+	flag = holy_building
+	flag = holy_building_hinduism
+	flag = religious_studies_location
+}
+
+sharada_peeth_04 = {
+	construction_time = very_slow_construction_time
+	type_icon = "special_buildings/cathedral_indian.dds"
+	effect_desc = {
+		desc = unlocks_building_desc
+		triggered_desc = {
+			trigger = { has_dlc_feature = tours_and_tournaments }
+			desc = university_toto_effect_desc
+		}
+		triggered_desc = {
+			trigger = { has_dlc_feature = royal_court }
+			desc = university_roco_effect_desc
+		}
+		desc = university_effect_desc
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+	can_construct_showing_failures_only = {
+		holding_district_level_4_trigger = yes
+	}
+	can_construct = { building_stonework_high_medieval_trigger = yes }
+
+	is_enabled = {
+		custom_description = {
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	cost_gold = 1500
+
+	county_holder_character_modifier = {
+		learning = 2
+		learning_per_piety_level = 1
+		monthly_piety = 1
+		same_faith_opinion = 8
+		monthly_lifestyle_xp_gain_mult = 0.15
+		cultural_head_fascination_mult = 0.1
+		monthly_dynasty_prestige = 0.5
+	}
+	county_modifier = {
+		religious_tax_mult = 0.2
+	}
+	province_modifier = {
+		province_size_baseline_add = special_building_province_size_baseline
+		trade_good_books_paper_production_add = 20
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 10
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 4 }
+	}
+
+	character_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		trade_competitiveness_mult = roman_law_university_competitiveness_value
+	}
+	province_culture_modifier = {
+		parameter = roman_law_university_bonuses
+		popular_opinion_add = roman_law_university_popular_opinion_value
+	}
+
+	market_modifier = {
+		trade_good_books_paper_buy_price_mult = special_building_production_buy_price
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+		trade_good_wood_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wood
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_learning
+	flag = special_university
+	flag = holy_building
+	flag = holy_building_hinduism
+	flag = religious_studies_location
+}

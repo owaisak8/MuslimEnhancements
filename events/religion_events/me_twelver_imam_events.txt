@@ -4,7 +4,7 @@ twelver_imam_event.0001 = {
 	hidden = yes
 	
 	immediate = {
-		twelver_mahdi_appears_effect = yes
+		me_twelver_minor_occultation_effect = yes
 	}
 }
 
@@ -38,7 +38,7 @@ twelver_imam_event.0003 = {
 	hidden = yes
 	
 	immediate = {
-		twelver_mahdi_appears_again_effect = yes
+		me_twelver_major_occultation_effect = yes
 	}
 }
 

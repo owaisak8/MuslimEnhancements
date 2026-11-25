@@ -1,0 +1,71 @@
+﻿### Family names (nisbas) of the Sufi masters in history/characters/me_sufi.txt
+
+me_sufi_baghdadi = {
+	name = "dynn_me_sufi_baghdadi"
+	culture = "persian"
+}
+
+me_sufi_bistami = {
+	name = "dynn_me_sufi_bistami"
+	culture = "persian"
+}
+
+me_sufi_tustari = {
+	name = "dynn_me_sufi_tustari"
+	culture = "persian"
+}
+
+me_sufi_adawiyya = {
+	name = "dynn_me_sufi_adawiyya"
+	culture = "bedouin"
+}
+
+me_sufi_qushayri = {
+	name = "dynn_me_sufi_qushayri"
+	culture = "persian"
+}
+
+me_sufi_ansari = {
+	name = "dynn_me_sufi_ansari"
+	culture = "tajik"
+}
+
+me_sufi_hujwiri = {
+	name = "dynn_me_sufi_hujwiri"
+	culture = "tajik"
+}
+
+me_sufi_jilani = {
+	name = "dynn_me_sufi_jilani"
+	culture = "persian"
+}
+
+me_sufi_rifai = {
+	name = "dynn_me_sufi_rifai"
+	culture = "levantine"
+}
+
+me_sufi_suhrawardi = {
+	name = "dynn_me_sufi_suhrawardi"
+	culture = "persian"
+}
+
+me_sufi_zindani = {
+	name = "dynn_me_sufi_zindani"
+	culture = "tajik"
+}
+
+me_sufi_andalusi = {
+	name = "dynn_me_sufi_andalusi"
+	culture = "andalusian"
+}
+
+me_sufi_daqqaq = {
+	name = "dynn_me_sufi_daqqaq"
+	culture = "persian"
+}
+
+me_sufi_najjari = {
+	name = "dynn_me_sufi_najjari"
+	culture = "levantine"
+}

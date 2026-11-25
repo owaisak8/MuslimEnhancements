@@ -5,7 +5,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = gluttonous
 	trait = craven
@@ -25,7 +25,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = lustful
 	trait = temperate
@@ -47,7 +47,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = chaste
 	trait = cynical
@@ -67,7 +67,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = humble
 	trait = cynical
@@ -88,7 +88,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 	1039.1.1 = {
@@ -107,7 +107,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = just
 	trait = greedy
@@ -127,7 +127,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = arrogant
 	trait = education_learning_3
@@ -147,7 +147,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_3
 	1039.1.1 = {
@@ -165,7 +165,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_2
 	960.1.2 = {
@@ -183,7 +183,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_2
 	father = 45033
@@ -203,7 +203,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_2
 	father = 45034
@@ -223,7 +223,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_2
 	father = 45030
@@ -242,7 +242,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_2
 	father = 45031
@@ -262,7 +262,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 8
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = cynical
 	trait = education_intrigue_2
@@ -282,7 +282,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = arrogant
 	trait = education_stewardship_2
@@ -301,7 +301,7 @@
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = lifestyle_poet
 	trait = education_stewardship_3
@@ -328,7 +328,7 @@
 	name = "Abd-al-Hasan"
 	dynasty = 12205
 
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 
 	1059.1.1 = {
@@ -346,7 +346,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 8
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_3
 
@@ -381,7 +381,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = arbitrary
 	trait = lazy
@@ -396,8 +396,8 @@
 	#	name = "Imad_al-Dawla"
 	#	capital = c_denia
 	#}
-	#1063.1.1 = { #ahistorical, used because Yahya of Toledo possesses Denia, this characters actual capital, in the 1066 Rags to Riches bookmark 
-	#	capital = title:c_alicante 
+	#1063.1.1 = { #ahistorical, used because Yahya of Toledo possesses Denia, this characters actual capital, in the 1066 Rags to Riches bookmark
+	#	capital = title:c_alicante
 	#	}
 	#}
 	1066.1.1 = {
@@ -411,7 +411,7 @@
 33053 = {
 	name = "Abdallah" # Abdallah ibn al-Aglab, known as al-Murtada, Emir of Mallorca (1076-1093) & Sheik of Menorca (1045-1093), Mallorca & Ibiza (1076-1093)
 	dynasty = 7278 # Banu Aglab Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -431,7 +431,7 @@
 33054 = {
 	name = "Mubashir" # Mubashir ibn Suleyman, Emir of Mallorca (1093-1114) & Sheik of Ibiza, Mallorca & Menorca (1093-1114)
 	dynasty = 12202 # Suleymanid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = beardless_eunuch
 	trait = education_stewardship_2
@@ -450,7 +450,7 @@
 33055 = {
 	name = "Suleyman" # Suleyman ibn Lubbun, Emir of Mallorca (1114-1116) & Sheik of Ibiza, Mallorca & Menorca (1114-1116)
 	dynasty = 12202 # Suleymanid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -467,7 +467,7 @@
 71373 = {
 	name = "ZaI_da" # Zaïda, later Isabel, wife of Sheik al-Fath of Córdoba (73214) & King Alfonso VI of León (108500 - castilian.txt)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -475,7 +475,7 @@
 		birth = yes
 	}
 	1090.1.1 = {
-		religion = catholic
+		rite = roman_rite
 		name = "Ilizabith"
 	}
 	1107.9.13 = {
@@ -486,7 +486,7 @@
 73182 = {
 	name = "Muhammad"
 	dynasty = 12192
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1059.1.1 = {
 		birth = "1059.1.1"
@@ -499,7 +499,7 @@
 73202 = {
 	name = "Wazir"
 	dynasty = 12197
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1084.1.1 = {
 		birth = "1084.1.1"
@@ -512,7 +512,7 @@
 73203 = {
 	name = "Sidra_i" # Sidray/Siddray/Sidra'i ibn Wazir al-Qaysi
 	dynasty = 12197
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73202
 	1108.1.1 = {
@@ -530,7 +530,7 @@
 		add_pressed_claim = title:d_badajoz
 	}
 	1150.1.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1174.1.1 = {
 		death = yes
@@ -540,7 +540,7 @@
 73204 = {
 	name = "Hakam"
 	dynasty = 12192
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73182
 	1089.1.1 = {
@@ -554,7 +554,7 @@
 73205 = {
 	name = "Yusuf"
 	dynasty = 12198
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1055.1.1 = {
 		birth = "1055.1.1"
@@ -567,7 +567,7 @@
 73206 = {
 	name = "Ali"
 	dynasty = 12198
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73205
 	1081.1.1 = {
@@ -581,7 +581,7 @@
 73207 = {
 	name = "Isma_il"
 	dynasty = 12199
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1073.1.1 = {
 		birth = "1073.1.1"
@@ -594,7 +594,7 @@
 73208 = {
 	name = "Muhammad"
 	dynasty = 12199
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73207
 	1095.1.1 = {
@@ -608,7 +608,7 @@
 73223 = {
 	name = "Ja_far"
 	dynasty = 12201
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1060.1.1 = {
 		birth = "1060.1.1"
@@ -621,7 +621,7 @@
 73224 = {
 	name = "Ayyub"
 	dynasty = 12201
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73223
 	1091.1.1 = {
@@ -635,7 +635,7 @@
 73225 = {
 	name = "Ibrahim"
 	dynasty = 12201
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73223
 	1087.1.1 = {
@@ -649,7 +649,7 @@
 73227 = {
 	name = "Utman" # Utman ibn Abu-Bakr, Emir of Valencia (1085-1086) & Sheik of Valencia (1085-1085)
 	dynasty = 569 # Amirid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -670,7 +670,7 @@
 
 	father = 73182
 
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 
 	1111.1.1 = {
@@ -688,7 +688,7 @@
 73236 = {
 	name = "Abdallah"
 	dynasty = 12209
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1113.1.1 = {
 		birth = "1113.1.1"
@@ -716,7 +716,7 @@
 73237 = {
 	name = "Ja_far"
 	dynasty = 12210
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1104.1.1 = {
 		birth = "1104.1.1"
@@ -744,7 +744,7 @@
 73240 = {
 	name = "Sa_d" # Governor of Fraga and it's frontier regions around 1134
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_mardanish_003
@@ -762,7 +762,7 @@
 73241 = {
 	name = "Muhammad"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73240
 	mother = 73242
@@ -788,7 +788,7 @@
 	name = "Yusuf" # Yusuf 'Abu al-Hajjaj' ibn Sa'd ibn Mardanish
 	dynasty = 12211
 
-	religion = muwalladi
+	rite = shafii
 	culture = andalusian
 	trait = education_martial_3 # Military leader
 
@@ -799,7 +799,7 @@
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1174.1.1 = {
 		effect = {
@@ -814,14 +814,14 @@
 73244 = {
 	name = "Hilal"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73241
 	1150.1.1 = {
 		birth = "1150.1.1"
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1174.1.1 = {
 		effect = {
@@ -836,7 +836,7 @@
 73245 = {
 	name = "Musa"
 	dynasty = 12212
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1066.1.1 = {
 		birth = "1066.1.1"
@@ -849,7 +849,7 @@
 73246 = {
 	name = "Muhammad"
 	dynasty = 12212
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73245
 	1092.1.1 = {
@@ -863,7 +863,7 @@
 73247 = {
 	name = "Musa"
 	dynasty = 12213
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1075.1.1 = {
 		birth = "1075.1.1"
@@ -876,7 +876,7 @@
 73254 = {
 	name = "Abdallah"
 	dynasty = 12227
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1120.1.1 = {
 		birth = "1120.1.1"
@@ -898,7 +898,7 @@
 73255 = {
 	name = "Abu-Bakr" # Abu Bakr ar-Ramimi, Sheik of Almeria (1038)
 	dynasty = 12228 # Banu ar-Ramimi Dynasty, Founder
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -919,7 +919,7 @@
 73256 = {
 	name = "Abd-al-Aziz" # Abd al-Aziz ibn Abu Bakr
 	dynasty = 12228 # Banu al-Ramimi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73255 # Sheik Abu Bakr ar-Ramimi of Almería
@@ -941,7 +941,7 @@
 73257 = {
 	name = "Muhammad" # Muhammad ibn Abu Bakr
 	dynasty = 12228 # Banu ar-Ramimi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -961,7 +961,7 @@
 73258 = {
 	name = "Abdallah" # Abdallah ibn Muhammad, Sheik of Almería (1146-1147)
 	dynasty = 12228 # Banu ar-Ramimi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -987,7 +987,7 @@
 73259 = {
 	name = "Ja_far"
 	dynasty = 12229
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1112.1.1 = {
 		birth = "1112.1.1"
@@ -1021,7 +1021,7 @@
 	name = "Abd-al-Hakam"
 	dynasty = 12230
 
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 
 	1120.1.1 = {
@@ -1038,7 +1038,7 @@
 73261 = {
 	name = "Ibrahim"
 	dynasty = 12234
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1090.1.1 = {
 		birth = "1090.1.1"
@@ -1052,7 +1052,7 @@
 	name = "Fatima" # Fatima ibn Abu Bakr, wife of Emir al-Musta'in II of Zaragoza (45005 - yemeni.txt)
 	female = yes
 	dynasty = 569 # Amirid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 3928 # Emir Abu Bakr of Valencia
@@ -1072,7 +1072,7 @@
 73621 = {
 	name = "Mudafi_"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73243
 	1158.1.1 = {
@@ -1086,7 +1086,7 @@
 73622 = {
 	name = "Zayyan"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73621
 	1184.1.1 = {
@@ -1112,7 +1112,7 @@
 	name = "Aziz"
 	dynasty = 12260
 	father = 73926
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1177.1.1 = {
 		birth = "1177.1.1"
@@ -1128,7 +1128,7 @@
 73632 = {
 	name = "Su_ayb"
 	dynasty = 12261
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1210.1.1 = {
 		birth = "1210.1.1"
@@ -1155,7 +1155,7 @@
 73633 = {
 	name = "Abdallah"
 	dynasty = 12262
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1190.1.1 = {
 		birth = "1190.1.1"
@@ -1173,7 +1173,7 @@
 73634 = {
 	name = "Ali"
 	dynasty = 12262
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73633
 	1222.1.1 = {
@@ -1191,7 +1191,7 @@
 73635 = {
 	name = "Muhammad"
 	dynasty = 12262
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73634
 	1247.1.1 = {
@@ -1212,7 +1212,7 @@
 73636 = {
 	name = "Zannun"
 	dynasty = 12263
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1185.1.1 = {
 		birth = "1185.1.1"
@@ -1244,7 +1244,7 @@
 73637 = {
 	name = "Ahmad"
 	dynasty = 12264
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1200.1.1 = {
 		birth = "1200.1.1"
@@ -1261,7 +1261,7 @@
 73638 = {
 	name = "Ali"
 	dynasty = 12265
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1220.1.1 = {
 		birth = "1220.1.1"
@@ -1282,7 +1282,7 @@
 	name = "Abd-al-Rahman"
 	dynasty = 12266
 
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 
 	1206.1.1 = {
@@ -1296,7 +1296,7 @@
 73640 = {
 	name = "Umar"
 	dynasty = 12267
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1212.1.1 = {
 		birth = "1212.1.1"
@@ -1313,7 +1313,7 @@
 73665 = {
 	name = "Ahmad"
 	dynasty = 12268
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1100.1.1 = {
 		birth = "1100.1.1"
@@ -1326,7 +1326,7 @@
 73800 = {
 	name = "Yusuf" # Yusuf ibn Amrus, Sheik of Tudela (802-803) & Cuenca (802-832)
 	dynasty = 12291 # Banu Amrus Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1344,7 +1344,7 @@
 	name = "Umar" # Umar ibn Amrus
 	dynasty = 12291 # Banu Amrus Dynasty
 	culture = andalusian
-	religion = muwalladi
+	rite = maliki
 	trait = education_diplomacy_1
 
 	father = 73799 # Emir Amrus ibn Yusuf of Toledo (visigothic.txt)
@@ -1360,7 +1360,7 @@
 73802 = {
 	name = "Ja_far" # Ya'far, placeholder Sheik of Malaga (845-870)
 	dynasty = 12292 # Hafsunid Dynasty, ancestor
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1375,7 +1375,7 @@
 73803 = {
 	name = "Hafsun" # Hafsun ibn Ya'far
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 	trait = lifestyle_hunter
@@ -1398,7 +1398,7 @@
 73804 = {
 	name = "Neila" # Neila, wife of Hafsun ibn Ya'far (73803)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1414,7 +1414,7 @@
 	name = "Umar" # Umar ibn Hafsun, Emir of Granada (880-883 & 884-891), Sheik of Malaga (878-917), Granada (880-883 & 884-891), Algeciras (889-891) & Jaen (891)
 	dynasty = 12292 # Hafsunid Dynasty
 	culture = andalusian
-	religion = muwalladi
+	rite = maliki
 
 	father = 73803 # Hafsun ibn Ya'far
 	mother = 73804 # Neila
@@ -1427,7 +1427,7 @@
 	}
 	899.1.1 = {
 		name = "Samu_il"
-		religion = mozarabic_church
+		rite = mozarabic_church
 	}
 	917.1.1 = {
 		death = yes
@@ -1437,7 +1437,7 @@
 73806 = {
 	name = "Ayyub" # Ayyub ibn Hafsun
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73803 # Hafsun ibn Ya'far
@@ -1457,7 +1457,7 @@
 73807 = {
 	name = "Ja_far" # Ya'far ibn Hafsun
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73803 # Hafsun ibn Ya'far
@@ -1477,7 +1477,7 @@
 73814 = {
 	name = "Ayab" # Ayab, wife of Walih Lubb ibn Musa of Toledo (73813 - basque.txt)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1485,7 +1485,7 @@
 		birth = yes
 		effect = {
 			add_character_flag = has_scripted_appearance
-		}	
+		}
 	}
 	881.1.1 = {
 		death = yes
@@ -1496,9 +1496,9 @@
 	name = "Zahida" # Zahida ibn Abdallah, wife of Walih Isma'il ibn Musa of Zaragoza (78318 - basque.txt)
 	female = yes
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
- 
+
 	father = andalusian0080 # Walih Abdallah ibn Jalaf of Barbastro
 
 	854.1.1 = {
@@ -1515,7 +1515,7 @@
 73912 = {
 	name = "Zakariyya" # Zakariyya ibn Hayyun
 	dynasty = 12297 # Banu Hayyun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -1536,7 +1536,7 @@
 73913 = {
 	name = "Abd-al-Aziz" # Abd al-Aziz ibn Zakariyya
 	dynasty = 12297 # Banu Hayyun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73912 # Zakariyya ibn Hayyun
@@ -1556,7 +1556,7 @@
 73914 = {
 	name = "Yahya" # Yahya ibn Zakariyya
 	dynasty = 12297 # Banu Hayyun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73912 # Zakariyya ibn Hayyun
@@ -1576,7 +1576,7 @@
 73915 = {
 	name = "Zahida" # Zahida, fictional wife of Zakariyya ibn Hayyun (73912)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1591,7 +1591,7 @@
 73929 = {
 	name = "Muhammad" # Muhammad ibn Zakariyya
 	dynasty = 12299 # Banu Qutam Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -1611,7 +1611,7 @@
 73930 = {
 	name = "Zakariyya" # Zakariyya ibn Qutam
 	dynasty = 12299 # Banu Qutam Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1626,7 +1626,7 @@
 73931 = {
 	name = "Yusuf" # Yusuf ibn Zakariyya
 	dynasty = 12299 # Banu Qutam Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -1644,7 +1644,7 @@
 73932 = {
 	name = "Leila" # Leila, fictional wife of Muhammad ibn Zakariyya (73929)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1659,7 +1659,7 @@
 73933 = {
 	name = "Yahya" # Yahya ibn Muhammad
 	dynasty = 12299 # Banu Qutam Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1678,7 +1678,7 @@
 73934 = {
 	name = "Abd-al-Aziz" # Abd al-Aziz ibn Jarraz
 	dynasty = 12300 # Banu Jarraz Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1696,7 +1696,7 @@
 73935 = {
 	name = "Muhammad" # Muhammad ibn Abd al-Aziz
 	dynasty = 12300 # Banu Jarraz Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1716,7 +1716,7 @@
 73936 = {
 	name = "Yahya" # Yahya ibn Abd al-Aziz
 	dynasty = 12300 # Banu Jarraz Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -1739,7 +1739,7 @@
 73937 = {
 	name = "Karima" # Karima, fictional wife of Yahya ibn Abd al-Aziz (73936)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1754,7 +1754,7 @@
 73938 = {
 	name = "Ibrahim" # Ibrahim ibn Burrun
 	dynasty = 12301 # Banu Burrun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -1772,7 +1772,7 @@
 73939 = {
 	name = "Malika" # Malika, fictional wife of Ibrahim ibn Burrun (73938)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1787,7 +1787,7 @@
 73940 = {
 	name = "Ishaq" # Ishaq ibn Ibrahim
 	dynasty = 12301 # Banu Burrun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -1805,7 +1805,7 @@
 73952 = {
 	name = "Ahmad" # Ahmad ibn Zuhr, Sheik of Sevilla (860-895)
 	dynasty = 12304 # Banu Zuhr Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -1823,7 +1823,7 @@
 73953 = {
 	name = "Habiba" # Habiba, fictional wife of Sheik Ahmad ibn Zuhr of Sevilla (73952)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1838,7 +1838,7 @@
 73954 = {
 	name = "Muhammad" # Muhammad ibn Ahmad, Sheik of Sevilla (895-937)
 	dynasty = 12304 # Banu Zuhr Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73952 # Sheik Ahmad ibn Zuhr of Sevilla
@@ -1859,7 +1859,7 @@
 	name = "Marwan" # Marwan ibn Yunus al-Yiliqi, Walih of Badajoz (820-827), Sheik of Merida (817-827), Badajoz, Cáceres, Medellín & Plasencia  (820-827)
 	dna = 73957_ibn_marwan
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -1877,7 +1877,7 @@
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Marwan, Sultan of Badajoz (875-889), Walih of Badajoz (867-868 & 875-889) & Sheik of Badajoz (867-868 & 874-889), Caceres, Medellin, Merida & Plasencia (867-868 & 875-889) & Moura (875-889)
 	dna = 73957_ibn_marwan
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	martial = 4
 	diplomacy = 4
@@ -1891,7 +1891,7 @@
 	trait = cynical
 	trait = fickle
 	trait = intellect_good_1
-	trait = aggressive_attacker 
+	trait = aggressive_attacker
 	disallow_random_traits = yes
 
 	819.1.1 = {
@@ -1922,9 +1922,6 @@
 				}
 			}
 		}
-		effect = {
-			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:mozarabic_church }
-		}
 	}
 	889.1.1 = {
 		death = yes
@@ -1934,7 +1931,7 @@
 73958 = {
 	name = "Isra" # Isra, wife of Emir Abd al-Rahman ibn Marwan of Badajoz (73957)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -1945,9 +1942,9 @@
 	learning = 6
 	trait = cynical
 	trait = generous
-	trait = humble 
+	trait = humble
 	trait = wild_oat
-	
+
 	834.1.1 = {
 		birth = yes
 	}
@@ -1959,7 +1956,7 @@
 73959 = {
 	name = "Zaid" # Zaid ibn Abd al-Rahman, Sultan of Badajoz (890-913), Walih of Badajoz (890-913), Sheik of Badajoz, Caceres, Medellin, Merida, Moura & Plasencia (889-913), Evora & Viseu (909-913)
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73957 # Emir Abd al-Rahman ibn Marwan of Badajoz
@@ -1979,7 +1976,7 @@
 73960 = {
 	name = "Muhammad" # Muhammad ibn Adb al-Rahman
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73957 # Emir Abd al-Rahman ibn Marwan of Badajoz
@@ -2001,7 +1998,7 @@
 73961 = {
 	name = "Alkada" # Alkada al-Ruayni
 	dynasty = 12306 # Alkada al-Ruayni Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2016,7 +2013,7 @@
 73962 = {
 	name = "Ubada" # Ubada ibn Alkada
 	dynasty = 12306 # Alkada al-Ruayni Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -2039,7 +2036,7 @@
 73963 = {
 	name = "Yasmin" # Yasmin, fictional wife of Ubada ibn Alkada (73962)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -2054,7 +2051,7 @@
 73964 = {
 	name = "Zuhayr" # Zuhayr al-Balawi
 	dynasty = 12307 # Zuhayr al-Balawi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -2069,7 +2066,7 @@
 73965 = {
 	name = "Kinana" # Kinana ibn Zuhayr
 	dynasty = 12307 # Zuhayr al-Balawi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2089,7 +2086,7 @@
 73966 = {
 	name = "Salama" # Salama ibn Zuhayr
 	dynasty = 12307 # Zuhayr al-Balawi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2107,7 +2104,7 @@
 73969 = {
 	name = "Abdallah" # Abdallah ibn Numayr
 	dynasty = 12309 # Banu Numayr Dinasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2128,7 +2125,7 @@
 73970 = {
 	name = "Munya" # Munya, fictional wife of Abdallah ibn Nuhayr (73969)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -2143,7 +2140,7 @@
 73971 = {
 	name = "Ahmad" # Ahmad ibn Abdallah
 	dynasty = 12309 # Banu Numayr Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2164,7 +2161,7 @@
 73972 = {
 	name = "Jalid" # Jalid
 	dynasty = 12310 # Banu Jalid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2185,7 +2182,7 @@
 73973 = {
 	name = "Tarifa" # Tarifa, fictional wife of Jalid (73972)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -2200,7 +2197,7 @@
 73974 = {
 	name = "Ahmad" # Ahmad ibn Jalid
 	dynasty = 12310 # Banu Jalid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73972 # Jalid
@@ -2220,7 +2217,7 @@
 73983 = {
 	name = "Hakam" # Hakam ibn Abdallah
 	dynasty = 12312 # Banu Quti Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -2237,7 +2234,7 @@
 73987 = {
 	name = "Yuhanna" # Yuhanna, placeholder Count of Ibiza, Mallorca & Menorca (867-903)
 	dynasty = 12313 # Mayurqa Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -2257,7 +2254,7 @@
 73988 = {
 	name = "Urdun" # Urdun, placeholder Count of Soria (857-882)
 	dynasty = castallid # Castalla Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_martial_1
 
@@ -2275,7 +2272,7 @@
 73989 = {
 	name = "Boutros" # Boutros, placeholder Count of Salamanca (860-885)
 	dynasty = salamanqid # Salamanqa Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2293,7 +2290,7 @@
 73990 = {
 	name = "Sabariquh" # Sabariquh, placeholder Count of Cuéllar (866-891)
 	dynasty = 12314 # Siqubiyyah Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -2311,7 +2308,7 @@
 73992 = {
 	name = "Fath" # Fath
 	dynasty = al-surunbaqi # Sa'dun al-Surubaqi's Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2331,7 +2328,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = lazy
 	trait = education_diplomacy_1
@@ -2355,7 +2352,7 @@
 	intrigue = 4
 	stewardship = 7
 	learning = 4
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = honest
 	trait = humble
@@ -2378,10 +2375,10 @@
 143001 = {
 	name = "Abu-Nasr" # Aboazar Lovesendes da Maia
 	dynasty_house = house_maia # House of Maia, Founder
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_martial_2
- 
+
 	father = 143003 # Lovesendo Ramires de León
 	mother = andalusian0004 # Zayra ben Zayda
 
@@ -2399,7 +2396,7 @@
 159524 = {
 	name = "Umar" # Umar ibn Hafs 'the Fat', Emir of Krete (827-855), Sheik of Chandax & Chania (827-855)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 
@@ -2419,7 +2416,7 @@
 159525 = {
 	name = "Shuayb" # Shu'ayb ibn Umar, Emir of Krete (855-880), Sheik of Chandax & Chania (855-880)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -2436,7 +2433,7 @@
 159526 = {
 	name = "Umar" # Umar ibn Shu'ayb, Emir of Krete (880-895), Sheik of Chandax & Chania (880-895)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -2453,7 +2450,7 @@
 159527 = {
 	name = "Muhammad" # Muhammad ibn Shu'ayb, Emir of Krete (895-910), Sheik of Chandax & Chania (895-910)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2470,7 +2467,7 @@
 159528 = {
 	name = "Yusuf" # Yusuf ibn Umar, Emir of Krete (910-915), Sheik of  Chandax & Chania (910-915)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 159526 # Emir Umar ibn Shu'ayb of Krete
@@ -2489,7 +2486,7 @@
 159529 = {
 	name = "Ahmad" # Ahmad ibn Umar, Emir of Krete (925-940), Sheik of Chandax & Chania (925-940)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 159526 # Emir Umar ibn Shu'ayb of Krete
@@ -2508,7 +2505,7 @@
 159530 = {
 	name = "Ali" # Ali ibn Yusuf, Emir of Krete (915-925), Sheik of Chandax & Chania (915-925)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_2
 
@@ -2525,7 +2522,7 @@
 159531 = {
 	name = "Shuayb" # Shu'ayb ibn Ahmad, Emir of Krete (940-943), Sheik of Chandax & Chania (940-943)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2542,7 +2539,7 @@
 159532 = {
 	name = "Ali" # Ali ibn Ahmad, Emir of Krete (943-949), Sheik of Chandax & Chania (943-949)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 
@@ -2559,7 +2556,7 @@
 159533 = {
 	name = "Abd_al-Aziz" # Abd al-Aziz ibn Shu'ayb, Emir of Krete (949-961), Sheik of Chandax & Chania (949-961)
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -2576,7 +2573,7 @@
 159534 = {
 	name = "Al-Numan" # al-Nu'man ibn Abd al-Aziz, known as Anemas
 	dynasty = 1029093
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -2587,7 +2584,7 @@
 	}
 	961.1.1 = {
 		culture = "greek"
-		religion = "orthodox"
+		rite = "roman_rite"
 		dynasty = 101183
 	}
 	971.1.1 = {
@@ -2600,7 +2597,7 @@
 200045 = {
 	name = "Burrun" # Burrun ibn Ishaq
 	dynasty = 12301 # Banu Burrun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2615,7 +2612,7 @@
 200055 = {
 	name = "Yahya" # Yahya ibn Burrun
 	dynasty = 12301 # Banu Burrun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2630,7 +2627,7 @@
 200149 = {
 	name = "Ibrahim" # Ibrahim ibn Yahya
 	dynasty = 12301 # Banu Burrun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -2647,7 +2644,7 @@
 200150 = {
 	name = "Faray" # Faray ibn Salama
 	dynasty = 12307 # Zuhayr al-Balawi Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -2664,7 +2661,7 @@
 200154 = {
 	name = "Yunus" # Yunus ibn Yahya
 	dynasty = 1046019
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2681,7 +2678,7 @@
 200156 = {
 	name = "Ulyan" # Ulyan, placeholder Count of Ávila (854-882)
 	dynasty = ramlid # al-Ramla Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2699,7 +2696,7 @@
 200206 = {
 	name = "Amrus" # Amrus ibn Umar, Sheik of Huesca (870-871 & 873-875)
 	dynasty = 12291 # Banu Amrus Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_3
 
@@ -2716,7 +2713,7 @@
 200207 = {
 	name = "Zakariyya" # Zakariyya ibn Amrus
 	dynasty = 12291 # Banu Amrus Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -2736,7 +2733,7 @@
 200208 = {
 	name = "Umar" # Umar ibn Zakariyya
 	dynasty = 12291 # Banu Amrus Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2756,7 +2753,7 @@
 200209 = {
 	name = "Lubb" # Lubb ibn Zakariyya
 	dynasty = 12291 # Banu Amrus Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -2776,7 +2773,7 @@
 200210 = {
 	name = "Abdallah" # Abdallah ibn Shabrit
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -2796,7 +2793,7 @@
 200211 = {
 	name = "Masud" # Masud ibn Amrus, Sheik of Huesca (875-887)
 	dynasty = 12291 # Banu Amrus Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2816,7 +2813,7 @@
 200212 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Abdallah
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -2837,7 +2834,7 @@
 200213 = {
 	name = "Tarifa" # Tarifa, fictional wife of Abdallah ibn Shabrit (200210)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2852,7 +2849,7 @@
 200215 = {
 	name = "Lubb" # Lubb, placeholder Count of Burgos (858-882)
 	dynasty = burgusid # Burgus Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2870,9 +2867,9 @@
 200223 = {
 	name = "Filibus" # Fictional
 	dynasty = 12313 # Mayurqa Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
- 
+
 	father = 73987 # Count Yuhanna of Mallorca
 	mother = 200224 # Countess Laya
 
@@ -2890,7 +2887,7 @@
 200224 = {
 	name = "Laya" # Fictional Spouse of Count Yuhanna of Mallorca (73987)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -2905,7 +2902,7 @@
 200225 = {
 	name = "Ya_qub" # Ya'qub, placeholder Count of Valladolid (865-890)
 	dynasty = walidid # Balad al-Walid Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -2927,7 +2924,7 @@
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 8
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = andalusian
 	trait = education_martial_2
 	1157.1.1 = {
@@ -2945,7 +2942,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = deceitful
 	1042.1.1 = {
@@ -2963,7 +2960,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = chaste
 	trait = arbitrary
@@ -2979,7 +2976,7 @@
 224008 = {
 	name = "Muhammad"
 	dynasty = 12192
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	father = 73204
 	1113.1.1 = {
@@ -3008,7 +3005,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = greedy
 	trait = education_intrigue_1
@@ -3028,7 +3025,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 	1116.1.1 = {
@@ -3043,7 +3040,7 @@
 	name = "Abd-al-Malik"
 	dynasty = 12232
 
-	religion = ismaili
+	rite = ismaili
 	culture = andalusian
 
 	1146.1.1 = {
@@ -3061,7 +3058,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = diligent
 	trait = deceitful
@@ -3082,7 +3079,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = greedy
 	trait = wrathful
@@ -3102,7 +3099,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = calm
 	trait = brave
@@ -3122,7 +3119,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = diligent
 	trait = education_intrigue_2
@@ -3142,7 +3139,7 @@
 	diplomacy = 12
 	intrigue = 4
 	stewardship = 8
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_3
 	trait = humble
@@ -3157,7 +3154,7 @@
 andalusian0001 = {
 	name = "Abdallah" # Abdallah (I) ibn Muhammad, Sultan of Badajoz (913-923), Walih of Badajoz (913-923), Sheik of Badajoz, Caceres, Evora, Medellín, Merida, Moura, Plasencia & Viseu (913-923)
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_2
 
@@ -3176,7 +3173,7 @@ andalusian0001 = {
 andalusian0002 = {
 	name = "Abdallah" # Abdallah ibn Abdallah, Sultan of Badajoz (923-930), Walih of Badajoz (923-930), Sheik of Badajoz, Caceres, Evora, Medellín, Merida, Moura, Plasencia & Silves (923-930)
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_2
 
@@ -3193,7 +3190,7 @@ andalusian0002 = {
 andalusian0003 = {
 	name = "Abdallah" # Abdallah ibn Rumi
 	dynasty = romaniz # Romániz Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -3211,7 +3208,7 @@ andalusian0003 = {
 andalusian0004 = {
 	name = "Zayra" # Ortega ben Zayda, wife of Lovesendo Ramírez (143003 - galician.txt)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -3220,7 +3217,7 @@ andalusian0004 = {
 	}
 	959.1.1 = {
 		name = "Ortega"
-		religion = mozarabic_church
+		rite = mozarabic_church
 	}
 	990.1.1 = {
 		death = yes
@@ -3231,7 +3228,7 @@ andalusian0005 = {
 	name = "Sayyida" # Sayyida bint Muhammad al-Tawil, wife of Walih Lubb ibn Muhammad of Toledo (200026 - basque.txt)
 	female = yes
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -3249,7 +3246,7 @@ andalusian0005 = {
 andalusian0006 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Muhammad al-Tawil, Sheik of Huesca & Lleida (913-918) & Fraga (913-914)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -3270,7 +3267,7 @@ andalusian0006 = {
 andalusian0007 = {
 	name = "Amrus" # Amrus ibn Muhammad al-Tawil, Sheik of Fraga (914-915) & Huesca (918-919) & Naib of Barbastro (913-935)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -3288,7 +3285,7 @@ andalusian0007 = {
 andalusian0008 = {
 	name = "Ja_far" # Ya'far ibn Umar, Sheik of Malaga (917-920)
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -3305,7 +3302,7 @@ andalusian0008 = {
 andalusian0009 = {
 	name = "Suleyman" # Suleyman ibn Umar, Sheik of Malaga (920-927)
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -3322,7 +3319,7 @@ andalusian0009 = {
 andalusian0010 = {
 	name = "Hafs" # Hafs ibn Umar, Sheik of Malaga (927-931)
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -3339,7 +3336,7 @@ andalusian0010 = {
 andalusian0011 = {
 	name = "Furtun" # Furtun ibn Muhammad al-Tawil, Sheik of Huesca (919-933 & 936-940) & Naib of Barbastro (935-940)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -3360,7 +3357,7 @@ andalusian0011 = {
 andalusian0012 = {
 	name = "Yahya" # Yahya ibn Muhammad al-Tawil, Sheik of Huesca (933-936) & Merida (935-936) & Naib of Barbastro (940-951)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -3378,7 +3375,7 @@ andalusian0012 = {
 andalusian0013 = {
 	name = "Musa_Aznar" # Musa Aznar ibn Muhammad al-Tawil, Sheik of Lleida (918-922) & Huesca (940-954)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -3399,7 +3396,7 @@ andalusian0013 = {
 andalusian0014 = {
 	name = "Lubb" # Lubb ibn Muhammad al-Tawil, Naib of Barbastro (951-955)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -3417,7 +3414,7 @@ andalusian0014 = {
 andalusian0015 = {
 	name = "Walid" # Walid ibn Muhammad al-Tawil
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -3435,7 +3432,7 @@ andalusian0015 = {
 andalusian0016 = {
 	name = "Yahya" # Yahya ibn Lubb, Naib of Barbastro (955-962)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -3452,7 +3449,7 @@ andalusian0016 = {
 andalusian0017 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Furtun
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -3469,7 +3466,7 @@ andalusian0017 = {
 andalusian0018 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Musa Aznar, Sheik of Huesca (954-993) & Naib of Barbastro (962-993)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -3487,7 +3484,7 @@ andalusian0018 = {
 andalusian0019 = {
 	name = "Walid" # Walid ibn Abd al-Malik, Sheik of Huesca (993-1009) & Naib of Barbastro (993-1009)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -3504,13 +3501,13 @@ andalusian0019 = {
 andalusian0020 = {
 	name = "Masud" # Ma'sud ibn Sa'dun al-Surunbaqi, Walih of Beja (881-909) & Sheik of Evora & Viseu (881-909)
 	dynasty = al-surunbaqi # Sa'dun al-Surubaqi's Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
 	father = surunbaqi0001 # Walih Sa'dun ibn Fath al-Surunbaqi of Portucale
 	mother = andalusian0094 # Waliha Zayra
- 
+
 	869.1.1 = {
 		birth = yes
 	}
@@ -3522,7 +3519,7 @@ andalusian0020 = {
 andalusian0021 = {
 	name = "Muhammad" # Muhammad ibn Ahmad
 	dynasty = 12310 # Banu Jalid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -3539,7 +3536,7 @@ andalusian0021 = {
 andalusian0022 = {
 	name = "Jalid" # Jalid ibn Muhammad
 	dynasty = 12310 # Banu Jalid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -3556,7 +3553,7 @@ andalusian0022 = {
 andalusian0023 = {
 	name = "Suleyman" # Suleyman ibn Ayyub
 	dynasty = 12312 # Banu Quti Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -3573,7 +3570,7 @@ andalusian0023 = {
 andalusian0024 = {
 	name = "Ayyub" # Ayyub ibn Suleyman (II)
 	dynasty = 12312 # Banu Quti Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -3590,7 +3587,7 @@ andalusian0024 = {
 andalusian0025 = {
 	name = "Ahmad" # Ahmad ibn Suleyman
 	dynasty = 12312 # Banu Quti Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -3607,7 +3604,7 @@ andalusian0025 = {
 andalusian0026 = {
 	name = "Hisham" # Hisham ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 
@@ -3625,7 +3622,7 @@ andalusian0026 = {
 andalusian0027 = {
 	name = "al-Mundir" # al-Mundir ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_martial_1
@@ -3644,7 +3641,7 @@ andalusian0027 = {
 andalusian0028 = {
 	name = "Abdallah" # Abdallah ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_intrigue_2
@@ -3666,7 +3663,7 @@ andalusian0028 = {
 andalusian0029 = {
 	name = "Marwan" # Marwan ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 
@@ -3684,7 +3681,7 @@ andalusian0029 = {
 andalusian0030 = {
 	name = "al-Asbag" # al-Asbag ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -3703,7 +3700,7 @@ andalusian0030 = {
 andalusian0031 = {
 	name = "al-Zuhayr" # al-Zuhayr ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -3722,7 +3719,7 @@ andalusian0031 = {
 andalusian0032 = {
 	name = "al-Mughira" # al-Mughira ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_3
@@ -3744,7 +3741,7 @@ andalusian0032 = {
 andalusian0033 = {
 	name = "Maryam" # Maryam, wife of Caliph Abd al-Rahman III of Andalusia (3200)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_2
 
@@ -3760,7 +3757,7 @@ andalusian0034 = {
 	name = "Hind" # Hind bint Abd al-Rahman
 	female = yes
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_3
@@ -3780,7 +3777,7 @@ andalusian0035 = {
 	name = "Wallada" # Wallada bint Abd al-Rahman
 	female = yes
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -3800,7 +3797,7 @@ andalusian0036 = {
 	name = "Saniyya" # Saniyya bint Abd al-Rahman
 	female = yes
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -3819,7 +3816,7 @@ andalusian0036 = {
 andalusian0037 = {
 	name = "Salama" # Salama ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_intrigue_1
@@ -3838,7 +3835,7 @@ andalusian0037 = {
 andalusian0038 = {
 	name = "al-Mutarrif" # al-Mutarrif ibn al-Mughira
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -3856,7 +3853,7 @@ andalusian0038 = {
 andalusian0039 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn al-Hakam
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 
@@ -3875,7 +3872,7 @@ andalusian0039 = {
 andalusian0040 = {
 	name = "Abd-al-Aziz" # Abd al-Aziz ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -3894,7 +3891,7 @@ andalusian0040 = {
 andalusian0041 = {
 	name = "al-Asbag" # al-Asbag ibn Abd al-Aziz
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -3912,7 +3909,7 @@ andalusian0041 = {
 andalusian0042 = {
 	name = "al-Qasim" # al-Qasim ibn al-Asbag
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -3930,7 +3927,7 @@ andalusian0042 = {
 andalusian0043 = {
 	name = "Muhammad" # Muhammad ibn Suleyman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -3948,7 +3945,7 @@ andalusian0043 = {
 andalusian0044 = {
 	name = "Walid" # Walid ibn Suleyman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_martial_1
@@ -3966,7 +3963,7 @@ andalusian0044 = {
 andalusian0045 = {
 	name = "Maslama" # Maslama ibn Suleyman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -3985,7 +3982,7 @@ andalusian0046 = {
 	name = "Umm" # Umm bint Suleyman
 	female = yes
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -4003,7 +4000,7 @@ andalusian0046 = {
 andalusian0047 = {
 	name = "Ubayd-Allah" # Ubayd Allah ibn Muhammad
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -4021,7 +4018,7 @@ andalusian0047 = {
 andalusian0048 = {
 	name = "Hisham" # Hisham ibn Suleyman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -4039,7 +4036,7 @@ andalusian0048 = {
 andalusian0049 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Hisham
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_martial_1
@@ -4057,7 +4054,7 @@ andalusian0049 = {
 andalusian0050 = {
 	name = "Muhammad" # Muhammad ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -4075,7 +4072,7 @@ andalusian0050 = {
 andalusian0051 = {
 	name = "Suleyman" # Suleyman ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_2
@@ -4093,7 +4090,7 @@ andalusian0051 = {
 andalusian0052 = {
 	name = "Hisham" # Hisham ibn Ubayd Allah
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = content
@@ -4112,7 +4109,7 @@ andalusian0052 = {
 andalusian0053 = {
 	name = "Abd-al-Jabbar" # Abd al-Yabbar ibn al-Mughira
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_martial_2
@@ -4130,7 +4127,7 @@ andalusian0053 = {
 andalusian0054 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn al-Mundir
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -4148,7 +4145,7 @@ andalusian0054 = {
 andalusian0055 = {
 	name = "Hisham" # Hisham ibn Abd al-Malik
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_2
@@ -4168,10 +4165,10 @@ andalusian0055 = {
 andalusian0056 = {
 	name = "al-Hassan" # al-Hassan ibn Abd al-Aziz
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
- 
+
 	father = 45025 # Emir Abd al-Aziz ibn Abd al-Rahman ibn Sanyul of Valencia
 
 	1025.1.1 = {
@@ -4185,10 +4182,10 @@ andalusian0056 = {
 andalusian0057 = {
 	name = "Abdallah" # Abdallah ibn Abd al-Aziz
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
- 
+
 	father = 45025 # Emir Abd al-Aziz ibn Abd al-Rahman ibn Sanyul of Valencia
 
 	1035.1.1 = {
@@ -4205,9 +4202,9 @@ andalusian0057 = {
 andalusian0058 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman, real name unknown, ibn Abd al-Malik
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
- 
+
 	father = 45026 # Emir Abd al-Malik ibn Abd al-Aziz of Valencia
 	mother = 20858 # Zahida bint Yahya (berber.txt)
 
@@ -4222,10 +4219,10 @@ andalusian0058 = {
 andalusian0059 = {
 	name = "Rawas" # Rawas ibn Abd al-Aziz, Sheik of Valencia (1065-1075)
 	dynasty = rawasid # Ibn Rawas Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
- 
+
 	1030.1.1 = {
 		birth = yes
 	}
@@ -4243,10 +4240,10 @@ andalusian0060 = {
 	name = "Umm" # Umm, name unknown, ibn Abd al-Aziz, wife of Sheik Ma'n ibn Muhammad of Almería (20877 - yemeni.txt)
 	female = yes
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
- 
+
 	father = 45025 # Emir Abd al-Aziz ibn Abd al-Rahman ibn Sanyul of Valencia
 
 	1021.1.1 = {
@@ -4260,7 +4257,7 @@ andalusian0060 = {
 andalusian0061 = {
 	name = "Ahmad" # Ahmad ibn Ubada
 	dynasty = 12306 # Alkada al-Ruayni Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -4278,7 +4275,7 @@ andalusian0061 = {
 andalusian0062 = {
 	name = "al-Asbag" # al-Asbag ibn al-Hakam (Fictional)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -4296,7 +4293,7 @@ andalusian0062 = {
 andalusian0063 = {
 	name = "Muhammad" # Muhammad ibn al-Asbag (Fictional)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -4314,7 +4311,7 @@ andalusian0063 = {
 andalusian0064 = {
 	name = "Muhammad" # Muhammad ibn Muhammad (Fictional)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -4332,7 +4329,7 @@ andalusian0064 = {
 andalusian0067 = {
 	name = "Muhammad" # Muhammad, real name unknown, ibn Tayfur, Sheik of Moura (1031-1044)
 	dynasty = tayfur # Tayfurid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_3
 
@@ -4349,7 +4346,7 @@ andalusian0067 = {
 andalusian0068 = {
 	name = "Tayfur" # Tayfur
 	dynasty = tayfur # Tayfurid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4364,7 +4361,7 @@ andalusian0068 = {
 andalusian0069 = {
 	name = "Mutarrif" # Mutarrif, real name unknown, ibn Tayfur
 	dynasty = tayfur # Tayfurid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4384,7 +4381,7 @@ andalusian0069 = {
 andalusian0070 = {
 	name = "al-Aglab" # al-Aglab ibn Muskiyan, Sheik of Menorca (1036-1046)
 	dynasty = 7278 # Banu Aglab Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -4401,7 +4398,7 @@ andalusian0070 = {
 andalusian0071 = {
 	name = "Muskiyan" # Muskiyan
 	dynasty = 7278 # Banu Aglab Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4416,7 +4413,7 @@ andalusian0071 = {
 andalusian0072 = {
 	name = "Suleyman" # Suleyman ibn Muskiyan, Sheik of Mallorca (1036-1050)
 	dynasty = 7278 # Banu Aglab Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -4433,7 +4430,7 @@ andalusian0072 = {
 andalusian0073 = {
 	name = "Lubbun" # Lubbun ibn Suleyman
 	dynasty = 12202 # Suleymanid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = andalusian0074 # Suleyman
@@ -4452,7 +4449,7 @@ andalusian0073 = {
 andalusian0074 = {
 	name = "Suleyman" # Suleyman
 	dynasty = 12202 # Suleymanid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4470,7 +4467,7 @@ andalusian0074 = {
 andalusian0075 = {
 	name = "al-Rabi" # al-Rabi ibn Suleyman
 	dynasty = 12202 # Suleymanid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -4487,7 +4484,7 @@ andalusian0075 = {
 andalusian0076 = {
 	name = "Hafs" # Hafs ibn Umar
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4504,7 +4501,7 @@ andalusian0076 = {
 andalusian0077 = {
 	name = "Amr" # Amr ibn Shu'ayb
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4521,7 +4518,7 @@ andalusian0077 = {
 andalusian0078 = {
 	name = "Abdallah" # Abdallah ibn Umar
 	dynasty = 1029093 # Banu Hafs Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4538,7 +4535,7 @@ andalusian0078 = {
 andalusian0079 = {
 	name = "Jalaf" # Jalaf ibn Rashid, Sheik of Huesca (802-862) & Naib of Barbastro (802-862)
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_2
 
@@ -4553,7 +4550,7 @@ andalusian0079 = {
 andalusian0080 = {
 	name = "Abdallah" # Abdallah ibn Jalaf, Naib of Barbastro (862-890)
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4573,7 +4570,7 @@ andalusian0080 = {
 andalusian0081 = {
 	name = "Furtun" # Furtun ibn Abd al-Malik
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4594,7 +4591,7 @@ andalusian0081 = {
 andalusian0082 = {
 	name = "Muhammad" # Muhammad al-Tawil, Sheik of Huesca (887-913), Fraga & Lleida (907-913) & Naib of Barbastro (889-913)
 	dynasty_house = house_al-tawil # House of Muhammad al-Tawil
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 
@@ -4620,7 +4617,7 @@ andalusian0082 = {
 andalusian0083 = {
 	name = "Zahida" # Zahida, fictional wife of Abd al-Malik ibn Abdallah (200212)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -4635,7 +4632,7 @@ andalusian0083 = {
 andalusian0084 = {
 	name = "Coreix" # Coreix, concubine of Sultan Abdallah I of Andalusia (73685 - levantine.txt)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -4650,7 +4647,7 @@ andalusian0084 = {
 andalusian0085 = {
 	name = "Muhadir" # Muhadir ibn Ya'far
 	dynasty = 12292 # Hafsunid Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -4667,7 +4664,7 @@ andalusian0085 = {
 andalusian0086 = {
 	name = "Musa" # Musa ibn Shabrit
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4684,7 +4681,7 @@ andalusian0086 = {
 andalusian0087 = {
 	name = "Isa" # Isa ibn Musa
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4701,7 +4698,7 @@ andalusian0087 = {
 andalusian0088 = {
 	name = "Zakariyya" # Zakariyya ibn Isa
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4718,7 +4715,7 @@ andalusian0088 = {
 andalusian0089 = {
 	name = "Asbag" # Asbag ibn Isa
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -4735,7 +4732,7 @@ andalusian0089 = {
 andalusian0090 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Isa
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = andalusian0087 # Isa ibn Musa
@@ -4754,7 +4751,7 @@ andalusian0090 = {
 andalusian0091 = {
 	name = "Walid" # Walid ibn Abdallah
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4771,7 +4768,7 @@ andalusian0091 = {
 andalusian0092 = {
 	name = "Muhammad" # Muhammad ibn Walid
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -4788,7 +4785,7 @@ andalusian0092 = {
 andalusian0093 = {
 	name = "Mbarek" # Mbarek, Emir of Valencia (1011-1016) & Sheik of Valencia (1011-1016)
 	dynasty_house = house_banu_shabrit # House Banu Shabrit
-	religion = muwalladi
+	rite = maliki
 	culture = sorko # Not known, he was a black slave
 	trait = education_stewardship_1
 
@@ -4803,7 +4800,7 @@ andalusian0093 = {
 andalusian0094 = {
 	name = "Zayra" # Zayra, fictional wife of Walih Sa'dun al-Surunbaqi of Portucale (surunbaqi0001)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4819,7 +4816,7 @@ andalusian0095 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Abd al-Rahman, Sultan of Badajoz (889-890), Walih of Badajoz (889-890) & Sheik of Badajoz, Caceres, Medellin, Merida, Moura & Plasencia (889-890)
 	dynasty = 12305 # Banu Marwan Dynasty
 	dna = andalusian0095_rahman
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -4839,7 +4836,7 @@ andalusian0095 = {
 andalusian0096 = {
 	name = "Muntasir" # Muntasir ibn Abd al-Rahman
 	dynasty = 12305 # Banu Marwan Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73957 # Sultan Abd al-Rahman ibn Marwan of Badajoz
@@ -4859,7 +4856,7 @@ andalusian0096 = {
 andalusian0097 = {
 	name = "Wadih" # Wadih, Walih of Toledo (997-1010) & Fes (999-1000), Sheik of Alarcon, Alarcos, Calatrava, Madrid, Malagon, Molina, Soria & Toledo (997-1010), Ceuta, Fes & Tangiers (999-1000)
 	dynasty = wadihid # Wadih of Toledo Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 
@@ -4876,7 +4873,7 @@ andalusian0097 = {
 andalusian0098 = {
 	name = "Zuhayr" # Zuhayr, Emir of Murcia (1028-1038), Sheik of Murcia (1014-1018), Jaén (1018-1021), Almeria (1028-1038) & Alicante (1038)
 	dynasty = zuhayrid # Zuhayr of Toledo Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -4891,7 +4888,7 @@ andalusian0098 = {
 andalusian0099 = {
 	name = "Jayran" # Jayran, Emir of Murcia (1013-1028), Sheik of Murcia (1013-1014) & Almeria (1028-1038)
 	dynasty = jayranid # Jayran of Murcia Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = beardless_eunuch
 	trait = education_martial_3
@@ -4907,7 +4904,7 @@ andalusian0099 = {
 andalusian0100 = {
 	name = "Aflah" # Aflah, Sheik of Almeria (1010-1014)
 	dynasty = aflahid # Aflah of Almeria Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_2
 
@@ -4925,7 +4922,7 @@ andalusian0100 = {
 andalusian0101 = {
 	name = "Labib" # Labib, Emir of Valencia (1016-1021), Sheik of Castellon & Tarragona (1009 & 1010-1038) & Valencia (1016-1021)
 	dynasty = labibid # Labib of Valencia Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -4940,7 +4937,7 @@ andalusian0101 = {
 andalusian0102 = {
 	name = "Muqatil" # Muqatil, Sheik of Castellon & Tarragona (1038-1053)
 	dynasty = muqatilid # Muqatil of Tortosa Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_2
 
@@ -4955,7 +4952,7 @@ andalusian0102 = {
 andalusian0103 = {
 	name = "Ya_la" # Ya'la, Sheik of Castellon & Tarragona (1053-1057)
 	dynasty = yalaid # Ya'la of Tortosa Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4970,7 +4967,7 @@ andalusian0103 = {
 andalusian0104 = {
 	name = "Nabil" # Nabil, Sheik of Castellon & Tarragona (1057-1060)
 	dynasty = nabilid # Nabil of Tortosa Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -4986,7 +4983,7 @@ andalusian0105 = {
 	name = "Naja_" # Abu al-Fawz Naja' 'as-Saqlabi', Hammudid minister in Malaqah adn Wali of Rif (1042-1043), Took Malaqah after the death of it's last ruler (1042-1043)
 	dynasty = nayid # Naja' of Tangiers Dynasty
 	give_nickname = nick_me_al_saqlabi # as-Saqlabi
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_3
 
@@ -5003,7 +5000,7 @@ andalusian0105 = {
 andalusian0106 = {
 	name = "Dawud" # David
 	dynasty = 20051 # Davides Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5021,7 +5018,7 @@ andalusian0106 = {
 andalusian0107 = {
 	name = "Susanah" # Susana, wife of David (andalusian0106)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5036,7 +5033,7 @@ andalusian0107 = {
 andalusian0108 = {
 	name = "Zakariyya" # Zacarías Davides
 	dynasty = 20051 # Davides Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5054,7 +5051,7 @@ andalusian0108 = {
 andalusian0109 = {
 	name = "Mido" # Mido Davides
 	dynasty = 20051 # Davides Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5072,7 +5069,7 @@ andalusian0109 = {
 andalusian0110 = {
 	name = "Rashid" # Rashid, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5095,7 +5092,7 @@ andalusian0110 = {
 andalusian0111 = {
 	name = "Umar" # Umar, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -5118,7 +5115,7 @@ andalusian0111 = {
 andalusian0112 = {
 	name = "Jalaf" # Jalaf, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -5141,7 +5138,7 @@ andalusian0112 = {
 andalusian0113 = {
 	name = "Yunus" # Yunus, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5164,7 +5161,7 @@ andalusian0113 = {
 andalusian0114 = {
 	name = "Amrus" # Amrus, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_1
 
@@ -5187,7 +5184,7 @@ andalusian0114 = {
 andalusian0115 = {
 	name = "Muhammad" # Muhammad, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -5210,7 +5207,7 @@ andalusian0115 = {
 andalusian0116 = {
 	name = "Mutarrif" # Mutarrif, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5233,7 +5230,7 @@ andalusian0116 = {
 andalusian0117 = {
 	name = "Abdallah" # Abdallah, name unknown, ibn Jalaf
 	dynasty = banu_jalaf # Banu Khalaf Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -5256,7 +5253,7 @@ andalusian0117 = {
 andalusian0118 = {
 	name = "Musa" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -5273,7 +5270,7 @@ andalusian0118 = {
 andalusian0119 = {
 	name = "Sa_id" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5293,7 +5290,7 @@ andalusian0119 = {
 andalusian0120 = {
 	name = "Harun" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_intrigue_1
 
@@ -5313,7 +5310,7 @@ andalusian0120 = {
 andalusian0121 = {
 	name = "Abdallah" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = andalusian0120 # Harun ibn Sa'id
@@ -5332,7 +5329,7 @@ andalusian0121 = {
 andalusian0122 = {
 	name = "Utman" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5349,7 +5346,7 @@ andalusian0122 = {
 andalusian0123 = {
 	name = "Muhammad" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -5366,7 +5363,7 @@ andalusian0123 = {
 andalusian0124 = {
 	name = "Musa" # Fictional to link family
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5383,7 +5380,7 @@ andalusian0124 = {
 andalusian0125 = {
 	name = "Harun" # Harun, an inhabitant of Merida
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5400,7 +5397,7 @@ andalusian0125 = {
 andalusian0126 = {
 	name = "Sa_id" # Sa'id ibn Harun, Sheik of Faro (1013-1043)
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5417,7 +5414,7 @@ andalusian0126 = {
 andalusian0127 = {
 	name = "Muhammad" # Muhammad ibn Harun, Sheik of Faro (1043-1052)
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_3
 
@@ -5440,7 +5437,7 @@ andalusian0127 = {
 andalusian0128 = {
 	name = "Utman" # Utman ibn Harun, placeholder Sheik of Faro (1052-1070), Harunids continued ruling Faro for centuries
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5457,7 +5454,7 @@ andalusian0128 = {
 andalusian0129 = {
 	name = "Tarifa" # Tarifa, fictional wife of Sheik Muhammad ibn Sa'id of Faro (andalusian0127)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5472,7 +5469,7 @@ andalusian0129 = {
 andalusian0130 = {
 	name = "Harun" # Fictional
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -5493,7 +5490,7 @@ andalusian0130 = {
 andalusian0131 = {
 	name = "Isma_il" # Fictional
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_1
 
@@ -5514,7 +5511,7 @@ andalusian0131 = {
 andalusian0132 = {
 	name = "Muhammad" # Fictional
 	dynasty = banu_harun # Banu Harun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5535,7 +5532,7 @@ andalusian0132 = {
 andalusian0133 = {
 	name = "Doha" # Doha, fictional wife of Count Urdun of Soria (73988)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5551,7 +5548,7 @@ andalusian0134 = {
 	name = "Sanya" # Fictional
 	female = yes
 	dynasty = castallid # Castalla Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 73988 # Count Urdun of Soria
@@ -5571,7 +5568,7 @@ andalusian0134 = {
 andalusian0135 = {
 	name = "Balashk" # Balashk, placeholder Count of Soria (882-909)
 	dynasty = castallid # Castalla Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 73988 # Count Urdun of Soria
@@ -5591,7 +5588,7 @@ andalusian0135 = {
 andalusian0136 = {
 	name = "Hawwa" # Hawwa, fictional wife of Count Boutros of Salamanca (73989)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5607,7 +5604,7 @@ andalusian0137 = {
 	name = "Ludriqh" # Ludriqh, placeholder Count of Salamaca (885-910)
 	female = yes
 	dynasty = salamanqid # Salamanqa Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 73989 # Count Boutros of Salamanca
@@ -5628,7 +5625,7 @@ andalusian0138 = {
 	name = "Maryam" # Fictional
 	female = yes
 	dynasty = salamanqid # Salamanqa Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 73989 # Count Boutros of Salamanca
@@ -5648,7 +5645,7 @@ andalusian0138 = {
 andalusian0139 = {
 	name = "Batul" # Batul, fictional wife of Count Sabariquh of Cuellar (73990)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5664,7 +5661,7 @@ andalusian0140 = {
 	name = "Belay" # Belay, placheolder Count of Cuellar (891-916)
 	female = yes
 	dynasty = 12314 # Siqubiyyah Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 73990 # Count Sabariquh of Cuellar
@@ -5684,7 +5681,7 @@ andalusian0140 = {
 andalusian0141 = {
 	name = "Mansura" # Mansura, fictional wife of Count Adfuns of Olmedo (73991)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5700,7 +5697,7 @@ andalusian0142 = {
 	name = "Garsiya" # Garsiya, placeholder Count of Olmedo (892-917)
 	female = yes
 	dynasty = ulmetid # Ulmetu Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = andalusian0153 # Count Adfuns of Olmedo
@@ -5720,7 +5717,7 @@ andalusian0142 = {
 andalusian0143 = {
 	name = "Susanah" # Susanah, fictional wife of Count Ulyan of Avila (200156)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5735,7 +5732,7 @@ andalusian0143 = {
 andalusian0144 = {
 	name = "Amrus" # Fictional
 	dynasty = ramlid # al-Ramla Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 200156 # Count Ulyan of Avila
@@ -5756,7 +5753,7 @@ andalusian0145 = {
 	name = "Sarah" # Fictional
 	female = yes
 	dynasty = ramlid # al-Ramla Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 200156 # Count Ulyan of Avila
@@ -5776,7 +5773,7 @@ andalusian0145 = {
 andalusian0146 = {
 	name = "Majdala" # Majdala, fictional wife of Count Lubb of Burgos (200215)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -5792,7 +5789,7 @@ andalusian0147 = {
 	name = "Nurah" # Fictional
 	female = yes
 	dynasty = burgusid # Burgus Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 200215 # Count Lubb of Burgos
@@ -5813,7 +5810,7 @@ andalusian0148 = {
 	name = "Munya" # Fictional
 	female = yes
 	dynasty = burgusid # Burgus Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 200215 # Count Lubb of Burgos
@@ -5833,7 +5830,7 @@ andalusian0148 = {
 andalusian0149 = {
 	name = "Suraya" # Suraya, fictional wife of Count Ya'qub of Valladolid (200225)
 	female = yes
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -5849,7 +5846,7 @@ andalusian0150 = {
 	name = "Annah" # Fictional
 	female = yes
 	dynasty = walidid # Balad al-Walid Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 200225 # Count Ya'qub of Valladolid
@@ -5869,7 +5866,7 @@ andalusian0150 = {
 andalusian0151 = {
 	name = "Lubb" # Fictional
 	dynasty = walidid # Balad al-Walid Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 
 	father = 200225 # Count Ya'qub of Valladolid
@@ -5889,7 +5886,7 @@ andalusian0151 = {
 andalusian0152 = {
 	name = "Gurg" # Gurg, placeholder Count of Ibiza, Mallorca & Menorca (848-867)
 	dynasty = 12313 # Mayurqa Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_diplomacy_2
 
@@ -5904,7 +5901,7 @@ andalusian0152 = {
 andalusian0153 = {
 	name = "Adfuns" # Adfuns, placeholder Count of Olmedo (867-892)
 	dynasty = ulmetid # Ulmetu Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = andalusian
 	trait = education_martial_1
 
@@ -5922,7 +5919,7 @@ andalusian0153 = {
 surunbaqi0001 = {
 	name = "Sa_dun" # Sa'dun ibn Fath al-Surunbaqi, Walih of Portucale (851-868) & Beja (875-881), Sheik of Braganza & Porto (851-868), Aveiro (851-881), Viseu (851-878), Coimbra (875-878) & Evora (875-881)
 	dynasty = al-surunbaqi # Sa'dun al-Surubaqi's Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	martial = 7
 	diplomacy = 5
@@ -5934,7 +5931,7 @@ surunbaqi0001 = {
 	trait = education_martial_3
 
 	father = 73992 # Fath
- 
+
 	840.1.1 = {
 		birth = yes
 		effect = {
@@ -5960,7 +5957,7 @@ surunbaqi0001 = {
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = calm
 	trait = quraysh
@@ -5969,7 +5966,7 @@ surunbaqi0001 = {
 	father = 73686 # Muhammad ibn Abdallah (levantine.txt)
 	mother = basque0148 # Muzna (basque.txt)
 	trait = child_of_concubine_male
- 
+
 	891.1.7 = {
 		birth = yes
 	}
@@ -5997,7 +5994,7 @@ surunbaqi0001 = {
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_3
@@ -6026,7 +6023,7 @@ surunbaqi0001 = {
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 8
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = chaste
 	trait = wrathful
@@ -6058,7 +6055,7 @@ surunbaqi0001 = {
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = humble
 	trait = quraysh
@@ -6081,10 +6078,10 @@ surunbaqi0001 = {
 45025 = {
 	name = "Abd-al-Aziz" # Abd al-Aziz ibn Abd al-Rahman ibn Sanyul, Emir of Valencia (1021-1061) & Sheik of Valencia (1021-1061)
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
- 
+
 	father = 73226 # Abd al-Rahman ibn Sanyul
 
 	1006.1.1 = {
@@ -6098,10 +6095,10 @@ surunbaqi0001 = {
 45026 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Abd al-Aziz, Emir of Valencia (1061-1065) & Sheik of Valencia (1061-1065)
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
- 
+
 	father = 45025 # Emir Abd al-Aziz ibn Abd al-Rahman ibn Sanyul of Valencia
 
 	1045.1.1 = {
@@ -6123,7 +6120,7 @@ surunbaqi0001 = {
 73211 = {
 	name = "al-Rumaikiyya" # al-Rumaikiyya, wife of Emir al-Mu'tadid of Sevilla (3214 - bedouin.txt)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = lifestyle_poet
 	trait = education_stewardship_3
@@ -6139,14 +6136,14 @@ surunbaqi0001 = {
 73226 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Sanyul (or Sanchuelo)
 	dynasty = 569 # Muhammad al-Mansur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = drunkard
 	trait = education_intrigue_1
 
 	father = 3206 # Muhammad al-Mansur (yemeni.txt)
 	mother = 70125 # Urraca Sánchez, known as Abda (basque.txt)
- 
+
 	983.1.1 = {
 		birth = yes
 	}
@@ -6161,7 +6158,7 @@ surunbaqi0001 = {
 73666 = {
 	name = "Ubayd-Allah" # Ubayd Allah ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -6179,7 +6176,7 @@ surunbaqi0001 = {
 73667 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Ubayd Allah
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -6197,7 +6194,7 @@ surunbaqi0001 = {
 73668 = {
 	name = "Muhammad" # Muhammad (III) ibn Abd al-Rahman, Muwalladi Caliph (1024-1025), Sultan of Andalusia (1024-1025) & Sheik of Cabra, Cordoba & Moura (1024-1025)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -6220,7 +6217,7 @@ surunbaqi0001 = {
 73669 = {
 	name = "Abd-al-Jabbar" # Abd al-Yabbar ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -6238,7 +6235,7 @@ surunbaqi0001 = {
 73670 = {
 	name = "Hisham" # Hisham ibn Abd al-Yabbar
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_intrigue_2
@@ -6264,7 +6261,7 @@ surunbaqi0001 = {
 73671 = {
 	name = "Muhammad" # Muhammad (II) ibn Hisham, Muwalladi Caliph (1009 & 1010), Sultan of Andalusia (1009 & 1010) & Sheik of Algeciras, Almeria, Cabra, Cordoba, Faro, Granada, Malaga, Moura, Niebla, Sevilla & Silves (1009 & 1010)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_intrigue_1
@@ -6288,7 +6285,7 @@ surunbaqi0001 = {
 73672 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman (V) ibn Hisham, Muwalladi Caliph (1023-1024), Sultan of Andalusia (1023-1024) & Sheik of Cabra, Cordoba & Moura (1023-1024)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_2
@@ -6312,7 +6309,7 @@ surunbaqi0001 = {
 73673 = {
 	name = "Suleyman" # Suleyman ibn Abd al-Rahman
 	dynasty = 597 # Umayyad dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -6330,7 +6327,7 @@ surunbaqi0001 = {
 73674 = {
 	name = "al-Hakam" # al-Hakam ibn Suleyman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = content
@@ -6352,7 +6349,7 @@ surunbaqi0001 = {
 73675 = {
 	name = "Suleyman" # Suleyman ibn al-Hakam, Muwalladi Caliph (1009-1010 & 1013-1016), Sultan of Andalusia (1009-1010 & 1013-1016) & Sheik of Algeciras, Cabra, Cordoba, Malaga, Moura & Niebla (1009-1010 & 1013-1016), Almería, Faro, Granada, Sevilla & Silves (1009-1010)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_1
@@ -6376,7 +6373,7 @@ surunbaqi0001 = {
 73676 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Abd al-Rahman
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_diplomacy_1
@@ -6394,7 +6391,7 @@ surunbaqi0001 = {
 73677 = {
 	name = "Muhammad" # Muhammad ibn Abd al-Malik
 	dynasty = 597 # Umayyad
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_martial_1
@@ -6415,7 +6412,7 @@ surunbaqi0001 = {
 73678 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman (IV) ibn Muhammad, Muwalladi Caliph (1018), Sultan of Andalusia (1018) & Sheik of Cabra, Cordoba, Moura & Niebla (1018)
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = quraysh
 	trait = education_stewardship_3
@@ -6439,7 +6436,7 @@ surunbaqi0001 = {
 73927 = {
 	name = "Ushar" # Ushar, wife of Sultan Muhammad I of Andalusia (73683 - levantine.txt)
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -6454,7 +6451,7 @@ surunbaqi0001 = {
 85008 = {
 	name = "Muyahid" # Muyahid ibn Abdallah, Emir of Mallorca (1015-1045), Sheik of Alcaraz & Denia (1009-1045), Arborea, Cagliari, Gallura, Logudoro & Tortoli (1015-1016), Mallorca & Menorca (1015-1036), Ibiza (1015-1045) & Alicante (1038-1045)
 	dynasty = al-amiri # Muyahid al-Amiri Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = calm
 	trait = education_martial_3
@@ -6476,7 +6473,7 @@ surunbaqi0001 = {
 200219 = {
 	name = "Sabur" # Abdallah ibn Muhammad, known as Sabur, Emir of Badajoz (981-1022), Sheik of Alcacer do Sal, Badajoz, Caceres, Castelo Branco, Evora, Lisboa, Medellin, Merida, Plasencia & Viseu (981-1022) & Elvas (983-1022)
 	dynasty = 1046023 # Banu Sabur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 
@@ -6491,7 +6488,7 @@ surunbaqi0001 = {
 200220 = {
 	name = "Abd-al-Aziz" # Abd al-Aziz ibn Sabur, Emir of Beja (1022-1030), Sheik of Alcacer do Sal, Lisboa & Viseu (1022-1030)
 	dynasty = 1046023 # Banu Sabur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -6508,7 +6505,7 @@ surunbaqi0001 = {
 200221 = {
 	name = "Abd-al-Malik" # Emir of Beja (1030-1034), Sheik of Alcacer do Sal, Lisboa & Viseu (1030-1034)
 	dynasty = 1046023 # Banu Sabur Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_1
 
@@ -6525,7 +6522,7 @@ surunbaqi0001 = {
 73984 = {
 	name = "Suleyman" # Suleyman ibn Hakam
 	dynasty = 12312 # Banu Quti Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_stewardship_2
 
@@ -6548,7 +6545,7 @@ surunbaqi0001 = {
 73985 = {
 	name = "Nadia" # Nadia, fictional wife of Suleyman ibn Hakam (73984)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_1
 
@@ -6563,7 +6560,7 @@ surunbaqi0001 = {
 73986 = {
 	name = "Ayyub" # Ayyub ibn Suleyman
 	dynasty = 12312 # Banu Quti Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73984 # Suleyman ibn Hakam
@@ -6584,7 +6581,7 @@ andalusian_0001 = { # az-Zarqali, Renowned Andalusian astrologer known in latin 
 	name = "Ibrahim"
 	dynasty_house = house_me_Tujibid # Banu Tujib
 	give_nickname = nick_az_zarqali # az-Zarqali
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	martial = 3
@@ -6592,15 +6589,15 @@ andalusian_0001 = { # az-Zarqali, Renowned Andalusian astrologer known in latin 
 	intrigue = 3
 	stewardship = 7
 	learning = 12
-	
+
 	trait = education_learning_3
-	trait = diligent 
+	trait = diligent
 	trait = humble
 	trait = temperate
-	trait = intellect_good_2 
-	trait = scholar
-	trait = journaller 
-	
+	trait = intellect_good_2
+	trait = erudite
+	trait = journaller
+
 	father = me_tujibid_014 # (found in bedouin_me.txt)
 	1029.1.1 = {
 		birth = yes
@@ -6621,7 +6618,7 @@ andalusian_0001 = { # az-Zarqali, Renowned Andalusian astrologer known in latin 
 		}
 	}
 	1100.1.1 = {
-		death = yes 
+		death = yes
 	}
 }
 
@@ -6629,23 +6626,23 @@ andalusian_0002 = { # Ibn al-Wafid, famous physician and alchemist in Tulaytilah
 	name = "Abd-al-Rahman"
 	dynasty_house = house_me_wafidid # Banu Wafid
 	give_nickname = nick_me_ibn_wafid # Ibn Wafid
-	religion = muwalladi
-	culture = andalusian 
+	rite = maliki
+	culture = andalusian
 
 	martial = 4
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 8
 	learning = 12
-	
+
 	trait = education_learning_4
-	trait = ambitious 
-	trait = cynical 
-	trait = humble 
+	trait = ambitious
+	trait = cynical
+	trait = humble
 	trait = lifestyle_herbalist
 	trait = lifestyle_gardener
-	trait = lifestyle_physician 
-	
+	trait = lifestyle_physician
+
 	father = me_wafidid_002 # (found in andalusian_me.txt)
 	997.1.1 = {
 		birth = yes
@@ -6654,7 +6651,7 @@ andalusian_0002 = { # Ibn al-Wafid, famous physician and alchemist in Tulaytilah
 		employer = 3924
 	}
 	1074.1.1 = {
-		death = yes 
+		death = yes
 	}
 }
 
@@ -6662,7 +6659,7 @@ andalusian_0003 = { # Wallada bint al-Mustakfi
 	name = "Wallada"
 	dna = andalusian_0003_wallada
 	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	female = yes
 
@@ -6724,7 +6721,7 @@ andalusian_0003 = { # Wallada bint al-Mustakfi
 
 andalusian_0004 = { # Ibn Zaydun
 	name = "Ahmad"
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	dynasty_house = house_me_banu_makhzum # al-Makhzumi
 	father = andalusian_0005
@@ -6780,7 +6777,7 @@ andalusian_0004 = { # Ibn Zaydun
 
 andalusian_0005 = {
 	name = "Abd_allah"
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	dynasty_house = house_me_banu_makhzum # al-Makhzumi
 	father = andalusian_0006
@@ -6796,7 +6793,7 @@ andalusian_0005 = {
 
 andalusian_0006 = {
 	name = "Ahmad"
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	dynasty_house = house_me_banu_makhzum # al-Makhzumi
 	father = andalusian_0007
@@ -6812,7 +6809,7 @@ andalusian_0006 = {
 
 andalusian_0007 = {
 	name = "Galib"
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	dynasty_house = house_me_banu_makhzum # al-Makhzumi
 
@@ -6837,7 +6834,7 @@ andalusian_0007 = {
 
 andalusian_0008 = {
 	name = "Zaydun"
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	dynasty_house = house_me_banu_makhzum # al-Makhzumi
 	trait = quraysh
@@ -6854,11 +6851,11 @@ averroes_1 = {
 	name = "Muhammad" # Ibn Rushd, Latinized as Averroes
 	dynasty = me_ibn_rushd_dynasty
 	give_nickname = nick_me_ibn_rushd_al_hafid # Ibn Rushd al-Hafid
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 	trait = education_learning_4
 	trait = intellect_good_2
-	trait = scholar
+	trait = erudite
 	trait = theologian
 	trait = zealous
 
@@ -6890,11 +6887,11 @@ ibn_tufayl_1 = {
 	name = "Muhammad" # Ibn Tufayl, Latinized as Avetophail
 	dynasty = me_ibn_tufayl_dynasty # Banu Qays
 	give_nickname = nick_me_ibn_tufayl # Ibn Tufayl
-	religion = ashari
+	rite = shafii
 	culture = andalusian
 	trait = education_learning_4
 	trait = intellect_good_2
-	trait = scholar
+	trait = erudite
 	trait = theologian
 	trait = zealous
 
@@ -6918,6 +6915,143 @@ ibn_tufayl_1 = {
 		}
 	}
 	1185.1.1 = {
+		death = yes
+	}
+}
+
+al_abda_1 = {
+	name = "Ali"
+	dynasty = andalusian_al_abda
+	rite = maliki
+	culture = andalusian
+	diplomacy = 13
+	martial = 7
+	stewardship = 10
+	intrigue = 7
+	learning = 4
+	prowess = 4
+	trait = education_stewardship_4
+	trait = patient
+	trait = wrathful
+	trait = vengeful
+	trait = confider
+	disallow_random_traits = yes
+	1025.1.1 = {
+		birth = yes
+	}
+	1066.9.15 = {
+		effect = {
+			change_current_weight = {
+				value = 35
+				subtract = current_weight
+			}
+			target_weight_modifier_effect = { VALUE = 38 }
+			learn_language = language_iberian
+		}
+	}
+	1071.1.1 = {
+		death = yes
+	}
+}
+
+shuhayd_1 = {
+	name = "Faraj"
+	dynasty = andalusian_shuhayd
+	rite = maliki
+	culture = andalusian
+	diplomacy = 9
+	martial = 2
+	stewardship = 6
+	intrigue = 6
+	learning = 3
+	prowess = 3
+	trait = education_diplomacy_3
+	trait = diligent
+	trait = cynical
+	trait = ambitious
+	trait = lifestyle_mystic
+	disallow_random_traits = yes
+	1030.1.1 = {
+		birth = yes
+	}
+	1066.9.15 = {
+		effect = {
+			change_current_weight = {
+				value = -30
+				subtract = current_weight
+			}
+			target_weight_modifier_effect = { VALUE = -12 }
+			learn_language = language_iberian
+		}
+	}
+	1092.1.1 = {
+		death = yes
+	}
+}
+
+futays_1 = {
+	name = "Faraj"
+	dynasty = andalusian_futays
+	rite = maliki
+	culture = andalusian
+	diplomacy = 3
+	martial = 7
+	stewardship = 14
+	intrigue = 7
+	learning = 14
+	prowess = 3
+	health = 5.25
+	trait = education_learning_2
+	trait = gluttonous
+	trait = trusting
+	trait = gregarious
+	disallow_random_traits = yes
+	1030.1.1 = {
+		birth = yes
+	}
+	1066.9.15 = {
+		effect = {
+			change_current_weight = {
+				value = 100
+				subtract = current_weight
+			}
+		}
+	}
+	1092.1.1 = {
+		death = yes
+	}
+}
+
+al_raqqa_1 = {
+	name = "Jahwar"
+	dynasty = andalusian_al_raqqa
+	rite = maliki
+	culture = andalusian
+	diplomacy = 3
+	martial = 5
+	stewardship = 9
+	intrigue = 9
+	learning = 4
+	prowess = 6
+	trait = education_stewardship_3
+	trait = diligent
+	trait = ambitious
+	trait = patient
+	trait = lifestyle_traveler
+	disallow_random_traits = yes
+	1030.1.1 = {
+		birth = yes
+	}
+	1066.9.15 = {
+		effect = {
+			change_current_weight = {
+				value = -30
+				subtract = current_weight
+			}
+			target_weight_modifier_effect = { VALUE = -17 }
+		}
+	}
+	1092.1.1 = {
 		death = yes
 	}
 }

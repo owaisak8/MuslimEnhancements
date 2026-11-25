@@ -32,7 +32,7 @@
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 7
-	religion = ashari
+	rite = shafii
 	culture = siqilli
 	1039.1.1 = {
 		birth = yes
@@ -45,7 +45,7 @@
 73314 = {
 	name = "Muhammad" # Fictional
 	dynasty = 12241 # Mdinid (al-Madani)
-	religion = ashari
+	rite = shafii
 	culture = siqilli
 	father = 20828
 	1065.1.1 = {
@@ -59,7 +59,7 @@
 73315 = { # Taken from berber.txt
 	name = "Abdallah" # Fictional
 	dynasty = 12241 # Mdinid (al-Madani)
-	religion = "ashari"
+	rite = "shafii"
 	culture = siqilli
 	father = 73314
 	1090.1.1 = {
@@ -90,7 +90,7 @@
 	name = "Abdallah" # Abdallah 'ibn Mankud'
 	dynasty = 12236 # Mankudid
 	give_nickname = nick_me_ibn_mankud # Ibn Mankud*
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 
 	father = ss_taifa_001 # Mankud (exists in maghrebi_me.txt)
@@ -108,7 +108,7 @@
 	name = "Ali" # Ali 'ibn al-Ḥawwās' ibn Ni'ma*
 	dynasty = 12239 # al-Ḥawwāsi
 	give_nickname = nick_me_ibn_al_hawwas # Ibn al-Ḥawwās*
-	religion = ashari
+	rite = shafii
 	culture = siqilli
 
 	father = maghrebi0012 # Ni'ma
@@ -128,7 +128,7 @@
 159183 = {
 	name = "al-Hassan" # al-Hassan ibn Ali al-Kalbi, First Kalbid emir of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = maghrebi
 
 	father = 159195 # Ali ibn Abu Hussayn al-Kalbi
@@ -143,7 +143,7 @@
 159184 = {
 	name = "Ahmad" # Ahmad I ibn al-Hassan, Second Kalbid emir of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 
 	father = 159183 # al-Hassan ibn Ali al-Kalbi
@@ -158,7 +158,7 @@
 159185 = {
 	name = "Ali_Abu_l_Qasim" # Ali Ab'l-Qasim ibn al-Hassan al-Kalbi, Third emir of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 
 	father = 159183 # al-Hassan ibn Ali al-Kalbi
@@ -175,7 +175,7 @@
 159186 = {
 	name = "Jabir" # Jabir ibn Ali al-Kalbi, Fourth emir of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 	father = 159195 # Ali ibn Abu Hussayn al-Kalbi
 	930.1.1 = {
@@ -189,7 +189,7 @@
 159187 = {
 	name = "Muhammad" # son of al-Hasan Kalbid
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 	father = 159183
 	932.1.1 = {
@@ -203,7 +203,7 @@
 159188 = {
 	name = "Ja_far" # Ja'far I ibn Muhammad al-Kalbi of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 	father = 159187 # Muhammad al-Kalbi
 	950.1.1 = {
@@ -217,7 +217,7 @@
 159189 = {
 	name = "Abdallah" # Abdallah ibn Muhammad al-Kalbi of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 	father = 159187 # Muhammad al-Kalbi
 	951.1.1 = {
@@ -231,7 +231,7 @@
 159190 = {
 	name = "Yusuf" # Yusuf of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 	trait = calm
 	trait = patient
@@ -251,7 +251,7 @@
 159191 = {
 	name = "Ja_far" # Ja'far II ibn Yusuf of Sicily
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 
 	father = 159190 # Yusuf of Sicily
@@ -267,7 +267,7 @@
 	name = "Ahmad" # Ahmad II 'al-Akḥal' ibn Yusuf al-Kalbi
 	dynasty = 12240 # al-Kalbi
 	give_nickname = nick_me_al_akhal # al-Akḥal
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 
 	father = 159190 # Yusuf of Sicily
@@ -284,7 +284,7 @@
 	name = "Hassan" # Hassan II 'aṣ-Ṣamṣam', Last Kalbid emir of Sicily
 	dynasty = 12240 # al-Kalbi
 	give_nickname = nick_me_as_samsam # aṣ-Ṣamṣam
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 
 	father = 159190 # Yusuf of Sicily
@@ -299,7 +299,7 @@
 159194 = {
 	name = "Ibrahim" # most likley fictional
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 	father = 159192
 	1001.1.1 = {
@@ -313,7 +313,7 @@
 159195 = {
 	name = "Ali" # Ali al-Kalbi, Fatimid general
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = maghrebi
 	trait = education_martial_3
 
@@ -331,7 +331,7 @@
 73309 = { # Taken from berber.txt
 	name = "Muhammad" # Most likely fictional
 	dynasty = 12240 # al-Kalbi
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = siqilli
 
 	father = 159194
@@ -350,7 +350,7 @@
 210028 = {
 	name = "Rustam" # Rustam ibn Barham, Founder of the Rustamids
 	dynasty = 808 #Rustamid
-	religion = ashari
+	rite = shafii
 	culture = persian
 	give_nickname = nick_al_farisi
 	708.1.1 = {
@@ -364,7 +364,7 @@
 210029 = {
 	name = "Abdul-Rahman" # Abdul-Rahman ibn Rustam, First Rustamid Ruler
 	dynasty = 808 # Rustamid
-	religion = ibadi
+	rite = ibadi
 	culture = maghrebi # Raised by a maghrebi step-father
 	father = 210028
 	728.1.1 = {
@@ -378,7 +378,7 @@
 210030 = {
 	name = "Abdul-Wahab" # Abdul-Wahab ibn Abdul-Rahman, Founder of the Wahbi school of Ibadiyyah
 	dynasty = 808
-	religion = wahbiya
+	rite = wahbiya
 	culture = maghrebi
 	father = 210029
 	750.1.1 = {
@@ -392,7 +392,7 @@
 163097 = {
 	name = "Aflah" # Aflah ibn Abdul-Wahab
 	dynasty = 808 # Rustamid
-	religion = "wahbiya"
+	rite = "wahbiya"
 	culture = maghrebi
 
 	father = 210030 # Abdul-Wahab ibn Abdul-Rahman Rustamid
@@ -407,7 +407,7 @@
 163148 = {
 	name = "Abu_Bakr" # Abu Bakr ibn Aflah
 	dynasty = 808 #Rustamid
-	religion = "wahbiya"
+	rite = "wahbiya"
 	culture = maghrebi
 
 	father = 163097 #Aflah ibn Abdul-Wahab
@@ -422,7 +422,7 @@
 163149 = {
 	name = "Muhammad" # Muhammad Abu al-Yaqzan ibn Aflah
 	dynasty = 808 # Rustamid
-	religion = "wahbiya"
+	rite = "wahbiya"
 	culture = maghrebi
 
 	father = 163097 #Aflah ibn Abdul-Wahab
@@ -437,7 +437,7 @@
 163150 = {
 	name = "Yaqub" # Yaqub ibn Aflah
 	dynasty = 808 # Rustamid
-	religion = "wahbiya"
+	rite = "wahbiya"
 	culture = maghrebi
 
 	father = 163097 # Aflah ibn Abdul-Wahab
@@ -455,8 +455,8 @@
 
 maghrebi0001 = {
 	name = "Khafaja" # Khafaja ibn Sufyan, Aghlabid Governor of Sicily (862-869)
-	dynasty = me_sawadid 
-	religion = "ashari"
+	dynasty = me_sawadid
+	rite = "shafii"
 	culture = "maghrebi"
 	trait = education_martial_3
 
@@ -474,8 +474,8 @@ maghrebi0001 = {
 
 maghrebi0002 = {
 	name = "Muhammad" # Muhammad ibn Khafaja, Aghlabid Governor of Sicily (869-871)
-	dynasty = me_sawadid 
-	religion = "ashari"
+	dynasty = me_sawadid
+	rite = "shafii"
 	culture = "maghrebi"
 	trait = education_martial_3 # He was a commander when his father was governor
 
@@ -493,7 +493,7 @@ maghrebi0002 = {
 maghrebi0004 = {
 	name = "Sawada" # Sawada ibn Muhammad, Aghlabid Governor of Sicily (885-887 & 890-892)
 	dynasty = me_sawadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 	trait = education_diplomacy_2
 
@@ -510,7 +510,7 @@ maghrebi0004 = {
 maghrebi0005 = {
 	name = "Sufyan" # Sufyan ibn Sawada ibn Salim at-Tamimi
 	dynasty = me_sawadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 	trait = education_martial_3
 
@@ -527,7 +527,7 @@ maghrebi0005 = {
 maghrebi0006 = {
 	name = "Sawada" # Sawada ibn Salim at-Tamimi
 	dynasty = me_sawadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 
 	father = me_tamimi_001 # Salim ibn 'Aqal at-Tamīmī (exists in bedouin_me.txt)
@@ -546,7 +546,7 @@ maghrebi0006 = {
 maghrebi0007 = {
 	name = "al-Muda" # al-Muḍa/Mudha ibn Salma
 	dynasty = me_salimawid # al-Muḍawi
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 
 	#father = *** # Im not sure if Salma is a man or a woman
@@ -562,7 +562,7 @@ maghrebi0007 = {
 maghrebi0008 = {
 	name = "Ya_qub" # Ya'qub ibn al-Muḍa/Mudha
 	dynasty = me_salimawid # al-Muḍawi
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 
 	father = maghrebi0007 # al-Muḍa/Mudha ibn Salma
@@ -578,7 +578,7 @@ maghrebi0008 = {
 maghrebi0009 = {
 	name = "Ahmad" # Ahmad ibn Ya'qub, Aghlabid Governor of Sicily (872)
 	dynasty = me_salimawid # al-Muḍawi
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 	trait = education_stewardship_4
 
@@ -596,7 +596,7 @@ maghrebi0009 = {
 
 maghrebi0003 = {
 	name = "Ja_far" # Ja'far ibn Muhammad, Aghlabid Governor of Sicily (875-878)
-	religion = "ashari"
+	rite = "shafii"
 	culture = "maghrebi"
 	trait = education_intrigue_2
 
@@ -619,7 +619,7 @@ maghrebi0003 = {
 maghrebi0010 = {
 	name = "Ibrahim"
 	dynasty = maghrebi_at-timnahid # ath-Thumnawi
-	religion = ashari
+	rite = shafii
 	culture = siqilli
 	987.1.1 = {
 		birth = yes
@@ -633,7 +633,7 @@ maghrebi0011 = {
 	name = "Muhammad" # Muhammad 'ibn ath-Thumnah' ibn Ibrahim
 	dynasty = maghrebi_at-timnahid # ath-Thumnawi
 	give_nickname = nick_me_ibn_ath_thumnah # Ibn ath-Thumnah*
-	religion = ashari
+	rite = shafii
 	culture = siqilli
 	trait = drunkard
 	trait = cynical
@@ -658,7 +658,7 @@ maghrebi0011 = {
 maghrebi0012 = {
 	name = "Ni_ma" # father of Ali 'ibn al-Ḥawwās' ibn Ni'ma*, ruler of Qasr Yanih
 	dynasty = 12239 # al-Ḥawwāsi
-	religion = "ashari"
+	rite = "shafii"
 	culture = siqilli
 	989.1.1 = {
 		birth = yes
@@ -672,7 +672,7 @@ maghrebi0013 = {
 	name = "Maymuna" # Maymūna bint Ni'ma, sister of Ibn al-Ḥawwās, wife of Ibn ath-Thumnah
 	female = yes
 	dynasty = 12239 # al-Ḥawwāsi
-	religion = "ashari"
+	rite = "shafii"
 	culture = siqilli
 	father = maghrebi0012
 	1026.1.1 = {
@@ -686,7 +686,7 @@ maghrebi0013 = {
 maghrebi0014 = {
 	name = "Hammud" # Hammud 'Chamut/Chamutus', Leader of Castrogiovanni (Qasr Yanih) in the second sicilian taifa period.
 	dynasty = me_hammudid
-	religion = "ashari"
+	rite = "shafii"
 	culture = siqilli
 	1036.1.1 = {
 		birth = yes
@@ -725,7 +725,7 @@ maghrebi0014 = {
 	diplomacy = 6
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = siqilli
 	trait = brave
 	trait = zealous
@@ -737,6 +737,680 @@ maghrebi0014 = {
 		employer = baranis0027 # Ayyub ibn Tammim Zirid
 	}
 	1086.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_1 = {
+	name = "Is_mail"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_14 # Barhun
+	960.1.1 = {
+		birth = yes
+	}
+	1026.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_2 = {
+	name = "Ibrahim"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_1 # Ismail
+	985.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_3 = {
+	name = "Is_mail"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_2 # Ibrahim
+	1008.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_4 = {
+	name = "Reshawna"
+	female = yes
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_2 # Ibrahim
+	1005.1.1 = {
+		birth = yes
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_5 = {
+	name = "Salih"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_2 # Ibrahim
+	1016.1.1 = {
+		birth = yes
+	}
+	1086.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_6 = { # wife of Nissim ben Jacob Shahinid
+	name = "Asiya"
+	female = yes
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_2 # Ibrahim
+	1009.1.1 = {
+		birth = yes
+	}
+	1084.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_7 = {
+	name = "Isaac"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_2 # Ibrahim
+	1017.1.1 = {
+		birth = yes
+	}
+	1088.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_8 = {
+	name = "Musa"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_2 # Ibrahim
+	1028.1.1 = {
+		birth = yes
+	}
+	1094.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_9 = {
+	name = "Barhun"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_5 # Salih
+	1035.1.1 = {
+		birth = yes
+	}
+	1075.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_10 = {
+	name = "Yehudah"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_5 # Salih
+	1039.1.1 = {
+		birth = yes
+	}
+	1104.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_11 = {
+	name = "Shararah"
+	female = yes
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_5 # Salih
+	1043.1.1 = {
+		birth = yes
+	}
+	1099.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_12 = {
+	name = "Elchanan"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_3 # Ismail
+	1038.1.1 = {
+		birth = yes
+	}
+	1062.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_13 = {
+	name = "Barhun"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_3 # Ismail
+	1042.1.1 = {
+		birth = yes
+	}
+	1095.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_14 = {
+	name = "Barhun"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	935.1.1 = {
+		birth = yes
+	}
+	998.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_15 = {
+	name = "Barhun"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_7 # Ishaq
+	1038.1.1 = {
+		birth = yes
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_16 = {
+	name = "Abu_Ishaq" # Barhun
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_7 # Ishaq
+	1041.1.1 = {
+		birth = yes
+	}
+	1104.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_17 = {
+	name = "Nissim"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_7 # Ishaq
+	1044.1.1 = {
+		birth = yes
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_18 = {
+	name = "_Ata"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_7 # Ishaq
+	1047.1.1 = {
+		birth = yes
+	}
+	1062.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_19 = {
+	name = "Barhun"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_8 # Musa
+	1050.1.1 = {
+		birth = yes
+	}
+	1104.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_20 = {
+	name = "Yosef"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_8 # Musa
+	1053.1.1 = {
+		birth = yes
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_21 = {
+	name = "Barhun"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_24 # Musa
+	trait = education_stewardship_4
+	trait = diligent
+	1010.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = company_purpose_caravaneer } }
+				add_realm_law_skip_effects = company_purpose_caravaneer
+			}
+			if = {
+				limit = { NOT = { has_realm_law = company_size_small } }
+				add_realm_law_skip_effects = company_size_small
+			}
+		}
+	}
+	1075.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_22 = {
+	name = "Yusuf"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_24 # Musa
+	1013.1.1 = {
+		birth = yes
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_23 = {
+	name = "Ishaq"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_24 # Musa
+	1016.1.1 = {
+		birth = yes
+	}
+	1081.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_taherti_24 = {
+	name = "Musa"
+	dynasty = maghrebi_taherti
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_taherti_1 # Ismail
+	985.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_fasi_1 = {
+	name = "Nissim"
+	dynasty = maghrebi_al_fasi
+	rite = rabbinism
+	culture = mustaarabi
+	1029.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = company_purpose_caravaneer } }
+				add_realm_law_skip_effects = company_purpose_caravaneer
+			}
+			if = {
+				limit = { NOT = { has_realm_law = company_size_small } }
+				add_realm_law_skip_effects = company_size_small
+			}
+		}
+	}
+	1088.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_fasi_2 = {
+	name = "Eliezer"
+	dynasty = maghrebi_al_fasi
+	rite = rabbinism
+	culture = mustaarabi
+	1134.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_qattan_1 = {
+	name = "Ammi"
+	dynasty = maghrebi_al_qattan
+	rite = rabbinism
+	culture = mustaarabi
+	1031.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = company_purpose_artisan } }
+				add_realm_law_skip_effects = company_purpose_artisan
+			}
+			if = {
+				limit = { NOT = { has_realm_law = company_size_small } }
+				add_realm_law_skip_effects = company_size_small
+			}
+		}
+	}
+	1092.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_qattan_2 = {
+	name = "Chelbo"
+	dynasty = maghrebi_al_qattan
+	rite = rabbinism
+	culture = mustaarabi
+	1139.1.1 = {
+		birth = yes
+	}
+	1197.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_hariri_1 = {
+	name = "Boaz"
+	dynasty = maghrebi_al_hariri
+	rite = rabbinism
+	culture = mustaarabi
+	1027.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = company_purpose_caravaneer } }
+				add_realm_law_skip_effects = company_purpose_caravaneer
+			}
+			if = {
+				limit = { NOT = { has_realm_law = company_size_small } }
+				add_realm_law_skip_effects = company_size_small
+			}
+		}
+	}
+	1095.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_hariri_2 = {
+	name = "Reuven"
+	dynasty = maghrebi_al_hariri
+	rite = rabbinism
+	culture = mustaarabi
+	1144.1.1 = {
+		birth = yes
+	}
+	1201.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_qayrawan_1 = {
+	name = "Berekhya"
+	dynasty = maghrebi_al_qayrawan
+	rite = rabbinism
+	culture = mustaarabi
+	1003.1.1 = {
+		birth = yes
+	}
+	1030.1.1 = {
+		add_spouse = maghrebi_taherti_4 # Reshawna
+	}
+	1066.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = company_purpose_caravaneer } }
+				add_realm_law_skip_effects = company_purpose_caravaneer
+			}
+			if = {
+				limit = { NOT = { has_realm_law = company_size_small } }
+				add_realm_law_skip_effects = company_size_small
+			}
+		}
+	}
+	1072.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_qayrawan_2 = {
+	name = "Nissim"
+	dynasty = maghrebi_al_qayrawan
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_qayrawan_1 # Berekhya
+	mother = maghrebi_taherti_4 # Reshawna
+	1031.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_qayrawan_3 = {
+	name = "Yosef"
+	dynasty = maghrebi_al_qayrawan
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_qayrawan_1 # Berekhya
+	mother = maghrebi_taherti_4 # Reshawna
+	1034.1.1 = {
+		birth = yes
+	}
+	1105.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_1 = {
+	name = "Nissim"
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_8 # Ya_qub
+	990.1.1 = {
+		birth = yes
+	}
+	1024.1.1 = {
+		add_spouse = maghrebi_taherti_6 # Asiya
+	}
+	1062.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_2 = {
+	name = "Nehorai" # AKA Nahrai
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_1 # Nissim
+	mother = maghrebi_taherti_6 # Asiya
+	1025.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		effect = {
+			if = {
+				limit = { NOT = { has_realm_law = company_purpose_caravaneer } }
+				add_realm_law_skip_effects = company_purpose_caravaneer
+			}
+			if = {
+				limit = { NOT = { has_realm_law = company_size_small } }
+				add_realm_law_skip_effects = company_size_small
+			}
+		}
+	}
+	1098.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_3 = { # wife of Joseph HaLevi HaNagid ibn Nagrela
+	name = "Rachel"
+	female = yes
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_1 # Nissim
+	mother = maghrebi_taherti_6 # Asiya
+	1028.1.1 = {
+		birth = yes
+	}
+	1089.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_4 = { # wife of Yosef ben Shlomo ibn 'Awkal'
+	name = "Mariam"
+	female = yes
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_1 # Nissim
+	mother = maghrebi_taherti_6 # Asiya
+	1032.1.1 = {
+		birth = yes
+	}
+	1096.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_5 = { # wife of _Ata ibn Isaac al-Tāhertī
+	name = "Sitt"
+	female = yes
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_2 # Nehorai
+	1049.1.1 = {
+		birth = yes
+	}
+	1123.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_6 = { # wife of Yahya ben Hiyya al-Tulaytula
+	name = "Mansukha"
+	female = yes
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_2 # Nehorai
+	1055.1.1 = {
+		birth = yes
+	}
+	1119.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_7 = {
+	name = "Nissim"
+	female = yes
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	father = maghrebi_al_israili_2 # Nehorai
+	1058.1.1 = {
+		birth = yes
+	}
+	1128.1.1 = {
+		death = yes
+	}
+}
+
+maghrebi_al_israili_8 = {
+	name = "Ya_qub"
+	dynasty = maghrebi_al_israili
+	rite = rabbinism
+	culture = mustaarabi
+	960.1.1 = {
+		birth = yes
+	}
+	1027.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional
+ghazi_5 = {
+	name = "Abdallah"
+	rite = shafii
+	culture = maghrebi
+	trait = order_member
+	trait = education_martial_3
+	trait = reaver
+	832.1.1 = {
+		birth = yes
+	}
+	900.1.1 = {
 		death = yes
 	}
 }

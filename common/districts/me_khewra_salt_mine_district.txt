@@ -1,0 +1,9 @@
+﻿khewra_salt_mine_01_district = {
+	primary_building = khewra_salt_mine_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_cave.dds"
+	}
+
+	type = special
+}

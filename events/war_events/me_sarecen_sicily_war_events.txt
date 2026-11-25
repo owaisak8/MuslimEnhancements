@@ -150,6 +150,78 @@ ss_wars.0102 = {
 	}
 }
 
+## Norman Victory
+ss_wars.0103 = {
+	title = ss_wars.0103.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { this = scope:attacker}
+				desc = ss_wars.0103.desc.zirid
+			}
+			desc = ss_wars.0103.desc.general
+		}
+	}
+	theme = realm
+
+	left_portrait = {
+		character = scope:palermo_leader
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:castrogiovanni_leader
+		animation = marshal
+	}
+	lower_right_portrait = scope:syracuse_leader
+	
+	immediate = {
+	}
+	
+	option = {
+		name = ss_wars.0103.a
+	}
+	
+	option = { # Play as Palermo holder
+		name = {
+			trigger = { scope:palermo_leader = { has_any_nickname = yes } }
+			text = ss_wars.0103.b.nicknamed
+		}
+		name = {
+			trigger = { scope:palermo_leader = { has_any_nickname = no } }
+			text = ss_wars.0103.b
+		}
+		
+		trigger = { exists = scope:palermo_leader }
+		set_player_character = scope:palermo_leader
+	}
+	option = { # Play as Castrogiovanni (Agrigento) holder
+		name = {
+			trigger = { scope:castrogiovanni_leader = { has_any_nickname = yes } }
+			text = ss_wars.0103.c.nicknamed
+		}
+		name = {
+			trigger = { scope:castrogiovanni_leader = { has_any_nickname = no } }
+			text = ss_wars.0103.c
+		}
+		
+		trigger = { exists = scope:castrogiovanni_leader }
+		set_player_character = scope:castrogiovanni_leader
+	}
+	option = { # Play as Syracuse holder
+		name = {
+			trigger = { scope:syracuse_leader = { has_any_nickname = yes } }
+			text = ss_wars.0103.d.nicknamed
+		}
+		name = {
+			trigger = { scope:syracuse_leader = { has_any_nickname = no } }
+			text = ss_wars.0103.d
+		}
+		
+		trigger = { exists = scope:syracuse_leader }
+		set_player_character = scope:syracuse_leader
+	}
+}
+
 
 
 ## Italy-Bari Startup

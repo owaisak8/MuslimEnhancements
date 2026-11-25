@@ -12,8 +12,8 @@ me_nukkari_revolt.0001 = {
 
 	trigger = {
 		OR = { # No one that has control over the county is Nukkari
-			NOT = { scope:troubled_town.holder.faith = faith:nukkari }
-			NOT = { scope:troubled_town.holder = { any_liege_or_above = { faith = faith:nukkari } } }
+			NOT = { scope:troubled_town.holder.rite = rite:nukkari }
+			NOT = { scope:troubled_town.holder = { any_liege_or_above = { rite = rite:nukkari } } }
 		}
 	}
 
@@ -66,8 +66,8 @@ me_nukkari_revolt.0001 = {
 						}
 					}
 					if = {
-						limit = { scope:troubled_town.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
-						scope:troubled_town = { set_county_faith = faith:nukkari }
+						limit = { scope:troubled_town.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith } }
+						scope:troubled_town = { set_county_rite = rite:nukkari }
 					}
 				}
 
@@ -191,7 +191,7 @@ me_nukkari_revolt.0004 = {
 				title = me_nukkari_revolt.0004.t
 				left_icon = scope:nr_converted_county
 				
-				scope:nr_converted_county = { set_county_faith = faith:nukkari }
+				scope:nr_converted_county = { set_county_rite = rite:nukkari }
 			}
 			every_liege_or_above = {
 				send_interface_toast = {
@@ -199,7 +199,7 @@ me_nukkari_revolt.0004 = {
 					left_icon = scope:nr_converted_county
 					
 					show_as_tooltip = {
-						scope:nr_converted_county = { set_county_faith = faith:nukkari }
+						scope:nr_converted_county = { set_county_rite = rite:nukkari }
 					}
 				}
 			}
@@ -221,7 +221,7 @@ me_nukkari_revolt.0005 = {
 
 	immediate = {
 		capital_county = { 
-			set_county_faith = faith:nukkari
+			set_county_rite = rite:nukkari
 			save_scope_as = nr_capital
 		}
 	}
@@ -229,7 +229,7 @@ me_nukkari_revolt.0005 = {
 	option = {
 		name = me_nukkari_revolt.0005.a
 		
-		set_character_faith = faith:nukkari
+		set_character_rite = rite:nukkari
 		
 		ai_chance = {
 			base = 100
@@ -292,7 +292,7 @@ me_nukkari_revolt.0100 = {
 		#Random courtiers start joining Abu Yazid's revolt
 		random_ruler = {
 			limit = {
-				NOT = { faith = faith:nukkari }
+				NOT = { rite = rite:nukkari }
 				is_available = yes
 				capital_province = { geographical_region = ghw_region_north_africa }
 				NOT = { is_in_list = NR_102_rulers }
@@ -318,7 +318,7 @@ me_nukkari_revolt.0100 = {
 		}
 		random_ruler = {
 			limit = {
-				NOT = { faith = faith:nukkari }
+				NOT = { rite = rite:nukkari }
 				is_available = yes
 				capital_province = { geographical_region = ghw_region_north_africa }
 				NOT = { is_in_list = NR_102_rulers }
@@ -344,7 +344,7 @@ me_nukkari_revolt.0100 = {
 		}
 		random_ruler = {
 			limit = {
-				NOT = { faith = faith:nukkari }
+				NOT = { rite = rite:nukkari }
 				is_available = yes
 				capital_province = { geographical_region = ghw_region_north_africa }
 				NOT = { is_in_list = NR_102_rulers }
@@ -405,7 +405,7 @@ me_nukkari_revolt.0101 = {
 		custom_tooltip = me_nukkari_revolt.0101.a.tt
 		custom_tooltip = me_nukkari_revolt.0101.b.tt
 		
-		trigger = { faith = faith:nukkari }
+		trigger = { rite = rite:nukkari }
 		
 		remove_short_term_gold = 50
 		change_global_variable = {
@@ -448,12 +448,12 @@ me_nukkari_revolt.0101 = {
 			text = me_nukkari_revolt.0101.b.muslim
 			trigger = { 
 				religion = religion:islam_religion
-				NOT = { faith = faith:nukkari }
+				NOT = { rite = rite:nukkari }
 			}
 		}
 		name = {
 			text = me_nukkari_revolt.0101.b.nukkari
-			trigger = { faith = faith:nukkari }
+			trigger = { rite = rite:nukkari }
 		}
 		
 		custom_tooltip = me_nukkari_revolt.0101.b.tt
@@ -505,8 +505,8 @@ me_nukkari_revolt.0102 = {
 		
 		scope:nr_heretic_courtier = {
 			move_to_pool_at = scope:nukkari_leader.location
-			hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
-			show_as_tooltip = { set_character_faith = faith:nukkari }
+			hidden_effect = { set_character_rite_with_conversion = rite:nukkari }
+			show_as_tooltip = { set_character_rite = rite:nukkari }
 		}
 		
 		ai_chance = {
@@ -587,8 +587,8 @@ me_nukkari_revolt.0102 = {
 
 					scope:nr_heretic_courtier = {
 						move_to_pool_at = scope:nukkari_leader.location
-						hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
-						show_as_tooltip = { set_character_faith = faith:nukkari }
+						hidden_effect = { set_character_rite_with_conversion = rite:nukkari }
+						show_as_tooltip = { set_character_rite = rite:nukkari }
 
 						add_opinion = {
 							target = root
@@ -764,38 +764,42 @@ me_nukkari_revolt.0102 = {
 						has_trait = craven
 					}
 
-					root = { send_interface_toast = {
-						type = event_toast_effect_bad
-						title = me_nukkari_revolt.0102.c.a.desc
-						left_icon = scope:nr_heretic_courtier
+					root = {
+						send_interface_toast = {
+							type = event_toast_effect_bad
+							title = me_nukkari_revolt.0102.c.a.desc
+							left_icon = scope:nr_heretic_courtier
 	
-						scope:nr_heretic_courtier = {
-							move_to_pool_at = scope:nukkari_leader.location
-							hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
-							show_as_tooltip = { set_character_faith = faith:nukkari }
+							scope:nr_heretic_courtier = {
+								move_to_pool_at = scope:nukkari_leader.location
+								hidden_effect = { set_character_rite_with_conversion = rite:nukkari }
+								show_as_tooltip = { set_character_rite = rite:nukkari }
 	
 
-							add_opinion = {
-								target = root
-								modifier = me_nukkari_tried_to_stop_me_opinion
+								add_opinion = {
+									target = root
+									modifier = me_nukkari_tried_to_stop_me_opinion
+								}
+								add_opinion = {
+									target = scope:nr_scoped_chaplain
+									modifier = me_nukkari_tried_to_stop_me_opinion
+								}
+								add_to_list = NR_102_courtiers
 							}
-							add_opinion = {
-								target = scope:nr_scoped_chaplain
-								modifier = me_nukkari_tried_to_stop_me_opinion
+							progress_towards_rival_effect = {
+								REASON = rival_fraternising_enemy
+								CHARACTER = scope:nr_heretic_courtier
+								OPINION = 0
 							}
-							add_to_list = NR_102_courtiers
-						}
-						progress_towards_rival_effect = {
-							REASON = rival_fraternising_enemy
-							CHARACTER = scope:nr_heretic_courtier
-							OPINION = 0
-						}
-						scope:nr_scoped_chaplain = { progress_towards_rival_effect = {
-							REASON = rival_fraternising_enemy
-							CHARACTER = scope:nr_heretic_courtier
-							OPINION = 0
-						} }
-					} }
+							scope:nr_scoped_chaplain = {
+								progress_towards_rival_effect = {
+									REASON = rival_fraternising_enemy
+									CHARACTER = scope:nr_heretic_courtier
+									OPINION = 0
+								} 
+							}
+						} 
+					}
 				}
 				15 = {
 					desc = me_nukkari_revolt.0102.c.b.desc
@@ -852,42 +856,44 @@ me_nukkari_revolt.0102 = {
 						has_trait = saint
 					}
 	
-					root = { send_interface_toast = {
-						type = event_toast_effect_good
-						title = me_nukkari_revolt.0102.notif.b.t
-						left_icon = scope:nr_heretic_courtier
+					root = {
+						send_interface_toast = {
+							type = event_toast_effect_good
+							title = me_nukkari_revolt.0102.notif.b.t
+							left_icon = scope:nr_heretic_courtier
 	
-						add_piety = medium_piety_gain
-						progress_towards_friend_effect = {
-							REASON = friend_guided_right_path
-							CHARACTER = scope:nr_heretic_courtier
-							OPINION = 0
-						}
-						
-						scope:nr_scoped_chaplain = {
+							add_piety = medium_piety_gain
 							progress_towards_friend_effect = {
 								REASON = friend_guided_right_path
 								CHARACTER = scope:nr_heretic_courtier
 								OPINION = 0
 							}
-						}
 						
-						
-						hidden_effect = {
-							scope:nr_heretic_courtier = { add_piety = minor_piety_gain }
-							scope:nr_scoped_chaplain = { add_piety = medium_piety_gain }
-						}
-						
-						if = {
-							limit = {
-								NOT = { this = root }
+							scope:nr_scoped_chaplain = {
+								progress_towards_friend_effect = {
+									REASON = friend_guided_right_path
+									CHARACTER = scope:nr_heretic_courtier
+									OPINION = 0
+								}
 							}
-							add_opinion = {
-								target = root
-								modifier = me_nukkari_reassured_faith_opinion
+						
+						
+							hidden_effect = {
+								scope:nr_heretic_courtier = { add_piety = minor_piety_gain }
+								scope:nr_scoped_chaplain = { add_piety = medium_piety_gain }
+							}
+						
+							if = {
+								limit = {
+									NOT = { this = root }
+								}
+								add_opinion = {
+									target = root
+									modifier = me_nukkari_reassured_faith_opinion
+								}
 							}
 						}
-					} }
+					}
 				}
 			}
 		}
@@ -918,8 +924,8 @@ me_nukkari_revolt.0102 = {
 		}
 		
 		scope:nr_heretic_courtier = {
-			hidden_effect = { set_character_faith_with_conversion = faith:nukkari }
-			show_as_tooltip = { set_character_faith = faith:nukkari }
+			hidden_effect = { set_character_rite_with_conversion = rite:nukkari }
+			show_as_tooltip = { set_character_rite = rite:nukkari }
 		}
 		
 		stress_impact = {

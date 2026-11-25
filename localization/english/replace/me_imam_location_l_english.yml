@@ -1,0 +1,7 @@
+﻿l_english:
+ CHARACTER_LOCATION_TOOLTIP:0 "[Character.Custom('me_character_location')]"
+ me_character_location_default:0 "Located in [ROOT.Char.GetCurrentLocation.GetName]"
+ me_character_location_unreachable:0 "#weak Unreachable#!"
+ me_character_location_mahdi_unreachable:0 "#bold Unreachable#!"
+ me_character_location_minor_occultation:0 "#bold Unreachable, in the Minor Occultation#!"
+ me_character_location_major_occultation:0 "#bold Unreachable, in the Major Occultation#!"

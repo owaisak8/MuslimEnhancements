@@ -1,0 +1,16 @@
+﻿l_english:
+ # ME: the Twelfth Imam's age is not shown. Vanilla's texts are kept for everyone else (the *_ME_DEFAULT keys hold vanilla's wording).
+ CHARACTER_VIEW_NAME:0 "[SelectLocalization( Character.HasTrait( GetTrait('me_twelver_mahdi') ), 'CHARACTER_VIEW_NAME_ME_MAHDI', 'CHARACTER_VIEW_NAME_ME_DEFAULT' )]"
+ CHARACTER_VIEW_NAME_ME_DEFAULT:0 "[Character.GetUINameNotMeNoTooltip], "
+ CHARACTER_VIEW_NAME_ME_MAHDI:0 "[Character.GetUINameNotMeNoTooltip]"
+ CHARACTER_VIEW_AGE:0 "[SelectLocalization( Character.HasTrait( GetTrait('me_twelver_mahdi') ), 'ME_EMPTY_TEXT', 'CHARACTER_VIEW_AGE_ME_DEFAULT' )]"
+ CHARACTER_VIEW_AGE_ME_DEFAULT:0 " [Character.GetAge]"
+ CHARACTER_VIEW_AGE_TT:0 "[SelectLocalization( Character.HasTrait( GetTrait('me_twelver_mahdi') ), 'ME_EMPTY_TEXT', 'CHARACTER_VIEW_AGE_TT_ME_DEFAULT' )]"
+ CHARACTER_VIEW_AGE_TT_ME_DEFAULT:0 "[Character.GetDeathOrBirthDateInfo]"
+ CHARACTER_AGE_VALUE:0 "[SelectLocalization( Character.HasTrait( GetTrait('me_twelver_mahdi') ), 'ME_EMPTY_TEXT', 'CHARACTER_AGE_VALUE_ME_DEFAULT' )]"
+ CHARACTER_AGE_VALUE_ME_DEFAULT:0 "[Character.GetAge]"
+ CHARACTER_TT_NAME_AGE:0 "[SelectLocalization( Character.HasTrait( GetTrait('me_twelver_mahdi') ), 'CHARACTER_VIEW_NAME_ME_MAHDI', 'CHARACTER_TT_NAME_AGE_ME_DEFAULT' )]"
+ CHARACTER_TT_NAME_AGE_ME_DEFAULT:0 "[Character.GetUINameNotMeNoTooltip]#medium , [Character.GetAge]#!"
+ CHARACTER_TT_AGE:0 "[SelectLocalization( Character.HasTrait( GetTrait('me_twelver_mahdi') ), 'ME_EMPTY_TEXT', 'CHARACTER_TT_AGE_ME_DEFAULT' )]"
+ CHARACTER_TT_AGE_ME_DEFAULT:0 "[Character.GetAge] years old"
+ ME_EMPTY_TEXT:0 ""

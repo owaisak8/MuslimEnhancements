@@ -1,0 +1,22 @@
+﻿l_english:
+
+ ### By God Alone (1.20 "Crozier") compatibility ###
+
+ # In ME the vanilla 'shia' faith is Isma'ilism: it holds the Isma'ili, Nizari, Hafizi, Tayyibi and Ikhtilafi (Ghulat) Rites.
+ # Twelvers and Zayidis are faiths of their own.
+ shia: "Isma'ilism"
+ shia_adj: "Isma'ili"
+ shia_adherent: "Isma'ili"
+ shia_adherent_plural: "Isma'ilis"
+
+ # Vanilla 1.20 renamed the Ibadi Rite to 'Muhakkima'; in ME the Muhakkima are a wider grouping, so the old name is kept.
+ ibadi: "Ibadism"
+ ibadi_adj: "Ibadi"
+ ibadi_adherent: "Ibadi"
+ ibadi_adherent_plural: "Ibadis"
+
+ # Vanilla 1.20 removed Mu'tazilism; ME keeps it as a Rite of Sunni Islam.
+ mutazila: "Mu'tazilism"
+ mutazila_adj: "Mu'tazili"
+ mutazila_adherent: "Mu'tazilite"
+ mutazila_adherent_plural: "Mu'tazilites"

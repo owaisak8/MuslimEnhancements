@@ -43,6 +43,26 @@ incompatible_tenet_warmonger_trigger = {
 	third_not = INCOMPATIBLE_TENET_WARMONGER_TRIGGER
 }
 
+incompatible_tenet_communal_identity_trigger = {
+	first_not = INCOMPATIBLE_TENET_COMMUNAL_IDENTITY_TRIGGER
+	third_not = INCOMPATIBLE_TENET_COMMUNAL_IDENTITY_TRIGGER
+}
+
+incompatible_tenet_closed_faith_trigger = {
+	first_not = INCOMPATIBLE_TENET_CLOSED_FAITH_TRIGGER
+	third_not = INCOMPATIBLE_TENET_CLOSED_FAITH_TRIGGER
+}
+
+incompatible_doctrine_me_affinal_consanguinity_trigger = {
+	first_not = AFFINAL_CONSANGUINITY_INCOMPATIABLE
+	third_not = AFFINAL_CONSANGUINITY_INCOMPATIABLE
+}
+
+incompatible_doctrine_me_affinal_fixed_polygamy_trigger = {
+	first_not = AFFINAL_FIXED_POLYGAMY_INCOMPATIABLE
+	third_not = AFFINAL_FIXED_POLYGAMY_INCOMPATIABLE
+}
+
 ### BUILDING TRIGGERS ###
 
 muslim_me_building_trigger = {

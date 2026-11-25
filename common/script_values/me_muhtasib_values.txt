@@ -1,0 +1,17 @@
+﻿# ME: salary of the Muhtasib (common/court_positions/types/me_muhtasib_court_position.txt): vanilla's minor court
+# position salary, free for landless adventurers, as vanilla's chief_qadi_total_salary_value.
+me_muhtasib_total_salary_value = {
+	if = {
+		limit = {
+			scope:liege ?= { government_has_flag = government_is_landless_adventurer }
+		}
+		multiply = {
+			value = 0
+			desc = court_position_laamps_free
+			format = "BASE_VALUE_FORMAT_DECIMALS_MINUS_POSITIVE"
+		}
+	}
+	else = {
+		value = minor_court_position_salary
+	}
+}

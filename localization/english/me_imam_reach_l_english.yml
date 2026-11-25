@@ -1,0 +1,12 @@
+﻿l_english:
+ me_imam_out_of_range_tt:0 "Too far away to interact with"
+ me_parents_of_the_mahdi:0 "Parent of the Awaited One"
+ me_parents_of_the_mahdi_desc:0 "This character is remembered as the parent of one child alone: Muhammad al-Mahdi, the Twelfth Imam."
+ me_imamate_succession_law:0 "Designation of the Imam"
+ me_imamate_succession_law_subname:0 "The Imam Names His Successor"
+ me_imamate_succession_law_effects:0 "\nThe Imamate passes by designation from each Imam to the son he has named."
+ me_imamate_succession_law_effects_not_in_prose:0 "The Imamate passes from each Imam to his designated son"
+ me_imamate_occultation_law:0 "The Last Imam"
+ me_imamate_occultation_law_subname:0 "No Successor"
+ me_imamate_occultation_law_effects:0 "\nThe Twelfth Imam has no successor. He holds the Imamate until his return."
+ me_imamate_occultation_law_effects_not_in_prose:0 "The Twelfth Imam has no successor"

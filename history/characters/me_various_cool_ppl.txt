@@ -8,30 +8,6 @@
 #############################################
 ### Moved to bedouin_me.txt
 
-#############################################
-#TERKEN KHATUN
-#############################################
-me_terken_khatun = {
-	name = "Terken Khatun" # 
-	female = yes
-	religion = maturidi
-	culture = kipchak
-	trait = education_diplomacy_4
-	trait = deceitful
-	trait = ambitious
-	father = 302626
-	1151.12.4 = {
-		birth = yes
-	}
-	1160.1.1 = {
-		add_spouse = 230000
-	}
-	1200.9.13 = {
-		death = yes
-	}
-}
-
-
 #########################################################
 ########## ABU ZAYD AHMED IBN SAHL AL - BALKHI ##########
 #########################################################

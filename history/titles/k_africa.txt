@@ -1,9 +1,9 @@
 ﻿
 k_africa = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	#Caliphal governors
 	665.1.1 = {
 		holder = 210020 # Mu'awiyah ibn Hudayj al-Tujibi
@@ -12,10 +12,16 @@ k_africa = {
 	666.1.1 = {
 		holder = 0
 	}
+	721.1.1 = {
+		holder = me_kalbids_105
+	}
+	727.1.1 = {
+		holder = 0
+	}
 	765.1.1 = {
 		holder = me_tamimi_002
 	}
-	
+
 	#Muhallabids
 	768.1.1 = {
 		government = clan_government
@@ -133,7 +139,7 @@ k_africa = {
 	1148.6.22 = {
 		holder = 0
 	}
-	
+
 	#Hafsids
 	1229.1.1 = {
 		holder = 33021
@@ -172,10 +178,10 @@ k_africa = {
 }
 
 d_kairouan = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	1054.1.1 = {
 		government = tribal_government
 		holder = 155029
@@ -186,14 +192,14 @@ d_kairouan = {
 }
 
 c_kairwan = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 31 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 31 }
 
-	757.1.1 = { # Kairwan captured by the Ibadi Imamate, Abdul-Rahman was placed as qadi before he became an Imam. 
+
+	757.1.1 = { # Kairwan captured by the Ibadi Imamate, Abdul-Rahman was placed as qadi before he became an Imam.
 		liege = d_wahbiya
-		holder = 210029 # Abdul-Rahman ibn Rustam, The first Rustamid ruler 
+		holder = 210029 # Abdul-Rahman ibn Rustam, The first Rustamid ruler
 	}
 #	761.1.1 = { # Reconquered by Muhammad ibn al-Ash'ath al-Khaza'i
 #		holder = 0
@@ -327,16 +333,16 @@ c_kairwan = {
 
 
 c_west_qamuda = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = k_africa
 		holder = 210014
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_tunis
 		holder = 6887
 	}
-	944.1.1 = { # Unconfirmed but possibily taken as part of The Revolt of 'Sahib al-Himar' 
+	944.1.1 = { # Unconfirmed but possibily taken as part of The Revolt of 'Sahib al-Himar'
 		liege = 0
 		holder = me_ifrinid_001 # Abu Yazid 'Sahib al-Himar'
 	}
@@ -444,18 +450,18 @@ c_west_qamuda = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
+
+
 
 }
 
 
 c_tabassa = {
-	768.1.1 = {	
+	768.1.1 = {
 		liege = k_africa
 		holder = 210014
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_tunis
 		holder = 6887
 	}
@@ -562,11 +568,11 @@ c_tabassa = {
 
 
 d_tunis = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
-	
-	864.1.1 = {	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
+
+	864.1.1 = {
 		government = clan_government
 		liege = k_africa
 		holder = 6887
@@ -650,14 +656,14 @@ d_tunis = {
 }
 
 c_tunis = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 31 }
-	
-	768.1.1 = {	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 31 }
+
+	768.1.1 = {
 		holder = 210014
 	}
-	768.1.1 = {	
+	768.1.1 = {
 		liege = "k_africa"
 	}
 	864.1.1 = {
@@ -674,7 +680,7 @@ c_tunis = {
 	}
 	945.10.15 = { # Tunis is retaken by the Kutama berbers
 		liege = "k_africa"
-		holder = 20931 
+		holder = 20931
 	}
 
 	973.1.1 = {
@@ -782,16 +788,16 @@ c_tunis = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 
 }
 
 
 c_satfura = {
-	768.1.1 = {	
+	768.1.1 = {
 		liege = "k_africa"
 	}
-	768.1.1 = {	
+	768.1.1 = {
 		holder = 210014
 	}
 	864.1.1 = {
@@ -878,19 +884,19 @@ c_satfura = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
+
+
 
 }
 
 
 c_medjerda = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = k_africa
 		holder = 210014
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_tunis
 		holder = 6887
 	}
@@ -981,14 +987,14 @@ c_medjerda = {
 
 
 c_mahdiya = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 31 }
-	
-	768.1.1 = {	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 31 }
+
+	768.1.1 = {
 		liege = "k_africa"
 	}
-	768.1.1 = {	
+	768.1.1 = {
 		holder = 210014
 	}
 	864.1.1 = {
@@ -1092,40 +1098,40 @@ c_mahdiya = {
 	}
 	1318.1.1 = {
 		holder = 33032
-	}	
+	}
 
 }
 
 d_kroumerie = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
 }
 
 c_constantine = {
-	1178.1.1 = { change_development_level = 31 }
+	1178.1.1 = { change_prosperity_level = 31 }
 
-	767.1.1 = {	
+	767.1.1 = {
 		liege = k_africa
 		holder = 210035
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		government = clan_government
 		holder = baranis0026
 	}
-	897.1.1 = {	
+	897.1.1 = {
 		holder = baranis0025
 	}
-	903.1.1 = {	
+	903.1.1 = {
 		holder = baranis0024
 	}
-	946.1.1 = {	
+	946.1.1 = {
 		holder = baranis0023
 	}
-	981.1.1 = {	
+	981.1.1 = {
 		holder = baranis0022
 	}
-	1003.1.1 = {	
+	1003.1.1 = {
 		holder = baranis0021
 	}
 	1032.1.1 = {
@@ -1192,19 +1198,19 @@ c_constantine = {
 
 
 c_annaba = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
-	767.1.1 = {	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
+	767.1.1 = {
 		government = clan_government
 		liege = k_africa
 		holder = 210035
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		holder = 6883
 	}
-	
+
 	975.1.1 = {
 		liege = k_egypt
 		holder = me_baranis_005 # Tamsulah/Awsulah ibn Bakkar, Governed Fatimid Annaba before being sent to Tripoli
@@ -1212,7 +1218,7 @@ c_annaba = {
 	978.1.1 = {
 		holder = 20932 # Buluggin ibn Ziri
 	}
-	
+
 	1062.1.1 = {
 		holder = 20834
 	}
@@ -1273,11 +1279,11 @@ c_annaba = {
 
 
 c_sfax = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = "k_africa"
 	}
-	768.1.1 = {	
+	768.1.1 = {
 		holder = 210014
 	}
 	864.1.1 = {
@@ -1385,14 +1391,14 @@ c_sfax = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 }
 
 d_gabes = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	867.1.1 = {
 		government = clan_government
 		liege = k_africa
@@ -1513,12 +1519,12 @@ c_gabes = {
 
 
 c_qashtiliya = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = k_africa
 		holder = 210014
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_tunis
 		holder = 6887
 	}
@@ -1623,7 +1629,7 @@ c_qashtiliya = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 
 }
 
@@ -1638,12 +1644,12 @@ d_jerid = {
 }
 
 c_souf = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = tribal_government
 		liege = k_africa
 		holder = 210014
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = k_africa
 		holder = 163147
 	}
@@ -1762,7 +1768,7 @@ c_souf = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 }
 
 c_bir_amir = {
@@ -1892,20 +1898,20 @@ c_bir_amir = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
-	
+
+
+
 
 }
 
 
 c_ghadames = {
-	768.1.1 = {	
+	768.1.1 = {
 		#liege = k_africa
 		holder = 210014
 		government = tribal_government
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		#liege = d_tunis
 		holder = 1228833
 	}
@@ -2015,9 +2021,9 @@ c_ghadames = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
-	
+
+
+
 
 }
 
@@ -2049,7 +2055,7 @@ d_tripolitania = {
 	978.1.1 = {
 		holder = 20932 # Buluggin ibn Ziri
 	}
-	
+
 	1052.1.1 = {
 		holder = 155184
 	}
@@ -2132,11 +2138,11 @@ d_tripolitania = {
 
 
 c_tripolitana = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
-	768.1.1 = {	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
+	768.1.1 = {
 		government = clan_government
 		liege = "d_tripolitania"
 	}
@@ -2255,7 +2261,7 @@ c_tripolitana = {
 
 
 c_djerba = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = d_tripolitania
 		holder = 210031 # Imam Abu Hatim Yaqub ibn Labid al-Malzuzi
@@ -2270,7 +2276,7 @@ c_djerba = {
 #		holder = 0
 #	}
 
-	864.1.1 = {	
+	864.1.1 = {
 		liege = k_africa
 		holder = 6884
 	}
@@ -2339,7 +2345,7 @@ c_djerba = {
 
 
 c_jafara = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = d_tripolitania
 		holder = 210031 # Imam Abu Hatim Yaqub ibn Labid al-Malzuzi
@@ -2450,7 +2456,7 @@ d_syrte = {
 
 
 c_syrte = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = d_tripolitania
 		holder = 210031 # Imam Abu Hatim Yaqub ibn Labid al-Malzuzi
@@ -2512,7 +2518,7 @@ c_syrte = {
 
 
 c_labda = {
-	768.1.1 = {	
+	768.1.1 = {
 		government = clan_government
 		liege = "d_tripolitania"
 	}
@@ -2597,7 +2603,7 @@ c_labda = {
 
 
 c_waddan = {
-	768.1.1 = {	
+	768.1.1 = {
 		liege = "d_tripolitania"
 		government = tribal_government
 	}

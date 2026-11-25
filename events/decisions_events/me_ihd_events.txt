@@ -1,0 +1,2091 @@
+﻿
+namespace = me_ihd_events
+
+# 0001 - Ramadan Random Events
+# 4000 - Misc Holy Days
+# 5010 - Muharram State Patronage (Majalis) - Follow-up to main decision
+# 9000 - Notification Events
+
+
+##################################################
+# Ramadan Random Events
+##################################################
+
+# Divine smell from the kitchens
+me_ihd_events.0001 = {
+	type = character_event
+	title = me_ihd_events.0001.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						is_landless_adventurer = yes
+						government_has_flag = government_is_nomadic
+					}
+				}
+				desc = me_ihd_events.0001.desc.camp
+			}
+			triggered_desc = {
+				trigger = {
+					is_landless_administrative = yes
+				}
+				desc = me_ihd_events.0001.desc.estate
+			}
+			desc = me_ihd_events.0001.desc.palace
+		}
+		desc = me_ihd_events.0001.desc.main
+	}
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+	override_background = { reference = bp1_kitchen_western }
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0001 }
+		NOT = { has_variable = had_event_ihd_ramadan_bad }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0001
+			value = yes
+			days = 1460
+		}
+		set_variable = {	
+			name = had_event_ihd_ramadan_bad
+			value = yes
+			days = 60
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0001.a
+		
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gluttonous = miniscule_stress_impact_loss
+			zealous = minor_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = me_broke_fast_modifier
+			days = 350
+		}
+		add_piety = medium_piety_loss
+	}
+	option = {
+		name = me_ihd_events.0001.b
+		
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			temperate = miniscule_stress_impact_loss
+			gluttonous = medium_stress_impact_gain
+			cynical = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		add_piety = medium_piety_gain
+	}
+}
+
+# Drink Of Water
+me_ihd_events.0002 = {
+	type = character_event
+	title = me_ihd_events.0002.t
+	desc = me_ihd_events.0002.desc
+	theme = travel 
+	left_portrait = {
+		character = root
+		animation = sadness
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0002 }
+		NOT = { has_variable = had_event_ihd_ramadan_bad }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		current_season_hot_season = yes
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0002
+			value = yes
+			days = 1460
+		}
+		set_variable = {	
+			name = had_event_ihd_ramadan_bad
+			value = yes
+			days = 60
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0002.a
+		
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+		}
+		add_character_modifier = {
+			modifier = me_broke_fast_modifier
+			days = 350
+		}
+		add_piety = medium_piety_loss
+	}
+	option = {
+		name = me_ihd_events.0002.b
+		
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_loss
+			patient = miniscule_stress_impact_loss
+			temperate = miniscule_stress_impact_loss
+			cynical = miniscule_stress_impact_gain
+			impatient = miniscule_stress_impact_gain
+		}
+		add_piety = medium_piety_gain
+	}
+}
+
+# Absentminded Mistakes
+me_ihd_events.0003 = {
+	type = character_event
+	title = me_ihd_events.0003.t
+	desc = me_ihd_events.0003.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = disappointed
+	}
+	right_portrait = {
+		character = scope:friendly_courtier
+		animation = happiness
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0003 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		is_available_at_peace_adult = yes
+		location_has_winter_trigger = no
+		any_courtier = {
+			opinion = { target = root value >= 10 }
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+		} 
+	}
+	immediate = {
+		save_scope_as = liege
+		set_variable = {	
+			name = had_event_ihd_ramadan_0003
+			value = yes
+			days = 1460
+		}
+		random_courtier = {
+			limit = {
+				opinion = { target = root value >= 10 }
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+			}
+			save_scope_as = friendly_courtier
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0003.a
+		
+		stress_impact = {
+			cynical = minor_stress_impact_gain
+			temperate = miniscule_stress_impact_loss
+		}
+		add_piety = medium_piety_loss
+	}
+	option = {
+		name = me_ihd_events.0003.b
+		
+	}
+	option = {
+		name = me_ihd_events.0003.c
+		
+		stress_impact = {
+			zealous = minor_stress_impact_gain
+			patient = miniscule_stress_impact_gain
+			temperate = miniscule_stress_impact_gain
+			cynical = minor_stress_impact_loss
+			gluttonous = miniscule_stress_impact_loss
+		}
+		add_character_modifier = {
+			modifier = me_broke_fast_modifier
+			days = 350
+		}
+		add_piety = medium_piety_gain
+	}
+}
+
+# Frustration and Fasting
+me_ihd_events.0004 = {
+	type = character_event
+	title = me_ihd_events.0004.t
+	desc = me_ihd_events.0004.desc
+	theme = unfriendly
+	left_portrait = {
+		character = root
+		animation = anger
+	}
+	lower_right_portrait =  scope:target_courtier
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0004 }
+		NOT = { has_variable = had_event_ihd_ramadan_bad }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+		}
+		OR = {
+			has_trait = wrathful
+			has_trait = impatient
+			has_trait = sadistic
+			has_trait = irritable
+		}
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0004
+			value = yes
+			days = 1460
+		}
+		set_variable = {	
+			name = had_event_ihd_ramadan_bad
+			value = yes
+			days = 60
+		}
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = target_courtier
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0004.a
+		
+		scope:target_courtier = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -10
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			compassionate = minor_stress_impact_gain
+			sadistic = medium_stress_impact_loss
+		}
+	}
+	option = {
+		name = me_ihd_events.0004.b
+		trigger = {
+			OR = {
+				has_trait = wrathful
+				has_trait = sadistic
+			}
+		}
+		
+		add_dread = medium_dread_gain
+		add_piety = minor_piety_loss
+		scope:target_courtier = {
+			increase_wounds_effect = { REASON = whipping }
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = low_negative_opinion
+			}
+		}
+		stress_impact = {
+			base = minor_stress_impact_loss
+			compassionate = medium_stress_impact_gain
+			sadistic = major_stress_impact_loss
+		}
+		ai_chance = {
+			base = 100
+			ai_value_modifier = {
+				ai_vengefulness = 1
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0004.c
+		
+		add_piety = minor_piety_gain
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			patient = minor_stress_impact_loss
+			sadistic = minor_stress_impact_gain
+		}
+	}
+}
+
+# Vice and Will
+me_ihd_events.0005 = {
+	type = character_event
+	title = me_ihd_events.0005.t
+	desc = {
+		desc = me_ihd_events.0005.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = { var:me_ihd_event_0005_var = flag:gluttonous }
+				desc = me_ihd_events.0005.desc.gluttonous
+			}
+			triggered_desc = {
+				trigger = { var:me_ihd_event_0005_var = flag:drunkard }
+				desc = me_ihd_events.0005.desc.drunkard
+			}
+			triggered_desc = {
+				trigger = { var:me_ihd_event_0005_var = flag:hashishiyah }
+				desc = me_ihd_events.0005.desc.hashishiyah
+			}
+			triggered_desc = {
+				trigger = {
+					var:me_ihd_event_0005_var = flag:lustful
+					exists = scope:lover
+				}
+				desc = me_ihd_events.0005.desc.lustful_lover
+			}
+			triggered_desc = {
+				trigger = {
+					var:me_ihd_event_0005_var = flag:lustful
+					NOT = { exists = scope:lover }
+				}
+				desc = me_ihd_events.0005.desc.lustful_no_lover
+			}
+		}
+	}
+	theme = mental_health
+	left_portrait = {
+		character = root
+		animation = stress
+	}
+	lower_right_portrait = scope:lover
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0005 }
+		NOT = { has_variable = had_event_ihd_ramadan_bad }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		is_adult = yes
+		OR = {
+			has_trait = gluttonous
+			has_trait = drunkard
+			has_trait = hashishiyah
+			has_trait = lustful
+			has_trait = rakish
+		}
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0005
+			value = yes
+			days = 1460
+		}
+		set_variable = {	
+			name = had_event_ihd_ramadan_bad
+			value = yes
+			days = 60
+		}
+		random_list = {
+			10 = {
+				trigger = { has_trait = gluttonous }
+				set_variable = {
+					name = me_ihd_event_0005_var
+					value = flag:gluttonous
+				}
+			}
+			10 = {
+				trigger = { has_trait = drunkard }
+				set_variable = {
+					name = me_ihd_event_0005_var
+					value = flag:drunkard
+				}
+			}
+			10 = {
+				trigger = { has_trait = hashishiyah }
+				set_variable = {
+					name = me_ihd_event_0005_var
+					value = flag:hashishiyah
+				}
+			}
+			10 = {
+				trigger = {
+					OR = {
+						has_trait = lustful
+						has_trait = rakish
+					}
+				}
+				set_variable = {
+					name = me_ihd_event_0005_var
+					value = flag:lustful
+				}
+				random_relation = {
+					type = lover
+					limit = {}
+					save_scope_as = lover
+				}
+			}
+		}
+	}
+
+	option = {
+		name = {
+			trigger = { var:me_ihd_event_0005_var = flag:gluttonous }
+			text = me_ihd_events.0005.a.gluttonous
+		}
+		name = {
+			trigger = {
+				var:me_ihd_event_0005_var = flag:drunkard
+				faith = { trait_is_sin = drunkard }
+			}
+			text = me_ihd_events.0005.a.drunkard_sin
+		}
+		name = {
+			trigger = {
+				var:me_ihd_event_0005_var = flag:drunkard
+				NOT = { faith = { trait_is_sin = drunkard } }
+			}
+			text = me_ihd_events.0005.a.drunkard_not_sin
+		}
+		name = {
+			trigger = { var:me_ihd_event_0005_var = flag:hashishiyah }
+			text = me_ihd_events.0005.a.hashishiyah
+		}
+		name = {
+			trigger = { var:me_ihd_event_0005_var = flag:lustful }
+			text = me_ihd_events.0005.a.lustful
+		}
+		
+		add_character_modifier = {
+			modifier = me_broke_fast_modifier
+			days = 350
+		}
+		add_piety = medium_piety_loss
+	}
+	option = {
+		name = me_ihd_events.0005.b
+		trigger = { exists = scope:lover }
+		
+		if = {
+			limit = { scope:lover = { ME_is_fasting_month = yes } }
+			duel = {
+				skill = diplomacy
+				target = scope:lover
+				 50 = {
+					compare_modifier = {
+						 value = scope:duel_value
+						 multiplier = 3.5
+						 min = -49
+					}
+					modifier = {
+						scope:lover = { has_trait = cynical }
+						add = 100
+					}
+					modifier = {
+						scope:lover = { has_trait = lustful }
+						add = 20
+					}
+					desc = me_ihd_events.0005.b.toast.won
+					add_character_modifier = {
+						modifier = me_broke_fast_modifier
+						days = 350
+					}
+					add_piety = medium_piety_loss
+					scope:lover = {
+						add_character_modifier = {
+							modifier = me_broke_fast_modifier
+							days = 350
+						}
+						add_piety = medium_piety_loss
+					}
+					had_sex_with_effect = {
+						CHARACTER = scope:lover
+						PREGNANCY_CHANCE = pregnancy_chance
+					}
+				}
+				50 = {
+					compare_modifier = {
+						value = scope:duel_value
+						multiplier = -3.5
+						min = -49
+					}
+					modifier = {
+						scope:lover = { has_trait = zealous }
+						add = 100
+					}
+					desc = me_ihd_events.0005.b.toast.lost
+					scope:lover = {
+						add_opinion = {
+							target = root
+							modifier = disappointed_opinion
+							opinion = -15
+						}
+					}
+					stress_impact = {
+						base = minor_stress_impact_gain
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = { scope:lover = { ME_is_fasting_month = no } }
+			add_character_modifier = {
+				modifier = me_broke_fast_modifier
+				days = 350
+			}
+			add_piety = medium_piety_loss
+			had_sex_with_effect = {
+				CHARACTER = scope:lover
+				PREGNANCY_CHANCE = pregnancy_chance
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0005.c
+		
+		add_piety = medium_piety_gain
+		stress_impact = {
+			base = miniscule_stress_impact_gain
+			zealous = minor_stress_impact_loss
+		}
+	}
+}
+
+# Court Food Level
+me_ihd_events.0006 = {
+	type = character_event
+	title = me_ihd_events.0006.t
+	desc = {
+		desc = me_ihd_events.0006.desc
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					amenity_level = { target = court_food_quality value = 1 }
+					NOT = { has_trait = temperate }
+				}
+				desc = me_ihd_events.0006.desc.bland_normal
+			}
+			triggered_desc = {
+				trigger = {
+					amenity_level = { target = court_food_quality value = 1 }
+					has_trait = temperate
+				}
+				desc = me_ihd_events.0006.desc.bland_temperate
+			}
+			triggered_desc = {
+				trigger = {
+					amenity_level = { target = court_food_quality value >= 2 }
+					amenity_level = { target = court_food_quality value <= 3 }
+				}
+				desc = me_ihd_events.0006.desc.modest
+			}
+			triggered_desc = {
+				trigger = {
+					amenity_level = { target = court_food_quality value >= 4 }
+					NOT = { has_trait = temperate }
+				}
+				desc = me_ihd_events.0006.desc.lavish_normal
+			}
+			triggered_desc = {
+				trigger = {
+					amenity_level = { target = court_food_quality value >= 4 }
+					has_trait = temperate
+				}
+				desc = me_ihd_events.0006.desc.lavish_temperate
+			}
+		}
+	}
+	theme = feast_activity
+	left_portrait = {
+		character = root
+		animation = schadenfreude
+		triggered_animation = {
+			trigger = { amenity_level = { target = court_food_quality value = 1 } }
+			animation = disappointed
+		}
+		triggered_animation = {
+			trigger = { amenity_level = { target = court_food_quality value > 1 } }
+			animation = happiness
+		}
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0006 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		has_royal_court = yes
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0006
+			value = yes
+			days = 1460
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0006.a
+		trigger = { amenity_level = { target = court_food_quality value = 1 } }
+		
+		add_amenity_level = { type = court_food_quality value = 1 }
+		every_courtier_or_guest = {
+			limit = {}
+			custom = fp1_yearly.0101.a.every_courtier_and_guest
+			add_opinion = {
+				modifier = pleased_opinion
+				target = root
+				opinion = 5
+			}
+		}
+	}
+	option = {
+		name = {
+			trigger = { amenity_level = { target = court_food_quality value = 1 } }
+			text = me_ihd_events.0006.b.bland
+		}
+		name = {
+			trigger = {
+				amenity_level = { target = court_food_quality value >= 2 }
+				NOT = { has_trait = cynical }
+			}
+			text = me_ihd_events.0006.b.cynical
+		}
+		name = {
+			trigger = {
+				amenity_level = { target = court_food_quality value >= 2 }
+				has_trait = cynical
+			}
+			text = me_ihd_events.0006.b.normal
+		}
+		
+		if = {
+			limit = { amenity_level = { target = court_food_quality value >= 2 } }
+			stress_impact = {
+				base = miniscule_stress_impact_loss
+				gluttonous = miniscule_stress_impact_loss
+				gregarious = miniscule_stress_impact_loss
+			}
+		}
+	}
+}
+
+# Lead the Prayer
+me_ihd_events.0007 = {
+	type = character_event
+	title = me_ihd_events.0007.t
+	desc = me_ihd_events.0007.desc
+	theme = faith
+	right_portrait = {
+		character = root
+		animation = interested
+	}
+	left_portrait = {
+		character = scope:praying_courtier
+		animation = chaplain
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0007 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+		any_courtier_or_guest = {
+			NOT = { has_trait = cynical }
+			NOT = { sex_opposite_of = root }
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+			rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+			OR = {
+				faith = root.faith
+				faith = {
+					faith_hostility_level = {
+						target = root.faith
+						value >= faith_astray_level
+					}
+				}
+			}
+		} 
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0007
+			value = yes
+			days = 1460
+		}
+		random_courtier_or_guest = {
+			limit = {
+				NOT = { has_trait = cynical }
+				NOT = { sex_opposite_of = root }
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+				rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+				OR = {
+					faith = root.faith
+					faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value >= faith_astray_level
+						}
+					}
+				}
+			}
+			save_scope_as = praying_courtier
+		}
+		save_scope_as = liege
+	}
+
+	option = {
+		name = me_ihd_events.0007.a
+		trigger = {
+			scope:praying_courtier = {
+				OR = {
+					AND = {
+						has_trait = hafidh
+						NOT = { root = { has_trait = hafidh } }
+					}
+					has_trait_xp = {
+						trait = hafidh
+						value > "root.has_trait_xp(hafidh)"
+					}
+				}
+			}
+		}
+		
+		scope:praying_courtier = {
+			add_opinion = {
+				modifier = pleased_opinion
+				target = root
+				opinion = 10
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0007.b
+		
+		stress_impact = {
+			cynical = medium_stress_impact_gain
+		}
+		add_piety = minor_piety_gain
+	}
+	option = {
+		name = me_ihd_events.0007.c
+		trigger = { has_trait = cynical }
+		
+		stress_impact = {
+			cynical = minor_stress_impact_loss
+		}
+		add_piety = minor_piety_loss
+		every_courtier_or_guest = {
+			limit = { NOT = { has_trait = cynical } }
+			custom = me_ihd_events.0007.c.every_courtier_and_guest_cynical
+			add_opinion = {
+				modifier = impious_opinion
+				target = root
+				opinion = -5
+			}
+		}
+	}
+}
+
+# Solace in Prayer
+me_ihd_events.0008 = {
+	type = character_event
+	title = me_ihd_events.0008.t
+	desc = me_ihd_events.0008.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_1
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0008 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		NOT = { has_trait = cynical }
+		rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0008
+			value = yes
+			days = 1460
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0008.a
+		
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+		add_piety = minor_piety_gain
+	}
+}
+
+# Easy day of Fasting
+me_ihd_events.0009 = {
+	type = character_event
+	title = me_ihd_events.0009.t
+	desc = me_ihd_events.0009.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0009 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		NOT = { has_trait = gluttonous }
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0009
+			value = yes
+			days = 1460
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0009.a
+		
+		stress_impact = {
+			base = minor_stress_impact_loss
+			temperate = minor_stress_impact_loss
+		}
+	}
+}
+
+# Last Days of Ramadan
+me_ihd_events.0010 = {
+	type = character_event
+	title = me_ihd_events.0010.t
+	desc = me_ihd_events.0010.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0010 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		NOT = { has_trait = cynical }
+		rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+		me_hijri_day_display >= 20
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0010
+			value = yes
+			days = 1460
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0010.a
+		
+		add_piety = medium_piety_gain
+		stress_impact = {
+			zealous = minor_stress_impact_loss
+			lazy = minor_stress_impact_gain
+		}
+	}
+	option = {
+		name = {
+			trigger = {
+				rite = {
+					OR = {
+						rite_has_doctrine = muhammad_succession_shia_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					}
+				}
+			}
+			text = me_ihd_events.0010.b.23rd
+		}
+		name = {
+			trigger = {
+				rite = {
+					NOR = {
+						rite_has_doctrine = muhammad_succession_shia_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					}
+				}
+			}
+			text = me_ihd_events.0010.b.27th
+		}
+		
+		add_piety = minor_piety_gain
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+		}
+	}
+	option = {
+		name = me_ihd_events.0010.c
+		stress_impact = {
+			base = minor_stress_impact_loss
+		}
+	}
+}
+
+# Taraweeh
+me_ihd_events.0011 = {
+	type = character_event
+	title = me_ihd_events.0011.t
+	desc = me_ihd_events.0011.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_1
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0011 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		NOT = { has_trait = cynical }
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0011
+			value = yes
+			days = 1460
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0011.a
+		
+		stress_impact = {
+			zealous = miniscule_stress_impact_loss
+			lazy = minor_stress_impact_gain
+			paranoid = minor_stress_impact_gain
+		}
+		add_piety = minor_piety_gain
+		add_character_modifier = {
+			modifier = me_nightly_prayers_modifier
+			days = 120
+		}
+	}
+	option = {
+		name = me_ihd_events.0011.b
+		add_piety = minor_piety_gain
+	}
+	option = {
+		name = me_ihd_events.0011.c
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			lazy = minor_stress_impact_loss
+			paranoid = minor_stress_impact_loss
+			zealous = miniscule_stress_impact_gain
+		}
+	}
+}
+
+# Suhur
+me_ihd_events.0012 = {
+	type = character_event
+	title = me_ihd_events.0012.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { is_landless_adventurer = yes }
+				desc = me_ihd_events.0012.desc.landless
+			}
+			desc = me_ihd_events.0012.desc.landed
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_trait = gluttonous }
+				desc = me_ihd_events.0012.desc.gluttonous
+			}
+			desc = me_ihd_events.0012.desc.normal
+		}
+	}
+	theme = feast_activity
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0012 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0012
+			value = yes
+			days = 1460
+		}
+		capital_province = { barony = { save_scope_as = capital } }
+	}
+
+	option = {
+		name = me_ihd_events.0012.a
+		
+		stress_impact = {
+			base = miniscule_stress_impact_loss
+			gluttonous = minor_stress_impact_gain
+		}
+	}
+}
+
+# Irritable Courtier
+me_ihd_events.0013 = {
+	type = character_event
+	title = me_ihd_events.0013.t
+	desc = me_ihd_events.0013.desc
+	theme = unfriendly
+	left_portrait = {
+		character = scope:angry_courtier
+		animation = anger
+	}
+	lower_right_portrait =  scope:target_courtier
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0013 }
+		NOT = { has_variable = had_event_ihd_ramadan_bad }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+			OR = {
+				has_trait = wrathful
+				has_trait = impatient
+				has_trait = sadistic
+				has_trait = irritable
+			}
+		} 
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0013
+			value = yes
+			days = 1460
+		}
+		set_variable = {	
+			name = had_event_ihd_ramadan_bad
+			value = yes
+			days = 60
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+				OR = {
+					has_trait = wrathful
+					has_trait = impatient
+					has_trait = sadistic
+					has_trait = irritable
+				}
+			}
+			save_scope_as = angry_courtier
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+			}
+			save_scope_as = target_courtier
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0013.a
+		
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			wrathful = minor_stress_impact_loss
+			irritable = minor_stress_impact_loss
+			impatient = minor_stress_impact_loss
+		}
+		scope:angry_courtier = {
+			add_opinion = {
+				target = root
+				modifier = angry_opinion
+				opinion = -10
+			}
+		}
+		scope:target_courtier = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 10
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0013.b
+		
+		stress_impact = {
+			wrathful = minor_stress_impact_gain
+			irritable = minor_stress_impact_gain
+		}
+		
+		duel = {
+			skill = diplomacy
+			target = scope:angry_courtier
+			 50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_ihd_events.0013.b.toast.won
+				scope:angry_courtier = {
+					add_opinion = {
+						target = root
+						modifier = me_remourseful_opinion
+						opinion = 10
+					}
+				}
+				stress_impact = {
+					compassionate = minor_stress_impact_loss
+					forgiving = minor_stress_impact_loss
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_ihd_events.0013.b.toast.lost
+				scope:angry_courtier = {
+					add_opinion = {
+						target = root
+						modifier = angry_opinion
+						opinion = -10
+					}
+				}
+				scope:target_courtier = {
+					progress_towards_rival_effect = {
+						REASON = rival_knights_slapfight
+						CHARACTER = scope:angry_courtier
+						OPINION = -10
+					}
+				}
+				stress_impact = {
+					base = minor_stress_impact_gain
+					impatient = minor_stress_impact_gain
+				}
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0013.c
+		scope:target_courtier = {
+			progress_towards_rival_effect = {
+				REASON = rival_knights_slapfight
+				CHARACTER = scope:angry_courtier
+				OPINION = -10
+			}
+		}
+	}
+}
+
+# Heretical Opinions
+me_ihd_events.0014 = {
+	type = character_event
+	title = me_ihd_events.0014.t
+	desc = me_ihd_events.0014.desc
+	theme = faith
+	left_portrait = {
+		character = scope:foolish_courtier
+		animation = personality_irrational
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0014 }
+		NOT = { has_variable = had_event_ihd_ramadan_bad }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		any_courtier = {
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+			OR = {
+				has_trait = cynical
+				learning <= 3
+			}
+		} 
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0014
+			value = yes
+			days = 1460
+		}
+		set_variable = {	
+			name = had_event_ihd_ramadan_bad
+			value = yes
+			days = 60
+		}
+		random_courtier = {
+			limit = {
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+				OR = {
+					has_trait = cynical
+					learning <= 3
+				}
+			}
+			save_scope_as = foolish_courtier
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0014.a
+		
+		stress_impact = {
+			compassionate = miniscule_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+			wrathful = minor_stress_impact_loss
+		}
+		add_dread = medium_dread_gain
+		rightfully_imprison_character_effect = {
+			TARGET = scope:foolish_courtier
+			IMPRISONER = root
+		}
+	}
+	option = {
+		name = me_ihd_events.0014.b
+		
+		stress_impact = {
+			wrathful = minor_stress_impact_gain
+			irritable = minor_stress_impact_gain
+		}
+		
+		duel = {
+			skill = diplomacy
+			target = scope:foolish_courtier
+			50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_ihd_events.0014.b.toast.won
+				scope:foolish_courtier = {
+					add_opinion = {
+						target = root
+						modifier = me_remourseful_opinion
+						opinion = 10
+					}
+				}
+				stress_impact = {
+					compassionate = minor_stress_impact_loss
+					forgiving = minor_stress_impact_loss
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_ihd_events.0014.b.toast.lost
+				scope:foolish_courtier = {
+					add_opinion = {
+						target = root
+						modifier = angry_opinion
+						opinion = -10
+					}
+				}
+				add_character_modifier = {
+					modifier = me_heresy_at_court_modifier
+					days = 365
+				}
+				stress_impact = {
+					base = minor_stress_impact_gain
+					impatient = minor_stress_impact_gain
+				}
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0014.c
+		
+		stress_impact = {
+			shy = minor_stress_impact_gain
+			compassionate = minor_stress_impact_gain
+			forgiving = minor_stress_impact_gain
+		}
+		
+		duel = {
+			skills = { martial prowess }
+			target = scope:foolish_courtier
+			50 = {
+				compare_modifier = {
+					 value = scope:duel_value
+					 multiplier = 3.5
+					 min = -49
+				}
+				desc = me_ihd_events.0014.c.toast.won
+				scope:foolish_courtier = {
+					add_opinion = {
+						target = root
+						modifier = scared_opinion
+						opinion = -5
+					}
+				}
+				add_dread = minor_dread_gain
+				stress_impact = {
+					wrathful = minor_stress_impact_loss
+				}
+			}
+			50 = {
+				compare_modifier = {
+					value = scope:duel_value
+					multiplier = -3.5
+					min = -49
+				}
+				desc = me_ihd_events.0014.c.toast.lost
+				scope:foolish_courtier = {
+					add_opinion = {
+						target = root
+						modifier = angry_opinion
+						opinion = -15
+					}
+				}
+				add_character_modifier = {
+					modifier = me_heresy_at_court_modifier
+					days = 365
+				}
+				stress_impact = {
+					base = minor_stress_impact_gain
+					impatient = minor_stress_impact_gain
+				}
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0014.d
+		random_list = {
+			50 = {
+				add_character_modifier = {
+					modifier = me_heresy_at_court_modifier
+					days = 365
+				}
+			}
+			50 = {}
+		}
+	}
+}
+
+# Standing on Maghrib
+me_ihd_events.0015 = {
+	type = character_event
+	title = me_ihd_events.0015.t
+	desc =  me_ihd_events.0015.desc
+	theme = faith
+	left_portrait = {
+		character = scope:courtier_1
+		animation = rage
+	}
+	right_portrait = {
+		character = scope:courtier_2
+		animation = disappointed
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0015 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		# Shias believe the fast ends when the sun fully sets, so Shia high learning character will be courtier 1
+		# If not Shia, and probably believes the fast ends at the call to prayer, then the high learning character will be courtier 2
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+			OR = {
+				faith = root.faith
+				faith = {
+					faith_hostility_level = {
+						target = root.faith
+						value >= faith_astray_level
+					}
+				}
+			}
+			OR = {
+				AND = {
+					learning <= 5
+					NOR = {
+						rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					}
+				}
+				AND = {
+					learning >= 10
+					OR = {
+						rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					}
+				}
+			}
+		}
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+			OR = {
+				faith = root.faith
+				faith = {
+					faith_hostility_level = {
+						target = root.faith
+						value >= faith_astray_level
+					}
+				}
+			}
+			OR = {
+				AND = {
+					learning <= 5
+					OR = {
+						rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					}
+				}
+				AND = {
+					learning >= 10
+					NOR = {
+						rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0015
+			value = yes
+			days = 1460
+		}
+		# Shias believe the fast ends when the sun fully sets, so Shia high learning character will be courtier 1
+		# If not Shia, and probably believes the fast ends at the call to prayer, then the high learning character will be courtier 2
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+				OR = {
+					faith = root.faith
+					faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value >= faith_astray_level
+						}
+					}
+				}
+				OR = {
+					AND = {
+						learning <= 5
+						NOR = {
+							rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+						}
+					}
+					AND = {
+						learning >= 10
+						OR = {
+							rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+						}
+					}
+				}
+			}
+			save_scope_as = courtier_1 # Believes fast ends at full sunset
+		}
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+				OR = {
+					faith = root.faith
+					faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value >= faith_astray_level
+						}
+					}
+				}
+				OR = {
+					AND = {
+						learning <= 5
+						OR = {
+							rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+						}
+					}
+					AND = {
+						learning >= 10
+						NOR = {
+							rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+							rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+						}
+					}
+				}
+			}
+			save_scope_as = courtier_2 # Believes fast ends at the call to prayer
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0015.a
+		trigger = { learning >= high_skill_rating }
+		skill = learning
+		
+		scope:courtier_1 = {
+			add_opinion = {
+				target = root
+				modifier = impressed_opinion
+				opinion = 20
+			}
+		}
+		scope:courtier_2 = {
+			add_opinion = {
+				target = root
+				modifier = impressed_opinion
+				opinion = 20
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0015.b
+		
+		scope:courtier_1 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 15
+			}
+		}
+		scope:courtier_2 = {
+			add_opinion = {
+				target = root
+				modifier = frustrated_opinion
+				opinion = -10
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0015.c
+		
+		scope:courtier_2 = {
+			add_opinion = {
+				target = root
+				modifier = pleased_opinion
+				opinion = 15
+			}
+		}
+		scope:courtier_1 = {
+			add_opinion = {
+				target = root
+				modifier = frustrated_opinion
+				opinion = -10
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0015.d
+		
+		scope:courtier_1 = {
+			add_opinion = {
+				target = scope:courtier_2
+				modifier = frustrated_opinion
+				opinion = -10
+			}
+		}
+		scope:courtier_2 = {
+			add_opinion = {
+				target = scope:courtier_1
+				modifier = frustrated_opinion
+				opinion = -10
+			}
+		}
+	}
+}
+ # Closer to Family
+me_ihd_events.0016 = {
+	type = character_event
+	title = me_ihd_events.0016.t
+	desc =  me_ihd_events.0016.desc
+	theme = family
+	left_portrait = {
+		character = root
+		animation = personality_content
+	}
+	right_portrait = {
+		character = scope:family_member
+		animation = happiness
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0016 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+		rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+		any_courtier_or_guest = {
+			is_available_ai_adult = yes
+			ME_is_fasting_month = yes
+			is_close_family_of = root
+			rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+			OR = {
+				faith = root.faith
+				faith = {
+					faith_hostility_level = {
+						target = root.faith
+						value >= faith_astray_level
+					}
+				}
+			}
+		}
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0016
+			value = yes
+			days = 1460
+		}
+		random_courtier_or_guest = {
+			limit = {
+				is_available_ai_adult = yes
+				ME_is_fasting_month = yes
+				is_close_family_of = root
+				rite = { rite_has_doctrine = doctrine_me_ablution_full } # Does Wudhu, therefore does Salah
+				OR = {
+					faith = root.faith
+					faith = {
+						faith_hostility_level = {
+							target = root.faith
+							value >= faith_astray_level
+						}
+					}
+				}
+			}
+			save_scope_as = family_member
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0016.a
+		
+		if = {
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+			progress_towards_friend_effect = {
+				REASON = me_spent_ramadan_together
+				CHARACTER = scope:family_member
+				OPINION = 20
+			}
+		}
+		else_if = {
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+			progress_towards_friend_effect = {
+				REASON = me_spent_rajab_together
+				CHARACTER = scope:family_member
+				OPINION = 20
+			}
+		}
+	}
+	option = {
+		name = me_ihd_events.0016.b
+	}
+}
+
+
+
+
+
+# Dates merchant - VIET inspired event
+me_ihd_events.0101 = {
+	type = character_event
+	title = me_ihd_events.0101.t
+	desc = me_ihd_events.0101.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = interested
+	}
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_ramadan_0101 }
+		ME_can_fast = yes
+		ME_is_fasting_month = yes
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_ramadan_0101
+			value = yes
+			days = 1460
+		}
+	}
+
+	option = {
+		name = me_ihd_events.0101.a
+		add_character_modifier = {
+			modifier = me_dates_merchant_in_town_modifier
+		}
+		add_character_modifier = {
+			modifier = me_gifted_ajwah_dates_modifier
+			days = 200
+		}
+		custom_tooltip = me_ihd_events.0101.a.tooltip
+		hidden_effect = {
+			random_list = {
+				10 = {
+					trigger_event = {
+						id = me_ihd_events.0102
+						months = { 12 16 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = me_ihd_events.0102
+						months = { 20 24 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = me_ihd_events.0102
+						months = { 28 32 }
+					}
+				}
+				10 = {
+					trigger_event = {
+						id = me_ihd_events.0102
+						months = { 36 40 }
+					}
+				}
+			}
+		}
+	}
+}
+
+me_ihd_events.0102 = {
+	hidden = yes
+
+	trigger = {
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_ihd_events.0102.a.tt
+			remove_character_modifier = me_dates_merchant_in_town_modifier
+		}
+	}
+}
+
+
+
+##################################################
+# Misc Holy Days
+##################################################
+# Ashura
+me_ihd_events.4000 = {
+	type = character_event
+	title = me_ihd_events.4000.t
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					rite = {
+						OR = {
+							rite_has_doctrine = muhammad_succession_shia_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+						}
+					}
+				}
+				desc = me_ihd_events.4000.desc.shia
+			}
+			desc = me_ihd_events.4000.desc.other
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = throne_room_bow_1
+	}
+	override_background = { reference = ep3_city_gate }
+	
+	trigger = {
+		NOT = { has_variable = had_event_ihd_misc_4000 }
+		ME_can_fast = yes
+	}
+	immediate = {
+		set_variable = {	
+			name = had_event_ihd_misc_4000
+			value = yes
+			days = 5475
+		}
+	}
+
+	option = {
+		name = me_ihd_events.4000.a
+		trigger = {
+			rite = {
+				NOR = {
+					rite_has_doctrine = muhammad_succession_shia_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+				}
+			}
+		}
+		
+		add_piety = medium_piety_gain
+	}
+	option = {
+		name = me_ihd_events.4000.b
+		trigger = {
+			rite = {
+				NOR = {
+					rite_has_doctrine = muhammad_succession_shia_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+				}
+			}
+		}
+		
+		add_piety = minor_piety_gain
+	}
+	option = {
+		name = me_ihd_events.4000.c
+		trigger = {
+			rite = {
+				OR = {
+					rite_has_doctrine = muhammad_succession_shia_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+				}
+			}
+		}
+		
+		add_piety = medium_piety_gain
+	}
+	option = { 
+		name = me_ihd_events.4000.d
+		trigger = {
+			rite = {
+				OR = {
+					rite_has_doctrine = muhammad_succession_shia_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+				}
+			}
+			OR = {
+				rite = { rite_has_tenet = tenet_exaltation_of_pain }
+				rite = rite:imami
+			}
+		}
+		
+		flagellation_decision_effect = yes
+	}
+	
+	option = {
+		name = {
+			trigger = {
+				rite = {
+					NOR = {
+						rite_has_doctrine = muhammad_succession_shia_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					}
+				}
+			}
+			text = me_ihd_events.4000.e.other
+		}
+		name = {
+			trigger = {
+				rite = {
+					OR = {
+						rite_has_doctrine = muhammad_succession_shia_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					}
+				}
+			}
+			text = me_ihd_events.4000.e.shia
+		}
+	}
+}
+
+
+
+##################################################
+# Muharram State Patronage
+##################################################
+# This events saves the chosen patronage tier as a persistent character variable.
+# The income drain modifier and county modifiers are applied when the Muharram arrives
+
+me_ihd_events.5010 = {
+	type = character_event
+	title = me_ihd_events.5010.t
+	desc = me_ihd_events.5010.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = grief
+	}
+
+	# None
+	option = {
+		name = me_ihd_events.5010.none
+		custom_tooltip = me_muharram_patronage_none_tt
+		set_variable = { name = me_ihd_events_patronage value = flag:none }
+		ai_chance = {
+			base = 20
+			ai_value_modifier = { ai_greed = 0.5 ai_zeal = -0.5 }
+		}
+	}
+
+	# Modest
+	option = {
+		name = me_ihd_events.5010.modest
+		set_variable = { name = me_muharram_patronage value = flag:modest }
+		custom_tooltip = me_muharram_patronage_modest_tt
+		if = {
+			limit = {
+				me_hijri_month_value = 1
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 50
+			ai_value_modifier = { ai_greed = 0.3 }
+		}
+	}
+
+	# Grand
+	option = {
+		name = me_ihd_events.5010.grand
+		set_variable = { name = me_muharram_patronage value = flag:grand }
+		custom_tooltip = me_muharram_patronage_grand_tt
+		if = {
+			limit = {
+				me_hijri_month_value = 1
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 30
+			ai_value_modifier = { ai_zeal = 0.3 ai_greed = -0.3 }
+		}
+	}
+
+	# Lavish
+	option = {
+		name = me_ihd_events.5010.lavish
+		set_variable = { name = me_muharram_patronage value = flag:lavish }
+		custom_tooltip = me_muharram_patronage_lavish_tt
+		if = {
+			limit = {
+				me_hijri_month_value = 1
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+		ai_chance = {
+			base = 10
+			ai_value_modifier = { ai_zeal = 0.5 ai_greed = -0.5 }
+		}
+	}
+}
+
+
+
+
+
+##################################################
+# Notification Events
+##################################################
+
+# Ramadan Started Notification
+me_ihd_events.9000 = {
+	hidden = yes
+
+	trigger = {
+		exists = global_var:ihd_notif_ramadan
+		rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_ihd_events.9000.a.tt
+			custom_tooltip = me_ihd_events.9000.a.tt.ramadan_started
+			custom_tooltip = me_ihd_events.9000.a.tt.turn_off_notif
+		}
+	}
+}
+
+# Rajab Started Notification
+me_ihd_events.9001 = {
+	hidden = yes
+
+	trigger = {
+		exists = global_var:ihd_notif_ramadan
+		rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_ihd_events.9001.a.tt
+			custom_tooltip = me_ihd_events.9001.a.tt.rajab_started
+			custom_tooltip = me_ihd_events.9000.a.tt.turn_off_notif
+		}
+	}
+}
+
+# Eid ul-Adha Starting Soon Notification
+me_ihd_events.9002 = {
+	hidden = yes
+
+	trigger = {
+		exists = global_var:ihd_notif_eid
+		OR = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+		}
+	}
+
+	immediate = {
+		send_interface_toast = {
+			type = event_toast_effect_good
+			title = me_ihd_events.9002.a.tt
+			custom_tooltip = me_ihd_events.9002.a.tt.adha_starting_soon
+			custom_tooltip = me_ihd_events.9000.a.tt.turn_off_notif
+		}
+	}
+}

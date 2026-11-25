@@ -9,6 +9,16 @@
 }
 
 texticon = {
+	icon = me_icon_big
+	iconsize = {
+		texture = "gfx/interface/icons/icon_me_big.dds"
+		size = { 40 40 }
+		offset = { 0 16 }
+		fontsize = 16
+	}
+}
+
+texticon = {
 	icon = preach_conv_icon
 	iconsize = {
 		texture = "gfx/interface/icons/widgets/public_conversions.dds"

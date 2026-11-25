@@ -427,52 +427,70 @@ ME_proselytize_success_remove_var_effect = {
 		flag:preach_nobility = {
 			switch = {
 				trigger = root.var:preach_type
-				flag:public = { root.location.county = {
-					remove_variable =  me_fail_adv_nobility_public
-					remove_variable =  me_courtier_adv_nobility_public
-				} }
-				flag:gold = { root.location.county = {
-					remove_variable =  me_fail_adv_nobility_gold
-					remove_variable =  me_courtier_adv_nobility_gold
-				} }
-				flag:secret = { root.location.county = {
-					remove_variable =  me_fail_adv_nobility_secret
-					remove_variable =  me_courtier_adv_nobility_secret
-				} }
+				flag:public = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_nobility_public
+						remove_variable =  me_courtier_adv_nobility_public
+					}
+				}
+				flag:gold = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_nobility_gold
+						remove_variable =  me_courtier_adv_nobility_gold
+					}
+				}
+				flag:secret = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_nobility_secret
+						remove_variable =  me_courtier_adv_nobility_secret
+					}
+				}
 			}
 		}
 		flag:preach_workers = {
 			switch = {
 				trigger = root.var:preach_type
-				flag:public = { root.location.county = {
-					remove_variable =  me_fail_adv_workers_public
-					remove_variable =  me_courtier_adv_workers_public
-				} }
-				flag:gold = { root.location.county = {
-					remove_variable =  me_fail_adv_workers_gold
-					remove_variable =  me_courtier_adv_workers_gold
-				} }
-				flag:secret = { root.location.county = {
-					remove_variable =  me_fail_adv_workers_secret
-					remove_variable =  me_courtier_adv_workers_secret
-				} }
+				flag:public = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_workers_public
+						remove_variable =  me_courtier_adv_workers_public
+					}
+				}
+				flag:gold = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_workers_gold
+						remove_variable =  me_courtier_adv_workers_gold
+					} 
+				}
+				flag:secret = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_workers_secret
+						remove_variable =  me_courtier_adv_workers_secret
+					}
+				}
 			}
 		}
 		flag:preach_villagers = {
 			switch = {
 				trigger = root.var:preach_type
-				flag:public = { root.location.county = {
-					remove_variable =  me_fail_adv_villagers_public
-					remove_variable =  me_courtier_adv_villagers_public
-				} }
-				flag:gold = { root.location.county = {
-					remove_variable =  me_fail_adv_villagers_gold
-					remove_variable =  me_courtier_adv_villagers_gold
-				} }
-				flag:secret = { root.location.county = {
-					remove_variable =  me_fail_adv_villagers_secret
-					remove_variable =  me_courtier_adv_villagers_secret
-				} }
+				flag:public = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_villagers_public
+						remove_variable =  me_courtier_adv_villagers_public
+					}
+				}
+				flag:gold = {
+					root.location.county = {
+						remove_variable =  me_fail_adv_villagers_gold
+						remove_variable =  me_courtier_adv_villagers_gold
+					} 
+				}
+				flag:secret = { 
+					root.location.county = {
+						remove_variable =  me_fail_adv_villagers_secret
+						remove_variable =  me_courtier_adv_villagers_secret
+					} 
+				}
 			}
 		}
 	}
@@ -2050,12 +2068,12 @@ ME_proselytize_public_preaching_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2083,8 +2101,8 @@ ME_proselytize_public_preaching_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -2190,12 +2208,12 @@ ME_proselytize_public_preaching_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2223,8 +2241,8 @@ ME_proselytize_public_preaching_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -2330,12 +2348,12 @@ ME_proselytize_public_preaching_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2363,8 +2381,8 @@ ME_proselytize_public_preaching_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -2476,12 +2494,12 @@ ME_proselytize_buy_conversions_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2509,8 +2527,8 @@ ME_proselytize_buy_conversions_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -2616,12 +2634,12 @@ ME_proselytize_buy_conversions_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2649,8 +2667,8 @@ ME_proselytize_buy_conversions_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -2756,12 +2774,12 @@ ME_proselytize_buy_conversions_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2789,8 +2807,8 @@ ME_proselytize_buy_conversions_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -2910,12 +2928,12 @@ ME_proselytize_secret_conversions_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -2943,8 +2961,8 @@ ME_proselytize_secret_conversions_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -3058,12 +3076,12 @@ ME_proselytize_secret_conversions_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -3091,8 +3109,8 @@ ME_proselytize_secret_conversions_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -3206,12 +3224,12 @@ ME_proselytize_secret_conversions_events = {
 						min = -49
 					}
 					modifier = {
-						add = location.county.development_level
+						add = location.county.prosperity_level
 					}
 					
 					modifier = {
 						add = {
-							subtract = location.county.county_opinion
+							subtract = location.county.popular_opinion
 						}
 					}
 					modifier = {
@@ -3239,8 +3257,8 @@ ME_proselytize_secret_conversions_events = {
 					}
 					modifier = {
 						factor = 0.75
-						root.faith = {
-							has_doctrine_parameter = mendicant_preachers_conversion_active
+						root.rite = {
+							rite_has_parameter = mendicant_preachers_conversion_active
 						}
 					}
 					
@@ -3541,13 +3559,13 @@ ME_proselytize_cc_force_opinion_effect = {
 						faith_hostility_level = { target = root.faith value = faith_fully_accepted_level }
 					}
 				}
-				faith = {
+				rite = {
 					OR = {
-						has_doctrine = tenet_exaltation_of_pain
-						has_doctrine = tenet_fp3_fedayeen
-						has_doctrine = tenet_human_sacrifice
-						has_doctrine = tenet_sacrificial_ceremonies
-						has_doctrine = tenet_gruesome_festivals
+						rite_has_tenet = tenet_exaltation_of_pain
+						rite_has_tenet = tenet_fp3_fedayeen
+						rite_has_tenet = tenet_human_sacrifice
+						rite_has_tenet = tenet_sacrificial_ceremonies
+						rite_has_tenet = tenet_gruesome_festivals
 					}
 				}
 			}
@@ -3573,13 +3591,13 @@ ME_proselytize_cc_force_opinion_effect = {
 							faith_hostility_level = { target = root.faith value = faith_fully_accepted_level }
 						}
 					}
-					faith = {
+					rite = {
 						OR = {
-							has_doctrine = tenet_exaltation_of_pain
-							has_doctrine = tenet_fp3_fedayeen
-							has_doctrine = tenet_human_sacrifice
-							has_doctrine = tenet_sacrificial_ceremonies
-							has_doctrine = tenet_gruesome_festivals
+							rite_has_tenet = tenet_exaltation_of_pain
+							rite_has_tenet = tenet_fp3_fedayeen
+							rite_has_tenet = tenet_human_sacrifice
+							rite_has_tenet = tenet_sacrificial_ceremonies
+							rite_has_tenet = tenet_gruesome_festivals
 						}
 					}
 				}
@@ -3694,7 +3712,7 @@ ME_proselytize_county_conversion_normal_effect = {
 			}
 			add_piety = {
 				value = 10
-				multiply = location.county.development_level
+				multiply = location.county.prosperity_level
 				min = 20
 			}
 		}
@@ -3705,12 +3723,12 @@ ME_proselytize_county_conversion_normal_effect = {
 				min = -49
 			}
 			modifier = {
-				add = location.county.development_level
+				add = location.county.prosperity_level
 			}
 			
 			modifier = {
 				add = {
-					subtract = location.county.county_opinion
+					subtract = location.county.popular_opinion
 				}
 			}
 			modifier = {
@@ -3738,8 +3756,8 @@ ME_proselytize_county_conversion_normal_effect = {
 			}
 			modifier = {
 				factor = 0.75
-				root.faith = {
-					has_doctrine_parameter = mendicant_preachers_conversion_active
+				root.rite = {
+					rite_has_parameter = mendicant_preachers_conversion_active
 				}
 			}
 			
@@ -3812,7 +3830,7 @@ ME_proselytize_county_conversion_normal_effect = {
 	
 	add_piety = {
 		value = 10
-		multiply = location.county.development_level
+		multiply = location.county.prosperity_level
 		min = 20
 	}
 }
@@ -3839,8 +3857,8 @@ ME_proselytize_county_conversion_force_effect = {
 			}
 			modifier = {
 				factor = 1.2
-				root.faith = {
-					has_doctrine = tenet_armed_pilgrimages
+				root.rite = {
+					rite_has_tenet = tenet_armed_pilgrimages
 				}
 			}
 			
@@ -3912,23 +3930,23 @@ ME_proselytize_county_conversion_force_effect = {
 			add_piety = {
 				value = minor_piety_value
 				if = {
-					limit = { faith = { has_doctrine = tenet_exaltation_of_pain } }
+					limit = { rite = { rite_has_tenet = tenet_exaltation_of_pain } }
 					add = minor_piety_value
 				}
 				if = {
-					limit = { faith = { has_doctrine = tenet_fp3_fedayeen } }
+					limit = { rite = { rite_has_tenet = tenet_fp3_fedayeen } }
 					add = minor_piety_value
 				}
 				if = {
-					limit = { faith = { has_doctrine = tenet_human_sacrifice } }
+					limit = { rite = { rite_has_tenet = tenet_human_sacrifice } }
 					add = minor_piety_value
 				}
 				if = {
-					limit = { faith = { has_doctrine = tenet_sacrificial_ceremonies } }
+					limit = { rite = { rite_has_tenet = tenet_sacrificial_ceremonies } }
 					add = minor_piety_value
 				}
 				if = {
-					limit = { faith = { has_doctrine = tenet_gruesome_festivals } }
+					limit = { rite = { rite_has_tenet = tenet_gruesome_festivals } }
 					add = minor_piety_value
 				}
 			}
@@ -3940,7 +3958,7 @@ ME_proselytize_county_conversion_force_effect = {
 				min = -49
 			}
 			modifier = {
-				add = location.county.development_level
+				add = location.county.prosperity_level
 			}
 			modifier = {
 				add = location.barony.building_max_garrison

@@ -2,7 +2,7 @@
 me_sulayhid_1 = {
 	name = "Abdullah"
 	dynasty = 590 # Sulayhids
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = "yemeni"
 	father = yemeni0001
 	1015.6.11 = {
@@ -19,7 +19,7 @@ me_ziyadid_001 = { # Ziyad 'Ibn Abihi', his true ancestery is disputed but he wa
 	name = "Ziyad"
 	dynasty = 1042165 # Ziyadid
 	give_nickname = nick_ibn_abihi # Ibn Abihi (The Son of his Father) 
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = disputed_heritage
 #	trait = legitimized_bastard
@@ -38,7 +38,7 @@ me_ziyadid_001 = { # Ziyad 'Ibn Abihi', his true ancestery is disputed but he wa
 me_ziyadid_002 = { 
 	name = "Sumayyah"
 	female = yes
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	592.1.1 = {
@@ -52,7 +52,7 @@ me_ziyadid_002 = {
 me_ziyadid_003 = {
 	name = "Ubayd-Allah" # Also known as Abdullah
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -69,7 +69,7 @@ me_ziyadid_003 = {
 me_ziyadid_004 = {
 	name = "Abd_ar-Rahman"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -84,7 +84,7 @@ me_ziyadid_004 = {
 me_ziyadid_005 = {
 	name = "Abbad"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -99,7 +99,7 @@ me_ziyadid_005 = {
 me_ziyadid_006 = {
 	name = "Salm"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -114,7 +114,7 @@ me_ziyadid_006 = {
 me_ziyadid_007 = {
 	name = "Muslim"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -131,7 +131,7 @@ me_ziyadid_007 = {
 me_ziyadid_008 = {
 	name = "Yazid"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -148,7 +148,7 @@ me_ziyadid_008 = {
 me_ziyadid_009 = {
 	name = "Muharib"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_006 # Salm ibn Ziyad ibn Abihi
@@ -163,7 +163,7 @@ me_ziyadid_009 = {
 me_ziyadid_010 = { # A Basra based historian and grandson of Salim
 	name = "Maslama"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_ziyadid_009 # Muharib ibn Salim ibn Ziyad ibn Abihi
@@ -178,7 +178,7 @@ me_ziyadid_010 = { # A Basra based historian and grandson of Salim
 me_ziyadid_011 = { 
 	name = "Abdullah"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -193,7 +193,7 @@ me_ziyadid_011 = {
 me_ziyadid_012 = { 
 	name = "Ziyad"
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_011 # Abdullah ibn Ziyad ibn Abihi
@@ -209,7 +209,7 @@ me_ziyadid_013 = {
 	name = "Ramlah"
 	female = yes
 	dynasty = 1042165 # Ziyadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	
 	father = me_ziyadid_001 # Ziyad ibn Abihi
@@ -228,7 +228,7 @@ me_ziyadid_013 = {
 me_sumadihid_001 = {
 	name = "Zakariyah"
 	dynasty_house = house_banu_sumadih # House Banu Sumadih
-	religion = muwalladi
+	rite = maliki
 	culture = yemeni
 
 	father = 73252 # Rafi' ad-Dawla 'al-Hajib' Yahya (found in yemeni.txt)
@@ -244,7 +244,7 @@ me_sumadihid_001 = {
 me_sumadihid_002 = {
 	name = "Muhammad"
 	dynasty_house = house_banu_sumadih # House Banu Sumadih
-	religion = muwalladi
+	rite = maliki
 	culture = yemeni
 
 	father = 73251 # al-Wathiq 'Izz ad-Dawlah' Abdullah (found in yemeni.txt)
@@ -260,7 +260,7 @@ me_sumadihid_002 = {
 me_sumadihid_003 = {
 	name = "Muhammad"
 	dynasty_house = house_banu_sumadih # House Banu Sumadih
-	religion = muwalladi
+	rite = maliki
 	culture = yemeni
 
 	father = me_sumadihid_004
@@ -276,7 +276,7 @@ me_sumadihid_003 = {
 me_sumadihid_004 = {
 	name = "Abd-al-Rahman"
 	dynasty_house = house_banu_sumadih # House Banu Sumadih
-	religion = muwalladi
+	rite = maliki
 	culture = yemeni
 
 	father = me_sumadihid_005
@@ -292,7 +292,7 @@ me_sumadihid_004 = {
 me_sumadihid_005 = {
 	name = "Sumadih"
 	dynasty_house = house_me_Tujibid # Banu Tujib
-	religion = muwalladi
+	rite = maliki
 	culture = yemeni
 
 	father = 73839 # [found in yemeni.txt] Assuming this is Abd al-Rahman ibn Abdullah, the common ancestor between the Sumadihids and the Zaragoza Tujibids (some sources do not mention Abdul-Aziz and instead atribute Abd al-Rahman's parentage to Abdullah)
@@ -308,7 +308,7 @@ me_sumadihid_005 = {
 me_rassid_001 = {
 	name = "al-Qasim"
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -324,7 +324,7 @@ me_rassid_001 = {
 me_rassid_002 = {
 	name = "Ahmad"
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -340,7 +340,7 @@ me_rassid_002 = {
 me_rassid_003 = {
 	name = "Isma_il" # Known by the kunya of Abi al-Barakat 
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -356,7 +356,7 @@ me_rassid_003 = {
 me_rassid_004 = {
 	name = "Ahmad"
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -372,7 +372,7 @@ me_rassid_004 = {
 me_rassid_005 = {
 	name = "al-Qasim"
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -388,7 +388,7 @@ me_rassid_005 = {
 me_rassid_006 = {
 	name = "Abdullah"
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -405,7 +405,7 @@ me_rassid_007 = {
 	name = "Malikah" # Mother of Zayidi Imam al-Mutawakkil Ahmad
 	female = yes
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 
@@ -421,7 +421,7 @@ me_rassid_007 = {
 me_rassid_008 = {
 	name = "Isma_il" # Isma'il ibn al-Qasim, Resided in Egypt
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "bedouin"
 	trait = sayyid
 
@@ -439,7 +439,7 @@ me_rassid_009 = {
 	name = "Mu_nisah" # Mu'nisah, Maghrebi concubine and mother of Isma'il ibn al-Qasim
 	female = yes
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "baranis"
 
 	800.1.1 = {
@@ -453,7 +453,7 @@ me_rassid_009 = {
 me_rassid_010 = {
 	name = "Musa" # Musa ibn al-Qasim, Resided in Egypt
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "bedouin"
 	trait = sayyid
 
@@ -469,7 +469,7 @@ me_rassid_010 = {
 me_rassid_011 = {
 	name = "Yahya" # Yahya ibn al-Qasim, Resided in ar-Ramla, Palestine
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "bedouin"
 	trait = sayyid
 
@@ -486,7 +486,7 @@ me_rassid_011 = {
 me_rassid_012 = {
 	name = "Sulayman" # Sulayman ibn al-Qasim, Resided in Medina
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "bedouin"
 	trait = sayyid
 
@@ -502,7 +502,7 @@ me_rassid_012 = {
 me_rassid_013 = {
 	name = "al-Hasan" # al-Hasan ibn al-Qasim, Resided in Medina
 	dynasty = 576 # Rassids
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "bedouin"
 	trait = sayyid
 
@@ -518,7 +518,7 @@ me_rassid_013 = {
 me_rassid_014 = {
 	name = "Ali" # Ali ibn al-Husayn ibn al-Qasim, mother was a concubine, resided in Sa'dah, Yemen
 	dynasty = 576
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "yemeni"
 	trait = sayyid
 	
@@ -531,11 +531,499 @@ me_rassid_014 = {
 	}
 }
 
+## Banu Khawlan
+me_khawlani_001 = {
+	name = "al-Samh" # al-Samh ibn Malik al-Khawlani, Umayyad Governor of al-Andalus between 719-721, Conquered Septimania but lost the Battle of Toulouse
+	dynasty = me_khawlani_dynasty
+	rite = "maliki"
+	culture = "yemeni"
+	
+	father = me_khawlani_002
+	680.1.1 = {
+		birth = yes
+	}
+	721.6.20 = {
+		death = { # Died from his wounds shortly after the Battle of Toulouse
+			death_reason = death_wounds
+		}
+	}
+}
+
+me_khawlani_002 = {
+	name = "Malik"
+	dynasty = me_khawlani_dynasty
+	rite = "maliki"
+	culture = "yemeni"
+	
+	650.1.1 = {
+		birth = yes
+	}
+	710.1.1 = {
+		death = yes
+	}
+}
+
+## Banu Hamdan
+me_hamdanid_001 = {
+	name = "al-Hasan" # Abu Muhammad al-Hasan 'Ibn al-Ha'ik' al-Hamdani, famous Yemeni geographer, chemist, historian, and poet who wrote 'Sifat Jazirat al-Arab' (Geography of the Arabian Pininsula)
+	dynasty = yemeni_hamdanid
+	give_nickname = nick_me_ibn_al_haik
+	rite = "maliki"
+	culture = "yemeni"
+	trait = education_learning_4
+	trait = lifestyle_poet
+
+	father = me_hamdanid_002
+	893.5.10 = {
+		birth = yes
+	}
+	947.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_002 = {
+	name = "Ahmad"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_003
+	860.1.1 = {
+		birth = yes
+	}
+	920.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_003 = {
+	name = "Ya_qub"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_004
+	830.1.1 = {
+		birth = yes
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_004 = {
+	name = "Yusuf"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_005
+	800.1.1 = {
+		birth = yes
+	}
+	860.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_005 = {
+	name = "Dawud"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_006
+	770.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_006 = {
+	name = "Sulayman"
+	dynasty = yemeni_hamdanid
+	give_nickname = nick_me_al_haik
+	rite = "maliki"
+	culture = "yemeni"
+	trait = lifestyle_poet
+
+	father = me_hamdanid_007
+	740.1.1 = {
+		birth = yes
+	}
+	800.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_007 = {
+	name = "_Amr"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_008
+	710.1.1 = {
+		birth = yes
+	}
+	770.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_008 = {
+	name = "al-Harith"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_009
+	680.1.1 = {
+		birth = yes
+	}
+	740.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_009 = {
+	name = "Munqidh"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_010
+	650.1.1 = {
+		birth = yes
+	}
+	710.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_010 = {
+	name = "Abi_Hanash"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_011
+	620.1.1 = {
+		birth = yes
+	}
+	680.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_011 = {
+	name = "al-Walid"
+	dynasty = yemeni_hamdanid
+	rite = "maliki"
+	culture = "yemeni"
+
+	father = me_hamdanid_012
+	590.1.1 = {
+		birth = yes
+	}
+	650.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_012 = {
+	name = "Azhar"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_013
+	560.1.1 = {
+		birth = yes
+	}
+	620.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_013 = {
+	name = "_Amr"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_014
+	530.1.1 = {
+		birth = yes
+	}
+	590.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_014 = {
+	name = "Tariq"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_015
+	500.1.1 = {
+		birth = yes
+	}
+	560.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_015 = {
+	name = "Adham"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_016
+	480.1.1 = {
+		birth = yes
+	}
+	540.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_016 = {
+	name = "Qays"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_017
+	460.1.1 = {
+		birth = yes
+	}
+	520.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_017 = {
+	name = "Rabi_a"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_018
+	440.1.1 = {
+		birth = yes
+	}
+	500.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_018 = {
+	name = "Abd"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_019
+	420.1.1 = {
+		birth = yes
+	}
+	480.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_019 = {
+	name = "Alyan"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_020
+	400.1.1 = {
+		birth = yes
+	}
+	460.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_020 = {
+	name = "Arhib"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_021
+	380.1.1 = {
+		birth = yes
+	}
+	460.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_021 = {
+	name = "ad-Da_am"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_022
+	364.1.1 = {
+		birth = yes
+	}
+	425.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_022 = {
+	name = "Malik"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_023
+	348.1.1 = {
+		birth = yes
+	}
+	410.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_023 = {
+	name = "Mu_awiyah"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_024
+	332.1.1 = {
+		birth = yes
+	}
+	390.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_024 = {
+	name = "Sa_b"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_025
+	316.1.1 = {
+		birth = yes
+	}
+	375.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_025 = {
+	name = "Duman"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_026
+	300.1.1 = {
+		birth = yes
+	}
+	360.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_026 = {
+	name = "Bakil"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_027
+	284.1.1 = {
+		birth = yes
+	}
+	345.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_027 = {
+	name = "Jashm"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_028
+	268.1.1 = {
+		birth = yes
+	}
+	330.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_028 = {
+	name = "Khayran"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_029
+	252.1.1 = {
+		birth = yes
+	}
+	310.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_029 = {
+	name = "Nawf"
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_hamdanid_030
+	236.1.1 = {
+		birth = yes
+	}
+	300.1.1 = {
+		death = yes
+	}
+}
+
+me_hamdanid_030 = {
+	name = "Hamdan" # Forefather of Banu Hamdan
+	dynasty = yemeni_hamdanid
+	rite = "pagan"
+	culture = "yemeni"
+
+	father = me_kahlanid_012 # Malik ibn Zayd ibn Awsilah al-Kahlani
+	220.1.1 = {
+		birth = yes
+	}
+	280.1.1 = {
+		death = yes
+	}
+}
+
 ## Tayyibi Da'is
 me_tayyibi_001 = {
 	name = "Dhu_ayb" # Dhu'ayb ibn Musa, First Tayyibi Da'i (1138-1151)
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	father = me_tayyibi_002
@@ -550,7 +1038,7 @@ me_tayyibi_001 = {
 me_tayyibi_002 = {
 	name = "Musa"
 	dynasty = yemeni_hamdanid
-	religion = ismaili
+	rite = ismaili
 	culture = yemeni
 
 	1070.1.1 = {
@@ -564,7 +1052,7 @@ me_tayyibi_002 = {
 me_tayyibi_003 = {
 	name = "Ibrahim" # Ibrahim ibn al-Husayn, Second Tayyibi Da'i (1151-1162)
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	father = me_tayyibi_004
@@ -579,7 +1067,7 @@ me_tayyibi_003 = {
 me_tayyibi_004 = {
 	name = "al-Husayn"
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	father = me_tayyibi_005
@@ -594,7 +1082,7 @@ me_tayyibi_004 = {
 me_tayyibi_005 = {
 	name = "Abi_as-Sa_d"
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	1070.1.1 = {
@@ -608,7 +1096,7 @@ me_tayyibi_005 = {
 me_tayyibi_006 = {
 	name = "Hatim" # Hatim ibn Ibrahim, Third Tayyibi Da'i (1162-1199)
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 	trait = education_learning_3
 
@@ -624,7 +1112,7 @@ me_tayyibi_006 = {
 me_tayyibi_007 = {
 	name = "Ali" # Ali ibn Hatim, Fourth Tayyibi Da'i (1162-1199)
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	father = me_tayyibi_006
@@ -639,7 +1127,7 @@ me_tayyibi_007 = {
 me_tayyibi_008 = {
 	name = "Muhammad" # Muhammad ibn Tahir al-Harithi, Ma'dhun al-Da'wat til 1188
 	dynasty = me_harithi_dynasty # al-Harithi
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 	trait = education_learning_3
 
@@ -658,7 +1146,7 @@ me_tayyibi_008 = {
 me_tayyibi_009 = {
 	name = "Tahir"
 	dynasty = me_harithi_dynasty # al-Harithi
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	1100.1.1 = {
@@ -672,7 +1160,7 @@ me_tayyibi_009 = {
 me_tayyibi_010 = {
 	name = "Ali" # Ali ibn Handhalah, Sixth Tayyibi Da'i (1215-1229)
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	father = me_tayyibi_011
@@ -690,7 +1178,7 @@ me_tayyibi_010 = {
 me_tayyibi_011 = {
 	name = "Handhalah"
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	father = me_tayyibi_012
@@ -708,7 +1196,7 @@ me_tayyibi_011 = {
 me_tayyibi_012 = {
 	name = "Abi_Salim"
 	dynasty = yemeni_hamdanid
-	religion = tayyibi
+	rite = tayyibi
 	culture = yemeni
 
 	1110.1.1 = {

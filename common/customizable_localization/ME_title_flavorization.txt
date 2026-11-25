@@ -112,7 +112,7 @@ ME_LandlessMaleSharif = {
 	type = character
 	text = {
 		trigger = {
-			NOR = { # All Hashimids were considered Sharifs, but this will be reserved for Sayyids
+			OR = { # All Hashimids were considered Sharifs, but this will be reserved for Sayyids
 				has_trait = sayyid
 				has_trait = ubaydi
 			}
@@ -166,7 +166,7 @@ ME_LandlessMaleSharif = {
 	# Legitimist
 	text = {
 		trigger = { has_realm_law = camp_purpose_legitimists }
-		localization_key = duke_male_arabic_legitimists
+		localization_key = duke_male_arabic_legitimist
 	}
 	text = {
 		fallback = yes
@@ -220,7 +220,7 @@ ME_LandlessFemaleSharif = {
 	# Legitimist
 	text = {
 		trigger = { has_realm_law = camp_purpose_legitimists }
-		localization_key = duke_female_arabic_legitimists
+		localization_key = duke_female_arabic_legitimist
 	}
 	text = {
 		fallback = yes

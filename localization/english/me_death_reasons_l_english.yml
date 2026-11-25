@@ -3,10 +3,12 @@
  #Misc
  death_me_mutilated_and_crucified:0 "had [CHARACTER.GetHerHis] hands and feet cut off before being crucified"
  death_me_mutilated_and_crucified_killer:0 "had [CHARACTER.GetHerHis] hands and feet cut off before being crucified by [TARGET_CHARACTER.GetUIName]"
+ death_me_crushed_by_earthquake:0 "was crushed to death after an earthquake"
+ death_me_pelted_with_rocks:0 "was pelted with rocks until [CHARACTER.GetSheHe] was dead"
 
  #Shia
  death_karbala:0 "was martyred in the Battle of Karbala"
- death_mahdi:0 "According to $imami$, the Mahdi is is still alive and will emerge again shortly before the day of judgement to bring peace and justice to the world.\n\nHe went into hiding, fearing persecution,"
+ death_mahdi:0 "According to $imami$, the [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] is is still alive and will emerge again shortly before the day of judgement to bring peace and justice to the world.\n\nHe went into hiding, fearing persecution,"
  imam_hide:0 "went into hiding, fearing persecution,"
  death_me_tayyib:0 "disappeared without a trace in infancy, but is believed by the Tayyibi Isma'ilis to have lived and went into hiding."
 
@@ -20,6 +22,34 @@
  death_me_balcony_killer:0 "fell to [CHARACTER.GetHerHis] death while attempting to escape an attempt on his life by [TARGET_CHARACTER.GetUIName]"
 
  #Barghwata
- death_salih_baraghawata:0 "disappeared without a trace, after promising to return as the Great Mahdi at the reign of the seventh Barghwata ruler"
+ death_salih_baraghawata:0 "disappeared without a trace, after promising to return as the Great [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] at the reign of the seventh Barghwata ruler"
 
-
+ #The Prophet, his household, the Imams and the Companions
+ death_me_prophet:0 "returned to his Lord, the Highest Companion, in Medina"
+ death_me_fatima_zahra:0 "passed away in grief, a few months after her father"
+ death_me_ali:0 "was martyred during prayer"
+ death_me_hasan:0 "was martyred by poison in Medina"
+ death_me_zayn_al_abidin:0 "was martyred by poison in Medina, in the reign of al-Walid"
+ death_me_baqir:0 "was martyred by poison in Medina, in the reign of Hisham"
+ death_me_sadiq:0 "was martyred by poison in Medina, in the reign of al-Mansur"
+ death_me_kadhim:0 "was martyred in the prison of Harun al-Rashid in Baghdad"
+ death_me_rida:0 "was martyred by poison at Tus, in the reign of al-Ma'mun"
+ death_me_jawad:0 "was martyred by poison in Baghdad, in the reign of al-Mu'tasim"
+ death_me_hadi:0 "was martyred by poison in Samarra, in the reign of al-Mu'tazz"
+ death_me_askari:0 "was martyred by poison in Samarra, in the reign of al-Mu'tamid"
+ death_me_abu_bakr:0 "passed away from a fever in Medina"
+ death_me_umar:0 "was struck down while leading the dawn prayer"
+ death_me_uthman:0 "was slain in his house during the siege of Medina, the Qur'an open before him"
+ death_me_abu_talib:0 "passed away in the Year of Sorrow, having shielded his nephew to the last"
+ death_me_abbas_uncle:0 "passed away in Medina in his old age"
+ death_me_zayd:0 "was martyred in his uprising at Kufa"
+ death_me_idris:0 "was poisoned by an agent of the Abbasid Caliph"
+ death_me_umar_ii:0 "passed away at Dayr Sim'an, reportedly poisoned"
+ death_me_hamza:0 "was martyred at Uhud"
+ death_me_jafar_tayyar:0 "was martyred at Mu'ta, holding the banner of Islam"
+ death_me_abbas_ibn_ali:0 "was martyred at Karbala, bearing his brother's standard"
+ death_me_zaynab_bint_ali:0 "passed away after bearing witness to Karbala"
+ death_me_khalid:0 "died in his bed at Homs, having sought martyrdom on a hundred battlefields"
+ death_me_ruqayya:0 "died of illness in Medina while the Muslims fought at Badr"
+ death_me_zaynab_bint_muhammad:0 "died of an injury suffered on her emigration to Medina"
+ death_me_masuma:0 "fell ill on the road to her brother, and passed away in Qom"

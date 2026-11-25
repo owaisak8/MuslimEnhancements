@@ -196,8 +196,227 @@ me_misc_event.0003 = {
 }
 
 
+## 867 Kharijite Rebellion startup
+me_misc_event.0004 = {
+	type = character_event
+	title = me_misc_event.0004.t
+	desc = me_misc_event.0004.desc
+	theme = realm
+	right_portrait = {
+		character = root
+		animation = marshal
+	}
+	lower_right_portrait = scope:ubaydah
 
+	trigger = {
+	}
+	immediate = {
+		save_scope_as = musawir
+		character:me_mashriqi_014 = { save_scope_as = ubaydah }
+	}
 
+	option = {
+		name = me_misc_event.0004.a
+		custom_tooltip = me_misc_event.0004.a.tt
+		
+		set_relation_rival = { reason = me_rival_kharijite target = scope:ubaydah }
+		hidden_effect = {
+			me_start_khariji_rebel_effect = {
+				TARGET_COUNTY = title:c_sinjar
+				REBEL_LEADER = scope:ubaydah
+			}
+		}
+	}
+	option = {
+		name = me_misc_event.0004.b
+		custom_tooltip = me_misc_event.0004.b.tt
+		
+		set_relation_friend = { reason = me_friend_kharijite target = scope:ubaydah }
+		show_as_tooltip = { set_character_rite = rite:azariqa }
+		hidden_effect = {
+			set_character_rite_with_conversion = rite:azariqa
+			create_character = {
+				template = desert_commander_character
+				employer = root
+				gender = male
+				rite = rite:sufri
+				culture = culture:levantine
+				save_scope_as = khariji_leader
+			}
+			me_start_khariji_rebel_effect = {
+				TARGET_COUNTY = title:c_sinjar
+				REBEL_LEADER = scope:khariji_leader
+			}
+		}
+	}
+}
+
+## Tyre-Ma'ab county exchange events
+me_misc_event.0005 = {
+	title = me_misc_event.0005.title
+	desc = me_misc_event.0005.desc
+	left_portrait = {
+		character = scope:attacker
+		animation = war_attacker
+	}
+	lower_right_portrait = scope:defender
+
+	theme = faith
+	override_background = { reference = armory }
+	
+	immediate = {
+		scope:attacker = {
+			save_scope_as = background_temple_scope
+		}
+		play_music_cue = "mx_cue_combat_2"
+	}
+
+	option = {
+		name = me_misc_event.0005.a
+	}
+}
+
+me_misc_event.0006 = {
+	title = {
+		first_valid = {
+			# Tyre taken by Crusaders
+			triggered_desc = {
+				trigger = { scope:attacker = { NOT = { completely_controls = title:c_acre } } }
+				desc = me_misc_event.0006.title.tyre_taken
+			}
+			# Tyre kept by Muslims
+			triggered_desc = {
+				trigger = { scope:attacker = { completely_controls = title:c_acre } }
+				desc = me_misc_event.0006.title.tyre_kept
+			}
+		}
+	}
+	desc = {
+		first_valid = {
+			# Muslim - Tyre taken by Crusaders
+			triggered_desc = {
+				trigger = {
+					this = scope:attacker
+					NOT = { completely_controls = title:c_acre }
+				}
+				desc = me_misc_event.0006.desc.muslim_tyre_taken
+			}
+			# Muslim - Tyre kept
+			triggered_desc = {
+				trigger = {
+					this = scope:attacker
+					completely_controls = title:c_acre
+				}
+				desc = me_misc_event.0006.desc.muslim_tyre_kept
+			}
+			# Christian - Tyre taken by Crusaders
+			triggered_desc = {
+				trigger = {
+					this = scope:defender
+					completely_controls = title:c_acre
+				}
+				desc = me_misc_event.0006.desc.christian_tyre_taken
+			}
+			# Christian - Tyre kept
+			triggered_desc = {
+				trigger = {
+					this = scope:defender
+					NOT = { completely_controls = title:c_acre }
+				}
+				desc = me_misc_event.0006.desc.christian_tyre_kept
+			}
+		}
+	}
+	theme = faith
+	override_background = {
+		reference = battlefield
+	}
+	left_portrait = {
+		character = scope:defender
+		animation = shame
+	}
+	right_portrait = {
+		character = scope:attacker
+		animation = war_over_win
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_general_crusade_event_3"
+		show_as_tooltip = { scope:attacker = { get_title = title:c_maab } }
+		if = {
+			limit = { scope:defender = { completely_controls = title:c_acre } }
+			show_as_tooltip = { scope:defender = { get_title = title:c_acre } }
+		}
+	}
+
+	option = {
+		name = {
+			trigger = {
+				this = scope:attacker
+				NOT = { completely_controls = title:c_acre }
+			}
+			text = me_misc_event.0006.a.muslim_tyre_taken
+		}
+		name = {
+			trigger = {
+				this = scope:attacker
+				completely_controls = title:c_acre
+			}
+			text = me_misc_event.0006.a.muslim_tyre_kept
+		}
+		name = {
+			trigger = {
+				this = scope:defender
+				completely_controls = title:c_acre
+			}
+			text = me_misc_event.0006.a.christian_tyre_taken
+		}
+		name = {
+			trigger = {
+				this = scope:defender
+				NOT = { completely_controls = title:c_acre }
+			}
+			text = me_misc_event.0006.a.christian_tyre_kept
+		}
+		
+		custom_tooltip = me_misc_event.0006.tt.game_rule
+		if = {
+			limit = { scope:defender = { completely_controls = title:c_acre } }
+			custom_tooltip = me_misc_event.0006.tt.tyre_taken
+		}
+		if = {
+			limit = { scope:attacker = { completely_controls = title:c_acre } }
+			custom_tooltip = me_misc_event.0006.tt.tyre_kept
+		}
+	}
+}
+
+me_misc_event.0007 = {
+	scope = none
+	hidden = yes
+
+	immediate = {
+		if = {
+			limit = {
+				has_global_variable = me_tyre_county_exchange_flag
+				title:c_acre = { capital_province = { is_occupied = yes } }
+				title:c_acre.holder.top_liege = {
+					is_at_war = yes
+					has_religion = religion:christianity_religion
+					any_war_enemy = { has_religion = religion:islam_religion }
+				}
+			}
+			add_county_modifier = {
+				modifier = me_acre_occupied_modifier
+				years = 1
+			}
+			trigger_event = {
+				id = me_misc_event.0007 
+				days = 365
+			}
+		}
+	}
+}
 
 
 # To fix things that may need an external event for whatever reason
@@ -224,14 +443,6 @@ me_misc_event.9001 = {
 		}
 	}
 }
-
-#me_misc_event.9003 = {
-#	hidden = yes
-#
-#	immediate = {
-#		get_title = title:c_qus
-#	}
-#}
 
 #
 me_misc_event.9002 = {

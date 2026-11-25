@@ -1,30 +1,9 @@
-﻿#Paduka Sri Sultans v
-duke_male_malay_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 31
-	governments = { feudal_government clan_government administrative_government }
-	religions = { islam_religion }
-	heritages = { heritage_austronesian }
-}
-duke_female_malay_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 31
-	governments = { feudal_government clan_government administrative_government }
-	religions = { islam_religion }
-	heritages = { heritage_austronesian }
-}
-prince_male_malay_group = {
+﻿prince_male_malay_group = {
 	type = character
 	gender = male
 	special = ruler_child
 	tier = duchy
-	priority = 40
+	priority = 30
 	governments = { feudal_government clan_government administrative_government }
 	religions = { islam_religion }
 	heritages = { heritage_austronesian }
@@ -38,7 +17,7 @@ prince_female_malay_group = {
 	gender = female
 	special = ruler_child
 	tier = duchy
-	priority = 40
+	priority = 30
 	governments = { feudal_government clan_government administrative_government }
 	religions = { islam_religion }
 	heritages = { heritage_austronesian }
@@ -46,14 +25,28 @@ prince_female_malay_group = {
 		top_liege = no
 	}
 }
+
+# Holders of the Imamate titles are "Imam". Without this, anyone who held one in history but is not the living head of
+# the faith or rite (the Prophet, the earlier Imams, Zayd ibn Ali, dead Wahbi Imams) fell back to "Duke".
+me_imamate_holder = {
+	type = character
+	gender = male
+	special = holder
+	priority = 301
+	titles = { d_imami d_zayidi d_nizari d_ibadi d_wahbiya d_nukkari }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+
 #### Override ####
 caliph = {
 	type = character
 	gender = male
 	special = holder
 	priority = 301
-	titles = { d_sunni d_shiite d_muwalladi h_dar_al_islam }
-	flavourization_rules = { 
+	titles = { d_sunni d_shiite d_muwalladi h_dar_al_islam d_masmudi }
+	flavourization_rules = {
 		top_liege = no
 	}
 }
@@ -167,7 +160,6 @@ emperor_feudal_muslim_female_austronesian_group = {
 		top_liege = no
 	}
 }
-##Realm Title
 barony_feudal_islam_austronesian_group = {
 	type = title
 	tier = barony
@@ -202,14 +194,13 @@ king_feudal_islam_austronesian_group = {
 }
 empire_feudal_islam_austronesian_group = {
 	type = title
-	tier = kingdom
-	priority = 200
+	tier = empire
+	priority = 110
 	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
 	religions = { islam_religion }
 	heritages = { heritage_austronesian }
 }
 
-## Austronesian Group w/o top liege###
 baron_feudal_muslim_male_austronesian_group_independent = {
 	type = character
 	gender = male
@@ -221,6 +212,7 @@ baron_feudal_muslim_male_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 baron_feudal_muslim_female_austronesian_group_independent = {
@@ -234,6 +226,7 @@ baron_feudal_muslim_female_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 count_feudal_muslim_male_austronesian_group_independent = {
@@ -247,6 +240,7 @@ count_feudal_muslim_male_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 count_feudal_muslim_female_austronesian_group_independent = {
@@ -260,6 +254,7 @@ count_feudal_muslim_female_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 duke_feudal_muslim_male_austronesian_group_independent = {
@@ -273,6 +268,7 @@ duke_feudal_muslim_male_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 duke_feudal_muslim_female_austronesian_group_independent = {
@@ -286,6 +282,7 @@ duke_feudal_muslim_female_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 king_feudal_muslim_male_austronesian_group_independent = {
@@ -299,6 +296,7 @@ king_feudal_muslim_male_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 king_feudal_muslim_female_austronesian_group_independent = {
@@ -312,10 +310,9 @@ king_feudal_muslim_female_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
-
-##Realm Title
 barony_feudal_islam_austronesian_group_independent = {
 	type = title
 	tier = barony
@@ -325,6 +322,7 @@ barony_feudal_islam_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 county_feudal_islam_austronesian_group_independent = {
@@ -336,6 +334,7 @@ county_feudal_islam_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 duchy_feudal_islam_austronesian_group_independent = {
@@ -347,6 +346,7 @@ duchy_feudal_islam_austronesian_group_independent = {
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
 		top_liege = no
+		only_independent = yes
 	}
 }
 king_feudal_islam_austronesian_group_independent = {
@@ -357,6 +357,150 @@ king_feudal_islam_austronesian_group_independent = {
 	religions = { islam_religion }
 	heritages = { heritage_austronesian }
 	flavourization_rules = { 
+		top_liege = no
+		only_independent = yes
+	}
+}
+
+# ME: Hegemon and the Tunku ranks below and above the duchy Tunku (Malay suggestions from the Discord)
+hegemon_feudal_muslim_male_austronesian_group = {
+	type = character
+	gender = male
+	special = holder
+	tier = hegemony
+	priority = 160
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+hegemon_feudal_muslim_female_austronesian_group = {
+	type = character
+	gender = female
+	special = holder
+	tier = hegemony
+	priority = 160
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+hegemony_feudal_islam_austronesian_group = {
+	type = title
+	tier = hegemony
+	priority = 160
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_male_malay_group_county = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = county
+	priority = 20
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_female_malay_group_county = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = county
+	priority = 20
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_male_malay_group_kingdom = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = kingdom
+	priority = 50
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_female_malay_group_kingdom = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = kingdom
+	priority = 50
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_male_malay_group_empire = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = empire
+	priority = 110
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_female_malay_group_empire = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = empire
+	priority = 110
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_male_malay_group_hegemony = {
+	type = character
+	gender = male
+	special = ruler_child
+	tier = hegemony
+	priority = 160
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+prince_female_malay_group_hegemony = {
+	type = character
+	gender = female
+	special = ruler_child
+	tier = hegemony
+	priority = 160
+	governments = { feudal_government tribal_government administrative_government republic_government mandala_government wanua_government clan_government }
+	religions = { islam_religion }
+	heritages = { heritage_austronesian }
+	flavourization_rules = {
 		top_liege = no
 	}
 }
@@ -783,778 +927,176 @@ emperor_islamic_female_dravidian_group = {
 	heritages = { heritage_dravidian heritage_indo_aryan }
 }
 ##################
-# Tribal Arabs
+# Nomadic Arabs
 ##################
-baron_tribal_male_arabic_group = {
+baron_nomadic_male_arabic_group = {
 	type = character
 	gender = male
 	special = holder
 	tier = barony
 	priority = 7
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-baron_tribal_female_arabic_group = {
+baron_nomadic_female_arabic_group = {
 	type = character
 	gender = female
 	special = holder
 	tier = barony
 	priority = 7
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-barony_tribal_arabic_group = {
+barony_nomadic_arabic_group = {
 	type = title
 	tier = barony
 	priority = 7
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-count_tribal_male_arabic_group = {
+count_nomadic_male_arabic_group = {
 	type = character
 	gender = male
 	special = holder
 	tier = county
 	priority = 18
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-count_tribal_female_arabic_group = {
+count_nomadic_female_arabic_group = {
 	type = character
 	gender = female
 	special = holder
 	tier = county
 	priority = 18
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-county_tribal_arabic_group = {
+county_nomadic_arabic_group = {
 	type = title
 	tier = county
 	priority = 18
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-duke_tribal_male_arabic_group = {
+duke_nomadic_male_arabic_group = {
 	type = character
 	gender = male
 	special = holder
 	tier = duchy
 	priority = 27
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-duke_tribal_female_arabic_group = {
+duke_nomadic_female_arabic_group = {
 	type = character
 	gender = female
 	special = holder
 	tier = duchy
 	priority = 27
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-duchy_tribal_arabic_group = {
+duchy_nomadic_arabic_group = {
 	type = title
 	tier = duchy
 	priority = 27
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-king_tribal_male_arabic_group = {
+king_nomadic_male_arabic_group = {
 	type = character
 	gender = male
 	special = holder
 	tier = kingdom
 	priority = 47
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-king_tribal_female_arabic_group = {
+king_nomadic_female_arabic_group = {
 	type = character
 	gender = female
 	special = holder
 	tier = kingdom
 	priority = 47
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-kingdom_tribal_arabic_group = {
+kingdom_nomadic_arabic_group = {
 	type = title
 	tier = kingdom
 	priority = 47
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-emperor_tribal_male_arabic_group = {
+emperor_nomadic_male_arabic_group = {
 	type = character
 	gender = male
 	special = holder
 	tier = empire
 	priority = 102
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-emperor_tribal_female_arabic_group = {
+emperor_nomadic_female_arabic_group = {
 	type = character
 	gender = female
 	special = holder
 	tier = empire
 	priority = 102
-	governments = { tribal_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 	flavourization_rules = {
 		top_liege = no
 	}
 }
-empire_tribal_arabic_group = {
+empire_nomadic_arabic_group = {
 	type = title
 	tier = empire
 	priority = 102
-	governments = { tribal_government }
-	heritages = { heritage_arabic }
-}
-##################
-# Nomad Arabs
-##################
-baron_nomad_male_arabic_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-baron_nomad_female_arabic_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-barony_nomad_arabic_group = {
-	type = title
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-count_nomad_male_arabic_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-count_nomad_female_arabic_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-county_nomad_arabic_group = {
-	type = title
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-duke_nomad_male_arabic_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-duke_nomad_female_arabic_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-duchy_nomad_arabic_group = {
-	type = title
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-king_nomad_male_arabic_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-king_nomad_female_arabic_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-kingdom_nomad_arabic_group = {
-	type = title
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-emperor_nomad_male_arabic_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-emperor_nomad_female_arabic_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	heritages = { heritage_arabic }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-empire_nomad_arabic_group = {
-	type = title
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
+	governments = { nomad_government tribal_government }
 	heritages = { heritage_arabic }
 }
 
-##################
-# Nomad Berbers
-##################
-baron_nomad_male_berber_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-baron_nomad_female_berber_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-barony_nomad_berber_group = {
-	type = title
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-count_nomad_male_berber_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-count_nomad_female_berber_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-county_nomad_berber_group = {
-	type = title
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-duke_nomad_male_berber_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-duke_nomad_female_berber_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-duchy_nomad_berber_group = {
-	type = title
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-king_nomad_male_berber_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-king_nomad_female_berber_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-kingdom_nomad_berber_group = {
-	type = title
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-emperor_nomad_male_berber_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-emperor_nomad_female_berber_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-empire_nomad_berber_group = {
-	type = title
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	heritages = { heritage_berber }
-}
-
-##################
-# Nomad Somalis
-##################
-
-baron_nomad_male_somalian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-baron_nomad_female_somalian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-count_nomad_male_somalian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-count_nomad_female_somalian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-duke_nomad_male_somalian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-duke_nomad_female_somalian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-king_nomad_male_somalian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-king_nomad_female_somalian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-king_nomad_male_somalian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-king_nomad_female_somalian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-emperor_nomad_male_somalian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-}
-emperor_nomad_female_somalian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	name_lists = { name_list_somali name_list_afar }
-}
-
-##################
-# Nomad Bejans
-##################
-
-baron_nomad_male_beja = {
-	type = character
-	gender = male
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-baron_nomad_female_beja = {
-	type = character
-	gender = female
-	special = holder
-	tier = barony
-	priority = 7
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-count_nomad_male_beja = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-count_nomad_female_beja = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 18
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-duke_nomad_male_beja = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-duke_nomad_female_beja = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-king_nomad_male_beja = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-king_nomad_female_beja = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 47
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-emperor_nomad_male_beja = {
-	type = character
-	gender = male
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-}
-emperor_nomad_female_beja = {
-	type = character
-	gender = female
-	special = holder
-	tier = empire
-	priority = 102
-	governments = { nomad_government }
-	name_lists = { name_list_beja }
-}
 ##########################################################
 ### Muslim Enhancements Immersive Cultural Titles, by Ace
 ##########################################################
@@ -2190,7 +1732,7 @@ baron_male_turkish_group = {
 	special = holder
 	tier = barony
 	priority = 8
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2203,7 +1745,7 @@ baron_female_turkish_group = {
 	special = holder
 	tier = barony
 	priority = 8
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2214,7 +1756,7 @@ barony_turkish_group = {
 	type = title
 	tier = barony
 	priority = 8
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2227,7 +1769,7 @@ count_male_turkish_group = {
 	special = holder
 	tier = county
 	priority = 19
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2240,7 +1782,7 @@ count_female_turkish_group = {
 	special = holder
 	tier = county
 	priority = 19
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2251,7 +1793,7 @@ county_turkish_group = {
 	type = title
 	tier = county
 	priority = 19
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2264,7 +1806,7 @@ duke_male_turkish_group = {
 	special = holder
 	tier = duchy
 	priority = 28
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2277,7 +1819,7 @@ duke_female_turkish_group = {
 	special = holder
 	tier = duchy
 	priority = 28
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2288,7 +1830,7 @@ duchy_turkish_group = {
 	type = title
 	tier = duchy
 	priority = 28
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2302,7 +1844,7 @@ king_male_turkish_group = {
 	special = holder
 	tier = kingdom
 	priority = 48
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2315,7 +1857,7 @@ king_female_turkish_group = {
 	special = holder
 	tier = kingdom
 	priority = 48
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2326,7 +1868,7 @@ kingdom_turkish_group = {
 	type = title
 	tier = kingdom
 	priority = 48
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 	flavourization_rules = {
@@ -2339,7 +1881,7 @@ emperor_male_turkish_group = {
 	special = holder
 	tier = empire
 	priority = 103
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 }
@@ -2349,7 +1891,7 @@ emperor_female_turkish_group = {
 	special = holder
 	tier = empire
 	priority = 103
-	governments = { tribal_government nomad_government }
+	governments = { tribal_government }
 	heritage = { heritage_turkic }
 	name_lists = { name_list_turkish name_list_kimek name_list_cuman name_list_bolghar name_list_bashkir name_list_kipchak name_list_karluk name_list_khazar }
 }
@@ -2362,7 +1904,7 @@ count_feudal_male_siqilli_independent = {
 	special = holder
 	tier = county
 	priority = 20
-	titles = { c_palermo c_messina c_siracusa c_agrigento c_malta c_benevento c_foggia c_capua c_napoli c_apulia c_bari c_lecce c_salerno c_camarda c_reggio_calabria c_cosenza c_rossano }
+	titles = { c_palermo c_messina c_siracusa c_agrigento c_malta c_benevento c_capitanate c_capua c_napoli c_apulia c_bari c_lecce c_salerno c_camarda c_reggio_calabria c_cosenza c_rossano }
 	governments = { clan_government feudal_government }
 	religions = { islam_religion }
 	flavourization_rules = { 
@@ -2375,7 +1917,7 @@ count_feudal_female_siqilli_independent = {
 	special = holder
 	tier = county
 	priority = 20
-	titles = { c_palermo c_messina c_siracusa c_agrigento c_malta c_benevento c_foggia c_capua c_napoli c_apulia c_bari c_lecce c_salerno c_camarda c_reggio_calabria c_cosenza c_rossano }
+	titles = { c_palermo c_messina c_siracusa c_agrigento c_malta c_benevento c_capitanate c_capua c_napoli c_apulia c_bari c_lecce c_salerno c_camarda c_reggio_calabria c_cosenza c_rossano }
 	governments = { clan_government feudal_government }
 	religions = { islam_religion }
 	flavourization_rules = { 
@@ -2387,7 +1929,7 @@ county_feudal_siqilli_independent = {
 	type = title
 	tier = county
 	priority = 20
-	titles = { c_palermo c_messina c_siracusa c_agrigento c_malta c_benevento c_foggia c_capua c_napoli c_apulia c_bari c_lecce c_salerno c_camarda c_reggio_calabria c_cosenza c_rossano }
+	titles = { c_palermo c_messina c_siracusa c_agrigento c_malta c_benevento c_capitanate c_capua c_napoli c_apulia c_bari c_lecce c_salerno c_camarda c_reggio_calabria c_cosenza c_rossano }
 	governments = { clan_government feudal_government }
 	religions = { islam_religion }
 	flavourization_rules = { 
@@ -2696,527 +2238,6 @@ kaduist_title = {
 	}
 }
 
-### Iranian ###
-
-# Adventurer
-duke_male_iran_default_landless = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_default_landless = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-spouse_landless_adventurer_iran_male = {
-	type = character
-	gender = male
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-}
-
-spouse_landless_adventurer_iran_female = {
-	type = character
-	gender = female
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-}
-
-duke_male_iran_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_iran_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_iran_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_iran_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-
-duke_male_iran_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_iran_legitimists = {
-	type = character
-	special = holder
-	gender = male
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iran_legitimists = {
-	type = character
-	special = holder
-	gender = female
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iranian }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-# Estate
-spouse_estate_holder_iran_male = {
-	type = character
-	gender = male
-	special = domicile
-    domicile_type = estate
-	priority = 28
-	governments = { administrative_government }
-	heritages = { heritage_iranian }
-
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-
-spouse_estate_holder_iran_female = {
-	type = character
-	gender = female
-	special = domicile
-    domicile_type = estate
-	priority = 28
-	governments = { administrative_government }
-	heritages = { heritage_iranian }
-
-	flavourization_rules = {
-		top_liege = no
-	}
-}
-
-### Andalusian ###
-
-# Barony
-baron_male_muslim_andalusian = {
-	type = character
-	gender = male
-	special = holder
-	tier = barony
-	priority = 60
-	governments = { clan_government feudal_government administrative_government republic_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-baron_female_muslim_andalusian = {
-	type = character
-	gender = female
-	special = holder
-	tier = barony
-	priority = 5000
-	governments = { clan_government feudal_government administrative_government republic_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-barony_muslim_andalusian = {
-	type = title
-	tier = barony
-	priority = 60
-	governments = { clan_government feudal_government administrative_government republic_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-# County
-count_male_muslim_andalusian = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 113
-	governments = { clan_government feudal_government administrative_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-count_female_muslim_andalusian = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 113
-	governments = { clan_government feudal_government administrative_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-county_muslim_andalusian = {
-	type = title
-	tier = county
-	priority = 113
-	governments = { clan_government feudal_government administrative_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-# Duchy
-duke_male_muslim_andalusian = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 123
-	titles = { d_cordoba d_granada d_sevilla d_toledo d_beja d_badajoz d_algarve d_valencia d_mallorca d_murcia d_castilla d_cantabria d_aragon d_barcelona d_navarra d_viscaya d_leon d_asturias d_galicia d_porto d_coimbra }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-duke_female_muslim_andalusian = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 123
-	titles = { d_cordoba d_granada d_sevilla d_toledo d_beja d_badajoz d_algarve d_valencia d_mallorca d_murcia d_castilla d_cantabria d_aragon d_barcelona d_navarra d_viscaya d_leon d_asturias d_galicia d_porto d_coimbra }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-duchy_muslim_andalusian = {
-	type = title
-	tier = duchy
-	priority = 123
-	titles = { d_cordoba d_granada d_sevilla d_toledo d_beja d_badajoz d_algarve d_valencia d_mallorca d_murcia d_castilla d_cantabria d_aragon d_barcelona d_navarra d_viscaya d_leon d_asturias d_galicia d_porto d_coimbra }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	top_liege = no
-}
-
-# Kingdom
-king_male_muslim_andalusian = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 144
-	titles = { k_andalusia k_badajoz k_valencia k_castille k_aragon k_navarra k_asturias k_leon k_spanish_galicia k_portugal }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	only_independent = yes
-	top_liege = no
-}
-
-king_female_muslim_andalusian = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 144
-	titles = { k_andalusia k_badajoz k_valencia k_castille k_aragon k_navarra k_asturias k_leon k_spanish_galicia k_portugal }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	only_independent = yes
-	top_liege = no
-}
-
-kingdom_muslim_andalusian = {
-	type = title
-	tier = kingdom
-	priority = 144
-	titles = { k_andalusia k_badajoz k_valencia k_castille k_aragon k_navarra k_asturias k_leon k_spanish_galicia k_portugal }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	only_independent = yes
-	top_liege = no
-}
-
-# Taifas
-duke_feudal_male_andalusian_independent = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 124
-	titles = { d_cordoba d_granada d_sevilla d_toledo d_beja d_badajoz d_algarve d_valencia d_mallorca d_murcia d_castilla d_cantabria d_aragon d_barcelona d_navarra d_viscaya d_leon d_asturias d_galicia d_porto d_coimbra  }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	flavourization_rules = { 
-		only_independent = yes
-	}
-}
-
-duke_feudal_female_andalusian_independent = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 124
-	titles = { d_cordoba d_granada d_sevilla d_toledo d_beja d_badajoz d_algarve d_valencia d_mallorca d_murcia d_castilla d_cantabria d_aragon d_barcelona d_navarra d_viscaya d_leon d_asturias d_galicia d_porto d_coimbra  }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	flavourization_rules = { 
-		only_independent = yes
-	}
-}
-
-duchy_feudal_andalusian_independent = {
-	type = title
-	tier = duchy
-	priority = 124
-	titles = { d_cordoba d_granada d_sevilla d_toledo d_beja d_badajoz d_algarve d_valencia d_mallorca d_murcia d_castilla d_cantabria d_aragon d_barcelona d_navarra d_viscaya d_leon d_asturias d_galicia d_porto d_coimbra  }
-	governments = { clan_government feudal_government administrative_government }
-	religions = { islam_religion }
-	flavourization_rules = { 
-		only_independent = yes
-	}
-}
-
-### Arabic Republic ###
-
-county_republic_arabic_group = {
-	type = title
-	tier = county
-	priority = 112
-	flavourization_rules = { 
-		top_liege = no
-	}
-	governments = { republic_government }
-	heritages = { heritage_arabic }
-}
-
-duchy_republic_arabic_group = {
-	type = title
-	special = holder
-	tier = duchy
-	priority = 122
-	flavourization_rules = { 
-		top_liege = no
-	}
-	governments = { republic_government }
-	heritages = { heritage_arabic }
-}
-
-kingdom_republic_arabic_group = {
-	type = title
-	special = holder
-	tier = kingdom
-	priority = 142
-	flavourization_rules = { 
-		top_liege = no
-	}
-	governments = { republic_government }
-	heritages = { heritage_arabic }
-}
-
-### Muslim Republic ###
-
-county_republic_muslim = {
-	type = title
-	tier = county
-	priority = 112
-	flavourization_rules = { 
-		top_liege = no
-	}
-	governments = { republic_government }
-	religions = { islam_religion }
-}
-
-duchy_republic_muslim = {
-	type = title
-	special = holder
-	tier = duchy
-	priority = 122
-	flavourization_rules = { 
-		top_liege = no
-	}
-	governments = { republic_government }
-	religions = { islam_religion }
-}
-
-kingdom_republic_muslim = {
-	type = title
-	special = holder
-	tier = kingdom
-	priority = 142
-	flavourization_rules = { 
-		top_liege = no
-	}
-	governments = { republic_government }
-	religions = { islam_religion }
-}
-
 ### Da'i al-Mutlaq ###
 me_dai_al_mutlaq_male = {
 	type = character
@@ -3240,1503 +2261,225 @@ me_dai_al_mutlaq_female = {
 	}
 }
 
-### Iranian Admin ###
-##Muslim Iranian Heritage##
-
-#County
-count_administrative_muslim_male_iranian_group = {
+### Shaykh al-Jabal (Hashashin) ###
+me_shaykh_al_jabal_male = {
 	type = character
 	gender = male
 	special = holder
-	tier = county
-	priority = 113
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-count_administrative_muslim_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 113
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-county_administrative_muslim_iranian_group = {
-	type = title
-	tier = county
-	priority = 113
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Duchy
-
-duke_administrative_muslim_male_iranian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 123
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duke_administrative_muslim_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 123
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duchy_administrative_muslim_iranian_group = {
-	type = title
-	tier = duchy
-	priority = 123
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Kingdom
-
-king_administrative_muslim_male_iranian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 143
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-king_administrative_muslim_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 143
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-kingdom_administrative_muslim_iranian_group = {
-	type = title
-	tier = kingdom
-	priority = 143
-	heritages = { heritage_iranian }
-	religions = { islam_religion }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-##Iranian Heritage##
-
-#County
-count_administrative_male_iranian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 112
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-count_administrative_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 112
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-county_administrative_iranian_group = {
-	type = title
-	tier = county
-	priority = 112
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Duchy
-
-duke_administrative_male_iranian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 122
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duke_administrative_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 122
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duchy_administrative_iranian_group = {
-	type = title
-	tier = duchy
-	priority = 122
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Kingdom
-
-king_administrative_male_iranian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 142
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-king_administrative_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 142
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-kingdom_administrative_iranian_group = {
-	type = title
-	tier = kingdom
-	priority = 142
-	heritages = { heritage_iranian }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Independant Duchy
-
-duke_administrative_independent_male_iranian_group = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 123
-	heritages = { heritage_iranian }
-	only_independent = yes
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duke_administrative_independent_female_iranian_group = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 123
-	heritages = { heritage_iranian }
-	only_independent = yes
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duchy_administrative_independent_iranian_group = {
-	type = title
-	tier = duchy
-	priority = 123
-	heritages = { heritage_iranian }
-	only_independent = yes
-	governments = { administrative_government }
-	top_liege = no
-}
-
-### Turkish Admin ###
-
-#County
-count_administrative_male_turkish = {
-	type = character
-	gender = male
-	special = holder
-	tier = county
-	priority = 112
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-count_administrative_female_turkish = {
-	type = character
-	gender = female
-	special = holder
-	tier = county
-	priority = 112
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-county_administrative_turkish = {
-	type = title
-	tier = county
-	priority = 112
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Duchy
-duke_administrative_male_turkish = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 122
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duke_administrative_female_turkish = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 122
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-duchy_administrative_turkish = {
-	type = title
-	tier = duchy
-	priority = 122
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-#Kingdom
-king_administrative_male_turkish = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 142
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-king_administrative_female_turkish = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 142
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-kingdom_administrative_turkish = {
-	type = title
-	tier = kingdom
-	priority = 142
-	heritages = { heritage_turkic }
-	governments = { administrative_government }
-	top_liege = no
-}
-
-### Independent Muslim Admin ###
-
-#Independant Duchy
-
-king_administrative_independent_male_islam_religion = {
-	type = character
-	gender = male
-	special = holder
-	tier = kingdom
-	priority = 123
-	religions = { islam_religion }
-	only_independent = yes
-	governments = { administrative_government }
-	top_liege = no
-}
-
-king_administrative_independent_female_islam_religion = {
-	type = character
-	gender = female
-	special = holder
-	tier = kingdom
-	priority = 123
-	religions = { islam_religion }
-	only_independent = yes
-	governments = { administrative_government }
-	top_liege = no
-}
-
-kingdom_administrative_independent_islam_religion = {
-	type = title
-	tier = kingdom
-	priority = 123
-	religions = { islam_religion }
-	only_independent = yes
-	governments = { administrative_government }
-	top_liege = no
-}
-
-### Adventurer ###
-
-## Andalusian
-duke_male_andalusian_default_landless = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 29
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_default_landless = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 29
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-spouse_landless_adventurer_andalusian_male = {
-	type = character
-	gender = male
-	special = domicile
-    domicile_type = camp
-	priority = 29
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-}
-
-spouse_landless_adventurer_andalusian_female = {
-	type = character
-	gender = female
-	special = domicile
-    domicile_type = camp
-	priority = 29
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-}
-
-duke_male_andalusian_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_andalusian_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_andalusian_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_andalusian_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-
-duke_male_andalusian_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_andalusian_legitimists = {
-	type = character
-	special = holder
-	gender = male
-	tier = duchy
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_andalusian_legitimists = {
-	type = character
-	special = holder
-	gender = female
-	tier = duchy
-	priority = 35
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	religions = { islam_religion }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-# Iberian
-
-duke_male_iberian_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iberian_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_iberian_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_iberian_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_iberian }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-# Turkish
-duke_male_turkish_default_landless = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_default_landless = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-spouse_landless_adventurer_turkish_male = {
-	type = character
-	gender = male
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-}
-
-spouse_landless_adventurer_turkish_female = {
-	type = character
-	gender = female
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-}
-
-duke_male_turkish_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_turkish_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_turkish_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_turkish_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-
-duke_male_turkish_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_turkish_legitimists = {
-	type = character
-	special = holder
-	gender = male
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_turkish_legitimists = {
-	type = character
-	special = holder
-	gender = female
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_turkic }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-# Berber
-duke_male_berber_default_landless = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_default_landless = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-spouse_landless_adventurer_berber_male = {
-	type = character
-	gender = male
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-}
-
-spouse_landless_adventurer_berber_female = {
-	type = character
-	gender = female
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-}
-
-duke_male_berber_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_berber_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_berber_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_berber_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-
-duke_male_berber_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_berber_legitimists = {
-	type = character
-	special = holder
-	gender = male
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_berber_legitimists = {
-	type = character
-	special = holder
-	gender = female
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_berber }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-# Arabic
-
-duke_male_arabic_default_landless = {
-	type = character
-	gender = male
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_default_landless = {
-	type = character
-	gender = female
-	special = holder
-	tier = duchy
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-spouse_landless_adventurer_arabic_male = {
-	type = character
-	gender = male
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-}
-
-spouse_landless_adventurer_arabic_female = {
-	type = character
-	gender = female
-	special = domicile
-    domicile_type = camp
-	priority = 27
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-}
-
-duke_male_arabic_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_mercenary = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_mercenaries
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_arabic_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_wanderer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_wanderers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_arabic_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_scholar = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_scholars
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_arabic_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_explorer = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_explorers
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-
-duke_male_arabic_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = male
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_freebooter = {
-	type = character
-	special = holder
-	tier = duchy
-	gender = female
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_brigands
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_male_arabic_legitimists = {
-	type = character
-	special = holder
-	gender = male
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-duke_female_arabic_legitimists = {
-	type = character
-	special = holder
-	gender = female
-	tier = duchy
-	priority = 33
-	governments = { landless_adventurer_government }
-	heritages = { heritage_arabic }
-	flag = flavourise_camp_purpose_legitimists
-
-	flavourization_rules = {
-		spouse_takes_title = no
-	}
-}
-
-### Muslim Prince/Princess ###
-
-prince_male_islamic_group = {
-	type = character
-	gender = male
-	special = ruler_child
-	tier = kingdom
-	priority = 40
-	religions = { islam_religion }
+	priority = 301
+	titles = { d_hashshashin }
+	rites = { nizari ismaili tayyibi hafizi }
 	flavourization_rules = { 
 		top_liege = no
 	}
 }
-prince_female_islamic_group = {
+
+me_shaykh_al_jabal_female = {
 	type = character
 	gender = female
-	special = ruler_child
-	tier = kingdom
-	priority = 40
-	religions = { islam_religion }
+	special = holder
+	priority = 301
+	titles = { d_hashshashin }
+	rites = { nizari ismaili tayyibi hafizi }
 	flavourization_rules = { 
 		top_liege = no
 	}
 }
-prince_male_islamic_group_empire = {
+
+# Tariqas: the Sufi orders are Monastic Orders led by a Shaykh from a khanqah (1.20)
+baron_me_tariqa_male = {
 	type = character
 	gender = male
-	special = ruler_child
+	special = holder
+	tier = barony
+	priority = 7
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+baron_me_tariqa_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = barony
+	priority = 7
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+barony_me_tariqa = {
+	type = title
+	tier = barony
+	holding = church_holding
+	priority = 52
+	lessee_governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+	flavourization_rules = {
+		top_liege = no
+	}
+}
+count_me_tariqa_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = county
+	priority = 17
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+count_me_tariqa_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = county
+	priority = 17
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+county_me_tariqa = {
+	type = title
+	tier = county
+	priority = 17
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+duke_me_tariqa_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = duchy
+	priority = 27
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+duke_me_tariqa_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = duchy
+	priority = 27
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+duchy_me_tariqa = {
+	type = title
+	tier = duchy
+	priority = 27
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+king_me_tariqa_male = {
+	type = character
+	gender = male
+	special = holder
+	tier = kingdom
+	priority = 47
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+king_me_tariqa_female = {
+	type = character
+	gender = female
+	special = holder
+	tier = kingdom
+	priority = 47
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+kingdom_me_tariqa = {
+	type = title
+	tier = kingdom
+	priority = 47
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+emperor_me_tariqa_male = {
+	type = character
+	gender = male
+	special = holder
 	tier = empire
-	priority = 40
-	religions = { islam_religion }
-	flavourization_rules = { 
+	priority = 102
+	flavourization_rules = {
 		top_liege = no
 	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
 }
-prince_female_islamic_group_empire = {
+emperor_me_tariqa_female = {
 	type = character
 	gender = female
-	special = ruler_child
+	special = holder
 	tier = empire
-	priority = 40
-	religions = { islam_religion }
-	flavourization_rules = { 
+	priority = 102
+	flavourization_rules = {
 		top_liege = no
 	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
+}
+empire_me_tariqa = {
+	type = title
+	tier = empire
+	priority = 102
+	flavourization_rules = {
+		top_liege = no
+	}
+	governments = { monastic_holy_order_government }
+	religions = { islam_religion }
 }
 
-# Andalusian
-prince_male_andalusian_group = {
+# Revered Muslim figures: the Twelve Imams are shown as "Imam", and Ali as "Caliph", rather than as "Wali"
+# (vanilla's muslim_saint title is blanked in localization/english/replace/me_misc_fixes_l_english.yml)
+me_caliph_saint = {
 	type = character
-	gender = male
-	special = ruler_child
-	tier = kingdom
-	priority = 42
-	titles = { k_andalusia k_badajoz k_valencia k_castille k_aragon k_navarra k_asturias k_leon k_spanish_galicia k_portugal }
+	special = saint
+	flag = me_caliph_flag
+	flavourization_rules = {
+		target_character = yes
+		top_liege = no
+	}
+	priority = 10001
 	religions = { islam_religion }
-	only_independent = yes
-	top_liege = no
 }
-
-prince_female_andalusian_group = {
+me_imam_saint = {
 	type = character
-	gender = female
-	special = ruler_child
-	tier = kingdom
-	priority = 42
-	titles = { k_andalusia k_badajoz k_valencia k_castille k_aragon k_navarra k_asturias k_leon k_spanish_galicia k_portugal }
+	special = saint
+	flag = me_imam_flag
+	flavourization_rules = {
+		target_character = yes
+		top_liege = no
+	}
+	priority = 10000
 	religions = { islam_religion }
-	only_independent = yes
-	top_liege = no
-}
-
-#Generic Arabic
-prince_male_arabic_group = {
-	type = character
-	gender = male
-	special = ruler_child
-	tier = kingdom
-	priority = 38
-	heritages = { heritage_arabic }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-prince_female_arabic_group = {
-	type = character
-	gender = female
-	special = ruler_child
-	tier = kingdom
-	priority = 38
-	heritages = { heritage_arabic }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-prince_male_arabic_group_empire = {
-	type = character
-	gender = male
-	special = ruler_child
-	tier = empire
-	priority = 38
-	heritages = { heritage_arabic }
-	flavourization_rules = { 
-		top_liege = no
-	}
-}
-prince_female_arabic_group_empire = {
-	type = character
-	gender = female
-	special = ruler_child
-	tier = empire
-	priority = 38
-	heritages = { heritage_arabic }
-	flavourization_rules = { 
-		top_liege = no
-	}
 }

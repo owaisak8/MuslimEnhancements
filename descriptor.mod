@@ -1,4 +1,4 @@
-version="1.9.0"
+version="1.10.0"
 tags={
 	"Balance"
 	"Historical"
@@ -9,5 +9,5 @@ tags={
 }
 name="Muslim Enhancements"
 picture="thumbnail.png"
-supported_version="1.18.4"
+supported_version="1.21.*"
 remote_file_id="2241658518"

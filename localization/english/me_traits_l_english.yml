@@ -2,8 +2,8 @@
  ## Quraysh-related traits
  trait_muslim_lineage:0 "Islamic Lineage"
  
- trait_qurashi:0 "Qurayshi"
- trait_qurashiyya:0 "Qurayshiyya"
+ trait_qurashi:0 "Qurashi"
+ trait_qurashiyya:0 "Qurashiyya"
  trait_quraysh_desc:0 "The term Qurashi describes someone who descends from the legendary Quraysh Tribe of Arabia, though unlike a Sayyid, not descending directly from the Prophet Muhammad."
  trait_quraysh_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the Blood of the Quraysh tribe flowing through [ROOT.GetCharacter.GetHerHis] veins."
  rich_presence_quraysh: "Having the blood of Quraysh running through [ROOT.Char.GetHerHis] veins as"
@@ -24,7 +24,7 @@
  trait_blood_of_hamim_prophet_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Ḥa-Mimist berber prophet, and within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
 
  trait_blood_of_kadu:0 "Blood of Kadu"
- trait_blood_of_kadu_desc:0 "This character is a descendant of Kadu ibn Mu'arik, the berber prophet and mahdi of the Kaduist religion."
+ trait_blood_of_kadu_desc:0 "This character is a descendant of Kadu ibn Mu'arik, the berber prophet and [Glossary( 'mahdi', 'MAHDI_GLOSS' )] of the Kaduist religion."
  trait_blood_of_kadu_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the Blood of the Kaduist berber prophet, Kadu ibn Mu'arik, flowing through [ROOT.GetCharacter.GetHerHis] veins."
  trait_blood_of_kadu_prophet_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Kaduist berber prophet, and within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
 
@@ -33,8 +33,8 @@
  trait_hamimist_prophet_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder and self-proclaimed Prophet of the Ḥa-Mimist religion."
  
  trait_kaduist_prophet:0 "Kaduist Prophet"
- trait_kaduist_prophet_desc:0 "This character is the Mahdi and Prophet of the Kaduist religion."
- trait_kaduist_prophet_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Mahdi and Prophet of the Kaduist religion."
+ trait_kaduist_prophet_desc:0 "This character is the [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] and Prophet of the Kaduist religion."
+ trait_kaduist_prophet_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] and Prophet of the Kaduist religion."
 
  ## Berber tribal traits
  trait_miknasa:0 "Miknasa"
@@ -60,6 +60,40 @@
  trait_hawwara:0 "Hawwara"
  trait_hawwara_desc:0 "The Hawwara are members the ancient Hawwara Berber tribe, who possess the blood of Hawwar ibn Awrigh ibn Barnis ibn Mazigh."
  trait_hawwara_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] descends from the ancient Berber Hawwara tribe."
+ 
+ ## Heresiarch Adventeror Traits
+ trait_ME_ibn_nusayr_bab:0 "Bab of the Nusayriyyah"
+ trait_ME_ibn_nusayr_bab_desc:0 "This character is the founder of the Nusayri Alawite religion who claims to be have recieved hidden knowledge from the Imams."
+ trait_ME_ibn_nusayr_bab_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder of the Nusayri Alawite religion who claims to be have recieved hidden knowledge from the Imams."
+ trait_ME_blood_of_ibn_nusayr:0 "Blood of Ibn Nusayr"
+ trait_ME_blood_of_ibn_nusayr_desc:0 "This character is a descendant of Ali ibn Nusayr, the Bab of the Imams and founder of the Nusayri Alawite religion."
+ trait_ME_blood_of_ibn_nusayr_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the blood of the founder of the Nusayri Alawite religion, Ali ibn Nusayr, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ trait_ME_blood_of_ibn_nusayr_bab_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Bab of the Imams and the founder of the Nusayri Alawite religion, within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
+ 
+ trait_ME_ishaq_ahmar_bab:0 "Bab of the Ishaqiyyah"
+ trait_ME_ishaq_ahmar_bab_desc:0 "This character is the founder of the Ishaqi Alawite religion who claims to be have recieved hidden knowledge from the Imams."
+ trait_ME_ishaq_ahmar_bab_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder of the Ishaqi Alawite religion who claims to be have recieved hidden knowledge from the Imams."
+ trait_ME_blood_of_ishaq_ahmar:0 "Blood of Ishaq al-Ahmar"
+ trait_ME_blood_of_ishaq_ahmar_desc:0 "This character is a descendant of Ishaq al-Ahmar, the Bab of the Imams and founder of the Ishaqi Alawite religion."
+ trait_ME_blood_of_ishaq_ahmar_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the blood of the founder of the Ishaqi Alawite religion, Ishaq al-Ahmar, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ trait_ME_blood_of_ishaq_ahmar_bab_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the Bab of the Imams and the founder of the Ishaqi Alawite religion, within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
+ 
+ trait_ME_zakarawayhist_mahdi:0 "Zakarawayhist Mahdi"
+ trait_ME_zakarawayhist_mahdi_desc:0 "This character is the founder and revered [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] of his Qarmatian sect."
+ trait_ME_zakarawayhist_mahdi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder and revered [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] of his Qarmatian sect."
+ trait_ME_blood_of_zakarawayh:0 "Blood of Zakarawayh"
+ trait_ME_blood_of_zakarawayh_desc:0 "This character is a descendant of the Qarmatian rebel Zakarawayh ibn Mihrawayh."
+ trait_ME_blood_of_zakarawayh_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the blood of the Qarmatian rebel Zakarawayh ibn Mihrawayh, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ trait_ME_blood_of_zakarawayh_mahdi_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder and revered [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] of his Qarmatian sect, within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
+ 
+ trait_ME_jayshanist_mahdi:0 "Jayshanist Mahdi"
+ trait_ME_jayshanist_mahdi_desc:0 "This character is the founder and revered [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] of his Qarmatian sect."
+ trait_ME_jayshanist_mahdi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder and revered [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] of his Qarmatian sect."
+ trait_ME_blood_of_jayshani:0 "Blood of al-Jayshani"
+ trait_ME_blood_of_jayshani_desc:0 "This character is a descendant of the Qarmatian rebel Ibn al-Fadl al-Jayshani."
+ trait_ME_blood_of_jayshani_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has the blood of the Qarmatian rebel Ibn al-Fadl al-Jayshani, flowing through [ROOT.GetCharacter.GetHerHis] veins."
+ trait_ME_blood_of_jayshani_mahdi_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the founder and revered [Glossary( 'Mahdi', 'MAHDI_GLOSS' )] of his Qarmatian sect, within his veins flow the revered blood that shall flow through all [ROOT.GetCharacter.GetHerHis] decendants."
+
  
  ## Other traits
  trait_hafidh:0 "Hafidh"
@@ -94,9 +128,9 @@
  me_become_ismaili_caliph_tooltip:0 "Upon becoming landed, will gain the [GetTitleByKey('d_shiite').GetNameNoTier] [title|E]"
  me_become_ismaili_mahdi_tooltip:0 "Can take the [GetDecisionWithKey('ME_become_ismaili_mahdi_decision').GetName] [decision|E]"
  
- trait_ME_ismaili_mahdi:0 "al-Mahdi bi-llah"
- trait_ME_ismaili_mahdi_desc:0 "This character has proclaimed themselves to be the Mahdi, promising to lead the Isma'ili faithful to glory."
- trait_ME_ismaili_mahdi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has proclaimed himself the Mahdi, promising to lead the Isma'ili faithful to glory."
+ trait_ME_ismaili_mahdi:0 "al-Mahdi Billah"
+ trait_ME_ismaili_mahdi_desc:0 "This character has proclaimed themselves to be the [Glossary( 'Mahdi', 'MAHDI_GLOSS' )], promising to lead the Isma'ili faithful to glory."
+ trait_ME_ismaili_mahdi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has proclaimed himself the [Glossary( 'Mahdi', 'MAHDI_GLOSS' )], promising to lead the Isma'ili faithful to glory."
 
  trait_ME_missionary:0 "Missionary"
  trait_ME_missionary_1:0 "Amateur Missionary"
@@ -114,3 +148,24 @@
  trait_ME_missionary_1_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has commited [ROOT.GetCharacter.GetHerselfHimself] to traveling the land and converting the people to [ROOT.GetCharacter.GetHerHis] faith, though [ROOT.GetCharacter.GetSheHe]'s yet to gain much experience in that regard."
  trait_ME_missionary_2_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has traveled the land and converting the people to [ROOT.GetCharacter.GetHerHis] faith."
  trait_ME_missionary_3_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has converted countless people to [ROOT.GetCharacter.GetHerHis] faith, and [ROOT.GetCharacter.GetHerHis] name and efforts are known all throughout the land."
+
+ # The Twelfth Imam in occultation (contributed)
+ trait_me_twelver_mahdi:0 "The Hidden Imam"
+ trait_me_twelver_mahdi_desc:0 "The twelfth Imam of the Twelvers, Muhammad al-Mahdi, is alive but hidden from the world, in occultation (ghayba) by the will of Allah. He holds the Imamate until the day he is permitted to return."
+ trait_me_twelver_mahdi_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] is the twelfth Imam of the Twelvers, alive but hidden from the world, in occultation (ghayba) by the will of Allah. He holds the Imamate until the day he is permitted to return."
+ nick_me_al_mahdi_twelver:0 "al-Mahdi"
+ nick_me_al_mahdi_twelver_desc:0 "#F "The Rightly Guided." To the Twelver Shi'a he is the awaited Imam, hidden from the eyes of men and yet living, who will return at the end of days to fill the earth with justice as it has been filled with oppression.#!"
+ nick_me_sahib_az_zaman:0 "Sahib az-Zaman"
+ nick_me_sahib_az_zaman_desc:0 "The Master of the Age: the Twelfth Imam, hidden from the world, who will return to fill the earth with justice."
+ nick_me_al_masuma:0 "al-Ma'suma"
+ nick_me_al_masuma_desc:0 "The Immaculate: the name by which the daughter of the seventh Imam has been remembered at her shrine in Qom."
+ # ME: Sayyid by culture (common/traits/me_traits.txt); Sharif is the Maghrebi and West African usage (shurafa)
+ trait_sayyid_iranian:0 "Seyyed"
+ trait_sayyida_iranian:0 "Seyyedeh"
+ trait_sayyid_turkic:0 "Seyit"
+ trait_sayyid_indo_aryan:0 "Syed"
+ trait_sayyida_indo_aryan:0 "Syeda"
+ trait_sayyid_austronesian:0 "Syed"
+ trait_sayyida_austronesian:0 "Sharifah"
+ trait_sayyid_sharif:0 "Sharif"
+ trait_sayyida_sharif:0 "Sharifa"

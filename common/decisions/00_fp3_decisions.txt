@@ -14,34 +14,34 @@ adopt_a_new_faith_for_persia_decision = {
 	}
 	sort_order = -20
 	decision_group_type = major
-	
+
 	cooldown = { years = 30 }
 
 	is_shown = {
+		has_trait = fp3_struggle_detractor
 		any_character_struggle = { is_struggle_type = persian_struggle }
 		is_landed = yes
-		has_trait = fp3_struggle_detractor
 	}
-	
+
 	is_valid_showing_failures_only = {
 		faith.religion = religion:islam_religion
 	}
 
 	is_valid = {
-		
+
 	}
-	
+
 	widget = {
 		gui = "decision_view_widget_generic_multichoice_with_effects"
 		controller = decision_option_list_controller
 		decision_to_second_step_button = "CHOOSE_PERSIAN_FAITH"
 		show_from_start = yes
-		
+
 		### imami
 		item = {
 			value = choose_imami
 			is_valid = {
-				NOT = { faith = faith:imami }
+				NOT = { rite = rite:imami }
 			}
 			current_description = choose_imami_desc
 			localization = choose_imami_name
@@ -58,7 +58,7 @@ adopt_a_new_faith_for_persia_decision = {
 				if = {
 					limit = {
 						any_sub_realm_county = {
-							faith = faith:imami
+							rite = rite:imami
 						}
 					}
 					add = 10
@@ -77,7 +77,7 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
-							faith = faith:imami
+							rite = rite:imami
 						}
 					}
 					multiply = 4
@@ -88,7 +88,7 @@ adopt_a_new_faith_for_persia_decision = {
 		item = {
 			value = choose_alevi
 			is_valid = {
-				NOT = { faith = faith:alevi }
+				NOT = { rite = rite:alevi }
 			}
 			current_description = choose_alevi_desc
 			localization = choose_alevi_name
@@ -98,7 +98,7 @@ adopt_a_new_faith_for_persia_decision = {
 				if = {
 					limit = {
 						any_sub_realm_county = {
-							faith = faith:alevi
+							rite = rite:alevi
 						}
 					}
 					add = 10
@@ -118,7 +118,7 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
-							faith = faith:alevi
+							rite = rite:alevi
 						}
 						culture = { has_cultural_pillar = heritage_turkic }
 					}
@@ -177,7 +177,7 @@ adopt_a_new_faith_for_persia_decision = {
 		item = {
 			value = choose_zayidi
 			is_valid = {
-				NOT = { faith = faith:zayidi }
+				NOT = { rite = rite:zayidi }
 			}
 			current_description = choose_zayidi_desc
 			localization = choose_zayidi_name
@@ -188,8 +188,8 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_sub_realm_county = {
 							OR = {
-								faith = faith:zayidi
-								faith = faith:salihi
+								rite = rite:zayidi
+								rite = rite:salihi
 							}
 						}
 					}
@@ -200,8 +200,8 @@ adopt_a_new_faith_for_persia_decision = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
 							OR = {
-								faith = faith:zayidi
-								faith = faith:salihi
+								rite = rite:zayidi
+								rite = rite:salihi
 							}
 							piety_level >= 3
 						}
@@ -222,8 +222,8 @@ adopt_a_new_faith_for_persia_decision = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
 							OR = {
-								faith = faith:zayidi
-								faith = faith:salihi
+								rite = rite:zayidi
+								rite = rite:salihi
 							}
 							root = {
 								opinion = {
@@ -242,7 +242,7 @@ adopt_a_new_faith_for_persia_decision = {
 		item = {
 			value = choose_salihi
 			is_valid = {
-				NOT = { faith = faith:salihi }
+				NOT = { rite = rite:salihi }
 			}
 			current_description = choose_salihi_desc
 			localization = choose_salihi_name
@@ -253,8 +253,8 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_sub_realm_county = {
 							OR = {
-								faith = faith:zayidi
-								faith = faith:salihi
+								rite = rite:zayidi
+								rite = rite:salihi
 							}
 						}
 					}
@@ -265,8 +265,8 @@ adopt_a_new_faith_for_persia_decision = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
 							OR = {
-								faith = faith:zayidi
-								faith = faith:salihi
+								rite = rite:zayidi
+								rite = rite:salihi
 							}
 							piety_level >= 3
 						}
@@ -287,8 +287,8 @@ adopt_a_new_faith_for_persia_decision = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
 							OR = {
-								faith = faith:zayidi
-								faith = faith:salihi
+								rite = rite:zayidi
+								rite = rite:salihi
 							}
 							root = {
 								opinion = {
@@ -307,7 +307,7 @@ adopt_a_new_faith_for_persia_decision = {
 		item = {
 			value = choose_maturidi
 			is_valid = {
-				NOT = { faith = faith:maturidi }
+				NOT = { rite = rite:hanafi }
 			}
 			current_description = choose_maturidi_desc
 			localization = choose_maturidi_name
@@ -318,7 +318,7 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_sub_realm_county = {
 							count >= 4
-							faith = faith:maturidi
+							rite = rite:hanafi
 						}
 					}
 					add = 5
@@ -337,24 +337,24 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
-							faith = faith:maturidi
+							rite = rite:hanafi
 						}
 					}
 					multiply = 2
 				}
 				if = {
 					limit = {
-						title:d_sunni.holder.faith ?= faith:maturidi
+						title:d_sunni.holder.rite ?= rite:hanafi
 					}
 					multiply = 0
 				}
 			}
 		}
-		### Mutazili
+		### Mutazili # Shafi'i is the accepted gameplay stand-in for Mutazili
 		item = {
 			value = choose_mutazila
 			is_valid = {
-				NOT = { faith = faith:mutazila }
+				NOT = { rite = rite:mutazila }
 			}
 			current_description = choose_mutazila_desc
 			localization = choose_mutazila_name
@@ -365,7 +365,7 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_sub_realm_county = {
 							count >= 4
-							faith = faith:mutazila
+							rite = rite:mutazila
 						}
 					}
 					add = 5
@@ -384,25 +384,25 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
-							faith = faith:mutazila
+							rite = rite:mutazila
 						}
 					}
 					multiply = 2
 				}
 				if = {
 					limit = {
-						title:d_sunni.holder.faith ?= faith:mutazila
+						title:d_sunni.holder.rite ?= rite:mutazila
 					}
 					multiply = 0
 				}
 			}
 		}
-		
+
 		### Karrami - Muslim Enhancements
 		item = {
 			value = choose_karrami
 			is_valid = {
-				NOT = { faith = faith:karrami }
+				NOT = { rite = rite:karrami }
 			}
 			current_description = choose_karrami_desc
 			localization = choose_karrami_name
@@ -413,7 +413,7 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_sub_realm_county = {
 							count >= 4
-							faith = faith:karrami
+							rite = rite:karrami
 						}
 					}
 					add = 5
@@ -432,25 +432,25 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
-							faith = faith:karrami
+							rite = rite:karrami
 						}
 					}
 					multiply = 2
 				}
 				if = {
 					limit = {
-						title:d_sunni.holder.faith ?= faith:karrami
+						title:d_sunni.holder.rite ?= rite:karrami
 					}
 					multiply = 0
 				}
 			}
 		}
-		
+
 		### Ibadi - Muslim Enhancements
 		item = {
 			value = choose_ibadi
 			is_valid = {
-				NOT = { faith = faith:ibadi }
+				NOT = { rite = rite:ibadi }
 			}
 			current_description = choose_ibadi_desc
 			localization = choose_ibadi_name
@@ -461,7 +461,7 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_sub_realm_county = {
 							count >= 4
-							faith = faith:ibadi
+							rite = rite:ibadi
 						}
 					}
 					add = 5
@@ -480,12 +480,12 @@ adopt_a_new_faith_for_persia_decision = {
 					limit = {
 						any_independent_ruler = {
 							any_character_struggle = { is_struggle_type = persian_struggle }
-							faith = faith:ibadi
+							rite = rite:ibadi
 						}
 					}
 					multiply = 2
 				}
-				if = { # The theme of this decision is Persian independence, so they're more likely to become Ibadi if no Ibadi Imam exists 
+				if = { # The theme of this decision is Persian independence, so they're more likely to become Ibadi if no Ibadi Imam exists
 					limit = {
 						NOT = { exists = faith:ibadi.religious_head }
 					}
@@ -493,12 +493,60 @@ adopt_a_new_faith_for_persia_decision = {
 				}
 			}
 		}
-		
+
+		### Sufri - Muslim Enhancements
+		item = {
+			value = choose_sufri
+			is_valid = {
+				NOT = { rite = rite:sufri }
+			}
+			current_description = choose_sufri_desc
+			localization = choose_sufri_name
+			icon = "gfx/interface/icons/faith/sufri.dds"
+			ai_chance = {
+				value = 0
+				if = {
+					limit = {
+						any_sub_realm_county = {
+							count >= 4
+							rite = rite:sufri
+						}
+					}
+					add = 5
+				}
+				if = {
+					limit = {
+						exists = faith:sufri.religious_head
+						opinion = {
+							target = faith:sufri.religious_head
+							value >= -20
+						}
+					}
+					add = 10
+				}
+				if = {
+					limit = {
+						any_independent_ruler = {
+							any_character_struggle = { is_struggle_type = persian_struggle }
+							rite = rite:sufri
+						}
+					}
+					multiply = 2
+				}
+				if = { # The theme of this decision is Persian independence, so they're more likely to become Sufri if no Sufri Imam exists
+					limit = {
+						NOT = { exists = faith:sufri.religious_head }
+					}
+					add = 50
+				}
+			}
+		}
+
 		### azariqa
 		item = {
 			value = choose_azariqa
 			is_valid = {
-				NOT = { faith = faith:azariqa }
+				NOT = { rite = rite:azariqa }
 			}
 			current_description = choose_azariqa_desc
 			localization = choose_azariqa_name
@@ -507,7 +555,7 @@ adopt_a_new_faith_for_persia_decision = {
 				value = 0
 				if = { # If the Azariqa revolt is successful, then Azariqa will start to dominate!
 					limit = {
-						exists = faith:azariqa.religious_head
+						title:k_jazira.holder.rite ?= rite:azariqa
 					}
 					add = 100
 				}
@@ -538,7 +586,7 @@ adopt_a_new_faith_for_persia_decision = {
 				value = 100
 			}
 		}
-		
+
 		### Arewordik - Muslim Enhancements
 		item = {
 			value = choose_urartuism
@@ -563,7 +611,7 @@ adopt_a_new_faith_for_persia_decision = {
 		item = {
 			value = choose_manichean
 			is_valid = {
-				NOT = { faith = faith:manichean }
+				NOT = { rite = rite:manichean }
 			}
 			current_description = choose_manichean_desc
 			localization = choose_manichean_name
@@ -583,93 +631,114 @@ adopt_a_new_faith_for_persia_decision = {
 				}
 			}
 		}
-		
+
 	}
 
 	effect = {
+		# The conversion event's priest reads our rite, which is only set after the faith conversion
+		add_character_flag = {
+			flag = delay_player_faith_conversion_notification_event
+			days = 1
+		}
 		if = {
 			limit = { scope:choose_maturidi = yes }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:maturidi }
+				capital_county = {
+					set_county_faith = faith:sunni
+					set_county_rite = rite:hanafi
+				}
 			}
-			show_as_tooltip = { set_character_faith = faith:maturidi }
+			show_as_tooltip = { set_character_faith = faith:sunni }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:maturidi
+				set_character_faith_with_conversion = faith:sunni
+				set_character_rite = rite:hanafi
 			}
-			faith:maturidi = {
+			faith:sunni = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
 		else_if = {
 			limit = { scope:choose_mutazila = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:mutazila }
+				capital_county = {
+					set_county_faith = faith:sunni
+					set_county_rite = rite:mutazila
+				}
 			}
-			show_as_tooltip = { set_character_faith = faith:mutazila }
+			show_as_tooltip = { set_character_faith = faith:sunni }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:mutazila
+				set_character_faith_with_conversion = faith:sunni
+				set_character_rite = rite:mutazila
 			}
-			faith:mutazila = {
+			faith:sunni = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
 		else_if = {
 			limit = { scope:choose_imami = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:imami }
+				capital_county = {
+					set_county_faith = faith:ithna_ashari
+					set_county_rite = rite:imami
+				}
 			}
-			show_as_tooltip = { set_character_faith = faith:imami }
+			show_as_tooltip = { set_character_faith = faith:ithna_ashari }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:imami
+				set_character_faith_with_conversion = faith:ithna_ashari
+				set_character_rite = rite:imami
 			}
-			faith:imami = {
+			faith:ithna_ashari = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
 		else_if = {
 			limit = { scope:choose_alevi = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:alevi }
+				capital_county = {
+					set_county_faith = faith:alevi
+					set_county_rite = rite:alevi
+				}
 			}
 			show_as_tooltip = { set_character_faith = faith:alevi }
 			hidden_effect = {
 				set_character_faith_with_conversion = faith:alevi
+				set_character_rite = rite:alevi
 			}
 			faith:alevi = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
 #		else_if = {
 #			limit = { scope:choose_nizari = yes  }
-#			
+#
 #			if = {
 #				limit = {
 #					capital_county.faith = faith
@@ -689,47 +758,55 @@ adopt_a_new_faith_for_persia_decision = {
 #		}
 		else_if = {
 			limit = { scope:choose_zayidi = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:zayidi }
+				capital_county = {
+					set_county_faith = faith:zayidi
+					set_county_rite = rite:zayidi
+				}
 			}
 			show_as_tooltip = { set_character_faith = faith:zayidi }
 			hidden_effect = {
 				set_character_faith_with_conversion = faith:zayidi
+				set_character_rite = rite:zayidi
 			}
 			faith:zayidi = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
 		else_if = {
 			limit = { scope:choose_azariqa = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:azariqa }
+				capital_county = {
+					set_county_faith = faith:kharijite
+					set_county_rite = rite:azariqa
+				}
 			}
-			show_as_tooltip = { set_character_faith = faith:azariqa }
+			show_as_tooltip = { set_character_faith = faith:kharijite }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:azariqa
+				set_character_faith_with_conversion = faith:kharijite
+				set_character_rite = rite:azariqa
 			}
-			faith:azariqa = {
+			faith:kharijite = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
 		else_if = {
 			limit = { scope:choose_zurvanism = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
@@ -742,27 +819,27 @@ adopt_a_new_faith_for_persia_decision = {
 			}
 			faith:zurvanism = {
 				change_fervor = {
-					value = 15
+					value = substantial_fervor_gain
 					desc = fervor_gain_persian_fervor
 				}
 			}
 		}
-		
+
 		### Muslim Enhancements ###
 		else_if = {
 			limit = { scope:choose_karrami = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:karrami }
+				capital_county = { set_county_rite = rite:karrami }
 			}
-			show_as_tooltip = { set_character_faith = faith:karrami }
+			show_as_tooltip = { set_character_rite = rite:karrami }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:karrami
+				set_character_rite_with_conversion = rite:karrami
 			}
-			faith:karrami = {
+			rite:karrami.faith = {
 				change_fervor = {
 					value = 15
 					desc = fervor_gain_persian_fervor
@@ -770,25 +847,25 @@ adopt_a_new_faith_for_persia_decision = {
 			}
 			if = {
 				limit = {
-					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:karrami } }
+					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:sunni } }
 				}
-				struggle:persian_struggle = { set_faith_as_involved = faith:karrami }
+				struggle:persian_struggle = { set_faith_as_involved = faith:sunni }
 			}
 		}
 		else_if = {
 			limit = { scope:choose_salihi = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:salihi }
+				capital_county = { set_county_rite = rite:salihi }
 			}
-			show_as_tooltip = { set_character_faith = faith:salihi }
+			show_as_tooltip = { set_character_rite = rite:salihi }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:salihi
+				set_character_rite_with_conversion = rite:salihi
 			}
-			faith:salihi = {
+			rite:salihi.faith = {
 				change_fervor = {
 					value = 15
 					desc = fervor_gain_persian_fervor
@@ -796,23 +873,23 @@ adopt_a_new_faith_for_persia_decision = {
 			}
 			if = {
 				limit = {
-					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:salihi } }
+					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:zayidi } }
 				}
-				struggle:persian_struggle = { set_faith_as_involved = faith:salihi }
+				struggle:persian_struggle = { set_faith_as_involved = faith:zayidi }
 			}
 		}
 		else_if = {
 			limit = { scope:choose_ibadi = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:ibadi }
+				capital_county = { set_county_rite = rite:ibadi }
 			}
-			show_as_tooltip = { set_character_faith = faith:ibadi }
+			show_as_tooltip = { set_character_rite = rite:ibadi }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:ibadi
+				set_character_rite_with_conversion = rite:ibadi
 			}
 			faith:ibadi = {
 				change_fervor = {
@@ -828,8 +905,34 @@ adopt_a_new_faith_for_persia_decision = {
 			}
 		}
 		else_if = {
+			limit = { scope:choose_sufri = yes  }
+
+			if = {
+				limit = {
+					capital_county.faith = faith
+				}
+				capital_county = { set_county_rite = rite:sufri }
+			}
+			show_as_tooltip = { set_character_rite = rite:sufri }
+			hidden_effect = {
+				set_character_rite_with_conversion = rite:sufri
+			}
+			rite:sufri.faith = {
+				change_fervor = {
+					value = 15
+					desc = fervor_gain_persian_fervor
+				}
+			}
+			if = {
+				limit = {
+					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:sufri } }
+				}
+				struggle:persian_struggle = { set_faith_as_involved = faith:sufri }
+			}
+		}
+		else_if = {
 			limit = { scope:choose_urartuism = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
@@ -855,18 +958,18 @@ adopt_a_new_faith_for_persia_decision = {
 		}
 		else_if = {
 			limit = { scope:choose_manichean = yes  }
-			
+
 			if = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:manichean }
+				capital_county = { set_county_rite = rite:manichean }
 			}
-			show_as_tooltip = { set_character_faith = faith:manichean }
+			show_as_tooltip = { set_character_rite = rite:manichean }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:manichean
+				set_character_rite_with_conversion = rite:manichean
 			}
-			faith:manichean = {
+			rite:manichean.faith = {
 				change_fervor = {
 					value = 15
 					desc = fervor_gain_persian_fervor
@@ -874,12 +977,12 @@ adopt_a_new_faith_for_persia_decision = {
 			}
 			if = {
 				limit = {
-					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:manichean } }
+					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:manichaean_faith } }
 				}
-				struggle:persian_struggle = { set_faith_as_involved = faith:manichean }
+				struggle:persian_struggle = { set_faith_as_involved = faith:manichaean_faith }
 			}
 		}
-		
+
 		capital_county = {
 			add_county_modifier = {
 				modifier = religious_settler_influx
@@ -905,13 +1008,13 @@ adopt_a_new_faith_for_persia_decision = {
 			}
 		}
 	}
-	
+
 	cost = {
 		piety = {
 			value = major_piety_value
 		}
 	}
-	
+
 	ai_potential = {
 		highest_held_title_tier >= tier_county
 		title:d_sunni.holder.faith ?= faith
@@ -921,24 +1024,24 @@ adopt_a_new_faith_for_persia_decision = {
 
 	ai_will_do = {
 		base = 20
-		
+
 		modifier = {
 			add = {
 				value = ai_zeal
 				multiply = -0.5
 			}
 		}
-		
+
 		modifier = {
 			add = -20
 			has_trait = craven
 		}
-		
+
 		modifier = {
 			add = 20
 			has_trait = ambitious
 		}
-		
+
 		modifier = {
 			add = -20
 			NOT = {
@@ -948,7 +1051,7 @@ adopt_a_new_faith_for_persia_decision = {
 				}
 			}
 		}
-		
+
 		modifier = {
 			add = 20
 			any_character_struggle = {
@@ -956,7 +1059,7 @@ adopt_a_new_faith_for_persia_decision = {
 				phase_has_catalyst = catalyst_ruler_chooses_persian_faith
 			}
 		}
-		
+
 		modifier = {
 			add = 40
 			top_liege = this

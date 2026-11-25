@@ -1,7 +1,8 @@
 ﻿d_barghawata = {
 	867.1.1 = { # Yunus publically proclaims his faith
 		holder = 168278 # Yunus ibn Ilyas/al-Yasa'
-		government = clan_government
+		# 1.20: no 'government' entry here - setting a government through a head of faith title's history crashes the game at start;
+		# Yunus already gets his clan government from his counties (k_maghreb.txt)
 		succession_laws = {
 			temporal_head_of_faith_succession_law
 		}
@@ -154,7 +155,7 @@ d_wahbiya = {
 #		holder = 0
 #	}
 	757.1.1 = {
-		holder_ignore_head_of_faith_requirement = 273125 # Abu_l-Khattab ibn al-Samh al Ma'afiri
+		holder = 273125 # Abu_l-Khattab ibn al-Samh al Ma'afiri
 		succession_laws = {
 			temporal_head_of_faith_succession_law
 		}
@@ -163,13 +164,13 @@ d_wahbiya = {
 		holder = 0
 	}
 	770.1.1 = {
-		holder_ignore_head_of_faith_requirement = 210031 # Abū Ḥātim Yaqub ibn Labid al-Malzūzī
+		holder = 210031 # Abū Ḥātim Yaqub ibn Labid al-Malzūzī
 	}
 	772.1.1 = {
 		holder = 0
 	}
 	776.1.1 = {
-		holder_ignore_head_of_faith_requirement = 210029 # Abdul-Rahman ibn Rustam, The first Rustamid ruler 
+		holder = 210029 # Abdul-Rahman ibn Rustam, The first Rustamid ruler 
 	}
 	784.1.1 = {
 		holder = 210030 # Abdul-Wahab Rustamid

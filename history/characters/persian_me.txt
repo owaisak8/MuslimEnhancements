@@ -3,7 +3,7 @@ me_persian_001 = { # Mother of Umayyad Caliph Yazid III and Daughter of the woul
 	name = "Shah-i-Afrid"
 	female = yes
 	dynasty = 1029100
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	father = 180640 # Peroz III
@@ -18,7 +18,7 @@ me_persian_001 = { # Mother of Umayyad Caliph Yazid III and Daughter of the woul
 me_persian_002 = { # Father of Abu Awn Abd al-Malik al-Khurasani
 	name = "Yazid"
 	dynasty = 1042126 # Khurasanid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	700.1.1 = {
 		birth = yes
@@ -31,7 +31,7 @@ me_persian_002 = { # Father of Abu Awn Abd al-Malik al-Khurasani
 me_persian_003 = { # Son of Abu Awn Abd al-Malik al-Khurasani
 	name = "_Awn"
 	dynasty = 1042126 # Khurasanid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	father = 188650 # Abu Awn Abd al-Malik al-Khurasani
@@ -47,10 +47,10 @@ me_persian_004 = {
 	name = "Yahya" # Yayha 'Shihab ad-Din' Suhrawardi, founder of the Illumination school
 	dynasty = me_suhrawardid_dynasty # Suhrawardid
 	give_nickname = nick_shihab_ud_din
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	trait = education_learning_4
-	trait = scholar
+	trait = erudite
 
 	father = me_persian_005
 	1154.1.1 = {
@@ -70,7 +70,7 @@ me_persian_004 = {
 me_persian_005 = { 
 	name = "Habash"
 	dynasty = me_suhrawardid_dynasty # Suhrawardid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	father = me_persian_006
@@ -85,7 +85,7 @@ me_persian_005 = {
 me_persian_006 = { 
 	name = "Amirak"
 	dynasty = me_suhrawardid_dynasty # Suhrawardid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	1090.1.1 = {
@@ -99,7 +99,7 @@ me_persian_006 = {
 me_persian_007 = { 
 	name = "Abdullah" # Ibn Yazdad/Zadhad (First name unknown), a Tulunid commander who was mutilated and crucified by Ibn as-Sufi
 	dynasty = me_yazdadid_egypt_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian" # The name Yazdad is of persian origin
 	trait = education_martial_2
 
@@ -123,7 +123,7 @@ me_persian_007 = {
 me_persian_008 = { 
 	name = "Yazdad"
 	dynasty = me_yazdadid_egypt_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian" # The name Yazdad is of persian origin
 
 	800.1.1 = {
@@ -137,7 +137,7 @@ me_persian_008 = {
 me_persian_009 = { 
 	name = "Ahmad" # Ahmad ibn Jayghawayh, Tulunid commander who was appointed over Harran
 	dynasty = me_jayghawayhid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "sogdian" # The name Jayghawayh is likely of either Sogdian or Tocharian origin, as the only other instant I could find was a ruler who fought Asad al-Qasri alongside the Turgesh around 735
 
 	father = me_persian_010
@@ -155,7 +155,7 @@ me_persian_009 = {
 me_persian_010 = { 
 	name = "Jayghawayh"
 	dynasty = me_jayghawayhid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "sogdian"
 	
 	800.1.1 = {
@@ -170,7 +170,7 @@ me_persian_011 = {
 	name = "Muhammad" # Abu Ja'far Muhammad 'Ibn Abd Kan' ibn Ahmad ibn Mawdud
 	dynasty = me_ibn_abd_kan_dynasty
 	give_nickname = nick_me_ibn_abd_kan # Ibn Abd Kan (Son of the Little Servent) [Kan is a diminutive medieval persian]
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	diplomacy = 6
 	stewardship = 7
@@ -198,7 +198,7 @@ me_persian_011 = {
 me_persian_012 = { 
 	name = "Ahmad"
 	dynasty = me_ibn_abd_kan_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	
 	father = me_persian_013
@@ -213,7 +213,7 @@ me_persian_012 = {
 me_persian_013 = { 
 	name = "Mawdud"
 	dynasty = me_ibn_abd_kan_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	
 	770.1.1 = {
@@ -226,7 +226,7 @@ me_persian_013 = {
 
 me_persian_014 = { 
 	name = "Suhrab" # Suhrab, Persian governor of al-Hira
-	religion = "mazdayasna"
+	rite = "mazdayasna"
 	culture = "persian"
 	
 	540.1.1 = {
@@ -239,7 +239,7 @@ me_persian_014 = {
 
 me_persian_015 = { 
 	name = "Zadeh" # Zadeh ibn Mahbayan ibn Bandad, Persian governor of al-Hira
-	religion = "mazdayasna"
+	rite = "mazdayasna"
 	culture = "persian"
 	
 	father = me_persian_016
@@ -253,7 +253,7 @@ me_persian_015 = {
 
 me_persian_016 = { 
 	name = "Mahbayan"
-	religion = "mazdayasna"
+	rite = "mazdayasna"
 	culture = "persian"
 	
 	father = me_persian_017
@@ -267,7 +267,7 @@ me_persian_016 = {
 
 me_persian_017 = { 
 	name = "Bandad"
-	religion = "mazdayasna"
+	rite = "mazdayasna"
 	culture = "persian"
 	
 	530.1.1 = {
@@ -278,11 +278,57 @@ me_persian_017 = {
 	}
 }
 
+me_persian_018 = { 
+	name = "Mas_ud" # Mas'ud-i Sa'd-i Salman, Persian Ghaznavid poet known for his prison poetry
+	dynasty = me_masud_sad_dynasty
+	rite = "shafii"
+	culture = "persian"
+	trait = education_diplomacy_4
+	trait = lifestyle_poet
+	
+	father = me_persian_019
+	1046.1.1 = {
+		birth = yes
+	}
+	1121.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_019 = { 
+	name = "Sa_d"
+	dynasty = me_masud_sad_dynasty
+	rite = "shafii"
+	culture = "persian"
+	
+	father = me_persian_020
+	1010.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		death = yes
+	}
+}
+
+me_persian_020 = { 
+	name = "Salman"
+	dynasty = me_masud_sad_dynasty
+	rite = "shafii"
+	culture = "persian"
+	
+	980.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
 ### Banu al-Mudabbir - Two brothers with the same nickname that served the Abbasids
 me_mudabbirid_001 = {
 	name = "Ahmad" # Abu'l Hasan Ahmad 'Ibn al-Mudabbir' ibn Muhammad, Fiscal Administrator of Egypt
 	dynasty = me_mudabbirid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	stewardship = 7
 	learning = 6
@@ -306,7 +352,7 @@ me_mudabbirid_001 = {
 me_mudabbirid_002 = {
 	name = "Ibrahim" # Abu Ishaq Ibrahim 'Ibn al-Mudabbir' ibn Muhammad, Fiscal Administrator for the Abbasids
 	dynasty = me_mudabbirid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 	trait = education_stewardship_3 # wrote a book on administration
 	trait = lifestyle_poet # esteemed as a poet by Caliph al-Mutawakkil, his friend
@@ -327,7 +373,7 @@ me_mudabbirid_002 = {
 me_mudabbirid_003 = {
 	name = "Muhammad"
 	dynasty = me_mudabbirid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	father = me_mudabbirid_004
@@ -342,7 +388,7 @@ me_mudabbirid_003 = {
 me_mudabbirid_004 = {
 	name = "Abdullah"
 	dynasty = me_mudabbirid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	father = me_mudabbirid_005
@@ -357,7 +403,7 @@ me_mudabbirid_004 = {
 me_mudabbirid_005 = {
 	name = "al-Mudabbir"
 	dynasty = me_mudabbirid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "persian"
 
 	740.1.1 = {
@@ -373,7 +419,7 @@ me_ganjavid_001 = {
 	name = "Nizami" # Illyas 'Jamal ud-Din' ibn Yusuf, Nizami is his pen-name 
 	dynasty = me_ganjavid_dynasty # Ganjavid
 	give_nickname = nick_jamal_ud_din
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "persian"
 	trait = education_diplomacy_4
 	trait = lifestyle_poet
@@ -398,7 +444,7 @@ me_ganjavid_001 = {
 
 me_ganjavid_002 = {
 	name = "Yusuf"
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "persian"
 
 	father = me_ganjavid_003
@@ -412,7 +458,7 @@ me_ganjavid_002 = {
 
 me_ganjavid_003 = {
 	name = "Zakki"
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "persian"
 
 	1080.1.1 = {
@@ -425,7 +471,7 @@ me_ganjavid_003 = {
 
 me_ganjavid_004 = {
 	name = "Umar" # Khawaja Umar, Maternal Uncle of Nizami who took care of him and educated him
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "kurdish"
 	trait = education_learning_4
 
@@ -441,7 +487,7 @@ me_ganjavid_004 = {
 me_ganjavid_005 = {
 	name = "Ra_isa" # Mother of Nizami
 	female = yes
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "kurdish"
 
 	father = me_ganjavid_006
@@ -455,7 +501,7 @@ me_ganjavid_005 = {
 
 me_ganjavid_006 = {
 	name = "Abdullah" # Fictional grandfather to connect Ra'isa and Umar together
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "kurdish"
 
 	1080.1.1 = {
@@ -469,7 +515,7 @@ me_ganjavid_006 = {
 me_ganjavid_007 = {
 	name = "Muhammad" # Muhammad, son of Nazami and his Kipchak wife 
 	dynasty = me_ganjavid_dynasty # Ganjavid
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "persian"
 
 	father = me_ganjavid_001
@@ -485,7 +531,7 @@ me_ganjavid_007 = {
 me_ganjavid_008 = {
 	name = "Afaq" # Nazami's his Kipchak wife, her name may not be Afaq
 	female = yes
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "kipchak"
 
 	1150.1.1 = {
@@ -500,14 +546,14 @@ me_ganjavid_008 = {
 me_barmakid_001 = {
 	name = "Sulayman"
 	dynasty = 1042125 # Barmakid
-	religion = "mahayana"
+	rite = "mahayana"
 	culture = "persian"
 	father = 188642
 	707.1.1 = {
 		birth = yes
 	}
 	730.1.1 = {
-		religion = "ashari"
+		rite = "shafii"
 	}
 	790.1.1 = {
 		death = yes
@@ -517,14 +563,14 @@ me_barmakid_001 = {
 me_barmakid_002 = {
 	name = "al-Hasan"
 	dynasty = 1042125 # Barmakid
-	religion = "mahayana"
+	rite = "mahayana"
 	culture = "persian"
 	father = 188642
 	709.1.1 = {
 		birth = yes
 	}
 	730.1.1 = {
-		religion = "ashari"
+		rite = "shafii"
 	}
 	790.1.1 = {
 		death = yes
@@ -536,7 +582,7 @@ me_isfahani_001 = {
 	name = "Abu_al-Fadl" # Abu al-Fadl al-Isfahani
 	dynasty = me_isfahanid_dynasty
 	give_nickname = nick_isfahanist_mahdi # al-Mahdi al-Isfahani
-	religion = "isfahani"
+	rite = "isfahani"
 	culture = "persian"
 
 	911.1.1 = {

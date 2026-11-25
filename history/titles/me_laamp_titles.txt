@@ -9,7 +9,6 @@ d_laamp_me_karrami = { # Ibn Karram, Founder of the Karramiyya Sect
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -26,7 +25,6 @@ d_laamp_me_maghrawa = { # The Maghrawa Berber clan
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -43,7 +41,6 @@ d_laamp_me_zirid_pre = { # Ziri ibn Manad's Grandfather
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -60,7 +57,6 @@ d_laamp_me_kindi = { # al-Kindi
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -77,7 +73,6 @@ d_laamp_me_tujibid = { # at-Tujibi
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -94,7 +89,6 @@ d_laamp_me_ibn_durayd = { # Ibn Durayd
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -111,7 +105,6 @@ d_laamp_me_khashkhash = { # Father of Khashkhash ibn Sa'id, who claimed to have 
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -128,7 +121,6 @@ d_laamp_me_uthmanid_berkri = { # Uthmanids of Berkri (placeholder), made into le
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -145,7 +137,6 @@ d_laamp_me_jahhafid = { # Jahhafid dynasty of adventurers who terrorized armenia
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -162,7 +153,22 @@ d_laamp_me_ibn_wahb = { # Ibn Wahb al-Basri, a Qurashi from Banu Habbar who trav
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
+		}
+	}
+	868.1.1 = {
+		holder = 0
+	}
+}
+
+d_laamp_me_hisni_umayyads = { # Umayyads of Hisn Maslamah, Descendants of Maslamah ibn Abd al-Malik
+	867.1.1 = {
+		liege = 0
+		holder = me_umayyads_065
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
 		}
 	}
 	868.1.1 = {
@@ -179,7 +185,6 @@ d_laamp_me_ibn_as_sufi_867 = { # Ibrahim ibn as-Sufi, Alid revolutionary in Egyp
 		effect = {
 			create_landless_adventurer_title_history_effect = yes
 			set_variable = { name = adventurer_creation_reason value = flag:historical }
-			destroy_landless_title_no_dlc_effect = { DATE = 867.1.1 }
 		}
 	}
 	868.1.1 = {
@@ -202,7 +207,6 @@ d_laamp_me_balnubi = { # al-Balnubi
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1100.1.1 = {
@@ -223,7 +227,6 @@ d_laamp_me_ibn_al_qatta = { # Ibn al-Qatta' al-Aghlabi
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1075.1.1 = {
@@ -245,7 +248,6 @@ d_laamp_me_hujwiri = { # Ali al-Hujwiri, Important Sufi Saint and missionary in 
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1100.1.1 = {
@@ -266,7 +268,26 @@ d_laamp_me_maghila = { # Musa ibn Jalid, Leader of the Tribal Maghila berbers
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
+		}
+	}
+	1100.1.1 = {
+		holder = 0
+	}
+}
+
+d_laamp_me_munqidhi = { # Ali ibn Muqallad al-Munqihi
+	1066.1.1 = {
+		liege = 0
+		holder = me_kalbids_044 # Ali ibn Muqallad al-Munqidhi
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	1066.9.15 = {
+		effect = {
 		}
 	}
 	1100.1.1 = {
@@ -287,7 +308,6 @@ d_laamp_me_ba_alawi_1066 = { # The Ba'Alawi clan that helped spread the Shafi'i 
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1100.1.1 = {
@@ -308,7 +328,6 @@ d_laamp_me_ibn_as_sufi_1066 = { # Najm ud-Din ibn as-Sufi, Alid geneologist
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1100.1.1 = {
@@ -316,10 +335,10 @@ d_laamp_me_ibn_as_sufi_1066 = { # Najm ud-Din ibn as-Sufi, Alid geneologist
 	}
 }
 
-d_laamp_me_umayyad_fic_1 = { # Fictional Umayyads 1066
+d_laamp_me_umayyad_andalus_1066 = { # Unlanded Umayyads 1066
 	1066.1.1 = {
 		liege = 0
-		holder = me_umayyad_fic_001
+		holder = me_umayyads_466
 		government = landless_adventurer_government
 		succession_laws = { landless_adventurer_succession_law }
 		effect = {
@@ -329,7 +348,6 @@ d_laamp_me_umayyad_fic_1 = { # Fictional Umayyads 1066
 	}
 	1066.9.15 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1100.1.1 = {
@@ -339,10 +357,10 @@ d_laamp_me_umayyad_fic_1 = { # Fictional Umayyads 1066
 
 # 1178
 
-d_laamp_me_umayyad_fic_2 = { # Fictional Umayyads 1178
+d_laamp_me_umayyad_andalus_1178 = { # Unlanded Umayyads 1178
 	1178.1.1 = {
 		liege = 0
-		holder = me_umayyad_fic_005
+		holder = me_umayyads_399
 		government = landless_adventurer_government
 		succession_laws = { landless_adventurer_succession_law }
 		effect = {
@@ -352,7 +370,6 @@ d_laamp_me_umayyad_fic_2 = { # Fictional Umayyads 1178
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
 		}
 	}
 	1200.1.1 = {
@@ -373,7 +390,6 @@ d_laamp_me_ba_alawi_1178 = { # The Ba'Alawi clan that helped spread the Shafi'i 
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1066.9.15 }
 		}
 	}
 	1100.1.1 = {
@@ -394,7 +410,6 @@ d_laamp_me_idrisid = { # Muhammad al-Idrisi's son
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
 		}
 	}
 	1200.1.1 = {
@@ -415,7 +430,6 @@ d_laamp_me_ganjavid = { # Nizami Gangavi
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
 		}
 	}
 	1200.1.1 = {
@@ -436,7 +450,26 @@ d_laamp_me_suhrawardid = { # Shihab ad-Din Yahya Suhrawardi
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
+		}
+	}
+	1200.1.1 = {
+		holder = 0
+	}
+}
+
+d_laamp_me_ibn_jubayr = { # Ibn Jubayr
+	1178.1.1 = {
+		liege = 0
+		holder = me_kinanah_006
+		government = landless_adventurer_government
+		succession_laws = { landless_adventurer_succession_law }
+		effect = {
+			create_landless_adventurer_title_history_effect = yes
+			set_variable = { name = adventurer_creation_reason value = flag:historical }
+		}
+	}
+	1178.10.1 = {
+		effect = {
 		}
 	}
 	1200.1.1 = {
@@ -457,7 +490,6 @@ d_laamp_me_buhturid = { # 1178 Buhturids (Arslanids)
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
 		}
 	}
 	1200.1.1 = {
@@ -478,7 +510,6 @@ d_laamp_me_ea_cats = {
 	}
 	1178.10.1 = {
 		effect = {
-			destroy_landless_title_no_dlc_effect = { DATE = 1178.10.1 }
 		}
 	}
 	1179.1.1 = {

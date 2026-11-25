@@ -1,0 +1,671 @@
+﻿# ME: districts for the mod's special buildings (CK3 1.21 puts every building in a district).
+# One district per building; upgrade levels (next_building) share the district of their first level.
+# Duchy-capital buildings follow vanilla's theodosian_walls_01_district.
+
+mashad_al_husain_01_district = {
+	primary_building = mashad_al_husain_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+fatima_masuma_shrine_01_district = {
+	primary_building = fatima_masuma_shrine_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+kadhimayn_shrine_01_district = {
+	primary_building = kadhimayn_shrine_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+jannat_al_baqi_01_district = {
+	primary_building = jannat_al_baqi_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+me_old_mosque_basra_01_district = {
+	primary_building = me_old_mosque_basra_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+hejra_01_district = {
+	primary_building = hejra_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mountains.dds"
+	}
+
+	type = special
+}
+
+jawatha_mosque_01_district = {
+	primary_building = jawatha_mosque_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+great_mosque_sousse_01_district = {
+	primary_building = great_mosque_sousse_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+al_zaytuna_mosque_01_district = {
+	primary_building = al_zaytuna_mosque_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+jameh_mosque_atigh_01_district = {
+	primary_building = jameh_mosque_atigh_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = duchy_capital
+
+	can_be_replaced = yes
+
+	buildings = {
+		staple_court_01
+		court_of_the_towns_01
+		alnagers_office_01
+		admiralty_court_01
+		grain_exchange_01
+		town_liberties_court_01
+		dragon_kiln_01
+	}
+}
+
+juma_mosque_shemakha_01_district = {
+	primary_building = juma_mosque_shemakha_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+katasraj_temples_01_district = {
+	primary_building = katasraj_temples_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/temple_india.dds"
+	}
+
+	type = special
+}
+
+uqba_mosque_01_district = {
+	primary_building = uqba_mosque_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+uqba_mosque_01_duchy_district = {
+	primary_building = uqba_mosque_01_duchy
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = duchy_capital
+
+	can_be_replaced = yes
+
+	buildings = {
+		staple_court_01
+		court_of_the_towns_01
+		alnagers_office_01
+		admiralty_court_01
+		grain_exchange_01
+		town_liberties_court_01
+		dragon_kiln_01
+	}
+}
+
+great_mosque_sfax_01_district = {
+	primary_building = great_mosque_sfax_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+mankiala_stupa_01_district = {
+	primary_building = mankiala_stupa_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/temple_india.dds"
+	}
+
+	type = special
+}
+
+prahladpuri_temple_01_district = {
+	primary_building = prahladpuri_temple_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/temple_india.dds"
+	}
+
+	type = duchy_capital
+
+	can_be_replaced = yes
+
+	buildings = {
+		staple_court_01
+		court_of_the_towns_01
+		alnagers_office_01
+		admiralty_court_01
+		grain_exchange_01
+		town_liberties_court_01
+		dragon_kiln_01
+	}
+}
+
+tarikhaneh_mosque_01_district = {
+	primary_building = tarikhaneh_mosque_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+alcazar_seville_01_district = {
+	primary_building = alcazar_seville_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+	}
+
+	type = special
+}
+
+alcazaba_almeria_01_district = {
+	primary_building = alcazaba_almeria_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+	}
+
+	type = special
+}
+
+fort_alicante_01_district = {
+	primary_building = fort_alicante_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+	}
+
+	type = special
+}
+
+alcazaba_badajoz_01_district = {
+	primary_building = alcazaba_badajoz_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+	}
+
+	type = special
+}
+
+faro_walls_01_district = {
+	primary_building = faro_walls_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp2_castle_iberian.dds"
+	}
+
+	type = special
+}
+
+qalat_bahrain_01_district = {
+	primary_building = qalat_bahrain_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+qila_baltit_01_district = {
+	primary_building = qila_baltit_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+multan_fort_01_district = {
+	primary_building = multan_fort_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+port_tyre_01_district = {
+	primary_building = port_tyre_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+gonbad_e_qavus_01_district = {
+	primary_building = gonbad_e_qavus_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp3_castle_iranian.dds"
+	}
+
+	type = special
+}
+
+al_ukhaidir_fortress_01_district = {
+	primary_building = al_ukhaidir_fortress_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+imam_hussain_shrine_01_district = {
+	primary_building = imam_hussain_shrine_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+ME_umayyad_mosque_01_district = {
+	primary_building = ME_umayyad_mosque_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+ME_al_qarawiyyin_university_01_district = {
+	primary_building = ME_al_qarawiyyin_university_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bp2_university_mena.dds"
+	}
+
+	type = special
+}
+
+chapel_dzordzor_01_district = {
+	primary_building = chapel_dzordzor_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ep3_holysite_orthodox.dds"
+	}
+
+	type = special
+}
+
+monastery_saint_thaddeus_01_district = {
+	primary_building = monastery_saint_thaddeus_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ep3_holysite_orthodox.dds"
+	}
+
+	type = special
+}
+
+monastery_saint_stepanos_01_district = {
+	primary_building = monastery_saint_stepanos_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/ep3_holysite_orthodox.dds"
+	}
+
+	type = special
+}
+
+qusayr_amra_01_district = {
+	primary_building = qusayr_amra_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+citadel_antioch_01_district = {
+	primary_building = citadel_antioch_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+citadel_homs_01_district = {
+	primary_building = citadel_homs_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+fortress_amida_01_district = {
+	primary_building = fortress_amida_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+citadel_alexander_01_district = {
+	primary_building = citadel_alexander_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp3_castle_iranian.dds"
+	}
+
+	type = special
+}
+
+citadel_alexander_01_duchy_district = {
+	primary_building = citadel_alexander_01_duchy
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/fp3_castle_iranian.dds"
+	}
+
+	type = duchy_capital
+
+	can_be_replaced = yes
+
+	buildings = {
+		staple_court_01
+		court_of_the_towns_01
+		alnagers_office_01
+		admiralty_court_01
+		grain_exchange_01
+		town_liberties_court_01
+		dragon_kiln_01
+	}
+}
+
+holy_site_lalish_shrine_01_district = {
+	primary_building = holy_site_lalish_shrine_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mountains.dds"
+	}
+
+	type = special
+}
+
+me_legendary_mosque_district = {
+	primary_building = me_legendary_mosque
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+me_legendary_mosque_ziyadid_district = {
+	primary_building = me_legendary_mosque_ziyadid
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+me_land_of_frankinscense_01_district = {
+	primary_building = me_land_of_frankinscense_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/market_east.dds"
+	}
+
+	type = special
+}
+
+hinglaj_mata_01_district = {
+	primary_building = hinglaj_mata_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/temple_india.dds"
+	}
+
+	type = special
+}
+
+sijilmasa_market_01_district = {
+	primary_building = sijilmasa_market_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/market_east.dds"
+	}
+
+	type = special
+}
+
+aden_port_01_district = {
+	primary_building = aden_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+bahla_fort_01_district = {
+	primary_building = bahla_fort_01
+
+	background = {
+		reference = "gfx/interface/illustrations/holding_types/castle_mena.dds"
+	}
+
+	type = special
+}
+
+darb_zubayda_01_district = {
+	primary_building = darb_zubayda_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bp1_garden_mena_day.dds"
+	}
+
+	type = special
+}
+
+nizwa_imamate_01_district = {
+	primary_building = nizwa_imamate_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/mosque.dds"
+	}
+
+	type = special
+}
+
+siraf_port_01_district = {
+	primary_building = siraf_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+hormuz_port_01_district = {
+	primary_building = hormuz_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+sohar_port_01_district = {
+	primary_building = sohar_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+port_alexandria_01_district = {
+	primary_building = port_alexandria_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+mahdia_port_01_district = {
+	primary_building = mahdia_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+acre_port_01_district = {
+	primary_building = acre_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+damietta_port_01_district = {
+	primary_building = damietta_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+ceuta_port_01_district = {
+	primary_building = ceuta_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+antalya_port_01_district = {
+	primary_building = antalya_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+daybul_port_01_district = {
+	primary_building = daybul_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}
+
+jeddah_port_01_district = {
+	primary_building = jeddah_port_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/fp3_docks.dds"
+	}
+
+	type = special
+}

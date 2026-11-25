@@ -1,8 +1,8 @@
 ﻿k_maghreb = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	788.1.1 = {
 		holder = 159501
 		government = clan_government
@@ -118,7 +118,7 @@
 	1331.8.1 = {
 		holder = 33004
 	}
-	
+
 }
 
 
@@ -153,9 +153,9 @@ d_marrakesh = {
 
 
 c_marrakesh = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 53 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 53 }
 
 	767.1.1 = {
 		holder = 210039
@@ -256,6 +256,18 @@ c_marrakesh = {
 	}
 	1331.8.1 = {
 		holder = 33006
+	}
+}
+
+b_aghmat = {	# within c_marrakesh
+	867.1.1 = {
+		holder = 159508 # Ali
+	}
+	1066.1.1 = {
+		holder = 3853 # Abu-Bakr
+	}
+	1178.1.1 = {
+		holder = 224000 # Yusuf
 	}
 }
 
@@ -562,10 +574,10 @@ c_tamasna = {
 
 
 c_asfi = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	767.1.1 = {
 		government = clan_government
 		holder = 168276
@@ -669,10 +681,10 @@ c_asfi = {
 
 
 c_tinmallal = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	767.1.1 = {
 		holder = 210038
 	}
@@ -776,9 +788,9 @@ c_tinmallal = {
 }
 
 d_sous = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 24 }
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 24 }
 
 }
 
@@ -806,7 +818,7 @@ c_sous = {
 		liege = k_maghreb
 		holder = butr0001
 	}
-	
+
 	1055.1.1 = {
 		holder = 32958
 	}
@@ -903,7 +915,7 @@ c_agadir = {
 	1056.1.1 = {
 		liege = "k_maghreb"
 	}
-	
+
 	1057.1.1 = {
 		holder = 3853
 	}
@@ -1057,13 +1069,13 @@ c_draa = {
 	1173.1.1 = {
 		holder = butr0013
 	}
-	
+
 }
 
 d_canarias = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 }
 
 c_canarias = {
@@ -1101,7 +1113,7 @@ c_canarias = {
 	1030.1.1 = {
 		holder = 166432
 	}
-	
+
 	1066.1.1 = {
 		holder = 20842
 	}
@@ -1151,9 +1163,9 @@ c_fuerteventura = {
 }
 
 c_madeira = {
-	867.1.1 = {	change_development_level = 1 }
-	1066.1.1 = { change_development_level = 1 }
-	1178.1.1 = { change_development_level = 2 }
+	867.1.1 = {	change_prosperity_level = 1 }
+	1066.1.1 = { change_prosperity_level = 1 }
+	1178.1.1 = { change_prosperity_level = 2 }
 	867.1.1 = {
 		holder = 210042
 		government = tribal_government
@@ -1168,9 +1180,9 @@ c_madeira = {
 }
 
 d_tafilalt = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 24 }
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 24 }
 
 	1178.1.1 = {
 		holder = hintata_4 # Muhammad of the Hintata
@@ -1179,9 +1191,9 @@ d_tafilalt = {
 }
 
 c_sijilmasa = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 31 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 31 }
 
 	757.1.1 = {
 		government = clan_government
@@ -1191,10 +1203,10 @@ c_sijilmasa = {
 		holder = me_sijilmasa_002 # Abu al-Qasim Samgu ibn Wasul al-Miknasi
 	}
 	784.1.1 = {
-		holder = butr0015 # al-Yasa' 'al-Wazir' ibn Abu al-Qasim 
+		holder = butr0015 # al-Yasa' 'al-Wazir' ibn Abu al-Qasim
 	}
 	790.1.1 = {
-		holder = 1228834 # Abu Muntasir al-Yasa' ibn Abu al-Qasim 
+		holder = 1228834 # Abu Muntasir al-Yasa' ibn Abu al-Qasim
 	}
 	824.1.1 = {
 		holder = 1228835 # Midrar 'Al-Muntasir' ibn Abu Muntasir al-Yasa', First Midrarid
@@ -1245,7 +1257,7 @@ c_sijilmasa = {
 	}
 	958.3.1 = {
 		liege = 0
-		holder = me_sijilmasa_010 
+		holder = me_sijilmasa_010
 	}
 	963.1.1 = {
 		liege = "k_africa" # Fatimids
@@ -1383,7 +1395,7 @@ c_tudgha = {
 		liege = k_maghreb
 		holder = butr0001
 	}
-	
+
 	1055.1.1 = {
 		liege = "k_maghreb"
 		holder = 32958
@@ -1449,7 +1461,7 @@ c_tudgha = {
 c_ziz = {
 	800.1.1 = {
 		government = clan_government
-		holder = 1228834 # Abu Muntasir al-Yasa' ibn Abu al-Qasim 
+		holder = 1228834 # Abu Muntasir al-Yasa' ibn Abu al-Qasim
 	}
 	824.1.1 = {
 		holder = 1228835 # Midrar 'Al-Muntasir' ibn Abu Muntasir al-Yasa', First Midrarid
@@ -1500,7 +1512,7 @@ c_ziz = {
 	}
 	958.3.1 = {
 		liege = 0
-		holder = me_sijilmasa_010 
+		holder = me_sijilmasa_010
 	}
 	963.1.1 = {
 		liege = "k_africa" # Fatimids
@@ -1598,9 +1610,9 @@ c_ziz = {
 }
 
 d_fes = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 20 }
 
 	866.1.1 = {
 		government = clan_government
@@ -1612,14 +1624,14 @@ d_fes = {
 	877.1.1 = {
 		liege = 0
 	}
-	
+
 	950.1.1 = {
 		holder = me_ifrinid_027 # Ya'la ibn Muhammad
 	}
 	958.6.1 = {
 		holder = 0
 	}
-	
+
 	991.6.1 = {
 		holder = 155121 # Ziri ibn Atiyyah al-Maghrawi
 	}
@@ -1736,9 +1748,9 @@ d_fes = {
 }
 
 c_fes = {
-	867.1.1 = {	change_development_level = 14 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 54 }
+	867.1.1 = {	change_prosperity_level = 14 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 54 }
 
 	767.1.1 = {
 		holder = 210037
@@ -1768,7 +1780,7 @@ c_fes = {
 		liege = "d_fes"
 		holder = 159506 # Yahya II
 	}
-	
+
 	950.1.1 = {
 		holder = me_ifrinid_027 # Ya'la ibn Muhammad
 	}
@@ -1779,7 +1791,7 @@ c_fes = {
 	953.1.1 = {
 		holder = me_ifrinid_029 # Ahmad ibn Abi Bakr (Ya'la's Governor)
 	}
-	
+
 	991.6.1 = {
 		holder = 155121 # Ziri ibn Atiyyah al-Maghrawi
 	}
@@ -1871,10 +1883,10 @@ c_fes = {
 
 
 c_muluya = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	767.1.1 = {
 		holder = 210037
 	}
@@ -2088,7 +2100,7 @@ c_taza = {
 
 
 c_meknes = {
-	1178.1.1 = { change_development_level = 34 }
+	1178.1.1 = { change_prosperity_level = 34 }
 
 	767.1.1 = {
 		holder = 210037
@@ -2196,7 +2208,7 @@ c_meknes = {
 	1316.1.1 = {
 		holder = 33004
 	}
-	
+
 
 }
 
@@ -2228,7 +2240,7 @@ c_gharb = {
 		holder = 159508 # Ali ibn Umar
 		liege = k_maghreb
 	}
-	
+
 	1005.1.1 = { # Shala (Sala/Chellah) and its surrounding regions conquered by the Ifrinids from the Maghrawids
 		holder = me_ifrinid_045 # Hamamah ibn Ziri ibn Ya'la
 		liege = 0
@@ -2293,7 +2305,7 @@ c_gharb = {
 	1275.1.1 = {
 		holder = 32997
 	}
-	
+
 	1286.3.20 = {
 		holder = 32998
 	}
@@ -2341,10 +2353,10 @@ d_rif = {
 }
 
 c_tangiers = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 18 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 18 }
+
 	## Idrisids
 	790.1.1 = {
 		holder = 159501
@@ -2370,7 +2382,7 @@ c_tangiers = {
 	950.1.1 = {
 		holder = me_ifrinid_027 # Ya'la ibn Muhammad
 	}
-	
+
 	998.10.13 = {
 		holder = yemeni0039 # Emir al-Muzaffar of Fes
 		liege = d_fes
@@ -2462,9 +2474,9 @@ c_tangiers = {
 
 
 c_ceuta = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 34 }
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 34 }
 
 	690.1.1 = {
 		holder = 73980 # Conde Don Julián

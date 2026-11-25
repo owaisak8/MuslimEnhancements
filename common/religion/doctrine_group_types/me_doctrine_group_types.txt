@@ -1,0 +1,160 @@
+﻿
+#######################
+## Non-Special Doctrines
+#######################
+## Secondary Islamic Sect Doctrines
+doctrine_islam_secondary_group = {
+	category = main_group
+	divergence = category
+
+	is_available_on_create = {
+		religion_tag = islam_religion
+	}
+}
+
+## Drunkard crime doctrine
+## Ablution doctrine - (Wudhu/Water Rituals)
+doctrine_me_ablution = {
+	category = clergy
+	divergence = sequence
+}
+
+## Fasting Month doctrine - (Ramdan/Rajab)
+doctrine_me_fasting_month = {
+	category = clergy
+	divergence = category
+
+	is_available_on_create = {
+		religion_tag = islam_religion
+	}
+}
+
+## Affinality permanent restrictions - Disallows marrying your former or current spouse's relatives
+doctrine_me_affinality_fixed = {
+	category = marriage
+	divergence = sequence
+}
+
+## Affinality polygamous restrictions - Disallows marrying your spouse's relatives while married to them
+doctrine_me_affinality_polygamy = {
+	category = marriage
+	divergence = sequence
+}
+
+#######################
+## Special Doctrines
+#######################
+# Symbolic Non-sectarian Hostility doctrine
+is_alb_faith = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_alb_faith
+	}
+}
+
+# Ibadi Hostility doctrine
+is_ibadi_faith = {
+	category = special
+
+	is_available_on_create = {
+		AND = { # Must be Muhakkima or else it wouldn't make sense
+			has_doctrine = special_doctrine_is_ibadi_faith
+			has_doctrine = muhammad_succession_muhakkima_doctrine
+		}
+	}
+}
+
+# Ubaydi Trait Acceptance
+ubaydi_trait_acceptance = {
+	category = special
+
+	is_available_on_create = {
+		always = no # Event will decide whether new faiths accept them
+	}
+}
+
+# Musta'li Schism doctrines
+mustali_main = { # Added to Isma'ilism to give schism effects
+	category = special
+
+	is_available_on_create = {
+		always = no
+	}
+}
+mustali_schismed_sect = { # Added to Isma'ili sects to give schism effects
+	category = special
+
+	is_available_on_create = {
+		always = no # For now
+	}
+}
+
+# Barghawata trait doctrine
+is_barghawata_faith = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_barghawata_faith
+		has_doctrine = muhammad_succession_berberist_doctrine
+	}
+}
+
+# Ha-Mimist trait doctrine
+is_hamimist_faith = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_hamimist_faith
+		has_doctrine = muhammad_succession_berberist_doctrine
+	}
+}
+
+# Kaduist trait doctrine
+is_kaduist_faith = {
+	category = special
+
+	is_available_on_create = {
+		has_doctrine = special_doctrine_is_kaduist_faith
+		has_doctrine = muhammad_succession_berberist_doctrine
+	}
+}
+
+#######################
+## Heresiarch Adventeror Special Doctrines
+#######################
+# Ibn Nusayr trait acceptor
+ibn_nusayr_trait_acceptance = {
+	category = special
+
+	is_available_on_create = {
+		always = no # Event will decide whether new faiths accept them
+	}
+}
+
+# Ishaqiyyah trait acceptor
+ishaq_ahmar_trait_acceptance = {
+	category = special
+
+	is_available_on_create = {
+		always = no # Event will decide whether new faiths accept them
+	}
+}
+
+# Qarmatian Mahdi trait acceptor - Zakarawayh ibn Mihrawayh
+zakarawayhist_trait_acceptance = {
+	category = special
+
+	is_available_on_create = {
+		always = no # Event will decide whether new faiths accept them
+	}
+}
+
+# Qarmatian Mahdi trait acceptor - Ali ibn Fadl al-Jayshani
+jayshanist_trait_acceptance = {
+	category = special
+
+	is_available_on_create = {
+		always = no # Event will decide whether new faiths accept them
+	}
+}

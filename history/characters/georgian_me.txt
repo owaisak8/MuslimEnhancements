@@ -3,7 +3,7 @@
 me_georgian_001 = {
 	name = "Ahmad_Ayaz"
 	dynasty = me_aymaqid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "georgian" # Abkhazian
 	trait = loyal
 	
@@ -22,7 +22,7 @@ me_georgian_001 = {
 me_georgian_002 = {
 	name = "Aymaq"
 	dynasty = me_aymaqid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "georgian" # Abkhazian
 	
 	950.1.1 = {

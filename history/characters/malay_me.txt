@@ -19,7 +19,7 @@
 me_kedah_002 = {
 	name = "Mu_azzam" # Paduka Sri Sultan Mu'azzam Shah, Second Sultan of Kedah
 	dynasty = malay_mahawangsa
-	religion = ashari
+	rite = shafii
 	culture = malay
 	
 	#father = malay_kedah_20_fic
@@ -37,7 +37,7 @@ me_kedah_002 = {
 me_kedah_003 = {
 	name = "Sulayman" # Tanku Sulayman, Also known as Raja Laksama, ruled or governed Langkawi island alongside other islands
 	dynasty = malay_mahawangsa
-	religion = ashari
+	rite = shafii
 	culture = malay
 	
 	#father = malay_kedah_20_fic
@@ -53,9 +53,9 @@ me_kedah_003 = {
 }
 
 me_kedah_004 = {
-	name = "Muhammad" # Tanku Muhammad, Also known as Raja Muda, ruled or governed Mukim Padang Terap
+	name = "Mahmud" # Tanku Mahmud, Also known as Raja Muda, ruled or governed Mukim Padang Terap
 	dynasty = malay_mahawangsa
-	religion = ashari
+	rite = shafii
 	culture = malay
 	
 	#father = malay_kedah_20_fic
@@ -73,7 +73,7 @@ me_kedah_004 = {
 me_kedah_005 = {
 	name = "Muhammad" # Paduka Sri Sultan Muhammad Shah, Third Sultan of Kedah
 	dynasty = malay_mahawangsa
-	religion = ashari
+	rite = shafii
 	culture = malay
 	
 	father = me_kedah_002
@@ -92,7 +92,7 @@ me_kedah_006 = {
 	name = "Puteri" # Tanku Puteri
 	female = yes
 	dynasty = malay_mahawangsa
-	religion = ashari
+	rite = shafii
 	culture = malay
 	
 	father = me_kedah_002
@@ -111,7 +111,7 @@ me_kedah_007 = {
 	name = "Maheran" # Tanku Maheran
 	female = yes
 	dynasty = malay_mahawangsa
-	religion = ashari
+	rite = shafii
 	culture = malay
 	
 	father = me_kedah_002
@@ -129,7 +129,7 @@ me_kedah_007 = {
 ## Fictional characters for game start effects
 me_malay_fic_001 = {
 	name = "Putera"
-	religion = vajrayana
+	rite = vajrayana
 	culture = acehnese
 	800.1.1 = {
 		birth = yes
@@ -141,7 +141,7 @@ me_malay_fic_001 = {
 
 me_malay_fic_002 = {
 	name = "Mahasenapati"
-	religion = vajrayana
+	rite = vajrayana
 	culture = acehnese
 	1000.1.1 = {
 		birth = yes
@@ -153,12 +153,14 @@ me_malay_fic_002 = {
 
 ###
 ## Perlak
+## King list after the Idharul Haq fi Mamlakatil Peureulak (Sayyid line, then the Makhdum Johan Berdaulat line). It survives only in late copies
+## and its early dates (a sultanate founded in 840) are disputed by historians; vanilla uses fictional rulers here instead.
 
 #Shia Sayyidi Sultan Dynasty
 malay_perlak_01 = { #Sultan Alaiddin Syed Maulana Abdul Aziz Shah
 	name = "Abd_al-Aziz"
 	dynasty = dk_sayyid_perlak
-	religion = zayidi # Changed from imami to zayidi since most Shia Sayyids around 867 were Zayidi
+	rite = zayidi # Changed from imami to zayidi since most Shia Sayyids around 867 were Zayidi
 	culture = acehnese
 	#trait = sayyid # Activated via Event/Legend
 	trait = zealous
@@ -176,7 +178,7 @@ malay_perlak_01 = { #Sultan Alaiddin Syed Maulana Abdul Aziz Shah
 malay_perlak_02 = {#Sultan Alaiddin Syed Maulana Abdul Rahim Shah
 	name = "Abd_al-Rahim"
 	dynasty = dk_sayyid_perlak
-	religion = zayidi
+	rite = zayidi
 	culture = acehnese
 	#trait = sayyid # Activated via Event/Legend
 	trait = zealous
@@ -195,7 +197,7 @@ malay_perlak_02 = {#Sultan Alaiddin Syed Maulana Abdul Rahim Shah
 malay_perlak_03 = { #Sultan Alaiddin Syed Maulana Abbas Shah
 	name = "Abbas"
 	dynasty = dk_sayyid_perlak
-	religion = zayidi
+	rite = zayidi
 	culture = acehnese
 	#trait = sayyid # Activated via Event/Legend
 	
@@ -217,7 +219,7 @@ malay_perlak_03 = { #Sultan Alaiddin Syed Maulana Abbas Shah
 malay_perlak_04 = {#Sultan Alaiddin Syed Maulana Ali Mughat Shah
 	name = "Ali"
 	dynasty = dk_sayyid_perlak
-	religion = zayidi
+	rite = zayidi
 	culture = acehnese
 	#trait = sayyid # Activated via Event/Legend
 	
@@ -233,7 +235,7 @@ malay_perlak_04 = {#Sultan Alaiddin Syed Maulana Ali Mughat Shah
 malay_perlak_05 = { #Fictional father
 	name = "Ahmad_Ahmad"
 	dynasty = dk_sayyid_perlak
-	religion = zayidi
+	rite = zayidi
 	culture = acehnese
 	#trait = sayyid # Activated via Event/Legend
 	
@@ -249,7 +251,7 @@ malay_perlak_05 = { #Fictional father
 malay_perlak_06 = { #Only named as Sultan Alaiddin Syed Maulana Shah (the name all Sayyidi Perlak's Sultan uses)
 	name = "Zayd" #Fictional name
 	dynasty = dk_sayyid_perlak
-	religion = zayidi
+	rite = zayidi
 	culture = acehnese
 	#trait = sayyid # Activated via Event/Legend
 	
@@ -267,7 +269,7 @@ malay_perlak_06 = { #Only named as Sultan Alaiddin Syed Maulana Shah (the name a
 malay_perlak_07 = { #Sultan Makhdum Alaiddin Malik Abdul Kadir Shah Johan Berdaulat
 	name = "Abd_al-Kadir"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	trait = peasant_leader
 	trait = zealous
@@ -283,7 +285,7 @@ malay_perlak_07 = { #Sultan Makhdum Alaiddin Malik Abdul Kadir Shah Johan Berdau
 malay_perlak_08 = { #Sultan Makhdum Alaiddin Malik Muhammad Amin Shah Johan Berdaulat
 	name = "Muhammad"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_07
@@ -298,7 +300,7 @@ malay_perlak_08 = { #Sultan Makhdum Alaiddin Malik Muhammad Amin Shah Johan Berd
 malay_perlak_09 = { #Sultan Makhdum Alaiddin Abdul Malik Shah Johan Berdaulat
 	name = "Abd_al-Malik"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_08
@@ -313,7 +315,7 @@ malay_perlak_09 = { #Sultan Makhdum Alaiddin Abdul Malik Shah Johan Berdaulat
 malay_perlak_10 = { #Sultan Makhdum Alaiddin Malik Ibrahim Shah Johan Berdaulat
 	name = "Ibrahim"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	trait = stubborn
 	trait = brave
@@ -332,7 +334,7 @@ malay_perlak_10 = { #Sultan Makhdum Alaiddin Malik Ibrahim Shah Johan Berdaulat
 malay_perlak_11 = { #Sultan Makhdum Alaiddin Malik Mahmud Shah Johan Berdaulat
 	name = "Mahmud"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_10
@@ -347,7 +349,7 @@ malay_perlak_11 = { #Sultan Makhdum Alaiddin Malik Mahmud Shah Johan Berdaulat
 malay_perlak_12 = { #Sultan Makhdum Alaiddin Malik Mansur Shah Johan Berdaulat
 	name = "Mansur"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	trait = arrogant
 	trait = arbitrary
@@ -365,7 +367,7 @@ malay_perlak_12 = { #Sultan Makhdum Alaiddin Malik Mansur Shah Johan Berdaulat
 malay_perlak_13 = { #Sultan Makhdum Alaiddin Malik Abdullah Shah Johan Berdaulat
 	name = "Abdullah"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_12
@@ -380,7 +382,7 @@ malay_perlak_13 = { #Sultan Makhdum Alaiddin Malik Abdullah Shah Johan Berdaulat
 malay_perlak_14 = { #Sultan Makhdum Alaiddin Malik Ahmad Shah Johan Berdaulat
 	name = "Ahmad_Ahmad"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_13
@@ -395,7 +397,7 @@ malay_perlak_14 = { #Sultan Makhdum Alaiddin Malik Ahmad Shah Johan Berdaulat
 malay_perlak_15 = { #Sultan Makhdum Alaiddin Malik Mahmud Shah Johan Berdaulat
 	name = "Mahmud"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_14
@@ -410,7 +412,7 @@ malay_perlak_15 = { #Sultan Makhdum Alaiddin Malik Mahmud Shah Johan Berdaulat
 malay_perlak_16 = { #Sultan Makhdum Alaiddin Malik Usman Shah Johan Berdaulat
 	name = "Uthman"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_15
@@ -425,7 +427,7 @@ malay_perlak_16 = { #Sultan Makhdum Alaiddin Malik Usman Shah Johan Berdaulat
 malay_perlak_17 = { #Sultan Makhdum Alaiddin Malik Muhammad Shah Johan Berdaulat
 	name = "Muhammad"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	trait = compassionate
 	trait = content
@@ -443,7 +445,7 @@ malay_perlak_17 = { #Sultan Makhdum Alaiddin Malik Muhammad Shah Johan Berdaulat
 malay_perlak_18 = { #Sultan Makhdum Alaiddin Abdul Jalil Shah Johan Berdaulat
 	name = "Abdul-Jaleel"
 	dynasty = dk_makhdum_perlak
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	
 	father = malay_perlak_17
@@ -461,7 +463,7 @@ malay_perlak_18 = { #Sultan Makhdum Alaiddin Abdul Jalil Shah Johan Berdaulat
 malay_silu_01 = { #Fictional
 	name = "Purnama"
 	dynasty = dk_pasai_silu
-	religion = shaivism
+	rite = shaivism
 	culture = acehnese
 	trait = calm
 	trait = generous
@@ -480,7 +482,7 @@ malay_silu_01 = { #Fictional
 malay_silu_02 = { #Fictional
 	name = "Budiman"
 	dynasty = dk_pasai_silu
-	religion = shaivism
+	rite = shaivism
 	culture = acehnese
 	trait = ambitious
 	
@@ -498,7 +500,7 @@ malay_silu_02 = { #Fictional
 malay_silu_03 = { #Sultan al-Malik al-Salih
 	name = "Mara"
 	dynasty = dk_pasai_silu
-	religion = ashari
+	rite = shafii
 	culture = acehnese
 	trait = zealous
 	trait = just

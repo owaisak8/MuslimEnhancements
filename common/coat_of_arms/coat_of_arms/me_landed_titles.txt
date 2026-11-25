@@ -9,16 +9,42 @@ d_laamp_me_karrami = me_karrami_dynasty # Ibn Karram
 d_laamp_me_maghrawa = house_me_khazarids # The Maghrawa Berber clan
 d_laamp_me_kindi = bedouin_kinda # al-Kindi
 d_laamp_me_tujibid = house_me_Tujibid # Grandfather of the scholar Abu Umar al-Kindi
+d_laamp_me_ibn_durayd = arabic_azd # Ibn Durayd
 d_laamp_sevener_caliph = 589 # Fatimid Hidden Imam
+d_laamp_me_munqidhi = house_me_munqidhid # Banu Munqidh
 d_laamp_me_ba_alawi_1066 = me_ba_alawi_dynasty # Ba'Awalis
 d_laamp_me_ba_alawi_1178 = me_ba_alawi_dynasty
-d_laamp_me_umayyad_fic_1 = 597 # Fictional Umayyads 1066
-d_laamp_me_umayyad_fic_2 = 597 # Fictional Umayyads 1178
+d_laamp_me_umayyad_andalus_1066 = 597 # Unlanded Umayyads 1066
+d_laamp_me_umayyad_andalus_1178 = 597 # Unlanded Umayyads 1178
 d_laamp_me_idrisid = house_hammudid # Muhammad al-Idrisi's son
 d_laamp_me_ganjavid = me_ganjavid_dynasty # Nizami Ganjavid
+d_laamp_me_ibn_wahb = 1043005 # Ibn Wahb
 d_laamp_me_ibn_as_sufi_867 = me_as_sufi_dynasty # Ibrahim Ibn as-Sufi
 d_laamp_me_ibn_as_sufi_1066 = me_as_sufi_dynasty # Najm ad-Din ibn as-Sufi
 d_laamp_me_buhturid = house_me_arslanid # 1178 Buhturids (Arslanids)
+d_laamp_me_hisni_umayyads = 597 # Umayyads of Hisn Maslamah
+
+d_laamp_wallada_other = {
+	pattern="pattern_solid.dds"
+	color1=white
+	color2=white
+	colored_emblem={
+		color1=yellow
+		texture="ce_rubh_el_hizb_iranian.dds"
+		instance={ scale={ 0.740000 0.740000 } depth=3.010000 }
+	}
+	colored_emblem={
+		color1=green_light
+		texture="ce_rubh_el_hizb_iranian.dds"
+		instance={ scale={ 0.940000 0.940000 } depth=2.010000 }
+	}
+	colored_emblem={
+		color1=red
+		texture="ce_mena_diamond_napkin.dds"
+		instance={ scale={ 0.500000 0.500000 } rotation=71 }
+		instance={ scale={ 0.510000 0.510000 } depth=1.010000 rotation=26 }
+	}
+}
 
 
 # Heads of Faith

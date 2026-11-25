@@ -1,0 +1,67 @@
+﻿### The Ja'fari Imamate (see me_twelver_* effects in me_scripted_effects.txt) ###
+on_game_start = {
+	on_actions = {
+		me_twelver_mahdi_game_start
+		me_twelver_imams_867
+	}
+}
+yearly_global_pulse = {
+	on_actions = { me_twelver_mahdi_yearly }
+}
+
+me_twelver_mahdi_game_start = {
+	effect = { me_twelver_mahdi_startup_effect = yes }
+}
+me_twelver_mahdi_yearly = {
+	effect = {
+		me_twelver_imamate_guard_effect = yes # first, so that the Imamate is valid before the Mahdi is restored to it
+		me_twelver_mahdi_yearly_effect = yes
+	}
+}
+
+# A day after an Imam gains any title: he keeps no land (see me_imam_return_land_effect)
+on_title_gain = {
+	on_actions = { me_imam_title_gain }
+}
+me_imam_title_gain = {
+	trigger = { has_character_flag = me_imam_flag }
+	effect = {
+		trigger_event = { on_action = me_imam_land_guard days = 1 }
+	}
+}
+me_imam_land_guard = {
+	effect = { me_imam_return_land_effect = yes }
+}
+
+# An 867 game: Imam Ali al-Hadi holds the Imamate at the start; then, on the historical dates:
+me_twelver_imams_867 = {
+	trigger = { game_start_date < 868.1.1 }
+	on_actions = {
+		delay = { days = 536 } # 21 June 868
+		me_twelver_death_of_al_hadi
+	}
+}
+me_twelver_death_of_al_hadi = {
+	effect = { me_twelver_death_of_al_hadi_effect = yes }
+	on_actions = {
+		delay = { days = 38 } # 29 July 868
+		me_twelver_birth_of_al_mahdi
+	}
+}
+me_twelver_birth_of_al_mahdi = {
+	effect = { me_twelver_birth_of_al_mahdi_effect = yes }
+	on_actions = {
+		delay = { days = 1981 } # 1 January 874
+		me_twelver_minor_occultation
+	}
+}
+me_twelver_minor_occultation = {
+	effect = { me_twelver_minor_occultation_effect = yes }
+	on_actions = {
+		delay = { days = 24589 } # 15 May 941 (15 Sha'ban 329 AH)
+		me_twelver_major_occultation
+	}
+}
+me_twelver_major_occultation = {
+	effect = { me_twelver_major_occultation_effect = yes }
+}

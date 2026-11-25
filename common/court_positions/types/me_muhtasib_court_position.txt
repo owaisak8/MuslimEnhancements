@@ -1,0 +1,232 @@
+﻿# ME: the Muhtasib, the inspector of markets and public morals (hisba). Appointed by caliphs and sultans from the early
+# Abbasid period; in Umayyad Spain the market inspector was the Sahib al-Suq (Muhtasib, Wikipedia). A court position, not a
+# council seat, so it sits beside mods that rebuild the council. Events to follow.
+me_muhtasib_court_position = {
+	sort_order = 234
+	max_available_positions = 1
+	minimum_rank = duchy
+	skill = stewardship
+
+	# al-Andalus and the Maghreb: Sahib al-Suq, "master of the market"
+	court_position_asset = {
+		trigger = {
+			culture ?= {
+				OR = {
+					this = culture:andalusian
+					this = culture:maghrebi
+					has_cultural_pillar = heritage_berber
+				}
+			}
+		}
+		animation = steward
+		background = "gfx/interface/illustrations/event_scenes/market_west.dds"
+		localization_key = me_muhtasib_sahib_al_suq
+	}
+	court_position_asset = {
+		animation = steward
+		background = "gfx/interface/illustrations/event_scenes/market_east.dds"
+	}
+
+	opinion = {
+		value = regular_court_position_opinion
+	}
+
+	aptitude_level_breakpoints = { 20 40 60 80 }
+
+	# root is the holder of the position
+	aptitude = {
+		value = 1
+		add = {
+			value = stewardship
+			multiply = 2.5
+			max = 50
+			desc = court_position_skill_stewardship
+		}
+		add = {
+			value = learning
+			max = 15
+			desc = court_position_skill_learning
+		}
+		if = {
+			limit = { has_trait = just }
+			add = {
+				value = 15
+				desc = court_position_just_trait
+			}
+		}
+		if = {
+			limit = { has_trait = honest }
+			add = {
+				value = 10
+				desc = court_position_honest_trait
+			}
+		}
+		if = {
+			limit = { has_trait = diligent }
+			add = {
+				value = 10
+				desc = court_position_diligent_trait
+			}
+		}
+		if = {
+			limit = { has_trait = zealous }
+			add = {
+				value = 10
+				desc = court_position_zealous_trait
+			}
+		}
+		if = {
+			limit = { has_trait = greedy }
+			add = {
+				value = -10
+				desc = court_position_greedy_trait
+			}
+		}
+		if = {
+			limit = { has_trait = deceitful }
+			add = {
+				value = -10
+				desc = court_position_deceitful_trait
+			}
+		}
+		if = {
+			limit = { has_trait = arbitrary }
+			add = {
+				value = -10
+				desc = court_position_arbitrary_trait
+			}
+		}
+		if = {
+			limit = { has_trait = lazy }
+			add = {
+				value = -10
+				desc = court_position_lazy_trait
+			}
+		}
+
+		add = court_position_aptitude_low_penalty_value
+		add = general_aptitude_bonus
+	}
+
+	# root is the court owner
+	is_shown = {
+		is_landed_or_landless_administrative_or_theocratic = yes
+		NOT = {
+			government_has_flag = government_is_nomadic
+			government_has_flag = government_is_merchant
+		}
+		has_religion = religion:islam_religion
+	}
+
+	valid_position = {
+		is_landed_or_landless_administrative_or_theocratic = yes
+		has_religion = religion:islam_religion
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_shown_character = {
+		scope:employee = {
+			court_position_employee_shown_trigger = yes
+		}
+	}
+
+	# A Muslim, of the gender the employer's rite lets rule (as vanilla's Chief Qadi)
+	valid_character = {
+		scope:employee = {
+			base_court_position_validity_trigger = { EMPLOYER = scope:liege }
+			has_religion = religion:islam_religion
+			scope:liege.rite = { rite_has_dominant_ruling_gender = prev }
+		}
+	}
+
+	revoke_cost = {
+		prestige = {
+			value = minor_court_position_prestige_revoke_cost
+		}
+	}
+
+	salary = {
+		gold = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = no } }
+				add = me_muhtasib_total_salary_value
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = yes } }
+				add = me_muhtasib_total_salary_value
+			}
+		}
+		prestige = {
+			value = minor_court_position_prestige_salary
+		}
+		round = no
+	}
+
+	received_salary = {
+		gold = {
+			value = me_muhtasib_total_salary_value
+		}
+		prestige = {
+			value = minor_court_position_prestige_salary
+		}
+		round = no
+	}
+
+	base_employer_modifier = {
+	}
+
+	# Merchants trust a policed market (vanilla's Antiquarian task uses the same range)
+	scaling_employer_modifiers = {
+		terrible = {
+			trade_competitiveness_mult = 0.01
+		}
+		poor = {
+			trade_competitiveness_mult = 0.02
+		}
+		average = {
+			trade_competitiveness_mult = 0.03
+		}
+		good = {
+			trade_competitiveness_mult = 0.04
+		}
+		excellent = {
+			trade_competitiveness_mult = 0.05
+		}
+	}
+
+	modifier = {
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+	}
+
+	on_court_position_received = {
+		basic_gained_court_position_effect = yes
+	}
+	on_court_position_revoked = {
+		basic_revoked_court_position_effect = yes
+		scope:liege ?= { me_muhtasib_morals_doctrine_end_effect = yes }
+	}
+	on_court_position_invalidated = {
+		basic_invalidated_court_position_effect = yes
+		scope:liege ?= { me_muhtasib_morals_doctrine_end_effect = yes }
+	}
+	on_court_position_vacated = {
+		court_position_vacated_event_effect = {
+			COURT_POSITION_TYPE = me_muhtasib_court_position
+		}
+	}
+
+	ai_position_score = {
+		value = 100
+		add = court_position_debt_considerations_value
+	}
+	ai_candidate_score = {
+		value = 50
+		add = scope:base_value
+		add = court_position_candidate_score_base_value
+		add = court_position_candidate_aptitude_value
+	}
+}

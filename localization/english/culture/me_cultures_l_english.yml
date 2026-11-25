@@ -51,6 +51,9 @@
  
  language_sindhi_name:0 "Sindhi"
  
+ heritage_chamic_name:0 "Chamic"
+ heritage_chamic_collective_noun:0 "Chamics"
+ 
 #Decision/Event Cultures
  maltese:0 "Maltese"
  maltese_collective_noun:0 "Maltese"

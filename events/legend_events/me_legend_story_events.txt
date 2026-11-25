@@ -4,6 +4,7 @@
 me_legend_story.0001 = {
 	type = character_event
 	window = fullscreen_event
+	queue_icon = "gfx/interface/icons/splash_icons/splash_legends.dds" # required for fullscreen events
 	title = {
 		first_valid = {
 			triggered_desc = {

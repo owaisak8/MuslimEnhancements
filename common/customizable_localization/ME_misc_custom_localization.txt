@@ -1,7 +1,7 @@
 ﻿### Override
 GetKnightErrantAnimal = { # Overriden to add lion to Middle East instead of swan
 	type = character
-	
+
 	text = {
 		trigger = {
 			location = {
@@ -15,7 +15,6 @@ GetKnightErrantAnimal = { # Overriden to add lion to Middle East instead of swan
 			location = {
 				OR = {
 					geographical_region = world_india
-					geographical_region = world_burma
 					geographical_region = ghw_region_caucasus
 					geographical_region = world_asia_china
 					geographical_region = world_asia_japan
@@ -45,8 +44,107 @@ GetKnightErrantAnimal = { # Overriden to add lion to Middle East instead of swan
 
 
 ### Misc
+ME_ClanRaidingLoc = {
+	type = all
+
+	text = {
+		trigger = {
+			has_game_rule = me_clan_can_raid_yes
+		}
+		localization_key = ME_ClanRaidingYes
+	}
+
+	text = {
+		trigger = {
+			has_game_rule = me_clan_can_raid_struggle
+		}
+		localization_key = ME_ClanRaidingStruggle
+	}
+
+	text = {
+		trigger = {
+			has_game_rule = me_clan_can_raid_no
+		}
+		localization_key = ME_ClanRaidingNo
+		fallback = yes
+	}
+}
+
+ME_GetFastingMonthFaith = {
+	type = character
+
+	text = {
+		trigger = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+		}
+		localization_key = ME_Rajab_loc
+	}
+
+	text = {
+		trigger = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+		}
+		localization_key = ME_Ramadan_loc
+		fallback = yes
+	}
+}
+
+ME_GetFastingMonthCurrent = {
+	type = all
+
+	text = {
+		trigger = {
+			me_hijri_month_value = 7
+		}
+		localization_key = ME_Rajab_loc
+	}
+
+	text = {
+		trigger = {
+			me_hijri_month_value = 9
+		}
+		localization_key = ME_Ramadan_loc
+		fallback = yes
+	}
+}
+
 ME_HistoricalCharacterDesc = {
 	type = character
+
+	text = {
+		trigger = {
+			has_variable = me_ibn_nusayr
+		}
+		localization_key = historical_character.me_ibn_nusayr
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ishaq_ahmar
+		}
+		localization_key = historical_character.me_ishaq_ahmar
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_zakarawayh
+		}
+		localization_key = historical_character.me_zakarawayh
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_jayshani
+		}
+		localization_key = historical_character.me_al_jayshani
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_baqliyyah
+		}
+		localization_key = historical_character.me_baqliyyah
+	}
 
 	text = {
 		trigger = {
@@ -61,12 +159,208 @@ ME_HistoricalCharacterDesc = {
 		}
 		localization_key = historical_character.me_abdusamed_babek
 	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_mutanabbi
+		}
+		localization_key = historical_character.al_mutanabbi
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_hariri
+		}
+		localization_key = historical_character.al_hariri
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_ridwan
+		}
+		localization_key = historical_character.ibn_ridwan
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_al_matran
+		}
+		localization_key = historical_character.ibn_al_matran
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_al_tilmidh
+		}
+		localization_key = historical_character.ibn_al_tilmidh
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_dakhwar
+		}
+		localization_key = historical_character.al_dakhwar
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_qalaqis
+		}
+		localization_key = historical_character.ibn_qalaqis
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_hanna
+		}
+		localization_key = historical_character.ibn_hanna
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_nubatah
+		}
+		localization_key = historical_character.ibn_nubatah
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_al_khatib
+		}
+		localization_key = historical_character.ibn_al_khatib
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_battani
+		}
+		localization_key = historical_character.al_battani
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_quhi
+		}
+		localization_key = historical_character.al_quhi
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_bajjah
+		}
+		localization_key = historical_character.ibn_bajjah
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_tufayl
+		}
+		localization_key = historical_character.ibn_tufayl
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_jubayr
+		}
+		localization_key = historical_character.ibn_jubayr
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_karaji
+		}
+		localization_key = historical_character.al_karaji
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_al_shatir
+		}
+		localization_key = historical_character.ibn_al_shatir
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_al_quff
+		}
+		localization_key = historical_character.ibn_al_quff
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_rammah
+		}
+		localization_key = historical_character.al_rammah
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_baha_ud_din_zuhayr
+		}
+		localization_key = historical_character.baha_ud_din_zuhayr
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_daniyal
+		}
+		localization_key = historical_character.ibn_daniyal
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_al_nuwayri
+		}
+		localization_key = historical_character.al_nuwayri
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_ibn_al_haik
+		}
+		localization_key = historical_character.ibn_al_haik
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_qutb_ud_din_aibak
+		}
+		localization_key = historical_character.qutb_ud_din_aibak
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_masud_sad_salman
+		}
+		localization_key = historical_character.masud_sad_salman
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_abdul_malik_isami
+		}
+		localization_key = historical_character.abdul_malik_isami
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_badr_i_chach
+		}
+		localization_key = historical_character.badr_i_chach
+	}
+	
+	text = {
+		trigger = {
+			has_variable = me_minhaj_i_siraj
+		}
+		localization_key = historical_character.minhaj_i_siraj
+	}
 
 	text = {
 		trigger = {
 			always = no
 		}
-		localization_key = generic_importance
+		localization_key = historical_character.me_vanilla
 		fallback = yes
 	}
 }
@@ -137,7 +431,7 @@ ME_BattlePoIDescriptionHistorical = {
 
 ## Nomadic
 ME_GetNomadicCouncilName = {
-	type = all
+	type = character
 
 	text = {
 		trigger = {
@@ -170,7 +464,7 @@ ME_GetNomadicCouncilName = {
 }
 
 ME_GetNomadicCouncilNameFull = {
-	type = all
+	type = character
 
 	text = {
 		trigger = {
@@ -203,7 +497,7 @@ ME_GetNomadicCouncilNameFull = {
 }
 
 ME_GetNomadicCouncilNameMember = {
-	type = all
+	type = character
 
 	text = {
 		trigger = {
@@ -236,7 +530,7 @@ ME_GetNomadicCouncilNameMember = {
 }
 
 ME_GetNomadicCouncilNameMembers = {
-	type = all
+	type = character
 
 	text = {
 		trigger = {
@@ -287,5 +581,92 @@ ME_GetNomadicCouncilName_GC = {
 		trigger = { always = no }
 		fallback = yes
 		localization_key = me_nomadic_council_norm
+	}
+}
+
+### Hijri Calendar Customizable Localization ###
+
+# Main date display switcher: returns Hijri date for Muslim players, Gregorian otherwise
+ME_GetDisplayDate = {
+	type = character
+
+	text = {
+		trigger = {
+			has_game_rule = me_hijri_enabled
+			faith = { religion_tag = islam_religion }
+			exists = global_var:me_calendar_hijri_var
+		}
+		localization_key = ME_HIJRI_DISPLAY_DATE
+	}
+	text = {
+		localization_key = ME_GREGORIAN_DISPLAY_DATE
+		fallback = yes
+	}
+}
+
+# Returns the Hijri month name based on the current global variable
+# Triggers are evaluated in order; first match wins
+ME_GetHijriMonthName = {
+	type = character
+
+	# Month 1: Muharram
+	text = {
+		trigger = { me_hijri_month_value < 2 }
+		localization_key = me_hijri_month_muharram
+	}
+	# Month 2: Safar
+	text = {
+		trigger = { me_hijri_month_value < 3 }
+		localization_key = me_hijri_month_safar
+	}
+	# Month 3: Rabi' al-Awwal
+	text = {
+		trigger = { me_hijri_month_value < 4 }
+		localization_key = me_hijri_month_rabi_al_awwal
+	}
+	# Month 4: Rabi' al-Thani
+	text = {
+		trigger = { me_hijri_month_value < 5 }
+		localization_key = me_hijri_month_rabi_al_thani
+	}
+	# Month 5: Jumada al-Ula
+	text = {
+		trigger = { me_hijri_month_value < 6 }
+		localization_key = me_hijri_month_jumada_al_ula
+	}
+	# Month 6: Jumada al-Thani
+	text = {
+		trigger = { me_hijri_month_value < 7 }
+		localization_key = me_hijri_month_jumada_al_thani
+	}
+	# Month 7: Rajab
+	text = {
+		trigger = { me_hijri_month_value < 8 }
+		localization_key = me_hijri_month_rajab
+	}
+	# Month 8: Sha'ban
+	text = {
+		trigger = { me_hijri_month_value < 9 }
+		localization_key = me_hijri_month_shaban
+	}
+	# Month 9: Ramadan
+	text = {
+		trigger = { me_hijri_month_value < 10 }
+		localization_key = me_hijri_month_ramadan
+	}
+	# Month 10: Shawwal
+	text = {
+		trigger = { me_hijri_month_value < 11 }
+		localization_key = me_hijri_month_shawwal
+	}
+	# Month 11: Dhu al-Qi'dah
+	text = {
+		trigger = { me_hijri_month_value < 12 }
+		localization_key = me_hijri_month_dhu_al_qidah
+	}
+	# Month 12: Dhu al-Hijjah (fallback)
+	text = {
+		localization_key = me_hijri_month_dhu_al_hijjah
+		fallback = yes
 	}
 }

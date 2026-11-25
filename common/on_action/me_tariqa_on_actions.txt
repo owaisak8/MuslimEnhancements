@@ -1,0 +1,17 @@
+﻿### Tariqa On-Actions ###
+
+on_game_start = {
+	on_actions = {
+		me_tariqa_game_start
+	}
+}
+
+me_tariqa_game_start = {
+	effect = {
+		# Vanilla only sets up its monastic orders with By God Alone; the Tariqas follow the same rule
+		if = {
+			limit = { has_pam_dlc_trigger = yes }
+			me_set_up_tariqas_effect = yes
+		}
+	}
+}

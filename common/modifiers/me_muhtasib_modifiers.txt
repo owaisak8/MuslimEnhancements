@@ -1,0 +1,13 @@
+﻿# ME: Muhtasib "Commanding the Right" task, by the rite's wine doctrine (common/scripted_effects/me_muhtasib_effects.txt)
+me_muhtasib_strict_morals_modifier = {
+	icon = piety_positive
+	monthly_piety_gain_mult = 0.05
+	popular_opinion_add = -2
+	trade_category_alcohol_sell_price_mult = -0.1
+}
+
+me_muhtasib_lenient_morals_modifier = {
+	icon = piety_negative
+	monthly_piety_gain_mult = -0.02
+	popular_opinion_add = 2
+}

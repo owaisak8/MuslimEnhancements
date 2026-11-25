@@ -26,8 +26,8 @@
 		"dynn_ad_Dawudi" 
 		"dynn_al_Fadli" 
 		"dynn_al_Faraji" 
-		"dynn_al_Fareedi" 
 		"dynn_al_Farhani" 
+		"dynn_al_Faridi" 
 		"dynn_al_Fihri" 
 		"dynn_al_Firasi" 
 		"dynn_al_Habili" 
@@ -165,8 +165,8 @@
 		"dynn_Dawudid"
 		"dynn_Fadlid"
 		"dynn_Farajid"
-		"dynn_Fareedid"
 		"dynn_Farhanid"
+		"dynn_Faridid"
 		"dynn_Fikrid"
 		"dynn_Firasid"
 		"dynn_Habilid"
@@ -306,8 +306,8 @@
 		"dynn_ad_Dawudi" 
 		"dynn_al_Fadli" 
 		"dynn_al_Faraji" 
-		"dynn_al_Fareedi" 
 		"dynn_al_Farhani" 
+		"dynn_al_Faridi" 
 		"dynn_al_Fihri" 
 		"dynn_al_Firasi" 
 		"dynn_al_Habili" 
@@ -445,8 +445,8 @@
 		"dynn_Dawudid"
 		"dynn_Fadlid"
 		"dynn_Farajid"
-		"dynn_Fareedid"
 		"dynn_Farhanid"
+		"dynn_Faridid"
 		"dynn_Fikrid"
 		"dynn_Firasid"
 		"dynn_Habilid"
@@ -563,7 +563,7 @@
 	male_names = {
 		Aarif Abbas Abdallah Abderahman Abdi Abdul-Aziz Abdul-Jabbar Abdul-Haq Abdul-Madjid Abdul-Quddus Abdul-Salaam Abdullah
 		Abu_Bakr Adnan Ahmad Akram al-Abbas al-Fadl al-Hassan al-Hussayn Ali Amin Ammar Amr Arif Asad Aruf Ashraf Asim Attaf
-		Badr Badis Bakr Barakah Bashir Basil Bilal Dabbous Dabbus Dawud Fadl Faraj Fareed Farhan Fihr Fikri Firas
+		Badr Badis Bakr Barakah Bashir Basil Bilal Dabbous Dabbus Dawud Fadl Faraj Farhan Farid Fihr Fikri Firas
 		Habib Habil Hakam Hakim Hamad Hammad Hamid Hammud Haroun Hasan Hisham Hussein Hussayn Ibrahim Idris Imran Isma_il Ishaq Iyad
 		Ja_far Jabaar Jabir Jamal Jawdat Jibreel Kamal Khafaja Khalaf Khalfun Khalil Latif 
 		Mahmud Maimun Malik Mansur Maymun Mehtar Milad Mubarak Muhammad Mukhtar Muntasir Muqatil Murad Murshid Musa
@@ -577,8 +577,8 @@
 #		Ghayth_ud-Din Izzaddin Jalal_al-Din Kamal_ud-Din Muzaffar_ad-Din Nur_ad-Din Tajaddin 
 	}
 	female_names = {
-		Aarifa Afifah Aisha Alia Aminah Amirrah Anwaar Anisah Aseelah Asma Aziza Badira Bara_ah Basmah Bushra Dalilah Dimah Dunyah 
-		Fareedah Farhana Fariha Fatima Ghaliah Ghaniyah Hafida Hafrida Hajar Halima Ibtisam Iman Jalila Jamila Khadija Layla 
+		Aarifa Afifah Aisha Alia Aminah Amirah Anwaar Anisah Asilah Asma Aziza Badira Bara_ah Basmah Bushra Dalilah Dimah Dunyah 
+		Farhana Faridah Fariha Fatima Ghaliah Ghaniyah Hafida Hafrida Hajar Halima Ibtisam Iman Jalila Jamila Khadija Layla 
 		Maimuna Majida Mansura Mariam Maryam Maymuna Nabila Nawar Nawara Nura Radiya Rana Rayhana Rihanna Safiya Sajida Sakina
 		Samira Suhaila Tahira Taibah Tara Thuriya Zahida Zahra Zara Zayna Zaynab Zaynab Zayra	
 		

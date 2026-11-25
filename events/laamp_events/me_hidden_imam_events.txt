@@ -24,14 +24,14 @@ me_hidden_imam_event.0001 = {
 
 	trigger = {
 		government_has_flag = government_is_landless_adventurer
-		faith = faith:ismaili
+		rite = rite:ismaili
 		OR = {
 			has_trait = sayyid
 			has_trait = ubaydi
 		}
 		scope:previous_holder = {
 			has_trait = me_hidden_imam
-			faith = faith:ismaili
+			rite = rite:ismaili
 		}
 	}
 
@@ -89,7 +89,7 @@ me_hidden_imam_event.0002 = {
 	trigger = {
 		NOT = { has_character_flag = became_ismaili_caliph_flag }
 		NOT = { government_has_flag = government_is_landless_adventurer }
-		faith = faith:ismaili
+		rite = rite:ismaili
 		is_male = yes
 		OR = {
 			has_trait_xp = {
@@ -148,7 +148,7 @@ me_hidden_imam_event.0003 = {
 			# Isma'ili Reaction
 			triggered_desc = {
 				trigger = {
-					root.faith = faith:ismaili
+					root.rite = rite:ismaili
 				}
 				desc = me_hidden_imam_event.0003.desc.ismaili
 			}
@@ -156,7 +156,7 @@ me_hidden_imam_event.0003 = {
 			triggered_desc = {
 				trigger = {
 					NOT = {
-						root.faith = faith:ismaili
+						root.rite = rite:ismaili
 					}
 
 				}
@@ -175,7 +175,7 @@ me_hidden_imam_event.0003 = {
 		#Rejoice!
 		if = {
 			limit = {
-				faith = faith:ismaili
+				rite = rite:ismaili
 			}
 			play_music_cue = "mx_cue_faith_conversion"
 		}
@@ -193,14 +193,14 @@ me_hidden_imam_event.0003 = {
 	option = {
 		name = me_hidden_imam_event.0003.a
 		trigger = {
-			root.faith = faith:ismaili
+			root.rite = rite:ismaili
 		}
 	}
 	option = {
 		name = me_hidden_imam_event.0003.b
 		trigger = {
 			NOT = {
-				root.faith = faith:ismaili
+				root.rite = rite:ismaili
 			}
 		}
 	}
@@ -267,41 +267,41 @@ me_hidden_imam_event.1002 = {
 	option = {
 		name = me_hidden_imam_event.1002.a
 		trigger = {
-			NOT = { root.faith = faith:ismaili }
+			NOT = { root.rite = rite:ismaili }
 		}
 	}
 	option = {
 		name = me_hidden_imam_event.1002.b
 		trigger = {
-			root.faith = faith:ismaili
+			root.rite = rite:ismaili
 		}
 	}
 	option = {
 		name = me_hidden_imam_event.1002.c
 		trigger = {
-			root.faith = faith:ismaili
+			root.rite = rite:ismaili
 		}
 		
 		if = {
 			limit = {
 				capital_county.faith = faith
 			}
-			capital_county = { set_county_faith = faith:qarmatian }
+			capital_county = { set_county_rite = rite:qarmatian }
 		}
-		show_as_tooltip = { set_character_faith = faith:qarmatian }
+		show_as_tooltip = { set_character_rite = rite:qarmatian }
 		hidden_effect = {
-			set_character_faith_with_conversion = faith:qarmatian
+			set_character_rite_with_conversion = rite:qarmatian
 		}
 		custom_tooltip = {
 			text = ME_ismaili_mahdi_convert_qarmatian_percent
 			every_county = {
 				limit = {
-					faith = faith:ismaili
+					rite = rite:ismaili
 					holder.top_liege = root
 				}
 				random = {
 					chance = 50
-					set_county_faith = faith:qarmatian
+					set_county_rite = rite:qarmatian
 				}
 			}
 		}
@@ -326,27 +326,27 @@ me_hidden_imam_event.1003 = {
 	option = {
 		name = me_hidden_imam_event.1003.a
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
-			add_doctrine = doctrine_pluralism_pluralistic
+		rite:ismaili = {
+			hidden_effect = { remove_rite_doctrine = doctrine_pluralism_righteous }
+			add_rite_doctrine = doctrine_pluralism_pluralistic
 		}
 		trigger_event = me_hidden_imam_event.1004
 	}
 	option = {
 		name = me_hidden_imam_event.1003.b
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
-			add_doctrine = doctrine_pluralism_righteous
+		rite:ismaili = {
+			hidden_effect = { remove_rite_doctrine = doctrine_pluralism_righteous }
+			add_rite_doctrine = doctrine_pluralism_righteous
 		}
 		trigger_event = me_hidden_imam_event.1004
 	}
 	option = {
 		name = me_hidden_imam_event.1003.c
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = doctrine_pluralism_righteous }
-			add_doctrine = doctrine_pluralism_fundamentalist
+		rite:ismaili = {
+			hidden_effect = { remove_rite_doctrine = doctrine_pluralism_righteous }
+			add_rite_doctrine = doctrine_pluralism_fundamentalist
 		}
 		trigger_event = me_hidden_imam_event.1004
 	}
@@ -359,15 +359,15 @@ me_hidden_imam_event.1004 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_pluralistic } }
+				trigger = { rite:ismaili = { rite_has_doctrine = doctrine_pluralism_pluralistic } }
 				desc = me_hidden_imam_event.1004.pluralistic
 			}
 			triggered_desc = {
-				trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_righteous } }
+				trigger = { rite:ismaili = { rite_has_doctrine = doctrine_pluralism_righteous } }
 				desc = me_hidden_imam_event.1004.righteous
 			}
 			triggered_desc = {
-				trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_fundamentalist } }
+				trigger = { rite:ismaili = { rite_has_doctrine = doctrine_pluralism_fundamentalist } }
 				desc = me_hidden_imam_event.1004.fundamentalist
 			}
 		}
@@ -384,28 +384,28 @@ me_hidden_imam_event.1004 = {
 	option = {
 		name = me_hidden_imam_event.1004.a
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = islam_secondary_group_shia_orthodox_doctrine }
-			add_doctrine = islam_secondary_group_shia_batriya_doctrine
+		rite:ismaili = {
+			hidden_effect = { remove_rite_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+			add_rite_doctrine = islam_secondary_group_shia_batriya_doctrine
 		}
 		trigger_event = me_hidden_imam_event.1005
 	}
 	option = {
 		name = me_hidden_imam_event.1004.b
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = islam_secondary_group_shia_orthodox_doctrine }
-			add_doctrine = islam_secondary_group_shia_orthodox_doctrine
+		rite:ismaili = {
+			hidden_effect = { remove_rite_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+			add_rite_doctrine = islam_secondary_group_shia_orthodox_doctrine
 		}
 		trigger_event = me_hidden_imam_event.1005
 	}
 	option = {
 		name = me_hidden_imam_event.1004.c
-		trigger = { faith:ismaili = { has_doctrine = doctrine_pluralism_fundamentalist } }
+		trigger = { rite:ismaili = { rite_has_doctrine = doctrine_pluralism_fundamentalist } }
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = islam_secondary_group_shia_orthodox_doctrine }
-			add_doctrine = islam_secondary_group_shia_puritanical_doctrine
+		rite:ismaili = {
+			hidden_effect = { remove_rite_doctrine = islam_secondary_group_shia_orthodox_doctrine }
+			add_rite_doctrine = islam_secondary_group_shia_puritanical_doctrine
 		}
 		trigger_event = me_hidden_imam_event.1005
 	}
@@ -418,15 +418,15 @@ me_hidden_imam_event.1005 = {
 	desc = {
 		first_valid = {
 			triggered_desc = {
-				trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_batriya_doctrine } }
+				trigger = { rite:ismaili = { rite_has_doctrine = islam_secondary_group_shia_batriya_doctrine } }
 				desc = me_hidden_imam_event.1005.batriya
 			}
 			triggered_desc = {
-				trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_orthodox_doctrine } }
+				trigger = { rite:ismaili = { rite_has_doctrine = islam_secondary_group_shia_orthodox_doctrine } }
 				desc = me_hidden_imam_event.1005.orthodox
 			}
 			triggered_desc = {
-				trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_puritanical_doctrine } }
+				trigger = { rite:ismaili = { rite_has_doctrine = islam_secondary_group_shia_puritanical_doctrine } }
 				desc = me_hidden_imam_event.1005.puritanical
 			}
 		}
@@ -443,37 +443,37 @@ me_hidden_imam_event.1005 = {
 	option = {
 		name = me_hidden_imam_event.1005.a
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
-			add_doctrine = tenet_mendicant_preachers
+		rite:ismaili = {
+			hidden_effect = { remove_rite_tenet = tenet_false_conversion_sanction }
+			add_rite_tenet = tenet_mendicant_preachers
 		}
 		trigger_event = me_hidden_imam_event.1006
 	}
 	option = {
 		name = me_hidden_imam_event.1005.b
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
-			add_doctrine = tenet_false_conversion_sanction
+		rite:ismaili = {
+			hidden_effect = { remove_rite_tenet = tenet_false_conversion_sanction }
+			add_rite_tenet = tenet_false_conversion_sanction
 		}
 		trigger_event = me_hidden_imam_event.1006
 	}
 	option = {
 		name = me_hidden_imam_event.1005.c
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
-			add_doctrine = tenet_warmonger
+		rite:ismaili = {
+			hidden_effect = { remove_rite_tenet = tenet_false_conversion_sanction }
+			add_rite_tenet = tenet_warmonger
 		}
 		trigger_event = me_hidden_imam_event.1006
 	}
 	option = {
 		name = me_hidden_imam_event.1005.d
-		trigger = { faith:ismaili = { has_doctrine = islam_secondary_group_shia_puritanical_doctrine } }
+		trigger = { rite:ismaili = { rite_has_doctrine = islam_secondary_group_shia_puritanical_doctrine } }
 		
-		faith:ismaili = {
-			hidden_effect = { remove_doctrine = tenet_false_conversion_sanction }
-			add_doctrine = tenet_puritanical_islam
+		rite:ismaili = {
+			hidden_effect = { remove_rite_tenet = tenet_false_conversion_sanction }
+			add_rite_tenet = tenet_puritanical_islam
 		}
 		trigger_event = me_hidden_imam_event.1006
 	}

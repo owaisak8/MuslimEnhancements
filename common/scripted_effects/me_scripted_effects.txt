@@ -1,95 +1,207 @@
 ﻿### Startup effects
 me_add_doctrine_startup_effect = {
-	if = {
-		limit = { # Double-check to make certain this has not already happened
-			NOT = { exists = global_var:me_flag_add_doctrine }	
-		}
-		set_global_variable = { # Add global variable to prevent this from happening more than once
-			name = me_flag_add_doctrine
-			value = yes
-		}
-		every_religion_global = {
-			every_faith = {
-				## Add intoxication crime doctrine to faiths
-				if = {
-					limit = { 
-						NOR = { 
-							religion_tag = islam_religion
-							religion_tag = jainism_religion
-							trait_is_sin = drunkard ## Just incase any modded faith has drunkard as a sin
-							this = faith:zurvanism # Behafardism
-							this = faith:sabianism
-							this = faith:mandeaism 
-							this = faith:priscillianism
-							this = faith:bogomilist
-							has_doctrine = doctrine_me_intoxication_accepted
-							has_doctrine = doctrine_me_intoxication_shunned
-							has_doctrine = doctrine_me_intoxication_crime
-							has_doctrine = doctrine_me_intoxication_virtuous
-						} 
-					}
-					add_doctrine = doctrine_me_intoxication_accepted
-				}
-				else_if = {
-					limit = { 
-						OR = {
-							trait_is_sin = drunkard ## Just incase any modded faith has drunkard as a sin
-							this = faith:sabianism
-							this = faith:mandeaism 
-							this = faith:priscillianism
-							this = faith:bogomilist
-							religion_tag = jainism_religion
-							
-						}
-						NOR = {
-							has_doctrine = doctrine_me_intoxication_accepted
-							has_doctrine = doctrine_me_intoxication_shunned
-							has_doctrine = doctrine_me_intoxication_crime
-							has_doctrine = doctrine_me_intoxication_virtuous
-						}
-					}
-					add_doctrine = doctrine_me_intoxication_shunned
-				}
-#				else_if = { #Placeholder incase it is needed to give a faith the crime doctine
-#					limit = { 
-#						OR = { 
-#						} 
-#					}
-#					add_doctrine = doctrine_me_intoxication_crime
-#				}
-#				else_if = { #Placeholder incase it is needed to give a faith the virtuous doctine
-#					limit = { 
-#						OR = { 
-#						} 
-#					}
-#					add_doctrine = doctrine_me_intoxication_virtuous
-#				}
-
-				## Add Ablution doctrine to faiths
-				if = {
-					limit = { 
-						NOR = { 
-							religion_tag = islam_religion
-							religion_tag = judaism_religion
-							this = faith:mandeaism
-							has_doctrine = doctrine_me_ablution_handwashing
-							has_doctrine = doctrine_me_ablution_full
-						}
-					}
-					add_doctrine = doctrine_me_ablution_none
-				}
-				else_if = { # Jewish Handwashing
-					limit = { religion_tag = judaism_religion }
-					add_doctrine = doctrine_me_ablution_handwashing
-				}
-				else_if = { # Mandaean Rishama
-					limit = { this = faith:mandeaism }
-					add_doctrine = doctrine_me_ablution_full
-				}
+	# 1.20: doctrines added to a faith only reach its main Rite, so every other Rite of that faith looked divergent.
+	# ME's ablution and affinity doctrines are therefore decided once, for the main Rite, and every other
+	# Rite of the faith that has nothing in a group copies the main Rite's doctrine - so they can never differ, and the
+	# mod adds no divergence of its own. Rites that define their own doctrine (e.g. the Kapalika) keep it.
+	# Safe to run repeatedly; run at game start and yearly (also covers Rites founded during play).
+	every_religion_global = {
+		every_faith = {
+			limit = { exists = main_rite }
+			save_temporary_scope_as = me_doctrine_faith
+			main_rite = {
+				save_temporary_scope_as = me_doctrine_main_rite
+				me_main_rite_doctrines_effect = yes
+			}
+			every_faith_rite = {
+				limit = { NOT = { this = scope:me_doctrine_main_rite } }
+				me_copy_main_rite_doctrines_effect = yes
 			}
 		}
 	}
 }
+
+# Scope: a faith's main Rite; scope:me_doctrine_faith is the faith. Gives it ME's doctrines where it has none.
+me_main_rite_doctrines_effect = {
+	## Ablution
+	if = {
+		limit = {
+			NOR = {
+				rite_has_doctrine = doctrine_me_ablution_none
+				rite_has_doctrine = doctrine_me_ablution_handwashing
+				rite_has_doctrine = doctrine_me_ablution_full
+			}
+		}
+		if = {
+			limit = { scope:me_doctrine_faith = { religion_tag = judaism_religion } }
+			add_rite_doctrine = doctrine_me_ablution_handwashing # Jewish handwashing
+		}
+		else_if = {
+			limit = { scope:me_doctrine_faith = { this = faith:mandaean_faith } }
+			add_rite_doctrine = doctrine_me_ablution_full # Mandaean rishama
+		}
+		else_if = {
+			limit = { scope:me_doctrine_faith = { NOT = { religion_tag = islam_religion } } }
+			add_rite_doctrine = doctrine_me_ablution_none
+		}
+	}
+
+	## Affinal restrictions
+	if = {
+		limit = {
+			NOT = { has_game_rule = me_affinal_doctrines_no }
+			NOR = {
+				rite_has_doctrine = doctrine_me_affinality_fixed_dynastic
+				rite_has_doctrine = doctrine_me_affinality_fixed_extended_family
+				rite_has_doctrine = doctrine_me_affinality_fixed_cousins
+				rite_has_doctrine = doctrine_me_affinality_fixed_close_kin
+				rite_has_doctrine = doctrine_me_affinality_fixed_parental
+				rite_has_doctrine = doctrine_me_affinality_fixed_unrestricted
+			}
+		}
+		if = {
+			limit = {
+				scope:me_doctrine_faith = {
+					OR = {
+						is_in_family = rf_abrahamic
+						is_in_family = rf_sinitic
+					}
+				}
+				NOT = { rite_has_doctrine = doctrine_consanguinity_unrestricted }
+			}
+			add_rite_doctrine = doctrine_me_affinality_fixed_parental
+		}
+		else = {
+			add_rite_doctrine = doctrine_me_affinality_fixed_unrestricted
+		}
+	}
+	if = {
+		limit = {
+			NOT = { has_game_rule = me_affinal_doctrines_no }
+			NOR = {
+				rite_has_doctrine = doctrine_me_affinality_polygamy_dynastic
+				rite_has_doctrine = doctrine_me_affinality_polygamy_extended_family
+				rite_has_doctrine = doctrine_me_affinality_polygamy_cousins
+				rite_has_doctrine = doctrine_me_affinality_polygamy_close_kin
+				rite_has_doctrine = doctrine_me_affinality_polygamy_parental
+				rite_has_doctrine = doctrine_me_affinality_polygamy_unrestricted
+			}
+		}
+		if = {
+			limit = { scope:me_doctrine_faith = { religion_tag = islam_religion } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_close_kin
+		}
+		else_if = {
+			limit = { rite_has_doctrine = doctrine_me_affinality_fixed_parental }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_parental
+		}
+		else = {
+			add_rite_doctrine = doctrine_me_affinality_polygamy_unrestricted
+		}
+	}
+}
+
+# Scope: any other Rite; scope:me_doctrine_main_rite is the faith's main Rite.
+me_copy_main_rite_doctrines_effect = {
+	## Ablution
+	if = {
+		limit = {
+			NOR = {
+				rite_has_doctrine = doctrine_me_ablution_none
+				rite_has_doctrine = doctrine_me_ablution_handwashing
+				rite_has_doctrine = doctrine_me_ablution_full
+			}
+		}
+		if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_ablution_none } }
+			add_rite_doctrine = doctrine_me_ablution_none
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_ablution_handwashing } }
+			add_rite_doctrine = doctrine_me_ablution_handwashing
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_ablution_full } }
+			add_rite_doctrine = doctrine_me_ablution_full
+		}
+	}
+	## Affinal restrictions (permanent)
+	if = {
+		limit = {
+			NOR = {
+				rite_has_doctrine = doctrine_me_affinality_fixed_dynastic
+				rite_has_doctrine = doctrine_me_affinality_fixed_extended_family
+				rite_has_doctrine = doctrine_me_affinality_fixed_cousins
+				rite_has_doctrine = doctrine_me_affinality_fixed_close_kin
+				rite_has_doctrine = doctrine_me_affinality_fixed_parental
+				rite_has_doctrine = doctrine_me_affinality_fixed_unrestricted
+			}
+		}
+		if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_fixed_dynastic } }
+			add_rite_doctrine = doctrine_me_affinality_fixed_dynastic
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_fixed_extended_family } }
+			add_rite_doctrine = doctrine_me_affinality_fixed_extended_family
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_fixed_cousins } }
+			add_rite_doctrine = doctrine_me_affinality_fixed_cousins
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_fixed_close_kin } }
+			add_rite_doctrine = doctrine_me_affinality_fixed_close_kin
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_fixed_parental } }
+			add_rite_doctrine = doctrine_me_affinality_fixed_parental
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_fixed_unrestricted } }
+			add_rite_doctrine = doctrine_me_affinality_fixed_unrestricted
+		}
+	}
+	## Affinal restrictions (while married)
+	if = {
+		limit = {
+			NOR = {
+				rite_has_doctrine = doctrine_me_affinality_polygamy_dynastic
+				rite_has_doctrine = doctrine_me_affinality_polygamy_extended_family
+				rite_has_doctrine = doctrine_me_affinality_polygamy_cousins
+				rite_has_doctrine = doctrine_me_affinality_polygamy_close_kin
+				rite_has_doctrine = doctrine_me_affinality_polygamy_parental
+				rite_has_doctrine = doctrine_me_affinality_polygamy_unrestricted
+			}
+		}
+		if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_polygamy_dynastic } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_dynastic
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_polygamy_extended_family } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_extended_family
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_polygamy_cousins } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_cousins
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_polygamy_close_kin } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_close_kin
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_polygamy_parental } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_parental
+		}
+		else_if = {
+			limit = { scope:me_doctrine_main_rite = { rite_has_doctrine = doctrine_me_affinality_polygamy_unrestricted } }
+			add_rite_doctrine = doctrine_me_affinality_polygamy_unrestricted
+		}
+	}
+}
+
+
 
 me_setup_tributaries_effect = {
 	if = {
@@ -109,21 +221,28 @@ me_setup_tributaries_effect = {
 me_buildings_setup_effect = {
 	if = {
 		limit = { game_start_date >= 867.1.1 }
-		title:b_bagaran.title_province = { add_special_building = etchmiadzin_cathedral_01 }
-		title:b_berkri.title_province = { add_special_building = chapel_dzordzor_01 }
-		title:b_maku.title_province = { add_special_building = monastery_saint_thaddeus_01 set_holding_type = church_holding }
-		title:b_naxcivan.title_province = { add_special_building = monastery_saint_stepanos_01 }
-		title:b_almeria.title_province = { add_special_building_slot = alcazaba_almeria_01 }
-		title:b_sevilla.title_province = { add_special_building_slot = alcazar_seville_01 }
-		title:b_badajoz.title_province = { add_special_building_slot = alcazaba_badajoz_01 }
-		title:b_faro.title_province = { add_special_building = faro_walls_01 }
+		# Armenia
+		title:b_berkri.title_province = { add_special_district = chapel_dzordzor_01_district }
+		title:b_maku.title_province = { add_special_district = monastery_saint_thaddeus_01_district set_holding_type = church_holding }
+		title:b_naxcivan.title_province = { add_special_district = monastery_saint_stepanos_01_district }
+		# Andalusia
+		title:b_almeria.title_province = { add_special_district_slot = alcazaba_almeria_01_district }
+		title:b_sevilla.title_province = { add_special_district_slot = alcazar_seville_01_district }
+		# Badajoz
+		title:b_badajoz.title_province = { add_special_district_slot = alcazaba_badajoz_01_district }
+		title:b_faro.title_province = { add_special_district = faro_walls_01_district }
+		# Valencia
+		title:c_alicante.title_province = { add_special_district = fort_alicante_01_district }
+		# Antalya (no ME history file for Anatolia; tier 1 at every start)
+		title:b_attaleia.title_province = { add_special_district_slot = antalya_port_01_district add_special_district = antalya_port_01_district }
 	}
 	if = {
 		limit = { game_start_date >= 1066.1.1 }
-		title:b_bagaran.title_province = { add_special_building = etchmiadzin_cathedral_01 }
-		title:b_almeria.title_province = { add_special_building = alcazaba_almeria_01 }
-		title:b_sevilla.title_province = { add_special_building = alcazar_seville_01 }
-		title:b_badajoz.title_province = { add_special_building = alcazaba_badajoz_01 }
+		# Andalusia
+		title:b_almeria.title_province = { add_special_district = alcazaba_almeria_01_district }
+		title:b_sevilla.title_province = { add_special_district = alcazar_seville_01_district }
+		# Badajoz
+		title:b_badajoz.title_province = { add_special_district = alcazaba_badajoz_01_district }
 	}
 }
 
@@ -179,7 +298,7 @@ me_shewa_setup_effect = {
 		}
 	}
 	title:c_dawaro.holder = {
-			change_liege = {
+		change_liege = {
 			liege = title:d_showa.holder
 			change = scope:change
 		}
@@ -194,95 +313,517 @@ me_shewa_setup_effect = {
 
 shia_imamates_startup_effect = { #Made to keep the history files of these titles gapless
 	title:d_shiite.holder = { destroy_title = title:d_shiite }
-	title:d_imami.holder = { destroy_title = title:d_imami }
 	title:d_laamp_twelver_caliph.holder = { destroy_title = title:d_laamp_twelver_caliph }
 	character:33920 = { # Hussayn 'Abdullah ar-Radi'
 		title:d_laamp_sevener_caliph = { set_title_name = d_hidden_imamate }
-		change_government = landless_adventurer_government
+		create_landless_adventurer_title_effect = {
+			REASON = flag:voluntary
+			FLAVOR_CHAR = character:33920
+		}
+		destroy_title = scope:new_title
 	}
 
-	character:163025 = { # Ali 'al-Hadi'
-		death = { death_reason = imam_hide}
+	# ME: the Ja'fari Imams now hold the Twelver Imamate in person (Imam Ali al-Hadi in 867), and lead the faith as
+	# Spiritual heads until the Major Occultation in 941. The rest of the timeline runs from me_twelver_imams_867
+	# (common/on_action/me_twelver_mahdi_on_actions.txt).
+	# Safety net: make sure Imam Ali al-Hadi holds the Imamate under the Imams' own government.
+	character:163025 ?= { save_scope_as = new_imam }
+	me_twelver_pass_imamate_effect = yes
+}
+
+# Scope: none. Sets the Ja'fari Rite's Head of Faith doctrine (the group can hold only one, so the old one is removed first).
+me_twelver_set_head_doctrine_effect = {
+	rite:imami = {
+		if = {
+			limit = { NOT = { rite_has_doctrine = $DOCTRINE$ } }
+			if = {
+				limit = { rite_has_doctrine = doctrine_ghaib_head }
+				remove_rite_doctrine = doctrine_ghaib_head
+			}
+			if = {
+				limit = { rite_has_doctrine = doctrine_spiritual_head }
+				remove_rite_doctrine = doctrine_spiritual_head
+			}
+			if = {
+				limit = { rite_has_doctrine = doctrine_temporal_head }
+				remove_rite_doctrine = doctrine_temporal_head
+			}
+			if = {
+				limit = { rite_has_doctrine = doctrine_no_head }
+				remove_rite_doctrine = doctrine_no_head
+			}
+			add_rite_doctrine = $DOCTRINE$
+		}
+	}
+}
+
+# Scope: an Imam who holds the Imamate. Beyond disease and beyond marriage; his portrait never shows sickbed clothes.
+me_imam_protection_effect = {
+	if = {
+		limit = { NOT = { has_character_flag = immune_to_disease } }
+		add_character_flag = immune_to_disease # vanilla can_contract_disease_trait_scope_trigger
+	}
+	if = {
+		limit = { has_character_flag = use_sickness_clothes }
+		remove_character_flag = use_sickness_clothes
+	}
+	if = {
+		limit = { NOT = { has_variable = can_not_marry } }
+		set_variable = { name = can_not_marry value = yes }
+	}
+	if = { # what he thinks of anyone is not shown (gui/shared/portraits.gui)
+		limit = { NOT = { has_variable = me_hide_opinion } }
+		set_variable = { name = me_hide_opinion value = yes }
+	}
+}
+
+# Scope: none. Gives the Twelver Imamate to the character saved as scope:new_imam.
+me_twelver_pass_imamate_effect = {
+	if = {
+		limit = {
+			exists = scope:new_imam
+			scope:new_imam = { is_alive = yes }
+		}
+		if = {
+			limit = { NOT = { title:d_imami.holder ?= scope:new_imam } }
+			create_title_and_vassal_change = {
+				type = returned
+				save_scope_as = change
+				add_claim_on_loss = no
+			}
+			title:d_imami = {
+				change_title_holder = {
+					holder = scope:new_imam
+					change = scope:change
+				}
+			}
+			resolve_title_and_vassal_change = scope:change
+		}
+		scope:new_imam = {
+			if = {
+				limit = { NOT = { has_character_flag = me_imam_flag } }
+				add_character_flag = me_imam_flag
+			}
+			if = {
+				limit = { NOT = { has_government = me_imamate_government } }
+				change_government = me_imamate_government
+			}
+			if = { # the Mahdi has no successor
+				limit = {
+					has_trait = me_twelver_mahdi
+					NOT = { has_realm_law = me_imamate_occultation_law }
+				}
+				add_realm_law_skip_effects = me_imamate_occultation_law
+			}
+			else_if = {
+				limit = {
+					NOT = { has_trait = me_twelver_mahdi }
+					NOT = { has_realm_law = me_imamate_succession_law }
+				}
+				add_realm_law_skip_effects = me_imamate_succession_law
+			}
+			me_imam_protection_effect = yes
+		}
+	}
+}
+
+
+### The Ja'fari Imamate, 867-941 (an 867 game; see me_twelver_imams_867)
+
+# 21 June 868 (26 Jumada al-Thani 254 AH): Imam Ali al-Hadi dies at Samarra; the Imamate passes to his son al-Hasan al-Askari
+me_twelver_death_of_al_hadi_effect = {
+	character:163025 ?= {
+		if = {
+			limit = { is_alive = yes }
+			death = { death_reason = death_me_hadi }
+		}
+		if = {
+			limit = { NOT = { has_trait = saint } }
+			add_trait = saint
+		}
+	}
+	character:163026 ?= { save_scope_as = new_imam }
+	me_twelver_pass_imamate_effect = yes
+}
+
+# 868: the birth of the Twelfth Imam to al-Hasan al-Askari and Narjis at Samarra
+me_twelver_birth_of_al_mahdi_effect = {
+	if = {
+		limit = { NOT = { exists = global_var:twelver_mahdi_born } }
+		create_character = {
+			age = 0
+			name = "Muhammad"
+			gender = male
+			rite = rite:imami
+			culture = culture:bedouin
+			father = character:163026 # Hassan 'al-Askari'
+			mother = character:00004447 # Narjis
+			dynasty_house = character:163026.house # Fatimid
+			location = title:c_samarra.title_province
+
+			trait = sayyid
+			trait = intellect_good_3
+			trait = just
+			trait = compassionate
+			trait = patient
+			trait = saint
+			trait = me_twelver_mahdi
+
+			random_traits = no
+			save_scope_as = twelver_mahdi
+		}
+		scope:twelver_mahdi = { me_twelver_mahdi_setup_effect = yes }
+		set_global_variable = {
+			name = twelver_mahdi_born
+			value = scope:twelver_mahdi
+		}
+	}
+}
+
+# 1 January 874 (8 Rabi' al-Awwal 260 AH): Imam al-Hasan al-Askari dies at Samarra; the Minor Occultation of his son begins
+me_twelver_minor_occultation_effect = {
+	character:163026 ?= {
+		if = {
+			limit = { is_alive = yes }
+			death = { death_reason = death_me_askari }
+		}
+		if = {
+			limit = { NOT = { has_trait = saint } }
+			add_trait = saint
+		}
+	}
+	twelver_mahdi_appears_effect = yes
+}
+
+# 941 (Sha'ban 329 AH, the death of the fourth deputy, Ali ibn Muhammad al-Samarri): the Major Occultation begins
+me_twelver_major_occultation_effect = {
+	# From now on the Head of Faith doctrine is shown as Ghaib rather than Imamate (common/religion/doctrine_types/me_doctrine_ghaib.txt)
+	set_global_variable = { name = me_major_occultation value = yes }
+	twelver_mahdi_appears_again_effect = yes
+}
+
+# ME: Imam Muhammad al-Mahdi, the Twelfth Imam, is alive in occultation (ghayba). He holds the Imamate (d_imami) as the
+# perpetual Head of Faith of the Ja'faris, owns no land, and is shown behind his shield in portraits.
+# Contributed (Downloads/mahdi fixes) and adapted. Uses the Mahdi from history (character 163027) when he is alive,
+# otherwise (867 start, or if ever lost) creates him, then seats him on the Imamate.
+# Scope: none. Result: scope:twelver_mahdi
+me_twelver_mahdi_install_effect = {
+	if = {
+		limit = {
+			exists = global_var:twelver_mahdi_born
+			global_var:twelver_mahdi_born = { is_alive = yes }
+		}
+		global_var:twelver_mahdi_born = { save_scope_as = twelver_mahdi }
+	}
+	else_if = {
+		limit = {
+			exists = character:163027
+			character:163027 = { is_alive = yes }
+		}
+		character:163027 = { save_scope_as = twelver_mahdi }
+	}
+	else = {
+		create_character = {
+			age = { value = current_year subtract = 868 } # born 868
+			name = "Muhammad"
+			gender = male
+			rite = rite:imami
+			culture = culture:bedouin
+			father = character:163026 # Hassan 'al-Askari'
+			mother = character:00004447 # Narjis
+			dynasty_house = character:163026.house # Fatimid
+			location = title:c_samarra.title_province
+
+			trait = sayyid
+			trait = intellect_good_3
+			trait = education_learning_4
+			trait = just
+			trait = compassionate
+			trait = patient
+			trait = saint
+			trait = me_twelver_mahdi
+
+			random_traits = no
+			save_scope_as = twelver_mahdi
+		}
 	}
 
-	character:163026 = { # Hassan 'al-Askari'
-		death = { death_reason = imam_hide}
-	}
-	character:00004447 = { # Narjis
-		death = { death_reason = imam_hide}
-	}
+	scope:twelver_mahdi = { save_scope_as = new_imam }
+	me_twelver_pass_imamate_effect = yes
 
-	trigger_event = {
-		id = twelver_imam_event.0001
-		days = 2555 # 7 years (1 Jan 874)
+	scope:twelver_mahdi = {
+		me_twelver_mahdi_setup_effect = yes
+		set_global_variable = {
+			name = twelver_mahdi
+			value = this
+		}
+	}
+}
+
+# Scope: the Mahdi. Name, title and marks; remembers him globally.
+# Shown as "Imam Muhammad al-Mahdi": the "Imam" title comes from me_imam_flag with the saint trait (see me_title_flavorization.txt).
+me_twelver_mahdi_setup_effect = {
+	if = {
+		limit = { NOT = { has_trait = me_twelver_mahdi } }
+		add_trait = me_twelver_mahdi
+	}
+	if = {
+		limit = { NOT = { has_trait = saint } }
+		add_trait = saint
+	}
+	if = {
+		limit = { NOT = { has_character_flag = me_imam_flag } }
+		add_character_flag = me_imam_flag
+	}
+	# Shown as: Imam Muhammad al-Mahdi - "Imam" from me_imam_flag, "al-Mahdi" as his nickname.
+	change_first_name = Muhammad
+	give_nickname = nick_me_al_mahdi_twelver
+	# His age stays true to his birth in 868 - the me_twelver_mahdi trait keeps him alive.
+	me_imam_protection_effect = yes
+}
+
+# Game start (any start date): starts that already have the Mahdi alive in history (1066, 1178) get him set up here;
+# the 867 start has him appear in 874 through twelver_imam_event.0001.
+me_twelver_mahdi_startup_effect = {
+	if = {
+		limit = { current_date >= 941.5.15 }
+		set_global_variable = { name = me_major_occultation value = yes }
+	}
+	if = {
+		limit = {
+			exists = character:163027
+			character:163027 = { is_alive = yes }
+		}
+		me_twelver_mahdi_install_effect = yes
+	}
+}
+
+# Yearly safety net: if the Mahdi or his Imamate is somehow lost, he is restored.
+me_twelver_mahdi_yearly_effect = {
+	if = {
+		limit = {
+			exists = global_var:twelver_mahdi
+			OR = {
+				global_var:twelver_mahdi = { is_alive = no }
+				NOT = { title:d_imami.holder ?= global_var:twelver_mahdi }
+			}
+		}
+		me_twelver_mahdi_install_effect = yes
 	}
 }
 
 twelver_mahdi_appears_effect = {
+	me_twelver_mahdi_install_effect = yes
 
-	create_character = {
-		age = 6
-		name = "Muhammad"
-		gender = male
-		faith = faith:imami
-		culture = culture:bedouin
-		father = character:163026 # Hassan 'al-Askari'
-		mother = character:00004447 # Narjis
-		dynasty_house = character:163026.house # Fatimid
-		location = title:c_samarra.title_province
-
-		trait = sayyid
-		trait = patient
-		trait = intellect_good_3
-		trait = calm
-		trait = zealous
-		trait = diligent
-		trait = generous
-
-		random_traits = no
-		save_scope_as = twelver_mahdi
-	}
-
-	scope:twelver_mahdi = { give_nickname = nick_me_al_mahdi_twelver }
-
-	create_title_and_vassal_change = {
-		type = returned
-		save_scope_as = change
-		add_claim_on_loss = no
-	}
-	title:d_imami = {
-		change_title_holder = {
-			holder = scope:twelver_mahdi
-			change = scope:change
-		}
-	}
-	resolve_title_and_vassal_change = scope:change
-
-	scope:twelver_mahdi = {
-		destroy_title = title:d_imami
-	}
-	scope:twelver_mahdi = {
-		death = { death_reason = death_mahdi}
-	}
-
-	every_player = {
-		limit = { always = yes }
-		trigger_event = { # Beginning of the Major Occulation
-			id = twelver_imam_event.0003
-			days = 24455 # 67 years (941)
-		}
-	}
-	every_player = { # Inform Twelver players 
+	every_player = { # Inform Twelver players
 		limit = { faith.religious_head_title = title:d_imami }
 		trigger_event = twelver_imam_event.0002
 	}
 }
 
 twelver_mahdi_appears_again_effect = {
-	scope:twelver_mahdi = { set_age = 73 }
-	every_player = { # Inform Twelver players 
+	# ME: the Mahdi is no longer aged and killed off here - he stays in the Major Occultation and keeps the Imamate.
+	if = {
+		limit = { exists = global_var:twelver_mahdi }
+		global_var:twelver_mahdi = { save_scope_as = twelver_mahdi }
+	}
+	every_player = { # Inform Twelver players
 		limit = { faith.religious_head_title = title:d_imami }
 		trigger_event = twelver_imam_event.0004
+	}
+}
+
+### Guards for the Twelver Imamate (called yearly, and a day after the Imam gains any title)
+# Scope: none. If the Ja'fari rite has lost its Head of Faith doctrine, it gets it back, so that the Imamate stays valid.
+me_twelver_imamate_guard_effect = {
+	if = {
+		limit = { rite:imami = { NOT = { rite_has_doctrine = doctrine_ghaib_head } } }
+		me_twelver_set_head_doctrine_effect = { DOCTRINE = doctrine_ghaib_head }
+	}
+	title:d_imami.holder ?= { me_imam_return_land_effect = yes }
+}
+
+# Scope: an Imam (me_imam_flag). The Imam holds no land: whatever reaches him by inheritance, election, a faction or a
+# grant goes to the title's de jure liege, failing that to the Imam's own liege, failing that to a new local ruler.
+# Duchies and above that nobody can take are destroyed.
+me_imam_return_land_effect = {
+	if = {
+		limit = {
+			has_character_flag = me_imam_flag
+			any_held_title = {
+				tier >= tier_county
+				is_landless_type_title = no
+				NOT = { this = title:d_imami }
+			}
+		}
+		save_scope_as = me_landed_imam
+		every_held_title = {
+			limit = {
+				tier >= tier_county
+				is_landless_type_title = no
+				NOT = { this = title:d_imami }
+			}
+			save_scope_as = me_imam_land
+			if = {
+				limit = {
+					exists = de_jure_liege.holder
+					NOT = { de_jure_liege.holder = scope:me_landed_imam }
+				}
+				de_jure_liege.holder = { save_scope_as = me_imam_land_recipient }
+			}
+			else_if = {
+				limit = {
+					exists = de_jure_liege.de_jure_liege.holder
+					NOT = { de_jure_liege.de_jure_liege.holder = scope:me_landed_imam }
+				}
+				de_jure_liege.de_jure_liege.holder = { save_scope_as = me_imam_land_recipient }
+			}
+			else_if = {
+				limit = {
+					exists = scope:me_landed_imam.liege
+					NOT = { scope:me_landed_imam.liege = scope:me_landed_imam }
+				}
+				scope:me_landed_imam.liege = { save_scope_as = me_imam_land_recipient }
+			}
+			else_if = {
+				limit = { tier = tier_county }
+				create_character = {
+					location = scope:me_imam_land.title_province
+					culture = scope:me_imam_land.culture
+					faith = scope:me_imam_land.faith
+					gender = male
+					age = { 25 45 }
+					save_scope_as = me_imam_land_recipient
+				}
+			}
+			if = {
+				limit = { exists = scope:me_imam_land_recipient }
+				create_title_and_vassal_change = {
+					type = returned
+					save_scope_as = change
+					add_claim_on_loss = no
+				}
+				change_title_holder = {
+					holder = scope:me_imam_land_recipient
+					change = scope:change
+				}
+				resolve_title_and_vassal_change = scope:change
+				clear_saved_scope = me_imam_land_recipient
+			}
+			else = {
+				scope:me_landed_imam = { destroy_title = scope:me_imam_land }
+			}
+		}
+		# back under the Imams' own government
+		save_scope_as = new_imam
+		me_twelver_pass_imamate_effect = yes
+	}
+}
+
+### Hijri Calendar Scripted Effects ###
+
+# Initialize the Hijri date based on the game's start date
+# Reference dates computed using the tabular Islamic calendar (epoch JDN 1948438):
+#   867.1.1   = 17 Dhu al-Hijjah 252 AH
+#   1066.9.15 = 16 Shawwal 458 AH
+#   1178.1.1  = 3 Rajab 573 AH
+#   1337.1.1  = 20 Jumada al-Ula 737 AH
+me_initialize_hijri_date_effect = {
+	# Only initialize once
+	if = {
+		limit = {
+			NOT = { exists = global_var:me_hijri_year }
+		}
+
+		# 867 start date: 17 Dhu al-Hijjah 252 AH
+		if = {
+			limit = { game_start_date = 867.1.1 }
+			set_global_variable = { name = me_hijri_year value = 252 }
+			set_global_variable = { name = me_hijri_month value = 12 }
+			set_global_variable = { name = me_hijri_day value = 17 }
+		}
+		# 1066 start date: 16 Shawwal 458 AH
+		else_if = {
+			limit = { game_start_date = 1066.9.15 }
+			set_global_variable = { name = me_hijri_year value = 458 }
+			set_global_variable = { name = me_hijri_month value = 10 }
+			set_global_variable = { name = me_hijri_day value = 16 }
+		}
+		# 1178 start date: 3 Rajab 573 AH
+		else_if = {
+			limit = { game_start_date = 1178.1.1 }
+			set_global_variable = { name = me_hijri_year value = 573 }
+			set_global_variable = { name = me_hijri_month value = 7 }
+			set_global_variable = { name = me_hijri_day value = 3 }
+		}
+		# 1337 start date: 20 Jumada al-Ula 737 AH
+		else_if = {
+			limit = { game_start_date = 1337.1.1 }
+			set_global_variable = { name = me_hijri_year value = 737 }
+			set_global_variable = { name = me_hijri_month value = 5 }
+			set_global_variable = { name = me_hijri_day value = 20 }
+		}
+		# Fallback for any other start date: approximate from formula
+		else = {
+			set_global_variable = {
+				name = me_hijri_year
+				value = me_hijri_year_from_formula
+			}
+			set_global_variable = { name = me_hijri_month value = 1 }
+			set_global_variable = { name = me_hijri_day value = 1 }
+		}
+	}
+}
+
+# Advance the Hijri calendar by exactly 1 day (called daily via on_action)
+# Hijri month lengths:
+#   Odd months (1,3,5,7,9,11): 30 days
+#   Even months (2,4,6,8,10): 29 days
+#   Month 12: 29 days normally, 30 days in leap years
+#   Leap years in 30-year cycle: 2, 5, 7, 10, 13, 16, 18, 21, 24, 26, 29
+me_advance_hijri_day_effect = {
+	if = {
+		limit = { exists = global_var:me_hijri_year }
+
+		# Increment day by 1
+		change_global_variable = { name = me_hijri_day add = 1 }
+
+		# Check overflow: odd month (30 days), day hit 31
+		if = {
+			limit = {
+				me_hijri_month_is_odd >= 1
+				me_hijri_day_display >= 31
+			}
+			set_global_variable = { name = me_hijri_day value = 1 }
+			change_global_variable = { name = me_hijri_month add = 1 }
+		}
+		# Check overflow: month 12 in leap year (30 days), day hit 31
+		else_if = {
+			limit = {
+				me_hijri_month_value >= 12
+				me_hijri_month_value < 13
+				me_hijri_leap_check < 11
+				me_hijri_day_display >= 31
+			}
+			set_global_variable = { name = me_hijri_day value = 1 }
+			change_global_variable = { name = me_hijri_month add = 1 }
+		}
+		# Check overflow: even month (29 days), day hit 30
+		else_if = {
+			limit = {
+				me_hijri_month_is_odd < 1
+				me_hijri_day_display >= 30
+			}
+			set_global_variable = { name = me_hijri_day value = 1 }
+			change_global_variable = { name = me_hijri_month add = 1 }
+		}
+
+		# Year rollover: month exceeded 12
+		if = {
+			limit = { me_hijri_month_value >= 13 }
+			set_global_variable = { name = me_hijri_month value = 1 }
+			change_global_variable = { name = me_hijri_year add = 1 }
+		}
 	}
 }
 
@@ -339,9 +880,9 @@ me_byzantine_dejure_effect = {
 
 me_calabria_bari_effect = {
 	create_title_and_vassal_change = {
-	type = conquest
-	save_scope_as = bariot_change
-	add_claim_on_loss = yes
+		type = conquest
+		save_scope_as = bariot_change
+		add_claim_on_loss = yes
 	}
 	title:c_reggio_calabria = {
 		change_title_holder = {
@@ -360,48 +901,8 @@ me_calabria_bari_effect = {
 	resolve_title_and_vassal_change = scope:bariot_change
 }
 
-ME_remove_adventerers_fic_effect = {
-	if = {
-		limit = { title:d_laamp_me_umayyad_fic_1.holder ?= { is_ai = yes } }
-		title:d_laamp_me_umayyad_fic_1.holder  = { destroy_title = title:d_laamp_me_umayyad_fic_1 }
-		character:me_umayyad_fic_001 = {
-			set_house = house:me_removed_house
-			set_father = character:me_ifrinid_001_dna_clone #Placeholder
-			death = { death_reason = death_disappearance }
-		}
-		character:me_umayyad_fic_002 = {
-			set_house = house:me_removed_house
-			death = { death_reason = death_disappearance }
-		}
-	}
-	
-	if = {
-		limit = { title:d_laamp_me_umayyad_fic_2.holder ?= { is_ai = yes } }
-		title:d_laamp_me_umayyad_fic_2.holder  = { destroy_title = title:d_laamp_me_umayyad_fic_2 }
-		character:me_umayyad_fic_001 = {
-			set_house = house:me_removed_house
-			set_father = character:me_ifrinid_001_dna_clone #Placeholder
-		}
-		character:me_umayyad_fic_002 = {
-			set_house = house:me_removed_house
-		}
-		character:me_umayyad_fic_003 = {
-			set_house = house:me_removed_house
-		}
-		character:me_umayyad_fic_004 = {
-			set_house = house:me_removed_house
-		}
-		character:me_umayyad_fic_005 = {
-			set_house = house:me_removed_house
-			death = { death_reason = death_disappearance }
-		}
-		character:me_umayyad_fic_006 = {
-			set_house = house:me_removed_house
-			death = { death_reason = death_disappearance }
-		}
-		character:3208.house = { set_house_head = character:3208 }
-	}
-}
+#ME_remove_adventerers_fic_effect = {
+#}
 
 ME_remove_adventerers_egg_effect = {
 	if = {
@@ -428,6 +929,40 @@ ME_remove_adventerers_egg_effect = {
 	}
 }
 
+me_hchar_character_fix = {
+	if = {
+		limit = { NOT = { has_game_rule = no_historical_characters } }
+		if = {
+			limit = { game_start_date = 867.1.1 }
+			character:me_mashriqi_hchar_002 = { death = { death_reason = death_disappearance } } # Ibn Fadlan's father
+			character:me_qarmatian_004 = { death = { death_reason = death_disappearance } } # Zakarawayh ibn Mihrawayh
+			character:me_qarmatian_008 = { death = { death_reason = death_disappearance } } # Ibn al-Fadl al-Jayshani
+			character:me_mashriqi_hchar_006 = { death = { death_reason = death_disappearance } } # Ibn Hawshab
+			character:me_mashriqi_hchar_012 = { death = { death_reason = death_disappearance } } # al-Mutanabbi's grandfather
+			character:me_mashriqi_hchar_041 = { death = { death_reason = death_disappearance } } # al-Battani
+			character:me_mashriqi_hchar_042 = { death = { death_reason = death_disappearance } } # al-Battani's father
+			character:me_hamdanid_002 = { death = { death_reason = death_disappearance } } # Ibn al-Ha'ik's father
+			character:me_hamdanid_003 = { death = { death_reason = death_disappearance } } # Ibn al-Ha'ik's grandfather
+		}
+		if = {
+			limit = { game_start_date = 1066.9.15 }
+			character:me_mashriqi_hchar_014 = { death = { death_reason = death_disappearance } } # al-Hariri al-Basri
+			character:me_mashriqi_hchar_017 = { death = { death_reason = death_disappearance } } # al-Hariri al-Basri's father
+			character:me_mashriqi_hchar_024 = { death = { death_reason = death_disappearance } } # Ibn at-Tilmidh's father
+			character:me_tujibid_018 = { death = { death_reason = death_disappearance } } # Ibn Bajjah's father
+			character:me_ibn_tufayl_001 = { death = { death_reason = death_disappearance } } # Ibn Tufayl's father
+			character:me_ibn_tufayl_002 ?= { death = { death_reason = death_disappearance } } # Ibn Tufayl's grandfather
+		}
+		if = {
+			limit = { game_start_date = 1178.10.1 }
+			character:me_hannawid_004 = { death = { death_reason = death_disappearance } } # Ibn Hanna's ancestor
+			character:me_mashriqi_hchar_027 = { death = { death_reason = death_disappearance } } # ad-Dakhwar
+			character:me_mashriqi_hchar_028 = { death = { death_reason = death_disappearance } } # ad-Dakhwar's father
+			character:me_andalusian_hchar_006 = { death = { death_reason = death_disappearance } } # Ibn al-Khatib's ancestor
+		}
+	}
+}
+
 me_RICE_effect = {
 	# Replace ME's version of Ibn as-Sufi with RICE's
 	character:RICE_upper_egypt_013 ?= {
@@ -435,7 +970,7 @@ me_RICE_effect = {
 			limit = { is_alive = yes }
 			set_house = character:me_hashimid_046.house
 			set_father = character:me_hashimid_045
-			set_character_faith = faith:zayidi
+			set_character_rite = rite:zayidi
 			add_trait = quraysh
 			add_courtier = character:me_hashimid_047
 			add_courtier = character:me_hashimid_048
@@ -445,7 +980,7 @@ me_RICE_effect = {
 				set_father = character:me_ifrinid_001_dna_clone #Placeholder
 				death = { death_reason = death_disappearance }
 			}
-			character:RICE_upper_egypt_014 ?= { set_character_faith = faith:zayidi }
+			character:RICE_upper_egypt_014 ?= { set_character_rite = rite:zayidi }
 			character:me_egyptian_004 = { death = { death_reason = death_disappearance } }
 			
 			### Banu al-Mudabbir ###
@@ -469,10 +1004,10 @@ me_RICE_effect = {
 				set_culture = culture:levantine
 				give_nickname = nick_me_ibn_al_dayah
 				remove_trait = deceitful
-				add_trait = scholar
+				add_trait = erudite
 			}
 			character:RICE_upper_egypt_033 = {
-				set_house = character:me_ifrinid_001_dna_clone.house
+				set_house = house:me_removed_house
 				set_father = character:me_ifrinid_001_dna_clone
 				death = { death_reason = death_disappearance }
 			}
@@ -500,7 +1035,7 @@ me_RICE_effect = {
 			
 			### Ibn Abd Kan ###
 			character:me_persian_011 = {
-				set_house = character:me_ifrinid_001_dna_clone.house
+				set_house = house:me_removed_house
 				set_father = character:me_ifrinid_001_dna_clone
 			}
 			character:RICE_upper_egypt_016 = {
@@ -534,6 +1069,15 @@ me_RICE_effect = {
 			}
 			character:RICE_khuzestan_misc_001 = { # Use ME's version of Ibn Wahb
 				destroy_title = title:d_laamp_RICE_ibn_wahab
+				death = { death_reason = death_disappearance }
+			}
+			
+			### Setup for al-Battani's mother
+			character:RICE_harran_032 = {
+				set_age = 32
+				change_first_name = Maryam
+				set_character_faith = faith:sunni
+				marry = character:me_mashriqi_hchar_042
 				death = { death_reason = death_disappearance }
 			}
 		}
@@ -792,6 +1336,7 @@ me_egypt_holder_effect = {
 					is_close_or_extended_family_of = title:k_egypt.holder
 					is_spouse_of = title:k_egypt.holder
 				}
+				is_landed = no
 			}
 			save_scope_as = courtier_tul
 			title:k_egypt.holder = { add_courtier = scope:courtier_tul }
@@ -1040,6 +1585,42 @@ me_egypt_holder_effect = {
 		}
 	}
 	
+	if = {
+		limit = { 
+			has_game_rule = historicity_extra_admin_egypt_historic_always 
+			NOT = { character:163115 = { has_title = title:k_egypt } }
+		}
+		create_title_and_vassal_change = {
+			type = conquest
+			save_scope_as = admin_egy_change
+		}
+		character:163115 = { # Ibn Tulun
+			every_vassal = {
+				change_liege = {
+					liege = title:k_egypt.holder
+					change = scope:admin_egy_change
+				}
+			}
+			change_liege = {
+				liege = title:k_egypt.holder
+				change = scope:admin_egy_change
+			}
+		}
+		resolve_title_and_vassal_change = scope:admin_egy_change
+	}
+	
+	if = {
+		limit = { 
+			has_game_rule = historicity_extra_admin_arabia_historic_867 
+			title:k_egypt.holder = { is_vassal_of = title:e_arabia.holder }
+		}
+		if = {
+			limit = { NOT = { has_game_rule = historicity_extra_admin_egypt_historic_always } }
+			title:k_egypt.holder ?= { convert_to_administrative_from_feudalism_game_start_effect = yes }
+		}
+		title:d_cyrenaica.holder ?= { convert_to_administrative_from_feudalism_game_start_effect = yes }
+	}
+	
 	title:k_egypt.holder = {
 		if = {
 			limit = { has_realm_law = uncrowned }
@@ -1056,6 +1637,9 @@ me_egypt_holder_effect = {
 }
 
 me_malay_islamic_ruler_setup = {
+	# ME: only Perlak is made Muslim (the 840 Perlak tradition this rule stands for). Lamuri, Barus, Panai and Minangkabau
+	# are left to history: Lamuri's first royal conversion is dated 1211, Barus's earliest Muslim tomb maybe 1370, Panai was
+	# a Vajrayana Buddhist kingdom (11th-14th c.), and nothing puts Islam in the Minangkabau highlands this early.
 	if = {
 		limit = { has_game_rule = me_malay_islamic_ruler_yes }
 		if = {
@@ -1064,7 +1648,7 @@ me_malay_islamic_ruler_setup = {
 				change_first_name = Abd_al-Rahim
 				set_father = character:malay_perlak_01
 				set_house = character:malay_perlak_01.house
-				set_character_faith = faith:zayidi # Changed from Imami to Zayidi since most Shia Sayyids around 867 were Zayidi
+				set_character_rite = rite:zayidi # Changed from Imami to Zayidi since most Shia Sayyids around 867 were Zayidi
 				change_government = clan_government
 				spawn_army = {
 					name = event_troop_default_name
@@ -1082,10 +1666,10 @@ me_malay_islamic_ruler_setup = {
 			character:malay_perlak_03 = {
 				change_first_name = Abbas
 				set_house = character:malay_perlak_01.house
-				set_character_faith = faith:zayidi
+				set_character_rite = rite:zayidi
 			}
 			title:c_SUM_perlak = {
-				set_county_faith = faith:zayidi
+				set_county_rite = rite:zayidi
 				title_province = { set_holding_type = castle_holding }
 			}
 		}
@@ -1095,7 +1679,7 @@ me_malay_islamic_ruler_setup = {
 				change_first_name = Mansur
 				set_father = character:malay_perlak_11
 				set_house = character:malay_perlak_07.house
-				set_character_faith = faith:ashari
+				set_character_rite = rite:shafii
 				change_government = clan_government
 				set_realm_capital = title:c_SUM_perlak
 				set_primary_title_to = title:c_SUM_perlak
@@ -1105,22 +1689,10 @@ me_malay_islamic_ruler_setup = {
 			character:malay_perlak_13 = {
 				change_first_name = Abdullah
 				set_house = character:malay_perlak_07.house
-				set_character_faith = faith:ashari
-			}
-			title:c_SUM_lambri = {
-				set_county_faith = faith:ashari
-				title_province = { set_holding_type = castle_holding }
-			}
-			title:c_SUM_barus = {
-				set_county_faith = faith:ashari
-				title_province = { set_holding_type = castle_holding }
-			}
-			title:c_SUM_panai = {
-				set_county_faith = faith:zayidi
-				title_province = { set_holding_type = castle_holding }
+				set_character_rite = rite:shafii
 			}
 			title:c_SUM_perlak = {
-				set_county_faith = faith:zayidi
+				set_county_rite = rite:zayidi
 				title_province = { set_holding_type = castle_holding }
 			}
 		}
@@ -1135,6 +1707,11 @@ me_malay_islamic_ruler_setup = {
 			}
 			character:malay_silu_01 = {
 				change_government = mandala_government
+				if = {
+					limit = { has_tgp_dlc_trigger = yes }
+					change_government = mandala_government
+				}
+				else = { change_government = feudal_government }
 				spawn_army = {
 					name = event_troop_default_name
 					levies = 200
@@ -1148,16 +1725,7 @@ me_malay_islamic_ruler_setup = {
 				}
 				add_courtier = character:malay_lambri_20_fic
 			}
-			title:c_SUM_barus = {
-				set_county_faith = faith:ashari
-				title_province = { set_holding_type = castle_holding }
-			}
-			title:c_SUM_panai = {
-				set_county_faith = faith:zayidi
-				title_province = { set_holding_type = castle_holding }
-			}
-			title:c_SUM_perlak = { set_county_faith = faith:zayidi }
-			title:c_SUM_minangkabau = { set_county_faith = faith:zayidi }
+			title:c_SUM_perlak = { set_county_rite = rite:zayidi }
 		}
 	}
 }
@@ -1168,6 +1736,12 @@ me_867_tributary_setup_effect = {
 	character:34014 = { # Caliph al-Mu'tazz ibn al-Mutawakkil (Abbasid) of the Abbasid Caliphate
 		save_scope_as = suzerain
 		character:159725 = { # Marwan ibn Umar al-Aqta' (Marwanid) of the Emirate of Malatya 
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:159722 = { # Qaysid Emirate in Armenia 
+			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
+		}
+		character:163167 = { # Emirate of Tifilis
 			break_subject_contract_and_establish_tributary_effect = { SUZERAIN = scope:suzerain TRIBUTARY = this }
 		}
 #		character:me_egypt_turk_001 = { # Yazid al-Hulwani, governor of Egypt 
@@ -1197,33 +1771,23 @@ me_1178_tributary_setup_effect = {}
 
 ### Decision Effects
 mend_the_ibadi_schism_scripted_effect = {
+	# 1.20: the Ibadi and Wahbi are Rites of one faith, so mending the schism leaves a single Imamate as its Head of Faith.
 	add_piety = major_piety_gain
 	save_scope_as = reformer
+	faith:ibadi = { save_scope_as = other_ibadi }
 	if = {
-		limit = { scope:reformer = { faith = faith:ibadi } }
-		title:d_ibadi = { save_scope_as = ibadi_imamate }
-		faith:wahbiya = { save_scope_as = other_ibadi }
-		custom_tooltip = {
-			text = "unified_under_ibadi_imamate"
-			faith:wahbiya = { set_religious_head_title = scope:ibadi_imamate }
-		}
-	}
-	else_if = {
-		limit = { scope:reformer = { faith = faith:wahbiya } }
+		limit = { scope:reformer = { has_title = title:d_wahbiya } }
 		title:d_wahbiya = { save_scope_as = ibadi_imamate }
-		faith:ibadi = { save_scope_as = other_ibadi }
-		custom_tooltip = {
-			text = "unified_under_ibadi_imamate"
-			faith:ibadi = { set_religious_head_title = scope:ibadi_imamate }
-		}
 	}
+	else = {
+		title:d_ibadi = { save_scope_as = ibadi_imamate }
+	}
+	custom_tooltip = {
+		text = "unified_under_ibadi_imamate"
+		faith:ibadi = { set_religious_head_title = scope:ibadi_imamate }
+	}
+	set_global_variable = { name = me_ibadi_schism_mended value = yes }
 	faith:ibadi = {
-		change_fervor = {
-			value = 15
-			desc = fervor_gain_mend_the_ibadi_schism
-		}
-	}
-	faith:wahbiya = {
 		change_fervor = {
 			value = 15
 			desc = fervor_gain_mend_the_ibadi_schism
@@ -1345,14 +1909,14 @@ promote_islamic_hungarian_settlement_decision_scripted_effect = {
 				modifier = hungarian_resettlement_modifier_islamic
 				years = 100
 			}
-			custom_tooltip = promote_hungarian_settlement_decision_increased_development
+			custom_tooltip = promote_hungarian_settlement_decision_increased_prosperity
 			custom_tooltip = promote_hungarian_settlement_decision_convert_county
 			hidden_effect = {
 				if = {
 					limit = {
-						development_level < 5
+						prosperity_level < 5
 					}
-					change_development_level = 1
+					change_prosperity_level = 1
 				}
 				random_list = {
 					30 = {
@@ -1362,7 +1926,7 @@ promote_islamic_hungarian_settlement_decision_scripted_effect = {
 						trigger = {
 							NOT = {
 								faith = { 
-							religion = religion:islam_religion
+									religion = religion:islam_religion
 								}
 							}
 						}
@@ -1372,19 +1936,19 @@ promote_islamic_hungarian_settlement_decision_scripted_effect = {
 						trigger = {
 							NOT = {
 								faith = { 
-							religion = religion:islam_religion
+									religion = religion:islam_religion
 								}
 							}
 							any_neighboring_county = {
 								faith = { 
-							religion = religion:islam_religion
+									religion = religion:islam_religion
 								}
 							}
 						}
 						random_neighboring_county = {
 							limit = {
 								faith = { 
-							religion = religion:islam_religion
+									religion = religion:islam_religion
 								}
 							}
 							save_scope_as = neighboring_county
@@ -1463,11 +2027,11 @@ learn_language_linguist_arabic_effect = {
 			limit = {
 				NOT = { knows_language_of_culture = $LINGUIST$.culture }
 			}
-	    	start_scheme = {
+			start_scheme = {
 				type = learn_language
 				target_character = $LINGUIST$
 			}
-	    }
+		}
 	}
 }
 
@@ -1499,6 +2063,334 @@ me_restore_ibadi_imamate_scripted_effect = {
 	}
 }
 
+### Ramadan / Muharram Observance Effects ###
+#
+# The personal and patronage approach choices are stored as persistent character
+# variables. These effects translate those stored choices into active modifiers
+# — called from the Hijri daily pulse on the month-start boundary, and from the
+# decisions themselves if the holy month happens to already be in progress.
+#
+# Modifier durations:
+#   Ramadan fasting/patronage: 30 days (covers the full lunar month)
+#   Muharram mourning/patronage: 12 days (Ashura + surrounding mourning)
+#   Tatbir: 10 days (through Ashura itself)
+
+ME_apply_iftar_tent_realm_effect = {
+	if = {
+		limit = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			me_hijri_month_value = 9
+		}
+		if = {
+			limit = { var:iftar_type = flag:iftar_modest }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_modest_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_substantial }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_substantial_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_grand }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_grand_modifier days = 140 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+			me_hijri_month_value = 7
+		}
+		if = {
+			limit = { var:iftar_type = flag:iftar_modest }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_modest_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_substantial }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_substantial_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_grand }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_grand_modifier days = 140 }
+			}
+		}
+	}
+}
+
+ME_apply_iftar_tent_domain_effect = {
+	if = {
+		limit = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			me_hijri_month_value = 9
+		}
+		if = {
+			limit = { var:iftar_type = flag:iftar_modest }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+					holder = root
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_modest_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_substantial }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+					holder = root
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_substantial_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_grand }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+					holder = root
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_grand_modifier days = 140 }
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+			me_hijri_month_value = 7
+		}
+		if = {
+			limit = { var:iftar_type = flag:iftar_modest }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+					holder = root
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_modest_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_substantial }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+					holder = root
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_substantial_modifier days = 140 }
+			}
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_grand }
+			every_sub_realm_county = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+					holder = root
+				}
+				add_county_modifier = { modifier = me_iftar_sponsorship_grand_modifier days = 140 }
+			}
+		}
+	}
+}
+
+### Apply personal Muharram mourning modifier based on stored approach ###
+me_apply_muharram_modifier_effect = {
+	if = {
+		limit = { exists = var:me_muharram_approach }
+		if = { limit = { has_character_modifier = me_muharram_deep_mourning_modifier } remove_character_modifier = me_muharram_deep_mourning_modifier }
+		if = { limit = { has_character_modifier = me_muharram_moderate_mourning_modifier } remove_character_modifier = me_muharram_moderate_mourning_modifier }
+		if = { limit = { has_character_modifier = me_muharram_tatbir_modifier } remove_character_modifier = me_muharram_tatbir_modifier }
+		if = { limit = { has_character_modifier = me_muharram_skipped_modifier } remove_character_modifier = me_muharram_skipped_modifier }
+		# Deep
+		if = {
+			limit = { var:me_muharram_approach = flag:deep }
+			add_character_modifier = {
+				modifier = me_muharram_deep_mourning_modifier
+				days = 12
+			}
+			stress_impact = {
+				impatient = medium_stress_impact_gain
+				cynical = medium_stress_impact_gain
+				callous = minor_stress_impact_gain
+				zealous = minor_stress_impact_loss
+				compassionate = minor_stress_impact_loss
+			}
+		}
+		# Moderate
+		else_if = {
+			limit = { var:me_muharram_approach = flag:moderate }
+			add_character_modifier = {
+				modifier = me_muharram_moderate_mourning_modifier
+				days = 12
+			}
+			stress_impact = {
+				zealous = minor_stress_impact_gain
+			}
+		}
+		# Tatbir
+		else_if = {
+			limit = { var:me_muharram_approach = flag:tatbir }
+			add_character_modifier = {
+				modifier = me_muharram_tatbir_modifier
+				days = 10
+			}
+			stress_impact = {
+				cynical = medium_stress_impact_gain
+				craven = minor_stress_impact_gain
+				flagellant = medium_stress_impact_loss
+				brave = minor_stress_impact_loss
+			}
+		}
+		# Skip
+		else_if = {
+			limit = { var:me_muharram_approach = flag:skip }
+			add_character_modifier = {
+				modifier = me_muharram_skipped_modifier
+				days = 12
+			}
+			stress_impact = {
+				zealous = major_stress_impact_gain
+				compassionate = minor_stress_impact_gain
+				cynical = minor_stress_impact_loss
+			}
+		}
+	}
+}
+
+### Apply realm Muharram patronage ###
+me_apply_muharram_patronage_effect = {
+	if = {
+		limit = { exists = var:me_muharram_patronage }
+		if = { limit = { has_character_modifier = me_muharram_patronage_modest_modifier } remove_character_modifier = me_muharram_patronage_modest_modifier }
+		if = { limit = { has_character_modifier = me_muharram_patronage_grand_modifier } remove_character_modifier = me_muharram_patronage_grand_modifier }
+		if = { limit = { has_character_modifier = me_muharram_patronage_lavish_modifier } remove_character_modifier = me_muharram_patronage_lavish_modifier }
+		# Modest
+		if = {
+			limit = { var:me_muharram_patronage = flag:modest }
+			add_character_modifier = { modifier = me_muharram_patronage_modest_modifier days = 12 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = {
+					modifier = me_muharram_majalis_modest_county_modifier
+					days = 12
+				}
+			}
+			add_piety = minor_piety_gain
+		}
+		# Grand
+		else_if = {
+			limit = { var:me_muharram_patronage = flag:grand }
+			add_character_modifier = { modifier = me_muharram_patronage_grand_modifier days = 12 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = {
+					modifier = me_muharram_majalis_grand_county_modifier
+					days = 12
+				}
+			}
+			add_piety = medium_piety_gain
+		}
+		# Lavish
+		else_if = {
+			limit = { var:me_muharram_patronage = flag:lavish }
+			add_character_modifier = { modifier = me_muharram_patronage_lavish_modifier days = 12 }
+			every_sub_realm_county = {
+				limit = { faith = { religion_tag = islam_religion } }
+				add_county_modifier = {
+					modifier = me_muharram_majalis_lavish_county_modifier
+					days = 12
+				}
+			}
+			add_piety = major_piety_gain
+		}
+	}
+}
 
 ### Adventurer Effects
 me_create_ismaili_caliphate_scripted_effect = {
@@ -1517,7 +2409,7 @@ me_create_ismaili_caliphate_scripted_effect = {
 		}
 	}
 	resolve_title_and_vassal_change = scope:change
-	faith:ismaili = {
+	rite:ismaili.faith = {
 		change_fervor = {
 			value = 15
 			desc = fervor_gain_created_ismaili_caliphate
@@ -1536,7 +2428,7 @@ ME_become_ismaili_mahdi_decision_effect = {
 	
 	add_trait = ME_ismaili_mahdi
 	give_nickname = nick_al_mahdi_billah_fatimid
-	faith:ismaili = {
+	rite:ismaili.faith = {
 		change_fervor = {
 			value = 30
 			desc = fervor_gain_new_ismaili_mahdi
@@ -1618,9 +2510,9 @@ give_legendary_building_qurashi_lineage_tooltip_effect = { #50% chance
 				root = {
 					locale_valid_for_legendary_buildings = yes
 				}
-				capital_province = { has_special_building_slot = no }
+				capital_province = { has_special_district_slot = no }
 				any_sub_realm_barony = {
-					title_province = { has_special_building_slot = no }
+					title_province = { has_special_district_slot = no }
 				}
 			}
 		}
@@ -1656,9 +2548,9 @@ give_legendary_building_mythical_qurashi_lineage_tooltip_effect = {
 				root = {
 					locale_valid_for_legendary_buildings = yes
 				}
-				capital_province = { has_special_building_slot = no }
+				capital_province = { has_special_district_slot = no }
 				any_sub_realm_barony = {
-					title_province = { has_special_building_slot = no }
+					title_province = { has_special_district_slot = no }
 				}
 			}
 		}

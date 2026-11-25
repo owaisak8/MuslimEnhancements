@@ -2,7 +2,7 @@
 me_egyptian_001 = {
 	name = "Ma_mar" # Ma'mar 'al-Jawhari', Prominent merchant who had a strong relationship with Ibn Tulun
 	give_nickname = nick_me_al_jawhari # al-Jawhari
-	religion = ashari
+	rite = shafii
 	culture = "egyptian"
 	trait = education_stewardship_4
 
@@ -23,7 +23,7 @@ me_egyptian_001 = {
 
 me_egyptian_002 = {
 	name = "Muhammad" # Ma'mar's brother, Also a jewel merchant who resided in Baghdad, first name unknown 
-	religion = ashari
+	rite = shafii
 	culture = "egyptian"
 	trait = education_stewardship_3
 
@@ -41,7 +41,7 @@ me_egyptian_002 = {
 
 me_egyptian_003 = {
 	name = "Abdullah" # Ma'mar's father, first name unknown 
-	religion = ashari
+	rite = shafii
 	culture = "egyptian"
 
 	800.1.1 = {
@@ -54,7 +54,7 @@ me_egyptian_003 = {
 
 me_egyptian_004 = {
 	name = "Sukun" # Abu Ruh Sukun, Former follower of al-Sufi in the oases who rebelled in 872-873
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = "egyptian"
 	trait = education_martial_3
 	
@@ -65,6 +65,123 @@ me_egyptian_004 = {
 		#employer = me_hashimid_046 # Ibn as-Sufi
 	}
 	900.1.1 = {
+		death = yes
+	}
+}
+
+## Fictional Egyptians
+me_egypt_fic_001 = {
+	name = "Nabhan"
+	rite = "shafii"
+	culture = "egyptian"
+
+	820.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+## Banu Hanna - Mamluk Egyptian Adminstrators
+me_hannawid_001 = {
+	name = "Ali" # Baha ud-Din Ali 'Ibn Hanna', Famous Mamluk era vizir
+	dynasty = me_hannawi_dynasty
+	give_nickname = nick_baha_ud_din # Baha' ud-Din
+	rite = "shafii"
+	culture = "egyptian"
+	trait = education_stewardship_4
+	trait = administrator
+	trait = zealous
+	trait = temperate
+	trait = just # Fought bribery and corruption, which made him heavily disliked by the Sultanate's corrupt officials
+	
+	father = me_hannawid_003
+	1205.1.1 = {
+		birth = yes
+	}
+	1278.1.1 = {
+		death = yes
+	}
+}
+
+me_hannawid_002 = {
+	name = "Abdullah" # Burhan ud-Din, brother of Baha ud-Din 'Ibn Hanna', first name unknown
+	dynasty = me_hannawi_dynasty
+	give_nickname = nick_burhan_ud_din # Burhan ud-Din
+	rite = "shafii"
+	culture = "egyptian"
+	trait = education_diplomacy_3
+	
+	father = me_hannawid_003
+	1207.1.1 = {
+		birth = yes
+	}
+	1270.1.1 = {
+		death = yes
+	}
+}
+
+me_hannawid_003 = {
+	name = "Muhammad" # Father of Ibn Hanna, was a Qadi
+	dynasty = me_hannawi_dynasty
+	rite = "shafii"
+	culture = "egyptian"
+	trait = education_learning_3
+	
+	father = me_hannawid_004
+	1180.1.1 = {
+		birth = yes
+	}
+	1240.1.1 = {
+		death = yes
+	}
+}
+
+me_hannawid_004 = {
+	name = "Salim" # Coptic convert to Islam, Originally called Hanna but changed his name to Salim
+	dynasty = me_hannawi_dynasty
+	rite = "shafii"
+	culture = "egyptian"
+	
+	1150.1.1 = {
+		birth = yes
+	}
+	1210.1.1 = {
+		death = yes
+	}
+}
+
+# (There are many more descendants but they won't matter if a BM doesn't exist to justify adding them)
+
+## Egyptian characters related to spawnable historical characters
+me_egyptian_hchar_001 = {
+	name = "Ali" # Abu'l Hasan Ali ibn Ridwan, Famous Egyptian physician and astronomer who work at the Fatimid court
+	dynasty = me_ridwani_dynasty
+	rite = "shafii"
+	culture = "egyptian"
+	trait = education_learning_4
+	trait = lifestyle_physician
+	
+	father = me_egyptian_hchar_002
+	988.1.1 = {
+		birth = yes
+	}
+	1061.1.1 = {
+		death = yes
+	}
+}
+
+me_egyptian_hchar_002 = {
+	name = "Ridwan"
+	dynasty = me_ridwani_dynasty
+	rite = "shafii"
+	culture = "egyptian"
+	
+	950.1.1 = {
+		birth = yes
+	}
+	1015.1.1 = {
 		death = yes
 	}
 }

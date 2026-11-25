@@ -1,0 +1,30 @@
+﻿# ME: Muhtasib "Commanding the Right" task (common/court_positions/tasks/me_muhtasib_tasks.txt). Scope: the employer.
+# One-year modifiers, refreshed by the task every year and removed when it ends, so a change of doctrine shows within a year.
+me_muhtasib_morals_doctrine_effect = {
+	me_muhtasib_morals_doctrine_end_effect = yes
+	if = {
+		limit = { rite ?= { rite_has_doctrine = special_doctrine_alcohol_forbidden } }
+		add_character_modifier = {
+			modifier = me_muhtasib_strict_morals_modifier
+			years = 1
+		}
+	}
+	else_if = {
+		limit = { rite ?= { rite_has_doctrine = doctrine_alcohol_permitted } }
+		add_character_modifier = {
+			modifier = me_muhtasib_lenient_morals_modifier
+			years = 1
+		}
+	}
+}
+
+me_muhtasib_morals_doctrine_end_effect = {
+	if = {
+		limit = { has_character_modifier = me_muhtasib_strict_morals_modifier }
+		remove_character_modifier = me_muhtasib_strict_morals_modifier
+	}
+	if = {
+		limit = { has_character_modifier = me_muhtasib_lenient_morals_modifier }
+		remove_character_modifier = me_muhtasib_lenient_morals_modifier
+	}
+}

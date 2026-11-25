@@ -1,0 +1,20 @@
+﻿l_english:
+ # ME: the Muhtasib (common/court_positions/types/me_muhtasib_court_position.txt)
+ me_muhtasib_court_position:0 "Muhtasib"
+ me_muhtasib_court_position_desc:0 "The $me_muhtasib_court_position$ inspects the markets of the realm, enforcing honest weights and fair prices and upholding public morals."
+ me_muhtasib_sahib_al_suq:0 "Sahib al-Suq"
+ me_muhtasib_sahib_al_suq_desc:0 "The $me_muhtasib_sahib_al_suq$ inspects the markets of the realm, enforcing honest weights and fair prices and upholding public morals."
+
+ me_muhtasib_task_weights:0 "Weights and Measures"
+ me_muhtasib_task_weights_desc:0 "This character is tasked with checking the scales, measures, and coinage used in your markets."
+ me_muhtasib_task_bread:0 "Bread and Hoarding"
+ me_muhtasib_task_bread_desc:0 "This character is tasked with keeping the price of bread and grain in check and punishing those who hoard it."
+ me_muhtasib_task_morals:0 "Commanding the Right"
+ me_muhtasib_task_morals_desc:0 "This character is tasked with upholding public morals in the streets and markets of your domain."
+ me_muhtasib_task_streets:0 "Streets and Crafts"
+ me_muhtasib_task_streets_desc:0 "This character is tasked with keeping the streets clean and clear, and holding craftsmen to the standards of their trade."
+
+ me_muhtasib_strict_morals_modifier:0 "Strict Market Inspection"
+ me_muhtasib_strict_morals_modifier_desc:0 "The market inspector strictly enforces the faith's ban on alcohol."
+ me_muhtasib_lenient_morals_modifier:0 "Lenient Market Inspection"
+ me_muhtasib_lenient_morals_modifier_desc:0 "The faith permits alcohol, so the market inspector has little to enforce."

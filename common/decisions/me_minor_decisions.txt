@@ -168,7 +168,7 @@ ME_clear_ground_for_legendary_building = {
 			text = clear_ground_for_legendary_building_no_barony_tt
 			any_held_title = {
 				tier = tier_barony
-				title_province = { has_special_building_slot = no }
+				title_province = { has_special_district_slot = no }
 				is_capital_barony = yes
 				holder = root
 				is_leased_out = no
@@ -192,7 +192,7 @@ ME_clear_ground_for_legendary_building = {
 			}
 			current_description = clear_ground_legendary_mosque_desc
 			localization = clear_ground_legendary_mosque
-			icon = "gfx/interface/icons/building_types/icon_structure_cathedral_muslim.dds"
+			icon = "gfx/interface/icons/building_types/special_buildings/cathedral_muslim.dds"
 			flat = yes
 			ai_chance = { value = 10 }
 		}
@@ -214,7 +214,7 @@ ME_clear_ground_for_legendary_building = {
 			}
 			current_description = clear_ground_legendary_mosque_ziyadid_desc
 			localization = clear_ground_legendary_mosque_ziyadid
-			icon = "gfx/interface/icons/building_types/icon_structure_imam_ali_mosque.dds"
+			icon = "gfx/interface/icons/building_types/special_buildings/imam_ali_mosque.dds"
 			flat = yes
 			ai_chance = { value = 10 }
 		}
@@ -268,10 +268,10 @@ ME_pick_legendary_barony_decision = {
 	is_invisible = yes
 	widget = {
 		controller = create_holy_order
-		barony_valid = {
+		title_valid = {
 			trigger_if = {
 				limit = { exists = this }
-				title_province = { has_special_building_slot = no }
+				title_province = { has_special_district_slot = no }
 				is_capital_barony = yes
 				holder = scope:ruler
 				is_leased_out = no
@@ -291,12 +291,12 @@ ME_pick_legendary_barony_decision = {
 				trigger = root.var:clear_ground
 				flag:legendary_mosque = {
 					scope:barony.title_province ?= {
-						add_special_building_slot = me_legendary_mosque
+						add_special_district_slot = me_legendary_mosque_district
 					}
 				}
 				flag:legendary_mosque_ziyadid = {
 					scope:barony.title_province ?= {
-						add_special_building_slot = me_legendary_mosque_ziyadid
+						add_special_district_slot = me_legendary_mosque_ziyadid_district
 					}
 				}
 			}

@@ -1,21 +1,21 @@
 k_sindh = {
-	867.1.1 = { change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = { change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	711.1.1 = {
 		liege = e_arabia
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
 	# 747-768: Abbasid governors
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -29,9 +29,9 @@ k_sindh = {
 		holder = 188533 # Hisham ibn 'Amr al-Taghlibi
 		liege = 0 # De facto
 	}
-	
+
 	# 768-854: Abbasid governors
-	
+
 	854.1.1 = {
 		holder = 175050 # Umar I Habbari
 	}
@@ -158,9 +158,9 @@ k_sindh = {
 }
 
 d_sauvira = {
-	867.1.1 = { change_development_level = 12 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
+	867.1.1 = { change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
 }
 
 c_debul = {
@@ -215,7 +215,7 @@ c_debul = {
 	1215.1.1 = {
 		holder = 188284 # Gajanji Jadeja
 	}
-	
+
 	1325.1.1 = {
 		liege = e_rajastan
 	}
@@ -278,8 +278,8 @@ c_sonda = {
 	1215.1.1 = {
 		holder = 188285 # Devandji
 	}
-	
-	
+
+
 	1325.1.1 = {
 		liege = e_rajastan
 	}
@@ -290,16 +290,16 @@ c_mansura = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
 	# 747-768: Abbasid governors
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -312,16 +312,16 @@ c_mansura = {
 	768.1.1 = {
 		holder = 188533 # Hisham ibn 'Amr al-Taghlibi
 	}
-	
+
 	# 768-854: Abbasid governors
-	
+
 	841.1.1 = {
 		holder = 175050 # Umar I
 	}
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	#884.1.1 = {
 	#	holder =  # Abdullah
 	#}
@@ -402,16 +402,16 @@ c_ranikot = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
 	# 747-768: Abbasid governors
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -424,17 +424,17 @@ c_ranikot = {
 	768.1.1 = {
 		holder = 188533 # Hisham ibn 'Amr al-Taghlibi
 	}
-	
+
 	# 768-854: Abbasid governors
-	
+
 	855.1.1 = {
 		holder = 175050
 	}
-	
+
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	1060.1.1 = {
 		holder = 188351
 	}
@@ -522,15 +522,15 @@ c_siwistan = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -540,13 +540,13 @@ c_siwistan = {
 	760.1.1 = {
 		holder = 210014 # Umar ibn Hafs Muhallabid
 	}
-	
+
 	762.1.1 = {
 		holder = 188560
 	}
-	
+
 	# 747-854: Abbasid governors
-	
+
 	855.1.1 = {
 		holder = 175050
 	}
@@ -639,7 +639,7 @@ d_bhakkar = {
 		holder = 178012
 		liege = k_sindh
 	}
-	
+
 	895.1.1 = {
 		holder = 0
 	}
@@ -657,15 +657,15 @@ c_bhakkar = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -675,27 +675,27 @@ c_bhakkar = {
 #	760.1.1 = {
 #		holder = 210014 # Umar ibn Hafs Muhallabid
 #	}
-	
+
 	760.1.1 = {
 		holder = 188561
 	}
-	
+
 	# 747-854: Abbasid governors
-	
+
 	860.1.1 = {
 		holder = 178012
 		liege = d_bhakkar
 	}
-	
+
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	#Taken from k_sindh
 	895.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	1011.1.1 = {
 		holder = 188349 # Khafif I
 	}
@@ -716,7 +716,7 @@ c_bhakkar = {
 	}
 	1140.1.1 = {
 		holder = 188358 # Umar I
-	}	
+	}
 	1178.1.1 = {
 		holder = 188359 # Doda
 		liege = k_sindh
@@ -795,15 +795,15 @@ c_aror = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -813,21 +813,21 @@ c_aror = {
 #	760.1.1 = {
 #		holder = 210014 # Umar ibn Hafs Muhallabid
 #	}
-	
+
 	759.1.1 = {
 		holder = 188558
 	}
-	
+
 	# 747-854: Abbasid governors
-	
+
 	860.1.1 = {
 		holder = 178013
 	}
-	
+
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	## To be filled
 	#Taken from k_sindh
 	1011.1.1 = {
@@ -926,15 +926,15 @@ c_rajanpur = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -944,24 +944,24 @@ c_rajanpur = {
 	760.1.1 = {
 		holder = 210014 # Umar ibn Hafs Muhallabid
 	}
-	
+
 	767.1.1 = {
 		holder = 188557
 	}
-	
+
 	# 747-854: Abbasid governors
-	
+
 	860.1.1 = {
 		holder = 178015
 		liege = d_bhakkar
 	}
-	
+
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	# 985-1008: Soomra rule
-	
+
 	1008.4.1 = {
 		liege = k_kabulistan
 		# holder = Sukhpal, Ghaznavid governor
@@ -1052,16 +1052,16 @@ c_vijnot = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
 	# 747-768: Abbasid governors
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -1071,21 +1071,21 @@ c_vijnot = {
 	760.1.1 = {
 		holder = 210014 # Umar ibn Hafs Muhallabid
 	}
-	
+
 	767.1.1 = {
 		holder = 188564
 	}
-	
+
 	# 768-854: Abbasid governors
-	
+
 	860.1.1 = {
 		holder = 178014
 	}
-	
+
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	1044.1.1 = {
 		holder = 188336 #Dusaj
 		liege = d_stravani
@@ -1112,9 +1112,9 @@ c_vijnot = {
 	1180.1.1 = {
 		holder = 188359 # Doda II
 	}
-	
+
 	## To be filled
-	
+
 	1182.1.1 = {
 		holder = 144142
 		liege = d_kabul
@@ -1191,15 +1191,15 @@ c_sibi = {
 	711.1.1 = {
 		liege = k_sindh
 	}
-	
+
 	# 711-747: Umayyad governors
 	711.1.1 = {
-		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi 
+		holder = me_thaqafi_019 # Muhammad ibn Qasim ath-Thaqafi
 	}
 	715.7.18 = {
 		holder = me_kinda_049 # Yazid ibn Abi Kabsha
 	}
-	
+
 	752.1.1 = {
 		holder = me_tamimi_022 # Musa ibn Ka'b at-Tamimi
 	}
@@ -1209,22 +1209,22 @@ c_sibi = {
 	760.1.1 = {
 		holder = 210014 # Umar ibn Hafs Muhallabid
 	}
-	
+
 	767.1.1 = {
 		holder = 188556
 	}
-	
+
 	# 747-854: Abbasid governors
-	
+
 	860.1.1 = {
 		holder = 178015
 		liege = d_bhakkar
 	}
-	
+
 	866.1.1 = {
 		government = clan_government	#Ahistorical, just for ease of bookmarks.
 	}
-	
+
 	1059.1.1 = {
 		holder = 144133
 		liege = d_kabul

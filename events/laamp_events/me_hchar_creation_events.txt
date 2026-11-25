@@ -6,9 +6,49 @@
 
 me_hchar_creation_events.001 = {
 	type = character_event
-	title = historical_char_creation_events.t
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_ibn_nusayr } }
+				desc = me_historical_char_creation_events.t.ibn_nusayr
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_ishaq_ahmar } }
+				desc = me_historical_char_creation_events.t.ishaq_ahmar
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_al_jayshani } }
+				desc = me_historical_char_creation_events.t.al_jayshani
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_heresiarch } }
+				desc = me_historical_char_creation_events.t.heresiarch
+			}
+			desc = historical_char_creation_events.t
+		}
+	}
 	desc = {
 		first_valid = {
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_ibn_nusayr } }
+				desc = me_hchar_creation_events_ibn_nusayr.desc
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_ishaq_ahmar } }
+				desc = me_hchar_creation_events_ishaq_ahmar.desc
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_zakarawayh } }
+				desc = me_hchar_creation_events_zakarawayh.desc
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_al_jayshani } }
+				desc = me_hchar_creation_events_al_jayshani.desc
+			}
+			triggered_desc = {
+				trigger = { scope:historical_character = { has_variable = me_baqliyyah } }
+				desc = me_hchar_creation_events_baqliyyah.desc
+			}
 			triggered_desc = {
 				trigger = {
 					scope:historical_character = {
@@ -87,7 +127,7 @@ me_hchar_creation_events.001 = {
 		trigger = {
 			scope:historical_character = {
 				OR = {
-					has_trait = scholar
+					has_trait = erudite
 					has_trait = administrator
 				}
 			}
@@ -118,6 +158,9 @@ me_hchar_creation_events.001 = {
 	override_background = {
 		reference = terrain_scope
 	}
+	
+	lower_right_portrait = scope:historical_character_3
+	lower_left_portrait = scope:historical_character_4
 	
 	right_portrait = {
 		character = scope:historical_character_2
@@ -195,7 +238,7 @@ me_hchar_creation_events.001 = {
 				has_trait = lifestyle_poet
 				OR = {
 					has_trait = theologian
-					has_trait = scholar
+					has_trait = erudite
 				}
 			}
 			animation = happy_teacher
@@ -246,6 +289,10 @@ me_hchar_creation_events.001 = {
 			title_province = { save_scope_as = background_university_scope }
 		}
 		scope:historical_character.location = { save_scope_as = holy_site_scope }
+		if = {
+			limit = { scope:historical_character = { has_variable = me_heresiarch } }
+			custom_tooltip = me_hchar_creation_events_heresiarch_tt
+		}
 	}
 	
 	option = {
@@ -265,10 +312,13 @@ me_hchar_creation_events.001 = {
 				VALUE = yes
 			}
 		}
-		scope:historical_character = {
-			create_landless_adventurer_title_effect = {
-				REASON = flag:voluntary
-				FLAVOR_CHAR = root
+		if = {
+			limit = { NOT = { scope:historical_character = { has_variable = me_heresiarch } } }
+			scope:historical_character = {
+				create_landless_adventurer_title_effect = {
+					REASON = flag:voluntary
+					FLAVOR_CHAR = root
+				}
 			}
 		}
 		set_player_character = scope:historical_character
@@ -285,6 +335,61 @@ me_hchar_creation_events.001 = {
 					}
 					add_courtier = scope:historical_character_2
 				}
+				if = {
+					limit = {
+						exists = scope:historical_character_3
+					}
+					add_courtier = scope:historical_character_3
+				}
+				if = {
+					limit = {
+						exists = scope:historical_character_4
+					}
+					add_courtier = scope:historical_character_4
+				}
+			}
+		}
+
+		ai_chance = {
+			base = 0
+		}
+	}
+	
+	option = {
+		name = me_historical_char_creation_events.1.a
+		add_internal_flag = dangerous
+		
+		trigger = {
+			has_ep3_dlc_trigger = yes
+			scope:historical_character_3 = { has_variable = me_extra_adv }
+		}
+		flavor = danger_dynasty_abandon_tt
+		if = {
+			limit = {
+				is_ai = no
+			}
+			add_achievement_global_variable_effect = {
+				VARIABLE = finished_historically_inaccurate_achievement
+				VALUE = yes
+			}
+		}
+		if = {
+			limit = { scope:historical_character_3 = { has_variable = me_extra_adv } }
+			scope:historical_character_3 = {
+				create_landless_adventurer_title_effect = {
+					REASON = flag:voluntary
+					FLAVOR_CHAR = root
+				}
+			}
+		}
+		set_player_character = scope:historical_character_3
+		
+		hidden_effect = {
+			scope:historical_character_3 = {
+				populate_location_with_contracts_effect = {
+					AREA_CHAR = scope:historical_character_3
+					AMOUNT = 3
+				}
 			}
 		}
 
@@ -296,6 +401,9 @@ me_hchar_creation_events.001 = {
 	option = {
 		name = historical_char_creation_events.1.b
 		
+		trigger = {
+			NOT = { scope:historical_character = { has_variable = me_heresiarch } }
+		}
 		custom_tooltip = obligation_hook_tt
 		add_courtier = scope:historical_character
 		add_hook = {
@@ -311,6 +419,26 @@ me_hchar_creation_events.001 = {
 			add_hook = {
 				type = obligation_hook
 				target = scope:historical_character_2
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:historical_character_3
+			}
+			add_courtier = scope:historical_character_3
+			add_hook = {
+				type = obligation_hook
+				target = scope:historical_character_3
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:historical_character_4
+			}
+			add_courtier = scope:historical_character_4
+			add_hook = {
+				type = obligation_hook
+				target = scope:historical_character_4
 			}
 		}
 
@@ -329,6 +457,7 @@ me_hchar_creation_events.001 = {
 			limit = {
 				has_ep3_dlc_trigger = yes
 				exists = scope:explorer
+				NOT = { scope:historical_character = { has_variable = me_heresiarch } }
 			}
 			scope:historical_character = {
 				create_landless_adventurer_title_effect = {

@@ -1,0 +1,6 @@
+﻿# Salt Mines of Khewra: the greatest salt mine of the age. Vanilla's best salt source is a
+# tier 10 salt mine district (mine_tier_10_main_resource = 530); Khewra's last tier passes it.
+khewra_salt_output_tier_1 = 150
+khewra_salt_output_tier_2 = 300
+khewra_salt_output_tier_3 = 450
+khewra_salt_output_tier_4 = 600

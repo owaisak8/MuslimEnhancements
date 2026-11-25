@@ -1,0 +1,132 @@
+﻿
+
+shamsi_pagan = {
+	main_rite = shamsi_pagan
+	historical = yes
+
+	faith_details = {
+		religion = semitic_religion
+		color = { 0.2 0.3 0.6 }
+		icon = shamsi
+		reformed_icon = shamsi_reformed
+	}
+
+	eminent_holy_sites = {
+		sinjar
+		baalbek
+		ekhulkhul
+	}
+
+	holy_sites = {
+		mardin
+		edikukalama
+		ur
+	}
+
+	tenets = {
+		tenet_communal_identity
+		tenet_sun_worship
+		tenet_esotericism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+	
+	localization = {
+		PriestMale = shamsi_priest
+		PriestMalePlural = shamsi_priest_plural
+		PriestFemale = shamsi_priest
+		PriestFemalePlural = shamsi_priest_plural
+		PriestNeuter = shamsi_priest
+		PriestNeuterPlural = shamsi_priest_plural
+		ReligiousHeadName = shamsi_religious_head_title
+		ReligiousHeadNameFemale = shamsi_religious_head_title
+		ReligiousHeadTitleName = shamsi_religious_head_title_name
+	}
+}
+
+harranian_pagan = {
+	main_rite = harranian_pagan
+	historical = yes
+
+	faith_details = {
+		religion = semitic_religion
+		color = { 0.9 0.1 0.1 }
+		icon = harrani
+		reformed_icon = harrani_reformed
+	}
+
+	eminent_holy_sites = {
+		lalish
+		baalbek
+		ekhulkhul
+	}
+
+	holy_sites = {
+		mardin
+		edikukalama
+		ur
+	}
+
+	tenets = {
+		tenet_adaptive
+		tenet_astrology
+		tenet_esotericism
+	}
+
+	doctrines = {
+		unreformed_faith_doctrine
+	}
+	
+	localization = {
+		PriestMale = harrani_priest
+		PriestMalePlural = harrani_priest_plural
+		PriestFemale = harrani_priest
+		PriestFemalePlural = harrani_priest_plural
+		PriestNeuter = harrani_priest
+		PriestNeuterPlural = harrani_priest_plural
+		ReligiousHeadName = harrani_religious_head_title
+		ReligiousHeadNameFemale = harrani_religious_head_title
+		ReligiousHeadTitleName = harrani_religious_head_title_name
+
+		ReligiousText = semitic_religious_text
+		ReligiousText2 = semitic_religious_text_2
+		ReligiousText3 = semitic_religious_text_3
+
+		HighGodName = harrani_high_god_name 
+		HighGodName2 = harrani_high_god_name_2
+		HighGodNamePossessive = harrani_high_god_name_possessive
+		CreatorName = harrani_creator_god_name
+		CreatorNamePossessive = harrani_creator_god_name_possessive
+		HealthGodName = harrani_health_god_name
+		HealthGodNamePossessive = harrani_health_god_name_possessive
+		FertilityGodName = harrani_fertility_god_name
+		FertilityGodNamePossessive = harrani_fertility_god_name_possessive
+		WealthGodName = harrani_wealth_god_name
+		WealthGodNamePossessive = harrani_wealth_god_name_possessive
+		HouseholdGodName = harrani_household_god_name
+		HouseholdGodNamePossessive = harrani_household_god_name_possessive
+		FateGodName = harrani_fate_god_name
+		FateGodNamePossessive = harrani_fate_god_name_possessive
+		KnowledgeGodName = harrani_knowledge_god_name
+		KnowledgeGodNamePossessive = harrani_knowledge_god_name_possessive
+		WarGodName = harrani_war_god_name
+		WarGodNamePossessive = harrani_war_god_name_possessive
+		NightGodName = harrani_night_god_name
+		NightGodNamePossessive = harrani_night_god_name_possessive
+		WaterGodName = harrani_water_god_name
+		WaterGodNamePossessive = harrani_water_god_name_possessive
+
+		PantheonTerm = harrani_high_god_name
+		PantheonTerm2 = harrani_high_god_name_2
+		PantheonTerm3 = harrani_high_god_name_3
+		GoodGodNames = {
+			harrani_high_god_name
+			HighGodNameAlternate
+
+		}
+		DevilName = harrani_devil_name
+		DevilNamePossessive = harrani_devil_name_possessive
+	}
+}

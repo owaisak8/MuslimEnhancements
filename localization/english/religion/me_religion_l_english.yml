@@ -10,43 +10,7 @@
  holy_order_servants_of_allah:0 "Servants of Allah"
  holy_order_champions_of_islam:0 "Champions of Islam"
  holy_order_ghazis_of_the_border:0 "Ghazis of the Border"
- holy_order_mujahideen_of_place:0 "Mujahideen of the the [FAITH.GetAdjectiveNoTooltip]"
- holy_order_ghazis_of_place:0 "Ghazis of [FAITH.PositiveAfterLife]"
- holy_order_warriors_of_the_hadith:0 "Warriors of the Hadith"
- holy_order_warriors_of_the_wahy:0 "Warriors of the Wahy"
- holy_order_sahabi_of_place:0 "Sahabi of [FAITH.PositiveAfterLife]"
- holy_order_companions_of_hira:0 "Companions of Hira"
- holy_order_hashshashin:0 "Hashshashin"
- holy_order_bektashi_order:0 "Bektashi Order"
- holy_order_haruriyya:0 "Haruriyya"
- holy_order_zealots_of_place:0 "Zealots of the [FAITH.PositiveAfterLife]"
- 
- holy_order_ayyar_of_book:0 "'Ayyars of the [FAITH.ReligiousText]"
- holy_order_ghazis_of_book:0 "Ghazis of the [FAITH.ReligiousText]"
- holy_order_mujahideen_of_book:0 "Mujahideen of the [FAITH.ReligiousText]"
- holy_order_sahabi_of_book:0 "Sahabi of the [FAITH.ReligiousText]"
- holy_order_warriors_of_book:0 "Warriors of the [FAITH.ReligiousText]"
- holy_order_zealots_of_book:0 "Zealots of the [FAITH.ReligiousText]"
 
- holy_order_ayyar_of_head:0 "'Ayyars of the [FAITH.ReligiousHeadName]"
- holy_order_ghazis_of_head:0 "Ghazis of the [FAITH.ReligiousHeadName]"
- holy_order_mujahideen_of_head:0 "Mujahideen of the [FAITH.ReligiousHeadName]"
- holy_order_sahabi_of_head:0 "Sahabi of the [FAITH.ReligiousHeadName]"
- holy_order_warriors_of_head:0 "Warriors of the [FAITH.ReligiousHeadName]"
- holy_order_servants_of_head:0 "Servants of the [FAITH.ReligiousHeadName]"
- holy_order_zealots_of_head:0 "Zealots of the [FAITH.ReligiousHeadName]"
- holy_order_guardians_of_head:0 "Guardians of the [FAITH.ReligiousHeadName]"
- 
- ##Muhakkima
- holy_order_judgement_of_god:0 "Judgement of [FAITH.HighGodName]"
- holy_order_judgement_of_head:0 "Judgement of the [FAITH.ReligiousHeadName]"
-
- holy_order_ayyar_of_symbol:0 "'Ayyars of the [FAITH.ReligiousSymbol]"
- holy_order_ghazis_of_symbol:0 "Ghazis of the [FAITH.ReligiousSymbol]"
- holy_order_mujahideen_of_symbol:0 "Mujahideen of the [[FAITH.ReligiousSymbol]"
- holy_order_sahabi_of_symbol:0 "Sahabi of the [FAITH.ReligiousSymbol]"
- holy_order_warriors_of_symbol:0 "Warriors of the [FAITH.ReligiousSymbol]"
- holy_order_zealots_of_symbol:0 "Zealots of the [FAITH.ReligiousSymbol]"
 
  ## Holy Sites ##
  holy_site_tamasna_name:0 "Tamasna"
@@ -57,6 +21,11 @@
  holy_site_mila_effect_name:0 "From [holy_site|E] #weak ($holy_site_mila_name$)#!"
  holy_site_karbala_name:0 "Karbala"
  holy_site_karbala_effect_name:0 "From [holy_site|E] #weak ($holy_site_karbala_name$)#!"
+ holy_site_tus_name:0 "Tus"
+ holy_site_tus_effect_name:0 "From [holy_site|E] #weak ($holy_site_tus_name$)#!"
+ holy_site_qom_effect_name:0 "From [holy_site|E] #weak ($holy_site_qom_name$)#!"
+ holy_site_kadhimayn_name:0 "Kadhimayn"
+ holy_site_kadhimayn_effect_name:0 "From [holy_site|E] #weak ($holy_site_kadhimayn_name$)#!"
  holy_site_arrajan_name:0 "Arrajan"
  holy_site_arrajan_effect_name:0 "From [holy_site|E] #weak ($holy_site_arrajan_name$)#!"
  holy_site_isfahan_name:0 "Isfahan"
@@ -71,12 +40,22 @@
  ## Tenets ##
  tenet_puritanical_islam_name:0 "Fanatical Puritanicalism"
  tenet_puritanical_islam_desc:0 "The existence of the disbelieving idol worshippers and the sinful heretics who falsely refer to themselves as Muslims are an affront to Allah, they must be purged by fire and blood if need be."
- doctrine_parameter_hostility_override_tenet_puritanical_islam:0 "Considers and is considered by [faiths|E] with the [GetFaithDoctrine('tenet_puritanical_islam').GetBaseName] [doctrine|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
- REQUIRES_PURITANICAL_SECT:0 "Requires either the [GetFaithDoctrine('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName], [GetFaithDoctrine('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName], or [GetFaithDoctrine('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName] [doctrines|E]"
- INCOMPATIBLE_TENET_WARMONGER_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetFaithDoctrine('tenet_warmonger').GetName( GetPlayer.GetFaith )]"
+ doctrine_parameter_hostility_override_tenet_puritanical_islam:0 "Considers and is considered by [faiths|E] with the [GetDoctrineType('tenet_puritanical_islam').GetBaseName] [doctrine|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ REQUIRES_PURITANICAL_SECT:0 "Requires either the [GetDoctrineType('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName], [GetDoctrineType('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName], or [GetDoctrineType('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName] [doctrines|E]"
+ 
+ tenet_me_closed_faith_name:0 "Closed Faith"
+ tenet_me_closed_faith_desc:0 "The true nature of our teachings are secretive and the doors to our faith are closed, strangers cannot simply barge in and demand to be accepted as part of our family."
+ tenet_closed_faith_opinion:0 "Closed Faith"
+ doctrine_parameter_me_tenet_conversion_blocked:0 "The [convert_county|E] Task cannot be used by members of this faith and #bold conversion is disabled#!."
+ doctrine_parameter_me_tenet_closed_faith_conversion_resistance:0 "County Conversion Resistance: #P +100%#!"
+ faith_conversion_cost_conversion_blocked_closed_faith:0 "This [faith|E] has the [GetDoctrine('tenet_me_closed_faith').GetName( GetPlayer.GetFaith )] [core_tenet|E] "
+ COURT_CHAPLAIN_CONVERSION_CLOSED_FAITH_MODIFIER:2 "[county.GetProvince.GetCounty.GetFaith.GetName] — [GetDoctrineType('tenet_me_closed_faith').GetBaseName]"
+ INCOMPATIBLE_TENET_CLOSED_FAITH_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetDoctrine('tenet_me_closed_faith').GetName( GetPlayer.GetFaith )]"
  
  tenet_faqr_name:0 "Faqr"
  tenet_zuhd_name:0 "Zuhd"
+ INCOMPATIBLE_TENET_WARMONGER_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetDoctrine('tenet_warmonger').GetName( GetPlayer.GetFaith )]"
+ INCOMPATIBLE_TENET_COMMUNAL_IDENTITY_TRIGGER:0 "Incompatible with the [core_tenet|E] [GetDoctrine('tenet_communal_identity').GetName( GetPlayer.GetFaith )]"
 
 
  ## Hostility Doctrines ## 
@@ -84,7 +63,7 @@
  special_doctrine_is_ibadi_faith_name:0 "Ahl al-Istiqama"
  is_ibadi_faith_name:0 "$special_doctrine_is_ibadi_faith_name$"
  special_doctrine_is_ibadi_faith_desc:0 "The distance between our communities may have forced us to adopt different leaders but our core teachings and identity remain the same, it does not matter where we are and who we follow, for in the end we are all Ahl al-Istiqama!"
- doctrine_parameter_hostility_override_special_doctrine_is_ibadi_faith:0 "Considers and is considered by [faiths|E] with the [GetFaithDoctrine('special_doctrine_is_ibadi_faith').GetBaseName] [doctrine|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_special_doctrine_is_ibadi_faith:0 "Considers and is considered by [faiths|E] with the [GetDoctrineType('special_doctrine_is_ibadi_faith').GetBaseName] [doctrine|E], to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
 
  ## Isma'ili Doctrines ##
  #Ubaydi Trait Acceptance
@@ -94,23 +73,23 @@
  doctrine_parameter_ubaydi_trait_effects_active:0 "Characters with the [GetTrait('ubaydi').GetName( GetNullCharacter )] [trait|E] receive bonuses."
 
  #Musta'li Schism - Main
- special_doctrine_mustali_main_name:0 "Isma'ili Schism"
+ special_doctrine_mustali_main_name:0 "Schismed Isma'ilism"
  mustali_main_name:0 "$special_doctrine_mustali_main_name$"
- special_doctrine_mustali_main_desc:0 "The succession of the Caliphate became muddy with the death of al-Amir and disappearance of his son, leaving the Ismaʿīlī community divided between the hope of a hidden heir and the search for a present leader. Thus giving rise to the Tayyibi and Musta'li branches."
- doctrine_parameter_mustali_main_effects_active:0 "[faiths|E] with [GetFaithDoctrine('special_doctrine_mustali_schismed_sect').GetBaseName] [doctrine|E] gain [EmptyScope.ScriptValue('mustali_schismed_sect_conversion_bonus_root_value')|=-%0] conversion speed against this [faith|E]"
- doctrine_parameter_hostility_override_special_doctrine_mustali_schismed_sect:0 "Considers [faiths|E] with [GetFaithDoctrine('special_doctrine_mustali_schismed_sect').GetBaseName] [doctrine|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ special_doctrine_mustali_main_desc:0 "The succession of the Caliphate became muddy with the death of al-Amir and disappearance of his son, now the Musta'li Isma'ilis have become divided on who our leaders and guiders should be."
+ doctrine_parameter_mustali_main_effects_active:0 "[faiths|E] with [GetDoctrineType('special_doctrine_mustali_schismed_sect').GetBaseName] [doctrine|E] gain [EmptyScope.ScriptValue('mustali_schismed_sect_conversion_bonus_root_value')|=-%0] conversion speed against this [faith|E]"
+ doctrine_parameter_hostility_override_special_doctrine_mustali_schismed_sect:0 "Considers [faiths|E] with [GetDoctrineType('special_doctrine_mustali_schismed_sect').GetBaseName] [doctrine|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
 
  #Musta'li Schism - Sect
- special_doctrine_mustali_schismed_sect_name:0 "Musta'li Schism"
+ special_doctrine_mustali_schismed_sect_name:0 "The Musta'li Schism"
  mustali_schismed_sect_name:0 "$special_doctrine_mustali_schismed_sect_name$"
- special_doctrine_mustali_schismed_sect_desc:0 "The succession of the Caliphate became muddy with the death of al-Amir and disappearance of his son, leaving the Ismaʿīlī community divided between the hope of a hidden heir and the search for a present leader. Thus giving rise to the Tayyibi and Musta'li branches."
- doctrine_parameter_mustali_schismed_sect_effects_active:0 "[EmptyScope.ScriptValue('mustali_schismed_sect_conversion_bonus_root_value')|=+%0] conversion speed against the [GetFaithByKey('ismaili').GetAdjective] [faith|E]"
- doctrine_parameter_hostility_override_special_doctrine_mustali_main:0 "Considers [faiths|E] with the [GetFaithDoctrine('special_doctrine_mustali_main').GetBaseName] [doctrine|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
- mustali_schismed_sect_conversion_task_desc:0 "Isma'ili sub-sect converting [GetFaithByKey('ismaili').GetAdherentNamePlural]"
+ special_doctrine_mustali_schismed_sect_desc:0 "The succession of the Caliphate became muddy with the death of al-Amir and disappearance of his son, now the Musta'li Isma'ilis have become divided on who our leaders and guiders should be."
+ doctrine_parameter_mustali_schismed_sect_effects_active:0 "[EmptyScope.ScriptValue('mustali_schismed_sect_conversion_bonus_root_value')|=+%0] conversion speed against the [GetRiteByKey('ismaili').GetAdjective] [faith|E]"
+ doctrine_parameter_hostility_override_special_doctrine_mustali_main:0 "Considers [faiths|E] with the [GetDoctrineType('special_doctrine_mustali_main').GetBaseName] [doctrine|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ mustali_schismed_sect_conversion_task_desc:0 "Isma'ili sub-sect converting [GetRiteByKey('ismaili').GetAdherentNamePlural]"
 
 
  ## Succession Doctrines ##
- doctrine_parameter_sayyid_bonus_normal:0 "Normal [opinion|E] for [characters|E] with the [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E]."
+ doctrine_parameter_sayyid_bonus_normal:0 ""
  doctrine_parameter_sayyid_bonus_increased:0 "Slightly increased [opinion|E] for [characters|E] with the [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E]."
  doctrine_parameter_sayyid_bonus_increased_greatly:0 "Greatly increased [opinion|E] for [characters|E] with the [GetTrait('sayyid').GetName( GetNullCharacter )] [trait|E]."
 
@@ -122,109 +101,91 @@
 
  ## Islamic Secondary Sect Doctrines ##
  doctrine_islam_secondary_group_name:0 "Theological Affiliation" 
- REQUIRES_SUNNI:0 "Requires the [GetFaithDoctrine('muhammad_succession_sunni_doctrine').GetBaseName] [doctrine|E]"
- REQUIRES_SHIA:0 "Requires the [GetFaithDoctrine('muhammad_succession_shia_doctrine').GetBaseName] [doctrine|E]"
- REQUIRES_MUHAKKIMA:0 "Requires the [GetFaithDoctrine('muhammad_succession_muhakkima_doctrine').GetBaseName] [doctrine|E]"
- REQUIRES_ZANDAQA:0 "Requires the [GetFaithDoctrine('muhammad_succession_zandaqa_doctrine').GetBaseName] [doctrine|E]"
- REQUIRES_BERBERIST:0 "Requires the [GetFaithDoctrine('muhammad_succession_berberist_doctrine').GetBaseName] [doctrine|E]"
+ REQUIRES_SUNNI:0 "Requires the [GetDoctrineType('muhammad_succession_sunni_doctrine').GetBaseName] [doctrine|E]"
+ REQUIRES_SHIA:0 "Requires the [GetDoctrineType('muhammad_succession_shia_doctrine').GetBaseName] [doctrine|E]"
+ REQUIRES_MUHAKKIMA:0 "Requires the [GetDoctrineType('muhammad_succession_muhakkima_doctrine').GetBaseName] [doctrine|E]"
+ REQUIRES_ZANDAQA:0 "Requires the [GetDoctrineType('muhammad_succession_zandaqa_doctrine').GetBaseName] [doctrine|E]"
+ REQUIRES_BERBERIST:0 "Requires the [GetDoctrineType('muhammad_succession_berberist_doctrine').GetBaseName] [doctrine|E]"
  
  #Sunni Orthodoxy
  islam_secondary_group_sunni_orthodox_doctrine_name:0 "Sunni Orthodoxy"
  islam_secondary_group_sunni_orthodox_doctrine_desc:0 "Our schools of thought have developed closely alongside one another, and the differences of theology are far too minor to consider ourselves separate groups."
- doctrine_parameter_hostility_override_islam_secondary_group_sunni_orthodox_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_sunni_orthodox_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_sunni_orthodox_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_sunni_orthodox_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Unorthodox Sunnism
  islam_secondary_group_sunni_heresy_doctrine_name:0 "Unorthodox Sunni"
  islam_secondary_group_sunni_heresy_doctrine_desc:0 "Although we are Sunni by definition, our beliefs differ too much from those of the orthodoxy in order for us to consider ourselves as part of the same group, our relations still remain amicable, however."
- doctrine_parameter_hostility_override_islam_secondary_group_sunni_heresy_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_sunni_heresy_doctrine').GetBaseName] [faiths|E] with the to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_sunni_heresy_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_sunni_heresy_doctrine').GetBaseName] [faiths|E] with the to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Puritanical Sunnism
  islam_secondary_group_sunni_puritanical_doctrine_name:0 "Puritanical Sunni"
  islam_secondary_group_sunni_puritanical_doctrine_desc:0 "There is only one true path that Allah will accept, and there will be no compromise for the sake of the deviants."
- doctrine_parameter_hostility_override_islam_secondary_group_sunni_puritanical_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
- doctrine_parameter_me_puritanical_conversion_bonus_sunni:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against other [GetFaithDoctrine('muhammad_succession_sunni_doctrine').GetBaseName] [faiths|E]"
- doctrine_parameter_me_puritanical_conversion_bonus_other_sunni:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against [GetFaithDoctrine('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName] [faiths|E]"
+ doctrine_parameter_hostility_override_islam_secondary_group_sunni_puritanical_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_me_puritanical_conversion_bonus_sunni:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against other [GetDoctrineType('muhammad_succession_sunni_doctrine').GetBaseName] [faiths|E]"
+ doctrine_parameter_me_puritanical_conversion_bonus_other_sunni:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against [GetDoctrineType('islam_secondary_group_sunni_puritanical_doctrine').GetBaseName] [faiths|E]"
  puritanical_islam_sunni_conversion_task_desc:0 "Puritanical Sunni converting or being converted by other Sunnis"
  
  #Shi'ite Affiliations
  islam_secondary_group_shia_orthodox_doctrine_name:0 "Shi'ite Affiliated"
  islam_secondary_group_shia_orthodox_doctrine_desc:0 "We acknowledge the rights of the Ahl al-Bayt and condemn their enemies, those who are akin to us may not always be perfect but they are better than most."
- doctrine_parameter_hostility_override_islam_secondary_group_shia_orthodox_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_shia_orthodox_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_shia_orthodox_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_shia_orthodox_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Batri Affiliations
  islam_secondary_group_shia_batriya_doctrine_name:0 "Batri Affiliated"
  islam_secondary_group_shia_batriya_doctrine_desc:0 "Although we hold that the only true successor to the Prophet is the Imam Ali, we do not view the Sunni Caliphs to be disbelievers, as they were virtuous and just rulers who played a crucial role in spreading Islam."
- doctrine_parameter_hostility_override_islam_secondary_group_shia_batriya_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_shia_batriya_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_shia_batriya_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_shia_batriya_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Puritanical Shi'ism
  islam_secondary_group_shia_puritanical_doctrine_name:0 "Puritanical Shi'ite"
  islam_secondary_group_shia_puritanical_doctrine_desc:0 "There is only one true path that Allah will accept, and there will be no compromise for the sake of the deviants."
- doctrine_parameter_hostility_override_islam_secondary_group_shia_puritanical_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_shia_puritanical_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
- doctrine_parameter_me_puritanical_conversion_bonus_shia:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against other [GetFaithDoctrine('muhammad_succession_shia_doctrine').GetBaseName] [faiths|E]"
- doctrine_parameter_me_puritanical_conversion_bonus_other_shia:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against [GetFaithDoctrine('islam_secondary_group_shia_puritanical_doctrine').GetBaseName] [faiths|E]"
+ doctrine_parameter_hostility_override_islam_secondary_group_shia_puritanical_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_shia_puritanical_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_me_puritanical_conversion_bonus_shia:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against other [GetDoctrineType('muhammad_succession_shia_doctrine').GetBaseName] [faiths|E]"
+ doctrine_parameter_me_puritanical_conversion_bonus_other_shia:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against [GetDoctrineType('islam_secondary_group_shia_puritanical_doctrine').GetBaseName] [faiths|E]"
  puritanical_islam_shia_conversion_task_desc:0 "Puritanical Shi'ite converting or being converted by other Shi'ites"
  
  #Moderate Muhakkima
  islam_secondary_group_muhakkima_moderate_doctrine_name:0 "Moderate Muhakkima"
  islam_secondary_group_muhakkima_moderate_doctrine_desc:0 "Although we share a common origin point, we do not agree with the other extremist Muhakkima who condemn the other sects to death for their act of disbelief."
- doctrine_parameter_hostility_override_islam_secondary_group_muhakkima_moderate_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_muhakkima_moderate_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_muhakkima_moderate_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_muhakkima_moderate_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Puritanical Muhakkima
  islam_secondary_group_muhakkima_puritanical_doctrine_name:0 "Puritanical Muhakkima"
  islam_secondary_group_muhakkima_puritanical_doctrine_desc:0 "There is only one true path that Allah will accept, and there will be no compromise for the sake of the deviants."
- doctrine_parameter_hostility_override_islam_secondary_group_muhakkima_puritanical_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_muhakkima_puritanical_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
- doctrine_parameter_me_puritanical_conversion_bonus_muhakkima:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against other [GetFaithDoctrine('muhammad_succession_muhakkima_doctrine').GetBaseName] [faiths|E]"
- doctrine_parameter_me_puritanical_conversion_bonus_other_muhakkima:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against [GetFaithDoctrine('islam_secondary_group_muhakkima_puritanical_doctrine').GetBaseName] [faiths|E]"
+ doctrine_parameter_hostility_override_islam_secondary_group_muhakkima_puritanical_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_muhakkima_puritanical_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_me_puritanical_conversion_bonus_muhakkima:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against other [GetDoctrineType('muhammad_succession_muhakkima_doctrine').GetBaseName] [faiths|E]"
+ doctrine_parameter_me_puritanical_conversion_bonus_other_muhakkima:0 "[EmptyScope.ScriptValue('puritanical_islam_conversion_bonus_root_value')|=+%0] conversion speed against [GetDoctrineType('islam_secondary_group_muhakkima_puritanical_doctrine').GetBaseName] [faiths|E]"
  puritanical_islam_muhakkima_conversion_task_desc:0 "Puritanical Muhakkima converting or being converted by other Muhakkimas"
  
  #Unaffiliated Zandaqa
  islam_secondary_group_zandaqa_unaffiliated_doctrine_name:0 "Unaffiliated"
  islam_secondary_group_zandaqa_unaffiliated_doctrine_desc:0 "Our theology and beliefs are far too disconnected from the other sects for us to be considered part of any of their groups."
- doctrine_parameter_hostility_override_islam_secondary_group_zandaqa_unaffiliated_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_zandaqa_unaffiliated_doctrine').GetBaseName] [faiths|E] [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_zandaqa_unaffiliated_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_zandaqa_unaffiliated_doctrine').GetBaseName] [faiths|E] [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Ghulat
  islam_secondary_group_zandaqa_ghulat_doctrine_name:0 "Ghulat"
- islam_secondary_group_zandaqa_ghulat_doctrine_desc:0 "Though we may trace the line of the Prophet correctly or not matters little to other Muslims, for our belief in the divine nature of the Imams mark us as outcasts regardless. Let the other so-called 'believers' call us Ghulāt — Exaggerators, we merely afford the true heirs of the Prophet the full respect they are due!"
- doctrine_parameter_hostility_override_islam_secondary_group_zandaqa_ghulat_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_zandaqa_ghulat_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ islam_secondary_group_zandaqa_ghulat_doctrine_desc:0 "Our belief in the divine nature of the Imams mark us as outcasts even among the Shi'ites. Let the other so-called 'believers' call us Ghulāt (Exaggerators), we merely afford the bloodline of the Prophet the full respect it is due!"
+ doctrine_parameter_hostility_override_islam_secondary_group_zandaqa_ghulat_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_zandaqa_ghulat_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Qarmatian
  islam_secondary_group_zandaqa_qarmatian_doctrine_name:0 "Qarmatian"
  islam_secondary_group_zandaqa_qarmatian_doctrine_desc:0 "A splinter group of the original Isma’ili Shi’ites, The Qarmatians have been known to attack the holy cities of Islam which has made them reviled by the all the Muslim sects."
- doctrine_parameter_hostility_override_islam_secondary_group_zandaqa_qarmatian_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_zandaqa_qarmatian_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_zandaqa_qarmatian_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_zandaqa_qarmatian_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
  #Unaffiliated Berberist
  islam_secondary_group_berberist_doctrine_name:0 "Unaffiliated"
  islam_secondary_group_berberist_doctrine_desc:0 "Our theology and beliefs are far too disconnected from the other sects for us to be considered part of any of their groups."
- doctrine_parameter_hostility_override_islam_secondary_group_berberist_doctrine:0 "Considers [GetFaithDoctrine('islam_secondary_group_berberist_unaffiliated_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
+ doctrine_parameter_hostility_override_islam_secondary_group_berberist_doctrine:0 "Considers [GetDoctrineType('islam_secondary_group_berberist_unaffiliated_doctrine').GetBaseName] [faiths|E] to be [GetHostilityLevelName( TOKEN_PARAMETER.GetIntValue )|V]."
  
 
  ## Prohibition Doctrines ##
- doctrine_me_intoxication_name:0 "Alcohol Consumption"
  NO_HEDONISTIC:0 "The $tenet_hedonistic_name$ [core_tenet|E] must not be selected" 
  REQUIRES_HEDONISTIC:0 "Requires the [core_tenet|E] $tenet_hedonistic_name$"
 
- #Crimial Intoxication/Enforced Prohibition
- doctrine_me_intoxication_crime_name:0 "Criminal"
- doctrine_me_intoxication_crime_desc:0 "Intoxication is an enemy to all that is wise and good, virtuous and comely in man, that every one ought to rise with indignation against it as a most destructive and pernicious evil."
- doctrine_me_intoxication_crime_islamic_name:0 "Enforced Prohibition" 
- doctrine_me_intoxication_crime_islamic_desc:0 "[ROOT.Faith.HighGodNamePossessive] verses are clear, intoxicants are forbidden to us as they pose a danger to us and our society, all who willingly participate in it's consumption must be punished" 
- doctrine_parameter_me_intoxication_illegal:0 "[characters|E] with the [GetTrait('drunkard').GetName( GetPlayer )] [trait|E] are [criminals|E]"
 
- #Shunned Intoxication/Islamic Prohibition
- doctrine_me_intoxication_shunned_name:0 "Shunned" #Intoxication is a sin
- doctrine_me_intoxication_shunned_desc:0 "The followers of our faith must remain focused and wise in judgement, we cannot muddle our senses with spirits and liquor."
- doctrine_me_intoxication_shunned_islamic_name:0 "Islamic Prohibition"
- doctrine_me_intoxication_shunned_islamic_desc:0 "[ROOT.Faith.HighGodName] has forbidden intoxicants to us, they melt the mind and leave us blind in our judgement, and only those who have been blinded by them fail to see their vile nature." 
- doctrine_parameter_me_intoxication_shunned:0 "[characters|E] with the [GetTrait('drunkard').GetName( GetPlayer )] [trait|E] are [shunned|E]"
 
  #Accepted Intoxication
- doctrine_me_intoxication_accepted_name:0 "Accepted"
- doctrine_me_intoxication_accepted_desc:0 "How one wishes to govern themselves in the matter of drink is of little concern to us, however, they will still be held accountable for the decisions they make with a bottle in hand."
- doctrine_parameter_me_intoxication_accepted:0 "[characters|E] with the [GetTrait('drunkard').GetName( GetPlayer )] [trait|E] are fully accepted"
 
  #Virtuous Intoxication
- doctrine_me_intoxication_virtuous_name:0 "Virtuous"
- doctrine_me_intoxication_virtuous_desc:0 "To forbid ourselves from the pleasures of this world is a sin in and of itself, afterall, why would [ROOT.Faith.CreatorName] create drink for us if not to enjoy?"
 
  ## Ablution Doctrines ##
  doctrine_me_ablution_name:0 "Ablution Ritual"
@@ -245,7 +206,101 @@
  doctrine_parameter_me_ablution_full:0 "Non-[GetTrait('cynical').GetName( GetNullCharacter )] [characters|E] of this [faith|E] are significantly less likely to get infected by [epidemics|E]"
  doctrine_me_ablution_wudhu_name:0 "Wudhu"
  doctrine_me_ablution_wudhu_desc:0 "Following the commandments of [ROOT.Faith.HighGodName], we must cleanse ourselves multiple times a day, meticulously cleaning our hands, face, arms, and feet as we must be pure when we offer ourselves to him in prayer."
+ doctrine_me_ablution_rishama_name:0 "Rishama"
+ 
+ ## Fasting Month Doctrines ##
+ doctrine_me_fasting_month_name:0 "Fasting Month"
+ doctrine_parameter_ihd_decision_active:0 "The [decision|E] to [GetDecisionWithKey('ME_observe_islamic_holy_days').GetName] becomes active."
 
+ #Fasting in Ramadan
+ doctrine_me_fasting_month_ramadan_name:0 "Ramadan"
+ doctrine_me_fasting_month_ramadan_desc:0 "'#EMP Oh you who believe! Fasting is prescribed for you as it was for those before you, that you may become mindful of Allah.#!'"
+ doctrine_parameter_fasting_month_ramadan:0 "Adherents fast during [Glossary( 'Ramadan', 'RAMADAN_GLOSS' )]."
+ 
+ #Fasting in Rajab
+ doctrine_me_fasting_month_rajab_name:0 "Rajab"
+ doctrine_me_fasting_month_rajab_desc:0 "Those before us may have been ordered to fast in Ramadan, but we have been ordered to fast in Rajab."
+ doctrine_parameter_fasting_month_rajab:0 "Adherents fast during [Glossary( 'Rajab', 'RAJAB_GLOSS' )]."
+ 
+ #No Monthly Fasting
+ doctrine_me_fasting_month_none_name:0 "None"
+ doctrine_me_fasting_month_none_desc:0 "We are not tied by any obligation to observe a month of fasting."
+ doctrine_parameter_fasting_month_none:0 "Will not recieve any [decisions|E] or events related to monthly fasting."
+ 
+ ## Affinal Doctrines ##
+ AFFINAL_CONSANGUINITY_INCOMPATIABLE:0 "Incompatible with the chosen $doctrine_consanguinity_name$ [doctrine|E]"
+ AFFINAL_FIXED_POLYGAMY_INCOMPATIABLE:0 "Incompatible with the chosen $doctrine_me_affinality_fixed_name$ [doctrine|E]"
+
+ doctrine_me_affinality_fixed_name:0 "Affinal Restrictions"
+ doctrine_me_affinality_fixed_dynastic_name: "Lineal Prohibition"
+ doctrine_me_affinality_fixed_dynastic_desc: "It is strictly forbidden to marry another with whom your spouse shares a surname and common ancestry, no matter how distantly related, nor is it acceptable to marry those of other surnames proximate through blood."
+ doctrine_parameter_affinal_restricted_dynastic_marriage_fixed: "Marriage with a member of a a current or former [spouse|E]'s [dynasty|E] is forbidden"
+ doctrine_me_affinality_fixed_extended_family_name:0 "Extended-kin Prohibition"
+ doctrine_me_affinality_fixed_extended_family_desc:0 "Marriage renders the family of one's spouse to be their own, and so it is a sin against [ROOT.Faith.HighGodName] to permit two relatives to marry each other or engage in sexual relationships."
+ doctrine_parameter_affinal_restricted_extended_kin_marriage_fixed:0 "Marriage with a current or former [spouse|E]'s [extended_family_members|E] and/or [close_family_members|E] is forbidden"
+ doctrine_parameter_affinal_restricted_extended_kin_incest_fixed:0 "Sexual relations a current or former [spouse|E]'s [extended_family_members|E] and/or [close_family_members|E] will give the incest [secret|E]"
+ doctrine_me_affinality_fixed_cousins_name:0 "Cousin Prohibition"
+ doctrine_me_affinality_fixed_cousins_desc:0 "$doctrine_me_affinality_fixed_extended_family_desc$"
+ doctrine_parameter_affinal_restricted_close_kin_marriage_fixed:0 "Marriage with a current or former [spouse|E]'s cousins is forbidden"
+ doctrine_parameter_affinal_restricted_close_kin_incest_fixed:0 "Sexual relations with a a current or former [spouse|E]'s cousins will give the incest [secret|E]"
+ doctrine_me_affinality_fixed_close_kin_name:0 "Close-kin Prohibition"
+ doctrine_me_affinality_fixed_close_kin_desc:0 "Your spouse's brothers and sisters are your own, and for two siblings to couple is an abhorant thing."
+ doctrine_parameter_affinal_restricted_cousin_marriage_fixed:0 "Marriage with a current or former [spouse|E]'s [close_family_members|E] is forbidden"
+ doctrine_parameter_affinal_restricted_cousin_incest_fixed:0 "Sexual relations a current or former [spouse|E]'s [close_family_members|E] will give the incest [secret|E]"
+ doctrine_me_affinality_fixed_parental_name:0 "Parent-Child Prohibition"
+ doctrine_me_affinality_fixed_parental_desc:0 "The parents and children of ones spouse must be treated as their own, and a union between a parent and a child is an abhorant thing."
+ doctrine_parameter_affinal_restricted_parental_marriage_fixed:0 "Marriage with a current or former [spouse|E]'s parent or child is forbidden"
+ doctrine_parameter_affinal_restricted_parental_incest_fixed:0 "Sexual relations a current or former [spouse|E]'s parent or child will give the incest [secret|E]"
+ doctrine_me_affinality_fixed_unrestricted_name:0 "Unrestricted Marriage"
+ doctrine_me_affinality_fixed_unrestricted_desc:0 "There is no blood relation between a person and their affinal family, as such their would be no reason to restrict their marriage."
+ doctrine_parameter_affinal_unrestricted_marriage_fixed:0 "Marriage with a current or former [spouse|E]'s family members is allowed"
+ doctrine_parameter_affinal_unrestricted_incest_fixed:0 "Sexual with a current or former [spouse|E]'s family members will not give the incest [secret|E]"
+
+ doctrine_me_affinality_polygamy_name:0 "Affinal Polygamy"
+ doctrine_me_affinality_polygamy_dynastic_name: "Lineal Prohibition"
+ doctrine_me_affinality_polygamy_dynastic_desc: "It is strictly forbidden to marry another with whom your spouse shares a surname and common ancestry, no matter how distantly related, nor is it acceptable to marry those of other surnames proximate through blood."
+ doctrine_parameter_affinal_restricted_dynastic_marriage_polygamy: "Marriage with a member of a a current [spouse|E]'s [dynasty|E] is forbidden"
+ doctrine_me_affinality_polygamy_extended_family_name:0 "Extended-kin Prohibition"
+ doctrine_me_affinality_polygamy_extended_family_desc:0 "Marriage renders the family of one's spouse to be their own, and so it is a sin against [ROOT.Faith.HighGodName] to permit two relatives to marry each other or engage in sexual relationships."
+ doctrine_parameter_affinal_restricted_extended_kin_marriage_polygamy:0 "Marriage with a current [spouse|E]'s [extended_family_members|E] and/or [close_family_members|E] is forbidden"
+ doctrine_parameter_affinal_restricted_extended_kin_close_kin_incest_polygamy:0 "Sexual relations a current [spouse|E]'s [extended_family_members|E] and/or [close_family_members|E] will give the incest [secret|E]"
+ doctrine_me_affinality_polygamy_cousins_name:0 "Cousin Prohibition"
+ doctrine_me_affinality_polygamy_cousins_desc:0 "$doctrine_me_affinality_polygamy_extended_family_desc$"
+ doctrine_parameter_affinal_restricted_cousin_marriage_polygamy:0 "Marriage with a current [spouse|E]'s cousins is forbidden"
+ doctrine_parameter_affinal_restricted_cousin_incest_polygamy:0 "Sexual relations with a a current [spouse|E]'s cousins will give the incest [secret|E]"
+ doctrine_me_affinality_polygamy_close_kin_name:0 "Close-kin Prohibition"
+ doctrine_me_affinality_polygamy_close_kin_desc:0 "Your spouse's brothers and sisters are your own, and for two siblings to couple is an abhorant thing."
+ doctrine_parameter_affinal_restricted_close_kin_marriage_polygamy:0 "Marriage with a current [spouse|E]'s [close_family_members|E] is forbidden"
+ doctrine_parameter_affinal_restricted_close_kin_incest_polygamy:0 "Sexual relations a current [spouse|E]'s [close_family_members|E] will give the incest [secret|E]"
+ doctrine_me_affinality_polygamy_parental_name:0 "Parent-Child Prohibition"
+ doctrine_me_affinality_polygamy_parental_desc:0 "The parents and children of ones spouse must be treated as their own, and a union between a parent and a child is an abhorant thing."
+ doctrine_parameter_affinal_restricted_parental_marriage_polygamy:0 "Marriage with a current [spouse|E]'s parent or child is forbidden"
+ doctrine_parameter_affinal_restricted_parental_incest_polygamy:0 "Sexual relations a current [spouse|E]'s parent or child will give the incest [secret|E]"
+ doctrine_me_affinality_polygamy_unrestricted_name:0 "Unrestricted Marriage"
+ doctrine_me_affinality_polygamy_unrestricted_desc:0 "There is no blood relation between a person and their affinal family, as such their would be no reason to restrict their marriage."
+ doctrine_parameter_affinal_unrestricted_marriage_polygamy:0 "Marriage with a current [spouse|E]'s family members is allowed"
+ doctrine_parameter_affinal_unrestricted_incest_polygamy:0 "Sexual with a current [spouse|E]'s family members will not give the incest [secret|E]"
+
+ ## Heresiarch Adventeror Doctrines ##
+ special_doctrine_ibn_nusayr_trait_acceptance_name:0 "The Descendants of Ibn Nusayr"
+ ibn_nusayr_trait_acceptance_name:0 "$special_doctrine_ishaq_ahmar_trait_acceptance_name$"
+ special_doctrine_ibn_nusayr_trait_acceptance_desc:0 "The blood of Ibn Nusayr is righteous and his decendants must be revered."
+ doctrine_parameter_ibn_nusayr_trait_effects_active:0 "Characters with the [GetTrait('ME_blood_of_ibn_nusayr').GetName( GetNullCharacter )] and [GetTrait('ME_ibn_nusayr_bab').GetName( GetNullCharacter )] [trait|E] receive bonuses."
+ 
+ special_doctrine_ishaq_ahmar_trait_acceptance_name:0 "The Descendants of Ishaq al-Ahmar"
+ ishaq_ahmar_trait_acceptance_name:0 "$special_doctrine_ishaq_ahmar_trait_acceptance_name$"
+ special_doctrine_ishaq_ahmar_trait_acceptance_desc:0 "The blood of Ishaq al-Ahmar is righteous and his decendants must be revered."
+ doctrine_parameter_ishaq_ahmar_trait_effects_active:0 "Characters with the [GetTrait('ME_blood_of_ishaq_ahmar').GetName( GetNullCharacter )] and [GetTrait('ME_ishaq_ahmar_bab').GetName( GetNullCharacter )] [trait|E] receive bonuses."
+ 
+ special_doctrine_zakarawayhist_trait_acceptance_name:0 "The Descendants of Mihrawayh"
+ zakarawayhist_trait_acceptance_name:0 "$special_doctrine_zakarawayhist_trait_acceptance_name$"
+ special_doctrine_zakarawayhist_trait_acceptance_desc:0 "The blood of Mihrawayh is righteous and his decendants must be revered."
+ doctrine_parameter_zakarawayhist_trait_effects_active:0 "Characters with the [GetTrait('ME_blood_of_zakarawayh').GetName( GetNullCharacter )] and [GetTrait('ME_zakarawayhist_mahdi').GetName( GetNullCharacter )] [trait|E] receive bonuses."
+ 
+ special_doctrine_jayshanist_trait_acceptance_name:0 "The Descendants of al-Jayshani"
+ jayshanist_trait_acceptance_name:0 "$special_doctrine_jayshanist_trait_acceptance_name$"
+ special_doctrine_jayshanist_trait_acceptance_desc:0 "The blood of Ibn al-Fadl al-Jayshani is righteous and his decendants must be revered."
+ doctrine_parameter_jayshanist_trait_effects_active:0 "Characters with the [GetTrait('ME_blood_of_jayshani').GetName( GetNullCharacter )] and [GetTrait('ME_jayshanist_mahdi').GetName( GetNullCharacter )] [trait|E] receive bonuses."
 
  ## Islamic Faiths ## 
  #Wahbiya - North African Ibadi Islam
@@ -273,51 +328,26 @@
  tayyibi_adj:0 "Tayyibi"
  tayyibi_adherent:0 "Tayyibi"
  tayyibi_adherent_plural:0 "Tayyibis"
- tayyibi_desc:0 "Tayyibism asserts that the true line of succession to the Caliphate is through al-Amir's son, at-Tayyib, who is believed to have been sent into seclusion and that a line of Imams continues through him in hiding, in their absence the Tayyibis are led by the ad-Da'i al-Mutlaq — Unrestricted Missionary — who holds the highest spiritual office."
- d_tayyibi:0 "Tayyibi Da'wah"
- d_tayyibi_article:0 "the "
+ tayyibi_desc:0 "Tayyibism asserts that the true line of succession to the Caliphate is through al-Amir's son, at-Tayyib, who is believed to have been sent into seclusion and that a line of Imams continues through him in hiding, in their absence the Tayyibis are led by the Unrestricted Missionary (ad-Da'i al-Mutlaq) who holds the highest spiritual office."
+ d_tayyibi:0 "The Tayyibi Mission"
  d_tayyibi_adj:0 "Tayyibi"
- 
  tayyibi_religious_head_title:0 "Da'i al-Mutlaq"
- tayyibi_religious_head_title_name:0 "Da'wah"
+ tayyibi_religious_head_title_name:0 "The Tayyibi Mission"
  me_dai_al_mutlaq_male:0 "Da'i al-Mutlaq"
  me_dai_al_mutlaq_female:0 "Da'iah al-Mutlaqah"
  
- #Sami's additional
- 
- #Azariqa
- d_azariqa:0 "Azariqa Imamate"
- d_azariqa_adj:0 "Azariqa"
- d_azariqa_article:0 "the "
-
- #Qarmatian 
- d_qarmatian:0 "Qarmati Imamate"
- d_qarmatian_adj:0 "Qarmati"
- d_qarmatian_article:0 "the "
- 
- #Alawi
- d_alawi:0 "Alawi Imamate"
- d_alawi_adj:0 "Alawite"
- d_alawi_article:0 "the "
- 
- #ishaqiya
- d_ishaqi:0 "Ishaqi Imamate"
- d_ishaqi_adj:0 "Ishaqi"
- d_ishaqi_article:0 "the "
- 
- #Ishaaqiya
+ #Ishaqiya
  ishaqiya:0 "Ishaqism"
  ishaqiya_adj:0 "Ishaqi"
  ishaqiya_adherent:0 "Ishaqite"
  ishaqiya_adherent_plural:0 "Ishaqi"
- ishaqiya_desc:0 "The Ishaqiya, otherwise known as Ishaqites, are a school of thought which maintains that the title of door to the Imam Hasan al-Askari belongs to Abu Ya'qub Ishaq. This belief is in direct opposition to the Alawis."
  
  #Salihiyya (Tabiriyya/Batriyya)
  salihi:0 "Salihism"
  salihi_adj:0 "Salihi"
  salihi_adherent:0 "Salihi"
  salihi_adherent_plural:0 "Salihis"
- salihi_desc:0 "Also known as the Tabiriyya, the Salihiyya are a sub-sect of Zayidism who follow the teachings of Hasan ibn Salih al-Hamadani and Kathir an-Nawa al-Abtar. They believe that Abu Bakr, Umar, Uthman, and Aisha had been in error in failing to follow Imam Ali but it did not render them as disbelievers. In matters of jurisprudence, they share much in common with Sunni practice while maintaining their distinct Shi’a identity."
+ salihi_desc:0 "Also known as the Tabiriyya, the Salihiyya are a sub-sect of Zaydism who follow the teachings of Hasan ibn Salih, they believe that Abu Bakr, Umar, Uthman, and Aisha had been in error in failing to follow Imam Ali but it did not render them as disbelievers. In matters of jurisprudence, they share much in common with Sunni practice while maintaining their distinct Shi’a identity."
 
  #Karramiyya
  karrami:0 "Karramism"
@@ -325,6 +355,13 @@
  karrami_adherent:0 "Karrami"
  karrami_adherent_plural:0 "Karramis"
  karrami_desc:0 "Founded by Muhammad ibn Karram in the 9th century, Karramism is a Sunni movement that was considered heretical by non-Karrami Sunnis for it's supposed anthropomorphisation of God. It was characterised by self-mortification, renunciation, and voluntary poverty that it's followers used order to get closer to Allah."
+
+ #Baqliyyah/Buraniyyah
+ baqli:0 "Baqlism"
+ baqli_adj:0 "Baqli"
+ baqli_adherent:0 "Baqli"
+ baqli_adherent_plural:0 "Baqlis"
+ baqli_desc:0 "The Baqliyyah - a term that translates to legume-eaters - are the followers of the Qarmatian sect of Abu Hatim az-Zatti, who abolished Islamic religious observances and introduced Dharmic practices such as forbidding the slaughtering of animals and the prohibition of consuming garlic, leeks, and turnips"
 
  ## Non-Islamic Faiths ##
  #Trika Shaivism (Kashmiri Shaivism)
@@ -356,10 +393,9 @@
  ## Berberist Faiths ##
  #Barghawata
  barghawata:0 "Barghawata"
- barghawata_adj:0 "Barghawata"
- barghawata_adherent:0 "Barghawata"
- barghawata_adherent_plural:0 "Barghawata"
- barghawata_desc:0 "Founded by the self-proclaimed mahdi and prophet Ṣāliḥ ibn Tarīf, Barghawatism is a heavily altered and berberized form of the Islam mixed in with traditional Berber mythology, it's adherants refer to God by his berber name, Yakush, and have their own Qur'an written in the Berber language and includes an additional 80 chapters."
+ barghawata_adj:0 "Barghawatian"
+ barghawata_adherent:0 "Barghawatian"
+ barghawata_adherent_plural:0 "Barghawatians"
  special_doctrine_is_barghawata_faith_name:0 "The Descendants of Salih"
  is_barghawata_faith_name:0 "$special_doctrine_is_barghawata_faith_name$"
  special_doctrine_is_barghawata_faith_desc:0 "While we await the return of Salih, we must follow his descendants, as they are the true leaders of the Barghawata."
@@ -371,27 +407,25 @@
  barghawata_religious_head_title_name:0 "Barghawata Iserate"
  
  #Ḥa-Mimism
- hamimist:0 "Ḥa-Mimism"
- hamimist_adj:0 "Ḥa-Mimist"
- hamimist_adherent:0 "Ḥa-Mimist"
- hamimist_adherent_plural:0 "Ḥa-Mimists"
- hamimist_desc:0 "Ḥa-Mimism was founded by a self-proclaimed of the Ghomara Berbers known as Ḥa-Mim, named after a well known combination of Qur'anic letters. The religion combined Islamic traditions with Berber folk practices and used it's own Qur'an written in Berber which inculded additional chapters, this draws many parallels with the Barghawatian religion of Sālih ibn Tarīf which Ḥa-Mimism is likely inspired by."
+ hamimist:0 "Ha-Mimism"
+ hamimist_adj:0 "Ha-Mimist"
+ hamimist_adherent:0 "Ha-Mimist"
+ hamimist_adherent_plural:0 "Ha-Mimists"
  special_doctrine_is_hamimist_faith_name:0 "The Descendants of Ḥa-Mim"
  is_hamimist_faith_name:0 "$special_doctrine_is_hamimist_faith_name$"
  special_doctrine_is_hamimist_faith_desc:0 "The blood of Ḥa-Mim is righteous and his decendants must be revered."
  doctrine_parameter_hamimist_trait_effects_active:0 "Characters with the [GetTrait('blood_of_hamim').GetName( GetNullCharacter )] and [GetTrait('hamimist_prophet').GetName( GetNullCharacter )] [trait|E] receive bonuses."
- d_hamimist:0 "Ḥa-Mimist Iserate"
+ d_hamimist:0 "Ha-Mimist Iserate"
  d_hamimist_article:0 "the "
- d_hamimist_adj:0 "Ḥa-Mimist"
+ d_hamimist_adj:0 "Ha-Mimist"
  hamimist_religious_head_title:0 "Iser"
- hamimist_religious_head_title_name:0 "Ḥa-Mimist Iserate"
+ hamimist_religious_head_title_name:0 "Ha-Mimist Iserate"
  
  #Kaduism
  kaduist:0 "Kaduism"
  kaduist_adj:0 "Kaduist"
  kaduist_adherent:0 "Kaduist"
  kaduist_adherent_plural:0 "Kaduists"
- kaduist_desc:0 "The Kaduist religion mixes Shi'a Islam with Berber folk traditions that were practiced among the Kutama tribes, this included many sexual acts deemed deviant by the Islamic orthodoxy. The religion is centered around a young boy by the name of Kadu ibn Mu'arik al-Mawati, who is believed by it's followers to be their mahdi and prophet."
  special_doctrine_is_kaduist_faith_name:0 "The Descendants of Kadu"
  is_kaduist_faith_name:0 "$special_doctrine_is_kaduist_faith_name$"
  special_doctrine_is_kaduist_faith_desc:0 "The blood of Kadu is righteous and his decendants must be revered."
@@ -411,15 +445,15 @@
  d_kaduist_caliphate:0 "Caliphate"
  
  ## Ahl ul-Islam (Non-sectarian Islam) ##
- alb_religion:0 "Ahl al-Islam"
- alb_religion_adj:0 "Ahl al-Islam"
+ alb_religion:0 "Ahl ul-Islam"
+ alb_religion_adj:0 "Ahl ul-Islam"
  alb_religion_adherent:0 "Muslim"
  alb_religion_adherent_plural:0 "Muslims"
  alb_religion_desc:0 "The sects of Islam are divided upon who are the true successors of Prophet Muhammad and rightful leaders of the Muslim Ummah, they each believe that the Prophet and Ahl al-Bayt supported their line of succession."
  faith_conversion_blocked_ALB:0 "You can't convert to this faith as it is merely symbolic and not a true faith."
  special_doctrine_is_alb_faith_name:0 "Before the Fitnah"
  is_alb_faith_name:0 "$special_doctrine_is_alb_faith_name$"
- special_doctrine_is_alb_faith_desc:0 "The Fitnah was the first civil war of the Muslims over the death of the third caliph, Uthman. Plunging the Ummah into inconceivable bloodshed amongst themselves. These men however, lived before this time of strife and are looked upon with reverence by every subsequent Muslims."
+ special_doctrine_is_alb_faith_desc:0 ""
  doctrine_parameter_hostility_override_special_doctrine_is_alb_faith:0 ""
  
  #Ahl al-Bayt (Main Branch)
@@ -427,7 +461,7 @@
  ns_islam_adj:0 "Ahl al-Bayt"
  ns_islam_adherent:0 "Ahl al-Bayt" #shouldn't appear for the player, put anything here
  ns_islam_adherent_plural:0 "Ahl al-Bayt" #shouldn't appear for the player, put anything here
- ns_islam_desc:0 "The Ahl al-Bayt, the 'People of the House' refers to Prophet Muhammad and his family. Regarded by both the Sunnis and Shi'a at the most highest esteem. The only difference however is that the Shi'a Muslims hold them as the rightful successors of the Prophet, while the Sunnis view that the successors are chosen at the Saqifa."
+ ns_islam_desc:0 "The sects of Islam are divided upon who are the true successors of Prophet Muhammad and rightful leaders of the Muslim Ummah, they each believe that the Prophet and Ahl al-Bayt supported their line of succession."
  
  #Shi'at 'Ali (Non-sectarian Shi'a Islam)
  ns_islam_shia:0 "Shi'at 'Ali"
@@ -468,3 +502,13 @@
  alevi_water_god_name_possessive:0 "$alevi_high_god_name_possessive$"
  islam_alevi_priest:0 "Dede"
  islam_alevi_priest_plural:0 "Dede"
+
+ # Holy sites removed from vanilla in CK3 1.21 that ME still uses
+ holy_site_qom_name:0 "Qom"
+ holy_site_siffa_name:0 "Siffa"
+ holy_site_siffa_effect_name:0 "From [holy_site|E] #weak ($holy_site_siffa_name$)#!"
+ holy_site_yamama_name:0 "Yamama"
+ holy_site_yamama_effect_name:0 "From [holy_site|E] #weak ($holy_site_yamama_name$)#!"
+
+ doctrine_alcohol_highborn_only_islamic_name:0 "Wine of the Dhimmis"
+ doctrine_alcohol_highborn_only_islamic_desc:0 "Wine is forbidden to the believer. Yet for the People of the Book who live under our protection it is lawful property: it may be owned and sold among them and taxed by the treasury, and whoever destroys it owes them its price."

@@ -1,12 +1,32 @@
 ﻿k_armenia = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	#Previous Kings of Armenia removed to a separate title: Arsacid Armenia *was* a kingdom, but the regnal numbering is reset for Bagratid Armenia. Keeping them in the same title was therefore messing up medieval Armenia quite drastically (Ashot I became Ashot IV, etc).
 	654.1.1 = {
 		liege = e_arabia
 		#holder = 145996
+	}
+
+	# Umayyad Caliphal Governors
+	710.1.1 = {
+		holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	}
+	720.1.1 = {
+		holder = 0
+	}
+	726.1.1 = {
+		holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	}
+	#729.1.1 = {
+	#	holder = 0
+	#}
+	#730.1.1 = {
+	#	holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	#}
+	732.1.1 = {
+		holder = 0
 	}
 
 	# Abbasid Caliphal Governors
@@ -28,7 +48,7 @@
 	812.1.1 = {
 		holder = me_abbasids_010 # Ishaq ibn Sulayman al-'Abbasi
 	}
-	813.1.1 = { # Governorship was interrupted 4 times between 813 and 844 
+	813.1.1 = { # Governorship was interrupted 4 times between 813 and 844
 		holder = 146076 # Khalid ibn Yazid ash-Shaybani
 	}
 	844.1.1 = {
@@ -55,7 +75,7 @@
 	870.1.1 = {
 		holder = 159732 # Isa ash-Shaybani
 	}
-	
+
 	#Independance from the Abbasid
 	#Bagratid Armenia
 	884.1.1 = {
@@ -93,7 +113,7 @@
 		holder = 0
 	}
 	#1045 to BYZ
-	
+
 	1199.1.1 = {
 		holder = 223000 #Levon I Rubenid
 	}
@@ -263,7 +283,7 @@ d_mesopotamia = {
 	863.1.1 = {
 		holder = 159725
 	}
-	
+
 	#Byz
 	965.1.1 = {
 		liege = "e_byzantium"
@@ -279,6 +299,7 @@ d_mesopotamia = {
 					game_start_date = 1066.9.15
 				}
 				holder = {
+					empty_treasury_when_abandoning_landed_life_effect = yes
 					change_government = feudal_government
 				}
 			}
@@ -287,7 +308,7 @@ d_mesopotamia = {
 	1067.1.1 = {
 		holder = 724
 	}
-	
+
 	#Seljuk
 	1071.8.26 = {
 		liege = "k_persia"
@@ -326,7 +347,7 @@ d_mesopotamia = {
 	1166.1.1 = {
 		holder = 144072
 	}
-	
+
 	#Rum
 	1185.1.1 = {
 		holder = 225010
@@ -343,7 +364,7 @@ d_mesopotamia = {
 	1234.1.1 = {
 		holder = 34255
 	}
-	
+
 	#Ilkhanate
 	1243.1.1 = {
 		liege = "e_ilkhanate"
@@ -391,6 +412,12 @@ c_melitene = {
 	863.1.1 = {
 		holder = 159725
 	}
+
+	932.1.1 = {
+		holder = me_taghlib_111 # 'Abu'l-Ala' Sa'id ibn Hamdan
+		#liege = "e_arabia"
+	}
+
 	1060.1.1 = {
 		holder = 85001
 	}
@@ -426,7 +453,7 @@ c_melitene = {
 		holder = 34242
 	}
 	1204.1.1 = {
-	
+
 		holder = 34243
 	}
 	1232.1.1 = {
@@ -519,7 +546,7 @@ c_theodosiopolis = {
 	1300.1.1 = {
 		holder = 34401
 	}
-	
+
 	1335.1.1 = {
 		liege = "k_eretnid"
 	}
@@ -580,7 +607,7 @@ c_mesopotamia = {
 		holder = 34242
 	}
 	1204.1.1 = {
-	
+
 		holder = 34243
 	}
 	1232.1.1 = {
@@ -651,9 +678,9 @@ d_vaspurakan = {
 	867.1.1 = {
 		holder = 0
 	}
-	
+
 	#884 Armenia independant from Abbasid
-	
+
 	#Kingdom of Vaspurakan in 908
 	908.1.1 = {
 		holder = 41563	#Gagik I Artsruni
@@ -674,7 +701,7 @@ d_vaspurakan = {
 	1003.1.1 = {
 		holder = 41576	#Hovhannes Senek'erim Artsruni
 	}
-	
+
 	#End of the kingdom of Vaspurakan
 	1021.1.1 = {
 		liege = "e_byzantium"
@@ -689,12 +716,13 @@ d_vaspurakan = {
 					NOT = { has_dlc_feature = roads_to_power }
 				}
 				holder = {
+					empty_treasury_when_abandoning_landed_life_effect = yes
 					change_government = feudal_government
 				}
 			}
 		}
 	}
-	
+
 	#Battle of Manzikert
 	1071.8.26 = {
 		liege = "k_rum"
@@ -731,7 +759,7 @@ d_vaspurakan = {
 	1225.1.1 = {
 		holder = 34233
 	}
-	
+
 	#placeholders
 	1230.1.1 = {
 		holder = 34398
@@ -765,7 +793,7 @@ d_vaspurakan = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -895,7 +923,7 @@ c_turuberan = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -1030,7 +1058,7 @@ c_apahunik = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -1153,7 +1181,7 @@ c_vaspurakan = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -1224,9 +1252,9 @@ d_greater_armenia = {
 		holder = 41505
 	}
 	#884 Armenia independant from Abbasid
-	
+
 	#Kingdom of Vaspurakan in 908
-	
+
 	890.1.1 = {
 		holder = 41506
 	}
@@ -1248,7 +1276,7 @@ d_greater_armenia = {
 	1020.1.1 = {
 		holder = 41520
 	}
-	
+
 	#1021 end of Vaspurakan
 	1041.1.1 = {
 		holder = 41521
@@ -1256,7 +1284,7 @@ d_greater_armenia = {
 	1041.9.1 = {
 		holder = 41522
 	}
-	
+
 	#
 	1045.1.1 = {
 		holder = 0
@@ -1279,10 +1307,10 @@ d_greater_armenia = {
 
 
 c_hayk = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 44 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 44 }
+
 	646.1.1 = {
 		liege = d_greater_armenia
 	}
@@ -1310,7 +1338,7 @@ c_hayk = {
 	1102.1.1 = {
 		holder = 144045
 	}
-	
+
 	#Shaddadids
 	1073.1.1 = {
 		holder = 41602 # Fadl
@@ -1353,7 +1381,7 @@ c_hayk = {
 	1175.1.1 = { # Retaken by the Shaddadids again
 		holder = me_shaddadid_006 # Sultan
 	}
-	
+
 	#To Georgia
 #	1124.4.1 = {
 #		holder = 144046
@@ -1399,7 +1427,7 @@ c_hayk = {
 	1300.1.1 = {
 		holder = 34401
 	}
-	
+
 
 }
 
@@ -1432,7 +1460,7 @@ c_bagrewand = {
 	1102.1.1 = {
 		holder = 144045
 	}
-	
+
 	#To Georgia
 	1124.1.1 = {
 		holder = 144046
@@ -1506,7 +1534,7 @@ c_vanand = {
 	1102.1.1 = {
 		holder = 144045
 	}
-	
+
 	#To Georgia
 	1124.4.1 = {
 		holder = 144046
@@ -1560,7 +1588,7 @@ c_khachen = {
 	855.1.1 = {
 		holder = 159976 #Smbat, grandson of Sahak Sahl Smbatean
 	}
-	
+
 	#Vassal state of Bagratid Armenia
 	884.1.1 = {
 		liege = k_armenia
@@ -1574,7 +1602,7 @@ c_khachen = {
 	956.1.1 = {
 		holder = 159984	#Atrnerseh, son of Grigor
 	}
-	
+
 #	996.1.1 = {
 #		holder = 159985	#Sahak, son of Atrnerseh
 #	}
@@ -1585,12 +1613,12 @@ c_khachen = {
 #	1030.1.1 = {
 #		holder = 159239	#Grigor, son of Smbat
 #	}
-#	
+#
 #	#1045 : Bagratid Armenia dissolution
 #	1045.1.1 = {
 #		liege = d_greater_armenia
 #	}
-	
+
 	##Shaddadids
 	975.1.1 = {
 		holder = 159162 # Leskeri
@@ -1614,7 +1642,7 @@ c_khachen = {
 	1048.3.1 = {
 		holder = 41600 # Abu'l-Aswar Sawur
 	}
-	
+
 	#1064 : Seljuk take Ani/Armenia
 	1064.1.1 = {
 		liege = 0
@@ -1625,7 +1653,7 @@ c_khachen = {
 	1094.1.1 = {
 		holder = 159235	#Grigor, son of Senekerim
 	}
-	
+
 	#1124 : Goes to Georgia
 	1124.1.1 = {
 		liege = k_georgia
@@ -1636,7 +1664,7 @@ c_khachen = {
 	1160.1.1 = {
 		holder = 159215	#Mamkan, son of Senekerim
 	}
-	
+
 	#1261 : End of KoA
 }
 
@@ -1689,7 +1717,7 @@ c_suenik = {
 	1072.11.1 = {
 		holder = 3042
 	}
-	
+
 	1092.11.1 = {
 		holder = 144012
 	}
@@ -1702,7 +1730,7 @@ c_suenik = {
 	1118.4.18 = {
 		holder = 144015
 	}
-	
+
 	#To Georgia
 	1124.4.1 = {
 		holder = 159210
@@ -1744,7 +1772,7 @@ c_suenik = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1318.1.1 = {
 		holder = 478006
 	}
@@ -1755,10 +1783,10 @@ c_suenik = {
 
 
 c_dvin = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	642.1.1 = {
 		liege = e_arabia # Dvin is conquered by the Caliphate, becoming the capital of the province of Arminiyah
 	}
@@ -1782,7 +1810,7 @@ c_dvin = {
 	812.1.1 = {
 		holder = me_abbasids_010 # Ishaq ibn Sulayman al-'Abbasi
 	}
-	813.1.1 = { # Governorship was interrupted 4 times between 813 and 844 
+	813.1.1 = { # Governorship was interrupted 4 times between 813 and 844
 		holder = 146076 # Khalid ibn Yazid ash-Shaybani
 	}
 	844.1.1 = {
@@ -1864,7 +1892,7 @@ c_dvin = {
 	1125.1.1 = { # Fadl retakes Ani but becomes a Georgian vassal
 		holder = me_shaddadid_001 # Fadl IV
 	}
-	
+
 	#To Georgia
 #	1124.1.1 = {
 #		liege = "k_georgia"
@@ -1913,7 +1941,7 @@ c_dvin = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}

@@ -1,57 +1,226 @@
 ﻿########
-##The above section is for related characters essential for the family tree ^
+##
 ########
 
-najahid001 = { # 
-	name = "al-mu_ayyad"
-	dynasty = me_najahid
+najahid001 = {
+	name = "Najah" # 'al-Mu'ayyid' Najah, ruled from 1021-1060
+	give_nickname = nick_me_al_muayyid
+	dynasty = me_najahid_dynasty
 	culture = "ethiopian"
-	religion = "ashari"
+	rite = "shafii"
 
-	991.3.1 = {
-		birth = 991.3.1
+	1000.1.1 = {
+		birth = yes
 	}
-	1072.6.21 = {
-		death = 1072.6.21
+	1060.6.1 = { # 452 Hijri
+		death = { # Believed to have been poisoned by a slave girl sent to him by al-Sulayhi
+			death_reason = death_poison
+			killer = 45035 # Ali al-Sulayhi
+		}
 	}
 }
 
-najahid002 = { # 
-	name = "Sa_id"
+najahid002 = {
+	name = "Sa_id" # Sa'id 'al-Ahwal' ibn Najah, ruled briefly in 1081-1083 and 1087-1088
 	give_nickname = nick_al_ahwal
-	dynasty = me_najahid
+	dynasty = me_najahid_dynasty
 	culture = "ethiopian"
-	religion = "ashari"
-
+	rite = "shafii"
 	trait = education_martial_4
-	martial = 15
-	prowess = 18
 	
 	father = najahid001
-
-	1020.12.14 = {
-		birth = 1020.12.14
+	1046.1.1 = { # Said to be approching maturity, and as such was under the authority of a Mawla by the name of Kahlan
+		birth = yes
 	}
-	1066.8.15 = {
-		set_primary_title_to = title:c_zabid
-	}
-	1081.11.5 = {
-		death = 1081.11.5
+	1088.6.1 = { # 480/481 Hijri
+		death = yes
 	}
 }
 
-najahid003 = { # 
-	name = "Jayyash"
-	dynasty = me_najahid
+najahid003 = {
+	name = "Jayyash" # Jayyash ibn Najah, ruled the Najahid realm from 1089-1105
+	dynasty = me_najahid_dynasty
 	culture = "ethiopian"
-	religion = "ashari"
+	rite = "shafii"
+	trait = education_learning_3 # 'Devoted himself to knowledge until he excelled'
 	
 	father = najahid001
-
-	1022.9.24 = {
-		birth = 1022.9.24
+	1048.1.1 = { # Said to be approching maturity, and as such was under the authority of a Mawla by the name of Kahlan
+		birth = yes
 	}
-	1081.11.5 = {
-		death = 1081.11.5
+	1105.1.1 = { # 489 Hijri - Also said to be in 1107 AD (500 Hijri)
+		death = yes
+	}
+}
+
+me_najahid_001 = {
+	name = "Mu_arik" # Mu'arik ibn Najah, eldest son of Najah who ruled briefly in 1060-1062
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = najahid001
+	1044.1.1 = { # Said to be approching maturity, and as such was under the authority of a Mawla by the name of Kahlan
+		birth = yes
+	}
+	1062.1.1 = { # Killed himself after the Sulayhid takeover of the Najahid emirate
+		death = {
+			death_reason = death_suicide
+		}
+	}
+}
+
+me_najahid_002 = {
+	name = "adh-Dhakhirah" # adh-Dhakhirah bint Najah
+	female = yes
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = najahid001
+	1054.1.1 = { # Said to not have reached puberty by the time of the Sulayhid takeover
+		birth = yes
+	}
+	1115.1.1 = { # Unknown
+		death = yes
+	}
+}
+
+me_najahid_003 = {
+	name = "al-Fatik" # al-Fatik 'ibn al-Hindiyah' ibn Jayyash, eldest son of Jayyash and an Indian slave girl, ruled the Najahid realm from 1105/1107-1110
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = najahid003
+	mother = me_najahid_004
+	1089.1.1 = {
+		birth = yes
+	}
+	1110.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_004 = {
+	name = "Pratha" # The slave girl Jayyash brought with him from India
+	female = yes
+	culture = "gujarati"
+	rite = "shafii"
+	
+	1060.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		add_spouse = najahid003
+	}
+	1120.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_005 = {
+	name = "Mansur" # Mansur ibn Jayyash
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = najahid003
+	1091.1.1 = {
+		birth = yes
+	}
+	1140.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_006 = {
+	name = "Ibrahim" # Ibrahim ibn Jayyash, rebelled against his nephew Mansur ibn al-Fatik but failed to achieved anything
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	trait = education_martial_2
+	
+	father = najahid003
+	1092.1.1 = {
+		birth = yes
+	}
+	1145.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_007 = {
+	name = "Abd_al-Wahid" # Abd al-Wahid ibn Jayyash, rebelled against his nephew Mansur ibn al-Fatik and captured Zabid
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = najahid003
+	1094.1.1 = {
+		birth = yes
+	}
+	1145.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_008 = {
+	name = "Mansur" # Mansur ibn al-Fatik ibn Jayyash, eldest son of al-Fatik ibn Jayyash, ruled the Najahid realm from 1110-??
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = me_najahid_003
+	1105.1.1 = {
+		birth = yes
+	}
+	1135.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_009 = {
+	name = "Muhammad" # Muhammad ibn al-Fatik ibn Jayyash
+	dynasty = me_najahid_dynasty
+	culture = "ethiopian"
+	rite = "shafii"
+	
+	father = me_najahid_003
+	1107.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_010 = {
+	name = "al-Fatik" # al-Fatik ibn Mansur ibn al-Fatik, eldest son of al-Fatik ibn Jayyash, ruled the Najahid realm from ??-1137
+	dynasty = me_najahid_dynasty
+	culture = "yemeni"
+	rite = "maliki"
+	
+	father = me_najahid_008
+	1122.1.1 = {
+		birth = yes
+	}
+	1137.1.1 = {
+		death = yes
+	}
+}
+
+me_najahid_011 = {
+	name = "al-Fatik" # al-Fatik ibn Muhammad ibn al-Fatik ibn Jayyash, last Najahid ruler from 1137-1158
+	dynasty = me_najahid_dynasty
+	culture = "yemeni"
+	rite = "maliki"
+	
+	father = me_najahid_009
+	1125.1.1 = {
+		birth = yes
+	}
+	1158.6.1 = {
+		death = yes
 	}
 }

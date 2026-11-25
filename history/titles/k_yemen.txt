@@ -1,54 +1,51 @@
 ﻿k_yemen = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
-	
+
 	## Ancient Himyarite Kings
-	40.1.1 = { 
+	40.1.1 = {
 		holder = me_himyarite_001 # Karb Il Watar 'Yahn'am' I
 		effect = { set_title_name = k_himyar }
 	}
-	70.1.1 = { 
+	70.1.1 = {
 		holder = me_himyarite_003 # Dhamar Ali Dharih
 	}
-	80.1.1 = { 
+	80.1.1 = {
 		holder = me_himyarite_004 # Karb Il Bayn
 	}
-	85.1.1 = { 
+	85.1.1 = {
 		holder = me_himyarite_005 # Yuhaqim Yarzih
 	}
-	95.1.1 = { 
+	95.1.1 = {
 		holder = me_himyarite_006 # Nasha' Karb 'Yaha'man'
 	}
-	100.1.1 = { 
+	100.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	120.1.1 = { 
+	120.1.1 = {
 		holder = 0
 	}
-	287.1.1 = { 
+	287.1.1 = {
 		holder = me_yasirid_002 # Shammar 'Yahar'ish'
 	}
-	312.1.1 = { 
+	312.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	317.1.1 = { 
+	317.1.1 = {
 		holder = me_himyarite_011 # Karb Il Watar 'Yahn'am' II
 	}
-	319.1.1 = { 
+	319.1.1 = {
 		holder = me_himyarite_012 # Dhamar Ali 'Yahbur' II
 	}
-	324.1.1 = { 
+	324.1.1 = {
 		holder = me_himyarite_013 # Tha'ran 'Yahn'am'
 	}
-	373.1.1 = { 
+	373.1.1 = {
 		holder = me_himyarite_014 # Hasan Maliki Karib 'Yaha'man'
 	}
-	385.1.1 = { 
+	385.1.1 = {
 		holder = 0
 		effect = { reset_title_name = yes }
 	}
-	
+
 	### Umayyad Governors ###
 	713.1.1 = {
 		liege = e_arabia
@@ -56,8 +53,8 @@
 		government = clan_government
 	}
 
-	## Ibadi revolt of the Third Fitna 
-	747.1.1 = { 
+	## Ibadi revolt of the Third Fitna
+	747.1.1 = {
 		liege = 0
 		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
 	}
@@ -66,11 +63,11 @@
 	786.1.1 = {
 		liege = e_arabia
 		holder = me_abbasid_consort_008 # Ghitrif ibn Atta', Uncle of Harun ar-Rashid
-	}	
+	}
 	789.1.1 = {
 		holder = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = 0
 		holder = 45035
@@ -78,97 +75,100 @@
 	1067.1.1 = {
 		holder = 0
 	}
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 }
 
 d_sanaa = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
 
 	## Ancient Himyarite Kings
-	40.1.1 = { 
+	40.1.1 = {
 		holder = me_himyarite_001 # Karb Il Watar 'Yahn'am'
 		effect = { set_title_name = d_saba }
 	}
-	70.1.1 = { 
+	70.1.1 = {
 		holder = me_himyarite_003 # Dhamar Ali Dharih
 	}
-	80.1.1 = { 
+	80.1.1 = {
 		holder = me_himyarite_004 # Karb Il Bayn
 	}
-	85.1.1 = { 
+	85.1.1 = {
 		holder = me_himyarite_005 # Yuhaqim Yarzih
 	}
-	95.1.1 = { 
+	95.1.1 = {
 		holder = me_himyarite_006 # Nasha' Karb 'Yaha'man'
 	}
-	100.1.1 = { 
+	100.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	120.1.1 = { 
+	120.1.1 = {
 		holder = me_saba_001 # Ilīsharaḥ Yaḥḍub I
 	}
-	125.1.1 = { 
+	125.1.1 = {
 		holder = me_saba_002 # Watar 'Yaha'man'
 	}
-	132.1.1 = { 
+	132.1.1 = {
 		holder = me_saba_003 # Sa'd Shams Asra'
 	}
-	150.1.1 = { 
+	150.1.1 = {
 		holder = me_saba_005 # Wahb Il Yahuz
 	}
-	165.1.1 = { 
+	165.1.1 = {
 		holder = me_hamdanid_himyar_001 # Yarim Ayman
 	}
-	170.1.1 = { 
+	170.1.1 = {
 		holder = me_saba_008 # Karb Il Watar 'Yahn'am'
 	}
-	175.1.1 = { 
+	175.1.1 = {
 		holder = me_saba_009 # Anmar 'Yaha'man'
 	}
-	180.1.1 = { 
+	180.1.1 = {
 		holder = me_saba_011 # Rab Shams Nimran
 	}
-	190.1.1 = { 
+	190.1.1 = {
 		holder = me_hamdanid_himyar_006 # 'Alhan Nahfan
 	}
-	200.1.1 = { 
+	200.1.1 = {
 		holder = me_hamdanid_himyar_007 # Sha'ir Awtar
 	}
-	217.1.1 = { 
+	217.1.1 = {
 		holder = me_saba_010 # Luḥay 'Atht Yarkhum
 	}
-	225.1.1 = { 
+	225.1.1 = {
 		holder = me_saba_012 # Far' Yanhab
 	}
-	230.1.1 = { 
+	230.1.1 = {
 		holder = me_saba_013 # Ilīsharaḥ Yaḥḍub II
 	}
-	265.1.1 = { 
+	265.1.1 = {
 		holder = me_saba_015 # Nasha' Karb 'Ya'man Yaharhib'
 	}
-	280.1.1 = { 
+	280.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	287.1.1 = { 
+	287.1.1 = {
 		holder = me_yasirid_002 # Shammar 'Yahar'ish'
 	}
-	312.1.1 = { 
+	312.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	317.1.1 = { 
+	317.1.1 = {
 		holder = me_himyarite_011 # Karb Il Watar 'Yahn'am' II
 	}
-	319.1.1 = { 
+	319.1.1 = {
 		holder = me_himyarite_012 # Dhamar Ali 'Yahbur' II
 	}
-	324.1.1 = { 
+	324.1.1 = {
 		holder = me_himyarite_013 # Tha'ran 'Yahn'am'
 	}
-	373.1.1 = { 
+	373.1.1 = {
 		holder = me_himyarite_014 # Hasan Maliki Karib 'Yaha'man'
 	}
-	385.1.1 = { 
+	385.1.1 = {
 		holder = 0
 		effect = { reset_title_name = yes }
 	}
@@ -177,15 +177,15 @@ d_sanaa = {
 		liege = e_arabia
 		government = clan_government
 	}
-	
+
 	### Umayyad Governors ###
 	713.1.1 = {
 		liege = k_yemen
 		holder = me_thaqafi_015 # Muhammad ibn Yusuf ath-Thaqafi
 	}
-	
-	## Ibadi revolt of the Third Fitna 
-	747.1.1 = { 
+
+	## Ibadi revolt of the Third Fitna
+	747.1.1 = {
 		liege = 0
 		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
 	}
@@ -197,12 +197,12 @@ d_sanaa = {
 	780.1.1 = {
 		holder = 0
 	}
-	
+
 	847.1.1 = {
 		liege = 0
 		holder = 188735 # Yu'fir Yufirid
 	}
-		
+
 	#Rassids
 	882.1.1 = {
 		holder = 159399 # al-Hadi ila'l Haqq Yahya
@@ -309,96 +309,96 @@ d_sanaa = {
 }
 
 c_sanaa = {
-	867.1.1 = {	change_development_level = 12 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	# c_sanaa
 
 	## Ancient Himyarite Kings
-	40.1.1 = { 
+	40.1.1 = {
 		holder = me_himyarite_001 # Karb Il Watar 'Yahn'am'
 		effect = { set_title_name = d_saba }
 	}
-	70.1.1 = { 
+	70.1.1 = {
 		holder = me_himyarite_003 # Dhamar Ali Dharih
 	}
-	80.1.1 = { 
+	80.1.1 = {
 		holder = me_himyarite_004 # Karb Il Bayn
 	}
-	85.1.1 = { 
+	85.1.1 = {
 		holder = me_himyarite_005 # Yuhaqim Yarzih
 	}
-	95.1.1 = { 
+	95.1.1 = {
 		holder = me_himyarite_006 # Nasha' Karb 'Yaha'man'
 	}
-	100.1.1 = { 
+	100.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	120.1.1 = { 
+	120.1.1 = {
 		holder = me_saba_001 # Ilīsharaḥ Yaḥḍub
 	}
-	125.1.1 = { 
+	125.1.1 = {
 		holder = me_saba_002 # Watar 'Yaha'man'
 	}
-	132.1.1 = { 
+	132.1.1 = {
 		holder = me_saba_003 # Sa'd Shams Asra'
 	}
-	150.1.1 = { 
+	150.1.1 = {
 		holder = me_saba_005 # Wahb Il Yahuz
 	}
-	165.1.1 = { 
+	165.1.1 = {
 		holder = me_hamdanid_himyar_001 # Yarim Ayman
 	}
-	170.1.1 = { 
+	170.1.1 = {
 		holder = me_saba_008 # Karb Il Watar 'Yahn'am'
 	}
-	175.1.1 = { 
+	175.1.1 = {
 		holder = me_saba_009 # Anmar 'Yaha'man'
 	}
-	180.1.1 = { 
+	180.1.1 = {
 		holder = me_saba_011 # Rab Shams Nimran
 	}
-	190.1.1 = { 
+	190.1.1 = {
 		holder = me_hamdanid_himyar_006 # 'Alhan Nahfan
 	}
-	200.1.1 = { 
+	200.1.1 = {
 		holder = me_hamdanid_himyar_007 # Sha'ir Awtar
 	}
-	217.1.1 = { 
+	217.1.1 = {
 		holder = me_saba_010 # Luḥay 'Atht Yarkhum
 	}
-	225.1.1 = { 
+	225.1.1 = {
 		holder = me_saba_012 # Far' Yanhab
 	}
-	230.1.1 = { 
+	230.1.1 = {
 		holder = me_saba_013 # Ilīsharaḥ Yaḥḍub II
 	}
-	265.1.1 = { 
+	265.1.1 = {
 		holder = me_saba_015 # Nasha' Karb 'Ya'man Yaharhib'
 	}
-	280.1.1 = { 
+	280.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	287.1.1 = { 
+	287.1.1 = {
 		holder = me_yasirid_002 # Shammar 'Yahar'ish'
 	}
-	312.1.1 = { 
+	312.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	317.1.1 = { 
+	317.1.1 = {
 		holder = me_himyarite_011 # Karb Il Watar 'Yahn'am' II
 	}
-	319.1.1 = { 
+	319.1.1 = {
 		holder = me_himyarite_012 # Dhamar Ali 'Yahbur' II
 	}
-	324.1.1 = { 
+	324.1.1 = {
 		holder = me_himyarite_013 # Tha'ran 'Yahn'am'
 	}
-	373.1.1 = { 
+	373.1.1 = {
 		holder = me_himyarite_014 # Hasan Maliki Karib 'Yaha'man'
 	}
-	385.1.1 = { 
+	385.1.1 = {
 		effect = { reset_title_name = yes }
 	}
 
@@ -406,14 +406,14 @@ c_sanaa = {
 		liege = "d_sanaa"
 		government = clan_government
 	}
-	
+
 	### Umayyad Governors ###
 	713.1.1 = {
 		liege = k_yemen
 		holder = me_thaqafi_015 # Muhammad ibn Yusuf ath-Thaqafi
 	}
-	
-	## Ibadi revolt of the Third Fitna 
+
+	## Ibadi revolt of the Third Fitna
 	747.1.1 = {
 		liege = 0
 		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
@@ -422,7 +422,7 @@ c_sanaa = {
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
 	}
-	
+
 	847.1.1 = {
 		holder = 188735 # Yu'fir Yufirid
 	}
@@ -432,7 +432,7 @@ c_sanaa = {
 	876.1.1 = {
 		holder = yemeni0004 # Ibrahim Yufirid
 	}
-	
+
 	#Rassids
 	882.1.1 = {
 		holder = 159399 # al-Hadi ila'l Haqq Yahya
@@ -476,8 +476,8 @@ c_sanaa = {
 	1062.1.1 = {
 		holder = 45035
 	}
-	1068.1.1 = {
-		holder = 45050
+	1067.1.1 = {
+		holder = 45036 # Ahmad Sulayhid
 	}
 	1099.1.1 = {
 		holder = 45051
@@ -536,7 +536,7 @@ c_sanaa = {
 
 
 c_tihamat-al-yamani = {
-		
+
 	847.1.1 = {
 		liege = "d_sanaa"
 		holder = 188735 # Yu'fir Yufirid
@@ -547,7 +547,7 @@ c_tihamat-al-yamani = {
 	876.1.1 = {
 		holder = yemeni0004 # Ibrahim Yufirid
 	}
-	
+
 	#Rassids
 	882.1.1 = {
 		holder = 159399 # al-Hadi ila'l Haqq Yahya
@@ -589,43 +589,62 @@ c_tihamat-al-yamani = {
 #		holder = 0
 #	}
 
-	1060.1.1 = {
+	#Najahids
+	1022.1.1 = {
 		liege = 0
-		holder = najahid002
+		holder = najahid001 # 'al-Mu'ayyid' Najah
 	}
-	1070.1.1 = {
-		holder = 45036
+	1060.6.1 = {
+		holder = me_najahid_001 # Mu'arik ibn Najah
 	}
-	1084.1.1 = {
-		holder = 45050
+	1062.1.1 = {
+		holder = 45035 # Ali al-Sulayhi
 	}
-	1099.1.1 = {
-		holder = 45051
+	1081.1.1 = {
+		holder = najahid002 # Sa'id 'al-Ahwal' ibn Najah
 	}
-	1109.1.1 = {
-		holder = 45052
+	#1083.1.1 = {
+	#	holder = 0 # Sulayhid takeover
+	#}
+	1087.1.1 = {
+		holder = najahid002 # Sa'id 'al-Ahwal' ibn Najah
 	}
-	1111.1.1 = {
-		holder = 45053
+	#1088.6.1 = {
+	#	holder = 0 # Sulayhid takeover
+	#}
+	1089.1.1 = {
+		holder = najahid003 # Jayyash ibn Najah
 	}
-	1116.1.1 = {
-		holder = 45054
+	1105.1.1 = {
+		holder = me_najahid_003 # al-Fatik ibn Jayyash ibn Najah
 	}
-	1117.1.1 = {
-		holder = 45055
+	1110.1.1 = {
+		holder = me_najahid_008 # Mansur ibn al-Fatik ibn Jayyash ibn Najah
+	}
+	1135.1.1 = {
+		holder = me_najahid_010 # al-Fatik ibn Mansur ibn al-Fatik ibn Jayyash ibn Najah
 	}
 	1137.1.1 = {
-		holder = 45058
+		holder = me_najahid_011 # al-Fatik ibn Muhammad ibn al-Fatik ibn Jayyash ibn Najah
 	}
-	1138.1.1 = {
-		holder = 45059
-	}
+
 	1171.1.1 = {
 		holder = 32915
 	}
+
+	## Ayyubid Governors
+	# The exact details of the governorship of the Munqidhi brothers differ between sources
+	# Some sources say 'Sarim ud-Din' Khatlaba governed after al-Mubarak then followed by Hattan
+	# Others say Hattan took governorship right after his brother and Khatlaba was sent later to resolve an issue between him and Uthman az-Zanjabili
+	# Some sources also say Hattan (named Khattab at times) to have governed Zabid and Tihama while al-Mubarak did not govern
 	1174.1.1 = {
-		holder = 32916
+		holder = me_kalbids_057 # al-Mubarak ibn Kamil al-Munqidhi
+		liege = d_sanaa
 	}
+	1176.1.1 = {
+		holder = me_kalbids_059 # Hattan ibn Kamil al-Munqidhi
+	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -649,22 +668,22 @@ c_tihamat-al-yamani = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
 c_najran = {
 	# c_sanaa
-	
+
 	630.1.1 = {
 		liege = "d_sanaa"
 		government = tribal_government
 	}
-	
+
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
 	}
-	
+
 	#Harb
 	847.1.1 = {
 		holder = bedouin0085
@@ -743,11 +762,11 @@ c_zabid = {
 	630.1.1 = {
 		liege = "d_sanaa"
 	}
-	
+
 	768.1.1 = {
 		holder = 188742
 	}
-	
+
 	818.1.1 = {
 		liege = 0
 		holder = 188736 # Muhammad Ziyadid
@@ -779,44 +798,63 @@ c_zabid = {
 	1018.1.1 = {
 		liege = d_sanaa
 	}
-	
-	1065.1.1 = {
+
+	#Najahids
+	1022.1.1 = {
 		liege = 0
-		holder = najahid002
+		holder = najahid001 # 'al-Mu'ayyid' Najah
 	}
-	1070.1.1 = {
-		holder = 45036
+	1060.6.1 = {
+		holder = me_najahid_001 # Mu'arik ibn Najah
 	}
-	1084.1.1 = {
-		holder = 45050
+	1062.1.1 = {
+		holder = 45035 # Ali al-Sulayhi
 	}
-	1099.1.1 = {
-		holder = 45051
+	1081.1.1 = {
+		holder = najahid002 # Sa'id 'al-Ahwal' ibn Najah
 	}
-	1109.1.1 = {
-		holder = 45052
+	#1083.1.1 = {
+	#	holder = 0 # Sulayhid takeover
+	#}
+	1087.1.1 = {
+		holder = najahid002 # Sa'id 'al-Ahwal' ibn Najah
 	}
-	1111.1.1 = {
-		holder = 45053
+	#1088.6.1 = {
+	#	holder = 0 # Sulayhid takeover
+	#}
+	1089.1.1 = {
+		holder = najahid003 # Jayyash ibn Najah
 	}
-	1116.1.1 = {
-		holder = 45054
+	1105.1.1 = {
+		holder = me_najahid_003 # al-Fatik ibn Jayyash ibn Najah
 	}
-	1117.1.1 = {
-		holder = 45055
+	1110.1.1 = {
+		holder = me_najahid_008 # Mansur ibn al-Fatik ibn Jayyash ibn Najah
+	}
+	1135.1.1 = {
+		holder = me_najahid_010 # al-Fatik ibn Mansur ibn al-Fatik ibn Jayyash ibn Najah
 	}
 	1137.1.1 = {
-		holder = 45058
+		holder = me_najahid_011 # al-Fatik ibn Muhammad ibn al-Fatik ibn Jayyash ibn Najah
 	}
-	1138.1.1 = {
-		holder = 45059
-	}
+
 	1171.1.1 = {
 		holder = 32915
 	}
+
+	## Ayyubid Governors
+	# The exact details of the governorship of the Munqidhi brothers differ between sources
+	# Some sources say 'Sarim ud-Din' Khatlaba governed after al-Mubarak then followed by Hattan
+	# Others say Hattan took governorship right after his brother and Khatlaba was sent later to resolve an issue between him and Uthman az-Zanjabili
+	# Some sources also say Hattan (named Khattab at times) to have governed Zabid and Tihama while al-Mubarak did not govern
 	1174.1.1 = {
-		holder = 32916
+		holder = me_kalbids_057 # al-Mubarak ibn Kamil al-Munqidhi
+		liege = d_sanaa
 	}
+	1176.1.1 = {
+		holder = me_kalbids_059 # Hattan ibn Kamil al-Munqidhi
+	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -840,7 +878,7 @@ c_zabid = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
@@ -867,72 +905,72 @@ d_jawf-al-yamani = {
 c_jawf-al-yamani = {
 
 	## Ma'rib - Capital of Ancient Himyar
-	40.1.1 = { 
+	40.1.1 = {
 		holder = me_himyarite_001 # Karb Il Watar 'Yahn'am'
 		effect = { set_title_name = c_ma_rib }
 	}
-	70.1.1 = { 
+	70.1.1 = {
 		holder = me_himyarite_003 # Dhamar Ali Dharih
 	}
-	80.1.1 = { 
+	80.1.1 = {
 		holder = me_himyarite_004 # Karb Il Bayn
 	}
-	85.1.1 = { 
+	85.1.1 = {
 		holder = me_himyarite_005 # Yuhaqim Yarzih
 	}
-	95.1.1 = { 
+	95.1.1 = {
 		holder = me_himyarite_006 # Nasha' Karb 'Yaha'man'
 	}
-	100.1.1 = { 
+	100.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	120.1.1 = { 
+	120.1.1 = {
 		holder = me_saba_001 # Ilīsharaḥ Yaḥḍub
 	}
-	125.1.1 = { 
+	125.1.1 = {
 		holder = me_saba_002 # Watar 'Yaha'man'
 	}
-	132.1.1 = { 
+	132.1.1 = {
 		holder = me_saba_003 # Sa'd Shams Asra'
 	}
 	# Ma'rib is conquered by the Raydanids
 	150.1.1 = {
 		holder = me_raydanid_003 # Dhamar Ali 'Yahbur'
 	}
-	175.1.1 = { 
+	175.1.1 = {
 		holder = me_raydanid_004 # Tha'ran Ya'b 'Yahn'am'
 	}
-	214.1.1 = { 
+	214.1.1 = {
 		holder = me_himyarite_008 # La'zim Yahnif 'Yahasdaq'
 	}
-	217.1.1 = { 
+	217.1.1 = {
 		holder = me_himyarite_009 # Shammar 'Yahaḥmad'
 	}
-	245.1.1 = { 
+	245.1.1 = {
 		holder = me_himyarite_010 # Karb Il Ayfa'
 	}
-	267.1.1 = { 
+	267.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	287.1.1 = { 
+	287.1.1 = {
 		holder = me_yasirid_002 # Shammar 'Yahar'ish'
 	}
-	312.1.1 = { 
+	312.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	317.1.1 = { 
+	317.1.1 = {
 		holder = me_himyarite_011 # Karb Il Watar 'Yahn'am' II
 	}
-	319.1.1 = { 
+	319.1.1 = {
 		holder = me_himyarite_012 # Dhamar Ali 'Yahbur' II
 	}
-	324.1.1 = { 
+	324.1.1 = {
 		holder = me_himyarite_013 # Tha'ran 'Yahn'am'
 	}
-	373.1.1 = { 
+	373.1.1 = {
 		holder = me_himyarite_014 # Hasan Maliki Karib 'Yaha'man'
 	}
-	385.1.1 = { 
+	385.1.1 = {
 		effect = { reset_title_name = yes }
 	}
 
@@ -940,11 +978,11 @@ c_jawf-al-yamani = {
 		liege = "d_sanaa"
 		government = tribal_government
 	}
-	
+
 	768.1.1 = {
 		holder = 188743
 	}
-	
+
 	#Harb
 	847.1.1 = {
 		liege = d_jawf-al-yamani
@@ -963,13 +1001,13 @@ c_jawf-al-yamani = {
 		holder = bedouin0100
 	}
 	#in the mid 10th century Harb migrate northwards
-	
+
 	1066.1.1 = {	#Fictional
 		holder = 218008
 		liege = 0
 	}
 	1081.1.1 = {
-		holder = 45036
+		holder = 45036 # Ahmad Sulayhid
 	}
 	1084.1.1 = {
 		holder = 45050
@@ -1026,22 +1064,22 @@ c_jawf-al-yamani = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
 c_wabar = {
 	# c_sanaa
-	
+
 	630.1.1 = {
 		liege = "d_sanaa"
 		government = tribal_government
 	}
-	
+
 	768.1.1 = {
 		holder = 188748 # Yazid, brother-in-law of al-Mansur Abbasid (actually ruled in the 770s)
 	}
-	
+
 	847.1.1 = {
 		liege = d_jawf-al-yamani
 		holder = bedouin0085
@@ -1122,73 +1160,73 @@ c_wabar = {
 }
 
 d_taizz = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
+
 	## Ancient Himyarite Kings
-	40.1.1 = { 
+	40.1.1 = {
 		holder = me_himyarite_001 # Karb Il Watar 'Yahn'am'
 		effect = { set_title_name = d_dhu_raydan }
 	}
-	70.1.1 = { 
+	70.1.1 = {
 		holder = me_himyarite_003 # Dhamar Ali Dharih
 	}
-	80.1.1 = { 
+	80.1.1 = {
 		holder = me_himyarite_004 # Karb Il Bayn
 	}
-	85.1.1 = { 
+	85.1.1 = {
 		holder = me_himyarite_005 # Yuhaqim Yarzih
 	}
-	95.1.1 = { 
+	95.1.1 = {
 		holder = me_himyarite_006 # Nasha' Karb 'Yaha'man'
 	}
-	100.1.1 = { 
+	100.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	120.1.1 = { 
+	120.1.1 = {
 		holder = me_raydanid_001 # Yasir 'Yahasdaq'
 	}
-	130.1.1 = { 
+	130.1.1 = {
 		holder = me_raydanid_002 # Shammar
 	}
-	135.1.1 = { 
+	135.1.1 = {
 		holder = me_raydanid_003 # Dhamar Ali 'Yahbur'
 	}
-	175.1.1 = { 
+	175.1.1 = {
 		holder = me_raydanid_004 # Tha'ran Ya'b 'Yahn'am'
 	}
-	214.1.1 = { 
+	214.1.1 = {
 		holder = me_himyarite_008 # La'zim Yahnif 'Yahasdaq'
 	}
-	217.1.1 = { 
+	217.1.1 = {
 		holder = me_himyarite_009 # Shammar 'Yahaḥmad'
 	}
-	245.1.1 = { 
+	245.1.1 = {
 		holder = me_himyarite_010 # Karb Il Ayfa'
 	}
-	267.1.1 = { 
+	267.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	287.1.1 = { 
+	287.1.1 = {
 		holder = me_yasirid_002 # Shammar 'Yahar'ish'
 	}
-	312.1.1 = { 
+	312.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	317.1.1 = { 
+	317.1.1 = {
 		holder = me_himyarite_011 # Karb Il Watar 'Yahn'am' II
 	}
-	319.1.1 = { 
+	319.1.1 = {
 		holder = me_himyarite_012 # Dhamar Ali 'Yahbur' II
 	}
-	324.1.1 = { 
+	324.1.1 = {
 		holder = me_himyarite_013 # Tha'ran 'Yahn'am'
 	}
-	373.1.1 = { 
+	373.1.1 = {
 		holder = me_himyarite_014 # Hasan Maliki Karib 'Yaha'man'
 	}
-	385.1.1 = { 
+	385.1.1 = {
 		holder = 0
 		effect = { reset_title_name = yes }
 	}
@@ -1214,9 +1252,11 @@ d_taizz = {
 	1018.1.1 = {
 		holder = 0
 	}
-
-	1040.1.1 = {
-		holder = 45035
+	1047.1.1 = {
+		holder = 45035 # Ali Sulayhid
+	}
+	1067.1.1 = {
+		holder = 45036 # Ahmad Sulayhid
 	}
 	1084.1.1 = {
 		holder = 0
@@ -1225,73 +1265,73 @@ d_taizz = {
 
 
 c_taizz = {
-	867.1.1 = {	change_development_level = 12 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	## Ancient Himyarite Kings
-	40.1.1 = { 
+	40.1.1 = {
 		holder = me_himyarite_001 # Karb Il Watar 'Yahn'am'
 		effect = { set_title_name = d_dhu_raydan }
 	}
-	70.1.1 = { 
+	70.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	80.1.1 = { 
+	80.1.1 = {
 		holder = me_himyarite_004 # Karb Il Bayn
 	}
-	85.1.1 = { 
+	85.1.1 = {
 		holder = me_himyarite_005 # Yuhaqim Yarzih
 	}
-	95.1.1 = { 
+	95.1.1 = {
 		holder = me_himyarite_006 # Nasha' Karb 'Yaha'man'
 	}
-	100.1.1 = { 
+	100.1.1 = {
 		holder = me_himyarite_007 # Amdan Bayn 'Yahqabd'
 	}
-	120.1.1 = { 
+	120.1.1 = {
 		holder = me_raydanid_001 # Yasir 'Yahasdaq'
 	}
-	130.1.1 = { 
+	130.1.1 = {
 		holder = me_raydanid_002 # Shammar
 	}
-	135.1.1 = { 
+	135.1.1 = {
 		holder = me_raydanid_003 # Dhamar Ali 'Yahbur'
 	}
-	175.1.1 = { 
+	175.1.1 = {
 		holder = me_raydanid_004 # Tha'ran Ya'b 'Yahn'am'
 	}
-	214.1.1 = { 
+	214.1.1 = {
 		holder = me_himyarite_008 # La'zim Yahnif 'Yahasdaq'
 	}
-	217.1.1 = { 
+	217.1.1 = {
 		holder = me_himyarite_009 # Shammar 'Yahaḥmad'
 	}
-	245.1.1 = { 
+	245.1.1 = {
 		holder = me_himyarite_010 # Karb Il Ayfa'
 	}
-	267.1.1 = { 
+	267.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	287.1.1 = { 
+	287.1.1 = {
 		holder = me_yasirid_002 # Shammar 'Yahar'ish'
 	}
-	312.1.1 = { 
+	312.1.1 = {
 		holder = me_yasirid_001 # Yasir 'Yahn'am'
 	}
-	317.1.1 = { 
+	317.1.1 = {
 		holder = me_himyarite_011 # Karb Il Watar 'Yahn'am' II
 	}
-	319.1.1 = { 
+	319.1.1 = {
 		holder = me_himyarite_012 # Dhamar Ali 'Yahbur' II
 	}
-	324.1.1 = { 
+	324.1.1 = {
 		holder = me_himyarite_013 # Tha'ran 'Yahn'am'
 	}
-	373.1.1 = { 
+	373.1.1 = {
 		holder = me_himyarite_014 # Hasan Maliki Karib 'Yaha'man'
 	}
-	385.1.1 = { 
+	385.1.1 = {
 		effect = { reset_title_name = yes }
 	}
 
@@ -1329,12 +1369,11 @@ c_taizz = {
 	1018.1.1 = {
 		liege = d_sanaa
 	}
-	
-	1066.1.1 = {
-		holder = 45035
+	1047.1.1 = {
+		holder = 45035 # Ali Sulayhid
 	}
-	1070.1.1 = {
-		holder = 45036
+	1067.1.1 = {
+		holder = 45036 # Ahmad Sulayhid
 	}
 	1084.1.1 = {
 		holder = 45050
@@ -1363,9 +1402,13 @@ c_taizz = {
 	1171.1.1 = {
 		holder = 32915
 	}
+
+	## Ayyubid Governors
 	1174.1.1 = {
-		holder = 32916
+		holder = me_turk_misc_006 # Yaqut at-Ta'izzi
+		liege = d_sanaa
 	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -1389,7 +1432,7 @@ c_taizz = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
@@ -1397,12 +1440,12 @@ c_mandab = {
 	630.1.1 = {
 		liege = "d_sanaa"
 	}
-	
+
 	760.1.1 = {
 		holder = 188744
 	}
-	
-	
+
+
 	818.1.1 = {
 		liege = d_taizz
 		holder = 188736 # Muhammad Ziyadid
@@ -1425,12 +1468,11 @@ c_mandab = {
 	1018.1.1 = {
 		liege = d_sanaa
 	}
-	
-	1066.1.1 = {
-		holder = 45035
+	1047.1.1 = {
+		holder = 45035 # Ali Sulayhid
 	}
-	1070.1.1 = {
-		holder = 45036
+	1067.1.1 = {
+		holder = 45036 # Ahmad Sulayhid
 	}
 	1080.1.1 = {
 		holder = 45037
@@ -1468,9 +1510,13 @@ c_mandab = {
 	1171.1.1 = {
 		holder = 32915
 	}
+
+	## Ayyubid Governors
 	1174.1.1 = {
-		holder = 32916
+		holder = me_mashriqi_019 # Uthman ibn Ali az-Zanjili/az-Zanjabili
+		liege = d_sanaa
 	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -1502,11 +1548,11 @@ c_dathina = {
 	630.1.1 = {
 		liege = "d_sanaa"
 	}
-	
+
 	768.1.1 = {
 		holder = 188743
 	}
-	
+
 	818.1.1 = {
 		liege = d_taizz
 		holder = 188736 # Muhammad Ziyadid
@@ -1526,7 +1572,7 @@ c_dathina = {
 	1012.1.1 = {
 		holder = 188741 # Ibrahim
 	}
-	
+
 	1066.1.1 = {
 		holder = yemeni0011
 	}
@@ -1557,9 +1603,13 @@ c_dathina = {
 	1171.1.1 = {
 		holder = 32915
 	}
+
+	## Ayyubid Governors
 	1174.1.1 = {
-		holder = 32916
+		holder = me_mashriqi_019 # Uthman ibn Ali az-Zanjili/az-Zanjabili
+		liege = d_sanaa
 	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -1583,7 +1633,7 @@ c_dathina = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
@@ -1604,13 +1654,13 @@ d_hadramawt = {
 
 
 c_hadramawt = {
-	
+
 	630.1.1 = {
 		liege = "d_sanaa"
 		government = tribal_government
 	}
 
-	## Ibadi revolt of the Third Fitna 
+	## Ibadi revolt of the Third Fitna
 	746.1.1 = {
 		liege = 0
 		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
@@ -1619,7 +1669,7 @@ c_hadramawt = {
 	765.1.1 = {
 		liege = "d_sanaa"
 	}
-	
+
 	765.1.1 = {
 		holder = 188732 # Yufirids
 	}
@@ -1671,9 +1721,13 @@ c_hadramawt = {
 	1171.1.1 = {
 		holder = 32915
 	}
-	1174.1.1 = {
-		holder = 32916
+
+	## Ayyubid Governors
+	1176.1.1 = {
+		holder = me_kurdish_005 # Harun al-Kurdi
+		liege = d_sanaa
 	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -1697,18 +1751,18 @@ c_hadramawt = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
 c_ahqaf = {
-	
+
 	630.1.1 = {
 		liege = "d_sanaa"
 		government = tribal_government
 	}
-	
-	## Ibadi revolt of the Third Fitna 
+
+	## Ibadi revolt of the Third Fitna
 	746.1.1 = {
 		liege = 0
 		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
@@ -1771,9 +1825,13 @@ c_ahqaf = {
 	1171.1.1 = {
 		holder = 32915
 	}
-	1174.1.1 = {
-		holder = 32916
+
+	## Ayyubid Governors
+	1176.1.1 = {
+		holder = me_kurdish_005 # Harun al-Kurdi
+		liege = d_sanaa
 	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -1797,19 +1855,19 @@ c_ahqaf = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
 c_kinda_sakun = {
 	# c_kathiri
-	
+
 	630.1.1 = {
 		liege = "d_sanaa"
 		government = tribal_government
 	}
-	
-	## Ibadi revolt of the Third Fitna 
+
+	## Ibadi revolt of the Third Fitna
 	746.1.1 = {
 		liege = 0
 		holder = me_kinda_069 # Abdullah 'Talib al-Haqq' al-Kindi
@@ -1876,7 +1934,7 @@ c_kinda_sakun = {
 #	1040.1.1 = {
 #		holder = 0
 #	}
-	
+
 	1066.1.1 = {
 		liege = d_taizz
 		holder = yemeni0011
@@ -1908,9 +1966,13 @@ c_kinda_sakun = {
 	1171.1.1 = {
 		holder = 32915
 	}
-	1174.1.1 = {
-		holder = 32916
+
+	## Ayyubid Governors
+	1176.1.1 = {
+		holder = me_kurdish_005 # Harun al-Kurdi
+		liege = d_sanaa
 	}
+
 	1197.1.1 = {
 		holder = 144092
 	}
@@ -1934,7 +1996,7 @@ c_kinda_sakun = {
 	}
 	1322.1.1 = {
 		holder = 144098
-	}	
+	}
 }
 
 
@@ -1942,17 +2004,17 @@ c_mahra = {
 	630.1.1 = {
 		liege = d_sanaa
 	}
-	
+
 	768.1.1 = {
 		government = tribal_government
 		holder = 188745
 	}
-	
+
 	866.1.1 = {
 		liege = 0
 		holder = 74035
 	}
-	
+
 	1066.1.1 = {	#Fictional
 		holder = 218009
 		liege = 0
@@ -1967,7 +2029,7 @@ c_mahra = {
 	1101.1.1 = {
 		holder = 144034
 	}
-	
+
 	# Independant rule of Banu Iqbal
 	1107.1.1 = { # The begining of the 6th century Hijri, though they may have been ruling before that
 		liege = 0
@@ -2009,17 +2071,17 @@ c_al-asa = {
 	630.1.1 = {
 		liege = d_sanaa
 	}
-	
+
 	768.1.1 = {
 		government = tribal_government
 		holder = 188745
 	}
-	
+
 	866.1.1 = {
 		liege = 0
 		holder = 74035
 	}
-	
+
 	1066.1.1 = {	#Fictional
 		holder = 218009
 		liege = 0
@@ -2073,10 +2135,10 @@ c_al-asa = {
 
 
 c_socotra = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	757.1.1 = {
 		liege = "d_socotra"
 	holder = 145965
@@ -2157,23 +2219,26 @@ c_dhofar = {
 		liege = d_oman
 		government = tribal_government
 	}
-	
+
 	767.1.1 = {
 		holder = 188765
 	}
-	
+
 	867.1.1 = {
 		liege = 0
 		holder = 74036
 	}
-	
+
 
 	# Banu Manjawa/The Minjui  (According to archeological evidence they may have began ruling around 1000 AD, and they are confirmed by historical accounts to be ruling by 1085)
 	1055.1.1 = {
 		holder = me_manjawid_003
 	}
+	1066.1.1 = {
+		government = clan_government
+	}
 	1100.1.1 = {
-		holder = me_manjawid_002 
+		holder = me_manjawid_002
 	}
 	1140.1.1 = { # Confirmed to be in power during 1145
 		holder = me_manjawid_001 # Ahmad ibn Muhammad al-Manjawi

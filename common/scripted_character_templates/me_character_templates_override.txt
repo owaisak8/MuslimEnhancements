@@ -1,5 +1,6 @@
 ﻿mendicant_mystic_character = {
 	age = { 30 80 }
+	dynasty = none
 	# Education
 	random_traits_list = {
 		count = 1
@@ -23,13 +24,14 @@
 	random_traits = yes
 	culture = root.culture
 	faith = root.faith
+	rite = root.rite
 	gender_female_chance = {
 		if = {
-			limit = { root.faith = { has_doctrine = doctrine_gender_male_dominated } }
+			limit = { root.rite = { rite_has_doctrine = doctrine_gender_male_dominated } }
 			add = 0
 		}
 		else_if = {
-			limit = { root.faith = { has_doctrine = doctrine_gender_female_dominated } }
+			limit = { root.rite = { rite_has_doctrine = doctrine_gender_female_dominated } }
 			add = 100
 		}
 		else = {
@@ -52,9 +54,9 @@
 		if = {
 			limit = {
 				faith.religion = religion:islam_religion
-				NOR = { 
+				NOR = {
 					faith = { has_doctrine = muhammad_succession_berberist_doctrine }
-					faith = faith:druze
+					rite = rite:druze
 				}
 			}
 			add_random_tiered_trait_xp_effect = {
@@ -62,8 +64,8 @@
 				LEVEL_1 = yes
 				LEVEL_3 = yes
 			}
-		}	
+		}
 
 	}
-		
+
 }

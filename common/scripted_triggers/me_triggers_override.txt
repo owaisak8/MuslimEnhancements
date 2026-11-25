@@ -1,0 +1,977 @@
+﻿#### Marriage Triggers ####
+
+# Is allowed to marry (current marriage/concubine status ignored)
+# Vanilla 1.20 trigger with one ME change: Islam has no celibate religious life, so among Muslims the 'devoted' and
+# 'order_member' traits do not bar marriage. Eunuchs are still barred.
+can_marry_common_trigger = {
+	is_alive = yes
+	### ME Addition ###
+	trigger_if = {
+		limit = { religion = religion:islam_religion }
+		NOR = {
+			has_trait = eunuch_1
+			has_trait = beardless_eunuch
+		}
+	}
+	trigger_else = {
+		NOT = { has_trait_with_flag = can_not_marry }
+		# These two no longer carry the flag (see me_trait_override.txt)
+		NOR = {
+			has_trait = devoted
+			has_trait = order_member
+		}
+	}
+	### End of ME Addition ###
+	NOT = { has_variable = can_not_marry }
+
+	trigger_if = {
+		limit = {
+			exists = primary_title
+		}
+		NOR = {
+			# Block Mercenaries from marrying or showing up in marriage interactions
+			primary_title = {
+				is_mercenary_company = yes
+			}
+			is_leading_faction_type = peasant_faction
+			is_leading_faction_type = populist_faction
+			government_has_flag = government_is_herder
+		}
+	}
+
+	# Clergy cannot marry if their faith disallows it
+	trigger_if = {
+		limit = { is_clergy = yes }
+		marriage_clergy_can_marry_trigger = yes
+	}
+	trigger_if = {
+		limit = {
+			exists = liege.involved_activity.var:tournament_marriage_prize
+			this = liege.involved_activity.var:tournament_marriage_prize
+		}
+		exists = scope:contest_winner
+	}
+}
+
+# Vanilla 1.20 trigger with one ME change: the "monks can never marry" rule does not apply to Muslims
+marriage_clergy_can_marry_trigger = {
+	#Monks can never marry
+	### ME Addition ###
+	trigger_if = {
+		limit = {
+			NOT = { religion = religion:islam_religion }
+		}
+		NOR = {
+			has_trait = devoted
+			has_trait = order_member
+		}
+	}
+	### End of ME Addition ###
+	OR = {
+		rite = { rite_has_parameter = clergy_can_marry }
+		AND = {
+			is_ruler = yes
+			top_participant_group:the_christian_church ?= { has_participant_group_parameter = clergy_can_marry }
+			trigger_if = {
+				limit = { is_ai = yes }
+				saeculum_obscurum_clergy_would_marry_trigger = yes
+			}
+		}
+	}
+}
+
+#### Cultural Triggers ####
+faith_forbids_alcohol_trigger = {
+	OR = {
+		religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+		religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+		AND = {
+			has_trait = zealous
+			religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+		}
+		faith = faith:mandaean_faith # Whoever drinks wine in a tavern, he will be torn to pieces with toothed saws
+	}
+}
+
+# If you need to check if a county drinks alcohol.
+faith_only_forbids_alcohol_trigger = {
+	OR = {
+		religion = religion:islam_religion # Prohibited by khamr, a prohibition against intoxicants
+		religion = religion:jainism_religion # Prohibited along with the consumption of any fermented food
+		religion = religion:buddhism_religion # Discouraged as it disrupts progress along the eightfold path
+		this = faith:mandaean_faith # Whoever drinks wine in a tavern, he will be torn to pieces with toothed saws
+	}
+}
+
+#### Scripted Rule Triggers ####
+can_raid_trigger = {
+	OR = {
+		## ME Additions ##
+		AND = {
+			has_game_rule = me_clan_can_raid_yes
+			government_has_flag = ME_clan_government_can_raid_rule
+		}
+		AND = {
+			has_game_rule = me_clan_can_raid_struggle
+			government_has_flag = ME_clan_government_can_raid_rule
+			NOT = { any_character_struggle = { involvement = involved } }
+		}
+
+		# Government logic.
+		government_has_flag = government_can_raid_rule
+		## Admin - Frontier themes
+		vassal_contract_has_flag = admin_theme_can_raid
+		## Clan - Ghazi
+		vassal_contract_has_flag = vassal_contract_allow_raiding
+		# Faith Logic.
+		faith = { has_doctrine_parameter = faith_can_raid }
+		has_personal_tenet_flag = unlock_destruction_raid_intent_personal
+		# Dynasty logic.
+		dynasty ?= {
+			OR = {
+				can_raid_dynasty_modifiers_that_enable_raiding_overseas_list_trigger = yes
+				can_raid_dynasty_modifiers_that_enable_raiding_overland_list_trigger = yes
+			}
+		}
+		# House logic.
+		house ?= {
+			OR = {
+				can_raid_house_modifiers_that_enable_raiding_overseas_list_trigger = yes
+				can_raid_house_modifiers_that_enable_raiding_overland_list_trigger = yes
+			}
+		}
+		# Cultural logic.
+		## With restrictions.
+		AND = {
+			can_raid_cultural_parameter_requirements_for_non_tribals_trigger = yes
+			culture = {
+				OR = {
+					has_cultural_parameter = culture_can_raid_at_sea_even_if_feudal
+					has_cultural_parameter = culture_can_raid_over_land_even_if_feudal
+				}
+			}
+		}
+		## Without restrictions.
+		culture = {
+			OR = {
+				has_cultural_parameter = culture_can_raid_at_sea_even_if_feudal_no_restrictions
+				has_cultural_parameter = culture_can_raid_over_land_even_if_feudal_no_restrictions
+			}
+		}
+		# Trait logics.
+		## With restrictions.
+		AND = {
+			can_raid_trait_flag_standard_requirements_trigger = yes
+			has_trait_with_flag = trait_enable_raiding_per_standard_restrictions
+		}
+		## Without restrictions.
+		has_trait_with_flag = trait_enable_raiding_without_restrictions
+		has_variable = enable_raiding_without_restrictions
+	}
+	# Some faiths prohibit this.
+	OR = {
+		NOR = {
+			rite ?= { rite_has_parameter = holy_wars_forbidden }
+			rite ?= { rite_has_parameter = tenet_peace_of_god_raid_ban }
+			government_has_flag = government_is_landless_adventurer
+		}
+		# But not for Nomads or Wanua
+		government_has_flag = government_is_nomadic
+		government_has_flag = government_is_wanua
+	}
+	is_landed = yes
+}
+
+## Overriden to include extra ME traits
+has_strong_religious_conviction_trigger = {
+	NOR = {
+		has_trait = cynical
+		has_trait = excommunicated
+	}
+	OR = {
+		has_trait = zealous
+		has_trait = pilgrim
+		has_trait = devoted
+		has_trait = sayyid
+		has_trait = saoshyant
+		has_trait = savior
+		has_trait = divine_blood
+		has_trait = blood_of_prophet
+		has_trait = faith_warrior
+		has_trait = saint
+
+		has_trait = quraysh
+		has_trait = ubaydi
+		has_trait = hafidh
+		has_trait = blood_of_salih
+		has_trait = blood_of_hamim
+		has_trait = blood_of_kadu
+		has_trait = hamimist_prophet
+		has_trait = kaduist_prophet
+		has_trait = ME_ismaili_mahdi
+		has_trait = ME_ibn_nusayr_bab
+		has_trait = ME_blood_of_ibn_nusayr
+		has_trait = ME_ishaq_ahmar_bab
+		has_trait = ME_blood_of_ishaq_ahmar
+		has_trait = ME_zakarawayhist_mahdi
+		has_trait = ME_blood_of_zakarawayh
+		has_trait = ME_jayshanist_mahdi
+		has_trait = ME_blood_of_jayshani
+		has_trait = herald
+	}
+}
+
+# 1.20 (By God Alone): vanilla removed can_afford_create_head_of_faith_title_cost_trigger (see the note in
+# me_scripted_effects_override.txt). Old override kept for reference only.
+#can_afford_create_head_of_faith_title_cost_trigger = {
+#	trigger_if = {
+#		limit = {
+#			rite = {
+#				rite_has_parameter = temporal_head_of_faith
+#				OR = {
+#					rite_has_doctrine = muhammad_succession_sunni_doctrine
+#					rite_has_doctrine = muhammad_succession_shia_doctrine
+#				}
+#			}
+#		}
+#		trigger_if = {
+#			limit = {
+#				NOR = { 
+#					has_trait = sayyid
+#					has_trait = quraysh
+#					AND = {
+#						rite = { rite_has_doctrine = special_doctrine_ubaydi_trait_acceptance }
+#						has_trait = ubaydi
+#					}
+#				}
+#			}
+#			piety >= massive_piety_value
+#		}
+#	}
+#	trigger_else_if = {
+#		limit = {
+#			rite = {
+#				rite_has_parameter = temporal_head_of_faith
+#			}
+#		}
+#		piety >= major_piety_value
+#	}
+#	trigger_else = {
+#		limit = {
+#			rite = {
+#				rite_has_parameter = spiritual_head_of_faith
+#			}
+#		}
+#		gold >= medium_gold_max_value
+#	}
+#}
+
+## Muhakkima do not care about lineage
+fp3_valid_muhakkima_head = {
+	calc_true_if = {
+		amount >= 2
+
+##		# Sayyids get a free pass. (NO)
+##		has_trait = sayyid
+		piety_level >= very_high_piety_level
+		# Having many faithful counties
+		custom_description = {
+			text = claim_the_imamate_decision.need_at_least_fifteen_same_faith_counties
+			any_sub_realm_county = {
+				count >= claim_the_imamate_decision_same_faith_greater_county_count
+				rite = root.rite
+			}
+		}
+		# Famed
+		prestige_level >= 4
+		# #Muhakkima cares about justified warfare - and a justified cause.
+		OR = {
+			has_trait = faith_warrior #mujahid really
+			has_trait = theologian
+		}
+	}
+}
+
+
+### Heresy Triggers ###
+faiths_are_shia_zandaqa_sub_group = {
+	OR = {
+		$FAITH$ = faith:quranist
+		$FAITH$ = { has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+		$FAITH$ = { has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+	}
+}
+
+
+#### Religious Triggers ####
+trait_is_criminal_in_rite_trigger = {
+	OR = {
+		#KINSLAYER
+		AND = {
+			OR = {
+				$TRAIT$ = trait:kinslayer_3
+				$TRAIT$ = trait:kinslayer_2
+				$TRAIT$ = trait:kinslayer_1
+			}
+			$RITE$ = { rite_has_parameter = kinslaying_any_dynasty_member_crime }
+		}
+		AND = {
+			OR = {
+				$TRAIT$ = trait:kinslayer_3
+				$TRAIT$ = trait:kinslayer_2
+			}
+			$RITE$ = { rite_has_parameter = kinslaying_extended_family_crime }
+		}
+		AND = {
+			$TRAIT$ = trait:kinslayer_3
+			$RITE$ = { rite_has_parameter = kinslaying_close_kin_crime }
+		}
+		#WITCH
+		AND = {
+			$TRAIT$ = trait:witch
+			$RITE$ = { rite_has_parameter = witchcraft_illegal }
+		}
+		#CANNIBAL
+		AND = {
+			$TRAIT$ = trait:cannibal
+			NOT = {
+				$RITE$ = { rite_has_parameter = cannibalism_legal }
+			}
+		}
+		#SODOMITE
+		AND = {
+			$TRAIT$ = trait:sodomite
+			$RITE$ = { rite_has_parameter = homosexuality_illegal }
+		}
+		#DEVIANT
+		AND = {
+			$TRAIT$ = trait:deviant
+			$RITE$ = { rite_has_parameter = deviancy_illegal }
+		}
+		#INCEST
+		AND = {
+			$TRAIT$ = trait:incestuous
+			NOT = {
+				$RITE$ = { rite_has_parameter = allows_unrestricted_marriage }
+			}
+		}
+		#ADULTERER/FORNICATOR
+		AND = {
+			OR = {
+				$TRAIT$ = trait:adulterer
+				$TRAIT$ = trait:fornicator
+			}
+			OR = {
+				AND = {
+					$RITE$ = { rite_has_parameter = adultery_female_crime }
+					$GENDER_CHARACTER$ = { is_female = yes }
+				}
+				AND = {
+					$RITE$ = { rite_has_parameter = adultery_male_crime }
+					$GENDER_CHARACTER$ = { is_male = yes }
+				}
+			}
+		}
+		# Devoted is criminal when monasticism is forbidden
+		AND = {
+			$TRAIT$ = trait:devoted
+			$RITE$ = { rite_has_parameter = devoted_trait_criminal }
+		}
+	}
+}
+
+relation_with_character_is_incestuous_in_rite_trigger = {
+	OR = {
+		# doctrine_consanguinity_dynastic; not within the same descent group
+		AND = {
+			$RITE$ = { rite_has_parameter = consanguinity_restricted_dynastic_marriage }
+			is_lowborn = no
+			$CHARACTER$.dynasty ?= dynasty
+		}
+		#doctrine_consanguinity_restricted; absolutely no family business
+		AND = {
+			$RITE$ = { rite_has_parameter = consanguinity_restricted_close_kin_incest }
+			is_close_or_extended_family_of = $CHARACTER$ #[parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces]
+		}
+		#doctrine_consanguinity_cousins; the only acceptable incest is with your cousin
+		AND = {
+			$RITE$ = { rite_has_parameter = consanguinity_cousins_marriage }
+			OR = {
+	            is_close_family_of = $CHARACTER$ #[parents, children, siblings, grandparents, grandchildren]
+	            is_uncle_or_aunt_of = $CHARACTER$
+	            is_nibling_of = $CHARACTER$
+	        }
+		}
+		#doctrine_consanguinity_aunt_nephew_and_uncle_niece; extended family is ok
+		AND = {
+			$RITE$ = { rite_has_parameter = consanguinity_aunt_nephew_and_uncle_niece_marriage }
+			is_close_family_of = $CHARACTER$
+		}
+		#doctrine_consanguinity_unrestricted; all forms of incest is acceptable
+
+
+		#### ME ADDITIONS ####
+		AND = {
+			exists = $CHARACTER$ # 1.20: vanilla elective triggers can pass an empty character here
+			# Saved up front: vanilla passes prev-relative characters (e.g. prev.father), which would resolve differently inside the nested lists below
+			$CHARACTER$ = { save_temporary_scope_as = me_affinity_target }
+			# Affinity is about your spouse's relatives, never about the spouse: without this every married Muslim counted as
+			# committing incest with their own wife or husband (the spouse shares a dynasty with themselves).
+			NOT = { is_spouse_of = scope:me_affinity_target }
+			OR = {
+				### Current Spouse
+				# doctrine_me_affinality_polygamy_dynastic; cannot marry anyone from your current spouse's family or dynasty
+				AND = {
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_dynastic }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_dynastic }
+					}
+					OR = {
+						any_spouse = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+						any_close_or_extended_family_member = { is_spouse_of = scope:me_affinity_target }
+						any_dynasty_member = { is_spouse_of = scope:me_affinity_target }
+					}
+				}
+				#doctrine_me_affinality_polygamy_extended_family; cannot marry any of your current spouse's family
+				AND = {
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_extended_family }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_extended_family }
+					}
+					OR = {
+						any_spouse = { is_close_or_extended_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces]
+						any_close_or_extended_family_member = { is_spouse_of = scope:me_affinity_target }
+					}
+				}
+				#doctrine_me_affinality_polygamy_cousins; cannot marry your current spouse's cousins, siblings, or parents
+				AND = {
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_cousins }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_cousins }
+					}
+					OR = {
+						any_spouse = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+						any_close_family_member = { is_spouse_of = scope:me_affinity_target }
+						any_close_or_extended_family_member = {
+							is_cousin_of_root_trigger = yes
+							is_spouse_of = scope:me_affinity_target
+						}
+					}
+				}
+				#doctrine_me_affinality_polygamy_close_kin; cannot marry your current spouse's siblings or parents
+				AND = {
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_close_kin }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_close_kin }
+					}
+					OR = {
+						any_spouse = { is_close_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren]
+						any_close_family_member = { is_spouse_of = scope:me_affinity_target }
+					}
+				}
+				#doctrine_me_affinality_polygamy_parental; cannot marry your current spouse's parents
+				AND = {
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_parental }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_parental }
+					}
+					OR = {
+						any_spouse = {
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_parent_of = scope:me_affinity_target
+								is_child_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+						any_parent = { is_spouse_of = scope:me_affinity_target }
+						any_child = { is_spouse_of = scope:me_affinity_target }
+						any_close_or_extended_family_member = {
+							is_spouse_of = scope:me_affinity_target
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+					}
+				}
+				#doctrine_me_affinality_polygamy_unrestricted; can marry anyone related to your current spouse
+
+				### Former Spouse
+				# doctrine_me_affinality_fixed_dynastic; cannot marry anyone from your former spouse's family or dynasty
+				AND = {
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_dynastic }
+					any_former_spouse = {
+						OR = {
+							is_close_or_extended_family_of = scope:me_affinity_target
+							scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+						}
+					}
+					OR = {
+						any_former_spouse = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+						any_close_or_extended_family_member = { any_former_spouse = { this = scope:me_affinity_target } }
+						any_dynasty_member = { any_former_spouse = { this = scope:me_affinity_target } }
+					}
+				}
+				#doctrine_me_affinality_fixed_extended_family; cannot marry any of your former spouse's family
+				AND = {
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_extended_family }
+					OR = {
+						any_former_spouse = { is_close_or_extended_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces]
+						any_close_or_extended_family_member = { any_former_spouse = { this = scope:me_affinity_target } }
+					}
+				}
+				#doctrine_me_affinality_fixed_cousins; cannot marry your former spouse's cousins, siblings, or parents
+				AND = {
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_cousins }
+					any_former_spouse = {
+						OR = {
+							is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+							is_cousin_of =  scope:me_affinity_target
+						}
+					}
+					OR = {
+						any_former_spouse = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+						any_close_family_member = { any_former_spouse = { this = scope:me_affinity_target } }
+						any_close_or_extended_family_member = {
+							is_cousin_of_root_trigger = yes
+							any_former_spouse = { this = scope:me_affinity_target }
+						}
+					}
+				}
+				#doctrine_me_affinality_fixed_close_kin; cannot marry your former spouse's siblings or parents
+				AND = {
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_close_kin }
+					OR = {
+						any_former_spouse = { is_close_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren]
+						any_close_family_member = { any_former_spouse = { this = scope:me_affinity_target } }
+					}
+				}
+				#doctrine_me_affinality_fixed_parental; cannot marry your spouse's parents
+				AND = {
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_parental }
+					OR = {
+						any_former_spouse = {
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_parent_of = scope:me_affinity_target
+								is_child_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+						any_parent = { any_former_spouse = { this = scope:me_affinity_target } }
+						any_child = { any_former_spouse = { this = scope:me_affinity_target } }
+						any_close_or_extended_family_member = {
+							any_former_spouse = { this = scope:me_affinity_target }
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+					}
+				}
+				#doctrine_me_affinality_fixed_unrestricted; can marry anyone related to your former spouse
+
+				### Current Concubine
+				# doctrine_me_affinality_polygamy_dynastic; cannot marry anyone from your current concubine's family or dynasty
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_dynastic }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_dynastic }
+					}
+					OR = {
+						any_concubine = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+						any_close_or_extended_family_member = { is_concubine_of = scope:me_affinity_target }
+						any_dynasty_member = { is_concubine_of = scope:me_affinity_target }
+					}
+				}
+				#doctrine_me_affinality_polygamy_extended_family; cannot marry any of your current concubine's family
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_extended_family }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_extended_family }
+					}
+					OR = {
+						any_concubine = { is_close_or_extended_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces]
+						any_close_or_extended_family_member = { is_concubine_of = scope:me_affinity_target }
+					}
+				}
+				#doctrine_me_affinality_polygamy_cousins; cannot marry your current concubine's cousins, siblings, or parents
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_cousins }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_cousins }
+					}
+					OR = {
+						any_concubine = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+						any_close_family_member = { is_concubine_of = scope:me_affinity_target }
+						any_close_or_extended_family_member = {
+							is_cousin_of_root_trigger = yes
+							is_concubine_of = scope:me_affinity_target
+						}
+					}
+				}
+				#doctrine_me_affinality_polygamy_close_kin; cannot marry your current concubine's siblings or parents
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_close_kin }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_close_kin }
+					}
+					OR = {
+						any_concubine = { is_close_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren]
+						any_close_family_member = { is_concubine_of = scope:me_affinity_target }
+					}
+				}
+				#doctrine_me_affinality_polygamy_parental; cannot marry your current concubine's parents
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					OR = {
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_parental }
+						$RITE$ = { rite_has_doctrine = doctrine_me_affinality_polygamy_parental }
+					}
+					OR = {
+						any_concubine = {
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_parent_of = scope:me_affinity_target
+								is_child_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+						any_parent = { is_concubine_of = scope:me_affinity_target }
+						any_child = { is_concubine_of = scope:me_affinity_target }
+						any_close_or_extended_family_member = {
+							is_concubine_of = scope:me_affinity_target
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+					}
+				}
+				#doctrine_me_affinality_polygamy_unrestricted; can marry anyone related to your current concubine
+
+				### Former Concubine
+				# doctrine_me_affinality_fixed_dynastic; cannot marry anyone from your former concubine's family or dynasty
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_dynastic }
+					OR = {
+						any_former_concubine = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+						any_former_concubinist = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+					}
+					OR = {
+						any_former_concubine = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+						any_close_or_extended_family_member = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_dynasty_member = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_former_concubinist = {
+							OR = {
+								is_close_or_extended_family_of = scope:me_affinity_target
+								scope:me_affinity_target.dynasty ?= dynasty # only when both have a dynasty
+							}
+						}
+						any_close_or_extended_family_member = { any_former_concubinist = { this = scope:me_affinity_target } }
+						any_dynasty_member = { any_former_concubinist = { this = scope:me_affinity_target } }
+					}
+				}
+				#doctrine_me_affinality_fixed_extended_family; cannot marry any of your former concubine's family
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_extended_family }
+					OR = {
+						any_former_concubine = { is_close_or_extended_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren, cousins, uncles, aunts, nephews, nieces]
+						any_close_or_extended_family_member = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_former_concubinist = { is_close_or_extended_family_of = scope:me_affinity_target }
+						any_close_or_extended_family_member = { any_former_concubinist = { this = scope:me_affinity_target } }
+					}
+				}
+				#doctrine_me_affinality_fixed_cousins; cannot marry your former concubine's cousins, siblings, or parents
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_cousins }
+					OR = {
+						any_former_concubine = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+						any_former_concubinist = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+					}
+					OR = {
+						any_former_concubine = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target #[parents, children, siblings, grandparents, grandchildren]
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+						any_close_family_member = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_close_or_extended_family_member = {
+							is_cousin_of_root_trigger = yes
+							any_former_concubine = { this = scope:me_affinity_target }
+						}
+						any_former_concubinist = {
+							OR = {
+								is_close_family_of = scope:me_affinity_target
+								is_cousin_of =  scope:me_affinity_target
+							}
+						}
+						any_close_family_member = { any_former_concubinist = { this = scope:me_affinity_target } }
+						any_close_or_extended_family_member = {
+							is_cousin_of_root_trigger = yes
+							any_former_concubinist = { this = scope:me_affinity_target }
+						}
+					}
+				}
+				#doctrine_me_affinality_fixed_close_kin; cannot marry your former concubine's siblings or parents
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_close_kin }
+					OR = {
+						any_former_concubine = { is_close_family_of = scope:me_affinity_target } #[parents, children, siblings, grandparents, grandchildren]
+						any_close_family_member = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_former_concubinist = { is_close_family_of = scope:me_affinity_target }
+						any_close_family_member = { any_former_concubinist = { this = scope:me_affinity_target } }
+					}
+				}
+				#doctrine_me_affinality_fixed_parental; cannot marry your concubine's parents
+				AND = {
+					has_game_rule = me_affinal_doctrines_concubines
+					$RITE$ = { rite_has_doctrine = doctrine_me_affinality_fixed_parental }
+					OR = {
+						any_former_concubine = {
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_parent_of = scope:me_affinity_target
+								is_child_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+						any_parent = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_child = { any_former_concubine = { this = scope:me_affinity_target } }
+						any_close_or_extended_family_member = {
+							any_former_concubine = { this = scope:me_affinity_target }
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+						any_former_concubinist = {
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_parent_of = scope:me_affinity_target
+								is_child_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+						any_parent = { any_former_concubinist = { this = scope:me_affinity_target } }
+						any_child = { any_former_concubinist = { this = scope:me_affinity_target } }
+						any_close_or_extended_family_member = {
+							any_former_concubinist = { this = scope:me_affinity_target }
+							OR = {
+								is_great_grandparent_of = scope:me_affinity_target
+								is_grandparent_of = scope:me_affinity_target
+								is_grandchild_of = scope:me_affinity_target
+								is_great_grandchild_of = scope:me_affinity_target
+							}
+						}
+					}
+				}
+				#doctrine_me_affinality_fixed_unrestricted; can marry anyone related to your former concubine
+			}
+		}
+	}
+}
+
+# ME: vanilla's trigger (CK3 1.20) with one added line - the game rule me_rite_editing. Re-copy after a game update.
+can_edit_rite_trigger = {
+	me_rite_editing_allowed_trigger = yes # ME: game rule me_rite_editing
+	is_adult = yes
+	is_at_war = no
+	custom_tooltip = {
+		text = ecumenical_council_already_ongoing_tt
+		NOT = { faith = { has_variable = ecumenical_council_ongoing } }
+	}
+	trigger_if = {
+		limit = {
+			is_clergy = no
+			highest_held_title_tier = tier_county
+			top_liege != this
+		}
+		custom_description = {
+			text = "faith_creation_duchy_or_higher"
+			highest_held_title_tier >= tier_duchy
+		}
+	}
+
+	trigger_if = {
+		limit = {
+			rite = {
+				rite_has_doctrine = doctrine_theocracy_temporal
+			}
+			is_clergy = no
+			has_puppet_type = theological_agent_puppet
+			# Allow Mandala God-Kings and Son of Heaven to create and edit rites freely
+			trigger_if = {
+				limit = {
+					top_overlord = this
+				}
+				NOR = {
+					government_has_flag = government_is_mandala
+					tgp_has_access_to_ministry_trigger = yes
+				}
+			}
+		}
+		is_puppet_action_valid = puppet_trigger_can_create_rite
+	}
+
+	custom_description = {
+		text = "character_is_rite_head"
+		rite.head_of_rite == root
+	}
+
+	custom_description = {
+		text = "character_can_only_edit_one_rite"
+		NOT = { exists = var:has_edited_a_rite }
+	}
+
+	trigger_if = {
+		limit = {
+			faith = { has_doctrine_parameter = unreformed }
+		}
+
+		NOT = {
+			custom_description = {
+				text = faith_has_been_reformed
+				object = faith
+				exists = faith.var:has_been_reformed
+			}
+		}
+
+		trigger_if = {
+			limit = {
+				NOT = {
+					has_character_flag = ignore_3_holy_site_rule
+				}
+			}
+			# Empire Faith Gate: easier reformation path
+			trigger_if = {
+				limit = {
+					empire_faith_gate_enabled_trigger = yes
+				}
+				custom_tooltip = {
+					text = empire_faith_gate_reformation_piety_level
+					piety_level >= 2
+				}
+				trigger_if = {
+					limit = {
+						government_has_flag = government_is_tribal
+					}
+					custom_tooltip = {
+						text = empire_faith_gate_reformation_tribal_authority
+						has_realm_law = tribal_authority_3
+					}
+				}
+				custom_tooltip = {
+					text = empire_faith_gate_reformation_holy_site
+					faith = {
+						any_holy_site_barony = {
+							count >= 3
+							county.holder = {
+								faith = root.faith
+							}
+						}
+					}
+				}
+			}
+			# Vanilla: 3 holy sites
+			trigger_else = {
+				faith = {
+					num_realm_holy_sites_faithful_holders = {
+						CHARACTER = root
+						COUNT = 3
+					}
+				}
+			}
+		}
+
+		custom_tooltip = {
+			text = faith_reformation_via_decision
+			faith = {
+				NOT = { has_variable = block_reformation_var }
+			}
+		}
+	}
+}

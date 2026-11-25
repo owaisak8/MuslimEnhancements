@@ -29,7 +29,7 @@
  
  # Nomadic Council
  COUNCIL_WINDOW_TITLE_KURULTAI: "[GetPlayer.Custom('ME_GetNomadicCouncilNameFull')]"
- THE_GREAT_STEPPE_WINDOW_GURKHAN_SUBTITLE: "[gurkhan_dominant_nomad|E]"
+ THE_GREAT_STEPPE_WINDOW_GURKHAN_SUBTITLE: "[Concept('gurkhan','Dominant Nomad')|E]"
  game_concept_gurkhan_dominant_nomad: "Dominant Nomad"
  game_concept_gurkhan_desc: "The biggest threat of [the_great_steppe|E]. The $game_concept_gurkhan_dominant_nomad$ or $game_concept_gurkhan$ is that [GetGovernment( 'nomad_government' ).GetName] [ruler|E] with the biggest [herd|E] in the entire region, marking them as a powerful ally or a dreadful enemy.\n\nOnly the $game_concept_gurkhan$ may reach the highest level of [nomadic_authority|E], allowing them to become the [GetTrait('greatest_of_khans').GetName( GetNullCharacter )] and marking them as a target."
 

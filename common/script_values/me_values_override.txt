@@ -80,7 +80,7 @@
 	if = {
 		limit = { # Lazy only
 			AND = {
-				faith = { has_doctrine_parameter = me_ablution_full }
+				rite = { rite_has_parameter = me_ablution_full }
 				has_trait = lazy
 				NOR = {
 					has_trait = cynical
@@ -94,7 +94,7 @@
 	if = {
 		limit = { # Normal
 			AND = {
-				faith = { has_doctrine_parameter = me_ablution_full }
+				rite = { rite_has_parameter = me_ablution_full }
 				NOR = {
 					has_trait = cynical
 					has_trait = zealous
@@ -109,7 +109,7 @@
 		limit = { # Diligent only/Zealous and Lazy
 			OR = {
 				AND = {
-					faith = { has_doctrine_parameter = me_ablution_full }
+					rite = { rite_has_parameter = me_ablution_full }
 					has_trait = diligent
 					NOR = {
 						has_trait = cynical
@@ -118,7 +118,7 @@
 					}
 				}
 				AND = {
-					faith = { has_doctrine_parameter = me_ablution_full }
+					rite = { rite_has_parameter = me_ablution_full }
 					has_trait = zealous
 					has_trait = lazy
 					NOR = {
@@ -133,7 +133,7 @@
 	if = {
 		limit = { # Zealous/ Zealous and Diligent
 			AND = {
-				faith = { has_doctrine_parameter = me_ablution_full }
+				rite = { rite_has_parameter = me_ablution_full }
 				has_trait = zealous
 				NOR = {
 					has_trait = cynical
@@ -148,7 +148,7 @@
 	if = {
 		limit = { # Lazy only
 			AND = {
-				faith = { has_doctrine_parameter = me_ablution_handwashing }
+				rite = { rite_has_parameter = me_ablution_handwashing }
 				has_trait = lazy
 				NOR = {
 					has_trait = cynical
@@ -162,7 +162,7 @@
 	if = {
 		limit = { # Normal
 			AND = {
-				faith = { has_doctrine_parameter = me_ablution_handwashing }
+				rite = { rite_has_parameter = me_ablution_handwashing }
 				NOR = {
 					has_trait = cynical
 					has_trait = zealous
@@ -177,7 +177,7 @@
 		limit = { # Diligent only/Zealous and Lazy
 			OR = {
 				AND = {
-					faith = { has_doctrine_parameter = me_ablution_handwashing }
+					rite = { rite_has_parameter = me_ablution_handwashing }
 					has_trait = diligent
 					NOR = {
 						has_trait = cynical
@@ -186,7 +186,7 @@
 					}
 				}
 				AND = {
-					faith = { has_doctrine_parameter = me_ablution_handwashing }
+					rite = { rite_has_parameter = me_ablution_handwashing }
 					has_trait = zealous
 					has_trait = lazy
 					NOR = {
@@ -201,7 +201,7 @@
 	if = {
 		limit = { # Zealous/ Zealous and Diligent
 			AND = {
-				faith = { has_doctrine_parameter = me_ablution_handwashing }
+				rite = { rite_has_parameter = me_ablution_handwashing }
 				has_trait = zealous
 				NOR = {
 					has_trait = cynical

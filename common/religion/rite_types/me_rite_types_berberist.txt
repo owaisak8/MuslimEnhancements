@@ -1,0 +1,87 @@
+﻿
+barghawata = { # Barghawatism - The Berberist religion of Salih ibn Tarif
+	name = barghawata
+	desc = barghawata_desc
+	faith = barghawata
+	founder = d_barghawata
+
+	color = { 0.35 0.03 0.03 }
+	icon = barghawata
+
+	tenets = {
+		tenet_unreformed_syncretism
+		tenet_astrology
+		tenet_communal_identity
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # ME: added for CK3 1.21, as vanilla did for its rites
+		muhammad_succession_berberist_doctrine # Berberist
+		islam_secondary_group_berberist_doctrine # Unaffiliated Berberist
+		doctrine_divorce_allowed
+		doctrine_witchcraft_accepted
+		doctrine_consanguinity_restricted
+		doctrine_clerical_function_recruitment
+		doctrine_clerical_gender_either
+		doctrine_pilgrimage_encouraged
+		doctrine_me_fasting_month_rajab # Fasting in Rajab
+		special_doctrine_is_barghawata_faith # Barghawata trait doctrine
+	}
+}
+
+hamimist = { # Ha-Mimism - The Berberist religion of Ha-Mim ibn Mann-Allah al-Majkasi
+	name = hamimist
+	desc = hamimist_desc
+	faith = hamimist
+	founder = d_hamimist
+
+	color = { 0.09 0.49 0.56 }
+	icon = hamimist
+
+	tenets = {
+		tenet_unreformed_syncretism
+		tenet_esotericism
+		tenet_false_conversion_sanction
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # ME: added for CK3 1.21, as vanilla did for its rites
+		muhammad_succession_berberist_doctrine # Berberist
+		islam_secondary_group_berberist_doctrine # Unaffiliated Berberist
+		doctrine_clerical_gender_either
+		doctrine_gender_equal
+		doctrine_temporal_head
+		doctrine_witchcraft_virtuous
+		doctrine_pilgrimage_encouraged
+		doctrine_me_fasting_month_rajab # Fasting in Rajab
+		special_doctrine_is_hamimist_faith # Ha-Mimist trait doctrine
+	}
+}
+
+kaduist = { # Kaduist - The Berberist religion of Kadu ibn Mu'arik al-Mawati
+	name = kaduist
+	desc = kaduist_desc
+	faith = kaduist
+	founder = d_kaduist
+
+	color = { 0.84 0.73 0.15 }
+	icon = kaduist
+
+	tenets = {
+		tenet_unreformed_syncretism
+		tenet_esotericism
+		tenet_polyamory
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # ME: added for CK3 1.21, as vanilla did for its rites
+		muhammad_succession_berberist_doctrine # Berberist
+		islam_secondary_group_berberist_doctrine # Unaffiliated Berberist
+		doctrine_temporal_head
+		doctrine_deviancy_accepted
+		doctrine_homosexuality_accepted
+		doctrine_witchcraft_virtuous # From Berber Paganism
+		doctrine_pilgrimage_encouraged
+		special_doctrine_is_kaduist_faith # Kaduist trait doctrine
+	}
+}

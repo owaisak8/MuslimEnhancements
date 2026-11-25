@@ -31,15 +31,15 @@
 
 		AND = {
 			faith.religion = religion:islam_religion
-			NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-			NOT = { faith = faith:druze }
+			NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+			NOT = { rite = rite:druze }
 		}
 
 		scope:target = {
 			AND = {
 				faith.religion = religion:islam_religion
-				NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-				NOT = { faith = faith:druze }
+				NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+				NOT = { rite = rite:druze }
 				age >= 16
 			}
 		}
@@ -68,31 +68,37 @@
 		custom_tooltip = {
 			text = become_hafidh_relation_tt
 			OR = {
-				scope:target = cp:councillor_court_chaplain
-				#scope:owner.court_position:court_tutor_court_position = { 
-				#	this = scope:target
-				#}
-				scope:owner = {
+				scope:target = { # Landed Ruler - Teacher is your court chaplain
+					has_council_position = councillor_court_chaplain 
+					is_councillor_of = scope:owner
+				}
+				scope:target = { # Landed Ruler - Teacher is your court tutor
 					AND = {
-						scope:target = { has_court_position = court_tutor_court_position }
+						has_court_position = court_tutor_court_position
 						is_court_position_employer = {
 							court_position = court_tutor_court_position
-							who = scope:target
+							who = scope:owner
 						}
 					}
 				}
 				scope:target = { has_relation_guardian = scope:owner }
-				AND = {
+				AND = { # Courtier - Teacher is liege's court chaplain or court tutor
 					is_landed = no
-					OR = {
-						liege = { court_position:court_tutor_court_position = { this = scope:target } }
-						AND = {
-							scope:target = { is_courtier_of = scope:owner.liege }
+					scope:target = {
+						is_courtier_of = scope:owner.liege 
+						OR = {
 							scope:target = { has_council_position = councillor_court_chaplain }
+							AND = {
+								has_court_position = court_tutor_court_position
+								is_court_position_employer = {
+									court_position = court_tutor_court_position
+									who = scope:owner.liege
+								}
+							}
 						}
 					}
 				}
-				AND = {
+				AND = { # Unlanded Ruler - Teacher can be any courtier
 					is_landed = no
 					is_playable_character = yes
 					scope:target = { is_courtier_of = scope:owner }
@@ -107,15 +113,15 @@
 		}
 		AND = {
 			faith.religion = religion:islam_religion
-			NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-			NOT = { faith = faith:druze }
+			NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+			NOT = { rite = rite:druze }
 		}
 		scope:target = {
 			has_trait = hafidh
 			AND = {
 				faith.religion = religion:islam_religion
-				NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-				NOT = { faith = faith:druze }
+				NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+				NOT = { rite = rite:druze }
 				OR = {
 					exists = location
 					in_diplomatic_range = scope:owner
@@ -504,8 +510,8 @@
 						is_alive = yes
 						OR = {
 							NOT = { faith.religion = religion:islam_religion }
-							faith = { has_doctrine = muhammad_succession_berberist_doctrine }
-							faith = faith:druze
+							rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine }
+							rite = rite:druze
 						}
 					}
 				}
@@ -524,8 +530,8 @@
 				scope:owner = { 
 					OR ={
 						NOT = { faith.religion = religion:islam_religion }
-						faith = { has_doctrine = muhammad_succession_berberist_doctrine }
-						faith = faith:druze
+						rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine }
+						rite = rite:druze
 					}
 				}
 			}
@@ -562,15 +568,15 @@
 					is_alive = yes
 					AND = {
 						faith.religion = religion:islam_religion
-						NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-						NOT = { faith = faith:druze }
+						NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+						NOT = { rite = rite:druze }
 					}
 					scope:target = {
 						OR = {
 							is_alive = no
 							NOT = { faith.religion = religion:islam_religion }
-							faith = { has_doctrine = muhammad_succession_berberist_doctrine }
-							faith = faith:druze
+							rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine }
+							rite = rite:druze
 							NOT = { in_diplomatic_range = scope:owner }
 						}
 					}

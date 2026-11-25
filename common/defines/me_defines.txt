@@ -1,0 +1,28 @@
+﻿# ME: the full vanilla list (as of 1.20) plus the Imamate government. Every government type must be listed here,
+# or the engine cannot build succession for its titles (it then destroys d_imami). Keep in step with vanilla 00_defines.txt.
+NGovernment = {
+	GOVERNMENT_TYPES = {
+		"feudal_government"
+		"republic_government"
+		"theocracy_government"
+		"clan_government"
+		"tribal_government"
+		"mercenary_government"
+		"holy_order_government"
+		"monastic_holy_order_government"
+		"administrative_government"
+		"landless_adventurer_government"
+		"nomad_government"
+		"herder_government"
+		"celestial_government"
+		"japan_administrative_government"
+		"japan_feudal_government"
+		"mandala_government"
+		"wanua_government"
+		"meritocratic_government"
+		"steppe_admin_government"
+		"ecclesiastical_government"
+		"me_imamate_government"
+		"merchant_government"
+	}
+}

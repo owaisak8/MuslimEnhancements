@@ -1,8 +1,8 @@
 ﻿k_khorasan = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	651.1.1 = { # Khorasan was Conquered
 		liege = "e_arabia"
 	}
@@ -16,8 +16,14 @@
 	673.1.1 = {
 		holder = me_ziyadid_003 # Ubayd-Allah ibn Ziyad 'Ibn Abihi'
 	}
+	675.1.1 = {
+		holder = me_hawazin_032 # Aslam ibn Zur'ah al-Kilabi
+	}
 	676.1.1 = {
-		holder = 0
+		holder = 0 # Sa'id ibn Uthman ibn Affan al-Umawi
+	}
+	677.1.1 = {
+		holder = me_hawazin_032 # Aslam ibn Zur'ah al-Kilabi (Again)
 	}
 	678.1.1 = {
 		holder = me_ziyadid_004 # Abdul-Rahman ibn Ziyad 'Ibn Abihi'
@@ -34,13 +40,25 @@
 	714.1.1 = {
 		holder = 0
 	}
+	721.1.1 = {
+		holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	}
+	721.6.1 = {
+		holder = 0
+	}
+	723.1.1 = {
+		holder = me_hawazin_034 # Muslim ibn Sa'id ibn Aslam al-Kilabi
+	}
+	724.1.1 = {
+		holder = 0 # Asad ibn Abdullah al-Qasri
+	}
 	738.1.1 = {
 		holder = me_thaqafi_022 # Yusuf ibn Umar ath-Thaqafi
 	}
 	745.1.1 = {
 		holder = 0
 	}
-	
+
 	### Abbasid Governors ###
 	766.1.1 = {
 		holder = 188650 # Abu Awn Abd al-Malik ibn Yazid al-Khurasani
@@ -54,7 +72,7 @@
 	792.1.1 = {
 		holder = 0
 	}
-	
+
 	856.1.1 = {
 		liege = 0
 		holder = 163100
@@ -84,9 +102,9 @@
 	}
 }
 d_nishapur = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
 
 	867.1.1 = {
 		holder = 163100
@@ -108,25 +126,25 @@ d_nishapur = {
 
 
 c_nishapur = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 46 }
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 46 }
 
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = 163100
 	}
 	867.1.1 = {
 		liege = d_nishapur
 	}
-	
+
 	1066.1.1 = {
 		holder = 3042
 	}
@@ -237,18 +255,18 @@ c_samaiqan = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = 163100
 	}
 	867.1.1 = {
 		liege = d_nishapur
 	}
-	
+
 	1066.1.1 = {
 		liege = d_nishapur
 		holder = tajik0003
@@ -310,18 +328,18 @@ c_juwain = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = 163100
 	}
 	867.1.1 = {
 		liege = d_nishapur
 	}
-	
+
 	1066.1.1 = {
 		holder = 3042
 	}
@@ -379,25 +397,25 @@ c_juwain = {
 
 
 c_baihaq = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 8 }
-	
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 8 }
+
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = 163100
 	}
 	867.1.1 = {
 		liege = d_nishapur
 	}
-	
+
 	1066.1.1 = {
 		holder = 3042
 	}
@@ -464,7 +482,7 @@ c_damghan = {
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = extra_persians_4
 	}
@@ -512,7 +530,7 @@ d_merv = {
 		liege = k_khorasan
 		holder = 1000230508
 	}
-	
+
 	#Seljuks
 	1066.1.1 = {
 		liege = e_persia
@@ -636,23 +654,23 @@ d_merv = {
 
 
 c_merv = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 41 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 41 }
+
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = d_merv
 		holder = 1000230508
 	}
-	
+
 	#Seljuks
 	1066.1.1 = {
 		liege = e_persia
@@ -701,16 +719,16 @@ c_sarakhs = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = d_merv
 		holder = 1000230508
 	}
-	
+
 	#Seljuk vasals
 	1066.1.1 = {
 		holder = tajik0004
@@ -755,23 +773,23 @@ c_sarakhs = {
 
 
 c_marvarrud = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = d_merv
 		holder = 1000230508
 	}
-	
+
 	1066.1.1 = {
 		liege = e_persia
 		holder = 1000229904
@@ -821,16 +839,16 @@ c_rivsharan = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = d_merv
 		holder = 1000230508
 	}
-	
+
 	1066.1.1 = {
 		liege = e_persia
 		holder = 1229924 #Bori-Bars b. Alp Arslan
@@ -879,12 +897,12 @@ c_guzgan = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
 	800.1.1 = {
-		holder = extra_ghurids_2 #Banji 
+		holder = extra_ghurids_2 #Banji
 	}
 	861.1.1 = {
 		holder = 1230300 #Farighun Farighunid
@@ -892,7 +910,7 @@ c_guzgan = {
 	895.1.1 = {
 		holder = 1230301 #Ahmad Farighunid
 	}
-	
+
 	1066.1.1 = {
 		liege = e_persia
 		holder = 93130
@@ -941,16 +959,16 @@ c_amol = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = d_merv
 		holder = 1000230508
 	}
-	
+
 	#Seljuks
 	1066.1.1 = {
 		liege = e_persia
@@ -996,16 +1014,16 @@ c_zamm = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = d_merv
 		holder = 1000230508
 	}
-	
+
 	#Seljuks
 	1066.1.1 = {
 		liege = e_persia
@@ -1046,12 +1064,12 @@ c_zamm = {
 }
 
 d_ghur = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 
 	800.1.1 = {
-		holder = extra_ghurids_2 #Banji 
+		holder = extra_ghurids_2 #Banji
 	}
 	832.11.1 = {
 		holder = extra_ghurids_1 #Muhammad abu Suri
@@ -1063,13 +1081,13 @@ d_ghur = {
 		holder = 163101 #Ya'qub the Saffarid
 	}
 	879.6.5 = {
-		holder = 1230316 #Suri the real Ghurid, returned 
+		holder = 1230316 #Suri the real Ghurid, returned
 	}
 	925.10.22 = {
 		holder = fictional_ghurids_1  #Suri the fictional placeholder Ghurid
 	}
 	932.12.2 = {
-		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid 
+		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid
 	}
 	934.9.13 = {
 		holder = 1230317 #Mohammad Ghurid
@@ -1105,11 +1123,11 @@ d_ghur = {
 	1163.1.1 = {
 		holder = 144141
 	}
-	
+
 	1203.1.1 = {
 		holder = 144142
 	}
-	
+
 	1206.3.15 = {
 		holder = 144143
 	}
@@ -1122,7 +1140,7 @@ d_ghur = {
 	1214.1.1 = {
 		holder = 93149
 	}
-	
+
 	1215.1.1 = {
 		holder = 125501
 	}
@@ -1142,20 +1160,20 @@ d_ghur = {
 
 
 c_ghur = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 36 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 36 }
+
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	800.1.1 = {
-		holder = extra_ghurids_2 #Banji 
+		holder = extra_ghurids_2 #Banji
 	}
 	832.11.1 = {
 		holder = extra_ghurids_1 #Muhammad abu Suri
@@ -1167,13 +1185,13 @@ c_ghur = {
 		holder = 163101 #Ya'qub the Saffarid
 	}
 	879.6.5 = {
-		holder = 1230316 #Suri the real Ghurid, returned 
+		holder = 1230316 #Suri the real Ghurid, returned
 	}
 	925.10.22 = {
 		holder = fictional_ghurids_1  #Suri the fictional placeholder Ghurid
 	}
 	932.12.2 = {
-		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid 
+		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid
 	}
 	934.9.13 = {
 		holder = 1230317 #Mohammad Ghurid
@@ -1209,11 +1227,11 @@ c_ghur = {
 	1163.1.1 = {
 		holder = 144141
 	}
-	
+
 	1203.1.1 = {
 		holder = 144142
 	}
-	
+
 	1206.3.15 = {
 		holder = 144143
 	}
@@ -1226,7 +1244,7 @@ c_ghur = {
 	1214.1.1 = {
 		holder = 93149
 	}
-	
+
 	1215.1.1 = {
 		holder = 125501
 	}
@@ -1250,13 +1268,13 @@ c_darmashan = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	800.1.1 = {
-		holder = extra_ghurids_2 #Banji 
+		holder = extra_ghurids_2 #Banji
 	}
 	832.11.1 = {
 		holder = extra_ghurids_1 #Muhammad abu Suri
@@ -1268,13 +1286,13 @@ c_darmashan = {
 		holder = 163101 #Ya'qub the Saffarid
 	}
 	879.6.5 = {
-		holder = 1230316 #Suri the real Ghurid, returned 
+		holder = 1230316 #Suri the real Ghurid, returned
 	}
 	925.10.22 = {
 		holder = fictional_ghurids_1  #Suri the fictional placeholder Ghurid
 	}
 	932.12.2 = {
-		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid 
+		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid
 	}
 	934.9.13 = {
 		holder = 1230317 #Mohammad Ghurid
@@ -1310,11 +1328,11 @@ c_darmashan = {
 	1163.1.1 = {
 		holder = 144141
 	}
-	
+
 	1203.1.1 = {
 		holder = 144142
 	}
-	
+
 	1206.3.15 = {
 		holder = 144143
 	}
@@ -1327,7 +1345,7 @@ c_darmashan = {
 	1214.1.1 = {
 		holder = 93149
 	}
-	
+
 	1215.1.1 = {
 		holder = 125501
 	}
@@ -1351,32 +1369,32 @@ c_upper_ghur = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	800.1.1 = {
 		liege = d_ghur
-		holder = extra_ghurids_2 #Banji 
+		holder = extra_ghurids_2 #Banji
 	}
 	832.11.1 = {
 		holder = extra_ghurids_1 #Muhammad abu Suri
 	}
 	865.11.11 = {
-		holder = fictional_ghurids_6 #Zahhak, fictional vassal of Suri 
+		holder = fictional_ghurids_6 #Zahhak, fictional vassal of Suri
 	}
 	870.1.1 = {
 		holder = 163101 #Ya'qub the Saffarid
 	}
 	879.6.5 = {
-		holder = 1230316 #Suri the real Ghurid, returned 
+		holder = 1230316 #Suri the real Ghurid, returned
 	}
 	925.10.22 = {
 		holder = fictional_ghurids_1  #Suri the fictional placeholder Ghurid
 	}
 	932.12.2 = {
-		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid 
+		holder = fictional_ghurids_2 #Zahhak the fictional placeholder Ghurid
 	}
 	934.9.13 = {
 		holder = 1230317 #Mohammad Ghurid
@@ -1412,11 +1430,11 @@ c_upper_ghur = {
 	1163.1.1 = {
 		holder = 144141
 	}
-	
+
 	1203.1.1 = {
 		holder = 144142
 	}
-	
+
 	1206.3.15 = {
 		holder = 144143
 	}
@@ -1429,7 +1447,7 @@ c_upper_ghur = {
 	1214.1.1 = {
 		holder = 93149
 	}
-	
+
 	1215.1.1 = {
 		holder = 125501
 	}
@@ -1450,9 +1468,9 @@ c_upper_ghur = {
 
 
 d_herat = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 
 	856.1.1 = {
 		liege = k_khorasan
@@ -1468,10 +1486,10 @@ d_herat = {
 }
 
 c_herat = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 35 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 35 }
+
 	730.1.1 = {
 		holder = 188688 # Ruzaiq Tahirid
 		liege = d_herat
@@ -1494,9 +1512,9 @@ c_herat = {
 	}
 	855.1.1 = {
 		liege = 0
-		holder = azariqa_0009 #The Azariqa "caliph" of Karukh town since 30 years back; with Tahirid control having slipped, he now controls the county. 
+		holder = azariqa_0009 #The Azariqa "caliph" of Karukh town since 30 years back; with Tahirid control having slipped, he now controls the county.
 	}
-	
+
 	#Seljuks
 	1057.1.1 = {
 		liege = d_sistan
@@ -1508,7 +1526,7 @@ c_herat = {
 	1066.1.1 = {
 		holder = 1229924 #Bori-Bars b. Alp Arslan
 	}
-	
+
 	#ahistorical - Ghaznavids again
 	1096.1.1 = {
 		holder = 93138
@@ -1536,7 +1554,7 @@ c_herat = {
 		holder = 194303
 	}
 	1245.1.1 =
-	
+
 	{
 		holder = 93154
 	}
@@ -1556,7 +1574,7 @@ c_herat = {
 		liege = 0
 		holder = 93159
 	}
-	
+
 }
 
 
@@ -1656,7 +1674,7 @@ c_badghis = {
 		liege = d_herat
 		holder = 163156 # Ibrahim Samanid
 	}
-	
+
 	1058.1.1 = {
 		liege = e_persia
 		holder = turkish0002 #Toghan-Shah b. Chaghri Beg
@@ -1711,10 +1729,10 @@ c_badghis = {
 
 
 c_sabzevar = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	730.1.1 = {
 		holder = 188688 # Ruzaiq Tahirid
 		liege = d_herat
@@ -1733,9 +1751,9 @@ c_sabzevar = {
 	}
 	855.1.1 = {
 		liege = 0
-		holder = azariqa_0009 #The Azariqa "caliph" of Karukh town since 30 years back; with Tahirid control having slipped, he now controls the county. 
+		holder = azariqa_0009 #The Azariqa "caliph" of Karukh town since 30 years back; with Tahirid control having slipped, he now controls the county.
 	}
-	
+
 	#Seljuks
 	1057.1.1 = {
 		liege = d_sistan
@@ -1764,7 +1782,7 @@ c_sabzevar = {
 	1180.1.1 = {
 		holder = 93151
 	}
-	
+
 	1210.1.1 = {
 		holder = 93153
 	}
@@ -1838,7 +1856,7 @@ c_zirkuh = {
 	1180.1.1 = {
 		holder = 93151
 	}
-	
+
 	1210.1.1 = {
 		holder = 93153
 	}
@@ -1868,12 +1886,12 @@ c_zirkuh = {
 }
 
 d_balkh = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 
 	864.1.1 = {
-		holder = sogdian0024 #Dawud Banijurid	
+		holder = sogdian0024 #Dawud Banijurid
 	}
 	867.1.1 = {
 		liege = k_transoxiana
@@ -1884,13 +1902,13 @@ d_balkh = {
 	1178.1.1 = {
 		holder = 93147 # Shams ad-Din Muhammad of Bamiyan
 		liege = "k_kabulistan"
-	}	
+	}
 }
 
 c_balkh = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 15 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 15 }
 
 	663.1.1 = {
 		liege = d_merv
@@ -1901,7 +1919,7 @@ c_balkh = {
 	715.1.1 = {
 		liege = d_merv
 	}
-	
+
 	737.1.1 = {
 		holder = 188637 # Saman-Khuda Samanid
 	}
@@ -2065,7 +2083,7 @@ c_west-tokharestan = {
 	715.1.1 = {
 		liege = d_merv
 	}
-	
+
 	737.1.1 = {
 		holder = 188637 # Saman-Khuda Samanid
 	}
@@ -2233,9 +2251,9 @@ c_west-tokharestan = {
 
 
 c_east-tokharestan = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
 
 	663.1.1 = {
 		liege = d_merv
@@ -2246,7 +2264,7 @@ c_east-tokharestan = {
 	715.1.1 = {
 		liege = d_merv
 	}
-	
+
 	737.1.1 = {
 		holder = 188637 # Saman-Khuda Samanid
 	}
@@ -2258,7 +2276,7 @@ c_east-tokharestan = {
 	}
 	864.1.1 = {
 		liege = "d_balkh"
-		holder = sogdian0024 #Muhammad ben Dawud Banijurid	
+		holder = sogdian0024 #Muhammad ben Dawud Banijurid
 	}
 	977.1.1 = {
 		liege = "d_sistan"
@@ -2321,7 +2339,7 @@ c_east-tokharestan = {
 	}
 	1163.1.1 = {
 		holder = 93147 # Shams ad-Din Muhammad of Bamiyan
-	}	
+	}
 	1178.1.1 = {
 		holder = 93148 # Sam
 		liege = d_balkh
@@ -2414,10 +2432,10 @@ c_east-tokharestan = {
 }
 
 d_nasa = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	867.1.1 = {
 		liege = k_khorasan	#Tahirids
 		holder = 45106 # Faraz
@@ -2433,16 +2451,16 @@ c_abivard = {
 		liege = d_merv
 		government = clan_government
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	867.1.1 = {
 		liege = k_transoxiana
 		holder = 45106 # Faraz
 	}
-	
+
 	1050.1.1 = {
 		holder = 1229930
 		liege = e_persia
@@ -2486,16 +2504,16 @@ c_farava = {
 		liege = d_merv
 		government = clan_government
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	865.1.1 = {
 		liege = k_transoxiana
 		holder = 45106 # Faraz
 	}
-	
+
 	1066.1.1 = {
 		liege = e_persia	#Seljuk
 		holder = 1229929
@@ -2535,9 +2553,9 @@ c_farava = {
 
 
 d_kohestan = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 
 	1166.1.1 = {
 		holder = 144228 # Nur al-Din Muhammad II
@@ -2548,16 +2566,16 @@ c_qain = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = 163100
 	}
 	867.1.1 = {
-		holder = extra_saffarids_5 #unhistorical, but very reasonable placeholder. The Simjurids ruled this area later, in 913. 
+		holder = extra_saffarids_5 #unhistorical, but very reasonable placeholder. The Simjurids ruled this area later, in 913.
 		liege = k_makran
 	}
 	1066.1.1 = {
@@ -2621,16 +2639,16 @@ c_tun = {
 	650.1.1 = {
 		liege = d_merv
 	}
-	
+
 	768.1.1 = {
 		holder = 188602 # Homayd ibn Qahtaba
 	}
-	
+
 	862.1.1 = {
 		holder = 163100
 	}
 	867.1.1 = {
-		holder = extra_saffarids_5 #unhistorical, but very reasonable placeholder. The Simjurids ruled this area later, in 913. 
+		holder = extra_saffarids_5 #unhistorical, but very reasonable placeholder. The Simjurids ruled this area later, in 913.
 		liege = k_makran
 	}
 

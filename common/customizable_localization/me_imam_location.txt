@@ -1,0 +1,33 @@
+﻿# ME: the hover text under a character (CHARACTER_LOCATION_TOOLTIP, overridden in replace/me_imam_location_l_english.yml).
+# The Imams who hold the Imamate are beyond reach; everyone else keeps vanilla's "Located in X".
+# The Twelfth Imam's text follows the calendar: Major Occultation from 15 May 941 (15 Sha'ban 329 AH), Minor Occultation
+# from 1 January 874 (the death of Imam al-Hasan al-Askari), and plain "Unreachable" before that.
+me_character_location = {
+	type = character
+	text = {
+		trigger = {
+			has_trait = me_twelver_mahdi
+			current_date >= 941.5.15
+		}
+		localization_key = me_character_location_major_occultation
+	}
+	text = {
+		trigger = {
+			has_trait = me_twelver_mahdi
+			current_date >= 874.1.1
+		}
+		localization_key = me_character_location_minor_occultation
+	}
+	text = {
+		trigger = { has_trait = me_twelver_mahdi }
+		localization_key = me_character_location_mahdi_unreachable
+	}
+	text = {
+		trigger = { has_government = me_imamate_government }
+		localization_key = me_character_location_unreachable
+	}
+	text = {
+		fallback = yes
+		localization_key = me_character_location_default
+	}
+}

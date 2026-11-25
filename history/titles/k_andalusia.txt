@@ -1,8 +1,50 @@
 k_andalusia = {
-	867.1.1 = { change_development_level = 8 }
-	1066.1.1 = { change_development_level = 11 }
-	1178.1.1 = { change_development_level = 15 }
+	867.1.1 = { change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 11 }
+	1178.1.1 = { change_prosperity_level = 15 }
 
+	## Umayyad Governors
+	711.8.1 = {
+		holder = me_ibn_ziyad_001 # Tariq ibn Ziyad
+	}
+	712.6.1 = {
+		holder = 200024 # Musa ibn Nusayr
+	}
+	714.11.1 = { # 94 AH
+		holder = 200023 # Abd al-Aziz ibn Musa ibn Nusayr
+	}
+	716.3.1 = { # Rajab 97 AH
+		holder = me_lakhmid_078 # Ayyub ibn Habib al-Lakhmi
+	}
+	716.8.1 = { # Dhul-Hijjah 97 AH
+		holder = me_thaqafi_036 # al-Hurr ibn Abd al-Rahman ath-Thaqafi
+	}
+	719.4.1 = {
+		holder = me_khawlani_001 # al-Samh ibn Malik al-Khawlani
+	}
+	721.6.20 = {
+		holder = me_banu_akk_001 # Abd ar-Rahman ibn Abdullah al-Ghafiqi
+	}
+	721.9.1 = {
+		holder = me_kalbids_042 # 'Anbasah ibn Suhaym al-Kalbi
+	}
+
+	726.1.1 = {
+		holder = me_kalbids_143 # Yahya ibn Salamah al-Kalbi
+	}
+	728.1.1 = {
+		holder = 0
+	}
+
+	743.1.1 = {
+		holder = me_kalbids_123 # Abu al-Khattar al-Husam ibn Dirar al-Kalbi
+	}
+	745.1.1 = {
+		holder = 0
+	}
+
+
+	## Umayyads of al-Andalus
 	756.3.16 = {
 		holder = 73679 # Abd al-Rahman I Umayyad
 	}
@@ -82,10 +124,10 @@ k_andalusia = {
 
 
 d_cordoba = {
-	867.1.1 = { change_development_level = 10 }
-	1066.1.1 = { change_development_level = 13 }
-	1178.1.1 = { change_development_level = 14 }
- 
+	867.1.1 = { change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 13 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	1031.1.1 = {
 		government = republic_government
 		holder = 45000 # Jahwar ibn Muhammad
@@ -128,20 +170,20 @@ d_cordoba = {
 
 
 c_cordoba = {
-	867.1.1 = { change_development_level = 20 }
-	1066.1.1 = { change_development_level = 25 }
-	1178.1.1 = { change_development_level = 39 }
- 
+	867.1.1 = { change_prosperity_level = 20 }
+	1066.1.1 = { change_prosperity_level = 25 }
+	1178.1.1 = { change_prosperity_level = 39 }
+
 	21.1.1 = {
-		change_development_level = 12
+		change_prosperity_level = 12
 	}
- 
+
 	1001.1.1 = {
-		change_development_level = 18
+		change_prosperity_level = 18
 	}
- 
+
 	1101.1.1 = {
-		change_development_level = 22
+		change_prosperity_level = 22
 	}
 
 	711.1.1 = {
@@ -622,7 +664,7 @@ c_andujar = {
 	}
 	1065.10.10 = {
 		holder = baranis0074 # Maksan ibn Badis
-		liege = d_toledo 
+		liege = d_toledo
 	}
 	1067.1.1 = {
 		holder = 45016 # Emir Badis ibn Habus of Granada (restored)
@@ -723,10 +765,10 @@ c_andujar = {
 
 
 d_granada = {
-	867.1.1 = { change_development_level = 10 }
-	1066.1.1 = { change_development_level = 14 }
-	1178.1.1 = { change_development_level = 16 }
- 
+	867.1.1 = { change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 14 }
+	1178.1.1 = { change_prosperity_level = 16 }
+
 	880.1.1 = {
 		holder = 73805 # Umar ibn Hafsun
 		liege = 0
@@ -797,10 +839,10 @@ d_granada = {
 
 
 c_granada = {
-	867.1.1 = { change_development_level = 12 }
-	1066.1.1 = { change_development_level = 17 }
-	1178.1.1 = { change_development_level = 30 }
- 
+	867.1.1 = { change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 17 }
+	1178.1.1 = { change_prosperity_level = 30 }
+
 	848.1.1 = {
 		holder = 73943 # Nayih ibn Suleyman
 		liege = k_andalusia
@@ -1383,10 +1425,10 @@ c_malaga = {
 
 
 d_sevilla = {
-	867.1.1 = { change_development_level = 11 }
-	1066.1.1 = { change_development_level = 15 }
-	1178.1.1 = { change_development_level = 17 }
- 
+	867.1.1 = { change_prosperity_level = 11 }
+	1066.1.1 = { change_prosperity_level = 15 }
+	1178.1.1 = { change_prosperity_level = 17 }
+
 	774.1.1 = {
 		holder = levantine0010 # Abd al-Malik ibn Umar
 		liege = k_andalusia
@@ -1394,6 +1436,11 @@ d_sevilla = {
 	777.12.31 = {
 		holder = 0
 	}
+
+	914.1.1 = { # Unknown, was given governorship early in an-Nasir's reign
+		holder = me_umayyads_375 # Sa'id 'Ibn al-Salim' ibn al-Mundhir al-Umawi
+	}
+
 	1011.1.1 = {
 		holder = 73689 # Caliph al-Qasim al-Mamun of Andalusia
 		liege = k_andalusia
@@ -1422,10 +1469,10 @@ d_sevilla = {
 
 
 c_sevilla = {
-	867.1.1 = { change_development_level = 14 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 53 }
- 
+	867.1.1 = { change_prosperity_level = 14 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 53 }
+
 	774.1.1 = {
 		holder = levantine0010 # Walih Abd al-Malik ibn Umar of Sevilla
 		liege = d_sevilla
@@ -1440,7 +1487,12 @@ c_sevilla = {
 	895.1.1 = {
 		holder = 73954 # Muhammad ibn Ahmad
 	}
-	937.1.1 = {
+
+	914.1.1 = { # Unknown, was given governorship early in an-Nasir's regin
+		holder = me_umayyads_375 # Sa'id 'Ibn al-Salim' ibn al-Mundhir al-Umawi
+	}
+
+	950.1.1 = {
 		holder = 3200 # Caliph Abd al-Rahman III of Andalusia
 	}
 	961.10.15 = {
@@ -1552,6 +1604,11 @@ c_cadiz = {
 	910.1.1 = {
 		#holder = 73222 # Harun ibn Attab
 	}
+
+	920.1.1 = { # Governor of Shadhunah (Medina-Sidonia) and it's surrounding regions
+		holder = me_umayyads_451 # Muhammad 'Ibn ash-Shabansiyyah' ibn Hisham ibn Muhammad ibn al-Walid
+	}
+
 	923.1.1 = {
 		holder = 200032 # Attab ibn Harun
 	}
@@ -1969,14 +2026,17 @@ c_moura = {
 
 
 d_toledo = {
-	867.1.1 = { change_development_level = 10 }
-	1066.1.1 = { change_development_level = 14 }
-	1178.1.1 = { change_development_level = 16 }
- 
-	767.1.1 = {
-		holder = 200020 # Suleyman ibn Abd al-Rahman
+	867.1.1 = { change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 14 }
+	1178.1.1 = { change_prosperity_level = 16 }
+
+	757.1.1 = {
+		holder = me_umayyads_105 # Habib ibn Abd al-Malik ibn Umar
 		liege = k_andalusia
 		government = clan_government
+	}
+	780.1.1 = {
+		holder = 200020 # Sulayman ibn Abd al-Rahman
 	}
 	789.1.1 = {
 		holder = 0 # Unknown Walih
@@ -2061,14 +2121,17 @@ d_toledo = {
 }
 
 c_toledo = {
-	867.1.1 = { change_development_level = 13 }
-	1066.1.1 = { change_development_level = 17 }
-	1178.1.1 = { change_development_level = 32 }
- 
-	767.1.1 = {
-		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
-		liege = d_toledo
+	867.1.1 = { change_prosperity_level = 13 }
+	1066.1.1 = { change_prosperity_level = 17 }
+	1178.1.1 = { change_prosperity_level = 32 }
+
+	757.1.1 = {
+		holder = me_umayyads_105 # Habib ibn Abd al-Malik ibn Umar
+		liege = k_andalusia
 		government = clan_government
+	}
+	780.1.1 = {
+		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
 	}
 	#789-797: Unknown Walih of Toledo
 	797.1.1 = {
@@ -2124,7 +2187,7 @@ c_toledo = {
 	}
 	1080.5.25 = {
 		holder = toledo_archbishop_3 # Pascual
-		government = theocracy_government
+		government = ecclesiastical_government
 		liege = k_castille
 	}
 	1086.1.1 = {
@@ -2164,10 +2227,13 @@ c_toledo = {
 
 
 c_madrid = {
-	767.1.1 = {
-		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
-		liege = d_toledo
+	757.1.1 = {
+		holder = me_umayyads_105 # Habib ibn Abd al-Malik ibn Umar
+		liege = k_andalusia
 		government = clan_government
+	}
+	780.1.1 = {
+		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
 	}
 	#789-797: Unknown Walih of Toledo
 	797.1.1 = {
@@ -2195,6 +2261,11 @@ c_madrid = {
 	903.11.17 = {
 		holder = 200028 # Walih Mutarrif ibn Muhammad of Toledo
 	}
+
+	920.6.14 = { # 24, Muharram of 308 Hijri, Gained governorship of Wadi al-Hijarah (Gudalajara)
+		holder = me_umayyads_375 # Sa'id 'Ibn al-Salim' ibn al-Mundhir al-Umawi
+	}
+
 	#906-997: Unknown Walihs of Toledo
 	997.1.1 = {
 		holder = andalusian0097 # Walih Wadih of Toledo
@@ -2272,10 +2343,13 @@ c_madrid = {
 
 
 c_molina = {
-	767.1.1 = {
-		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
-		liege = d_toledo
+	757.1.1 = {
+		holder = me_umayyads_105 # Habib ibn Abd al-Malik ibn Umar
+		liege = k_andalusia
 		government = clan_government
+	}
+	780.1.1 = {
+		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
 	}
 	#789-797: Unknown Walih of Toledo
 	797.1.1 = {
@@ -2325,7 +2399,7 @@ c_molina = {
 	}
 	1036.1.1 = {
 		holder = baranis0086 # Hucalao
-		liege = d_toledo 
+		liege = d_toledo
 	}
 	1082.1.1 = {
 		holder = 3912 # Sheik Muhammad ibn Ammar of Silves
@@ -2371,10 +2445,13 @@ c_molina = {
 
 
 c_cuenca = {
-	767.1.1 = {
-		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
-		liege = d_toledo
+	757.1.1 = {
+		holder = me_umayyads_105 # Habib ibn Abd al-Malik ibn Umar
+		liege = k_andalusia
 		government = clan_government
+	}
+	780.1.1 = {
+		holder = 200020 # Walih Suleyman ibn Abd al-Rahman of Toledo
 	}
 	#789-797: Unknown Walih of Toledo
 	792.1.1 = {
@@ -2551,7 +2628,7 @@ c_malagon = {
 	}
 	1147.1.1 = {
 		holder = castilian0229 # Pedro de Menezes
-		liege = k_castille	
+		liege = k_castille
 	}
 	1171.1.1 = {
 		holder = 142308 # Tello de Menezes

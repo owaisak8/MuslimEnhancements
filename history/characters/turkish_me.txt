@@ -1,42 +1,8 @@
-﻿me_ismat_ad_din_khatun = {
-	name = "Ismat ad-Din Khatun"
-	female = yes
-	religion = "maturidi"
-	culture = "turkish"
-	father = me_muin_ad_din_unur
-	trait = beauty_good_2
-	trait = education_intrigue_3
-	1133.7.12 = {
-		birth = "1133.7.12"
-	}
-	1150.2.14 = {
-		add_spouse = 144031
-	}
-	1176.4.5 = {
-		add_spouse = 226000
-	}
-	1186.1.1 = {
-		death = "1186.1.1"
-	}
-}
-
-me_muin_ad_din_unur = {
-	name = "Muin ad-Din Unur"
-	religion = "maturidi"
-	culture = "turkish"
-	trait = diligent
-	trait = education_martial_4
-	1110.3.14 = {
-		birth = "1115.3.14"
-	}
-	1186.3.19 = {
-		death = "1186.3.19"
-	}
-}
-
-me_danishmend_001 = { # Father of Danishmend and the maternal grandfather of Sulayman ibn Qutalmish
+﻿
+### Misc Turks
+me_turk_misc_001 = { # Father of Danishmend and the maternal grandfather of Sulayman ibn Qutalmish
 	name = "Ali_Taylu"
-	religion = "maturidi"
+	rite = "hanafi"
 	culture = "turkish"
 
 	996.1.1 = {
@@ -47,11 +13,125 @@ me_danishmend_001 = { # Father of Danishmend and the maternal grandfather of Sul
 	}
 }
 
+me_turk_misc_002 = {
+	name = "Ismat_ud-Din" # Ismat ud-Din Khatun, daughter of the Burid regent of Damascus Mu'in ud-Din Unur
+	female = yes
+	rite = "hanafi"
+	culture = "turkish"
+	trait = beauty_good_2
+	trait = education_intrigue_3
+	
+	father = me_turk_misc_003
+	1133.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		add_spouse = 144031 # Nur ud-Din Zengi
+	}
+	1176.1.1 = {
+		add_spouse = 226000 # Salah ud-Din al-Ayyubi
+	}
+	1186.1.1 = {
+		death = yes
+	}
+}
+
+me_turk_misc_003 = {
+	name = "Unur" # Mu'in ud-Din Unur, Burid regent of Damascus
+	give_nickname = nick_muin_ud_din
+	rite = "hanafi"
+	culture = "turkish"
+	trait = diligent
+	trait = education_martial_4
+	
+	1100.1.1 = {
+		birth = yes
+	}
+	1149.8.28 = {
+		death = yes
+	}
+}
+
+me_turk_misc_004 = {
+	name = "Terken" # Terken Khatun, First wife of Seljuk Sultan Malik Shah Tekish
+	female = yes
+	rite = hanafi
+	culture = kipchak
+	trait = education_diplomacy_4
+	trait = deceitful
+	trait = ambitious
+	
+	father = 302626
+	1151.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		add_spouse = 230000 # Ala' ud-Din Tekish
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_turk_misc_005 = {
+	name = "Khatlaba" # 'Sarim ud-Din' Khatlaba, Ayyubid governor of Zabid either before or after Hattan al-Munqidhi (sources differ, he may not have governed at all)
+	#dynasty = ###
+	give_nickname = nick_sarim_ud_din
+	rite = "shafii"
+	culture = "turkish"
+	trait = education_stewardship_3
+	
+	1135.1.1 = { # Unknown
+		birth = yes
+	}
+	1178.1.1 = {
+		employer = me_kalbids_059
+	}
+	1181.1.1 = {
+		death = { 
+			death_reason = death_ill
+		}
+	}
+}
+
+me_turk_misc_006 = {
+	name = "Yaqut" # Yaqut at-Ta'izzi, Ayyubid governor of Ta'izz (1174-??) appointed by 'Shams ud-Din' Turanshah
+	dynasty = me_taizzi_turk_dynasty
+	rite = "shafii"
+	culture = "turkish"
+	
+	1137.1.1 = { # Unknown
+		birth = yes
+	}
+	1200.1.1 = { # Unknown
+		death = yes
+	}
+}
+
+me_turk_misc_007 = {
+	name = "Qaymaz" # 'Muzzafar ud-Din' Qaymaz, Ayyubid governor of al-Mikhlaf and al-Jund (1174-??) appointed by 'Shams ud-Din' Turanshah
+	#dynasty = ###
+	give_nickname = nick_muzaffar_ud_din
+	rite = "shafii"
+	culture = "turkish"
+	trait = trusting
+	
+	1149.1.1 = { # Unknown
+		birth = yes
+	}
+	1174.1.1 = { # His governed territory is in the county of Ta'izz
+		employer = me_turk_misc_006 
+	}
+	1210.1.1 = { # Unknown
+		death = yes
+	}
+}
+
 ## Caliphal Governors of Egypt
 me_egypt_turk_001 = {
 	name = "Yazid" # Yazid ibn Abdullah ibn Dinar, 867 governor of Egypt
 	dynasty = me_hulwanid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 	trait = education_martial_2
 
@@ -72,7 +152,7 @@ me_egypt_turk_001 = {
 me_egypt_turk_002 = {
 	name = "Abdullah"
 	dynasty = me_hulwanid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	father = me_egypt_turk_003
@@ -87,7 +167,7 @@ me_egypt_turk_002 = {
 me_egypt_turk_003 = {
 	name = "Dinar"
 	dynasty = me_hulwanid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	770.1.1 = {
@@ -102,7 +182,7 @@ me_egypt_turk_004 = {
 	name = "Azjur" # Azjur at-Turki, also known as Arkhuz
 	dynasty = me_azjurid_dynasty
 	give_nickname = nick_me_al_turki
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	father = me_egypt_turk_005
@@ -116,7 +196,7 @@ me_egypt_turk_004 = {
 
 me_egypt_turk_005 = {
 	name = "Ulugh_Tarkhan"
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	800.1.1 = {
@@ -130,7 +210,7 @@ me_egypt_turk_005 = {
 me_egypt_turk_006 = {
 	name = "Buhm" # Buhm ibn al-Husayn, Tulunid military commander
 	dynasty = me_buhmid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 	trait = education_martial_3
 	trait = brave
@@ -161,7 +241,7 @@ me_egypt_turk_006 = {
 
 me_egypt_turk_007 = {
 	name = "al-Husayn"
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	800.1.1 = {
@@ -175,7 +255,7 @@ me_egypt_turk_007 = {
 me_egypt_turk_008 = {
 	name = "Tukhshi" # Tukhshi ibn Balbard, Ibn Tulun's loyal deputy who governed Tarsus in 876
 	dynasty = me_balbardid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 	trait = education_stewardship_3 # Was skilled in civil administation
 	trait = diligent
@@ -207,7 +287,7 @@ me_egypt_turk_008 = {
 me_egypt_turk_009 = {
 	name = "Ibrahim" # Ibrahim ibn Balbard, Ibn Tulun's Sahib ash-Shurta
 	dynasty = me_balbardid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	father = me_egypt_turk_010
@@ -225,7 +305,7 @@ me_egypt_turk_009 = {
 me_egypt_turk_010 = {
 	name = "Balbard"
 	dynasty = me_balbardid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 
 	800.1.1 = {
@@ -239,7 +319,7 @@ me_egypt_turk_010 = {
 me_egypt_turk_011 = {
 	name = "Tayfur" # Tayfur at-Turki, Ibn Tulun's associate in Iraq who informed on the Abbasid court for him and delayed their efforts in replacing him
 	give_nickname = nick_me_al_turki
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 	trait = education_intrigue_3
 
@@ -256,7 +336,7 @@ me_egypt_turk_011 = {
 
 me_egypt_turk_012 = {
 	name = "Lu_Lu" # Lu'Lu', Tulunid commander who was given governorship over all of Syria, but would eventually defect to the side of al-Muwaffaq
-	religion = "ashari"
+	rite = "shafii"
 	culture = "turkish"
 	trait = education_martial_3
 	trait = eunuch_1
@@ -272,15 +352,3 @@ me_egypt_turk_012 = {
 	}
 }
 
-me_egypt_fic_001 = {
-	name = "Nabhan"
-	religion = "ashari"
-	culture = "egyptian"
-
-	820.1.1 = {
-		birth = yes
-	}
-	880.1.1 = {
-		death = yes
-	}
-}

@@ -17,12 +17,14 @@
 		first_valid = {
 			triggered_desc = {
 				trigger = {
-					faith = {
-						OR = {
-							has_doctrine = tenet_fp3_fedayeen
-							has_doctrine = tenet_warmonger 
-							has_doctrine_parameter = pluralism_fundamentalist_proselytization_bonus
+					OR = {
+						rite = {
+							OR = {
+								rite_has_tenet = tenet_fp3_fedayeen
+								rite_has_tenet = tenet_warmonger
+							}
 						}
+						rite = { rite_has_parameter = pluralism_fundamentalist_proselytization_bonus }
 					}
 				}
 				desc = destroy_the_apostates_decision_name
@@ -36,13 +38,12 @@
 	selection_tooltip = avenge_the_battle_of_nahrawan_decision_tooltip
 
 	is_shown = {
-		has_fp3_dlc_trigger = yes
-		faith = { has_doctrine = muhammad_succession_muhakkima_doctrine	}
+		rite ?= { rite_has_doctrine = muhammad_succession_muhakkima_doctrine }
 		capital_province ?= {
 			OR = {
+				geographical_region = world_middle_east
 				geographical_region = world_persian_empire
-				geographical_region = world_middle_east 
-			}		
+			}
 		}
 		NOT = {
 			is_target_in_global_variable_list = {
@@ -50,6 +51,7 @@
 				target = flag:avenge_the_battle_of_nahrawan_decision
 			}
 		}
+		has_fp3_dlc_trigger = yes
 	}
 
 	is_valid = {
@@ -57,7 +59,7 @@
 		custom_description = {
 			text = "restore_high_priesthood_holy_sites"
 			faith = {
-				any_holy_site = {
+				any_holy_site_barony = {
 					OR = {
 						county.holder = root
 						county.holder.top_liege = { this = root }
@@ -74,7 +76,7 @@
 			text = avenge_the_battle_of_nahrawan_shia_caliphate_irrelevant
 			NOT = { exists = title:d_shiite.holder }
 		}
-	}	
+	}
 
 	is_valid_showing_failures_only = {
 		is_alive = yes
@@ -85,28 +87,15 @@
 
 	effect = {
 		save_scope_as = avenger
-		
+
 		#Sunni penalty scope save
 		title:e_arabia = {
-			random_de_jure_county_holder = { #If there's a big Sunni presence in Arabia
+			ordered_de_jure_county_holder = { #If there's a big Sunni presence in Arabia
 				limit = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					} 
-					highest_held_title_tier = tier_empire
+					rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+					highest_held_title_tier >= tier_duchy
 				}
-				alternative_limit = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					}
-					highest_held_title_tier = tier_kingdom
-				}
-				alternative_limit = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					}
-					highest_held_title_tier = tier_duchy
-				}
+				order_by = primary_title.tier
 				faith = {
 					save_scope_as = sunni_faith
 				}
@@ -114,25 +103,12 @@
 		}
 
 		title:e_persia = {
-			random_de_jure_county_holder = { #If there's a big Sunni presence in Persia
+			ordered_de_jure_county_holder = { #If there's a big Sunni presence in Persia
 				limit = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					}
-					highest_held_title_tier = tier_empire
+					rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+					highest_held_title_tier >= tier_duchy
 				}
-				alternative_limit = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					}
-					highest_held_title_tier = tier_kingdom
-				}
-				alternative_limit = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					}
-					highest_held_title_tier = tier_duchy
-				}
+				order_by = primary_title.tier
 				faith = {
 					save_scope_as = sunni_faith
 				}
@@ -141,37 +117,18 @@
 
 		#Shia penalty scope save
 		title:e_arabia = {
-			random_de_jure_county_holder = { #If there's a big Shia presence in Arabia
+			ordered_de_jure_county_holder = { #If there's a big Shia presence in Arabia
 				limit = {
-					faith = {
-						OR = {
-							has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					rite = {
+						OR = { # ME: Ghulat and Qarmatians count as Shia here
+							rite_has_doctrine = muhammad_succession_shia_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
 						}
-					} 
-					highest_held_title_tier = tier_empire
+					}
+					highest_held_title_tier >= tier_duchy
 				}
-				alternative_limit = {
-					faith = {
-						OR = {
-							has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
-						}
-					} 
-					highest_held_title_tier = tier_kingdom
-				}
-				alternative_limit = {
-					faith = {
-						OR = {
-							has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
-						}
-					} 
-					highest_held_title_tier = tier_duchy
-				}
+				order_by = primary_title.tier
 				faith = {
 					save_scope_as = shia_faith
 				}
@@ -180,37 +137,18 @@
 
 		#Shia penalty scope save
 		title:e_persia = {
-			random_de_jure_county_holder = { #If there's a big Shia presence in Persia
+			ordered_de_jure_county_holder = { #If there's a big Shia presence in Persia
 				limit = {
-					faith = {
-						OR = {
-							has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					rite = {
+						OR = { # ME: Ghulat and Qarmatians count as Shia here
+							rite_has_doctrine = muhammad_succession_shia_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
 						}
-					} 
-					highest_held_title_tier = tier_empire
+					}
+					highest_held_title_tier >= tier_duchy
 				}
-				alternative_limit = {
-					faith = {
-						OR = {
-							has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
-						}
-					} 
-					highest_held_title_tier = tier_kingdom
-				}
-				alternative_limit = {
-					faith = {
-						OR = {
-							has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
-						}
-					} 
-					highest_held_title_tier = tier_duchy
-				}
+				order_by = primary_title.tier
 				faith = {
 					save_scope_as = shia_faith
 				}
@@ -257,7 +195,7 @@ struggle_persia_ending_foundation_decision = {
 	confirm_click_sound = "event:/DLC/FP2/SFX/UI/fp2_struggle_ending_decision_confirm"
 	is_invisible = yes
 	sort_order = 80
-	
+
 	is_valid_showing_failures_only = {
 		is_available_adult = yes
 		# Independent
@@ -277,7 +215,7 @@ struggle_persia_ending_foundation_decision = {
 				faith.religious_head = title:d_sunni.holder
 			}
 		}
-		
+
 		# HERE GOES THE SPECIFIC TRIGGERS FOR EACH OPTION - It goes here to make the buttons selectable (UI issue workaround)
 		trigger_if = { # CHALLENGER
 			limit = {  scope:struggle_persia_ending_foundation_decision_option_shia = yes }
@@ -285,7 +223,7 @@ struggle_persia_ending_foundation_decision = {
 			custom_tooltip = {
 				text = struggle_persia_ending_foundation_decision_option_hof_tt
 				NOT = {
-					faith = { has_doctrine = doctrine_no_head }
+					rite = { rite_has_doctrine = doctrine_no_head }
 				}
 			}
 		}
@@ -309,9 +247,7 @@ struggle_persia_ending_foundation_decision = {
 			custom_tooltip = {
 				text = struggle_persia_ending_foundation_decision_option_succession_tt
 				NOT = {
-					faith = {
-						has_doctrine = muhammad_succession_sunni_doctrine
-					}
+					rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 				}
 			}
 		}
@@ -342,42 +278,40 @@ struggle_persia_ending_foundation_decision = {
 		# HERE GOES THE SPECIFIC TRIGGERS FOR EACH OPTION - It goes here to make the buttons selectable (UI issue workaround)
 		trigger_if = {
 			# CHALLENGER - if you change this, also change the `ai_chance = {}` of the specific widget option below!
-			limit = {  scope:struggle_persia_ending_foundation_decision_option_shia = yes }
-			OR = {
-				any_realm_province = {
-					OR = {
-						custom_tooltip = {
-							text = holy_site_of_root_faith_tt
-							barony = {
-								is_holy_site_of = root.faith
-							}
+			limit = { scope:struggle_persia_ending_foundation_decision_option_shia = yes }
+			any_realm_province = {
+				OR = {
+					custom_tooltip = {
+						text = holy_site_of_root_faith_tt
+						barony = {
+							is_holy_site_of = root.faith
 						}
-						has_building_or_higher = the_friday_mosque_01
-						has_building_or_higher = house_of_wisdom_01
-						has_building_or_higher = holy_site_great_mosque_of_samarra_01
-						trigger_if = {
-							limit = {
-								root.faith = {
-									OR = {
-										has_doctrine = muhammad_succession_shia_doctrine
-										has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-										has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
-									}
+					}
+					has_building_or_higher = the_friday_mosque_01
+					has_building_or_higher = house_of_wisdom_01
+					has_building_or_higher = holy_site_great_mosque_of_samarra_01
+					trigger_if = {
+						limit = {
+							root.rite = {
+								OR = { # ME: Ghulat and Qarmatians count as Shia here
+									rite_has_doctrine = muhammad_succession_shia_doctrine
+									rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+									rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
 								}
 							}
-							has_building_or_higher = holy_site_imam_ali_mosque_01
 						}
-						trigger_if = {
-							limit = { root.faith.religious_head_title = title:d_imami }
-							has_building_or_higher = imam_reza_shrine_01
-						}
+						has_building_or_higher = holy_site_imam_ali_mosque_01
+					}
+					trigger_if = {
+						limit = { root.faith.religious_head_title ?= title:d_imami } # ME: the shrine of the eighth Imam only matters to the Twelvers
+						has_building_or_higher = imam_reza_shrine_01
 					}
 				}
 			}
 			# Muhakkima
 			trigger_if = {
 				limit = {
-					faith = { has_doctrine = muhammad_succession_muhakkima_doctrine }
+					rite = { rite_has_doctrine = muhammad_succession_muhakkima_doctrine }
 				}
 				fp3_valid_muhakkima_head = yes
 			}
@@ -461,18 +395,18 @@ struggle_persia_ending_foundation_decision = {
 	                                has_building_or_higher = holy_site_great_mosque_of_samarra_01
 	                                trigger_if = {
 	                                    limit = {
-	                                        root.faith = {
-	                                            OR = {
-	                                            	has_doctrine = muhammad_succession_shia_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-							has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+	                                        root.rite = {
+	                                            OR = { # ME: Ghulat and Qarmatians count as Shia here
+	                                            	rite_has_doctrine = muhammad_succession_shia_doctrine
+	                                            	rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+	                                            	rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
 	                                            }
 	                                        }
 	                                    }
 	                                    has_building_or_higher = holy_site_imam_ali_mosque_01
 	                                }
 	                                trigger_if = {
-	                                    limit = { root.faith.religious_head_title = title:d_imami }
+	                                    limit = { root.faith.religious_head_title ?= title:d_imami } # ME: the shrine of the eighth Imam only matters to the Twelvers
 	                                    has_building_or_higher = imam_reza_shrine_01
 	                                }
 	                            }
@@ -481,7 +415,7 @@ struggle_persia_ending_foundation_decision = {
 	                    # Muhakkima
 	                    trigger_if = {
 	                        limit = {
-	                            faith = { has_doctrine = muhammad_succession_muhakkima_doctrine }
+	                            rite = { rite_has_doctrine = muhammad_succession_muhakkima_doctrine }
 	                        }
 	                        fp3_valid_muhakkima_head = yes
 	                    }
@@ -592,11 +526,11 @@ struggle_persia_ending_foundation_decision = {
 
 		title:d_sunni = { remove_variable = struggle_block_dissolution_faction }
 		title:e_arabia = { remove_variable = struggle_block_dissolution_faction }
-		
+
 		# Silk Road bonus towards prosperity if and when Persia's turmoil comes to an end
 		tgp_silk_road_iranian_intermezzo_ending_effect = yes
 	}
-	
+
 	# Kingdom+ only
 	ai_check_interval_by_tier = {
 		barony = 0

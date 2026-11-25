@@ -1,7 +1,7 @@
 ﻿me_calabria_duke = {
 	name = "Nikolaos" # Fictional ruler of Calabria
 #	dynasty = me_calabria_dynasty
-	religion = "orthodox"
+	rite = byzantine_rite
 	culture = "greek"
 	837.1.1 = {
 		birth = yes

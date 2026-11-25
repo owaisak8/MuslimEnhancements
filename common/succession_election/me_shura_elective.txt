@@ -15,8 +15,8 @@
 		modifier = {
 			desc = tooltip_me_shura_vote_strength_hafidh
 			add = 1
-			NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-			NOT = { faith = faith:druze }
+			NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+			NOT = { rite = rite:druze }
 			has_trait_xp = {
 				trait = hafidh
 				value >= 100
@@ -77,51 +77,55 @@
 	}
 	
 	electors = {
-		add = holder
-		add = {
-			type = holder_direct_vassals
-			limit = {
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				OR = { #1 or 2 tiers of difference for Electors.
-					scope:title = { tier = tier_county }
-					AND = {
-						scope:title = { tier = tier_duchy }
-						highest_held_title_tier >= 1
-					}
-					AND = {
-						scope:title = { tier = tier_kingdom }
-						highest_held_title_tier >= 2
-					}
-					AND = {
-						scope:title = { tier = tier_empire }
-						highest_held_title_tier >= 3
-					}
-				}
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
-					}
-				}
+		character_sets = {
+			me_shura_elective_electors_holder = {
+				type = holder
 			}
+			me_shura_elective_electors_holder_direct_vassals = {
+				type = holder_direct_vassals
+				limit = {
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					OR = { #1 or 2 tiers of difference for Electors.
+						scope:title = { tier = tier_county }
+						AND = {
+							scope:title = { tier = tier_duchy }
+							highest_held_title_tier >= 1
+						}
+						AND = {
+							scope:title = { tier = tier_kingdom }
+							highest_held_title_tier >= 2
+						}
+						AND = {
+							scope:title = { tier = tier_empire }
+							highest_held_title_tier >= 3
+						}
+					}
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
+					}
+				}
 		}
-		add = {
-			type = holder_council_members
-			limit = {
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+			me_shura_elective_electors_holder_council_members = {
+				type = holder_council_members
+				limit = {
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
 					}
 				}
-			}
+		}
 		}
 	}
 
@@ -148,91 +152,93 @@
 		##########################	Elector voting patterns (misc)	##########################
 		elector_voting_pattern_circumstances_misc_elective_modifier = yes
 		
-		me_shura_elector_voting_pattern_modifier = yes
+	#	me_shura_elector_voting_pattern_modifier = yes
 	}
 	
 	#scope:candidate = Candidate, scope:title = Title, scope:holder_candidate = Candidate currently selected by ruler.
 	candidates = {
-		add = {
-			type = holder_direct_vassals
-			limit = {
-				feudal_elective_potential_landed_candidate_trigger = yes
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+		character_sets = {
+			me_shura_elective_candidates_holder_direct_vassals = {
+				type = holder_direct_vassals
+				limit = {
+					feudal_elective_potential_landed_candidate_trigger = yes
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
 					}
 				}
-			}
 		}
-		add = {
-			type = title_dejure_vassals
-			limit = {
-				is_independent_ruler = yes #De jure vassals of the title who are not de facto vassals of the current ruler.
-				feudal_elective_potential_landed_candidate_trigger = yes
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+			me_shura_elective_candidates_title_dejure_vassals = {
+				type = title_dejure_vassals
+				limit = {
+					is_independent_ruler = yes #De jure vassals of the title who are not de facto vassals of the current ruler.
+					feudal_elective_potential_landed_candidate_trigger = yes
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
 					}
 				}
-			}
 		}
-		add = {
-			type = title_claimants
-			limit = {
-				feudal_elective_potential_landless_claimant_candidate_trigger = yes
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+			me_shura_elective_candidates_title_claimants = {
+				type = title_claimants
+				limit = {
+					feudal_elective_potential_landless_claimant_candidate_trigger = yes
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
 					}
 				}
-			}
 		}
-		add = {
-			type = holder_council_members
-			limit = {
-				feudal_elective_potential_landless_claimant_candidate_trigger = yes
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+			me_shura_elective_candidates_holder_council_members = {
+				type = holder_council_members
+				limit = {
+					feudal_elective_potential_landless_claimant_candidate_trigger = yes
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
 					}
 				}
-			}
 		}
-		add = {
-			type = holder_dynasty
-			limit = {
-				feudal_elective_potential_landless_dynastic_candidate_trigger = yes
-				is_adult = yes
-				NOT = { is_incapable = yes }
-				NOT = { has_any_shunned_or_criminal_trait_in_faith_trigger = { CHARACTER = scope:holder FAITH = scope:holder.faith } }
-				OR = {
-					faith = scope:holder.faith
-					AND = { # Both faiths must view each other as Righteous
-						root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
-						scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+			me_shura_elective_candidates_holder_dynasty = {
+				type = holder_dynasty
+				limit = {
+					feudal_elective_potential_landless_dynastic_candidate_trigger = yes
+					is_adult = yes
+					NOT = { is_incapable = yes }
+					NOT = { has_any_shunned_or_criminal_trait_in_rite_trigger = { CHARACTER = scope:holder RITE = scope:holder.rite } }
+					OR = {
+						faith = scope:holder.faith
+						AND = { # Both faiths must view each other as Righteous
+							root.faith = { faith_hostility_level = { target = scope:holder.faith value = faith_fully_accepted_level } }
+							scope:holder.faith = { faith_hostility_level = { target = root.faith value = faith_fully_accepted_level } }
+						}
 					}
 				}
-			}
+		}
 		}
 	}
 }

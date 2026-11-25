@@ -1,0 +1,9 @@
+﻿### ME doctrines on every Rite ###
+# Gives Rites founded during play (and Rites in saves from the first 1.20 release) the mod's doctrines; see me_add_doctrine_startup_effect
+yearly_global_pulse = {
+	on_actions = { me_doctrine_yearly_check }
+}
+
+me_doctrine_yearly_check = {
+	effect = { me_add_doctrine_startup_effect = yes }
+}

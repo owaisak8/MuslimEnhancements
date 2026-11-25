@@ -1,0 +1,235 @@
+﻿### The [ROOT.Char.GetFaith.GetAdherentNameNoTooltip] Path — Ascension ###
+zealous_missionary_prep_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	sort_order = 200
+	decision_group_type = adventurer
+	desc = zealous_missionary_prep_decision_desc
+	selection_tooltip = zealous_missionary_prep_decision_tooltip
+
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		government_has_flag = government_is_landless_adventurer
+		is_adult = yes
+		NOR = {
+			has_trait = cynical
+			has_character_flag = zealous_missionary_prep
+			rite = { rite_has_tenet = tenet_me_closed_faith }
+		}
+	}
+
+	is_valid = {
+		trigger_if = {
+			limit = { rite = { rite_has_parameter = tenet_acts_of_apostles_laamp_missionary_bonus } is_ai = yes }
+			is_ai = yes
+		}
+		trigger_else_if = {
+			limit = { rite = { rite_has_parameter = tenet_acts_of_apostles_laamp_missionary_bonus } is_ai = no }
+			calc_true_if = {
+				amount >= 1
+				custom_tooltip = {
+					text = zealous_missionary_prep_decision_holy_sites_visited_req
+					has_variable = visited_unique_holy_sites_count
+					OR = {
+						var:visited_unique_holy_sites_count >= 2
+						is_ai = yes
+					}
+				}
+				has_trait = theologian
+				piety_level >= 3
+			}
+		}
+		trigger_else = {
+			calc_true_if = {
+				amount >= 2
+				custom_tooltip = {
+					text = zealous_missionary_prep_decision_holy_sites_visited_req
+					has_variable = visited_unique_holy_sites_count
+					OR = {
+						var:visited_unique_holy_sites_count >= 2
+						is_ai = yes
+					}
+				}
+				has_trait = theologian
+				piety_level >= 4
+			}
+		}
+
+
+		custom_tooltip = {
+			text = zealous_missionary_prep_decision_holy_site
+			OR = {
+				AND = {
+					is_ai = no
+					location = {
+						barony = {
+							is_holy_site_of = root.faith
+						}
+						county.faith = root.faith
+						county.holder.top_liege.faith = root.faith
+					}
+				}
+				AND = {
+					is_ai = yes
+					has_trait = zealous
+					learning > 18
+					NOT = {
+						any_player = {
+							faith = location.faith
+						}
+					}
+					current_month = 4 # 12 times less ai missionaries getting spawned
+				}
+				AND = {
+					is_ai = yes
+					rite = { rite_has_parameter = tenet_acts_of_apostles_laamp_missionary_bonus }
+					OR = {
+						has_trait = zealous
+						learning > 10
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = {
+			has_trait = incapable
+		}
+	}
+
+	cost = {
+		piety = {
+			value = 2500
+			if = {
+				limit = { rite = { rite_has_parameter = tenet_acts_of_apostles_laamp_missionary_bonus } }
+				subtract = 1500
+			}
+			if = {
+				limit = {
+					is_ai = yes
+				}
+				subtract = 750
+			}
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				NOT = {
+					has_trait = zealous
+				}
+			}
+			add_trait = zealous
+			add_stress = medium_stress_gain
+		}
+		hidden_effect = {
+			trigger_event = ep3_laamp_decision_event.1101
+			add_character_flag = zealous_missionary_prep
+		}
+		custom_tooltip = {
+			text = zealous_missionary_prep_decision_reward_desc
+		}
+		if = {
+			limit = {
+				any_owned_story = {
+					story_type = story_hasan
+				}
+			}
+			custom_tooltip = chance_to_advance_to_the_assassins_tt
+		}
+	}
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 32
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+
+	ai_potential = {
+		ai_zeal >= 50
+		government_has_flag = government_is_landless_adventurer
+	}
+
+	ai_will_do = {
+		base = 100
+		modifier = {
+			add = 100
+			rite = { rite_has_parameter = tenet_acts_of_apostles_laamp_missionary_bonus }
+		}
+	}
+}
+
+### The [ROOT.Char.GetFaith.GetAdherentNameNoTooltip] Path — Prelude ###
+zealous_missionary_start_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_personal_religious.dds"
+	}
+	sort_order = 400
+	decision_group_type = adventurer
+	desc = zealous_missionary_prep_decision_desc
+	selection_tooltip = zealous_missionary_prep_decision_tooltip
+
+	is_shown = {
+		has_ep3_dlc_trigger = yes
+		government_has_flag = government_is_landless_adventurer
+		has_character_flag = zealous_missionary_prep
+		NOR = {
+			has_character_flag = zealous_missionary_start
+			is_ai = yes
+			any_player = {
+				OR = {
+					this = root.location.county.holder
+					this = root.location.county.holder.top_liege
+				}
+			}
+			rite = { rite_has_tenet = tenet_me_closed_faith }
+		}
+	}
+
+	is_valid = {
+		location.county = { hasan_evangelize_province_trigger = yes }
+	}
+
+	is_valid_showing_failures_only = {
+		NOT = {
+			has_trait = incapable
+		}
+	}
+
+	effect = {
+		custom_tooltip = {
+			text = zealous_missionary_start_decision_reward_desc
+		}
+		show_as_tooltip = {
+			ep3_hasan_advance_radicalism = yes
+		}
+		hidden_effect = {
+			trigger_event = ep3_laamp_decision_event.1102
+		}
+	}
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 32
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+
+	ai_potential = {
+		ai_zeal >= 50
+		has_character_flag = zealous_missionary_prep
+		government_has_flag = government_is_landless_adventurer
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

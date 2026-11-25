@@ -34,8 +34,36 @@ nick_me_al_asam = {}
 nick_me_al_tajir = {}
 nick_me_abul_fawaris = { is_prefix = yes }
 nick_me_al_saqlabi = {}
+nick_me_al_awar = {}
+nick_me_al_muayyid = { is_prefix = yes }
+nick_me_al_ahmar = {}
+nick_me_al_mutanabbi = {}
+nick_me_al_hariri = {}
+nick_me_ibn_al_matran = {}
+nick_me_ibn_al_tilmidh = {}
+nick_me_al_dakhwar = {}
+nick_me_ibn_qalaqis = {}
+nick_me_ibn_nubatah = {}
+nick_me_al_battani = {}
+nick_me_ibn_jubayr = {}
+nick_me_ibn_al_shatir = {}
+nick_me_ibn_al_quff = {}
+nick_me_al_rammah = {}
+nick_me_ibn_al_haik = {}
+nick_me_al_haik = {}
+nick_me_al_rumiyyah = {}
+nick_as_salih = {is_prefix = yes}
+nick_me_ibn_umm_al_hakam = {}
+nick_me_qarmat = {}
+nick_me_al_saiq = {}
+nick_me_al_akbar_brother = {}
+nick_me_al_asghar_brother = {}
+nick_me_al_khayr = {}
+nick_me_bint_al_hadramiyyah = {}
+nick_me_al_afqam = {}
 
 ##Hashimids
+nick_me_ibn_abi_talib = {}
 nick_me_ibn_al_hanafiyyah = {}
 nick_me_al_muthanna = {}
 nick_al_kamil = {}
@@ -62,6 +90,10 @@ nick_me_bugha_al_akbar = {}
 nick_me_bugha_al_asghar = {}
 nick_me_taj_al_maali = {}
 nick_me_mutalim_al_ashbal = {}
+nick_me_an_nafs_az_zakiyyah = {}
+nick_me_al_ashtar = {}
+nick_me_al_dai_al_kabir = {}
+nick_me_al_dai_al_saghir = {}
 
 ##Idrisids
 nick_me_al_miqdam = {}
@@ -70,16 +102,36 @@ nick_me_kannun = {}
 nick_me_abul_aysh = {}
 nick_me_al_idrisi = {}
 
-##Andalusian Umayyads
+##Umayyads
+nick_me_al_himar = {}
 nick_ad_dakhil = {}
 nick_ar_ridha_umayyad = {}
 nick_ar_rabdhi = {}
+nick_me_al_hisni = {}
+nick_me_al_qitt = {}
+nick_me_ibn_al_qitt = {}
+nick_me_al_fahl = {}
+nick_me_ibn_al_ahmar = {}
+nick_me_ibn_al_salim = {}
+nick_me_al_balansi = {}
+nick_me_sahib_al_sawaif = {}
+nick_me_al_mudhakarah = {}
+nick_me_al_masnu ={}
+nick_me_al_ujayl = {}
+nick_me_al_lisan_al_dahiyah = {}
 
 ##Abbasids
 nick_me_as_saffah = {}
 nick_me_harun_ar_rashid = {}
 nick_me_al_mamuniyyah = {}
 nick_me_kab_al_baqar = {}
+
+##Rabi'ah Tribe
+nick_me_al_muhalhil = {}
+nick_me_al_saffah_taghlib = { is_prefix = yes }
+nick_me_al_akhtal = {}
+nick_me_al_qutami = {}
+nick_me_al_hawfazan = {}
 
 ##Kinda Tribe
 nick_al_ashath = {}
@@ -125,6 +177,8 @@ nick_sayidda_al_hurra = {is_prefix = yes}
 
 ##Qarmatians
 nick_isfahanist_mahdi = {}
+nick_me_sahib_al_naqah = {}
+nick_me_sahib_al_shamah = {}
 
 ##Rassids
 nick_me_al_rassi = {}
@@ -152,12 +206,13 @@ nick_al_jawwad = {}
 nick_al_hadi_imam = {}
 nick_al_askari = {}
 nick_me_al_mahdi_twelver = {}
+nick_me_sahib_az_zaman = {}
+nick_me_al_masuma = {}
 nick_al_mubarak_ismaili = {}
 nick_al_maktum_ismaili = {}
 nick_ahmad_al_wafi = {}
 nick_muhammad_al_taqi = {}
 nick_abdullah_al_radi = {}
-nick_me_al_khayr = {}
 nick_al_aftah = {}
 nick_al_mahdi_billah_fatimid = {}
 
@@ -227,9 +282,6 @@ nick_me_yaharhib = {}
 nick_me_nahfan = {}
 nick_me_yaman_yaharhib = {}
 nick_me_yahar_ish = {}
-
-#Zengids
-nick_as_salih = {is_prefix = yes}
 
 # Exclusively Historical Hindu Nicknames
 nick_adivaraha = {is_prefix = yes}

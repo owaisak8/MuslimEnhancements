@@ -9,7 +9,6 @@
   SCHEME_TUTOR_HAFIDH_3_MODIFIER:0 "Your tutor has memorized the entire Qur'an: $VALUE|+0=$"
   SCHEME_SPEAK_ARABIC_MODIFIER:0 "You speak the $language_arabic_name$ [language|E]: $VALUE|+0=$"
   SCHEME_SPEAK_ARABIC_TUTOR_MODIFIER:0 "Your tutor speaks the $language_arabic_name$ [language|E]: $VALUE|+0=$"
-  SCHEME_TRAIT_DILIGENT:1 "[GetTrait('diligent').GetName( owner.Self )]: $VALUE|+0=$"
   SCHEME_TRAIT_LAZY:1 "[GetTrait('lazy').GetName( owner.Self )]: $VALUE|+0=$"
   SCHEME_TRAIT_PATIENT:1 "[GetTrait('patient').GetName( owner.Self )]: $VALUE|+0=$"
   SCHEME_TRAIT_IMPATIENT:1 "[GetTrait('impatient').GetName( owner.Self )]: $VALUE|+0=$"

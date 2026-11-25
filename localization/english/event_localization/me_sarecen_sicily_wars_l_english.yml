@@ -70,6 +70,18 @@
  ss_wars.0102.desc:0 "Some time ago, the Moors in [GetTitleByKey('c_bari').GetNameNoTier] had conquered and occupied [GetTitleByKey('c_camarda').GetNameNoTier], which was once held by the rulers of [GetTitleByKey('c_salerno').GetNameNoTier].\n\nRecently however, [attacker.GetShortUINameNoTooltipNoFormat|U] managed to defeat and kick out these foreign invaders, and with their leader exiled and the majority of their soldiers killed or executed, [GetTitleByKey('c_camarda').GetNameNoTier] became leaderless, and so now I find myself in the possession of the city as it's population sees me as it's rightful ruler."
  ss_wars.0102.a:0 "Free land? why not."
  
+### Norman Victory
+ ss_wars.0103.t:0 "Sicily's Last Stand"
+ ss_wars.0103.desc.zirid:0 "With the forces of [defender.GetShortUIName|U] proving to be utterly victorious, we have been forced to cut our loses and abandon the island of Sicily.\n\nThough our forces have abandoned the island, local leaders have risen up to continue to push against the invading forces."
+ ss_wars.0103.desc.general:0 "With the forces of [defender.GetShortUIName|U] proving to be utterly victorious, [attacker.GetShortUIName|U] was forced to cut his loses and abandon the island of Sicily.\n\nThough the [attacker.GetShortUINameNoTooltipNoFormat|U]'s forces have abandoned the island, local leaders have risen up to continue to push against the invading forces."
+ ss_wars.0103.a:0 "Interesting..."
+ ss_wars.0103.b:0 "Who is this [palermo_leader.GetShortUINameNoTooltipNoFormat|U]?"
+ ss_wars.0103.b.nicknamed:0 "Who is this [palermo_leader.GetNicknameNoTooltip|V]?"
+ ss_wars.0103.c:0 "I wonder how [castrogiovanni_leader.GetShortUINameNoTooltipNoFormat|U] will fare..."
+ ss_wars.0103.c.nicknamed:0 "I wonder how [castrogiovanni_leader.GetNicknameNoTooltip|V] will fare..."
+ ss_wars.0103.d:0 "[syracuse_leader.GetShortUINameNoTooltipNoFormat|U]? How curious."
+ ss_wars.0103.d.nicknamed:0 "[syracuse_leader.GetNicknameNoTooltip|V]? How curious."
+ 
  #######################
 
 

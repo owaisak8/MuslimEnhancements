@@ -239,7 +239,7 @@ become_hafidh_ongoing.1020 = {
 		}
 		modifier = {
 			add = 15
-			has_trait = scholar
+			has_trait = erudite
 		}
 		modifier = {
 			add = 15

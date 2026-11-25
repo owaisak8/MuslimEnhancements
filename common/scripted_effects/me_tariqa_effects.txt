@@ -1,0 +1,209 @@
+﻿### Tariqas - game start setup ###
+
+# Scope: a duchy or kingdom title. Looks for a lodge in it: an unleased mosque, without a special building,
+# held by (or under) a Muslim ruler. Prefers the county given.
+me_find_tariqa_lodge_effect = {
+	random_in_de_jure_hierarchy = {
+		limit = {
+			tier = tier_barony
+			is_leased_out = no
+			exists = holder
+			title_province = {
+				has_holding_type = church_holding
+				has_special_district = no
+			}
+			OR = {
+				holder = {
+					religion = religion:islam_religion
+					highest_held_title_tier >= tier_county
+					any_held_title = { count >= 2 }
+				}
+				AND = {
+					holder = { highest_held_title_tier = tier_barony }
+					exists = holder.liege
+					holder.liege = {
+						religion = religion:islam_religion
+						highest_held_title_tier >= tier_county
+					}
+				}
+			}
+		}
+		weight = {
+			base = 1
+			modifier = {
+				add = 100
+				county = title:$COUNTY$
+			}
+		}
+		save_scope_as = me_tariqa_lodge
+	}
+}
+
+# Founds one historical Tariqa at game start.
+#	COUNTY	- county key the order is centred on; a lodge (temple holding) is sought there first, then in the rest of its duchy, then its kingdom
+#	LEADER	- history id of the Shaykh
+#	TITLE	- the order's title key
+#	ORDER	- flag name matched by the order's type in common/holy_orders/me_tariqas.txt
+#	NAME	- localization key the order is known by at this date
+me_found_tariqa_effect = {
+	if = {
+		limit = {
+			character:$LEADER$ ?= { is_alive = yes }
+			NOT = { exists = title:$TITLE$.holder }
+			exists = title:$COUNTY$.duchy
+		}
+		title:$COUNTY$.duchy = {
+			me_find_tariqa_lodge_effect = { COUNTY = $COUNTY$ }
+		}
+		# Nothing suitable in the duchy (or the scope still points at an earlier order's lodge, which is leased out by now): widen to the kingdom
+		if = {
+			limit = {
+				exists = title:$COUNTY$.kingdom
+				OR = {
+					NOT = { exists = scope:me_tariqa_lodge }
+					scope:me_tariqa_lodge = { is_leased_out = yes }
+					NOT = { scope:me_tariqa_lodge.kingdom ?= title:$COUNTY$.kingdom }
+				}
+			}
+			title:$COUNTY$.kingdom = {
+				me_find_tariqa_lodge_effect = { COUNTY = $COUNTY$ }
+			}
+		}
+		if = {
+			limit = {
+				exists = scope:me_tariqa_lodge
+				scope:me_tariqa_lodge = {
+					is_leased_out = no
+					kingdom ?= title:$COUNTY$.kingdom
+				}
+			}
+			scope:me_tariqa_lodge = {
+				# A mosque held by its own baron is taken up by his liege first, as vanilla does for its abbeys
+				if = {
+					limit = { holder = { highest_held_title_tier = tier_barony } }
+					holder.liege = { get_title = prev }
+				}
+				holder = {
+					save_scope_as = me_tariqa_patron
+					set_variable = {
+						name = monastic_game_start_founder
+						days = 10
+					}
+					set_variable = {
+						name = me_tariqa_to_found
+						value = flag:$ORDER$
+						days = 10
+					}
+				}
+			}
+			character:$LEADER$ = { save_scope_as = me_tariqa_leader }
+			scope:me_tariqa_patron = {
+				create_holy_order_neutral_effect = {
+					LEADER = scope:me_tariqa_leader
+					CAPITAL = scope:me_tariqa_lodge
+					NEW_HO_SCOPE = me_new_tariqa
+					FOUNDER = scope:me_tariqa_patron
+					ORDER_TYPE = monastic
+				}
+				remove_variable = me_tariqa_to_found
+			}
+			if = {
+				limit = { exists = title:$TITLE$.holder }
+				title:$TITLE$ = { set_title_name = $NAME$ }
+			}
+			# A master of the path: on death the founder of an order is remembered as a Wali if he is of sufficient devotion
+			scope:me_tariqa_leader = {
+				if = {
+					limit = { piety_level < 3 }
+					add_piety_level = 3
+				}
+			}
+		}
+	}
+}
+
+# The Tariqas present at each start date
+me_set_up_tariqas_effect = {
+	# 867: the early schools
+	if = {
+		limit = { current_year < 900 }
+		me_found_tariqa_effect = { COUNTY = c_baghdad LEADER = me_sufi_junayd TITLE = d_me_junaydiyya ORDER = junaydiyya NAME = d_me_junaydiyya }
+		me_found_tariqa_effect = { COUNTY = c_damghan LEADER = me_sufi_bayazid TITLE = d_me_tayfuriyya ORDER = tayfuriyya NAME = d_me_tayfuriyya }
+		me_found_tariqa_effect = { COUNTY = c_tustar LEADER = me_sufi_sahl TITLE = d_me_sahliyya ORDER = sahliyya NAME = d_me_sahliyya }
+	}
+	# 1066: the Khorasani masters, heirs of the two early schools
+	else_if = {
+		limit = { current_year < 1100 }
+		me_found_tariqa_effect = { COUNTY = c_nishapur LEADER = me_sufi_qushayri TITLE = d_me_junaydiyya ORDER = junaydiyya NAME = me_tariqa_name_nishapur }
+		me_found_tariqa_effect = { COUNTY = c_herat LEADER = me_sufi_ansari TITLE = d_me_tayfuriyya ORDER = tayfuriyya NAME = me_tariqa_name_herat }
+	}
+	# 1178: the first great orders
+	else = {
+		me_found_tariqa_effect = { COUNTY = c_baghdad LEADER = me_sufi_abd_al_razzaq TITLE = d_me_qadiriyya ORDER = qadiriyya NAME = d_me_qadiriyya }
+		me_found_tariqa_effect = { COUNTY = c_wasit LEADER = me_sufi_rifai TITLE = d_me_rifaiyya ORDER = rifaiyya NAME = d_me_rifaiyya }
+		me_found_tariqa_effect = { COUNTY = c_baghdad LEADER = me_sufi_suhrawardi TITLE = d_me_suhrawardiyya ORDER = suhrawardiyya NAME = d_me_suhrawardiyya }
+		me_found_tariqa_effect = { COUNTY = c_herat LEADER = me_sufi_zindani TITLE = d_me_chishtiyya ORDER = chishtiyya NAME = d_me_chishtiyya }
+		me_found_tariqa_effect = { COUNTY = c_bejaia LEADER = me_sufi_abu_madyan TITLE = d_me_madyaniyya ORDER = madyaniyya NAME = d_me_madyaniyya }
+	}
+}
+
+### Awliya ###
+
+# Character scope (the Wali, alive or dead). Registers him or her among the saints of another faith that reveres them.
+# Only works for someone already registered with a tomb (add_saint without burial_province errors otherwise), and the
+# engine allows one saint per burial province, so a figure whose tomb province is taken first is never registered.
+me_wali_revered_by_effect = {
+	faith:$FAITH$ ?= {
+		if = {
+			limit = {
+				exists = root.saint_burial_location
+				main_rite = { is_rite_enabled = yes }
+				NOT = { has_saint_character = root }
+			}
+			add_saint = { character = root }
+		}
+	}
+}
+
+# Scope: a dead Wali from history. Gives them their tomb (PROVINCE) and registers them with FAITH, the first faith that
+# reveres them; the other faiths follow with me_wali_revered_by_effect. Used instead of vanilla's pam_canonize_saint_effect,
+# which registers the saint with the canonizer's own faith (Sadr al-Islam keeps no awliya of its own).
+# PROVINCE needs a holding, and a province holds one saint: a second saint given the same province is silently refused.
+me_canonize_early_muslim_effect = {
+	if = {
+		limit = { NOT = { has_trait = saint } }
+		add_trait = saint
+	}
+	faith:$FAITH$ ?= {
+		if = {
+			limit = {
+				main_rite = { is_rite_enabled = yes }
+				NOT = { has_saint_character = root }
+			}
+			add_saint = {
+				character = root
+				burial_province = $PROVINCE$
+			}
+		}
+	}
+	# the tomb as a place to visit, as vanilla sets it up for history burials
+	$PROVINCE$ = {
+		if = {
+			limit = { NOT = { has_variable = hide_location_for_saint } }
+			set_variable = pam_preset_buried_saint
+		}
+		if = {
+			limit = {
+				NOR = {
+					has_variable = hide_location_for_saint
+					has_travel_point_of_interest = poi_buried_saint
+				}
+			}
+			add_to_global_variable_list = {
+				name = pam_buried_saint_poi_list
+				target = $PROVINCE$
+			}
+			add_travel_point_of_interest = poi_buried_saint
+		}
+	}
+}

@@ -400,3 +400,77 @@ khache = { # Tibetian Muslims, name came from the Kashmiri Muslims who settled i
 	}
 	hybrid = yes
 }
+
+hui_hybrid = { # Sinicized Muslims - All cultures (with the exception of Mongolic) contributed in some way to the ancestry of Modern Hui
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = heritage_iranian }
+					scope:culture = { has_cultural_pillar = heritage_turkic }
+					scope:culture = { has_cultural_pillar = heritage_malayic }
+					scope:culture = { has_cultural_pillar = heritage_chamic }
+					scope:culture = { has_cultural_pillar = heritage_austronesian }
+					scope:culture = { has_cultural_pillar = heritage_mongolic }
+				}
+				scope:other_culture = { has_cultural_pillar = heritage_chinese }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_chinese }
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = heritage_iranian }
+					scope:culture = { has_cultural_pillar = heritage_turkic }
+					scope:culture = { has_cultural_pillar = heritage_malayic }
+					scope:culture = { has_cultural_pillar = heritage_chamic }
+					scope:culture = { has_cultural_pillar = heritage_austronesian }
+					scope:culture = { has_cultural_pillar = heritage_mongolic }
+				}
+			}
+		}
+		faith = { religion_tag = islam_religion }
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}
+
+boszormeny_hybrid = { # Böszörmény - Hungarian name for Muslims living in Medieval Hungary
+	trigger = {
+		OR = {
+			AND = {
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = heritage_iranian }
+					scope:culture = { has_cultural_pillar = heritage_turkic }
+					scope:culture = { has_cultural_pillar = heritage_berber }
+					scope:culture = { has_cultural_pillar = heritage_iberian }
+				}
+				scope:other_culture = { has_cultural_pillar = heritage_magyar }
+			}
+			AND = {
+				scope:culture = { has_cultural_pillar = heritage_magyar }
+				OR = {
+					scope:culture = { has_cultural_pillar = heritage_arabic }
+					scope:culture = { has_cultural_pillar = heritage_iranian }
+					scope:culture = { has_cultural_pillar = heritage_turkic }
+					scope:culture = { has_cultural_pillar = heritage_berber }
+					scope:culture = { has_cultural_pillar = heritage_iberian }
+				}
+			}
+		}
+		faith = { religion_tag = islam_religion }
+		any_sub_realm_county = {
+			OR = {
+				culture = scope:culture
+				culture = scope:other_culture
+			}
+		}
+	}
+	hybrid = yes
+}

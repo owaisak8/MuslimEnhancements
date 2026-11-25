@@ -1,0 +1,45 @@
+﻿l_english:
+
+ # Descriptions of the Muslim faiths, and the Ghulat Rites (2026-10). Overrides vanilla where the keys are shared.
+
+ ## Faiths
+ sadr_al_islam_desc:0 "Sadr al-Islam, the dawn of Islam, is the faith of the first Muslims: the Prophet Muhammad, his Companions, and the generation who learned from them. Before the great divisions over leadership and law, the community followed the Qur'an and the living example of the Prophet as one."
+ sunni_desc:0 "Sunnis, the people of the sunnah and the community, follow the example of the Prophet Muhammad as preserved by his Companions and the consensus of the believers. They honour the first four Caliphs as the Rightly Guided, and seek the law through the Qur'an, the hadith and the reasoning of the great schools of jurisprudence."
+ masmudi_desc:0 "The Almohads, al-Muwahhidun or 'those who affirm the unity of God', follow the teachings of Ibn Tumart of the Masmuda Berbers, whom they acknowledge as the infallible Mahdi. They call the faithful back to the Qur'an and the sunnah alone, and reject the imitation of the established schools as a veil drawn over God's absolute oneness."
+ shia_desc:0 "The Isma'ilis hold that the Imamate passed from Ja'far as-Sadiq to his son Isma'il and through him to a living line of Imams, who alone know the inner meaning of revelation. Every outward law, they teach, holds an inward truth, made known through the Imam of the age and the missionaries of his call."
+ ithna_ashari_desc:0 "The Ithna 'Ashariyya, the Twelvers, follow a line of twelve Imams descended from Ali and Fatima as the rightful heirs of the Prophet, and take their law from the teachings of the sixth Imam, Ja'far as-Sadiq. They await the return of the twelfth, Muhammad al-Mahdi, hidden by God from the world, who will one day fill the earth with justice."
+ zayidi_desc:0 "Zaydis follow Zayd ibn Ali, grandson of Imam Husayn, who rose against the Umayyads at Kufa in 740 and fell in battle. To them the Imam is any learned and upright descendant of Ali and Fatima who openly takes up the struggle against tyranny, and the faithful owe their loyalty to whoever answers that call."
+ qarmatian_desc:0 "The Qarmatians hold that Muhammad ibn Isma'il, the seventh Imam, did not die but went into hiding, and will return as the Mahdi to open a new age and reveal the inner truth of the law. Awaiting him, they built a community of their own on the shores of al-Ahsa, governed by a council and sharing in its wealth."
+ druze_desc:0 "The Druze, who call themselves al-Muwahhidun, 'the affirmers of unity', follow the call proclaimed in Cairo in 1017 by Hamza ibn Ali in the time of the Fatimid Caliph al-Hakim. The call has since been closed to newcomers, and its deepest teachings are kept by the initiated, the 'uqqal, alone."
+ ibadi_desc:0 "The Ibadis descend from the early Muhakkima but, unlike other Kharijites, refuse to declare their fellow Muslims unbelievers or to take up arms against them. They choose their Imam by consultation for his piety and learning alone, and when no worthy Imam can be found the community may live without one."
+ kharijite_desc:0 "The Kharijites, 'those who went out', left the camp of Ali when he accepted arbitration at Siffin, declaring that judgement belongs to God alone. They hold that any pious Muslim may lead the community whatever his lineage, and the strictest among them count a grave sinner as no longer a believer."
+ quranist_desc:0 "Quranists hold the Qur'an to be the complete and sufficient word of God, and set aside the hadith and the rulings of the jurists as the work of men. Each believer, they say, may read the Book for themselves, with no scholar standing between them and God."
+ ghulat:0 "Ghulat"
+ ghulat_adj:0 "Ghulat"
+ ghulat_adherent:0 "Ghali"
+ ghulat_adherent_plural:0 "Ghulat"
+ ghulat_desc:0 "Ghulat, 'those who exaggerate', is the name given by their opponents to the Shi'a who hold Ali and the Imams to be more than men: vessels in which the light of God dwells. Their teachings, passed down in secret to the initiated, speak of the hidden meaning behind every outward law, and of souls that pass from one life into the next."
+ alevi_desc:0 "Alevis hold to the Twelve Imams and to Ali above all, whom they honour in poetry, song and the cem, a gathering of men and women together led by a dede of holy lineage. For them the true prayer and the true pilgrimage lie within the heart, and the path to God passes through the guidance of a spiritual master."
+ barghawata_desc:0 "Barghawata is the faith of the Berbers of Tamasna, founded by Salih ibn Tarif, who declared himself a prophet and gave his people a Qur'an of eighty chapters in their own tongue. Its followers call upon God as Yakush, keep prayers and fasts of their own, and await Salih's return as the Mahdi at the end of days."
+ hamimist_desc:0 "Ha-Mimism was preached among the Ghumara Berbers of the Rif by Ha-Mim ibn Mann-Allah, who proclaimed himself a prophet in the early tenth century and gave his followers a Qur'an in their own language. He reduced the daily prayers to two and changed the fasts, and his followers honoured his aunt Tangit as a holy woman."
+ kaduist_desc:0 "Kaduism arose among the Kutama Berbers around a youth named Kadu ibn Mu'arik al-Mawati, whom his followers proclaimed their prophet and Mahdi. It joined the Shi'i teachings that had spread among the Kutama with older Berber custom, and its practices scandalised its Muslim neighbours."
+
+ ## Rites
+ alawite:0 "Nusayrism"
+ alawite_adj:0 "Nusayri"
+ alawite_adherent:0 "Nusayri"
+ alawite_adherent_plural:0 "Nusayris"
+ alawite_desc:0 "Nusayris, also known as Alawis, follow the teachings of Muhammad ibn Nusayr, a companion of the eleventh Imam, al-Hasan al-Askari. They hold Ali to be the Meaning behind all things, with Muhammad as its Name and Salman al-Farisi as its Gate, and believe that souls return in life after life until they regain their place among the stars."
+ ishaqiya_desc:0 "The Ishaqiyya follow Ishaq ibn Muhammad al-Ahmar of Kufa, who taught that God made Himself known in the person of Ali and in each of the Imams after him. Close cousins and old rivals of the Nusayris, they dispute with them over who was the true Gate to the eleventh Imam."
+ ikhtilafism:0 "Ikhtilafism"
+ ikhtilafism_adj:0 "Ikhtilafi"
+ ikhtilafism_adherent:0 "Ikhtilafi"
+ ikhtilafism_adherent_plural:0 "Ikhtilafis"
+ ikhtilafism_desc:0 "Ikhtilafis believe in the divine nature of the infallible Imams, starting with Ali. God has not only appointed and inspired them, but partially inhabits them to guide their acts, and by extension all of the Ummah."
+
+ ## Head of Faith doctrine
+ doctrine_imamate_head_name:0 "Imamate"
+ doctrine_imamate_head_desc:0 "The Head of the Faith is the Imam of the Age, a descendant of Ali and Fatima designated by the Imam before him. He holds no land and bears no sword, yet he alone is the rightful guide of the community, and the faithful turn to him for its law."
+ doctrine_ghaib_head_name:0 "Ghaib"
+ doctrine_ghaib_head_descriptive_name:0 "The Hidden Imam"
+ doctrine_ghaib_head_desc:0 "The Head of the Faith is the Twelfth Imam, Muhammad al-Mahdi, alive but hidden from the world by the will of God. No ruler and no scholar may hold the Imamate in his place: it remains his alone until he returns to fill the earth with justice, and until then the learned guide the faithful only as his deputies."

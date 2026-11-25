@@ -1,0 +1,93 @@
+﻿## Override ##
+# Vanilla 1.20 definition (40_doctrines_special.txt) plus the ME additions.
+special_doctrine_is_islamic_faith = {
+	doctrine_group_type = is_islamic_faith
+	icon = "special_doctrine_teachings_of_the_prophet"
+
+	parameters = {
+		islamic_syncretic_recipient
+		## ME Addition ##
+		islamic_trait_effects_active
+		amber_prayer_beads
+	}
+
+	special_parameters = {
+		# Since doctrines cannot modify other faith's views of us, only our view of others, all Islamic faiths are given this special doctrine which makes them friendlier to Faiths with the Islamic Syncretism tenet.
+		hostility_level_override = {
+			tenet_islamic_syncretism = astray
+			## ME Addition ##
+			tenet_puritanical_islam = hostile
+			special_doctrine_is_alb_faith = righteous
+		}
+
+		parameter_opinion_override = {
+			islamic_syncretic_actor = 30
+		}
+	}
+
+	character_modifier = {
+		trade_good_spices_buy_price_mult = -0.0075
+	}
+}
+
+# ME: vanilla 1.21 doctrine, unchanged except for an Islamic name and description (used by the Hanafi rite).
+doctrine_alcohol_highborn_only = {
+	#All buildings ban alcohol except upper class ones
+	doctrine_group_type = alcohol_restrictions
+	index = 1
+	divergence = 10
+
+	icon = "special_doctrine_default"
+	name = { # ME: Islamic reading of this step
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion_tag = islam_religion }
+				desc = doctrine_alcohol_highborn_only_islamic_name
+			}
+			desc = doctrine_alcohol_highborn_only_name
+		}
+	}
+	# ME: the doctrine tooltip shows descriptive_name, which does not follow the scripted name
+	descriptive_name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion_tag = islam_religion }
+				desc = doctrine_alcohol_highborn_only_islamic_name
+			}
+			desc = doctrine_alcohol_highborn_only_name
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { religion_tag = islam_religion }
+				desc = doctrine_alcohol_highborn_only_islamic_desc
+			}
+			desc = doctrine_alcohol_highborn_only_desc
+		}
+	}
+
+	piety_cost = {
+		value = faith_doctrine_cost_high
+		if = {
+			limit = { rite_has_doctrine = doctrine_alcohol_highborn_only }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	parameters = {
+		alcohol_forbidden
+		alcohol_buildings_forbidden
+	}
+
+	traits = {
+		sins = {
+			drunkard = { weight = 20 scale = 2 }
+		}
+	}
+
+	character_modifier = {
+		health = 0.05
+		control_baseline_add = 2.5
+	}
+}

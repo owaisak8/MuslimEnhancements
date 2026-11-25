@@ -52,11 +52,13 @@
   #Alexios and Bailleul lock horns
   seljuk_invasion_events.0005.title:0 "Traitor"
   seljuk_invasion_events.0005.desc:0 ""
+  seljuk_invasion_events.0005.a:0 ""
   seljuk_invasion_events.0005.b:0 "I will strike that traitor down myself!"
 
   #New Bulgarian King
   seljuk_invasion_events.0006.title:0 "Final Stand"
   seljuk_invasion_events.0006.desc:0 ""
+  seljuk_invasion_events.0006.a:0 ""
   seljuk_invasion_events.0006.b:0 "I am content with my lot."
   
   #Sulayman and Danishmend intro event

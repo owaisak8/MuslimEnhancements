@@ -2,7 +2,7 @@
 ### Minor Andalusian Characters ###
 me_andalusian_001 = { 
 	name = "Abdullah" # Ibn Ya'qub, a Faris employed by Emir al-Mu'tadid of Sevilla
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3
 
@@ -32,7 +32,7 @@ me_andalusian_001 = {
 
 me_andalusian_002 = { 
 	name = "Ya_qub"
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	1000.1.1 = {
@@ -46,7 +46,7 @@ me_andalusian_002 = {
 me_andalusian_003 = {
 	name = "al-Izz" # al-Izz ibn Ishaq, son of the third Naib of Carmona, his death caused his father to abdicate
 	dynasty = al-birzali # Banu al-Birzali Dynasty
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = zenata
 
@@ -65,7 +65,7 @@ me_andalusian_003 = {
 
 me_andalusian_004 = {
 	name = "as-Sammar" # as-Sammār, a eunuch that Umm al-Kirām made love poetry for
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = eunuch_1
 	trait = beauty_good_2
@@ -84,7 +84,7 @@ me_andalusian_004 = {
 me_andalusian_005 = {
 	name = "Muhammad" # Abdallah ibn al-Gazi ibn Qays, son of a famous Andalusian Maliki faqih who is said to have also learned fiqh
 	dynasty = 12296 # Banu Qays Dynasty
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_3
 	trait = zealous
@@ -101,7 +101,7 @@ me_andalusian_005 = {
 me_andalusian_006 = {
 	name = "Qays" # Father of famous Andalusian faqih al-Gazi ibn Qays
 	dynasty = 12296 # Banu Qays Dynasty
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	720.1.1 = {
@@ -115,7 +115,7 @@ me_andalusian_006 = {
 me_andalusian_007 = {
 	name = "Muhammad" # Muhammad ibn Sidray ibn Wazir al-Qaysi, Almohad Commander
 	dynasty = 12197
-	religion = masmudi
+	rite = masmudi
 	culture = andalusian
 
 	father = 73203
@@ -130,7 +130,7 @@ me_andalusian_007 = {
 me_andalusian_008 = {
 	name = "Abdullah" # Abdullah ibn Muhammad ibn Sidray ibn Wazir al-Qaysi, Almohad Commander
 	dynasty = 12197
-	religion = masmudi
+	rite = masmudi
 	culture = andalusian
 
 	father = me_andalusian_007
@@ -145,7 +145,7 @@ me_andalusian_008 = {
 me_andalusian_009 = {
 	name = "Khashkhash" # Khashkhash ibn Sa'id ibn Aswad, a man who according to al-Mas'udi claimed to have crossed the atlantic during 889 and came back with with treasures from an undiscoverd land
 	dynasty = me_khashkhash_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_andalusian_010
@@ -164,7 +164,7 @@ me_andalusian_009 = {
 me_andalusian_010 = {
 	name = "Sa_id" 
 	dynasty = me_khashkhash_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_andalusian_011
@@ -179,7 +179,7 @@ me_andalusian_010 = {
 me_andalusian_011 = {
 	name = "Aswad" 
 	dynasty = me_khashkhash_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	805.1.1 = {
@@ -193,7 +193,7 @@ me_andalusian_011 = {
 me_andalusian_012 = {
 	name = "Subay_ah" # Subay'ah, mother of Muhammad ibn al-Qasim Hammudid of al-Jazira al-Khadra', stopped Naja' as-Saqlabi's invasion by chastizing him
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_diplomacy_3
 
@@ -205,11 +205,156 @@ me_andalusian_012 = {
 	}
 }
 
+me_andalusian_013 = {
+	name = "Ahmad" # Ahmad ibn Hasan, Ibn Jubayr's friend
+	rite = maliki
+	culture = andalusian
+	
+	father = me_andalusian_014
+	1144.1.1 = {
+		birth = yes
+	}
+	1175.1.1 = {
+		set_relation_friend = { reason = friend_generic_history target = character:me_kinanah_006 }
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_014 = {
+	name = "Hasan"
+	rite = maliki
+	culture = andalusian
+	
+	1110.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+## Andalusian characters related to spawnable historical characters
+me_andalusian_hchar_001 = {
+	name = "Muhammad" # Lisan ud-Din Muhammad 'Ibn al-Khatib', Nasrid poet, historian, and vizeir who composed the poem known as 'Jadak al-Ghaith'
+	dynasty = me_ibn_al_khatib_dynasty
+	give_nickname = nick_lisan_ud_din
+	rite = maliki
+	culture = andalusian
+	trait = education_learning_4
+	trait = erudite
+	trait = lifestyle_poet
+	trait = lifestyle_physician
+	trait = lifestyle_mystic
+	
+	father = me_andalusian_hchar_002
+	1313.11.16 = {
+		birth = yes
+	}
+	1374.1.1 = {
+		death = {
+			death_reason = death_assassination
+		}
+	}
+}
+
+me_andalusian_hchar_002 = {
+	name = "Abdullah"
+	dynasty = me_ibn_al_khatib_dynasty
+	rite = maliki
+	culture = andalusian
+	
+	father = me_andalusian_hchar_003
+	1280.1.1 = {
+		birth = yes
+	}
+	1341.1.1 = {
+		death = {
+			death_reason = death_battle
+		}
+	}
+}
+
+me_andalusian_hchar_003 = {
+	name = "Sa_id"
+	dynasty = me_ibn_al_khatib_dynasty
+	rite = maliki
+	culture = andalusian
+	
+	father = me_andalusian_hchar_004
+	1250.1.1 = {
+		birth = yes
+	}
+	1310.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_hchar_004 = {
+	name = "Abdullah"
+	dynasty = me_ibn_al_khatib_dynasty
+	rite = maliki
+	culture = andalusian
+	
+	father = me_andalusian_hchar_005
+	1220.1.1 = {
+		birth = yes
+	}
+	1280.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_hchar_005 = {
+	name = "Sa_id"
+	dynasty = me_ibn_al_khatib_dynasty
+	rite = maliki
+	culture = andalusian
+	
+	father = me_andalusian_hchar_006
+	1190.1.1 = {
+		birth = yes
+	}
+	1250.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_hchar_006 = {
+	name = "Ali"
+	dynasty = me_ibn_al_khatib_dynasty
+	rite = maliki
+	culture = andalusian
+	
+	father = me_andalusian_hchar_007
+	1160.1.1 = {
+		birth = yes
+	}
+	1220.1.1 = {
+		death = yes
+	}
+}
+
+me_andalusian_hchar_007 = {
+	name = "Ahmad"
+	dynasty = me_ibn_al_khatib_dynasty
+	rite = maliki
+	culture = andalusian
+	
+	1130.1.1 = {
+		birth = yes
+	}
+	1175.1.1 = {
+		death = yes
+	}
+}
+
 ### Banu Mardanish
 me_mardanish_001 = {
 	name = "Mardanish"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1010.1.1 = {
 		birth = yes
@@ -222,7 +367,7 @@ me_mardanish_001 = {
 me_mardanish_002 = {
 	name = "Ahmad"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_mardanish_001
@@ -237,7 +382,7 @@ me_mardanish_002 = {
 me_mardanish_003 = {
 	name = "Muhammad"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_mardanish_002
@@ -252,7 +397,7 @@ me_mardanish_003 = {
 me_mardanish_004 = {
 	name = "Abdullah"
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_mardanish_003
@@ -269,7 +414,7 @@ me_mardanish_004 = {
 me_mardanish_005 = {
 	name = "Ghanim" # Ghanim ibn Muhammad, Granted command of all Andalusian troops due to family ties with the ruling dynasty 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3 # Military leader
 
@@ -278,7 +423,7 @@ me_mardanish_005 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1215.1.1 = {
 		death = yes
@@ -289,7 +434,7 @@ me_mardanish_006 = {
 	name = "Aminah" # Wife of Almohad Caliph Yusuf ibn Abd al-Mu'min, real name unknown
 	female = yes
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -297,7 +442,7 @@ me_mardanish_006 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 		add_spouse = 224000 # Yusuf ibn Abd al-Mu'min, Almohad Caliph
 	}
 	1217.1.1 = {
@@ -309,7 +454,7 @@ me_mardanish_007 = {
 	name = "Ghanim" # Ghanim ibn Sa'd ibn Mardanish, Almohad commander who was captured during 1179
 	dynasty = 12211
 
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	trait = education_martial_3 # Military leader
 	trait = brave
@@ -321,7 +466,7 @@ me_mardanish_007 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1188.1.1 = {
 		death = yes
@@ -332,7 +477,7 @@ me_mardanish_008 = {
 	name = "Abd_al-Ula" # Abd al-'Ula ibn Sa'd ibn Mardanish, Almohad commander who was captured during 1179
 	dynasty = 12211
 
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73240
@@ -342,7 +487,7 @@ me_mardanish_008 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1190.1.1 = {
 		death = yes
@@ -353,7 +498,7 @@ me_mardanish_009 = {
 	name = "Safiya" # Wife of the Almohad Caliph Ya'qub ibn Yusuf
 	female = yes
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -361,7 +506,7 @@ me_mardanish_009 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 		add_spouse = 32980 # Ya'qub ibn Yusuf, Almohad Caliph
 	}
 	1217.1.1 = {
@@ -372,7 +517,7 @@ me_mardanish_009 = {
 me_mardanish_010 = {
 	name = "az-Zubayr" 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -380,7 +525,7 @@ me_mardanish_010 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1220.1.1 = {
 		death = yes
@@ -390,7 +535,7 @@ me_mardanish_010 = {
 me_mardanish_011 = {
 	name = "Aziz" 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -398,7 +543,7 @@ me_mardanish_011 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1220.1.1 = {
 		death = yes
@@ -408,7 +553,7 @@ me_mardanish_011 = {
 me_mardanish_012 = {
 	name = "Nusayr" 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -416,7 +561,7 @@ me_mardanish_012 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1220.1.1 = {
 		death = yes
@@ -426,7 +571,7 @@ me_mardanish_012 = {
 me_mardanish_013 = {
 	name = "Badr" 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -434,7 +579,7 @@ me_mardanish_013 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1225.1.1 = {
 		death = yes
@@ -444,7 +589,7 @@ me_mardanish_013 = {
 me_mardanish_014 = {
 	name = "Arqam" 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -452,7 +597,7 @@ me_mardanish_014 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1225.1.1 = {
 		death = yes
@@ -462,7 +607,7 @@ me_mardanish_014 = {
 me_mardanish_015 = {
 	name = "_Askar" 
 	dynasty = 12211
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = 73241
@@ -470,7 +615,7 @@ me_mardanish_015 = {
 		birth = yes
 	}
 	1172.3.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1225.1.1 = {
 		death = yes
@@ -481,7 +626,7 @@ me_mardanish_015 = {
 me_hamushk_001 = {
 	name = "Ibrahim"
 	dynasty = me_hamushk_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_hamushk_003
@@ -489,7 +634,7 @@ me_hamushk_001 = {
 		birth = yes
 	}
 	1169.1.1 = {
-		religion = masmudi
+		rite = masmudi
 	}
 	1175.1.1 = {
 		death = yes
@@ -500,7 +645,7 @@ me_hamushk_002 = {
 	name = "Fatimah" # Ex-wife of Ibn Mardanish, name unknown
 	female = yes
 	dynasty = me_hamushk_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_hamushk_001
@@ -511,7 +656,7 @@ me_hamushk_002 = {
 		add_spouse = 73241
 	}
 	1169.1.1 = {
-		religion = masmudi
+		rite = masmudi
 		remove_spouse = 73241
 	}
 	1190.1.1 = {
@@ -522,7 +667,7 @@ me_hamushk_002 = {
 me_hamushk_003 = {
 	name = "Muhammad"
 	dynasty = me_hamushk_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_hamushk_004
@@ -537,7 +682,7 @@ me_hamushk_003 = {
 me_hamushk_004 = {
 	name = "Mufarraj"
 	dynasty = me_hamushk_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_hamushk_005
@@ -552,7 +697,7 @@ me_hamushk_004 = {
 me_hamushk_005 = {
 	name = "Hamushk"
 	dynasty = me_hamushk_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 	1015.1.1 = {
 		birth = yes
@@ -567,7 +712,7 @@ me_sahib_salat_001 = {
 	name = "Abd-al-Malik" # Abd al-Malik 'Ibn Sahib al-Salat' al-Baji, Andalusian historian loyal to the Almohads
 	dynasty = me_sahib_salat_dynasty
 	give_nickname = nick_me_ibn_sahib_al_salat # Ibn Sahib al-Salat
-	religion = masmudi
+	rite = masmudi
 	culture = andalusian
 	trait = education_learning_3 # Historian and theologian
 	trait = theologian
@@ -599,7 +744,7 @@ me_sahib_salat_001 = {
 me_sahib_salat_002 = {
 	name = "Marwan"
 	dynasty = me_sahib_salat_dynasty
-	religion = masmudi
+	rite = masmudi
 	culture = andalusian
 
 	father = me_sahib_salat_001
@@ -617,7 +762,7 @@ me_sahib_salat_002 = {
 me_sahib_salat_003 = {
 	name = "Muhammad"
 	dynasty = me_sahib_salat_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_sahib_salat_004
@@ -632,7 +777,7 @@ me_sahib_salat_003 = {
 me_sahib_salat_004 = {
 	name = "Ahmad"
 	dynasty = me_sahib_salat_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_sahib_salat_005
@@ -647,7 +792,7 @@ me_sahib_salat_004 = {
 me_sahib_salat_005 = {
 	name = "Muhammad"
 	dynasty = me_sahib_salat_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_sahib_salat_006
@@ -662,7 +807,7 @@ me_sahib_salat_005 = {
 me_sahib_salat_006 = {
 	name = "Ibrahim"
 	dynasty = me_sahib_salat_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	1010.1.1 = {
@@ -676,7 +821,7 @@ me_sahib_salat_006 = {
 me_sahib_salat_007 = {
 	name = "Abu_Ja_far"
 	dynasty = me_sahib_salat_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_sahib_salat_008
@@ -693,7 +838,7 @@ me_sahib_salat_007 = {
 me_sahib_salat_008 = {
 	name = "Isma_il"
 	dynasty = me_sahib_salat_dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian
 
 	father = me_sahib_salat_004
@@ -709,7 +854,7 @@ me_sahib_salat_008 = {
 me_ibn_rushd_001 = {
 	name = "Ahmad"
 	dynasty = me_ibn_rushd_dynasty
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_3
 	trait = zealous
@@ -726,7 +871,7 @@ me_ibn_rushd_001 = {
 me_ibn_rushd_002 = {
 	name = "al-Walid"
 	dynasty = me_ibn_rushd_dynasty
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	father = averroes_1
@@ -745,7 +890,7 @@ me_ibn_rushd_003 = {
 	name = "Muhammad"
 	dynasty = me_ibn_rushd_dynasty
 	give_nickname = nick_me_ibn_rushd
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 	trait = education_learning_3
 	trait = zealous
@@ -762,7 +907,7 @@ me_ibn_rushd_003 = {
 me_ibn_rushd_004 = {
 	name = "Ahmad"
 	dynasty = me_ibn_rushd_dynasty
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	father = me_ibn_rushd_005
@@ -777,7 +922,7 @@ me_ibn_rushd_004 = {
 me_ibn_rushd_005 = {
 	name = "Rushd"
 	dynasty = me_ibn_rushd_dynasty
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	1010.1.1 = {
@@ -792,11 +937,11 @@ me_ibn_rushd_005 = {
 me_ibn_tufayl_001 = {
 	name = "Abd-al-Malik"
 	dynasty = me_ibn_tufayl_dynasty # Banu Qays
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	father = me_ibn_tufayl_003
-	1070.1.1 = {
+	1060.1.1 = {
 		birth = yes
 	}
 	1130.1.1 = {
@@ -807,7 +952,7 @@ me_ibn_tufayl_001 = {
 me_ibn_tufayl_002 = {
 	name = "Bakr"
 	dynasty = me_ibn_tufayl_dynasty # Banu Qays
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	father = ibn_tufayl_1
@@ -825,14 +970,14 @@ me_ibn_tufayl_002 = {
 me_ibn_tufayl_003 = {
 	name = "Muhammad"
 	dynasty = me_ibn_tufayl_dynasty # Banu Qays
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	father = me_ibn_tufayl_004
-	1040.1.1 = {
+	1030.1.1 = {
 		birth = yes
 	}
-	1100.1.1 = {
+	1090.1.1 = {
 		death = yes
 	}
 }
@@ -840,14 +985,14 @@ me_ibn_tufayl_003 = {
 me_ibn_tufayl_004 = {
 	name = "Muhammad"
 	dynasty = me_ibn_tufayl_dynasty # Banu Qays
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	father = me_ibn_tufayl_005
-	1010.1.1 = {
+	1000.1.1 = {
 		birth = yes
 	}
-	1070.1.1 = {
+	1060.1.1 = {
 		death = yes
 	}
 }
@@ -855,7 +1000,7 @@ me_ibn_tufayl_004 = {
 me_ibn_tufayl_005 = {
 	name = "Tufayl"
 	dynasty = me_ibn_tufayl_dynasty # Banu Qays
-	religion = ashari
+	rite = maliki
 	culture = andalusian
 
 	980.1.1 = {
@@ -872,10 +1017,10 @@ me_ibn_mada_001 = {
 	name = "Ahmad"
 	dynasty = me_lakhmid_dynasty # Lakhmid
 	give_nickname = nick_me_ibn_mada
-	religion = masmudi
+	rite = masmudi
 	culture = andalusian
 	trait = education_learning_4
-	trait = scholar
+	trait = erudite
 	trait = theologian
 	trait = zealous
 	trait = diligent
@@ -908,7 +1053,7 @@ me_ibn_mada_001 = {
 me_ibn_mada_002 = {
 	name = "al-Abbas"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = masmudi
+	rite = masmudi
 	culture = andalusian 
 	
 	father = me_ibn_mada_001
@@ -926,7 +1071,7 @@ me_ibn_mada_002 = {
 me_ibn_mada_003 = {
 	name = "Abd-ar-Rahman"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_004
@@ -941,7 +1086,7 @@ me_ibn_mada_003 = {
 me_ibn_mada_004 = {
 	name = "Muhammad"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_005
@@ -959,7 +1104,7 @@ me_ibn_mada_004 = {
 me_ibn_mada_005 = {
 	name = "Sa_id"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_006
@@ -977,7 +1122,7 @@ me_ibn_mada_005 = {
 me_ibn_mada_006 = {
 	name = "Harith"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_007
@@ -992,7 +1137,7 @@ me_ibn_mada_006 = {
 me_ibn_mada_007 = {
 	name = "Asim"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_008
@@ -1007,7 +1152,7 @@ me_ibn_mada_007 = {
 me_ibn_mada_008 = {
 	name = "MaDA_" # Maḍā' ibn Muhannad al-Lakhmi
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_009
@@ -1022,7 +1167,7 @@ me_ibn_mada_008 = {
 me_ibn_mada_009 = {
 	name = "Muhannad"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_ibn_mada_010
@@ -1037,7 +1182,7 @@ me_ibn_mada_009 = {
 me_ibn_mada_010 = {
 	name = "Umayr"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	870.1.1 = {
@@ -1052,7 +1197,7 @@ me_ibn_mada_010 = {
 me_wafidid_001 = { # Son of Ibn Wafid
 	name = "al-Mutarrif"
 	dynasty_house = house_me_wafidid # Banu Wafid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = andalusian_0002 # Ibn al-Wafid (found in andalusian.txt)
@@ -1070,7 +1215,7 @@ me_wafidid_001 = { # Son of Ibn Wafid
 me_wafidid_002 = {
 	name = "Muhammad"
 	dynasty_house = house_me_wafidid # Banu Wafid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_wafidid_003
@@ -1085,7 +1230,7 @@ me_wafidid_002 = {
 me_wafidid_003 = {
 	name = "Abd_al-Kabir"
 	dynasty_house = house_me_wafidid # Banu Wafid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_wafidid_004
@@ -1100,7 +1245,7 @@ me_wafidid_003 = {
 me_wafidid_004 = {
 	name = "Yahya"
 	dynasty_house = house_me_wafidid # Banu Wafid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_wafidid_005
@@ -1115,7 +1260,7 @@ me_wafidid_004 = {
 me_wafidid_005 = {
 	name = "Wafid"
 	dynasty_house = house_me_wafidid # Banu Wafid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	father = me_wafidid_006
@@ -1130,7 +1275,7 @@ me_wafidid_005 = {
 me_wafidid_006 = {
 	name = "Muhannad"
 	dynasty = me_lakhmid_dynasty # Lakhmid
-	religion = muwalladi
+	rite = maliki
 	culture = andalusian 
 	
 	840.1.1 = {
@@ -1140,112 +1285,3 @@ me_wafidid_006 = {
 		death = yes 
 	}
 }
-
-### Fictional Umayyads for later start dates (Removable via game rule) ###
-me_umayyad_fic_001 = { # andalusian0065
-	name = "Ahmad" # Fictional, taken from previous versions
-	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
-	culture = andalusian
-	trait = quraysh
-
-	father = andalusian0064 # Muhammad ibn Muhammad (Fictional)
-
-	1024.1.1 = {
-		birth = yes
-	}
-	1074.1.1 = {
-		death = yes
-	}
-}
-
-me_umayyad_fic_002 = { # andalusian0066
-	name = "Abd-al-Aziz" # Fictional, taken from previous versions
-	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
-	culture = andalusian
-	trait = quraysh
-
-	father = me_umayyad_fic_001
-
-	1042.1.1 = {
-		birth = yes
-	}
-	1092.1.1 = {
-		death = yes
-	}
-} 
-
-me_umayyad_fic_003 = {
-	name = "Marwan"
-	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
-	culture = andalusian
-	trait = quraysh
-
-	father = me_umayyad_fic_002
-
-	1072.1.1 = {
-		birth = yes
-	}
-	1132.1.1 = {
-		death = yes
-	}
-} 
-
-me_umayyad_fic_004 = {
-	name = "Hamdan"
-	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
-	culture = andalusian
-	trait = quraysh
-
-	father = me_umayyad_fic_003
-
-	1102.1.1 = {
-		birth = yes
-	}
-	1162.1.1 = {
-		death = yes
-	}
-} 
-
-me_umayyad_fic_005 = {
-	name = "Abd-al-Rahman"
-	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
-	culture = andalusian
-	trait = quraysh
-
-	father = me_umayyad_fic_004
-
-	1135.1.1 = {
-		birth = yes
-		effect = {
-			learn_language_of_culture = culture:butr
-		}
-	}
-	1192.1.1 = {
-		death = yes
-	}
-} 
-
-me_umayyad_fic_006 = {
-	name = "Umar"
-	dynasty = 597 # Umayyad Dynasty
-	religion = muwalladi
-	culture = andalusian
-	trait = quraysh
-
-	father = me_umayyad_fic_005
-
-	1160.1.1 = {
-		birth = yes
-		effect = {
-			learn_language_of_culture = culture:butr
-		}
-	}
-	1222.1.1 = {
-		death = yes
-	}
-} 

@@ -20,7 +20,9 @@
  Mahbub:0 "Maḥbub"
  Riyah:0 "Riyāḥ"
  Sawdan:0 "Sawdān"
+ Sharahil:0 "Sharaḥil"
  Sumadih:0 "Sumadiḥ"
+ Ya_la:0 "Ya'la"
  
  dynn_Ukhaidhirid:0 "al-Ukhaydiri"
  dynn_Habbari:0 "al-Habbāri"
@@ -29,6 +31,7 @@
  dynn_Manjawa:0 "al-Manjawi"
  dynn_Muqqadam:0 "al-Muqaddami"
  dynn_Musikid:0 "Takshid"
+ dynn_Dofharid:0 "Dhufarid"
  
  ##Arabian tribes
  dynn_Banu_Tamim:0 "at-Tamīmī"
@@ -48,6 +51,7 @@
  dynn_Azdid:0 "al-Azdi"
  dynn_Yahmad:0 "al-Yahmadi" # al-Yaḥmadi
  dynn_Fazara:0 "al-Fazāri"
+ dynn_Juhavna:0 "al-Juhani"
  
  ## North African Names
  dynn_Maghrawavid:0 "Maghrāwid"
@@ -75,6 +79,7 @@
  dynn_at-Timnahid:0 "ath-Thumnawi"
  dynn_Sawdanid:0 "Sawdānid"
  
- ##Punjabi Dynasty names
+ ##Other Dynasty names
  dynn_Tandon:0 "Tandu"
+ dynn_al_Bawazij: "Musawirid"
  

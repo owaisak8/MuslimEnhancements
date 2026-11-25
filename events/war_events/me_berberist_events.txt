@@ -28,11 +28,8 @@ me_berberist_events.0001 = {
 
 # Setup event for Ha-Mimist Invasion
 me_berberist_events.0002 = {
+	scope = none
 	hidden = yes
-	
-
-	trigger = {
-	}
 
 	immediate = {
 		spawn_hamimist_invasion_character_effect = yes
@@ -104,7 +101,7 @@ me_berberist_events.0004 = {
 
 		hidden_effect = {
 			every_prisoner = {
-				limit = { faith = faith:hamimist }
+				limit = { rite = rite:hamimist }
 				death = {
 					death_reason = death_execution
 					killer = root
@@ -192,10 +189,8 @@ me_berberist_events.0101 = {
 
 # Setup event for Kaduist Invasion
 me_berberist_events.0102 = {
+	scope = none
 	hidden = yes
-
-	trigger = {
-	}
 
 	immediate = {
 		spawn_kaduist_invasion_character_effect = yes
@@ -266,11 +261,11 @@ me_berberist_events.0104 = {
 			VICTIM = scope:attacker
 			EXECUTIONER = root
 		}
-		add_piety = 1000
+		add_piety = 500
 
 		hidden_effect = {
 			every_prisoner = {
-				limit = { faith = faith:kaduist }
+				limit = { rite = rite:kaduist }
 				death = {
 					death_reason = death_execution
 					killer = root
@@ -288,7 +283,7 @@ me_berberist_events.0104 = {
 			VICTIM = scope:attacker
 			EXECUTIONER = root
 		}
-		add_piety = 750
+		add_piety = 250
 		ai_chance = {
 			base = 0
 		}

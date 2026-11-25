@@ -23,4 +23,5 @@
 
  ## Hijri Date Format Strings
  ME_HIJRI_DISPLAY_DATE:0 "[GetPlayer.Custom('ME_GetHijriMonthName')] [GetPlayer.MakeScope.ScriptValue('me_hijri_day_display')|0], [GetPlayer.MakeScope.ScriptValue('me_hijri_year_display')|0] AH"
+ ME_HIJRI_IMAMI_DISPLAY_DATE:0 "[GetPlayer.Custom('ME_GetHijriMonthName')] [GetPlayer.MakeScope.ScriptValue('me_hijri_day_display')|0], [GetPlayer.MakeScope.ScriptValue('me_hijri_imami_year_display')|0] AH"
  ME_GREGORIAN_DISPLAY_DATE:0 "[GetCurrentDate.GetStringLong]"

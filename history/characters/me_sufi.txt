@@ -1,0 +1,518 @@
+﻿### Sufi masters and other Friends of God (Awliya) ###
+# Shaykhs of the Tariqas (see common/scripted_effects/me_tariqa_effects.txt) and revered figures whose tombs are places of visitation.
+# Dates follow the commonly accepted ones; where the sources disagree or are traditional only, it is noted.
+# A dated effect after a death marks the tomb as that of a Wali for games starting later (the same way vanilla presets its saints).
+
+##################################################
+# The early masters
+##################################################
+
+# Rabi'a al-Adawiyya of Basra (c. 717 - 801), the great teacher of the selfless love of God. Never married.
+me_sufi_rabia = {
+	name = "Rabi_a"
+	dynasty = me_sufi_adawiyya
+	female = yes
+	rite = tabiun
+	culture = "bedouin"
+	trait = education_learning_4
+	trait = chaste
+	trait = humble
+	trait = temperate
+	trait = lifestyle_mystic
+	717.1.1 = {
+		birth = yes
+	}
+	801.1.1 = {
+		death = yes
+	}
+	801.2.1 = {
+		effect_even_if_dead = {
+			me_canonize_early_muslim_effect = { # ME: no awliya for Sadr al-Islam itself
+				PROVINCE = province:6022
+				FAITH = sunni
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
+		}
+	}
+}
+
+# Abu Yazid Tayfur ibn Isa al-Bistami, "Bayazid" (c. 804 - 874; some reports give 848), of Bistam in Qumis
+me_sufi_bayazid = {
+	name = "Bayazid" # Abu Yazid; his given name was Tayfur
+	dynasty = me_sufi_bistami
+	rite = hanafi
+	culture = persian
+	trait = education_learning_4
+	trait = humble
+	trait = temperate
+	trait = compassionate
+	trait = lifestyle_mystic
+	804.1.1 = {
+		birth = yes
+	}
+	874.1.1 = {
+		death = yes
+	}
+	874.2.1 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:4026 # Damghan, for Bistam
+				PRESET = yes
+			}
+		}
+	}
+}
+
+# Sahl ibn Abdullah al-Tustari (c. 818 - 896), of Tustar; exiled to Basra around 877, where he died.
+# His school of law is not securely known. He is honoured here at Tustar, his home.
+me_sufi_sahl = {
+	name = "Sahl"
+	dynasty = me_sufi_tustari
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = temperate
+	trait = patient
+	trait = diligent
+	trait = lifestyle_mystic
+	818.1.1 = {
+		birth = yes
+	}
+	896.1.1 = {
+		death = yes
+	}
+	896.2.1 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:4256 # Tustar
+				PRESET = yes
+			}
+		}
+	}
+}
+
+# Abu al-Qasim al-Junayd ibn Muhammad al-Baghdadi (c. 830 - 910), master of the "sober" way and a jurist of Abu Thawr's school.
+# Born and buried in Baghdad; his family came from Nihawand.
+me_sufi_junayd = {
+	name = "Junayd"
+	dynasty = me_sufi_baghdadi
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = temperate
+	trait = patient
+	trait = calm
+	trait = lifestyle_mystic
+	830.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+	910.2.1 = {
+		effect_even_if_dead = {
+			if = {
+				# From 1166 the Baghdad tomb site represents Abd al-Qadir al-Jilani (a province holds one saint)
+				limit = { game_start_date < 1166.2.1 }
+				pam_canonize_saint_effect = {
+					CANONIZER = root
+					CANDIDATE = root
+					CONSECRATION_PROVINCE = province:4828 # Baghdad
+					PRESET = yes
+				}
+			}
+			else = { # ME: buried in the Shuniziyya cemetery, Baghdad; registered at Aiwana, the nearest free province
+				pam_canonize_saint_effect = {
+					CANONIZER = root
+					CANDIDATE = root
+					CONSECRATION_PROVINCE = province:4832
+					PRESET = yes
+				}
+			}
+		}
+	}
+}
+
+##################################################
+# The Khorasani masters
+##################################################
+
+# Abu al-Qasim Abd al-Karim ibn Hawazin al-Qushayri (986 - 1072), of Nishapur: Shafi'i jurist, Ash'ari theologian,
+# and author of the Risala, the classic handbook of the Sufi path. His teachers' chain goes back to al-Junayd.
+me_sufi_qushayri = {
+	name = "Abd_al-Karim"
+	dynasty = me_sufi_qushayri
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = diligent
+	trait = patient
+	trait = just
+	trait = lifestyle_mystic
+	986.7.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		add_spouse = me_sufi_fatima_daqqaq # daughter of his master Abu Ali al-Daqqaq; the year is approximate
+	}
+	1072.12.30 = {
+		death = yes
+	}
+	1073.2.1 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:4017 # Nishapur
+				PRESET = yes
+			}
+		}
+	}
+}
+
+# Khwaja Abdullah Ansari (1006 - 1088), the Pir of Herat: Hanbali traditionist, author of the Munajat and the Manazil al-Sa'irin.
+# A descendant of the Companion Abu Ayyub al-Ansari, and a disciple of Abu al-Hasan Kharaqani, the spiritual heir of Bayazid.
+me_sufi_ansari = {
+	name = "Abdullah"
+	dynasty = me_sufi_ansari
+	rite = hanbali
+	culture = tajik
+	trait = education_learning_4
+	trait = zealous
+	trait = diligent
+	trait = stubborn
+	trait = lifestyle_poet
+	trait = lifestyle_mystic
+	1006.5.4 = {
+		birth = yes
+	}
+	1088.3.8 = {
+		death = yes
+	}
+	1088.4.8 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:4215 # Herat
+				PRESET = yes
+			}
+		}
+	}
+}
+
+# Ali ibn Uthman al-Hujwiri, "Data Ganj Bakhsh" (c. 1009 - c. 1072), of Ghazna; settled in Lahore, where he wrote the Kashf al-Mahjub
+# and where his tomb remains. Hanafi; he counted himself among the followers of al-Junayd's way.
+me_sufi_hujwiri = {
+	name = "Ali"
+	dynasty = me_sufi_hujwiri
+	rite = hanafi
+	culture = tajik
+	trait = education_learning_4
+	trait = diligent
+	trait = humble
+	trait = patient
+	trait = lifestyle_mystic
+	1009.1.1 = {
+		birth = yes
+	}
+	1072.1.1 = {
+		death = yes
+	}
+	1072.2.1 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:1362 # Lahore
+				PRESET = yes
+			}
+		}
+	}
+}
+
+##################################################
+# The founders of the great orders
+##################################################
+
+# Abd al-Qadir al-Jilani (1077/8 - 1166), born in Gilan; Hanbali jurist and the most renowned preacher of Baghdad, where he is buried.
+me_sufi_abd_al_qadir = {
+	name = "Abdul-Qadir"
+	dynasty = me_sufi_jilani
+	rite = hanbali
+	culture = persian
+	trait = education_learning_4
+	trait = generous
+	trait = honest
+	trait = diligent
+	trait = lifestyle_mystic
+	1078.3.1 = {
+		birth = yes
+	}
+	1166.2.14 = {
+		death = yes
+	}
+	1166.3.14 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:4828 # Baghdad
+				PRESET = yes
+			}
+		}
+	}
+}
+
+# Abd al-Razzaq ibn Abd al-Qadir al-Jilani (1134 - 1207), his son, who succeeded him at the madrasa in Baghdad
+me_sufi_abd_al_razzaq = {
+	name = "Abdul-Razzaq"
+	dynasty = me_sufi_jilani
+	rite = hanbali
+	culture = persian
+	father = me_sufi_abd_al_qadir
+	trait = education_learning_4
+	trait = humble
+	trait = temperate
+	trait = diligent
+	1134.9.9 = {
+		birth = yes
+	}
+	1207.5.7 = {
+		death = yes
+	}
+}
+
+# Ahmad ibn Ali al-Rifa'i (1118 - 1182), of the marshes below Wasit; Shafi'i, remembered for his humility and his kindness to every living thing
+me_sufi_rifai = {
+	name = "Ahmad"
+	dynasty = me_sufi_rifai
+	rite = shafii
+	culture = "levantine"
+	trait = education_learning_4
+	trait = humble
+	trait = compassionate
+	trait = patient
+	trait = lifestyle_mystic
+	1118.1.1 = {
+		birth = yes
+	}
+	1145.1.1 = {
+		add_spouse = me_sufi_khadija_najjari # the year is approximate
+	}
+	1166.1.1 = {
+		add_spouse = me_sufi_rabia_najjari # married after her sister Khadija died; the year is approximate
+	}
+	1182.1.1 = {
+		death = yes
+	}
+}
+
+# Shihab al-Din Abu Hafs Umar al-Suhrawardi (1145 - 1234), nephew and heir of Abu al-Najib al-Suhrawardi (d. 1168), the order's founder.
+# Shafi'i; later the envoy and counsellor of the Caliph al-Nasir, and author of the Awarif al-Ma'arif.
+me_sufi_suhrawardi = {
+	name = "Umar"
+	dynasty = me_sufi_suhrawardi
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = diligent
+	trait = just
+	trait = gregarious
+	1145.1.1 = {
+		birth = yes
+	}
+	1234.1.1 = {
+		death = yes
+	}
+}
+
+# Khwaja Hajji Sharif Zindani (d. 1215), successor of Mawdud Chishti (d. 1139) and master of Uthman Harwani, who in turn taught
+# Mu'in al-Din Chishti. His dates are known from the order's own tradition only.
+me_sufi_zindani = {
+	name = "Sharif"
+	dynasty = me_sufi_zindani
+	rite = hanafi
+	culture = tajik
+	trait = education_learning_4
+	trait = content
+	trait = temperate
+	trait = humble
+	trait = lifestyle_mystic
+	1110.1.1 = {
+		birth = yes
+	}
+	1215.11.4 = {
+		death = yes
+	}
+}
+
+# Abu Madyan Shu'ayb ibn al-Husayn al-Ansari (c. 1126 - 1198), born at Cantillana near Seville; Maliki. He taught at Bijaya,
+# and is the master through whom most of the later orders of the Maghreb trace their path. Buried at al-Ubbad, outside Tlemcen.
+me_sufi_abu_madyan = {
+	name = "Abu_Madyan" # his given name was Shu'ayb
+	dynasty = me_sufi_andalusi
+	rite = maliki
+	culture = andalusian
+	trait = education_learning_4
+	trait = humble
+	trait = diligent
+	trait = temperate
+	trait = lifestyle_mystic
+	1126.1.1 = {
+		birth = yes
+	}
+	1198.1.1 = {
+		death = yes
+	}
+}
+
+##################################################
+# Wives of the masters - only those named in the sources
+##################################################
+
+# Fatima bint Abi Ali al-Daqqaq (b. 1001 by the Arabic sources, 1010 by others; d. 1088), of Nishapur: daughter of al-Qushayri's master
+# Abu Ali al-Daqqaq, and herself a noted transmitter of hadith and a calligrapher.
+me_sufi_fatima_daqqaq = {
+	name = "Fatima"
+	female = yes
+	dynasty = me_sufi_daqqaq
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = diligent
+	disallow_random_traits = yes
+	1001.1.1 = {
+		birth = yes
+	}
+	1088.1.1 = {
+		death = yes
+	}
+}
+
+# Khadija bint Abi Bakr ibn Yahya al-Najjari al-Ansari, first wife of Ahmad al-Rifa'i and mother of his daughters Fatima and Zaynab.
+# Her dates are not recorded; those here are approximate.
+me_sufi_khadija_najjari = {
+	name = "Khadija"
+	female = yes
+	dynasty = me_sufi_najjari
+	rite = shafii
+	culture = "levantine"
+	disallow_random_traits = yes
+	1125.1.1 = {
+		birth = yes
+	}
+	1165.1.1 = {
+		death = yes
+	}
+}
+
+# Rabi'a bint Abi Bakr ibn Yahya al-Najjari al-Ansari, Khadija's sister, whom Ahmad al-Rifa'i married after Khadija's death; mother of his son Salih.
+# Her dates are not recorded; those here are approximate.
+me_sufi_rabia_najjari = {
+	name = "Rabi_a"
+	female = yes
+	dynasty = me_sufi_najjari
+	rite = shafii
+	culture = "levantine"
+	disallow_random_traits = yes
+	1135.1.1 = {
+		birth = yes
+	}
+	1195.1.1 = {
+		death = yes
+	}
+}
+
+##################################################
+# The Household of the Prophet
+##################################################
+
+# Fatima al-Ma'suma (790 - 816), daughter of Imam Musa al-Kadhim and sister of Imam Ali ar-Ridha.
+# She fell ill at Saveh on the road to join her brother in Khorasan and died at Qom, where her shrine stands.
+me_fatima_masuma = {
+	name = "Fatima"
+	give_nickname = nick_me_al_masuma
+	female = yes
+	dynasty = 589
+	rite = imami
+	culture = "bedouin"
+	father = 163022 # Musa al-Kadhim
+	trait = sayyid
+	trait = education_learning_4
+	trait = chaste
+	trait = patient
+	trait = compassionate
+	790.3.22 = {
+		birth = yes
+	}
+	816.11.7 = {
+		death = { death_reason = death_me_masuma }
+	}
+	816.12.7 = {
+		effect_even_if_dead = {
+			pam_canonize_saint_effect = {
+				CANONIZER = root
+				CANDIDATE = root
+				CONSECRATION_PROVINCE = province:4109 # Qom
+				PRESET = yes
+			}
+			me_wali_revered_by_effect = { FAITH = ithna_ashari }
+		}
+	}
+}
+
+## Founders remembered as Awliya by their own faiths
+
+me_wasil_ibn_ata = { # Wasil ibn 'Ata' al-Ghazzal, founder of the Mu'tazila; a mawla of the Banu Dabba or Banu Makhzum, his own origin is not known
+	name = "Wasil"
+	rite = mutazila
+	culture = bedouin
+	trait = education_learning_4
+	700.1.1 = { # 80 AH, at Medina
+		birth = yes
+	}
+	749.1.1 = { # 131 AH, at Basra
+		death = yes
+	}
+	749.2.1 = {
+		effect_even_if_dead = {
+			# ME: died and was buried at Basra; registered at al-Ubulla, the nearest free province (a province holds one saint)
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:6020
+				FAITH = mutazila
+			}
+			me_wali_revered_by_effect = { FAITH = mutazila }
+		}
+	}
+}
+
+me_ibn_tumart = { # Muhammad ibn Tumart al-Mahdi, of the Hargha (Masmuda), founder of the Almohad movement
+	name = "Muhammad"
+	give_nickname = nick_me_al_mahdi_nonprefix
+	rite = masmudi
+	culture = baranis
+	trait = masmudi
+	trait = education_learning_4
+	trait = zealous
+	1080.1.1 = { # c. 1078-1082, in the Anti-Atlas
+		birth = yes
+	}
+	1130.8.1 = { # August 1130 (Ramadan 524), at Tinmal
+		death = yes
+	}
+	1130.9.1 = {
+		effect_even_if_dead = {
+			# ME: buried in his mosque at Tinmal
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:4716
+				FAITH = masmudi
+			}
+			me_wali_revered_by_effect = { FAITH = masmudi }
+		}
+	}
+}

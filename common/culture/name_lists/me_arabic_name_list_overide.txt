@@ -1,4 +1,208 @@
-﻿name_list_levantine = {
+﻿name_list_bedouin = {
+
+	cadet_dynasty_names = {
+		"dynn_Rasulid"
+		"dynn_Umarid"
+		"dynn_Najadid"
+		"dynn_Dinnid"
+		#"dynn_Qutalmish"
+		"dynn_Qadir"
+		#"dynn_Toghan"
+		#"dynn_Walashma"
+		"dynn_Usfurid"
+		"dynn_Jarwanid"
+		"dynn_Zurayid"
+		"dynn_Muazzamid"
+		"dynn_Banu_Hatim"
+		"dynn_Qubaybid"
+		"dynn_Halabanid"
+		"dynn_Basri"
+		"dynn_Hallaj"
+		"dynn_Baghdadi"
+		"dynn_Bistami"
+		"dynn_Karkhi"
+		"dynn_Qadir"
+		"dynn_Jilani"
+		"dynn_Chishti"
+		"dynn_Badr"
+		"dynn_Miqadiyid"
+		"dynn_Munirid"
+		"dynn_Nabhanid"
+		"dynn_Nadjafid"
+		"dynn_Hamdan"
+		"dynn_Ashhadid"
+		"dynn_Quraishid"
+		"dynn_Kamalid"
+		"dynn_Mosulid"
+		"dynn_Jazrid"
+		"dynn_Husayn"
+		"dynn_Nazeerid"
+		"dynn_Nasrid"
+		"dynn_Bichrid"
+		"dynn_Hafizid"
+		"dynn_Fakhourid"
+		"dynn_Nawawid"
+		"dynn_Naderid"
+		"dynn_Chakroun"
+		"dynn_Atrashid"
+		"dynn_Shehhid"
+		"dynn_Hasanid"
+		"dynn_Qasimid"
+		"dynn_Sulaymanid"
+		"dynn_Halwasid"
+		"dynn_Jamalid"
+		"dynn_Abbasid"
+		"dynn_Razinid"
+		"dynn_Numayrid"
+		"dynn_Kaabid"
+		"dynn_Jabrid"
+		"dynn_Chrusarkha"
+		"dynn_Hakamid"
+		"dynn_Hanaya"
+		"dynn_Ibrahimid"
+		"dynn_Al-Duhli"
+		"dynn_Kinda"
+		"dynn_Madhhij"
+		{ "dynnp_al-" "dynn_Zawayhi" }
+		"dynn_Mufaddalid"
+		"dynn_Zurayid"
+		"dynn_Bannu_Man"
+		"dynn_Mahdid"
+		"dynn_Hatimid"
+		"dynn_Sulaymanid"
+		"dynn_Tanukh"
+		"dynn_Hilalid"
+		"dynn_Riyahdid"
+		"dynn_Athbejid"
+		"dynn_Zoghbadid"
+		"dynn_Adid"
+		"dynn_Suleimid"
+		"dynn_Zegbid"
+		"dynn_Debbabid"
+		"dynn_Awfid"
+	}
+
+	dynasty_names = {
+		"dynn_Rasulid"
+		"dynn_Umarid"
+		"dynn_Najadid"
+		"dynn_Dinnid"
+		#"dynn_Qutalmish"
+		"dynn_Qadir"
+		#"dynn_Toghan"
+		#"dynn_Walashma"
+		"dynn_Usfurid"
+		"dynn_Jarwanid"
+		"dynn_Zurayid"
+		"dynn_Muazzamid"
+		"dynn_Banu_Hatim"
+		"dynn_Qubaybid"
+		"dynn_Halabanid"
+		"dynn_Basri"
+		"dynn_Hallaj"
+		"dynn_Baghdadi"
+		"dynn_Bistami"
+		"dynn_Karkhi"
+		"dynn_Qadir"
+		"dynn_Jilani"
+		"dynn_Chishti"
+		"dynn_Badr"
+		"dynn_Miqadiyid"
+		"dynn_Munirid"
+		"dynn_Nabhanid"
+		"dynn_Nadjafid"
+		"dynn_Hamdan"
+		"dynn_Ashhadid"
+		"dynn_Quraishid"
+		"dynn_Kamalid"
+		"dynn_Mosulid"
+		"dynn_Jazrid"
+		"dynn_Husayn"
+		"dynn_Nazeerid"
+		"dynn_Nasrid"
+		"dynn_Bichrid"
+		"dynn_Hafizid"
+		"dynn_Fakhourid"
+		"dynn_Nawawid"
+		"dynn_Naderid"
+		"dynn_Chakroun"
+		"dynn_Atrashid"
+		"dynn_Shehhid"
+		"dynn_Hasanid"
+		"dynn_Qasimid"
+		"dynn_Sulaymanid"
+		"dynn_Halwasid"
+		"dynn_Jamalid"
+		"dynn_Abbasid"
+		"dynn_Razinid"
+		"dynn_Numayrid"
+		"dynn_Kaabid"
+		"dynn_Jabrid"
+		"dynn_Chrusarkha"
+		"dynn_Hakamid"
+		"dynn_Hanaya"
+		"dynn_Ibrahimid"
+		"dynn_Al-Duhli"
+		"dynn_Kinda"
+		"dynn_Madhhij"
+		{ "dynnp_al-" "dynn_Zawayhi" }
+		"dynn_Mufaddalid"
+		"dynn_Zurayid"
+		"dynn_Bannu_Man"
+		"dynn_Mahdid"
+		"dynn_Hatimid"
+		"dynn_Sulaymanid"
+		"dynn_Tanukh"
+		"dynn_Hilalid"
+		"dynn_Riyahdid"
+		"dynn_Athbejid"
+		"dynn_Zoghbadid"
+		"dynn_Adid"
+		"dynn_Suleimid"
+		"dynn_Zegbid"
+		"dynn_Debbabid"
+		"dynn_Awfid"
+	}
+
+	male_names = {
+		Abu-Bakr Aarif Abdul-Gafur Abdul-Jaleel Abdul-Qadir Abdul-Wahab Abdullah Aghlab Ali Alim Aram Azam Bahir
+		Fadil Fadl Faruq Ghalib Hafidh Halil Hasan Husam Hussayn Ibrahim Idris Is_mail Isa Jabir Jalil Jibril Khalil Mahmud
+		Mansur Mubarak Muhammad Mukhtar Murad Musa Najib Nasr Nidham Ramadan Sadiq Sami Samir Shaiban
+		Shamir Shujah Sulayman Talib Ubayd Uways Yahya Ya_qub Yusuf Zayd
+		
+		Adil Amin Amir Aqif Aswad Aws Ghitrif Hammid Hamzah Jayyash Iqbal Qadir Qahir Mahfudh Mu_ad Muharib Muhannad Nabhan Nafi_
+		Rashid Rushd Sayf Shaddad Shihab Taym Tayyib Wa_il Wathiq Yasir
+	}
+	# Akin Mahdi Mirza Qawurd Youkhanna
+	female_names = {
+		Adila Amsha Asiya Faghira Habibah Hanifa Layla Maryam Nafisa Qamar Rafiqa Rashida Sahba Sajida Samira Shararah Taliba Yasmin Zaynab
+		
+		Afifah Amirah Anwaar Anisah Asilah Bara_ah Basmah Bushra Dalilah Dunyah Faridah Fariha Ghaliah Ghaniyah Hafsa Hajar Halima Hanin Hanunah Harir Hibah Hind Huda
+		Ibtisam Jamilah Jawahir Jawharah Juhairah Jumanah Kamilah Karimah Khadija Khawlah Kulthum Laylah Lubabah Lujayn Malikah Maysun Munira Mu_nisah 
+		Nawal Nayla Naziha Nehal Nisreen Noor Nurah Ramlah Rayhana Ruqayyah Sabah Safiya Sahar Samah Shadyah Shahd Shakirah Shams Sharifah Shawq Shuruq
+		Tayyibah Thurayya Warda Wisal Zahra Zumurrud
+	}
+	#Jahaira Kamala Nyawela Parand Parween Paymaneh Paywand Rasa Reshawna 
+	#Saaman Sabba Saghar Semeah Setara Shahrbano Shahzadah Shameem Sheeftah Sheeva Shogofa Shokouh Shola Sholah Simin Souzan
+	#Tanaz Taneen Yagana Yakta 
+	
+	dynasty_of_location_prefix = "dynnp_mn"
+	
+	patronym_prefix_male = "dynnpat_pre_ibn"
+	patronym_prefix_female = "dynnpat_pre_bint"
+	
+	founder_named_dynasties = yes
+	house_based_map_names = yes
+
+	
+
+	mercenary_names = {
+		{ name = "mercenary_company_the_wanderers" }
+		{ name = "mercenary_company_bedouin_company_of_place" }
+	}
+}
+
+name_list_levantine = {
 
 	cadet_dynasty_names = {
 		#Jerusalem
@@ -1092,4 +1296,175 @@
 		{ name = "mercenary_company_company_of_the_oasis" }
 		{ name = "mercenary_company_desert_brethren" }
 	}
+}
+
+name_list_yemeni = {
+
+	cadet_dynasty_names = {
+		"dynn_Rasulid"
+		"dynn_Umarid"
+		"dynn_Najadid"
+		"dynn_Dinnid"
+		"dynn_Huraydid"
+		"dynn_Qadir"
+		"dynn_Mahrid"
+		"dynn_Walashma"
+		"dynn_Usfurid"
+		"dynn_Jarwanid"
+		"dynn_Zurayid"
+		"dynn_Muazzamid"
+		"dynn_Qubaybid"
+		"dynn_Halabanid"
+		"dynn_Basri"
+		"dynn_Hallaj"
+		"dynn_Bistami"
+		"dynn_Karkhi"
+		"dynn_Qadir"
+		"dynn_Jilani"
+		"dynn_Ziyadid"
+		"dynn_Chishti"
+		"dynn_Najran"
+		"dynn_Miqadiyid"
+		"dynn_Munirid"
+		"dynn_Nabhanid"
+		"dynn_Nadjafid"
+		"dynn_Hamdan"
+		"dynn_Ashhadid"
+		"dynn_Quraishid"
+		"dynn_Kamalid"
+		"dynn_Jazrid"
+		"dynn_Husayn"
+		"dynn_Nazeerid"
+		"dynn_Nasrid"
+		"dynn_Bichrid"
+		"dynn_Hafizid"
+		"dynn_Fakhourid"
+		"dynn_Nawawid"
+		"dynn_Naderid"
+		"dynn_Chakroun"
+		"dynn_Atrashid"
+		"dynn_Shehhid"
+		"dynn_Hasanid"
+		"dynn_Qasimid"
+		"dynn_Sulaymanid"
+		"dynn_Halwasid"
+		"dynn_Jamalid"
+		"dynn_Abbasid"
+		"dynn_Razinid"
+		"dynn_Numayrid"
+		"dynn_Kaabid"
+		"dynn_Jabrid"
+		"dynn_Hakamid"
+		"dynn_Hanaya"
+		"dynn_Ibrahimid"
+		"dynn_Al-Duhli"
+		"dynn_Kinda"
+		"dynn_Madhhij"
+		{ "dynnp_al-" "dynn_Zawayhi" }
+		"dynn_Mufaddalid"
+		"dynn_Zurayid"
+		"dynn_Mahdid"
+		"dynn_Yu_firid"
+		"dynn_Wabirid"
+		"dynn_Hatimid"
+		"dynn_Sulaymanid"
+	}
+
+	dynasty_names = {
+		"dynn_Rasulid"
+		"dynn_Umarid"
+		"dynn_Rassid"
+		"dynn_Najadid"
+		"dynn_Dinnid"
+		"dynn_Huraydid"
+		"dynn_Qadir"
+		"dynn_Mahrid"
+		"dynn_Walashma"
+		"dynn_Usfurid"
+		"dynn_Jarwanid"
+		"dynn_Zurayid"
+		"dynn_Muazzamid"
+		"dynn_Qubaybid"
+		"dynn_Halabanid"
+		"dynn_Basri"
+		"dynn_Hallaj"
+		"dynn_Bistami"
+		"dynn_Karkhi"
+		"dynn_Qadir"
+		"dynn_Jilani"
+		"dynn_Ziyadid"
+		"dynn_Najran"
+		"dynn_Miqadiyid"
+		"dynn_Munirid"
+		"dynn_Nabhanid"
+		"dynn_Nadjafid"
+		"dynn_Hamdan"
+		"dynn_Ashhadid"
+		"dynn_Quraishid"
+		"dynn_Kamalid"
+		"dynn_Jazrid"
+		"dynn_Husayn"
+		"dynn_Nazeerid"
+		"dynn_Nasrid"
+		"dynn_Bichrid"
+		"dynn_Hafizid"
+		"dynn_Fakhourid"
+		"dynn_Nawawid"
+		"dynn_Naderid"
+		"dynn_Chakroun"
+		"dynn_Atrashid"
+		"dynn_Shehhid"
+		"dynn_Hasanid"
+		"dynn_Qasimid"
+		"dynn_Sulaymanid"
+		"dynn_Halwasid"
+		"dynn_Jamalid"
+		"dynn_Abbasid"
+		"dynn_Razinid"
+		"dynn_Numayrid"
+		"dynn_Kaabid"
+		"dynn_Jabrid"
+		"dynn_Hakamid"
+		"dynn_Hanaya"
+		"dynn_Ibrahimid"
+		"dynn_Al-Duhli"
+		"dynn_Kinda"
+		"dynn_Madhhij"
+		{ "dynnp_al-" "dynn_Zawayhi" }
+		"dynn_Mufaddalid"
+		"dynn_Zurayid"
+		"dynn_Mahdid"
+		"dynn_Yu_firid"
+		"dynn_Hatimid"
+		"dynn_Sulaymanid"
+	}
+
+	male_names = {
+		Abu-Bakr Aarif Abdul-Gafur Abdul-Jaleel Abdul-Qadir Abdul-Wahab Abdullah Aghlab Ali Alim Aram Azam Bahir
+		Fadil Fadl Faruq Ghalib Hafidh Halil Hasan Husam Hussayn Ibrahim Idris Is_mail Isa Jabir Jalil Jibril Khalil Malik Mahmud
+		Mansur Mubarak Muhammad Mukhtar Murad Musa Najib Nasr Nidham Ramadan Sadiq Sami Samir Shaiban
+		Shamir Shujah Sulayman Talib Ubayd Uways Yahya Ya_qub Yusuf Zayd
+
+		Adil Amin Amir Aqif Aswad Aws Ghitrif Hammid Hamzah Jayyash Iqbal Qadir Qahir Mahfudh Mu_ad Muharib Muhannad Nabhan Nafi_
+		Rashid Rushd Sayf Shaddad Shihab Taym Tayyib Wa_il Wathiq Yasir
+	}
+	# Aden Akin Mahdi Mirza Qawurd Youkhanna Zulfiqar
+	female_names = {
+		Adila Amsha Asiya Faghira Habibah Hanifa Isra Layla Maryam Munya Nafisa Qamar Rafiqa Rashida Sahba Sajida Samira Shararah Taliba Yasmin Zaynab
+
+		Afifah Amirah Anwaar Anisah Asilah Bara_ah Basmah Bushra Dalilah Dunyah Faridah Fariha Ghaliah Ghaniyah Hafsa Hajar Halima Hanin Hanunah Harir Hibah Hind Huda
+		Ibtisam Jamilah Jawahir Jawharah Juhairah Jumanah Kamilah Karimah Khadija Khawlah Kulthum Laylah Lubabah Lujayn Malikah Maysun Munira Mu_nisah
+		Nawal Nayla Naziha Nehal Nisreen Noor Nurah Ramlah Rayhana Ruqayyah Sabah Safiya Sahar Samah Shadyah Shahd Shakirah Shams Sharifah Shawq Shuruq
+		Tayyibah Thurayya Warda Wisal Zahra Zumurrud
+	}
+	#Jahaira Kamala Nyawela Parand Parween Paymaneh Paywand Rasa Reshawna
+	#Saaman Sabba Saghar Semeah Setara Shahrbano Shahzadah Shameem Sheeftah Sheeva Shogofa Shokouh Shola Sholah Simin Souzan
+	#Tanaz Taneen Yagana Yakta
+	dynasty_of_location_prefix = "dynnp_mn"
+
+	patronym_prefix_male = "dynnpat_pre_ibn"
+	patronym_prefix_female = "dynnpat_pre_bint"
+
+	founder_named_dynasties = yes
+	house_based_map_names = yes
 }

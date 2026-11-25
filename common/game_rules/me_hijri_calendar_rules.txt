@@ -1,4 +1,4 @@
-me_hijri_calendar = { # Displays the Hijri (Islamic) calendar date for Muslim rulers
+﻿me_hijri_calendar = { # Displays the Hijri (Islamic) calendar date for Muslim rulers
 
 	categories = {
 		flavor

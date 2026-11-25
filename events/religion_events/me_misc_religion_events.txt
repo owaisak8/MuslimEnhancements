@@ -20,7 +20,7 @@ me_misc_religion_event.0001 = {
 	}
 
 	trigger = {
-		root.faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+		root.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 	}
 
 	immediate = {
@@ -196,17 +196,98 @@ me_misc_religion_event.0002 ={
 	}
 }
 
-me_misc_religion_event.0003 ={
+me_misc_religion_event.0003 ={ # 1.20: was the Maturidi clean-up for the retired Sunni unity game rule; kept as an empty event so the ID stays valid
 	hidden = yes
 
 	immediate = {
-		every_county = {
-			limit = { faith = faith:maturidi }
-			set_county_faith = faith:ashari
+	}
+}
+
+me_misc_religion_event.0004 = {
+	#title = me_misc_religion_event.0004.t.mahdi
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					has_character_modifier = me_ishaq_ahmar_modifier
+				}
+				desc = me_misc_religion_event.0004.t.bab
+			}
+			desc = me_misc_religion_event.0004.t.mahdi
 		}
-		every_living_character = {
-			limit = { faith = faith:maturidi }
-			set_character_faith = faith:ashari
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { has_character_modifier = me_ishaq_ahmar_modifier }
+				desc = me_misc_religion_event.0004.desc.ishaq_ahmar
+			}
+			triggered_desc = {
+				trigger = { has_character_modifier = me_zakarawayhist_modifier }
+				desc = me_misc_religion_event.0004.desc.zakarawayhist
+			}
+			triggered_desc = {
+				trigger = { has_character_modifier = me_jayshanist_modifier }
+				desc = me_misc_religion_event.0004.desc.jayshanist
+			}
+		}
+	}
+	theme = faith
+	background = study
+	
+	left_portrait = {
+		character = root
+		animation = personality_zealous
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = {
+			trigger = { has_character_modifier = me_ishaq_ahmar_modifier }
+			text = me_misc_religion_event.0004.a.bab
+		}
+		name = {
+			trigger = { NOT = { has_character_modifier = me_ishaq_ahmar_modifier } }
+			text = me_misc_religion_event.0004.a.mahdi
+		}
+		
+		if = {
+			limit = { has_character_modifier = me_ishaq_ahmar_modifier }
+			faith = { add_doctrine = special_doctrine_ishaq_ahmar_trait_acceptance }
+			add_trait = ME_ishaq_ahmar_bab
+			add_trait = ME_blood_of_ishaq_ahmar
+			remove_character_modifier = me_ishaq_ahmar_modifier
+		}
+		else_if = {
+			limit = { has_character_modifier = me_zakarawayhist_modifier }
+			faith = { add_doctrine = special_doctrine_zakarawayhist_trait_acceptance }
+			add_trait = ME_zakarawayhist_mahdi
+			add_trait = ME_blood_of_zakarawayh
+			remove_character_modifier = me_zakarawayhist_modifier
+		}
+		else_if = {
+			limit = { has_character_modifier = me_jayshanist_modifier }
+			faith = { add_doctrine = special_doctrine_jayshanist_trait_acceptance }
+			add_trait = ME_jayshanist_mahdi
+			add_trait = ME_blood_of_jayshani
+			remove_character_modifier = me_jayshanist_modifier
+		}
+	}
+	option = {
+		name = me_misc_religion_event.0004.b
+		if = {
+			limit = { has_character_modifier = me_ishaq_ahmar_modifier }
+			remove_character_modifier = me_ishaq_ahmar_modifier
+		}
+		else_if = {
+			limit = { has_character_modifier = me_zakarawayhist_modifier }
+			remove_character_modifier = me_zakarawayhist_modifier
+		}
+		else_if = {
+			limit = { has_character_modifier = me_jayshanist_modifier }
+			remove_character_modifier = me_jayshanist_modifier
 		}
 	}
 }

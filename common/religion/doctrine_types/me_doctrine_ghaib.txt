@@ -1,0 +1,60 @@
+﻿# Ghaib: the Ja'fari Head of Faith is the Twelfth Imam, alive in occultation (ghayba).
+# The Ja'fari Rite's own Head of Faith doctrine (see rite_types). Not pickable. Shown as "Imamate" while the Imams lead in person,
+# and as "Ghaib" from the Major Occultation (941).
+doctrine_ghaib_head = {
+	doctrine_group_type = doctrine_head_of_faith
+	index = 3
+	divergence = 30
+
+	icon = "doctrine_ghaib_head"
+
+	# Imamate while the Imams lead in person; Ghaib from the Major Occultation (global variable set in 941, or at game start in later starts)
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = global_var:me_major_occultation }
+				desc = doctrine_ghaib_head_name
+			}
+			desc = doctrine_imamate_head_name
+		}
+	}
+	# ME: the doctrine tooltip shows descriptive_name, which does not follow the scripted name
+	descriptive_name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = global_var:me_major_occultation }
+				desc = doctrine_ghaib_head_name
+			}
+			desc = doctrine_imamate_head_name
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { exists = global_var:me_major_occultation }
+				desc = doctrine_ghaib_head_desc
+			}
+			desc = doctrine_imamate_head_desc
+		}
+	}
+
+	visible = no
+
+	piety_cost = {
+		value = faith_doctrine_cost_high
+		if = {
+			limit = { rite_has_doctrine = doctrine_ghaib_head }
+			multiply = faith_unchanged_doctrine_cost_mult
+		}
+	}
+
+	can_pick = {
+		always = no
+	}
+
+	# A spiritual Head of Faith in the engine's eyes (he holds no land), but the hidden Imam neither grants claims nor draws gold
+	parameters = {
+		spiritual_head_of_faith
+		me_ghaib_head_of_faith
+	}
+}

@@ -18,6 +18,7 @@
 
 	is_valid = {
 		top_liege = this
+		exists = struggle:iberian_struggle
 
 		OR = {
 			custom_tooltip = {
@@ -107,7 +108,7 @@
 					any_de_jure_county = {
 						percent >= 0.75
 						culture = root.culture
-						faith = root.faith
+						rite = root.rite
 					}
 				}
 			}
@@ -119,7 +120,7 @@
 					any_de_jure_county = {
 						count = all
 						culture = root.culture
-						faith = root.faith
+						rite = root.rite
 					}
 				}
 			}
@@ -129,7 +130,7 @@
 		custom_tooltip = {
 			text = struggle_iberia_ending_hostility_decision_region_tt
 			NOT = {
-				struggle:iberian_struggle = {
+				struggle:iberian_struggle ?= {
 					any_involved_ruler = {
 						this != root
 						top_liege = this
@@ -168,7 +169,7 @@
 			limit = { has_ach_dlc_trigger = yes }
 			add_character_flag = ach_ended_struggle
 		}
-		
+
 		##### Major Effects #####
 		show_as_tooltip = {
 			dynasty = { add_dynasty_prestige = 10000 }
@@ -192,7 +193,7 @@
 
 
 		show_as_tooltip = {
-			stress_impact = {
+			stress_and_fulfillment_impact = {
 				humble = medium_stress_impact_gain
 				cynical = medium_stress_impact_gain
 			}

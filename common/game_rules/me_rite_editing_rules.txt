@@ -1,0 +1,12 @@
+﻿me_rite_editing = { # How AI rulers may change the Rites of the Muslim faiths (see me_rite_editing_* in common/scripted_triggers and scripted_effects)
+	categories = {
+		historicity faith
+	}
+
+	default = me_rite_editing_guarded
+
+	me_rite_editing_guarded = {}
+	me_rite_editing_historical_locked = {}
+	me_rite_editing_locked = {}
+	me_rite_editing_ahistorical = {}
+}

@@ -10,11 +10,9 @@ mend_the_ibadi_schism_decision = {
 	ai_check_interval = 120
 
 	is_shown = {
-		NOT = { faith:ibadi.religious_head_title = faith:wahbiya.religious_head_title }
-		OR = {
-			faith.religious_head_title = title:d_ibadi
-			faith.religious_head_title = title:d_wahbiya
-		}
+		# 1.20: the Ibadi and Wahbi are Rites of the one Ibadi faith; the schism is the two rival Imamates.
+		NOT = { has_global_variable = me_ibadi_schism_mended }
+		faith = faith:ibadi
 		OR = {
 			has_title = title:d_ibadi
 			has_title = title:d_wahbiya
@@ -26,7 +24,7 @@ mend_the_ibadi_schism_decision = {
 		custom_tooltip = { #Must have atleast 3 holy sites
 			text = "mend_the_ibadi_schism_holy_sites"
 			faith = {
-				any_holy_site = {
+				any_holy_site_barony = {
 					OR = {
 						county.holder = root
 						county.holder.top_liege = { this = root }
@@ -50,7 +48,7 @@ mend_the_ibadi_schism_decision = {
 				NOT = { exists = title:d_ibadi.holder }
 			}
 		}
-		capital_province.county = { development_level >= 25 }
+		capital_province.county = { prosperity_level >= 25 }
 		highest_held_title_tier > 3 #Only Kings and Emperors
 		piety_level >= high_piety_level
 	}
@@ -104,8 +102,8 @@ hire_hafidh_decision = {
 	is_shown = {
 		is_landed_or_landless_administrative = yes
 		faith.religion = religion:islam_religion
-		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-		NOT = { faith = faith:druze }
+		NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+		NOT = { rite = rite:druze }
 	}
 
 	cooldown = { days = 365 }
@@ -155,10 +153,10 @@ invite_a_linguist_arabic = {
 		is_landed = yes
 		has_royal_court = yes
 		faith.religion = religion:islam_religion
-		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-		NOT = { faith = faith:druze }
+		NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+		NOT = { rite = rite:druze }
 		# Language checks.
-		NOT = { # No need for linguist
+		NOR = { # No need for linguist
 			has_court_language = language_arabic 
 			liege = { has_court_language = language_arabic }
 			culture = { has_cultural_pillar = language_arabic  } 
@@ -275,7 +273,7 @@ me_restore_ibadi_imamate_decision = {
 			custom_description = {
 				text = appoint_a_righteous_caliph_decision.control_one_holy_site
 				faith = {
-					any_holy_site = {
+					any_holy_site_barony = {
 						count >= 1
 						holder.top_liege = root
 					}
@@ -285,7 +283,7 @@ me_restore_ibadi_imamate_decision = {
 			custom_description = {
 				text = appoint_a_righteous_caliph_decision.control_two_holy_sites
 				faith = {
-					any_holy_site = {
+					any_holy_site_barony = {
 						count >= 2
 						holder.top_liege = root
 					}
@@ -400,7 +398,7 @@ me_legitimize_the_fatimid_lineage_decision = {
 
 	is_valid = {
 		faith = { religious_head = root }
-		faith = { NOT = { has_doctrine = special_doctrine_ubaydi_trait_acceptance } }
+		rite = { NOT = { rite_has_doctrine = special_doctrine_ubaydi_trait_acceptance } }
 	}
 
 	is_valid_showing_failures_only = {
@@ -454,7 +452,7 @@ ME_mustali_schism_convert_decision = {
 
 	is_shown = {
 		is_landed = yes
-		faith = { has_doctrine = special_doctrine_mustali_main }
+		rite = { rite_has_doctrine = special_doctrine_mustali_main }
 	}
 
 	is_valid_showing_failures_only = {
@@ -491,7 +489,7 @@ ME_mustali_schism_convert_decision = {
 				if = {
 					limit = {
 						any_sub_realm_county = {
-							faith = faith:hafizi
+							rite = rite:hafizi
 						}
 					}
 					add = 10
@@ -539,7 +537,7 @@ ME_mustali_schism_convert_decision = {
 				if = {
 					limit = {
 						any_sub_realm_county = {
-							faith = faith:tayyibi
+							rite = rite:tayyibi
 						}
 					}
 					add = 10
@@ -577,28 +575,28 @@ ME_mustali_schism_convert_decision = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:hafizi }
+				capital_county = { set_county_rite = rite:hafizi }
 			}
-			show_as_tooltip = { set_character_faith = faith:hafizi }
+			show_as_tooltip = { set_character_rite = rite:hafizi }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:hafizi
+				set_character_rite_with_conversion = rite:hafizi
 			}
 			
 			custom_tooltip = {
 				text = ME_mustali_schism_convert_hafizi_percent
 				every_county = {
 					limit = {
-						faith = { has_doctrine = special_doctrine_mustali_main }
+						rite = { rite_has_parameter = mustali_main_effects_active }
 						holder.top_liege = root
 					}
 					random = {
 						chance = 70
-						set_county_faith = faith:hafizi
+						set_county_rite = rite:hafizi
 					}
 				}
 			}
 			
-			faith:hafizi = {
+			rite:hafizi.faith = {
 				change_fervor = {
 					value = 15
 					desc = fervor_gain_mustali_convert
@@ -612,28 +610,28 @@ ME_mustali_schism_convert_decision = {
 				limit = {
 					capital_county.faith = faith
 				}
-				capital_county = { set_county_faith = faith:tayyibi }
+				capital_county = { set_county_rite = rite:tayyibi }
 			}
-			show_as_tooltip = { set_character_faith = faith:tayyibi }
+			show_as_tooltip = { set_character_rite = rite:tayyibi }
 			hidden_effect = {
-				set_character_faith_with_conversion = faith:tayyibi
+				set_character_rite_with_conversion = rite:tayyibi
 			}
 			
 			custom_tooltip = {
 				text = ME_mustali_schism_convert_tayyibi_percent
 				every_county = {
 					limit = {
-						faith = { has_doctrine = special_doctrine_mustali_main }
+						rite = { rite_has_parameter = mustali_main_effects_active }
 						holder.top_liege = root
 					}
 					random = {
 						chance = 70
-						set_county_faith = faith:tayyibi
+						set_county_rite = rite:tayyibi
 					}
 				}
 			}
 			
-			faith:tayyibi = {
+			rite:tayyibi.faith = {
 				change_fervor = {
 					value = 15
 					desc = fervor_gain_mustali_convert
@@ -674,22 +672,22 @@ establish_berberist_hof_decision = {
 	is_shown = {
 		is_ruler = yes
 		is_playable_character = yes
-		faith = {
-			has_doctrine = muhammad_succession_berberist_doctrine
-			has_doctrine = doctrine_temporal_head
+		rite = {
+			rite_has_doctrine = muhammad_succession_berberist_doctrine
+			rite_has_doctrine = doctrine_temporal_head
 		}
 		NOT = { faith = { exists = religious_head } }
 		OR = {
 			AND = {
-				faith = { has_doctrine = special_doctrine_is_barghawata_faith }
+				rite = { rite_has_doctrine = special_doctrine_is_barghawata_faith }
 				has_trait = blood_of_salih
 			}
 			AND = {
-				faith = { has_doctrine = special_doctrine_is_hamimist_faith }
+				rite = { rite_has_doctrine = special_doctrine_is_hamimist_faith }
 				has_trait = blood_of_hamim
 			}
 			AND = {
-				faith = { has_doctrine = special_doctrine_is_kaduist_faith }
+				rite = { rite_has_doctrine = special_doctrine_is_kaduist_faith }
 				has_trait = blood_of_kadu
 			}
 		}
@@ -745,5 +743,265 @@ establish_berberist_hof_decision = {
 			factor = 0
 			has_trait = cynical
 		}
+	}
+}
+
+# Open Conversions for Closed Faith
+me_open_closed_faith_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/decision_major_religion.dds" }
+	desc = me_open_closed_faith_decision_desc
+	selection_tooltip = me_open_closed_faith_decision_tooltip
+	decision_group_type = major
+	#sort_order = 10
+	
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 0
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	
+	is_shown = {
+		rite = { rite_has_tenet = tenet_me_closed_faith }
+	}
+
+	is_valid = {
+		# Should have a decent piety level.
+		piety_level >= high_piety_level
+		# Must be at least kingdom-teir
+		highest_held_title_tier >= tier_kingdom
+		# Must have a decent proportion of sub-realm counties of the faith.
+		trigger_if = { 
+			limit = {
+				any_sub_realm_county = {
+					faith = root.faith
+					count >= 0
+				}
+			}
+			custom_tooltip = {
+				text = realm_controls_enough_closed_faith_counties_desc
+				any_sub_realm_county = {
+					faith = root.faith
+					count >= closed_faith_required_county_number_value
+				}
+			}
+		}
+		# If a HoF exists, then either they must be you or your vassal
+		trigger_if = { 
+			limit = { exists = faith.religious_head }
+			OR = {
+				faith.religious_head = { any_liege_or_above = { this = root } }
+				root = root.faith.religious_head
+			}
+		}
+		# Now, pick any three of the valid reasons.
+		calc_true_if = {
+			amount >= 2
+
+			# Sayyids and Qurashis get a free pass.
+			trigger_if = { 
+				limit = { faith.religion = religion:islam_religion }
+				has_trait = sayyid
+			}
+			trigger_if = { 
+				limit = { faith.religion = religion:islam_religion }
+				has_trait = quraysh
+			}
+			trigger_if = { 
+				limit = { rite = { rite_has_doctrine = special_doctrine_ubaydi_trait_acceptance } }
+				has_trait = ubaydi
+			}
+			# Having a holy site.
+			custom_description = {
+				text = appoint_a_righteous_caliph_decision.control_one_holy_site
+				faith = {
+					any_holy_site_barony = {
+						count >= 1
+						holder.top_liege = root
+					}
+				}
+			}
+			# Having *2* holy sites.
+			custom_description = {
+				text = appoint_a_righteous_caliph_decision.control_two_holy_sites
+				faith = {
+					any_holy_site_barony = {
+						count >= 2
+						holder.top_liege = root
+					}
+				}
+			}
+			# Having a higher-than-minimum piety level.
+			piety_level >= very_high_piety_level
+			# Being a knowledgable in your faith
+			has_trait = theologian
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available_adult = yes
+		# Has to be around for the ceremony.
+		not = { exists = involved_activity }
+		has_contagious_deadly_disease_trigger = no
+	}
+	
+	effect = {
+		save_scope_as = reformer
+		custom_tooltip = me_open_closed_faith_decision_tooltip
+		show_as_tooltip = {
+			#remove_doctrine = tenet_me_closed_faith 
+			add_piety_level = 1
+			faith = {
+				change_fervor = {
+					value = 20
+					desc = me_fervor_gain_opened_up_faith
+				}
+			}
+		}
+		# Notify co-faithists; we do this first so we can sort the feed message for how many did/didn't convert.
+		faith = {
+			every_faith_ruler = {
+				limit = {
+					highest_held_title_tier >= tier_county
+					NOT = { this = root }
+				}
+				trigger_event = me_religious_decisions.0011
+			}
+		}
+		# Now notify other players.
+		every_player = {
+			limit = {
+				OR = {
+					religion = scope:reformer.religion
+					any_neighboring_and_across_water_top_liege_realm_owner = { this = root }
+					any_liege_or_above = { religion = scope:reformer.religion }
+				}
+				# Exempt same-faith characters, who already got an event.
+				NOT = { faith = root.faith }
+			}
+			# Players who share the faith get 
+			trigger_event = me_religious_decisions.0011
+		}
+		# Finally, we trigger the main conversion.
+		trigger_event = me_religious_decisions.0010
+	}
+
+	cost = {
+		gold = 500
+		piety = 1000
+	}
+
+	ai_potential = {
+		always = no
+	}
+
+	ai_will_do = {
+		base = 0
+	}
+}
+
+# Choose Calendar to Display
+ME_choose_calendar_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_misc.dds"
+	}
+	sort_order = 1
+
+	is_shown = {
+		has_game_rule = me_hijri_enabled
+		religion = religion:islam_religion
+	}
+
+	is_valid_showing_failures_only = {}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "GENERIC_CHOOSE_OPTION"
+		show_from_start = yes
+
+		item = { # Enable gregorian calendar
+			value = me_calendar_gregorian
+			is_valid = { 
+				custom_tooltip = {
+					text = me_gregorian_enabled_tt
+					exists = global_var:me_calendar_hijri_var
+				}
+			}
+			current_description = me_calendar_gregorian_desc
+			localization = me_calendar_gregorian
+			#icon = "gfx/interface/icons/widgets/me_check.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Enable traditional Hijri calendar
+			value = me_calendar_hijri_trad
+			is_valid = {
+				custom_tooltip = {
+					text = me_hijri_trad_enabled_tt
+						OR = {
+						NOT = { exists = global_var:me_calendar_hijri_var }
+						exists = global_var:me_calendar_hijri_imami_var
+					}
+				}
+			}
+			current_description = me_calendar_hijri_trad_desc
+			localization = me_calendar_hijri_trad
+			#icon = "gfx/interface/icons/widgets/me_check.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Enable twelver Hijri calendar
+			value = me_calendar_hijri_imami
+			is_valid = {
+				custom_tooltip = {
+					text = me_hijri_imami_enabled_tt
+						OR = {
+							NOT = { exists = global_var:me_calendar_hijri_var }
+							NOT = { exists = global_var:me_calendar_hijri_imami_var }
+					}
+				}
+			}
+			current_description = me_calendar_hijri_imami_desc
+			localization = me_calendar_hijri_imami
+			#icon = "gfx/interface/icons/widgets/me_check.dds"
+			ai_chance = { value = 10 }
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			scope:me_calendar_gregorian = {
+				custom_tooltip = me_calendar_gregorian_desc
+				remove_global_variable = me_calendar_hijri_var
+				remove_global_variable = me_calendar_hijri_imami_var
+			}
+			scope:me_calendar_hijri_trad = {
+				custom_tooltip = me_calendar_hijri_trad_desc
+				set_global_variable = {
+					name = me_calendar_hijri_var
+					value = yes
+				}
+				remove_global_variable = me_calendar_hijri_imami_var
+			}
+			scope:me_calendar_hijri_imami = {
+				custom_tooltip = me_calendar_hijri_imami_desc
+				set_global_variable = {
+					name = me_calendar_hijri_var
+					value = yes
+				}
+				set_global_variable = {
+					name = me_calendar_hijri_imami_var
+					value = yes
+				}
+			}
+		}
+	}
+	ai_check_interval = 36
+	ai_potential = {
+	}
+	ai_will_do = {
+		base = 0
 	}
 }

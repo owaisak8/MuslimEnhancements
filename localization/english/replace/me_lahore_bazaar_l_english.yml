@@ -1,0 +1,11 @@
+﻿l_english:
+ # ME: the Bazaar of Lahore (common/buildings/special_buildings/zz_me_lahore_bazaar.txt). Tier 1 after the
+ # Hudud al-'Alam (982), which gives Lahore temples, large markets, orchards, two major markets and a mud wall.
+ lahur_bazaar_01:0 "Bazaar of Lahore"
+ lahur_bazaar_01_desc:0 "Within the mud walls of Lahore two great markets stand side by side, and around them press the houses, temples and orchards of the town. Cotton cloth from the villages along the Ravi and rock salt from the hills of the Salt Range change hands here in every season, as they have for longer than anyone can remember."
+ lahur_bazaar_02:0 "Sprawling Bazaar of Lahore"
+ lahur_bazaar_02_desc:0 "The markets of Lahore have long since spilled beyond the old walls. Lanes of cloth-sellers, salt merchants, dyers and goldsmiths run out past the gates, and caravans come in from Ghazna and Kabul beside the boatmen bound down the rivers to Multan and Daybul."
+ lahur_bazaar_03:0 "Great Bazaar of Lahore"
+ lahur_bazaar_03_desc:0 "A city that kings make their capital never lacks for buyers. Horse dealers lead strings of Turki horses down through the passes to sell to the princes of Hindustan, booksellers and copyists serve the poets and scholars who gather at court, and the moneychangers of Lahore weigh out the coin of half a dozen realms."
+ lahur_bazaar_04:0 "Emporium of Lahore"
+ lahur_bazaar_04_desc:0 "Merchants say that whatever is sold anywhere between Khurasan and the Ganges can be found in Lahore. Every quarter has its own trade and its own market, from the cloth printers to the saddlers, pilgrims to the shrine of Data Ganj Bakhsh crowd the lanes outside the walls, and a city that has been burned more than once has risen each time richer than before."

@@ -59,3 +59,9 @@ levantine_musikid = {
 	name = "dynn_Musikid"
 	culture = "kurdish"
 }
+
+# Banu Masruq (Rabi'ah of Allaqi)
+bedouindyn003 = {
+	name = "dynn_me_al_masruqi"
+	culture = bedouin
+}

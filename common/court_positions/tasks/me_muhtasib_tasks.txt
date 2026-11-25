@@ -1,0 +1,355 @@
+﻿# ME: tasks of the Muhtasib (common/court_positions/types/me_muhtasib_court_position.txt)
+
+# Weights, measures and coin: the cheap, safe default.
+me_muhtasib_task_weights = {
+	court_position_types = { me_muhtasib_court_position }
+
+	cost = {
+		round = no
+		gold = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = no } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = yes } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_stewardship_lifestyle_xp_gain_mult = 0.1
+	}
+
+	base_employer_modifier = {
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			trade_competitiveness_mult = 0.02
+			trade_expertise_growth_mult = 0.02
+		}
+		poor = {
+			trade_competitiveness_mult = 0.04
+			trade_expertise_growth_mult = 0.04
+		}
+		average = {
+			trade_competitiveness_mult = 0.06
+			trade_expertise_growth_mult = 0.06
+		}
+		good = {
+			trade_competitiveness_mult = 0.08
+			trade_expertise_growth_mult = 0.08
+		}
+		excellent = {
+			trade_competitiveness_mult = 0.1
+			trade_expertise_growth_mult = 0.1
+		}
+	}
+
+	is_shown = {  }
+	is_valid_showing_failures_only = { }
+
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 50
+		if = {
+			limit = {
+				has_treasury = no
+				monthly_character_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+		else_if = {
+			limit = {
+				has_treasury = yes
+				monthly_character_treasury_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+	}
+}
+
+# Bread and grain: fair prices and no hoarding. The poor eat more cheaply; the merchants resent it.
+me_muhtasib_task_bread = {
+	court_position_types = { me_muhtasib_court_position }
+
+	cost = {
+		round = no
+		gold = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = no } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = yes } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+	}
+
+	employee_modifier = {
+	}
+
+	base_employer_modifier = {
+		trade_competitiveness_mult = -0.05
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			trade_category_cereals_buy_price_mult = -0.02
+			popular_opinion_add = 2
+		}
+		poor = {
+			trade_category_cereals_buy_price_mult = -0.04
+			popular_opinion_add = 4
+		}
+		average = {
+			trade_category_cereals_buy_price_mult = -0.06
+			popular_opinion_add = 6
+		}
+		good = {
+			trade_category_cereals_buy_price_mult = -0.08
+			popular_opinion_add = 8
+		}
+		excellent = {
+			trade_category_cereals_buy_price_mult = -0.1
+			popular_opinion_add = 10
+		}
+	}
+
+	is_shown = { is_landed = yes }
+	is_valid_showing_failures_only = { }
+
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 25
+		if = {
+			limit = {
+				has_treasury = no
+				monthly_character_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+		else_if = {
+			limit = {
+				has_treasury = yes
+				monthly_character_treasury_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+	}
+}
+
+# Commanding right and forbidding wrong in the streets. Pressed harder where the rite forbids wine (special_doctrine_alcohol_forbidden), more lightly where it permits it (doctrine_alcohol_permitted); see me_muhtasib_effects.txt.
+me_muhtasib_task_morals = {
+	court_position_types = { me_muhtasib_court_position }
+
+	cost = {
+		round = no
+		gold = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = no } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = yes } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+	}
+
+	employee_modifier = {
+		monthly_piety = 0.5
+	}
+
+	base_employer_modifier = {
+		popular_opinion_add = -3
+		trade_category_alcohol_sell_price_mult = -0.1
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			monthly_piety_gain_mult = 0.02
+			clergy_opinion = 2
+		}
+		poor = {
+			monthly_piety_gain_mult = 0.04
+			clergy_opinion = 4
+		}
+		average = {
+			monthly_piety_gain_mult = 0.06
+			clergy_opinion = 6
+		}
+		good = {
+			monthly_piety_gain_mult = 0.08
+			clergy_opinion = 8
+		}
+		excellent = {
+			monthly_piety_gain_mult = 0.1
+			clergy_opinion = 10
+		}
+	}
+
+	is_shown = { is_landed = yes }
+	is_valid_showing_failures_only = { }
+
+	on_start = {
+		scope:liege = { me_muhtasib_morals_doctrine_effect = yes }
+	}
+	on_yearly = {
+		scope:liege = { me_muhtasib_morals_doctrine_effect = yes }
+	}
+	on_end = {
+		scope:liege = { me_muhtasib_morals_doctrine_end_effect = yes }
+	}
+
+	ai_will_do = {
+		value = ai_zeal
+		if = {
+			limit = {
+				has_treasury = no
+				monthly_character_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+		else_if = {
+			limit = {
+				has_treasury = yes
+				monthly_character_treasury_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+	}
+}
+
+# Streets, buildings and the standards of the crafts.
+me_muhtasib_task_streets = {
+	court_position_types = { me_muhtasib_court_position }
+
+	cost = {
+		round = no
+		gold = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = no } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+		treasury = {
+			value = 0
+			if = {
+				limit = { scope:liege = { has_treasury = yes } }
+				add = {
+					value = monthly_court_position_task_cost
+					desc = COURT_POSITION_TASK_COST_BREAKDOWN_BASE
+					format = "BASE_VALUE_FORMAT_DECIMALS_PLUS_NEGATIVE"
+				}
+			}
+		}
+	}
+
+	employee_modifier = {
+	}
+
+	base_employer_modifier = {
+	}
+
+	scaling_employer_modifiers = {
+		terrible = {
+			epidemic_resistance = 2
+			build_speed = -0.02
+			trade_expertise_growth_mult = 0.01
+		}
+		poor = {
+			epidemic_resistance = 4
+			build_speed = -0.04
+			trade_expertise_growth_mult = 0.02
+		}
+		average = {
+			epidemic_resistance = 6
+			build_speed = -0.06
+			trade_expertise_growth_mult = 0.03
+		}
+		good = {
+			epidemic_resistance = 8
+			build_speed = -0.08
+			trade_expertise_growth_mult = 0.04
+		}
+		excellent = {
+			epidemic_resistance = 10
+			build_speed = -0.1
+			trade_expertise_growth_mult = 0.05
+		}
+	}
+
+	is_shown = { is_landed = yes }
+	is_valid_showing_failures_only = { }
+
+	on_start = { }
+	on_end = { }
+
+	ai_will_do = {
+		value = 25
+		if = {
+			limit = {
+				has_treasury = no
+				monthly_character_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+		else_if = {
+			limit = {
+				has_treasury = yes
+				monthly_character_treasury_income < monthly_court_position_task_cost_double
+			}
+			add = -1000
+		}
+	}
+}
+

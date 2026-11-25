@@ -1,30 +1,28 @@
-### Hijri Calendar Script Values ###
+﻿### Hijri Calendar Script Values ###
 
 # Safely read Hijri year from global variable
 me_hijri_year_display = {
-	value = 0
+	value = rc_HY
+}
+
+me_hijri_imami_year_display = {
+	value = me_hijri_year_display
 	if = {
-		limit = { exists = global_var:me_hijri_year }
-		add = global_var:me_hijri_year
+		limit = {
+			me_hijri_month_value < 3
+		}
+		subtract = 1
 	}
 }
 
 # Safely read Hijri month from global variable
 me_hijri_month_value = {
-	value = 0
-	if = {
-		limit = { exists = global_var:me_hijri_month }
-		add = global_var:me_hijri_month
-	}
+	value = rc_HM
 }
 
 # Safely read Hijri day from global variable
 me_hijri_day_display = {
-	value = 0
-	if = {
-		limit = { exists = global_var:me_hijri_day }
-		add = global_var:me_hijri_day
-	}
+	value = rc_HD
 }
 
 # Check if current Hijri month is odd (1,3,5,7,9,11 = 30 days)
@@ -55,4 +53,365 @@ me_hijri_year_from_formula = {
 	subtract = 622
 	multiply = 33
 	divide = 32
+}
+
+
+rc_D = {
+	value = current_day
+}
+rc_M = {
+	value = current_month
+	if = {
+		limit = { current_month < 3 }
+		add = 12
+	}
+}
+rc_Y = {
+	value = current_year
+	if = {
+		limit = { current_month < 3 }
+		subtract = 1
+	}
+}
+
+rc_JD = {
+	value = 365.25
+	multiply = {
+		value = rc_Y
+		add = 4716
+	}
+	floor = yes
+	add = {
+		value = 30.6001
+		multiply = {
+			value = rc_M
+			add = 1
+		}
+	}
+	floor = yes
+	add = rc_D
+	subtract = 1524
+}
+
+rc_epochastro = {
+	value = 1948084
+}
+rc_iyear = {
+	value = 10631
+	divide = 30
+}
+rc_shift1 = {
+	value = 8.01
+	divide = 60
+}
+
+rc_z1 = {
+	value = rc_JD
+	subtract = rc_epochastro
+}
+rc_cyc = {
+	value = rc_z1
+	divide = 10631
+	floor = yes
+}
+#rc_z2 = {
+#	value = rc_z1
+#	subtract = 10631
+#	multiply = rc_cyc
+#}
+rc_z2 = {
+	value = rc_z1
+	subtract = {
+		value = 10631
+		multiply = rc_cyc
+	}
+}
+rc_j = {
+	value = rc_z2
+	subtract = rc_shift1
+	divide = rc_iyear
+	floor = yes
+}
+rc_z3 = {
+	value = rc_z2
+	subtract = {
+		value = rc_j
+		multiply = rc_iyear
+		add = rc_shift1
+	}
+	floor = yes
+}
+
+
+rc_WD = { # Week Days
+	value = rc_JD
+	add = 1
+	modulo = 7
+}
+rc_HY = { # Hijri Year
+	value = 30
+	multiply = rc_cyc
+	add = rc_j
+}
+rc_HM = { # Hijri Month
+	value = rc_z3
+	add = 28.5001
+	divide = 29.5
+	floor = yes
+	max = 12
+}
+#rc_HD = { # Hijri Day
+#	value = rc_z3
+#	subtract = {
+#		value = 29.5001
+#		multiply = rc_HM
+#		subtract = rc_shift1
+#	}
+#	floor = yes
+#}
+#rc_HD = {
+#	value = rc_z3
+#	subtract = {
+#		value = 29.5001
+#		multiply = rc_HM
+#		subtract = 29
+#	}
+#	floor = yes
+#}
+
+rc_HD_temp = {
+	value = 29.5001
+	multiply = rc_HM
+	subtract = 29
+	floor = yes
+}
+
+rc_HD = {
+	value = rc_z3
+	subtract = rc_HD_temp
+}
+
+### Days until Ramadan
+rc_NextRamYear = {
+    value = rc_HY
+    if = {
+        limit = {
+            OR = {
+                rc_HM > 9
+                AND = {
+                    rc_HM = 9
+                    rc_HD >= 1
+                }
+            }
+        }
+        add = 1
+    }
+}
+rc_RamadanJD = {
+    value = 1
+    add = {
+        value = 29.5
+        multiply = 8
+        ceiling = yes
+    }
+    add = {
+        value = rc_NextRamYear
+        subtract = 1
+        multiply = 354
+    }
+    add = {
+        value = 3
+        add = {
+            value = 11
+            multiply = rc_NextRamYear
+        }
+        divide = 30
+        floor = yes
+    }
+    add = 1948439
+}
+rc_DRem_Ram = {
+    value = rc_RamadanJD
+    subtract = rc_JD
+}
+
+### Days until Rajab
+rc_NextRajYear = {
+    value = rc_HY
+    if = {
+        limit = {
+            OR = {
+                rc_HM > 7
+                AND = {
+                    rc_HM = 7
+                    rc_HD >= 1
+                }
+            }
+        }
+        add = 1
+    }
+}
+rc_RajabJD = {
+    value = 1
+    add = {
+        value = 29.5
+        multiply = 6
+        ceiling = yes
+    }
+    add = {
+        value = rc_NextRajYear
+        subtract = 1
+        multiply = 354
+    }
+    add = {
+        value = 3
+        add = {
+            value = 11
+            multiply = rc_NextRajYear
+        }
+        divide = 30
+        floor = yes
+    }
+    add = 1948439
+}
+rc_DRem_Raj = {
+    value = rc_RajabJD
+    subtract = rc_JD
+}
+
+### Days until Eid ul-Adha
+rc_NextAdhaYear = {
+    value = rc_HY
+    if = {
+        limit = {
+            OR = {
+                rc_HM > 12
+                AND = {
+                    rc_HM = 12
+                    rc_HD >= 10
+                }
+            }
+        }
+        add = 1
+    }
+}
+rc_AdhaJD = {
+    value = 10
+    add = {
+        value = 29.5
+        multiply = 11
+        ceiling = yes
+    }
+    add = {
+        value = rc_NextAdhaYear
+        subtract = 1
+        multiply = 354
+    }
+    add = {
+        value = 3
+        add = {
+            value = 11
+            multiply = rc_NextAdhaYear
+        }
+        divide = 30
+        floor = yes
+    }
+    add = 1948439
+}
+rc_DRem_Adha = {
+    value = rc_AdhaJD
+    subtract = rc_JD
+}
+
+rc_DRem_Adha_notif = {
+    value = rc_DRem_Adha
+    subtract = 30
+}
+
+### Days until Ashura
+rc_NextAshYear = {
+    value = rc_HY
+    if = {
+        limit = {
+            OR = {
+                rc_HM > 1
+                AND = {
+                    rc_HM = 1
+                    rc_HD >= 10
+                }
+            }
+        }
+        add = 1
+    }
+}
+rc_AshuraJD = {
+    value = 10
+    add = {
+        value = 29.5
+        multiply = 0
+        ceiling = yes
+    }
+    add = {
+        value = rc_NextAshYear
+        subtract = 1
+        multiply = 354
+    }
+    add = {
+        value = 3
+        add = {
+            value = 11
+            multiply = rc_NextAshYear
+        }
+        divide = 30
+        floor = yes
+    }
+    add = 1948439
+}
+rc_DRem_Ash = {
+    value = rc_AshuraJD
+    subtract = rc_JD
+}
+
+### Days until next Muharram
+rc_NextMuhYear = {
+    value = rc_HY
+    if = {
+        limit = {
+            OR = {
+                rc_HM > 1
+                AND = {
+                    rc_HM = 1
+                    rc_HD >= 1
+                }
+            }
+        }
+        add = 1
+    }
+}
+rc_MuharramJD = {
+    value = 1
+    add = {
+        value = 29.5
+        multiply = 0
+        ceiling = yes
+    }
+    add = {
+        value = rc_NextMuhYear
+        subtract = 1
+        multiply = 354
+    }
+    add = {
+        value = 3
+        add = {
+            value = 11
+            multiply = rc_NextMuhYear
+        }
+        divide = 30
+        floor = yes
+    }
+    add = 1948439
+}
+rc_DRem_Muh = {
+    value = rc_MuharramJD
+    subtract = rc_JD
 }

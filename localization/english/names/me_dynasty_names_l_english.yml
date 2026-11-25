@@ -11,10 +11,7 @@
  dynn_Husairi:0 "Husairi"
  dynn_Mishkanid:0 "Mishkanid"
  dynn_Khatri:0 "Khatri"
- dynn_Faridid:0 "Faridid"
- me_najahid:0 "Najahid"
- dynn_banu_numayr:0 "Banu Numayr"
- dynn_ishaaq:0 "Ishaaq"
+ dynn_me_najahid:0 "Najahid"
  dynn_at_tahawi:0 "at-Tahawi"
 
  #Easter Eggs
@@ -41,8 +38,20 @@
  dynn_me_mazyadi:0 "al-Mazyadi"
  dynn_banu_thaqif:0 "ath-Thaqafi"
  dynn_me_lakhmid:0 "al-Lakhami"
+ dynn_me_al_bakri:0 "al-Bakri"
+ dynn_me_ar_rabii:0 "ar-Rabi'i"
+ dynn_me_al_hanafi:0 "al-Hanafi"
+ dynn_me_al_masruqi:0 "al-Masruqi"
+ dynn_me_banu_damrah:0 "aḍ-Ḍamrawi"
+ dynn_me_al_Khawlani:0 "al-Khawlani"
+ dynn_me_al_Ghafiqi:0 "al-Ghafiqi"
+ dynn_me_al_Quda_i:0 "al-Quḍā'i"
+ dynn_me_al_Munqidhi:0 "al-Munqidhi"
+ dynn_me_al_Hawazini:0 "al-Hawazini"
  
  #Arabic Dynasties
+ dynn_banu_numayr:0 "an-Numayri"
+ dynn_me_an_Nakha_i:0 "an-Nakha'i"
  dynn_me_ghanawi:0 "al-Ghanawi"
  dynn_me_karrami:0 "al-Karrami"
  dynn_me_mudhhaj:0 "al-Mudhhaji" # al-Mudhḥaji
@@ -58,6 +67,19 @@
  dynn_me_al_madharai:0 "al-Madhara'i"
  dynn_me_al_taifi:0 "at-Ta'ifi"
  dynn_me_al_arslani:0 "al-Arslani"
+ dynn_me_al_Jayshani:0 "al-Jayshani"
+ dynn_me_al_Hawshabi:0 "al-Hawshabi"
+ dynn_me_al_Jufi:0 "al-Ju'fi"
+ dynn_me_al_Harrami:0 "al-Harrami"
+ dynn_me_al_Haythami:0 "al-Haythami"
+ dynn_me_Jarjisid:0 "Jarjisid"
+ dynn_me_al_Hannawi:0 "al-Hannawi"
+ dynn_me_al_Hudhaqi:0 "al-Hudhaqi"
+ dynn_me_as_Sinani:0 "as-Sinani"
+ dynn_me_al_Ansari:0 "al-Ansari"
+ dynn_me_al_Khazai:0 "al-Khaza'i"
+ dynn_me_an_Nuwayri:0 "an-Nuwayri"
+ dynn_me_az_Zanjili:0 "az-Zanjili"
  
  #Ahl Quraysh
  dynn_me_qurashi:0 "al-Qurashī"
@@ -66,15 +88,14 @@
  dynn_me_banu_taym:0 "at-Taymī"
  dynn_me_banu_abd_shams:0 "al-'Abshamī"
  dynn_me_banu_makhzum:0 "al-Makhzumī"
- dynn_Ukhaidhirid:0 "al-Ukhaydiri"
- dynn_Zaydid:0 "al-Zaydī"
- dynn_Habbari:0 "al-Habbāri"
- dynn_me_anfid:0 "al-Anfi"
+ dynn_me_anfid:0 "Anfid" # Named Anfid and not al-Anfi to be similar to Umayyad
+ dynn_me_al_zaydi:0 "az-Zaydī"
  dynn_me_ba_alawi:0 "Ba'Alawi"
  dynn_me_as_sufi:0 "as-Sufi"
  dynn_me_tabatabaid:0 "at-Tabataba'i"
  dynn_me_rahilid:0 "ar-Rahili"
  dynn_me_munabbihid:0 "al-Munabbihi"
+ dynn_me_al_ashtari:0 "al-Ashtari"
 
  #North African Dynasties
  dynn_me_khazarids:0 "Khazarid"
@@ -125,6 +146,12 @@
  dynn_me_jayghawayhid:0 "Jayghawayhid"
  dynn_me_mawdudid:0 "Mawdudid"
  dynn_me_takshid:0 "Takshid"
+ dynn_me_Mihrawayhid:0 "Mihrawayhid"
+ dynn_me_Quhid:0 "Quhid"
+ dynn_me_Karajid:0 "Karajid"
+ dynn_me_Chachid:0 "Chachid"
+ dynn_me_Juzanid:0 "Juzanid"
+ dynn_me_al_Kurdi:0 "al-Kurdi"
  
  #Turkic Dynasties
  dynn_me_hulwanid:0 "Hulwanid"
@@ -132,9 +159,13 @@
  dynn_me_azjurid:0 "Azjurid"
  dynn_me_buhmid:0 "Buhmid"
  dynn_me_balbardid:0 "Balbardid"
+ dynn_me_Aibakid:0 "Aibakid"
+ dynn_me_Ta_izzid:0 "Ta'izzid"
  
  #Indo-Aryan dynasties
  dynn_me_aymaqid:0 "Aymaqid"
+ dynn_me_Zuttid:0 "Zuttid"
+ dynn_me_Isamid:0 "Isamid"
  
  ## Sicilian Dynasties ##
  #Main Dynasties
@@ -631,8 +662,8 @@
  dynn_ad_Dawudi:0 "ad-Dawudi"
  dynn_al_Fadli:0 "al-Fadli"
  dynn_al_Faraji:0 "al-Faraji"
- dynn_al_Fareedi:0 "al-Fareedi"
  dynn_al_Farhani:0 "al-Farhani"
+ dynn_al_Faridi:0 "al-Faridi"
  dynn_al_Fihri:0 "al-Fihri"
  dynn_al_Firasi:0 "al-Firasi"
  dynn_al_Habili:0 "al-Habili"
@@ -758,8 +789,8 @@
  dynn_Dabbusid:0 "Dabbusid"
  dynn_Dabusid:0 "Dabusid"
  dynn_Dawudid:0 "Dawudid"
- dynn_Fareedid:0 "Fareedid"
  dynn_Farhanid:0 "Farhanid"
+ dynn_Faridid:0 "Faridid"
  dynn_Fikrid:0 "Fikrid"
  dynn_Firasid:0 "Firasid"
  dynn_Habilid:0 "Habilid"
@@ -769,7 +800,6 @@
  dynn_Hussaynid:0 "Hussaynid"
  dynn_Imranid:0 "Imranid"
  dynn_Iyadid:0 "Iyadid"
- dynn_Ja_farid:0 "Ja'farid"
  dynn_Jawdatid:0 "Jawdatid"
  dynn_Jabirilid:0 "Jabirilid"
  dynn_Khafajid:0 "Khafajid"
@@ -795,7 +825,6 @@
  dynn_Rashidid:0 "Rashidid"
  dynn_Ridwanid:0 "Ridwanid"
  dynn_Sa_idid:0 "Sa'idid"
- dynn_Sabahid:0 "Sabahid"
  dynn_Sabirid:0 "Sabirid"
  dynn_Sajidid:0 "Sajidid"
  dynn_Samoudd:0 "Samoudd"

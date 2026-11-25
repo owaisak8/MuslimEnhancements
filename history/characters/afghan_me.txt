@@ -1,7 +1,7 @@
 ﻿me_afghan_001 = {
 	name = "Zaid" # Fictional
 	dynasty = 1041119
-	religion = "imami"
+	rite = "imami"
 	culture = "afghan"
 	834.1.1 = {
 		birth = yes
@@ -14,7 +14,7 @@
 afg001 = {
 	name = "Surxap"
 	dynasty = afg_kho
-	religion = "mahayana"
+	rite = "mahayana"
 	culture = "afghan"
 	1022.1.1 = {
 		birth = 1022.1.1

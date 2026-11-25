@@ -1,11 +1,22 @@
 ﻿l_english:
 
+ game_concept_imamate:0 "Imamate"
+ game_concept_imamate_government:0 "Imamate Government"
+ game_concept_imamate_desc:0 "The Imamate [government_form|E] is a form of Islamic government led by an Imam, who is considered the religious and political leader of the Muslim community."
+
  game_concept_iqta:0 "Iqta"
  game_concept_iqta_government:0 "Iqta Government"
  game_concept_iqta_desc:0 "Under the Iqta [government_form|E], a [liege|E] grants their [vassals|E] [land|E] to govern in exchange for [levies|E] and [taxes|E], regulated by individual [iqta_contracts|E] between Vassal and Liege."
  game_concept_iqta_contract:0 "Iqta Contract"
  game_concept_iqta_contracts:0 "Iqta Contracts"
  game_concept_iqta_contract_desc:1 "A $game_concept_iqta_contract$ specifies the [obligations|E] between a [iqta|E] [vassal|E] and their [liege|E]. It allows each Vassal to negotiate their Obligations individually. Moreover, Vassals of different [faith|E] don't need to provide a lot of [soldiers|E], but if they do, can be exempted from higher [taxes|E].\n\nSpecial contracts, such as #V $special_contract_iqta_grant_waqf_short$#!, #V $special_contract_iqta_free_market_short$#! and #V $special_contract_iqta_thughur_short$#! are available as well."
+
+ me_imamate_government:0 "Imamate"
+ me_imamate_government_adjective:0 "Imamate"
+ me_imamate_government_realm:0 "Imamate"
+ me_imamate_government_vassals_label:1 "Followers of the Imam defer to him for guidance and leadership, and are expected to follow his directives in matters of governance and religious practice."
+ me_imamate_government_obligations:0 "[GetGovernment( 'me_imamate_government' ).GetName] [obligations|E]"
+ me_imamate_government_desc:0 "$game_concept_imamate_desc$\n\n#F The Imam's authority is derived from their knowledge of Islamic law and their ability to lead the community in accordance with religious principles. The Imamate emphasizes the importance of justice, consultation, and adherence to Islamic teachings in governance.#!"
 
  siyasa_government:0 "Iqta"
  siyasa_government_adjective:0 "Iqta"
@@ -18,11 +29,11 @@
  special_contract_iqta_normal:0 "Normal"
  special_contract_iqta_normal_desc:1 "#flavor Under normal $game_concept_iqta_contracts$, [vassals|E] having the same [religion|E] as their [liege|E] give normal amounts of troops and taxes. Vassals with a different religion provide considerably less [soldiers|E] but significantly more [taxes|E].\n\n"
  special_contract_iqta_thughur:0 "Thughur"
- special_contract_iqta_thughur_desc:2 "#flavor Under Thughur, a [vassal|E] diverts his [taxes|E] and [soldiers|E] towards the defence of his realm, building castles and fortifications more efficiently at the cost of [development|E]."
+ special_contract_iqta_thughur_desc:2 "#flavor Under Thughur, a [vassal|E] diverts his [taxes|E] and [soldiers|E] towards the defence of his realm, building castles and fortifications more efficiently at the cost of [prosperity|E]."
  special_contract_iqta_grant_waqf:0 "Waqf Contract"
  special_contract_iqta_grant_waqf_desc:2 "#flavor A Waqf is a [tax|E]-free land grant given by a [liege|E] to their [vassals|E] for religious and charitable purposes. A ruler who hands out Waqfs is seen by others as #high $game_concept_pious$#!, while the beneficiary is expected to focus on constructing [buildings|E] of religious significance instead of maintaining [soldiers|E].#!"
  special_contract_iqta_free_market:0 "Havaleh"
- special_contract_iqta_free_market_desc:2 "#flavor A Havaleh, or a Trust, authorizes the [vassal|E] to implement a value transfer system without the actual movement of currency. This minimizes the risk Traders and Caravans face and hence encourages [development|E]. However, implementing this system requires investment in [city|E] offices which is where most of the [tax|E] Income will go.#!"
+ special_contract_iqta_free_market_desc:2 "#flavor A Havaleh, or a Trust, authorizes the [vassal|E] to implement a value transfer system without the actual movement of currency. This minimizes the risk Traders and Caravans face and hence encourages [prosperity|E]. However, implementing this system requires investment in [city|E] offices which is where most of the [tax|E] Income will go.#!"
  special_contract_iqta_normal_short:0 "Normal"
  special_contract_iqta_thughur_short:0 "Thughur"
  special_contract_iqta_grant_waqf_short:0 "Waqf"

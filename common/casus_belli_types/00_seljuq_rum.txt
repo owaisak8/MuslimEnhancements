@@ -8,7 +8,7 @@
 	allowed_for_character = {
 		NOR = {
 			has_character_flag = used_lifetime_invasion
-			faith = { has_doctrine_parameter = invasion_cb_enabled }
+			rite = { rite_has_parameter = invasion_cb_enabled }
 		}
 	}
 
@@ -362,11 +362,11 @@
 
 				title:c_zela = {
 					change_title_holder = {
-					   holder = character:danishmendid_1
-					   change = scope:steal
+						holder = character:danishmendid_1
+						change = scope:steal
 						take_baronies = yes
 					}
-			    }
+				}
 
 				character:danishmendid_1 = {
 					change_liege = {
@@ -620,18 +620,18 @@
 
 				title:d_bucellaria = {
 					change_title_holder = {
-                        holder = character:34220
-                        change = scope:steal
-                        take_baronies = no
-                    }
-			    }
+						holder = character:34220
+						change = scope:steal
+						take_baronies = no
+					}
+				}
 
 				title:c_galatia = {
 					change_title_holder = {
-                        holder = character:34220
-                        change = scope:steal
-                        take_baronies = no
-                    }
+						holder = character:34220
+						change = scope:steal
+						take_baronies = no
+					}
 
 					add_county_modifier = {
 						modifier = defending_against_turks_control
@@ -642,14 +642,14 @@
 						modifier = defending_against_turks_opinion
 						years = 5
 					}
-			    }
+				}
 
 				title:c_hadrianopolis = {
 					change_title_holder = {
-                        holder = character:34220
-                        change = scope:steal
-                        take_baronies = no
-                    }
+						holder = character:34220
+						change = scope:steal
+						take_baronies = no
+					}
 
 					add_county_modifier = {
 						modifier = defending_against_turks_control
@@ -660,15 +660,15 @@
 						modifier = defending_against_turks_opinion
 						years = 5
 					}
-			    }
+				}
 
 				title:d_paphlagonia = {
-                	every_in_de_jure_hierarchy = {
-                		change_title_holder = {
-                            holder = character:34220
-                            change = scope:steal
-                            take_baronies = no
-                        }
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:34220
+							change = scope:steal
+							take_baronies = no
+						}
 						if = {
 							limit = {
 								tier = tier_county
@@ -686,12 +686,12 @@
 				}
 
 				title:d_armeniac = {
-                	every_in_de_jure_hierarchy = {
-                		change_title_holder = {
-                            holder = character:34220
-                            change = scope:steal
-                            take_baronies = no
-                        }
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:34220
+							change = scope:steal
+							take_baronies = no
+						}
 					}
 				}
 
@@ -719,18 +719,18 @@
 			
 				title:d_bucellaria = {
 					change_title_holder = {
-                        holder = scope:norman_leader
-                        change = scope:steal
-                        take_baronies = no
-                    }
-			    }
+						holder = scope:norman_leader
+						change = scope:steal
+						take_baronies = no
+					}
+				}
 
 				title:c_galatia = {
 					change_title_holder = {
-                        holder = scope:norman_leader
-                        change = scope:steal
-                        take_baronies = no
-                    }
+						holder = scope:norman_leader
+						change = scope:steal
+						take_baronies = no
+					}
 
 					add_county_modifier = {
 						modifier = defending_against_turks_control
@@ -741,14 +741,14 @@
 						modifier = defending_against_turks_opinion
 						years = 5
 					}
-			    }
+				}
 
 				title:c_hadrianopolis = {
 					change_title_holder = {
-                        holder = scope:norman_leader
-                        change = scope:steal
-                        take_baronies = no
-                    }
+						holder = scope:norman_leader
+						change = scope:steal
+						take_baronies = no
+					}
 
 					add_county_modifier = {
 						modifier = defending_against_turks_control
@@ -759,15 +759,15 @@
 						modifier = defending_against_turks_opinion
 						years = 5
 					}
-			    }
+				}
 
 				title:d_paphlagonia = {
-                	every_in_de_jure_hierarchy = {
-                		change_title_holder = {
-                            holder = scope:norman_leader
-                            change = scope:steal
-                            take_baronies = no
-                        }
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = scope:norman_leader
+							change = scope:steal
+							take_baronies = no
+						}
 						if = {
 							limit = {
 								tier = tier_county
@@ -785,12 +785,12 @@
 				}
 
 				title:d_armeniac = {
-                	every_in_de_jure_hierarchy = {
-                		change_title_holder = {
-                            holder = scope:norman_leader
-                            change = scope:steal
-                            take_baronies = no
-                        }
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = scope:norman_leader
+							change = scope:steal
+							take_baronies = no
+						}
 					}
 				}
 
@@ -816,17 +816,17 @@
 				title:d_bulgaria = {
 					every_in_de_jure_hierarchy = {
 						change_title_holder = {
-                            holder = character:20474
-                            change = scope:steal
-                            take_baronies = no
-                        }
+							holder = character:20474
+							change = scope:steal
+							take_baronies = no
+						}
 					}
 				}
 				title:k_bulgaria = {
 					change_title_holder = {
-                        holder = character:20474
-                    	change = scope:steal
-                    }
+						holder = character:20474
+						change = scope:steal
+					}
 				}
 				character:20474 = {
 					becomes_independent = {
@@ -865,12 +865,12 @@
 				}
 
 				title:d_optimatoi = {
-                	every_in_de_jure_hierarchy = {
-                		change_title_holder = {
-                            holder = character:1742
-                            change = scope:change
-                            take_baronies = no
-                        }
+					every_in_de_jure_hierarchy = {
+						change_title_holder = {
+							holder = character:1742
+							change = scope:change
+							take_baronies = no
+						}
 						if = {
 							limit = {
 								tier = tier_county
@@ -889,10 +889,10 @@
 
 				title:c_honorias = {
 					change_title_holder = {
-                        holder = character:1742
-                        change = scope:change
-                        take_baronies = no
-                    }
+						holder = character:1742
+						change = scope:change
+						take_baronies = no
+					}
 
 					add_county_modifier = {
 						modifier = defending_against_turks_control
@@ -903,7 +903,7 @@
 						modifier = defending_against_turks_opinion
 						years = 10
 					}
-			    }
+				}
 
 				character:1742 = {
 
@@ -1197,11 +1197,7 @@
 
 		# Prestige loss for the attacker
 		scope:attacker = {
-			pay_short_term_gold = {
-				gold = 5
-				target = scope:defender
-				yearly_income = yes
-			}
+			pay_short_term_gold_reparations_effect = { GOLD_VALUE = 5 } # ME: 1.21 form of the old "N years of income" payment
 			add_prestige = {
 				value = massive_prestige_value
 				multiply = -1.0

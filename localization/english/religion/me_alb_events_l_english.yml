@@ -30,9 +30,9 @@
  #Sunni List
  alb_cm.0003.t:0 "Sunni Faiths"
  alb_cm.0003.desc:0 "Sunni Islam is the largest branch of Islam, its name commes from the word Sunnah, refering to the tradition of Prophet Muhammad, they are refered to as 'Ahl as-Sunnah wal-Jama'ah' which means in Arabic 'The People of the Tradition and the Community'.\n\nAhl al-Sunnah believe that Prophet Muhammad's successors are the 'Four Rightly Guided Caliphs': Abu Bakr, Umar, Uthman, and Ali.\nThey also believe that one does not need to be a decendant of the Prophet to be a Caliph."
- alb_cm.0003.a:0 "Sunnism"
- alb_cm.0003.b:0 "Muwalladism"
- alb_cm.0003.c:0 "Maturidism"
+ alb_cm.0003.a:0 "Shafi'i Sunnism"
+ alb_cm.0003.b:0 "Maliki Sunnism"
+ alb_cm.0003.c:0 "Hanafi Sunnism"
  alb_cm.0003.d:0 "Almohadism"
  
  #Shia List

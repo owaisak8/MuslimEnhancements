@@ -275,14 +275,12 @@ become_hafidh_outcome.2000 = {
 #################################
 
 scripted_trigger is_valid_continuation_target = {
-	AND = {
-		faith.religion = religion:islam_religion
-		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-		NOT = { faith = faith:druze }
-		has_trait_xp = {
-			trait = hafidh
-			value >= 30
-		}
+	faith.religion = religion:islam_religion
+	NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+	NOT = { rite = rite:druze }
+	has_trait_xp = {
+		trait = hafidh
+		value >= 30
 	}
 	root = {
 		can_start_scheme = {

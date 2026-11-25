@@ -202,6 +202,12 @@ narjis_shield = {
 
 }
 
+fatima_masuma_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "fatima_masuma_shield_entity" }
+
+}
+
 khalid_ibn_al_walid_shield = {
 
 	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "khalid_ibn_al_walid_shield_entity" }

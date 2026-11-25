@@ -1,0 +1,98 @@
+﻿# ME: Muslims of Austronesian cultures wear a mix of their own dress and Arab dress. Applied after clothes_base
+# (priority 1): about half of them get an Arab outfit of their rank, the other half pick "keep_own_dress", which changes
+# nothing, so vanilla's outfit stays. Only the clothes gene is touched, so they keep their own headwear.
+# Religious, armour and situational clothes (priority 3+) still apply on top.
+me_clothes_austronesian_muslim = {
+	usage = game
+	selection_behavior = weighted_random
+	priority = 2
+
+	keep_own_dress = {
+		dna_modifiers = {
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				me_portrait_austronesian_muslim_trigger = yes
+			}
+		}
+	}
+
+	arab_commoner_dress = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = mena_commoner_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				me_portrait_austronesian_muslim_trigger = yes
+				portrait_commoner_clothing_trigger = { CULTURE_INPUT = southeast_asian }
+			}
+		}
+	}
+
+	arab_low_noble_dress = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = mena_low_nobility_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				me_portrait_austronesian_muslim_trigger = yes
+				portrait_low_nobles_clothing_trigger = { CULTURE_INPUT = southeast_asian }
+			}
+		}
+	}
+
+	arab_high_noble_dress = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = mena_high_nobility_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				me_portrait_austronesian_muslim_trigger = yes
+				portrait_high_nobles_clothing_trigger = { CULTURE_INPUT = southeast_asian }
+			}
+		}
+	}
+
+	arab_royal_dress = {
+		dna_modifiers = {
+			accessory = {
+				mode = add
+				gene = clothes
+				template = mena_high_nobility_clothes
+				range = { 0 1 } # For the randomness to work correctly
+			}
+		}
+		weight = {
+			base = 0
+			modifier = {
+				add = 50
+				me_portrait_austronesian_muslim_trigger = yes
+				portrait_royalty_trigger = { CULTURE_INPUT = southeast_asian }
+			}
+		}
+	}
+
+}

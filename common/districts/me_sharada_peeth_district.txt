@@ -1,0 +1,9 @@
+﻿sharada_peeth_01_district = {
+	primary_building = sharada_peeth_01
+
+	background = {
+		reference = "gfx/interface/illustrations/event_scenes/bp2_study_indian.dds"
+	}
+
+	type = special
+}

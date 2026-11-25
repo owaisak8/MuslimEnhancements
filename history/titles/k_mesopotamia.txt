@@ -1,9 +1,9 @@
 ﻿k_mesopotamia = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
 
-#	638.1.1 = { # All of Iraq was conquered 
+#	638.1.1 = { # All of Iraq was conquered
 #		liege = "e_arabia"
 #	}
 	### Umayyad Governors ###
@@ -26,16 +26,25 @@
 	715.7.18 = {
 		holder = 0
 	}
+	721.1.1 = {
+		holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	}
+	721.6.1 = {
+		holder = 0
+	}
 	738.1.1 = {
 		holder = me_thaqafi_022 # Yusuf ibn Umar ath-Thaqafi
 	}
 	745.1.1 = {
+		holder = me_kalbids_117 # Mansur ibn Jumhur al-Kalbi
+	}
+	745.2.1 = {
 		holder = 0
 	}
-	
+
 #	1050.1.1 = { # Togglable via game rule
-#		holder = 3084 
-#		liege = e_persia 
+#		holder = 3084
+#		liege = e_persia
 #	}
 
 	1136.1.1 = {
@@ -50,9 +59,16 @@
 }
 
 d_samarra = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
+
+	866.1.1 = {
+		holder = 34014
+	}
+	869.1.1 = {
+		holder = 0
+	}
 }
 
 c_samarra = {
@@ -185,7 +201,7 @@ c_hulwan = {
 		holder = 34016
 		liege = e_arabia
 	}
-	
+
 	1066.1.1 = {
 		liege = k_persia
 		holder = 159202 # Mihemed Annazid
@@ -246,7 +262,7 @@ c_hulwan = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -263,12 +279,12 @@ c_kirkuk = {
 		liege = d_azerbaijan
 		holder = 188659
 	}
-	
+
 	866.1.1 = {
 		liege = e_arabia
-		holder = levantine000009
+		holder = levantine000012 # al-Hasan ibn Ayyub ibn Ahmad ibn Umar ibn al-Khattab at-Taghlibi
 	}
-	
+
 	1066.1.1 = {
 		liege = k_persia
 		holder = 3040 # Alp Arslan
@@ -329,7 +345,7 @@ c_kirkuk = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -413,7 +429,7 @@ c_takrit = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -423,26 +439,26 @@ c_takrit = {
 }
 
 d_wasit = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
+
 	661.2.28 = {
 		liege = e_arabia
 	}
-	
-	### Umayyad Governors ### 
+
+	### Umayyad Governors ###
 	694.1.1 = { # Wasit is founded by al-Hajjaj
 		holder = me_thaqafi_007 # al-Hajjaj ibn Yusuf ath-Thaqafi
 	}
 	714.1.1 = {
 		holder = 0
 	}
-	
+
 	769.1.1 = {
 		holder = 188649
 	}
-	
+
 	866.1.1 = {
 		holder = 34015
 	}
@@ -455,7 +471,7 @@ d_wasit = {
 
 c_wasit = {
 
-	### Umayyad Governors ### 
+	### Umayyad Governors ###
 	694.1.1 = { # Wasit is founded by al-Hajjaj
 		holder = me_thaqafi_007 # al-Hajjaj ibn Yusuf ath-Thaqafi
 		liege = k_mesopotamia
@@ -519,11 +535,11 @@ c_tib = {
 	661.2.28 = {
 		liege = e_arabia
 	}
-	
+
 #	768.1.1 = {
 #		holder = 188631 # Khuzaymah b Khazmi (fictitious assignment)
 #	}
-	
+
 	866.1.1 = {
 		liege = "d_wasit"
 		holder = 34015
@@ -531,7 +547,7 @@ c_tib = {
 	869.1.1 = {
 		liege = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = "d_kermanshah"
 	}
@@ -581,7 +597,7 @@ c_tib = {
 }
 
 d_kufa = {
-	
+
 	### Kings of al-Hira ###
 	300.1.1 = {
 		holder = me_lakhmid_012 # Imru' al-Qays ibn Amr ibn Adi al-Lakhmi
@@ -641,7 +657,7 @@ d_kufa = {
 	633.1.1 = {
 		holder = me_lakhmid_040 #  al-Mundhir V ibn an-Nu'man al-Lakhmi
 	}
-	
+
 	### al-Hirah is Conquered by Khalid ibn al-Walid
 	633.8.1 = {
 		liege = "e_arabia"
@@ -669,6 +685,9 @@ d_kufa = {
 	673.1.1 = {
 		holder = me_umayyads_025 # Abdullah ibn Khalid ibn Asid al-Umawi
 	}
+	678.1.1 = {
+		holder = me_thaqafi_035 # Abd al-Rahman 'Ibn Umm al-Hakam' ibn Abdullah ath-Thaqafi
+	}
 	679.1.1 = {
 		holder = me_ziyadid_003 # Ubayd-Allah ibn Ziyad 'Ibn Abihi'
 	}
@@ -680,6 +699,12 @@ d_kufa = {
 		liege = k_mesopotamia
 	}
 	706.1.1 = {
+		holder = 0
+	}
+	720.1.1 = {
+		holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	}
+	721.6.1 = {
 		holder = 0
 	}
 
@@ -709,10 +734,10 @@ d_kufa = {
 }
 
 c_kufa = {
-	867.1.1 = {	change_development_level = 12 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	### Kings of al-Hira ###
 	195.1.1 = { # al-Hirah is founded
 		holder = me_azdid_040 # Malik ibn Fahm
@@ -781,7 +806,7 @@ c_kufa = {
 	633.1.1 = {
 		holder = me_lakhmid_040 #  al-Mundhir V ibn an-Nu'man al-Lakhmi
 	}
-	
+
 	### al-Hirah is Conquered by Khalid ibn al-Walid
 	633.8.1 = {
 		liege = "e_arabia"
@@ -813,12 +838,12 @@ c_kufa = {
 		holder = thaqifid027 # 'Urwah ibn Shu'bah ath-Thaqafi
 		liege = d_kufa
 	}
-	
+
 	765.1.1 = {
 		liege = e_arabia
 		holder = 188609 # Muhammad b Sulayman b Ali
 	}
-	
+
 	866.1.1 = {
 		liege = d_basra
 		holder = 34017
@@ -944,12 +969,12 @@ c_qadisiya = {
 		liege = e_arabia
 		holder = 188609 # Muhammad b Sulayman b Ali
 	}
-	
+
 	866.1.1 = {
 		liege = d_basra
 		holder = 34017
 	}
-	
+
 	1066.1.1 = {
 		holder = 93319
 	}
@@ -997,18 +1022,18 @@ c_batiha = {
 	750.1.1 = {
 		liege = d_wasit
 	}
-	
+
 	768.1.1 = {
 		holder = 188665
 	}
-	
+
 	866.1.1 = {
 		holder = 34015
 	}
 	869.1.1 = {
 		liege = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = d_basra
 		holder = 20698
@@ -1061,12 +1086,12 @@ c_akhadid = {
 		liege = e_arabia
 		holder = 188609 # Muhammad b Sulayman b Ali
 	}
-	
+
 	866.1.1 = {
 		liege = d_basra
 		holder = 34017
 	}
-	
+
 	1066.1.1 = {
 		holder = 93319
 	}
@@ -1115,12 +1140,12 @@ c_waqisa = {
 		liege = e_arabia
 		holder = 188609 # Muhammad b Sulayman b Ali
 	}
-	
+
 	866.1.1 = {
 		liege = d_basra
 		holder = 34017
 	}
-	
+
 	1066.1.1 = {
 		holder = 93319
 	}
@@ -1165,10 +1190,10 @@ c_waqisa = {
 
 
 d_basra = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
+
 	636.1.1 = { # Basra founded
 		liege = "e_arabia"
 	}
@@ -1185,6 +1210,12 @@ d_basra = {
 	694.1.1 = {
 		holder = thaqifid027 # 'Urwah ibn Shu'bah ath-Thaqafi
 		liege = k_mesopotamia
+	}
+	720.1.1 = {
+		holder = me_umayyads_045 # Maslamah ibn Abd al-Malik al-Umawi
+	}
+	721.6.1 = {
+		holder = 0
 	}
 
 	### Abbasid Governors ###
@@ -1283,10 +1314,10 @@ d_basra = {
 
 
 c_basra = {
-	867.1.1 = {	change_development_level = 12 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 39 }
-	
+	867.1.1 = {	change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 39 }
+
 	636.1.1 = { # Basra founded
 		liege = "e_arabia"
 	}
@@ -1311,7 +1342,7 @@ c_basra = {
 		liege = e_arabia
 		holder = 188608 # Jabir b Tubah al-Kibani
 	}
-	
+
 	866.1.1 = {
 		liege = d_basra
 		holder = 34017
@@ -1396,12 +1427,12 @@ c_ubulla = {
 		liege = e_arabia
 		holder = 188609 # Muhammad b Sulayman b Ali
 	}
-	
+
 	866.1.1 = {
 		liege = d_basra
 		holder = 34017
 	}
-	
+
 	1066.1.1 = {
 		holder = 93319
 	}
@@ -1481,11 +1512,11 @@ c_rusafa = {
 	661.2.28 = {
 		liege = e_arabia
 	}
-	
+
 #	768.1.1 = {
 #		holder = 188630 # Khazim b Khuzaymah (fictitious assignment)
 #	}
-	
+
 	866.1.1 = {
 		liege = "d_wasit"
 	}
@@ -1574,16 +1605,16 @@ c_rusafa = {
 
 
 d_baghdad = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 23 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 23 }
+
 	# al-Mada'in Governors
 	694.1.1 = {
 		holder = thaqifid026 # Mutarrif ibn al-Mughirah ath-Thaqafi
 		liege = "k_mesopotamia"
 	}
-	
+
 	#Bagdad
 	750.1.1 = {
 		holder = 34001
@@ -1663,7 +1694,7 @@ d_baghdad = {
 	1031.1.1 = {
 		holder = 3084
 	}
-	
+
 	1066.1.1 = {
 		liege = "k_persia"
 	}
@@ -1730,26 +1761,26 @@ d_baghdad = {
 
 c_baghdad = {
 	#Bagdad
-	867.1.1 = {	change_development_level = 20 }
-	1066.1.1 = { change_development_level = 25 }
-	1178.1.1 = { change_development_level = 53 }
-	
+	867.1.1 = {	change_prosperity_level = 20 }
+	1066.1.1 = { change_prosperity_level = 25 }
+	1178.1.1 = { change_prosperity_level = 53 }
+
 	801.1.1 = {
-		change_development_level = 14
+		change_prosperity_level = 14
 	}
 	1001.1.1 = {
-		change_development_level = 22
+		change_prosperity_level = 22
 	}
 	1101.1.1 = {
-		change_development_level = 26
+		change_prosperity_level = 26
 	}
-	
+
 	# al-Mada'in Governors
 	694.1.1 = {
 		holder = thaqifid026 # Mutarrif ibn al-Mughirah ath-Thaqafi
 		liege = "k_mesopotamia"
 	}
-	
+
 	750.1.1 = {
 		liege = "d_baghdad"
 		holder = 34001
@@ -1829,7 +1860,7 @@ c_baghdad = {
 	1031.1.1 = {
 		holder = 3084
 	}
-	
+
 	1075.1.1 = {
 		holder = 3086
 	}

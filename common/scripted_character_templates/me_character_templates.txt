@@ -106,7 +106,7 @@ castrogiovanni_leader_template = { # Priest-type character
 	}
 	random_traits_list = { # A good trait related to priests/learning
 		count = 1
-		scholar = {}
+		erudite = {}
 		theologian = {}
 		zealous = {}
 		chaste = {}
@@ -267,7 +267,7 @@ hafidh_excellent_character_template = {
 	}
 	random_traits_list = {
 		count = 1
-		scholar = {}
+		erudite = {}
 		theologian = {}
 		zealous = {}
 		chaste = {}
@@ -303,9 +303,9 @@ hafidh_excellent_character_template = {
 			chance = 25
 			if = {
 				limit = {
-					NOT = { has_trait = scholar }
+					NOT = { has_trait = erudite }
 				}
-				add_trait = scholar
+				add_trait = erudite
 			}
 		}
 	}
@@ -326,7 +326,7 @@ court_linguist_arabic_good_template = {
 	random_traits_list = { # A trait demonstrating their skill at language
 		count = 1
 		lifestyle_poet = {}
-		scholar = {}
+		erudite = {}
 		gregarious = {}
 		administrator = {}
 		tourney_participant = {}

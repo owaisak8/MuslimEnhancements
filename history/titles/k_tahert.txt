@@ -1,13 +1,13 @@
 ﻿k_tahert = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 }
 
 d_tlemcen = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
 
 	741.1.1 = {
 		government = clan_government
@@ -17,7 +17,7 @@ d_tlemcen = {
 		liege = k_maghreb # Submitted to the Idrisids
 		holder = me_maghrawa_003 # Muhammad ibn Khazar ibn Hafs of Banu Khazar
 	}
-	790.1.1 = { 
+	790.1.1 = {
 		liege = k_maghreb # Tlemcen was given to Sulaymān by his brother Idris
 		holder = me_sulaymanid_001 # Sulaymān ibn Abdullah ibn al-Hasan al-Muthanna, founder of the Sulaymānid dynasty
 	}
@@ -123,9 +123,9 @@ d_tlemcen = {
 }
 
 c_tlemcen = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 31 }
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 31 }
 
 	741.1.1 = {
 		holder = 210032 # Abu Qurra al-Ifrani
@@ -136,7 +136,7 @@ c_tlemcen = {
 		liege = k_maghreb # Submitted to the Idrisids
 		holder = me_maghrawa_003 # Muhammad ibn Khazar ibn Hafs of Banu Khazar
 	}
-	790.1.1 = { 
+	790.1.1 = {
 		liege = d_tlemcen
 		holder = me_sulaymanid_001 # Sulaymān ibn Abdullah ibn al-Hasan al-Muthanna, founder of the Sulaymānid dynasty
 	}
@@ -156,7 +156,7 @@ c_tlemcen = {
 	991.6.1 = {
 		holder = 155121 # Ziri ibn Atiyyah al-Maghrawi
 	}
-	
+
 	1003.1.1 = {
 		holder = 1236382 # Ya'la ibn Muhammad ibn al-Khayr ibn Muhammad al-Maghrawi
 	}
@@ -243,7 +243,7 @@ c_wajda = {
 	788.1.1 = {
 		holder = 159501
 	}
-	790.1.1 = { 
+	790.1.1 = {
 		liege = d_tlemcen
 		holder = me_sulaymanid_001 # Sulaymān ibn Abdullah ibn al-Hasan al-Muthanna, founder of the Sulaymānid dynasty
 	}
@@ -346,10 +346,10 @@ c_wajda = {
 
 
 c_orania = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 18 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 18 }
+
 	741.1.1 = {
 		government = clan_government
 		liege = "d_tlemcen"
@@ -359,7 +359,7 @@ c_orania = {
 		liege = k_maghreb # Submitted to the Idrisids
 		holder = me_maghrawa_003 # Muhammad ibn Khazar ibn Hafs of Banu Khazar
 	}
-	790.1.1 = { 
+	790.1.1 = {
 		liege = d_tlemcen
 		holder = me_sulaymanid_001 # Sulaymān ibn Abdullah ibn al-Hasan al-Muthanna, founder of the Sulaymānid dynasty
 	}
@@ -375,7 +375,7 @@ c_orania = {
 	880.1.1 = {
 		holder = me_sulaymanid_005 # al-Qasim ibn Muhammad ibn Ahmad
 	}
-	
+
 	928.6.1 = {
 		holder = 1236379 # Muhammad ibn Khazar ibn Muhammad al-Maghrawi
 	}
@@ -386,7 +386,7 @@ c_orania = {
 	954.1.1 = {
 		holder = me_ifrinid_027 # Ya'la ibn Muhammad
 	}
-	
+
 	991.6.1 = {
 		holder = 155121 # Ziri ibn Atiyyah al-Maghrawi
 	}
@@ -471,7 +471,7 @@ c_hunyan = {
 		liege = k_maghreb # Submitted to the Idrisids
 		holder = me_maghrawa_003 # Muhammad ibn Khazar ibn Hafs of Banu Khazar
 	}
-	790.1.1 = { 
+	790.1.1 = {
 		liege = d_tlemcen
 		holder = me_sulaymanid_001 # Sulaymān ibn Abdullah ibn al-Hasan al-Muthanna, founder of the Sulaymānid dynasty
 	}
@@ -562,15 +562,15 @@ c_hunyan = {
 
 d_tahert = {
 #	800.1.1 = {
-#		change_development_level = 4
+#		change_prosperity_level = 4
 #	}
-#	
+#
 #	1001.1.1 = {
-#		change_development_level = 7
+#		change_prosperity_level = 7
 #	}
-#	
+#
 #	1101.1.1 = {
-#		change_development_level = 11
+#		change_prosperity_level = 11
 #	}
 
 	950.1.1 = {
@@ -582,9 +582,9 @@ d_tahert = {
 }
 
 c_tahert = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 18 }
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 18 }
 
 	768.1.1 = {
 		holder = 210029
@@ -618,7 +618,7 @@ c_tahert = {
 	909.1.1 = {
 		holder = 32900 # Fatimid invasion and the End of the Rustamids
 	}
-	
+
 	930.1.1 = { # Unknown when he took charge but he was there before Ya'la reconquered it
 		holder = me_ifrinid_039 # Abdullah ibn Bakkar al-Ifrini
 	}
@@ -666,10 +666,10 @@ c_tahert = {
 
 
 c_yalala = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	767.1.1 = {
 		holder = 210036
 	}
@@ -876,9 +876,9 @@ c_figuig = {
 
 
 d_alger = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
 
 	832.1.1 = {
 		holder = 163097
@@ -1021,7 +1021,7 @@ c_tanas = {
 		liege = k_maghreb # Submitted to the Idrisids
 		holder = me_maghrawa_003 # Muhammad ibn Khazar ibn Hafs of Banu Khazar
 	}
-	790.1.1 = { 
+	790.1.1 = {
 		liege = d_tlemcen
 		holder = me_sulaymanid_001 # Sulaymān ibn Abdullah ibn al-Hasan al-Muthanna, founder of the Sulaymānid dynasty
 	}
@@ -1043,7 +1043,7 @@ c_tanas = {
 	920.1.1 = {
 		holder = me_sulaymanid_021 # Ali ibn Yahya
 	}
-	
+
 	928.6.1 = {
 		holder = 1236379 # Muhammad ibn Khazar ibn Muhammad al-Maghrawi
 	}
@@ -1157,9 +1157,9 @@ c_tanas = {
 }
 
 d_bejaia = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
 
 	1062.1.1 = {
 		government = clan_government
@@ -1174,10 +1174,10 @@ d_bejaia = {
 }
 
 c_bejaia = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 36 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 36 }
+
 	767.1.1 = {
 		government = clan_government
 		liege = "d_alger"
@@ -1429,11 +1429,11 @@ d_zab = {
 		government = clan_government
 		holder = 163097	#Imam Aflah Rustamid
 	}
-	
+
 	928.6.1 = {
 		holder = 1236379 # Muhammad ibn Khazar ibn Muhammad al-Maghrawi
 	}
-	
+
 	1066.1.1 = {
 		government = tribal_government
 		holder = 155173	#Hassan b. Serhan Athbejid
@@ -1448,12 +1448,12 @@ d_zab = {
 
 
 c_hodna = {
-	767.1.1 = {	
+	767.1.1 = {
 		government = clan_government
 		liege = "d_alger"
 		holder = 210035
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_alger
 		holder = 163150
 	}
@@ -1465,7 +1465,7 @@ c_hodna = {
 		liege = k_africa
 		holder = 32902 # Third Fatimid Caliph al-Mansur
 	}
-	
+
 	991.1.1 = {
 		holder = 155122 # Sa'id ibn Khazrun ibn Fulful
 	}
@@ -1475,7 +1475,7 @@ c_hodna = {
 	998.1.1 = {
 		holder = 20934 # Badis ibn al-Mansur ibn Buluggin
 	}
-	
+
 	1057.1.1 = {
 		government = tribal_government
 		liege = "d_alger" #should be tributary of Hammadids
@@ -1489,7 +1489,7 @@ c_hodna = {
 		liege = 0
 		holder = 155174
 	}
-	
+
 	#Old history
 	1095.1.1 = {
 		holder = 155175
@@ -1572,19 +1572,19 @@ c_hodna = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
+
+
 
 }
 
 
 c_biskra = {
-	767.1.1 = {	
+	767.1.1 = {
 		government = clan_government
 		liege = "d_alger"
 		holder = 210035
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_alger
 		holder = 163150
 	}
@@ -1596,13 +1596,13 @@ c_biskra = {
 		liege = k_africa
 		holder = 32902 # Third Fatimid Caliph al-Mansur
 	}
-	
+
 	1060.1.1 = {
 		liege = 0
 		holder = me_butr_001 # Arus ibn Sindi
 	}
-	
-	1080.1.1 = { # They probably didn't control Biskra 
+
+	1080.1.1 = { # They probably didn't control Biskra
 		government = tribal_government
 		liege = d_zab
 		holder = 155175	#Masud Athbejid
@@ -1685,16 +1685,16 @@ c_biskra = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 }
 
 c_bilizma = {
-	767.1.1 = {	
+	767.1.1 = {
 		government = clan_government
 		liege = "d_alger"
 		holder = 210035
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = d_alger
 		holder = 163150
 	}
@@ -1792,18 +1792,18 @@ c_bilizma = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 }
 
 d_mzab = {
-	840.1.1 = {	
+	840.1.1 = {
 		government = tribal_government
 		holder = butr0014
 	}
-	845.1.1 = {	
+	845.1.1 = {
 		holder = 1228238
 	}
-	871.1.1 = {	
+	871.1.1 = {
 		holder = 0
 	}
 	1066.1.1 = {
@@ -1816,7 +1816,7 @@ d_mzab = {
 
 c_wargla = {
 
-	866.1.1 = {	
+	866.1.1 = {
 		government = tribal_government
 		liege = "d_mzab"
 		holder = 1228831
@@ -1825,7 +1825,7 @@ c_wargla = {
 		liege = 0
 		holder = 1228832
 	}
-	
+
 	1066.1.1 = {
 		holder = 1144672
 	}
@@ -1913,12 +1913,12 @@ c_wargla = {
 }
 
 c_laghwat = {
-	767.1.1 = {	
+	767.1.1 = {
 		liege = "d_alger"
 		holder = 210035
 		government = tribal_government
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = 0
 		holder = 1228830
 	}
@@ -1926,7 +1926,7 @@ c_laghwat = {
 	1066.1.1 = {
 		holder = 155021
 	}
-	
+
 	#Old history
 	1109.1.1 = {
 		holder = 155175
@@ -2009,19 +2009,19 @@ c_laghwat = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
+
+
 
 }
 
 
 c_ghardaia = {
-	767.1.1 = {	
+	767.1.1 = {
 		liege = "d_alger"
 		holder = 210035
 		government = tribal_government
 	}
-	864.1.1 = {	
+	864.1.1 = {
 		liege = 0
 		holder = 1228830
 	}
@@ -2110,29 +2110,29 @@ c_ghardaia = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
+
 }
 
 
 c_arigh = {
-	767.1.1 = {	
+	767.1.1 = {
 		liege = "d_alger"
 		holder = 210035
 		government = tribal_government
 	}
-	840.1.1 = {	
+	840.1.1 = {
 		liege = "d_mzab"
 		holder = butr0014
 	}
-	845.1.1 = {	
+	845.1.1 = {
 		holder = 1228238
 	}
-	
+
 	1066.1.1 = {
 		holder = 1144671
 	}
-	
-#Old history	
+
+#Old history
 	1080.1.1 = {
 		holder = 155174
 	}
@@ -2220,8 +2220,8 @@ c_arigh = {
 	1318.1.1 = {
 		holder = 33032
 	}
-	
-	
+
+
 
 }
 

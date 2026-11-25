@@ -1,0 +1,19 @@
+﻿# ME: the Imam of the age (whoever holds the Twelver Imamate under me_imamate_government) is beyond reach.
+# Checked by every character interaction (see the ME copies in common/character_interactions). Interactions with
+# oneself are untouched, so a player who takes the Imam can still use self-targeted interactions.
+me_not_beyond_reach_trigger = {
+	trigger_if = {
+		limit = {
+			exists = scope:actor
+			exists = scope:recipient
+			NOT = { scope:recipient = scope:actor }
+		}
+		custom_tooltip = {
+			text = me_imam_out_of_range_tt
+			NOR = {
+				scope:actor = { has_government = me_imamate_government }
+				scope:recipient = { has_government = me_imamate_government }
+			}
+		}
+	}
+}

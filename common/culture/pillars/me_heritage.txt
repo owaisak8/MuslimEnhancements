@@ -1,0 +1,20 @@
+﻿## Only used for Hui creation name if RICE is active
+heritage_malayic = {
+	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_malayic
+		}
+	}
+	audio_parameter = european
+}
+
+heritage_chamic = {
+	type = heritage
+	is_shown = {
+		heritage_is_shown_trigger = {
+			HERITAGE = heritage_chamic
+		}
+	}
+	audio_parameter = european
+}

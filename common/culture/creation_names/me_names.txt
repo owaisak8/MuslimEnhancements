@@ -116,3 +116,17 @@ ahwazi = { # Arabs of Ahvaz/al-Ahwaz
 		}
 	}
 }
+
+hui = { # Sinicized Muslims
+	trigger = {
+		faith.religion = religion:islam_religion
+		scope:culture = { has_cultural_pillar = heritage_chinese }
+	}
+}
+
+boszormeny = { # Böszörmény - Hungarian name for Muslims living in Medieval Hungary
+	trigger = {
+		faith.religion = religion:islam_religion
+		scope:culture = { has_cultural_pillar = heritage_magyar }
+	}
+}

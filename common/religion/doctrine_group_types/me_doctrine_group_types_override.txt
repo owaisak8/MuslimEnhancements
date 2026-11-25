@@ -1,0 +1,9 @@
+﻿# Vanilla doctrine groups changed by ME.
+# 1.20: groups no longer list their doctrines (each doctrine names its group), and tenets left the doctrine database,
+# so the old overrides of doctrine_muhammad_succession and doctrine_core_tenets are gone:
+#  - muhammad_succession_berberist_doctrine joins the vanilla group from 20_doctrines_islam.txt
+#  - ME's tenets live in common/religion/tenet_types/me_tenets.txt
+
+doctrine_theism = {
+	category = clergy
+}

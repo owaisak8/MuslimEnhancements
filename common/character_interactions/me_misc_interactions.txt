@@ -37,6 +37,7 @@
 	}
 
 	is_valid_showing_failures_only = {
+		me_not_beyond_reach_trigger = yes
 		scope:recipient = { has_any_nickname = no }
 	}
 	
@@ -209,5 +210,96 @@
 	}
 	ai_will_do = {
 		base = 0
+	}
+}
+
+ME_gift_ajwah_dates_interaction = {
+	is_valid_showing_failures_only = { me_not_beyond_reach_trigger = yes }
+	category = interaction_category_friendly
+	common_interaction = yes
+	icon = me_dates
+
+	auto_accept = yes
+	
+	ai_targets = {
+		ai_recipients = scripted_relations
+	}
+	ai_targets = {
+		ai_recipients = liege
+	}
+	ai_targets = {
+		ai_recipients = neighboring_rulers
+		ai_recipients = peer_vassals
+		max = 10
+	}
+	ai_targets = {
+		ai_recipients = vassals
+		max = 10
+	}
+	ai_target_quick_trigger = {
+		adult = yes
+	}
+	ai_frequency = 36
+	
+	#cooldown = { years = 1 }
+	
+	is_shown = {
+		NOT = {
+			scope:recipient = scope:actor
+		}
+		scope:actor = {	
+			has_character_modifier = me_dates_merchant_in_town_modifier
+			is_ruler = yes
+		}
+		scope:recipient = {
+			#is_ai = yes
+			NOT = { has_character_modifier = me_gifted_ajwah_dates_modifier }
+			is_adult = yes
+			is_ruler = yes
+		}
+	}
+	
+	is_valid = {
+		scope:actor = {
+			gold >= minor_gold_value
+		}
+	}
+	
+	# is_valid_showing_failures_only = {
+	# 	scope:recipient = { is_busy_in_events_localised = yes }
+	# }
+	
+	on_accept = {
+		scope:actor = {
+			remove_short_term_gold = minor_gold_value
+		}
+		if = {
+			limit = { scope:recipient.religion = religion:islam_religion }
+			scope:recipient = {
+				custom_tooltip = ME_gift_ajwah_dates_effect_muslim_tooltip
+				add_opinion = {
+					target = scope:actor
+					modifier = ME_gifted_dates_muslim_opinion
+				}
+				add_character_modifier = {
+					modifier = me_gifted_ajwah_dates_modifier
+					days = 200
+				}
+			}
+		}
+		else_if = {
+			limit = { NOT = { scope:recipient.religion = religion:islam_religion } }
+			scope:recipient = {
+				custom_tooltip = ME_gift_ajwah_dates_effect_non_muslim_tooltip
+				add_opinion = {
+					target = scope:actor
+					modifier = ME_gifted_dates_non_muslim_opinion
+				}
+				add_character_modifier = {
+					modifier = me_gifted_ajwah_dates_modifier
+					days = 200
+				}
+			}
+		}
 	}
 }

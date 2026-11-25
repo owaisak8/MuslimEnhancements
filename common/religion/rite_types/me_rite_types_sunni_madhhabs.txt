@@ -1,0 +1,97 @@
+﻿# The four vanilla madhhab Rites, redefined only to state ME's 'Sunni - Orthodox' secondary doctrine and the Jizya explicitly.
+# Everything else is identical to vanilla 1.20 (00_rite_types.txt) - re-sync these blocks if vanilla changes them.
+
+hanafi = { # Hanafi madhhab, prominent Sunni
+	name = hanafi
+	desc = hanafi_desc
+	faith = sunni
+	icon = islam_rub_el_hizb_arch_01
+	founder = d_sunni
+
+	color = { 0.0 0.33 0.23 }
+
+	tenets = {
+		tenet_struggle_submission
+		tenet_religious_legal_pronouncements
+		tenet_legalism
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		doctrine_alcohol_highborn_only # Hanafi: wine is lawful property for dhimmis, so it is still made, sold and taxed in the realm
+		doctrine_usury_outsiders_only # Abu Hanifa and al-Shaybani: riba with non-Muslims in dar al-harb is not prohibited
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+hanbali = { # Hanbali madhhab
+	name = hanbali
+	desc = hanbali_desc
+	faith = sunni
+	icon = islam_quran_02
+
+	color = { 0.6 0.8 0.2 }
+
+	tenets = {
+		tenet_aniconism
+		tenet_literalism
+		tenet_asceticism
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_sunni_doctrine
+		doctrine_pluralism_fundamentalist
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+maliki = { # Maliki madhhab
+	name = maliki
+	desc = maliki_desc
+	faith = sunni
+
+	color = { 0.0 0.8 0.2 }
+	icon = islam_tuareg_01
+
+	tenets = {
+		tenet_adaptive
+		tenet_religious_legal_pronouncements
+		tenet_legalism
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_sunni_doctrine
+		doctrine_pluralism_pluralistic
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+shafii = { # Shafi'i madhhab
+	name = shafii
+	desc = shafii_desc
+	faith = sunni
+
+	color = { 0.43 0.51 0.22 }
+	icon = islam_flower_01
+
+	tenets = {
+		tenet_mendicant_preachers
+		tenet_religious_legal_pronouncements
+		tenet_legalism
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}

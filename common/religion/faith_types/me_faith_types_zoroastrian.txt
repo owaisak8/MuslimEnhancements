@@ -1,0 +1,45 @@
+﻿
+isfahani = { # The faith of the 'Isfahani Mahdi', Abu'l-Fadl al-Isfahani, as proclaimed among the Qarmatians of Bahrayn
+	main_rite = isfahani
+
+	faith_details = {
+		religion = zoroastrianism_religion
+		color = { 0.3 0.45 0.35 }
+		icon = isfahanism
+		religious_head = d_isfahani
+	}
+
+	eminent_holy_sites = {
+		isfahan
+		bahrein
+	}
+
+	holy_sites = {
+		ushi-darena
+		takht-e_soleyman
+		yazd
+	}
+
+	tenets = {
+		tenet_human_sacrifice
+		tenet_warmonger
+		tenet_false_conversion_sanction
+	}
+
+	doctrines = {
+		doctrine_monogamy
+		doctrine_homosexuality_accepted
+		doctrine_pluralism_fundamentalist
+		doctrine_witchcraft_accepted
+		doctrine_theocracy_lay_clergy
+		doctrine_temporal_head
+		doctrine_kinslaying_accepted
+		doctrine_clerical_function_recruitment
+		doctrine_clerical_succession_temporal_appointment
+		doctrine_heretic_branch_zandik
+	}
+
+	localization = {
+		ReligiousHeadName = qarmatian_religious_head_title
+	}
+}

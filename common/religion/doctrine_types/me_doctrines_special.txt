@@ -1,0 +1,148 @@
+﻿## Additions ##
+# Symbolic Non-sectarian Hostility doctrine
+special_doctrine_is_alb_faith = {
+	doctrine_group_type = is_alb_faith
+	index = 0
+	divergence = 0
+	visible = no
+
+	special_parameters = {
+		hostility_level_override = {
+			special_doctrine_is_islamic_faith = righteous
+			tenet_islamic_syncretism = astray
+		}
+	}
+}
+
+# Ibadi Hostility doctrine
+special_doctrine_is_ibadi_faith = {
+	doctrine_group_type = is_ibadi_faith
+	index = 0
+	divergence = 0
+	special_parameters = {
+		hostility_level_override = {
+			special_doctrine_is_ibadi_faith = righteous
+		}
+	}
+}
+
+# Ubaydi Trait Acceptance
+special_doctrine_ubaydi_trait_acceptance = {
+	doctrine_group_type = ubaydi_trait_acceptance
+	index = 0
+	divergence = 0
+	parameters = {
+		ubaydi_trait_effects_active
+	}
+}
+
+# Musta'li Schism doctrines
+special_doctrine_mustali_main = {
+	doctrine_group_type = mustali_main
+	index = 0
+	divergence = 0
+	parameters = {
+		mustali_main_effects_active
+	}
+	special_parameters = {
+		hostility_level_override = {
+			special_doctrine_mustali_schismed_sect = righteous
+		}
+	}
+	character_modifier = {
+		rite_creation_piety_cost_mult = -0.25
+	}
+}
+special_doctrine_mustali_schismed_sect = {
+	doctrine_group_type = mustali_schismed_sect
+	index = 0
+	divergence = 0
+	parameters = {
+		mustali_schismed_sect_effects_active
+	}
+	special_parameters = {
+		hostility_level_override = {
+			special_doctrine_mustali_main = righteous
+		}
+	}
+}
+
+# Barghawata trait doctrine
+special_doctrine_is_barghawata_faith = {
+	doctrine_group_type = is_barghawata_faith
+	index = 0
+	divergence = 0
+	parameters = {
+		barghawata_trait_effects_active
+	}
+}
+
+# Ha-Mimist trait doctrine
+special_doctrine_is_hamimist_faith = {
+	doctrine_group_type = is_hamimist_faith
+	index = 0
+	divergence = 0
+	parameters = {
+		hamimist_trait_effects_active
+	}
+}
+
+# Kaduist trait doctrine
+special_doctrine_is_kaduist_faith = {
+	doctrine_group_type = is_kaduist_faith
+	index = 0
+	divergence = 0
+	parameters = {
+		kaduist_trait_effects_active
+	}
+	
+	traits = {
+		virtues = { kutama }
+	}
+}
+
+
+
+
+#######################
+## Heresiarch Adventeror Special Doctrines
+#######################
+# Ibn Nusayr trait acceptor
+special_doctrine_ibn_nusayr_trait_acceptance = {
+	doctrine_group_type = ibn_nusayr_trait_acceptance
+	index = 0
+	divergence = 0
+	parameters = {
+		ibn_nusayr_trait_effects_active
+	}
+}
+
+# Ishaqiyyah trait acceptor
+special_doctrine_ishaq_ahmar_trait_acceptance = {
+	doctrine_group_type = ishaq_ahmar_trait_acceptance
+	index = 0
+	divergence = 0
+	parameters = {
+		ishaq_ahmar_trait_effects_active
+	}
+}
+
+# Qarmatian Mahdi trait acceptor - Zakarawayh ibn Mihrawayh
+special_doctrine_zakarawayhist_trait_acceptance = {
+	doctrine_group_type = zakarawayhist_trait_acceptance
+	index = 0
+	divergence = 0
+	parameters = {
+		zakarawayhist_trait_effects_active
+	}
+}
+
+# Qarmatian Mahdi trait acceptor - Ali ibn Fadl al-Jayshani
+special_doctrine_jayshanist_trait_acceptance = {
+	doctrine_group_type = jayshanist_trait_acceptance
+	index = 0
+	divergence = 0
+	parameters = {
+		jayshanist_trait_effects_active
+	}
+}

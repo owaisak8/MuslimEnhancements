@@ -6,10 +6,10 @@
  d_shammar:0 "Tabuk"
  d_shammar_adj:0 "Tabukian"
  
- #Kedah
- d_MAL_langkasuka:0 "Kedah"
- d_MAL_langkasuka_adj:0 "Kedahan"
-
+ # Yemen
+ b_dhufar:0 "Salalah"
+ b_dhufar_adj:0 "Salali"
+ 
  # Ethiopia
  c_showa:0 "Shewa"
  c_showa_adj:0 "Shewan"
@@ -31,7 +31,9 @@
 
  ##Ace's changes:
  #(Pakistan)
+ c_lahur:0 "Lahore" #The common spelling; vanilla has Lahur.
  c_lahur_adj:0 "Lahori" #Correct adjective.
+ b_lahur:0 "Lahore"
  b_karoonjar:0 "Nagarparkar" #Karonjar/Karunjhar is a regional name, and the city's name should be Nagarparkar. 
  b_amarkot:0 "Daplu" #Umarkot, (the correct spelling) is not a coastal town and is significantly further north.
  b_bhakkar:0 "Sukkur" #Bhakkar was founded in the 1700s. 

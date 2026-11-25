@@ -1,0 +1,37 @@
+﻿# ME: succession for the Twelver Imamate (me_imamate_government). No vanilla succession law accepts that government,
+# which left its holder with an invalid succession. The Imamate passes from father to son; in practice the handovers
+# are scripted on their historical dates and the Mahdi holds it for ever.
+me_imamate_succession_law = {
+	law_group_type = succession_order_laws
+	index = 60
+
+	can_keep = { has_government = me_imamate_government NOT = { has_trait = me_twelver_mahdi } }
+	can_have = { has_government = me_imamate_government NOT = { has_trait = me_twelver_mahdi } }
+	can_pass = { always = no }
+	should_start_with = { has_government = me_imamate_government NOT = { has_trait = me_twelver_mahdi } }
+	succession = {
+		order_of_succession = inheritance
+		traversal_order = children
+		rank = oldest
+		title_division = single_heir
+	}
+	flag = advanced_succession_law
+	potential = { has_government = me_imamate_government }
+}
+
+# The Twelfth Imam has no successor: he holds the Imamate for ever, so no heir is shown for him.
+# ("generate" is the order vanilla uses for city mayors: there is no heir character. It never comes into play - he does not die.)
+me_imamate_occultation_law = {
+	law_group_type = succession_order_laws
+	index = 61
+
+	can_keep = { has_government = me_imamate_government has_trait = me_twelver_mahdi }
+	can_have = { has_government = me_imamate_government has_trait = me_twelver_mahdi }
+	can_pass = { always = no }
+	should_start_with = { has_government = me_imamate_government has_trait = me_twelver_mahdi }
+	succession = {
+		order_of_succession = generate
+		pool_character_config = pool_city_succession
+	}
+	potential = { has_government = me_imamate_government has_trait = me_twelver_mahdi }
+}

@@ -3,8 +3,8 @@ namespace = me_religious_decisions
 
 # 0001 - Mend the Ibadi Schism
 # 0003 - Hire a Hafidh
-# 0004 - Hire an Arabic Linguist
-# 0005 - Restoring The Imamate (Ibadi/Wahbi/Nukkari)
+# 0007 - Hire an Arabic Linguist
+# 0008 - Restoring The Imamate (Ibadi/Wahbi/Nukkari)
 
 
 ##################################################
@@ -47,12 +47,7 @@ me_religious_decisions.0002 = {
 			# Ibadi-Wahbi Reaction
 			triggered_desc = {
 				trigger = {
-					root.faith = {
-						OR = {
-							faith:ibadi
-							faith:wahbiya
-						}
-					}
+					root.faith = faith:ibadi
 				}
 				desc = me_religious_decisions.0002.desc.ibadi
 			}
@@ -60,12 +55,7 @@ me_religious_decisions.0002 = {
 			triggered_desc = {
 				trigger = {
 					NOT = {
-						root.faith = {
-							OR = {
-								faith:ibadi
-								faith:wahbiya
-							}
-						}
+						root.faith = faith:ibadi
 					}
 
 				}
@@ -101,24 +91,14 @@ me_religious_decisions.0002 = {
 	option = {
 		name = me_religious_decisions.0002.a
 		trigger = {
-			root.faith = {
-				OR = {
-					faith:ibadi
-					faith:wahbiya
-				}
-			}
+			root.faith = faith:ibadi
 		}
 	}
 	option = {
 		name = me_religious_decisions.0002.b
 		trigger = {
 			NOT = {
-				root.faith = {
-					OR = {
-						faith:ibadi
-						faith:wahbiya
-					}
-				}
+				root.faith = faith:ibadi
 			}
 		}
 	}
@@ -136,11 +116,9 @@ scripted_trigger find_hafidh_basic_requirements_trigger = {
 	is_claimant = no # We don't want recruiting tutors to be a cheap way of getting claimants
 	learning >= low_skill_rating
 	has_trait = hafidh
-	AND = {
-		faith.religion = religion:islam_religion
-		NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
-		NOT = { faith = faith:druze }
-	}
+	faith.religion = religion:islam_religion
+	NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
+	NOT = { rite = rite:druze }
 }
 
 scripted_trigger find_hafidh_excellent_skill_tutor_trigger = {
@@ -254,7 +232,7 @@ me_religious_decisions.0003 = {
 								factor = 10
 							}
 							modifier = {
-								has_trait = scholar
+								has_trait = erudite
 								factor = 10
 							}
 						}
@@ -276,14 +254,14 @@ me_religious_decisions.0003 = {
 								}
 							}
 							add_trait_xp = {
-				                trait = hafidh
-				                value = {
-				                    integer_range = {
-				                        min = 30
-				                        max = 100
-				                    }
-				                }
-				            }
+								trait = hafidh
+								value = {
+									integer_range = {
+										min = 30
+										max = 100
+									}
+								}
+							}
 						}
 					}
 					#Backup excellent generation
@@ -326,7 +304,7 @@ me_religious_decisions.0003 = {
 								}
 							}
 						}
-			}
+					}
 				}
 
 				#HIGH-SKILL CHARACTER
@@ -368,7 +346,7 @@ me_religious_decisions.0003 = {
 							factor = 10
 						}
 						modifier = {
-							has_trait = scholar
+							has_trait = erudite
 							factor = 10
 						}
 					}
@@ -510,7 +488,7 @@ me_religious_decisions.0003 = {
 			is_landed = yes #extra check to make sure they haven't lost their status
 		}
 		name = me_religious_decisions.0003.d
-		trait = scholar
+		trait = erudite
 		skill = learning
 
 		custom_tooltip = me_religious_decisions.0003.d.aptitude
@@ -1245,14 +1223,14 @@ me_religious_decisions.0007 = {
 			}
 			# Scholarly Linguist
 			if = {
-				limit = { has_trait = scholar }
+				limit = { has_trait = erudite }
 				create_character = {
 					dynasty = none
 					template = court_linguist_arabic_good_template
 					culture = scope:ling_cul_1
 					faith = scope:ling_cul_1_ruler.faith
 					location = root.capital_province
-					trait = scholar
+					trait = erudite
 					save_scope_as = scholarly_linguist
 				}
 				if = {
@@ -1311,8 +1289,8 @@ me_religious_decisions.0007 = {
 	# I know a good tutor through scholarly circles!
 	option = {
 		name = me_religious_decisions.0007.c
-		trait = scholar
-		trigger = { has_trait = scholar }
+		trait = erudite
+		trigger = { has_trait = erudite }
 		learn_language_linguist_arabic_effect = { LINGUIST = scope:scholarly_linguist }
 		ai_chance = {
 			base = 100
@@ -1328,7 +1306,7 @@ me_religious_decisions.0007 = {
 		ai_chance = {
 			base = 1000
 			modifier = { # Don't do it if you can hire the cool guy
-				has_trait = scholar
+				has_trait = erudite
 				factor = 0
 			}
 		}
@@ -1342,7 +1320,7 @@ me_religious_decisions.0007 = {
 			modifier = {
 				short_term_gold < minor_gold_value_check
 				NOR = {
-					has_trait = scholar
+					has_trait = erudite
 					has_trait = greedy
 				}
 				add = 10
@@ -1411,8 +1389,8 @@ me_religious_decisions.0009 = {
 			triggered_desc = {
 				trigger = {
 					NOT = { root.faith.religious_head_title = scope:new_imam.faith.religious_head_title }
-					root.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
-					scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+					root.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith }
+					scope:new_imam.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith }
 				}
 				desc = me_religious_decisions.0009.desc.other_ibadi
 			}
@@ -1421,8 +1399,8 @@ me_religious_decisions.0009 = {
 				trigger = {
 					NOT = { root.faith.religious_head_title = scope:new_imam.faith.religious_head_title }
 					OR = {
-						NOT = { root.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
-						NOT = { scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+						NOT = { root.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith } }
+						NOT = { scope:new_imam.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith } }
 					}
 				}
 				desc = me_religious_decisions.0009.desc.other
@@ -1460,8 +1438,8 @@ me_religious_decisions.0009 = {
 			OR = {
 				root.faith.religious_head_title = scope:new_imam.faith.religious_head_title
 				AND = {
-					root.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
-					scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+					root.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith }
+					scope:new_imam.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith }
 				}
 			}
 		}
@@ -1471,9 +1449,238 @@ me_religious_decisions.0009 = {
 		trigger = {
 			NOT = { root.faith.religious_head_title = scope:new_imam.faith.religious_head_title }
 			OR = {
-				NOT = { root.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
-				NOT = { scope:new_imam.faith = { has_doctrine = special_doctrine_is_ibadi_faith } }
+				NOT = { root.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith } }
+				NOT = { scope:new_imam.rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith } }
 			}
+		}
+	}
+}
+
+
+##################################################
+# Opening Conversions for Closed Faith
+##################################################
+me_religious_decisions.0010 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+			    trigger = { scope:reformer.rite = rite:druze }
+			    desc = me_religious_decisions.0010.t.druze
+			}
+			desc = me_religious_decisions.0010.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+			    trigger = { scope:reformer.rite = rite:druze }
+			    desc = me_religious_decisions.0010.desc.druze
+			}
+			#triggered_desc = {
+			#    trigger = { scope:reformer.faith = faith:mandeaism }
+			#    desc = me_religious_decisions.0010.desc.mandeaism
+			#}
+			desc = me_religious_decisions.0010.desc.misc
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_faith_conversion"
+		if = {
+			limit = { piety_level < max_piety_level }
+			add_piety_level = 1
+		}
+		faith = {
+			change_fervor = {
+				value = 20
+				desc = me_fervor_gain_opened_up_faith
+			}
+		}
+	}
+
+	# Communal Identity
+	option = {
+		name = me_religious_decisions.0010.a
+		scope:reformer.rite = {
+			remove_rite_tenet = tenet_me_closed_faith 
+			add_rite_tenet = tenet_communal_identity
+		}
+	}
+	# False Conversion Sanctioned
+	option = {
+		name = me_religious_decisions.0010.b
+		trigger = {
+			scope:reformer.rite = {
+				NOR = {
+					rite_has_tenet = tenet_false_conversion_sanction
+					rite_has_tenet = tenet_pastoral_isolation
+				}
+			}
+		}
+		scope:reformer.rite = {
+			remove_rite_tenet = tenet_me_closed_faith 
+			add_rite_tenet = tenet_false_conversion_sanction
+		}
+	}
+	# Mendicant Preachers
+	option = {
+		name = me_religious_decisions.0010.c
+		trigger = {
+			scope:reformer.rite = {
+				NOR = {
+					rite_has_tenet = tenet_mendicant_preachers
+					rite_has_tenet = tenet_hedonistic
+				}
+			}
+		}
+		scope:reformer.rite = {
+			remove_rite_tenet = tenet_me_closed_faith 
+			add_rite_tenet = tenet_mendicant_preachers
+		}
+	}
+	# Warmonger
+	option = {
+		name = me_religious_decisions.0010.d
+		trigger = {
+			scope:reformer.rite = {
+				NOR = {
+					rite_has_tenet = tenet_warmonger
+					rite_has_tenet = tenet_pacifism
+					rite_has_tenet = tenet_dharmic_pacifism
+				}
+			}
+		}
+		scope:reformer.rite = {
+			remove_rite_tenet = tenet_me_closed_faith 
+			add_rite_tenet = tenet_warmonger
+		}
+	}
+
+	after = {
+		scope:reformer.faith = { remove_variable = block_conversion_till_decision_taken }
+	}
+}
+
+# Characters Notified
+me_religious_decisions.0011 = {
+	type = character_event
+	title = {
+		first_valid = {
+			triggered_desc = {
+			    trigger = { scope:reformer.rite = rite:druze }
+			    desc = me_religious_decisions.0011.t.druze
+			}
+			desc = me_religious_decisions.0011.t
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { root.faith = scope:reformer.faith } 
+				desc = {
+					first_valid = {
+						triggered_desc = {
+						    trigger = { scope:reformer.rite = rite:druze }
+						    desc = me_religious_decisions.0011.desc.druze
+						}
+						#triggered_desc = {
+						#    trigger = { scope:reformer.faith = faith:mandeaism }
+						#    desc = me_religious_decisions.0011.desc.mandeaism
+						#}
+						desc = me_religious_decisions.0011.desc.misc
+					}
+				}
+			}
+			triggered_desc = {
+				trigger = { NOT = { root.faith = scope:reformer.faith } }
+				desc = {
+					first_valid = {
+						triggered_desc = {
+						    trigger = { scope:reformer.rite = rite:druze }
+						    desc = me_religious_decisions.0011.desc.unaff.druze
+						}
+						#triggered_desc = {
+						#    trigger = { scope:reformer.faith = faith:mandeaism }
+						#    desc = me_religious_decisions.0011.desc.unaff.mandeaism
+						#}
+						desc = me_religious_decisions.0011.desc.unaff.misc
+					}
+				}
+			}
+		}
+	}
+	theme = faith
+	left_portrait = {
+		character = scope:reformer
+		animation = personality_zealous
+	}
+
+	immediate = {
+		play_music_cue = "mx_cue_faith_conversion"
+		# Show the effects of the reformation.
+		show_as_tooltip = {
+			scope:reformer = {
+				if = {
+					limit = { piety_level < max_piety_level }
+					add_piety_level = 1
+				}
+				faith = {
+					change_fervor = {
+						value = 20
+						desc = me_fervor_gain_opened_up_faith
+					}
+				}
+			}
+		}
+	}
+
+	# Positive response
+	option = {
+		name = me_religious_decisions.0011.a
+		trigger = { root.faith = scope:reformer.faith }
+
+		add_opinion = {
+			modifier = me_opened_our_faith_opinion
+			opinion = 25
+			target = scope:reformer
+		}
+
+		ai_chance = {
+			base = 100
+			modifier = {
+				factor = 0
+				has_trait = zealous
+			}
+		}
+	}
+	# Negative response
+	option = {
+		name = me_religious_decisions.0011.b
+		trigger = { root.faith = scope:reformer.faith }
+
+		add_opinion = {
+			modifier = me_opened_our_faith_opinion
+			opinion = -25
+			target = scope:reformer
+		}
+
+		ai_chance = {
+			base = 100
+		}
+	}
+	# Non-affiliated response
+	option = {
+		name = me_religious_decisions.0011.c
+		trigger = { NOT = { root.faith = scope:reformer.faith } }
+
+		ai_chance = {
+			base = 100
 		}
 	}
 }

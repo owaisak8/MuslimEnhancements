@@ -36,3 +36,155 @@ death_me_mutilated_and_crucified = {
 	public_knowledge = yes
 	icon = "death_murder.dds"
 }
+
+death_me_crushed_by_earthquake = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_pelted_with_rocks = {
+	public_knowledge = yes
+	icon = "death_murder.dds"
+}
+
+### The Prophet, his household, the Imams and the Companions (history/characters) ###
+death_me_prophet = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_fatima_zahra = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_ali = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_hasan = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_zayn_al_abidin = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_baqir = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_sadiq = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_kadhim = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_rida = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_jawad = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_hadi = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_askari = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_abu_bakr = {
+	public_knowledge = yes
+	icon = "death_disease.dds"
+}
+
+death_me_umar = {
+	public_knowledge = yes
+	icon = "death_murder.dds"
+}
+
+death_me_uthman = {
+	public_knowledge = yes
+	icon = "death_murder.dds"
+}
+
+death_me_abu_talib = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_abbas_uncle = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_zayd = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_idris = {
+	public_knowledge = yes
+	icon = "death_murder.dds"
+}
+
+death_me_umar_ii = {
+	public_knowledge = yes
+	icon = "death_unknown.dds"
+}
+
+death_me_hamza = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_jafar_tayyar = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_abbas_ibn_ali = {
+	public_knowledge = yes
+	icon = "martyrdom_karbala.dds"
+}
+
+death_me_zaynab_bint_ali = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_khalid = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_ruqayya = {
+	public_knowledge = yes
+	icon = "death_disease.dds"
+}
+
+death_me_zaynab_bint_muhammad = {
+	public_knowledge = yes
+	icon = "death_natural.dds"
+}
+
+death_me_masuma = {
+	public_knowledge = yes
+	icon = "death_disease.dds"
+}
+

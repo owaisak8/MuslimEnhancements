@@ -1,26 +1,69 @@
-k_syr_darya = {
-	867.1.1 = { change_development_level = 0 }
-	1066.1.1 = { change_development_level = 0 }
-	1178.1.1 = { change_development_level = 0 }
+﻿k_syr_darya = {
+	867.1.1 = { change_prosperity_level = 0 }
+	1066.1.1 = { change_prosperity_level = 0 }
+	1178.1.1 = { change_prosperity_level = 0 }
 
+	## Karakhanids pushed out of Transoxiana
+	1097.1.1 = {
+		holder = 144110 # Sulayman III
+	}
+	1097.6.1 = {
+		holder = karluk0043 # Mahmud I
+	}
+	1099.1.1 = {
+		holder  = 144109 # Jibrail
+	}
+	1102.1.1 = {
+		holder = 144111 # Muhammad II
+	}
+	1129.1.1 = {
+		holder = 144112 # Nasr II
+	}
+	1129.6.1 = {
+		holder = 144113 # Ahmad III
+	}
+	1130.1.1 = {
+		holder = 144116 # Hasan II
+	}
+	1132.1.1 = {
+		holder = 144117 # Ibrahim II
+	}
+	1132.6.1 = {
+		holder = 144118 # Mahmud II
+	}
+	1141.1.1 = {
+		holder = 144119 # Ibrahim III
+	}
+	1156.1.1 = {
+		holder = 144120 # Ali III
+	}
+	1161.1.1 = {
+		holder = 144121 # Masud II
+	}
+	1168.1.1 = {
+		holder = karakhanid_1 # Nasr III b. Husayn
+	}
+	1171.1.1 = {
+		holder = karakhanid_5 # Muhammad III
+	}
 	1178.1.1 = {
-		holder = 144122 # Ibrahim b. Husayn
+		holder = 144122 # Ibrahim IV b. Husayn
 		liege = "e_kara_khitai"
 		de_jure_liege = e_kara_khitai
 	}
 }
 
 d_syr_darya = {
-	867.1.1 = { change_development_level = 2 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 7 }
-	
+	867.1.1 = { change_prosperity_level = 2 }
+	1066.1.1 = { change_prosperity_level = 4 }
+	1178.1.1 = { change_prosperity_level = 7 }
+
 	850.1.1 = {
 		liege = k_oghuz_il
 		holder = 1000230101	#Bozoq, representing the Kinik/the proto-Seljuk
 		government = nomad_government
 	}
-	
+
 	1066.1.1 = {
 		holder = 0
 		liege = 0
@@ -28,16 +71,16 @@ d_syr_darya = {
 }
 
 c_jend = {
-	867.1.1 = { change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = { change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	850.1.1 = {
 		liege = d_syr_darya
 		holder = 1000230101	#Bozoq, representing the Kinik/the proto-Seljuk
 		government = nomad_government
 	}
-	
+
 	#1066 start
 	1066.1.1 = {
 		holder = 93087
@@ -74,7 +117,7 @@ c_sighnaq = {
 		holder = 1000230101	#Bozoq, representing the Kinik/the proto-Seljuk
 		government = nomad_government
 	}
-	
+
 	#1066 start
 	1052.1.1 = {
 		liege = 0
@@ -96,6 +139,7 @@ c_sighnaq = {
 	}
 	1178.1.1 = {
 		holder = karakhanid_3 # Ahmad, attested in Uzgend from 1178
+		government = nomad_government
 		liege = k_syr_darya
 	}
 	1209.2.17 = {
@@ -110,7 +154,7 @@ c_uzgend_KARA = {
 		holder = 1000230101	#Bozoq, representing the Kinik/the proto-Seljuk
 		government = nomad_government
 	}
-	
+
 	#1066 start
 	1052.1.1 = {
 		liege = 0
@@ -139,10 +183,10 @@ c_uzgend_KARA = {
 
 
 d_chah = {
-	867.1.1 = { change_development_level = 3 }
-	1066.1.1 = { change_development_level = 5 }
-	1178.1.1 = { change_development_level = 8 }
-	
+	867.1.1 = { change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 5 }
+	1178.1.1 = { change_prosperity_level = 8 }
+
 	#Chah within the Samanid in 867
 	849.1.2 = {
 		holder = 1630_yaqub #Historical. Fixed by Ace (Muslim Enhancements)
@@ -163,10 +207,7 @@ d_chah = {
 		holder = 3002
 	}
 	#Chah within the Karakhanid in 1066
-	1060.1.2 = {
-		holder = 302692	#fictional Mala Karachahnid
-		liege = k_transoxiana
-	}
+	1066.1.1 = { holder = 0 }
 	1068.1.2 = {
 		liege = k_zhetysu
 	}
@@ -192,7 +233,7 @@ d_chah = {
 	1196.9.26 = {
 		holder = 302698	#fictional Girgen Karachahnid
 	}
-	
+
 	#Mongols
 	1220.2.1 = {
 		liege = e_mongol_empire
@@ -265,13 +306,13 @@ d_chah = {
 
 
 c_chah = {
-	867.1.1 = { change_development_level = 6 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = { change_prosperity_level = 6 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	#Chah within the Samanid in 867
 #	849.1.2 = {
-#		holder = 188639	#Yahya Samanid 
+#		holder = 188639	#Yahya Samanid
 #		government = clan_government
 #	}
 
@@ -291,10 +332,10 @@ c_chah = {
 		liege = k_transoxiana
 		holder = 3002
 	}
-	
+
 	#Chah within the Karakhanid in 1066
 	1060.1.2 = {
-		holder = 302692	#fictional Mala Karachahnid
+		holder = 3018	#Khidr
 		#top liege = k_transoxiana
 	}
 	#1068.1.2 = {
@@ -315,7 +356,7 @@ c_chah = {
 		holder = 302696	#fictional Kobyak Karachahnid
 	}
 	1178.1.1 = {
-		holder = 144122 # Ibrahim b. Husayn
+		holder = karakhanid_2 # Usman
 	}
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
@@ -323,7 +364,7 @@ c_chah = {
 	1196.9.26 = {
 		holder = 302698	#fictional Girgen Karachahnid
 	}
-	
+
 	#Mongols
 	1220.2.1 = {
 		liege = e_mongol_empire
@@ -405,11 +446,11 @@ c_otrar = {
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
 	}
-	
+
 	#Chah within the Karakhanid in 1066
 	1060.1.2 = {
 		holder = fictional_karluks_14 #fictional herder
-		#top liege = k_transoxiana
+		liege = 0
 		government = herder_government
 	}
 	#1068.1.2 = {
@@ -430,7 +471,9 @@ c_otrar = {
 		holder = 302696	#fictional Kobyak Karachahnid
 	}
 	1178.1.1 = {
-		holder = 144122 # Ibrahim b. Husayn
+		holder = 93051
+		government = nomad_government
+		liege = k_syr_darya
 	}
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
@@ -438,7 +481,7 @@ c_otrar = {
 	1196.9.26 = {
 		holder = 302698	#fictional Girgen Karachahnid
 	}
-	
+
 	#Mongols
 	1220.2.1 = {
 		liege = e_mongol_empire
@@ -519,7 +562,7 @@ c_shavgar = {
 	876.5.22 = {
 		holder = 302644	#fictional Yinal Shavgari
 	}
-	
+
 	#1066 start
 	1052.1.1 = {
 		liege = 0
@@ -532,7 +575,7 @@ c_shavgar = {
 	1124.7.5 = {
 		holder = 302649	#fictional Pulad Shavgari
 	}
-	
+
 	#1137 Shavgar to Kara Khitai
 	1137.1.2 = {
 		holder = 144118
@@ -547,7 +590,9 @@ c_shavgar = {
 		holder = 144121
 	}
 	1178.1.1 = {
-		holder = 144122
+		holder = 93051
+		government = nomad_government
+		liege = k_syr_darya
 	}
 	1204.1.1 = {
 		holder = 93051
@@ -628,22 +673,23 @@ c_shavgar = {
 c_sutkend = {
 	#Chah within the Samanid in 867
 	849.1.2 = {
-		holder = 188639	#Yahya Samanid 
+		holder = 188639	#Yahya Samanid
 		#liege = k_transoxiana	#Samanid
 		government = tribal_government
 	}
 	855.3.2 = {
-		holder = extra_samanids_5 #Ya'qub 
+		holder = extra_samanids_5 #Ya'qub
 		liege = d_chah
 	}
 	882.1.9 = {
 		holder = 302688	#fictional Dogan Shahn
 	}
-	
+
 	#Chah within the Karakhanid in 1066
 	1060.1.2 = {
-		holder = 302692	#fictional Mala Karachahnid
-		government = clan_government
+		holder = fictional_karluks_13	#fictional
+		government = herder_government
+		liege = 0
 		#top liege = k_transoxiana
 	}
 	#1068.1.2 = {
@@ -664,9 +710,9 @@ c_sutkend = {
 	}
 	1178.1.1 = {
 		holder = fictional_karluks_9 # fictional herder
-		liege = k_syr_darya
+		liege = 0
 		government = herder_government
-	}	
+	}
 	#1137 - Kara Khitai invasion
 	1181.1.13 = {
 		holder = 302697	#fictional KO_nC_ek Karachahnid
@@ -675,7 +721,7 @@ c_sutkend = {
 	1196.9.26 = {
 		holder = 302698	#fictional Girgen Karachahnid
 	}
-	
+
 	#Mongols
 	1220.2.1 = {
 		liege = e_mongol_empire
@@ -786,7 +832,7 @@ d_muyunkum = {
 	1034.1.1 = {
 		holder = 144102 # Ebu Shuca
 	}
-	
+
 	#Split of Karakhanid khanate
 	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
 	1042.1.2 = {
@@ -807,7 +853,7 @@ d_muyunkum = {
 	1128.1.1 = {
 		holder = 144115 # Ibrahim
 	}
-	
+
 	#1137 Kara Khitai
 	1137.1.1 = {
 		#liege = d_samarkand # Kara Khitan conquest
@@ -827,7 +873,7 @@ d_muyunkum = {
 	1218.1.1 = {
 		liege = 0
 	}
-	
+
 	#Mongols
 	1220.2.1 = {
 		liege = e_mongol_empire
@@ -901,10 +947,10 @@ d_muyunkum = {
 
 
 c_balashagun = {
-	867.1.1 = {	change_development_level = 4 }
-	1066.1.1 = { change_development_level = 9 }
-	1178.1.1 = { change_development_level = 36 }
-	
+	867.1.1 = {	change_prosperity_level = 4 }
+	1066.1.1 = { change_prosperity_level = 9 }
+	1178.1.1 = { change_prosperity_level = 36 }
+
 	#As Karakhanid Khanate from year 840
 	840.1.1 = {
 		holder = 34872	#Bilge Khan
@@ -943,7 +989,7 @@ c_balashagun = {
 	1034.1.1 = {
 		holder = 144102 # Ebu Shuca
 	}
-	
+
 	#Split of Karakhanid khanate
 	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
 	1042.1.2 = {
@@ -958,22 +1004,29 @@ c_balashagun = {
 	1059.1.1 = {
 		holder = 144107 # Ebu Ali el-Hasan
 	}
-	
-	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1158.1.1 = {
-		holder = 188855 # Muhammad
+
+	# Kara Khitais capture Balashagun and make it capital
+	1134.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
 		liege = e_kara_khitai
 	}
-	1188.1.1 = {
-		holder = 188856 # Yusuf
+	1143.1.1 = {
+		holder = 188906	#Tabuyan = Regent Empress Gantian
 	}
-	1205.1.1 = {
-		holder = 188857 # Muhammad
+	1150.1.1 = {
+		holder = 188907	#Yelü-Yilie = Emperor Renzong
+	}
+	1164.1.1 = {
+		holder = 188908	#Yelü Pusuwan = Regent Empress Chengtian
+	}
+	1178.1.1 = {
+		holder = 188912	#Yelü Zhilugu
 	}
 	1211.1.1 = {
-		holder = 188914 # Kuchlug
+		holder = 188914	#Kuchlug
 	}
-	
+
 	#Mongols
 	1218.1.1 = {
 		liege = e_mongol_empire
@@ -1085,7 +1138,7 @@ c_suyab = {
 	1034.1.1 = {
 		holder = 144102 # Ebu Shuca
 	}
-	
+
 	#Split of Karakhanid khanate
 	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
 	1042.1.2 = {
@@ -1100,22 +1153,13 @@ c_suyab = {
 	1059.1.1 = {
 		holder = 144107 # Ebu Ali el-Hasan
 	}
-	
+
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
 	1158.1.1 = {
-		holder = 188855 # Muhammad
+		holder = karluk0048
 		liege = e_kara_khitai
 	}
-	1188.1.1 = {
-		holder = 188856 # Yusuf
-	}
-	1205.1.1 = {
-		holder = 188857 # Muhammad
-	}
-	1211.1.1 = {
-		holder = 188914 # Kuchlug
-	}
-	
+
 	#Mongols
 	1218.1.1 = {
 		liege = e_mongol_empire
@@ -1226,7 +1270,7 @@ c_taraz = {
 	1034.1.1 = {
 		holder = 144102 # Ebu Shuca
 	}
-	
+
 	#Split of Karakhanid khanate
 	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
 	1042.1.2 = {
@@ -1241,24 +1285,21 @@ c_taraz = {
 	1059.1.1 = {
 		holder = 144107 # Ebu Ali el-Hasan
 	}
-	
-	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1158.1.1 = {
-		holder = fictional_karluks_10 # fictional herder
-		liege = 0
-		government = herder_government
+	1099.1.1 = {
+		holder = 144109 # Jibrail
 	}
-	1188.1.1 = {
-		holder = 188856 # Yusuf
-		# government = nomad_government
+
+	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
+	1178.1.1 = {
+		holder = 188912 # Yelu Zhilugu
 	}
 	1205.1.1 = {
-		holder = 188857 # Muhammad
+		holder = 188857 # Muhammad IV
 	}
 	1211.1.1 = {
 		holder = 188914 # Kuchlug
 	}
-	
+
 	#Mongols
 	1218.1.1 = {
 		liege = e_mongol_empire
@@ -1369,7 +1410,7 @@ c_shelji = {
 	1034.1.1 = {
 		holder = 144102 # Ebu Shuca
 	}
-	
+
 	#Split of Karakhanid khanate
 	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
 	1042.1.2 = {
@@ -1384,22 +1425,13 @@ c_shelji = {
 	1059.1.1 = {
 		holder = 144107 # Ebu Ali el-Hasan
 	}
-	
+
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
 	1158.1.1 = {
-		holder = 188855 # Muhammad
+		holder = karluk0048
 		liege = e_kara_khitai
 	}
-	1188.1.1 = {
-		holder = 188856 # Yusuf
-	}
-	1205.1.1 = {
-		holder = 188857 # Muhammad
-	}
-	1211.1.1 = {
-		holder = 188914 # Kuchlug
-	}
-	
+
 	#Mongols
 	1218.1.1 = {
 		liege = e_mongol_empire
@@ -1477,7 +1509,7 @@ c_quriltay = {
 		holder = 74029	#fictional
 		government = nomad_government
 	}
-	
+
 	#1066 start
 	1065.1.2 = {
 		liege = 0
@@ -1492,10 +1524,10 @@ c_quriltay = {
 	1150.6.11 = {
 		holder = 302656	#fictional Sugr Beldet
 	}
-	
+
 	#1137 Quriltay to Kara Khitai
 	1158.1.1 = {
-		holder = 188855 # Muhammad
+		holder = karluk0048
 		liege = e_kara_khitai
 	}
 }
@@ -1506,7 +1538,7 @@ c_mushun = {
 		holder = 74029	#fictional
 		government = nomad_government
 	}
-	
+
 	#1066 start
 	1065.1.2 = {
 		liege = 0
@@ -1521,11 +1553,11 @@ c_mushun = {
 	1150.6.11 = {
 		holder = 302656	#fictional Sugr Beldet
 	}
-	
+
 	#1137 Quriltay to Kara Khitai
 	1158.1.1 = {
 		holder = fictional_kipchaks_22 # ficitonal herder Mala
-		liege = e_kara_khitai
+		liege = 0
 		government = herder_government
 	}
 }
@@ -1570,37 +1602,41 @@ c_cherik = {
 	1034.1.1 = {
 		holder = 144102 # Ebu Shuca
 	}
-	
+
 	#Split of Karakhanid khanate
 	#Western Karakhanid set to k_transoxiana, eastern Karakhanid set to k_zhetysu
-	1042.1.2 = {
-		holder = 144102 # Sulayman II AKA Ebu Shuca
-	}
 	1056.1.1 = {
-		holder = 144103	#Muhammad
+		holder = 144103	# Muhammad II
 	}
 	1057.1.1 = {
-		holder = 144104	#Ibrahim
+		holder = 144104	# Ibrahim I
 	}
 	1059.1.1 = {
-		holder = 144107 # Ebu Ali el-Hasan
+		holder = 144107 # Madmud Togrul
 	}
-	
+
 	#1137 - Kara Khitai vassalizes eastern Karakhanid khanate
-	1158.1.1 = {
-		holder = 188855 # Muhammad
+	1137.1.1 = {
+		government = steppe_admin_government
+		holder = 188905	#Yelü Dashi = Emperor Dezong
 		liege = e_kara_khitai
 	}
-	1188.1.1 = {
-		holder = 188856 # Yusuf
+	1143.1.1 = {
+		holder = 188906	#Tabuyan = Regent Empress Gantian
 	}
-	1205.1.1 = {
-		holder = 188857 # Muhammad
+	1150.1.1 = {
+		holder = 188907	#Yelü-Yilie = Emperor Renzong
+	}
+	1164.1.1 = {
+		holder = 188908	#Yelü Pusuwan = Regent Empress Chengtian
+	}
+	1178.1.1 = {
+		holder = 188912	#Yelü Zhilugu
 	}
 	1211.1.1 = {
-		holder = 188914 # Kuchlug
+		holder = 188914	#Kuchlug
 	}
-	
+
 	#Mongols
 	1218.1.1 = {
 		liege = e_mongol_empire

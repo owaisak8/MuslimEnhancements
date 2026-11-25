@@ -355,6 +355,16 @@
 				boy = male
 				girl = female
 			}
+
+			fatima_masuma_shield = { # Fatima al-Ma'suma, daughter of Imam Musa al-Kadhim
+				index = 37
+				male = {
+					1 = fatima_masuma_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
 		
 			
 

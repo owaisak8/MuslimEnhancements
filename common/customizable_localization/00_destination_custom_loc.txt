@@ -9,28 +9,28 @@ DestinationInspiredLanguageDescriptor = {
 		}
 		localization_key = DestinationInspiredLanguageDescriptorArabic
 	}
-	
+
 	text = {
 		trigger = {
 			culture = { has_cultural_pillar = language_maltese }
 		}
 		localization_key = DestinationInspiredLanguageDescriptorMaltese
 	}
-	
+
 	text = {
 		trigger = {
 			culture = { has_cultural_pillar = language_sayhadic }
 		}
 		localization_key = DestinationInspiredLanguageDescriptorHimyaritic
 	}
-	
+
 	text = {
 		trigger = {
 			culture = { has_cultural_pillar = language_south_arabian }
 		}
 		localization_key = DestinationInspiredLanguageDescriptorSouthArabian
 	}
-	
+
 	##
 	text = {
 		trigger = {

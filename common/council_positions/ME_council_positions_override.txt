@@ -34,14 +34,14 @@
 
 	valid_character = {
 		exists = root.liege_or_court_owner
-		can_be_kurultai_trigger = { 
-			COURT_OWNER = root.liege_or_court_owner 
+		can_be_kurultai_trigger = {
+			COURT_OWNER = root.liege_or_court_owner
 			CP1 = councillor_kurultai_2
 			CP2 = councillor_kurultai_3
 			CP3 = councillor_kurultai_4
 		}
 	}
-	
+
 	council_owner_modifier = {
 		name = learn_on_the_job_modifier
 		diplomacy = 1
@@ -68,7 +68,7 @@
 
 	modifier = {
 		name = councillor_kurultai_modifier
-		monthly_income = 0.5
+		monthly_income = 0.25
 		scale = council_scaled_monthly_income
 	}
 
@@ -154,14 +154,14 @@ councillor_kurultai_2 = {
 
 	valid_character = {
 		exists = root.liege_or_court_owner
-		can_be_kurultai_trigger = { 
-			COURT_OWNER = root.liege_or_court_owner 
+		can_be_kurultai_trigger = {
+			COURT_OWNER = root.liege_or_court_owner
 			CP1 = councillor_kurultai_1
 			CP2 = councillor_kurultai_3
 			CP3 = councillor_kurultai_4
 		}
 	}
-	
+
 	council_owner_modifier = {
 		name = learn_on_the_job_modifier
 		diplomacy = 1
@@ -188,7 +188,7 @@ councillor_kurultai_2 = {
 
 	modifier = {
 		name = councillor_kurultai_modifier
-		monthly_income = 0.5
+		monthly_income = 0.25
 		scale = council_scaled_monthly_income
 	}
 
@@ -274,14 +274,14 @@ councillor_kurultai_3 = {
 
 	valid_character = {
 		exists = root.liege_or_court_owner
-		can_be_kurultai_trigger = { 
-			COURT_OWNER = root.liege_or_court_owner 
+		can_be_kurultai_trigger = {
+			COURT_OWNER = root.liege_or_court_owner
 			CP1 = councillor_kurultai_1
 			CP2 = councillor_kurultai_2
 			CP3 = councillor_kurultai_4
 		}
 	}
-	
+
 	council_owner_modifier = {
 		name = learn_on_the_job_modifier
 		diplomacy = 1
@@ -308,7 +308,7 @@ councillor_kurultai_3 = {
 
 	modifier = {
 		name = councillor_kurultai_modifier
-		monthly_income = 0.5
+		monthly_income = 0.25
 		scale = council_scaled_monthly_income
 	}
 
@@ -353,7 +353,7 @@ councillor_kurultai_3 = {
 	portrait_animation = hunting_shortbow_aim_arrow_default
 
 	barbershop_data = {
-		position = { 1618.0 172.0  }
+		position = { 1618.0 172.0 }
 		click_to_front = no
 	}
 }
@@ -394,14 +394,14 @@ councillor_kurultai_4 = {
 
 	valid_character = {
 		exists = root.liege_or_court_owner
-		can_be_kurultai_trigger = { 
-			COURT_OWNER = root.liege_or_court_owner 
+		can_be_kurultai_trigger = {
+			COURT_OWNER = root.liege_or_court_owner
 			CP1 = councillor_kurultai_1
 			CP2 = councillor_kurultai_2
 			CP3 = councillor_kurultai_3
 		}
 	}
-	
+
 	council_owner_modifier = {
 		name = learn_on_the_job_modifier
 		diplomacy = 1
@@ -428,7 +428,7 @@ councillor_kurultai_4 = {
 
 	modifier = {
 		name = councillor_kurultai_modifier
-		monthly_income = 0.5
+		monthly_income = 0.25
 		scale = council_scaled_monthly_income
 	}
 

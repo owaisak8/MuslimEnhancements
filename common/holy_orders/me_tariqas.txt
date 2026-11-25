@@ -1,0 +1,300 @@
+﻿###################
+# TARIQAS         #
+###################
+# The Sufi orders, built on the 1.20 Monastic Order system (vanilla defines no Muslim monastic orders).
+# Each order champions one tenet and is led by its Shaykh from a leased lodge.
+#
+# At game start they are created by me_set_up_tariqas_effect, which marks the patron with
+# var:me_tariqa_to_found so that exactly the intended order is picked.
+# Outside game start they can be founded by Sunni rulers once their historical founding date has passed.
+
+# The "sober" school of al-Junayd of Baghdad
+ho_me_junaydiyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_junaydiyya
+	name = "holy_order_me_junaydiyya"
+	tenet = tenet_inner_journey
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:junaydiyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+		}
+	}
+
+	weight = {
+		value = 5
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The school of Abu Yazid (Tayfur) of Bistam
+ho_me_tayfuriyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_tayfuriyya
+	name = "holy_order_me_tayfuriyya"
+	tenet = tenet_esotericism
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:tayfuriyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+		}
+	}
+
+	weight = {
+		value = 5
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The school of Sahl of Tustar
+ho_me_sahliyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_sahliyya
+	name = "holy_order_me_sahliyya"
+	tenet = tenet_asceticism
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:sahliyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+		}
+	}
+
+	weight = {
+		value = 5
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The order of Abd al-Qadir al-Jilani (d. 1166)
+ho_me_qadiriyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_qadiriyya
+	name = "holy_order_me_qadiriyya"
+	tenet = tenet_mendicant_preachers
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:qadiriyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+			current_year >= 1166
+		}
+	}
+
+	weight = {
+		value = 10
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The order of Ahmad al-Rifa'i (d. 1182)
+ho_me_rifaiyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_rifaiyya
+	name = "holy_order_me_rifaiyya"
+	tenet = tenet_ritual_celebrations
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:rifaiyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+			current_year >= 1150
+		}
+	}
+
+	weight = {
+		value = 10
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The order of Abu al-Najib al-Suhrawardi (d. 1168) and his nephew Umar
+ho_me_suhrawardiyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_suhrawardiyya
+	name = "holy_order_me_suhrawardiyya"
+	tenet = tenet_legalism
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:suhrawardiyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+			current_year >= 1150
+		}
+	}
+
+	weight = {
+		value = 10
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The order of the masters of Chisht
+ho_me_chishtiyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_chishtiyya
+	name = "holy_order_me_chishtiyya"
+	tenet = tenet_vows_of_poverty
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:chishtiyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+			current_year >= 940
+			scope:province = {
+				OR = {
+					geographical_region = world_middle_east_persia
+					geographical_region = world_india
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The circle of Abu Madyan (d. 1198), the master of the Maghreb
+ho_me_madyaniyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_madyaniyya
+	name = "holy_order_me_madyaniyya"
+	tenet = tenet_asceticism
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			scope:founder = {
+				has_variable = me_tariqa_to_found
+				var:me_tariqa_to_found = flag:madyaniyya
+			}
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			current_year >= 1160
+			scope:province = {
+				OR = {
+					geographical_region = world_africa_north
+					geographical_region = world_europe_west_iberia
+				}
+			}
+		}
+	}
+
+	weight = {
+		value = 10
+		if = {
+			limit = { scope:founder = { has_variable = me_tariqa_to_found } }
+			add = 10000
+		}
+	}
+}
+
+# The order of Najm al-Din Kubra. He only returned to Khwarazm to teach around 1185,
+# so it is not placed at any start date; it can be founded from then on.
+ho_me_kubrawiyya = {
+	type = monastic
+	government = monastic_holy_order_government
+	title = d_me_kubrawiyya
+	name = "holy_order_me_kubrawiyya"
+	tenet = tenet_inner_journey
+
+	trigger = {
+		trigger_if = {
+			limit = { scope:founder = { has_variable = monastic_game_start_founder } }
+			always = no
+		}
+		trigger_else = {
+			scope:founder.religion = religion:islam_religion
+			scope:founder.rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
+			current_year >= 1185
+			scope:province = { geographical_region = world_middle_east_persia }
+		}
+	}
+
+	weight = {
+		value = 10
+	}
+}

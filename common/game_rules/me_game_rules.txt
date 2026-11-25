@@ -1,16 +1,5 @@
-﻿me_sunni_unity = { # Converts counties of Muwalladi and/or Maturidi into the default Sunni 
-	
-	categories = {
-		difficulty historicity flavor
-	}
-	
-	default = me_sunni_normal
-
-	me_sunni_normal = {}
-	me_sunni_united = {}
-	me_sunni_muwalladi_only = {}
-	me_sunni_maturidi_only = {}
-}
+﻿# 1.20 (By God Alone): the 'Sunni Sect Divisions' rule (me_sunni_unity) was retired - Ash'ari, Maturidi and Muwalladi
+# are no longer separate faiths; all Sunnis share one faith with the four madhhabs as Rites.
 
 me_nukkari_revolt_game_rule = {
 	
@@ -124,10 +113,10 @@ me_adventerers_extra = { # Decides whether the fic adventerers get to stay or no
 		historicity flavor
 	}
 	
-	default = me_adventerers_extra_none
+	default = me_adventerers_egg_only
 
-	me_adventerers_fic_egg = {}
-	me_adventerers_fic_only = {}
+	#me_adventerers_fic_egg = {}
+	#me_adventerers_fic_only = {}
 	me_adventerers_egg_only = {}
 	me_adventerers_extra_none = {}
 }
@@ -146,6 +135,18 @@ me_caliph_rank = { # Decides whether the Fatimids and Abbasids gets extra titles
 	me_caliph_rank_abbasid = {}
 }
 
+me_closed_faith_rule = { # Decides whether the Druze and Mandaeanism faiths get the Closed Faith tenet
+	
+	categories = {
+		difficulty flavor
+	}
+	
+	default = me_closed_faith_yes
+
+	me_closed_faith_yes = {}
+	me_closed_faith_no = {}
+}
+
 me_ayyubid_culture = { # Decides whether the living Ayubbids are Mashriqi or Kurdish
 	
 	categories = {
@@ -156,6 +157,18 @@ me_ayyubid_culture = { # Decides whether the living Ayubbids are Mashriqi or Kur
 
 	me_ayyubid_mashriqi = {}
 	me_ayyubid_kurdish = {}
+}
+
+me_tyre_maab_exchange = { # Decides whether the Ma'ab will be exchanged for Acre/Tyre upon the Muslim retaking of Jerusalem
+	
+	categories = {
+		historicity flavor
+	}
+	
+	default = me_tyre_maab_exchange_yes
+
+	me_tyre_maab_exchange_yes = {}
+	me_tyre_maab_exchange_no = {}
 }
 
 me_fatimid_trait = { # Decides whether the Fatimids keep the Ubaydi trait or become normal Sayyids
@@ -221,4 +234,30 @@ me_malay_islamic_ruler = { # Decides whether the early Achenese muslim dynasties
 
 	me_malay_islamic_ruler_yes = {}
 	me_malay_islamic_ruler_no = {}
+}
+
+me_can_can_raid_rule = { # Decides whether Clan government can raid or not
+	
+	categories = {
+		difficulty
+	}
+	
+	default = me_clan_can_raid_struggle
+
+	me_clan_can_raid_yes = {}
+	me_clan_can_raid_struggle = {}
+	me_clan_can_raid_no = {}
+}
+
+me_affinal_doctrines_rule = { # Decides whether affinal doctrines are enabled or not
+	
+	categories = {
+		difficulty historicity flavor
+	}
+	
+	default = me_affinal_doctrines_yes
+
+	me_affinal_doctrines_no = {}
+	me_affinal_doctrines_yes = {}
+	me_affinal_doctrines_concubines = {}
 }

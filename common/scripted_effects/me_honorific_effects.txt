@@ -6,7 +6,7 @@ ME_islamic_honorific_ai_ruler_effect = {
 			trigger = {
 				is_ai = yes
 				faith.religion = religion:islam_religion
-				NOT = { faith = { has_doctrine = muhammad_succession_berberist_doctrine } }
+				NOT = { rite = { rite_has_doctrine = muhammad_succession_berberist_doctrine } }
 				has_game_rule = me_islamic_honorific_active_yes
 				highest_held_title_tier >= tier_duchy
 				current_date >= 950.1.1
@@ -20,12 +20,7 @@ ME_islamic_honorific_ai_ruler_effect = {
 			}
 			modifier = { 
 				add = 900
-				OR = {
-					scope:previous_holder = { ME_has_ud_din_nickname_trigger = yes }
-					scope:previous_holder = { ME_has_ul_islam_nickname_trigger = yes }
-					scope:previous_holder = { ME_has_ud_dawlah_nickname_trigger = yes }
-					scope:previous_holder = { ME_has_ul_mulk_nickname_trigger = yes }
-				}
+				scope:previous_holder = { ME_has_any_laqab_nickname_trigger = yes }
 			}
 			modifier = { # A small possibility for Andalusians and Levantines to take up an honorific with the 'Dawlah' ending
 				add = 10
@@ -217,7 +212,10 @@ ME_caliphal_honorific_ai_ruler_effect = {
 				has_game_rule = me_caliphal_honorific_active_historic_short
 			}
 			has_title = title:d_sunni
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_sunni_historic_effect = yes
 	}
@@ -228,7 +226,10 @@ ME_caliphal_honorific_ai_ruler_effect = {
 				has_game_rule = me_caliphal_honorific_active_historic_short
 			}
 			has_title = title:d_muwalladi
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_muwalladi_historic_effect = yes
 	}
@@ -239,7 +240,10 @@ ME_caliphal_honorific_ai_ruler_effect = {
 				has_game_rule = me_caliphal_honorific_active_historic_short
 			}
 			has_title = title:d_masmudi
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_masmudi_historic_effect = yes
 	}
@@ -253,7 +257,10 @@ ME_caliphal_honorific_ai_ruler_effect = {
 				has_title = title:d_shiite
 				has_title = title:d_hafizi
 			}
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_ismaili_historic_effect = yes
 	}
@@ -275,7 +282,10 @@ ME_caliphal_honorific_ai_ruler_effect = {
 				has_game_rule = me_caliphal_honorific_active_historic_short
 			}
 			has_title = title:d_zayidi
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_zayidi_historic_effect = yes
 	}
@@ -288,11 +298,14 @@ ME_caliphal_honorific_ai_ruler_effect = {
 				has_title = title:d_masmudi
 				has_title = title:d_shiite
 				has_title = title:d_hafizi
-				faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+				rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 				ME_has_caliphal_short_nickname_trigger = yes
 				ME_has_caliphal_long_nickname_trigger = yes
 			}
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_caliphal_random_effect = yes
 	}
@@ -304,21 +317,19 @@ ME_caliphal_honorific_ai_ruler_effect = {
 			#}
 			OR = {
 				has_title = title:d_zayidi
-				faith = faith:zayidi
-				faith = faith:salihi
+				rite = rite:zayidi
+				rite = rite:salihi
 			}
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_zayidi_random_effect = yes
 	}
 	else_if = {
 		limit = {
-			OR = {
-				scope:previous_holder = { ME_has_ud_din_nickname_trigger = yes }
-				scope:previous_holder = { ME_has_ul_islam_nickname_trigger = yes }
-				scope:previous_holder = { ME_has_ud_dawlah_nickname_trigger = yes }
-				scope:previous_holder = { ME_has_ul_mulk_nickname_trigger = yes }
-			}
+			scope:previous_holder = { ME_has_any_laqab_nickname_trigger = yes }
 			NOT = { has_game_rule = me_islamic_honorific_active_no }
 			has_any_nickname = no
 		}
@@ -801,7 +812,44 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+			}
+			give_nickname = nick_lisan_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ud_din
 		}
 		10 = {
 			trigger = {
@@ -820,6 +868,16 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				}
 			}
 			give_nickname = nick_mubariz_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_muhadhdhab_ud_din
 		}
 		10 = {
 			trigger = {
@@ -896,6 +954,20 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_murtada_ad_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ud_din
 		}
 		10 = {
 			trigger = {
@@ -1328,6 +1400,24 @@ ME_islamic_honorific_ai_ud_din_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ud_din
 		}
 		10 = {
@@ -1368,6 +1458,24 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_shihab_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ud_din
 		}
 		10 = {
 			trigger = {
@@ -1600,7 +1708,35 @@ ME_islamic_honorific_ai_ud_din_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			give_nickname = nick_muhadhdhabat_ud_din
 		}
 		10 = {
 			trigger = {
@@ -1649,6 +1785,20 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ud_din
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ud_din
 		}
 		10 = {
 			trigger = {
@@ -2377,7 +2527,44 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+			}
+			give_nickname = nick_lisan_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ud_din_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -2396,6 +2583,16 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				}
 			}
 			give_nickname = nick_mubariz_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_muhadhdhab_ud_din_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -2472,6 +2669,20 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_murtada_ad_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ud_din_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -2904,6 +3115,24 @@ ME_islamic_honorific_ai_ud_din_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ud_din_nonprefix
 		}
 		10 = {
@@ -2944,6 +3173,24 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_shihab_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ud_din_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -3176,7 +3423,35 @@ ME_islamic_honorific_ai_ud_din_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			give_nickname = nick_muhadhdhabat_ud_din_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -3225,6 +3500,20 @@ ME_islamic_honorific_ai_ud_din_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ud_din_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ud_din_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -3957,7 +4246,44 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+			}
+			give_nickname = nick_lisan_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ul_islam
 		}
 		10 = {
 			trigger = {
@@ -4052,6 +4378,20 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_murtada_al_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ul_islam
 		}
 		10 = {
 			trigger = {
@@ -4474,6 +4814,24 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ul_islam
 		}
 		10 = {
@@ -4514,6 +4872,24 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_shihab_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ul_islam
 		}
 		10 = {
 			trigger = {
@@ -4746,6 +5122,24 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ul_islam
 		}
 		10 = {
@@ -4795,6 +5189,20 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ul_islam
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ul_islam
 		}
 		10 = {
 			trigger = {
@@ -5513,7 +5921,44 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+			}
+			give_nickname = nick_lisan_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ul_islam_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -5608,6 +6053,20 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_murtada_al_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ul_islam_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -6030,6 +6489,24 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ul_islam_nonprefix
 		}
 		10 = {
@@ -6070,6 +6547,24 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_shihab_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ul_islam_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -6302,6 +6797,24 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ul_islam_nonprefix
 		}
 		10 = {
@@ -6351,6 +6864,20 @@ ME_islamic_honorific_ai_ul_islam_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ul_islam_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ul_islam_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -7044,7 +7571,44 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+			}
+			give_nickname = nick_lisan_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ud_dawlah
 		}
 		10 = {
 			trigger = {
@@ -7149,6 +7713,20 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_musharif_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ud_dawlah
 		}
 		10 = {
 			trigger = {
@@ -7589,6 +8167,24 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ud_dawlah
 		}
 		10 = {
@@ -7649,6 +8245,24 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
 			give_nickname = nick_siraj_ud_dawlah
 		}
 		10 = {
@@ -7698,6 +8312,16 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				}
 			}
 			give_nickname = nick_uddat_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_wajih_ud_dawlah
 		}
 		10 = {
 			trigger = {
@@ -7931,6 +8555,24 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ud_dawlah
 		}
 		10 = {
@@ -7980,6 +8622,20 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ud_dawlah
 		}
 		10 = {
 			trigger = {
@@ -8226,6 +8882,17 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				is_independent_ruler = yes
 			}
 			give_nickname = nick_sultanat_ud_dawlah
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+				is_independent_ruler = yes
+			}
+			give_nickname = nick_wajihat_ud_dawlah
 		}
 		10 = {
 			trigger = {
@@ -8713,7 +9380,44 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+			}
+			give_nickname = nick_lisan_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ud_dawlah_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -8818,6 +9522,20 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_musharif_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ud_dawlah_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -9258,6 +9976,24 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ud_dawlah_nonprefix
 		}
 		10 = {
@@ -9318,6 +10054,24 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
 			give_nickname = nick_siraj_ud_dawlah_nonprefix
 		}
 		10 = {
@@ -9367,6 +10121,16 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				}
 			}
 			give_nickname = nick_uddat_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_wajih_ud_dawlah_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -9600,6 +10364,24 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ud_dawlah_nonprefix
 		}
 		10 = {
@@ -9649,6 +10431,20 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ud_dawlah_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -9895,6 +10691,17 @@ ME_islamic_honorific_ai_ud_dawlah_effect = {
 				is_independent_ruler = yes
 			}
 			give_nickname = nick_sultanat_ud_dawlah_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+				is_independent_ruler = yes
+			}
+			give_nickname = nick_wajihat_ud_dawlah_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -10386,7 +11193,44 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+			}
+			give_nickname = nick_lisan_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ul_mulk
 		}
 		10 = {
 			trigger = {
@@ -10491,6 +11335,20 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_musharif_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ul_mulk
 		}
 		10 = {
 			trigger = {
@@ -10931,6 +11789,24 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ul_mulk
 		}
 		10 = {
@@ -10991,6 +11867,24 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
 			give_nickname = nick_siraj_ul_mulk
 		}
 		10 = {
@@ -11040,6 +11934,16 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				}
 			}
 			give_nickname = nick_uddat_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_male = yes
+			}
+			give_nickname = nick_wajih_ul_mulk
 		}
 		10 = {
 			trigger = {
@@ -11273,6 +12177,24 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ul_mulk
 		}
 		10 = {
@@ -11322,6 +12244,20 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ul_mulk
 		}
 		10 = {
 			trigger = {
@@ -11568,6 +12504,17 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				is_independent_ruler = yes
 			}
 			give_nickname = nick_sultanat_ul_mulk
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_both
+					has_game_rule = me_islamic_honorific_prefixed_regular
+				}
+				is_female = yes
+				is_independent_ruler = yes
+			}
+			give_nickname = nick_wajihat_ul_mulk
 		}
 		10 = {
 			trigger = {
@@ -12055,7 +13002,44 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_layth_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+			}
+			give_nickname = nick_lisan_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
 			give_nickname = nick_majd_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_minhaj_ul_mulk_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -12160,6 +13144,20 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				is_male = yes
 			}
 			give_nickname = nick_musharif_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlis_ul_mulk_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -12600,6 +13598,24 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_sarim_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_sayf_ul_mulk_nonprefix
 		}
 		10 = {
@@ -12660,6 +13676,24 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				}
 				is_male = yes
 			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
+			give_nickname = nick_sinan_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
 			give_nickname = nick_siraj_ul_mulk_nonprefix
 		}
 		10 = {
@@ -12709,6 +13743,16 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				}
 			}
 			give_nickname = nick_uddat_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_male = yes
+			}
+			give_nickname = nick_wajih_ul_mulk_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -12942,6 +13986,24 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 					has_lifestyle = martial_lifestyle
 				}
 			}
+			give_nickname = nick_laytha_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				martial >= 10
+				OR = {
+					has_trait = education_martial
+					has_lifestyle = martial_lifestyle
+				}
+			}
 			give_nickname = nick_mubarizat_ul_mulk_nonprefix
 		}
 		10 = {
@@ -12991,6 +14053,20 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				is_female = yes
 			}
 			give_nickname = nick_muizat_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+			}
+			modifier = { 
+				add = 50
+				has_trait = loyal
+			}
+			give_nickname = nick_mukhlisat_ul_mulk_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -13237,6 +14313,17 @@ ME_islamic_honorific_ai_ul_mulk_effect = {
 				is_independent_ruler = yes
 			}
 			give_nickname = nick_sultanat_ul_mulk_nonprefix
+		}
+		10 = {
+			trigger = {
+				OR = {
+					has_game_rule = me_islamic_honorific_prefixed_no
+					has_game_rule = me_islamic_honorific_prefixed_caliphal
+				}
+				is_female = yes
+				is_independent_ruler = yes
+			}
+			give_nickname = nick_wajihat_ul_mulk_nonprefix
 		}
 		10 = {
 			trigger = {
@@ -16112,7 +17199,10 @@ ME_caliphal_honorific_sunni_historic_effect = {
 		limit = { 
 			exists = global_var:caliph_laqab_sunni_var
 			global_var:caliph_laqab_sunni_var >= 55
-			has_any_nickname = no
+			OR = {
+				has_any_nickname = no
+				ME_has_any_laqab_nickname_trigger = yes
+			}
 		}
 		ME_caliphal_honorific_caliphal_random_effect = yes
 	}
@@ -17765,7 +18855,7 @@ ME_caliphal_honorific_ismaili_historic_effect = {
 		limit = { 
 			exists = global_var:caliph_laqab_ismaili_var
 			global_var:caliph_laqab_ismaili_var = 5
-			}
+		}
 		if = {
 			limit = { has_game_rule = me_caliphal_honorific_active_historic_short }
 			if = {
@@ -17818,7 +18908,7 @@ ME_caliphal_honorific_ismaili_historic_effect = {
 		limit = { 
 			exists = global_var:caliph_laqab_ismaili_var
 			global_var:caliph_laqab_ismaili_var = 6
-			}
+		}
 		if = {
 			limit = { has_game_rule = me_caliphal_honorific_active_historic_short }
 			if = {

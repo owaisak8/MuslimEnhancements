@@ -6,6 +6,7 @@ pool_repopulate_learning = {
 	random_traits = yes
 	culture = root.culture
 	faith = root.faith
+	rite = root.rite
 	learning = {
 		min_guest_template_skill max_guest_template_skill
 	}
@@ -17,7 +18,7 @@ pool_repopulate_learning = {
 	}
 	random_traits_list = {
 		count = { 0 1 }
-		scholar = {}
+		erudite = {}
 		theologian = {}
 		whole_of_body = {}
 		lifestyle_physician = {}
@@ -37,7 +38,7 @@ pool_repopulate_learning = {
 		if = {
 			limit = {
 				faith = {
-					has_doctrine = tenet_monasticism
+					faith_has_monasticism_trigger = yes
 				}
 			}
 			random_list = {
@@ -49,9 +50,9 @@ pool_repopulate_learning = {
 		}
 		random = {
 			chance = 1
-			
+
 			add_trait = lifestyle_poet
-			
+
 			modifier = {
 				add = 10
 				culture = { has_cultural_parameter = poet_trait_more_common }
@@ -81,9 +82,9 @@ pool_repopulate_learning = {
 		if = {
 			limit = {
 				faith.religion = religion:islam_religion
-				NOR = { 
+				NOR = {
 					faith = { has_doctrine = muhammad_succession_berberist_doctrine }
-					faith = faith:druze
+					rite = rite:druze
 				}
 			}
 			random_list = {

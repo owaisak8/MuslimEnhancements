@@ -1,8 +1,5 @@
 ﻿k_arabia = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
-	
+
 	## Kindat al-Mulk
 	410.1.1 = {
 		holder = me_kinda_024 # Hujr 'Akil al-Marār'
@@ -16,6 +13,9 @@
 	531.1.1 = {
 		holder = 0 # Kingdom becomes divided
 	}
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
 }
 
 c_al_jawf = {
@@ -32,11 +32,11 @@ c_al_jawf = {
 	633.1.1 = {
 		effect = { reset_title_name = yes }
 	}
-	
+
 	765.1.1 = {
 		holder = 188613
 	}
-	
+
 	860.1.1 = {
 		holder = bedouin0074
 	}
@@ -78,19 +78,19 @@ c_al_jawf = {
 
 
 c_thalabiya = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	627.1.1 = {
 		liege = e_arabia
 		government = tribal_government
 	}
-	
+
 	765.1.1 = {
 		holder = 188615
 	}
-	
+
 	836.1.1 = {
 		holder = bedouin0059
 	}
@@ -100,7 +100,7 @@ c_thalabiya = {
 	902.1.1 = {
 		holder = bedouin0061
 	}
-	
+
 	1066.1.1 = {
 		liege = "d_yamama"
 		holder = 34485
@@ -192,9 +192,9 @@ c_sirhan = {
 }
 
 d_amman = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
 }
 
 c_balqa = {
@@ -236,7 +236,7 @@ c_balqa = {
 	1079.1.1 = {
 		holder = 3044
 	}
-	
+
 	1095.1.1 = {
 		holder = 144023
 	}
@@ -315,10 +315,10 @@ c_balqa = {
 }
 
 c_maab = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 18 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 18 }
+
 	690.1.1 = {
 		liege = "d_palestine"
 		holder = 146022
@@ -365,7 +365,7 @@ c_maab = {
 	1105.1.1 = {
 		holder = 93436
 	}
-	
+
 	1115.1.1 = {
 		liege = "d_palestine"
 		holder = 10073 #Badouin I de Boulogne
@@ -384,7 +384,7 @@ c_maab = {
 	}
 	1161.1.1 = {
 		holder = 232700
-	}	
+	}
 	1168.1.1 = {
 		holder = 223561
 	}
@@ -400,7 +400,7 @@ c_maab = {
 	1187.7.4 = {
 		holder = 223560
 	}
-	
+
 	1187.10.2 = {
 		holder = 226052
 	}
@@ -477,7 +477,7 @@ c_jilat = {
 	1105.1.1 = {
 		holder = 93436
 	}
-	
+
 	1115.1.1 = {
 		liege = "d_palestine"
 		holder = 10073 #Badouin I de Boulogne
@@ -496,7 +496,7 @@ c_jilat = {
 	}
 	1161.1.1 = {
 		holder = 232700
-	}	
+	}
 	1168.1.1 = {
 		holder = 223561
 	}
@@ -585,15 +585,15 @@ d_shammar = {
 }
 
 c_tabuk = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	767.1.1 = {
 		liege = "d_medina"
 		holder = 188619
 	}
-	
+
 	855.1.1 = {
 		liege = "d_shammar"
 		holder = bedouin00161
@@ -601,7 +601,7 @@ c_tabuk = {
 	869.1.1 = {
 		liege = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = "d_medina"
 	}
@@ -633,10 +633,10 @@ c_tabuk = {
 
 
 c_al_aqabah = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	755.1.1 = {
 		liege = "d_medina"
 		holder = 188618
@@ -650,7 +650,7 @@ c_al_aqabah = {
 	869.1.1 = {
 		liege = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = "k_egypt"
 	}
@@ -687,10 +687,10 @@ c_al_aqabah = {
 }
 
 c_maan = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	690.1.1 = {
 		liege = "d_shammar"
 		holder = 146054
@@ -756,15 +756,15 @@ c_maan = {
 
 
 c_tayma = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	767.1.1 = {
 		liege = "d_medina"
 		holder = 188620
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
@@ -843,11 +843,15 @@ d_medina = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = e_arabia
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
@@ -864,11 +868,11 @@ d_medina = {
 	871.1.1 = {
 		holder = me_abbasids_028 # Muhammad 'Ka'b al-Baqar' ibn Ahmad al-Abbasi
 	}
-	
+
 	1066.1.1 = {
 		holder =  me_hashimid_033 # Sharif Abu Hashim Muhammad ibn Ja'far
 	}
-	
+
 	# Banu Muhanna
 	1071.1.1 = {
 		holder = husaynid_19 # Husayn 'Shihab ud-Din' ibn Hamza 'al-Muhanna'
@@ -881,7 +885,7 @@ d_medina = {
 		holder = husaynid_21 # Muhanna 'al-A'raj' ibn Husayn 'Shihab ud-Din'
 	}
 	1100.1.1 = { # It's unknown when he took over, but we will assume it happened after al-A'raj's death
-		holder = husaynid_20 # Mansur (Mandhur) ibn Umara ibn Subay'
+		holder = husaynid_20 # Mansur (Mandhur) ibn Umara ibn al-Muhanna ibn Subay' ibn Muhanna ibn Dawud
 	}
 	1104.1.1 = {
 		holder = me_husaynid_008 # Ibn Mansur (Mandhur), First name unknown
@@ -939,10 +943,10 @@ d_medina = {
 
 
 c_medina = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 18 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 18 }
+
 	724.1.1 = {
 		liege = d_medina
 		holder = me_makhzumi_015 # Ibrahim ibn Hisham ibn Isma'il al-Makhzumi
@@ -957,11 +961,15 @@ c_medina = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = d_medina
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
@@ -1050,10 +1058,10 @@ c_medina = {
 
 
 c_wajh = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	724.1.1 = {
 		liege = d_medina
 		holder = me_makhzumi_015 # Ibrahim ibn Hisham ibn Isma'il al-Makhzumi
@@ -1068,11 +1076,15 @@ c_wajh = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = "d_medina"
 		holder = 188620
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
@@ -1152,10 +1164,10 @@ c_wajh = {
 
 
 c_khaybar = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	724.1.1 = {
 		liege = d_medina
 		holder = me_makhzumi_015 # Ibrahim ibn Hisham ibn Isma'il al-Makhzumi
@@ -1170,11 +1182,15 @@ c_khaybar = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = d_medina
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
@@ -1265,10 +1281,10 @@ c_khaybar = {
 
 
 c_yanbu = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	724.1.1 = {
 		liege = d_medina
 		holder = me_makhzumi_015 # Ibrahim ibn Hisham ibn Isma'il al-Makhzumi
@@ -1283,15 +1299,19 @@ c_yanbu = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = d_medina
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
-	
+
 	855.1.1 = {
 		holder = me_hashimid_086 # Idris ibn Musa 'ath-Thani'
 		liege = "d_medina"
@@ -1367,16 +1387,16 @@ c_yanbu = {
 
 
 c_harrat_rahat = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	767.1.1 = {
 		government = tribal_government
 		liege = d_medina
 		holder = 163125 # Hasan ibn Zayd ibn Hasan
 	}
-	
+
 	#Banu Sulaym/Suleimids
 	820.1.1 = {
 		liege = 0
@@ -1400,7 +1420,7 @@ c_harrat_rahat = {
 	972.1.1 = {
 		holder = 155196
 	}
-	
+
 	#After defeat of Qarmatids Sulam pushed out by the Harb
 	980.1.1 = {
 		holder = bedouin0089
@@ -1434,9 +1454,9 @@ c_harrat_rahat = {
 
 
 d_mecca = {
-	867.1.1 = {	change_development_level = 12 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 20 }
+	867.1.1 = {	change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 20 }
 
 	724.1.1 = {
 		liege = e_arabia
@@ -1450,6 +1470,10 @@ d_mecca = {
 	}
 	742.1.1 = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
+	}
+
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
 	}
 
 	767.1.1 = {
@@ -1489,7 +1513,7 @@ d_mecca = {
 		liege = 0 # Changes his alliegence through the Khutbah from the Fatimids to the Abbasids
 	}
 	1094.1.1 = {
-		holder = me_hashimid_034 # Sharif Qasim ibn Abu Hashim Muhammad 
+		holder = me_hashimid_034 # Sharif Qasim ibn Abu Hashim Muhammad
 	}
 	1124.1.1 = {
 		holder = me_hashimid_035 # Sharif Fulaytah ibn Qasim
@@ -1521,10 +1545,10 @@ d_mecca = {
 }
 
 c_mecca = {
-	867.1.1 = {	change_development_level = 12 }
-	1066.1.1 = { change_development_level = 18 }
-	1178.1.1 = { change_development_level = 34 }
-	
+	867.1.1 = {	change_prosperity_level = 12 }
+	1066.1.1 = { change_prosperity_level = 18 }
+	1178.1.1 = { change_prosperity_level = 34 }
+
 	724.1.1 = {
 		liege = d_medina
 		holder = me_makhzumi_015 # Ibrahim ibn Hisham ibn Isma'il al-Makhzumi
@@ -1539,15 +1563,19 @@ c_mecca = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = d_medina
 		holder = 188610 # Muhammad b Ibrahim
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
-	
+
 	861.1.1 = {
 		holder = me_medina_001 # Ali ibn al-Husayn ibn Isma'il, Governor of Mecca and Medina 861-871
 	}
@@ -1560,7 +1588,7 @@ c_mecca = {
 	871.1.1 = {
 		holder = me_abbasids_028 # Muhammad 'Ka'b al-Baqar' ibn Ahmad al-Abbasi
 	}
-	
+
 	# Rule of the Sharifs begins
 	969.1.1 = {
 		holder = me_hashimid_095 # Ja'far ibn Muhammad, first Sharif of Mecca
@@ -1591,7 +1619,7 @@ c_mecca = {
 		liege = 0 # Changes his alliegence through the Khutbah from the Fatimids to the Abbasids
 	}
 	1094.1.1 = {
-		holder = me_hashimid_034 # Sharif Qasim ibn Abu Hashim Muhammad 
+		holder = me_hashimid_034 # Sharif Qasim ibn Abu Hashim Muhammad
 	}
 	1124.1.1 = {
 		holder = me_hashimid_035 # Sharif Fulaytah ibn Qasim
@@ -1660,10 +1688,10 @@ c_mecca = {
 
 
 c_taif = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	724.1.1 = {
 		liege = d_medina
 		holder = me_makhzumi_015 # Ibrahim ibn Hisham ibn Isma'il al-Makhzumi
@@ -1676,6 +1704,10 @@ c_taif = {
 	}
 	742.1.1 = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
+	}
+
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
 	}
 
 	767.1.1 = {
@@ -1695,7 +1727,7 @@ c_taif = {
 		liege = d_mecca
 		holder = me_medina_007 # Fictional governor
 	}
-	
+
 	1170.1.1 = {
 		holder = me_medina_008 # Fictional governor
 	}
@@ -1720,7 +1752,7 @@ c_taif = {
 #	950.1.1 = {
 #		holder = 159381
 #	}
-#	
+#
 #	#After defeat of Qarmatids Hilal pushed out by the Harb
 #	980.1.1 = {
 #		holder = bedouin0089
@@ -1768,15 +1800,19 @@ c_tihama = {
 		holder = me_thaqafi_016 # Yusuf ibn Muhammad ath-Thaqafi
 	}
 
+	747.1.1 = {
+		holder = me_umayyads_221 # Abd al-Wahid ibn Sulayman ibn Abd al-Malik
+	}
+
 	767.1.1 = {
 		liege = d_medina
 		holder = 188610 # Muhammad b Ibrahim
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin00162
 	}
-	
+
 	861.1.1 = {
 		holder = me_medina_001 # Ali ibn al-Husayn ibn Isma'il, Governor of Mecca and Medina 861-871
 	}
@@ -1789,7 +1825,7 @@ c_tihama = {
 	871.1.1 = {
 		holder = me_abbasids_028 # Muhammad 'Ka'b al-Baqar' ibn Ahmad al-Abbasi
 	}
-	
+
 	# Rule of the Sharifs begins
 	969.1.1 = {
 		holder = me_hashimid_095 # Ja'far ibn Muhammad, first Sharif of Mecca
@@ -1820,7 +1856,7 @@ c_tihama = {
 		liege = 0 # Changes his alliegence through the Khutbah from the Fatimids to the Abbasids
 	}
 	1094.1.1 = {
-		holder = me_hashimid_034 # Sharif Qasim ibn Abu Hashim Muhammad 
+		holder = me_hashimid_034 # Sharif Qasim ibn Abu Hashim Muhammad
 	}
 	1124.1.1 = {
 		holder = me_hashimid_035 # Sharif Fulaytah ibn Qasim
@@ -1894,7 +1930,7 @@ c_bisha = {
 		liege = "d_medina"
 		holder = 188621
 	}
-	
+
 	## Taif was under the rule of the rulers of Mecca
 	# Ruled by the Governor of Medina
 	860.1.1 = {
@@ -1906,11 +1942,11 @@ c_bisha = {
 		liege = d_mecca
 		holder = me_medina_007 # Fictional governor
 	}
-	
+
 	1170.1.1 = {
 		holder = me_medina_008 # Fictional governor
 	}
-	
+
 #	#Banu Hilal/Hilalid
 #	800.1.1 = {
 #		liege = 0
@@ -1928,7 +1964,7 @@ c_bisha = {
 #	960.1.1 = {
 #		holder = 155152
 #	}
-#	
+#
 #	#After defeat of Qarmatids Hilal pushed out by the Harb
 #	980.1.1 = {
 #		holder = bedouin0100
@@ -1983,11 +2019,11 @@ c_aqiq = {
 		holder = 188612 # Qutham Abbasid
 		government = tribal_government
 	}
-	
+
 	864.1.1 = {
 		holder = bedouin0047 # Banu Numayr
 	}
-	
+
 	#After defeat of Qarmatids Hilal pushed out by the Harb
 	980.1.1 = {
 		holder = bedouin0100
@@ -2026,10 +2062,10 @@ c_aqiq = {
 
 
 d_asir = {
-	867.1.1 = {	change_development_level = 1 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 5 }
-	
+	867.1.1 = {	change_prosperity_level = 1 }
+	1066.1.1 = { change_prosperity_level = 4 }
+	1178.1.1 = { change_prosperity_level = 5 }
+
 	## Kindat al-Mulk
 	410.1.1 = {
 		holder = me_kinda_024 # Hujr 'Akil al-Marār'
@@ -2046,7 +2082,7 @@ d_asir = {
 	540.1.1 = {
 		holder = 0
 	}
-	
+
 	1059.1.1 = {
 		government = tribal_government
 		holder = bedouin0092
@@ -2086,7 +2122,7 @@ c_asir = {
 		liege = "d_medina"
 		holder = 188621
 	}
-	
+
 	#Banu Hilal/Hilalid
 	800.1.1 = {
 		liege = 0
@@ -2107,7 +2143,7 @@ c_asir = {
 	950.1.1 = {
 		holder = 159381
 	}
-	
+
 	#After defeat of Qarmatids Hilal pushed out by the Harb
 	980.1.1 = {
 		holder = bedouin0100
@@ -2143,10 +2179,10 @@ c_asir = {
 
 
 d_najd = {
-	867.1.1 = {	change_development_level = 1 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 5 }
-	
+	867.1.1 = {	change_prosperity_level = 1 }
+	1066.1.1 = { change_prosperity_level = 4 }
+	1178.1.1 = { change_prosperity_level = 5 }
+
 	## Kindat al-Mulk
 	410.1.1 = {
 		holder = me_kinda_024 # Hujr 'Akil al-Marār'
@@ -2160,18 +2196,26 @@ d_najd = {
 	531.1.1 = { # Estimation of who held what after the division of the kingdom
 		holder = me_kinda_031 # Salama ibn al-Harith
 	}
-	
+
+	## Kharijites
+	686.1.1 = {
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
 	760.1.1 = {
 	#	liege = e_arabia
 		holder = 188612 # Qutham Abbasid
 		government = tribal_government
 	}
-	
+
 	863.1.1 = {
 		liege = 0
 		holder = 74042
 	}
-	
+
 	1065.1.1 = {
 		holder = bedouin0068
 	}
@@ -2191,19 +2235,19 @@ d_najd = {
 
 
 c_sharaf = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	627.1.1 = {
 		liege = e_arabia
 		government = tribal_government
 	}
-	
+
 	765.1.1 = {
 		holder = 188613
 	}
-	
+
 	810.1.1 = {
 		liege = 0
 		holder = bedouin0053
@@ -2221,7 +2265,7 @@ c_sharaf = {
 	869.1.1 = {
 		liege = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = "d_najd"
 	}
@@ -2267,7 +2311,7 @@ c_subay = {
 		liege = d_medina
 		holder = 188610 # Muhammad b Ibrahim
 	}
-	
+
 	#Banu Sulaym/Suleimids
 	820.1.1 = {
 		liege = 0
@@ -2320,7 +2364,7 @@ c_subay = {
 	1234.1.1 = {
 		holder = bedouin0097
 	}
-	
+
 }
 
 
@@ -2337,11 +2381,11 @@ c_hail = {
 	630.1.1 = {
 		liege = e_arabia
 	}
-	
+
 	765.1.1 = {
 		holder = 188616
 	}
-	
+
 	863.1.1 = {
 		liege = 0
 		holder = bedouin0057
@@ -2388,7 +2432,7 @@ c_shaqiq = {
 		liege = e_arabia
 		government = tribal_government
 	}
-	
+
 	#Banu Numayr
 	800.1.1 = {
 		liege = d_najd
@@ -2415,7 +2459,7 @@ c_shaqiq = {
 	1054.1.1 = {
 		holder = bedouin0117
 	}
-	
+
 	1080.1.1 = {
 		liege = "d_najd"
 		holder = 34507
@@ -2458,11 +2502,11 @@ c_qasim = {
 		liege = e_arabia
 		government = tribal_government
 	}
-	
+
 	765.1.1 = {
 		holder = 188616
 	}
-	
+
 	830.1.1 = {
 		liege = e_arabia
 		holder = bedouin0073
@@ -2512,11 +2556,11 @@ c_surrah = {
 		liege = e_arabia
 		government = tribal_government
 	}
-	
+
 	765.1.1 = {
 		holder = 188613
 	}
-	
+
 	866.1.1 = {
 		liege = "d_najd"
 	}
@@ -2526,15 +2570,15 @@ c_surrah = {
 	869.1.1 = {
 		liege = 0
 	}
-	
+
 	1061.1.1 = {
-		holder = bedouin0118 #Muta'in al-Juhavni
+		holder = bedouin0118 #Muta'in al-Juhani
 	}
 
 	1066.1.1 = {
 		liege = "d_najd"
 	}
-	
+
 	#Old history
 	1105.1.1 = {
 		holder = 34508
@@ -2570,10 +2614,10 @@ c_surrah = {
 
 
 d_yamama = {
-	867.1.1 = {	change_development_level = 1 }
-	1066.1.1 = { change_development_level = 4 }
-	1178.1.1 = { change_development_level = 6 }
-	
+	867.1.1 = {	change_prosperity_level = 1 }
+	1066.1.1 = { change_prosperity_level = 4 }
+	1178.1.1 = { change_prosperity_level = 6 }
+
 	## Kindat al-Mulk
 	410.1.1 = {
 		holder = me_kinda_024 # Hujr 'Akil al-Marār'
@@ -2584,8 +2628,53 @@ d_yamama = {
 	531.1.1 = { # Estimation of who held what after the division of the kingdom
 		holder = me_kinda_029 # Ma'd-Yakrub ibn al-Harith
 	}
-	
-#	### Abbasid Governors
+
+	545.1.1 = {
+		holder = 0
+	}
+
+	## Banu Hanifah
+	620.1.1 = { # Unknown when he took control of the region
+		holder = me_hanifah_017 # Haudhah ibn Ali al-Hanafi
+	}
+	629.1.1 = {
+		holder = me_hanifah_020 # Thumamah ibn Athal al-Hanafi
+	}
+
+	686.1.1 = { # Najdi Kharijites
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
+	### Umayyad Governors
+	720.1.1 = {
+		holder = me_hawazin_011 # al-Muhajir ibn Abdullah al-Kilabi
+		liege = e_arabia
+	}
+	743.1.1 = {
+		holder = me_hawazin_013 # Ali ibn al-Muhajir ibn Abdullah al-Kilabi
+	}
+
+	744.1.1 = {
+		holder = me_hanifah_044 # al-Muhayr ibn Halil al-Hanafi
+		liege = 0 # Revolts and establishes an independent state
+	}
+	746.1.1 = {
+		holder = me_hanifah_045 # Abdullah ibn an-Nu'man al-Hanafi
+	}
+	#748.1.1 = {
+	#	holder = ### # al-Muthanah ibn Yazid ibn Umar ibn Hubayra al-Fazari
+	#	liege = e_arabia # Umayyad Governor
+	#}
+
+	### Abbasid Governors
+	750.1.1 = {
+		holder = me_abbasids_035 # as-Sari ibn Abdullah al-Abbasi
+		liege = e_arabia
+	}
+
 #	900.4.1 = {
 #		holder = me_abbasid_gov_001 # al-Abbas ibn 'Amr al-Ghanawi
 #	}
@@ -2597,6 +2686,7 @@ d_yamama = {
 	800.1.1 = {
 		government = tribal_government
 		holder = bedouin0044
+		liege = 0
 	}
 	820.1.1 = {
 		holder = bedouin0045
@@ -2638,6 +2728,10 @@ d_yamama = {
 	1080.1.1 = {
 		holder = 0
 	}
+
+	1160.1.1 = { # Region likely ruled by a member of Banu Hanifa
+		holder = me_hanifah_083 # Fictional member of Banu Hanifa
+	}
 }
 
 
@@ -2647,10 +2741,53 @@ c_yamama = {
 		holder = 188612 # Qutham Abbasid
 		government = tribal_government
 	}
-	
+
+	## Banu Hanifah
+	620.1.1 = { # Unknown when he took control of the region
+		holder = me_hanifah_017 # Haudhah ibn Ali al-Hanafi
+	}
+	629.1.1 = {
+		holder = me_hanifah_020 # Thumamah ibn Athal al-Hanafi
+	}
+
+	686.1.1 = { # Najdi Kharijites
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
+	### Umayyad Governors
+	720.1.1 = {
+		holder = me_hawazin_011 # al-Muhajir ibn Abdullah al-Kilabi
+		liege = e_arabia
+	}
+	743.1.1 = {
+		holder = me_hawazin_013 # Ali ibn al-Muhajir ibn Abdullah al-Kilabi
+	}
+
+	744.1.1 = {
+		holder = me_hanifah_044 # al-Muhayr ibn Halil al-Hanafi
+		liege = 0 # Revolts and establishes an independent state
+	}
+	746.1.1 = {
+		holder = me_hanifah_045 # Abdullah ibn an-Nu'man al-Hanafi
+	}
+	#748.1.1 = {
+	#	holder = ### # al-Muthanah ibn Yazid ibn Umar ibn Hubayra al-Fazari
+	#	liege = e_arabia # Umayyad Governor
+	#}
+
+	### Abbasid Governors
+	750.1.1 = {
+		holder = me_abbasids_035 # as-Sari ibn Abdullah al-Abbasi
+		liege = e_arabia
+	}
+
 	#Banu Numayr
 	800.1.1 = {
 		holder = bedouin0044
+		liege = 0
 	}
 	820.1.1 = {
 		holder = bedouin0045
@@ -2676,7 +2813,7 @@ c_yamama = {
 	950.1.1 = {
 		holder = 160020 # Ahmad ibn al-Hasan
 	}
-	
+
 	1061.1.1 = {
 		holder = 20821 #Ali Mansoorid
 	}
@@ -2695,6 +2832,11 @@ c_yamama = {
 	1155.1.1 = {
 		holder = 34525
 	}
+
+	1160.1.1 = { # Region likely ruled by a member of Banu Hanifa
+		holder = me_hanifah_083 # Fictional member of Banu Hanifa
+	}
+
 	1195.1.1 = {
 		holder = 34526
 	}
@@ -2722,10 +2864,53 @@ c_al-arid = {
 		holder = 188612 # Qutham Abbasid
 		government = tribal_government
 	}
-	
+
+	## Banu Hanifah
+	620.1.1 = { # Unknown when he took control of the region
+		holder = me_hanifah_017 # Haudhah ibn Ali al-Hanafi
+	}
+	629.1.1 = {
+		holder = me_hanifah_020 # Thumamah ibn Athal al-Hanafi
+	}
+
+	686.1.1 = { # Najdi Kharijites
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
+	### Umayyad Governors
+	720.1.1 = {
+		holder = me_hawazin_011 # al-Muhajir ibn Abdullah al-Kilabi
+		liege = e_arabia
+	}
+	743.1.1 = {
+		holder = me_hawazin_013 # Ali ibn al-Muhajir ibn Abdullah al-Kilabi
+	}
+
+	744.1.1 = {
+		holder = me_hanifah_044 # al-Muhayr ibn Halil al-Hanafi
+		liege = 0 # Revolts and establishes an independent state
+	}
+	746.1.1 = {
+		holder = me_hanifah_045 # Abdullah ibn an-Nu'man al-Hanafi
+	}
+	#748.1.1 = {
+	#	holder = ### # al-Muthanah ibn Yazid ibn Umar ibn Hubayra al-Fazari
+	#	liege = e_arabia # Umayyad Governor
+	#}
+
+	### Abbasid Governors
+	750.1.1 = {
+		holder = me_abbasids_035 # as-Sari ibn Abdullah al-Abbasi
+		liege = e_arabia
+	}
+
 	#Banu Numayr
 	800.1.1 = {
 		holder = bedouin0044
+		liege = 0
 	}
 	820.1.1 = {
 		holder = bedouin0045
@@ -2760,7 +2945,7 @@ c_al-arid = {
 	1054.1.1 = {
 		holder = bedouin0117
 	}
-	
+
 	1080.1.1 = {
 		liege = "d_najd"
 		holder = 34521
@@ -2776,9 +2961,11 @@ c_al-arid = {
 	}
 	1155.1.1 = {
 		holder = 34525
+		liege = "d_yamama"
 	}
 	1195.1.1 = {
 		holder = 34526
+		liege = 0
 	}
 	1210.1.1 = {
 		holder = 34527
@@ -2804,10 +2991,57 @@ c_falaj = {
 		holder = 188612 # Qutham Abbasid
 		government = tribal_government
 	}
-	
+
+	## Banu Hanifah
+	620.1.1 = { # Unknown when he took control of the region
+		holder = me_hanifah_017 # Haudhah ibn Ali al-Hanafi
+	}
+	629.1.1 = {
+		holder = me_hanifah_020 # Thumamah ibn Athal al-Hanafi
+	}
+
+	686.1.1 = { # Najdi Kharijites
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
+	### Umayyad Governors
+	720.1.1 = {
+		holder = me_hawazin_011 # al-Muhajir ibn Abdullah al-Kilabi
+		liege = e_arabia
+	}
+	743.1.1 = {
+		holder = me_hawazin_013 # Ali ibn al-Muhajir ibn Abdullah al-Kilabi
+	}
+
+	744.1.1 = {
+		holder = me_hanifah_044 # al-Muhayr ibn Halil al-Hanafi
+		liege = 0 # Revolts and establishes an independent state
+	}
+	746.1.1 = {
+		holder = me_hanifah_045 # Abdullah ibn an-Nu'man al-Hanafi
+	}
+	747.6.1 = {
+		holder = me_hanifah_047 # al-Mundalith ibn Idris al-Hanafi
+		liege = d_yamama
+	}
+	#748.1.1 = {
+	#	holder = ### # al-Muthanah ibn Yazid ibn Umar ibn Hubayra al-Fazari
+	#	liege = e_arabia # Umayyad Governor
+	#}
+
+	### Abbasid Governors
+	750.1.1 = {
+		holder = me_abbasids_035 # as-Sari ibn Abdullah al-Abbasi
+		liege = e_arabia
+	}
+
 	#Banu Numayr
 	800.1.1 = {
 		holder = bedouin0044
+		liege = 0
 	}
 	820.1.1 = {
 		holder = bedouin0045
@@ -2818,7 +3052,7 @@ c_falaj = {
 	864.1.1 = {
 		holder = bedouin0047
 	}
-	
+
 	1040.1.1 = {
 		holder = bedouin0111
 	}
@@ -2842,6 +3076,11 @@ c_falaj = {
 	1155.1.1 = {
 		holder = 34525
 	}
+
+	1160.1.1 = { # Region likely ruled by a member of Banu Hanifa
+		holder = me_hanifah_083 # Fictional member of Banu Hanifa
+	}
+
 	1195.1.1 = {
 		holder = 34526
 	}
@@ -2864,17 +3103,17 @@ c_falaj = {
 
 
 c_al-hasa = {
-	1178.1.1 = { change_development_level = 44 }
+	1178.1.1 = { change_prosperity_level = 44 }
 
 	661.2.28 = {
 		liege = d_bahrain
 	}
-	
+
 	764.1.1 = {
 		government = tribal_government
 		holder = 188626 # Sulayman b Hakim
 	}
-	
+
 	867.1.1 = {
 		holder = 74040
 		liege = e_arabia
@@ -2882,7 +3121,7 @@ c_al-hasa = {
 	886.1.1 = {
 		liege = "d_bahrain"
 	}
-	
+
 	### Abbasid Governors
 	900.4.1 = {
 		liege = e_arabia
@@ -2922,20 +3161,20 @@ c_al-hasa = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 	1060.1.1 = {
 		holder = qarm013
 	}
-	
+
 	1077.1.1 = {
 		holder = 20900
 	}
@@ -2996,17 +3235,17 @@ c_dhafra = {
 	665.1.1 = {
 		liege = d_oman
 	}
-	
+
 	768.1.1 = {
 		government = tribal_government
 		holder = 188766
 	}
-	
+
 	860.1.1 = {
 		liege = e_arabia
 		holder = 74038
 	}
-	
+
 	### Qarmatians
 	899.1.1 = {
 		liege = 0
@@ -3031,15 +3270,15 @@ c_dhafra = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 
 #	978.1.1 = {
@@ -3094,26 +3333,26 @@ c_dhafra = {
 
 
 c_uqayr = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	661.2.28 = {
 		liege = d_bahrain
 	}
-	
+
 	764.1.1 = {
 		holder = 188626 # Sulayman b Hakim
 	}
 	768.1.1 = {
 		government = tribal_government
 	}
-	
+
 	860.1.1 = {
 		liege = e_arabia
 		holder = 74038
 	}
-	
+
 	### Qarmatians
 	899.1.1 = {
 		liege = 0
@@ -3138,15 +3377,15 @@ c_uqayr = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 
 	### Ibn Ayyash's Revolt
@@ -3219,12 +3458,12 @@ c_yabrin = {
 	661.2.28 = {
 		liege = d_bahrain
 	}
-	
+
 	764.1.1 = {
 		government = tribal_government
 		holder = 188626 # Sulayman b Hakim
 	}
-	
+
 	867.1.1 = {
 		holder = 74040
 		liege = e_arabia
@@ -3232,7 +3471,7 @@ c_yabrin = {
 	886.1.1 = {
 		liege = "d_bahrain"
 	}
-	
+
 	### Abbasid Governors
 	900.4.1 = {
 		liege = e_arabia
@@ -3272,20 +3511,20 @@ c_yabrin = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 	1060.1.1 = {
 		holder = qarm013
 	}
-	
+
 	1077.1.1 = {
 		holder = 20900
 	}
@@ -3345,9 +3584,17 @@ d_bahrain = {
 	661.2.28 = {
 		liege = e_arabia
 	}
-	
+
+	## Najdi Kharijites
+	687.1.1 = {
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
 	### Rashidun Governors
-#	632.1.1 = { 
+#	632.1.1 = {
 #		holder = 0 # al-Ala al-Hadrami
 #	}
 #	636.1.1 = {
@@ -3367,11 +3614,11 @@ d_bahrain = {
 	770.1.1 = {
 		holder = 0
 	}
-	
+
 	886.1.1 = {
 		holder = 74040
 	}
-	
+
 	### Abbasid Governors
 	900.4.1 = {
 		liege = e_arabia
@@ -3386,7 +3633,7 @@ d_bahrain = {
 	903.1.1 = {
 		holder = me_abbasid_gov_004 # Ibn Banu
 	}
-	
+
 
 	### Qarmatians
 	904.1.1 = {
@@ -3412,18 +3659,18 @@ d_bahrain = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 	1060.1.1 = {
-		holder = 0 
+		holder = 0
 	}
 
 	### The Uyunids
@@ -3484,18 +3731,26 @@ d_bahrain = {
 }
 
 c_qatif = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 18 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 18 }
+
 	661.2.28 = {
 		liege = d_bahrain
 	}
-	
+
+	## Najdi Kharijites
+	687.1.1 = {
+		holder = me_hanifah_037 # Najdah ibn Amer al-Hanafi
+	}
+	692.1.1 = {
+		holder = me_taghlib_150 # Abu Fadik Abdullah ibn Qays at-Taghlibi
+	}
+
 	764.1.1 = {
 		holder = 188626 # Sulayman b Hakim
 	}
-	
+
 	860.1.1 = {
 		holder = 74039
 		liege = e_arabia
@@ -3504,7 +3759,7 @@ c_qatif = {
 		liege = "d_bahrain"
 		holder = 74040
 	}
-	
+
 	### Qarmatians
 	899.1.1 = {
 		liege = 0
@@ -3537,15 +3792,15 @@ c_qatif = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 
 	### Ibn Ayyash's Revolt
@@ -3618,11 +3873,11 @@ c_uwal = {
 	661.2.28 = {
 		liege = d_bahrain
 	}
-	
+
 	764.1.1 = {
 		holder = 188626 # Sulayman b Hakim
 	}
-	
+
 	860.1.1 = {
 		holder = 74039
 		liege = e_arabia
@@ -3656,15 +3911,15 @@ c_uwal = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 
 	### Abu al-Bahlul's Revolt
@@ -3734,7 +3989,7 @@ c_samman = {
 		liege = e_arabia
 		holder = 188608 # Jabir b Tubah al-Kibani
 	}
-	
+
 	836.1.1 = {
 		holder = bedouin0059
 	}
@@ -3763,15 +4018,15 @@ c_samman = {
 		holder = qarm004 # Abu'l-Qasim Sa'id ibn Hasan al-Jannabi
 	}
 	972.1.1 = {
-		holder = qarm009 # Abu Yaqub Yousef 
+		holder = qarm009 # Abu Yaqub Yousef
 	}
 
 	### Fictional Qarmatians
 	977.1.1 = {
-		holder = qarm011 
+		holder = qarm011
 	}
 	1020.1.1 = {
-		holder = qarm012 
+		holder = qarm012
 	}
 
 	### The Uyunids
@@ -3849,12 +4104,12 @@ d_oman = {
 		holder = me_julandi_006 # Sa'id ibn Abad, co-ruled with his brother Sulayman
 	}
 #	702.1.1 = { # Replaced by Umayyad governors on the orders of al-Hajjaj
-#		holder = ### 
+#		holder = ###
 #	}
-	
+
 	749.1.1 = {
 		liege = 0 # Independant
-		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman 
+		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman
 	}
 	751.1.1 = {
 		liege = e_arabia
@@ -3951,7 +4206,7 @@ d_oman = {
 	1054.1.1 = {
 		holder = 0
 	}
-	
+
 	1154.1.1 = {
 		holder = 144145
 	}
@@ -3974,10 +4229,10 @@ d_oman = {
 
 
 c_nizwa = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 8 }
-	
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 8 }
+
 	628.1.1 = {
 		holder = me_julandi_002 # Jayfar ibn al-Julanda, co-ruled with his brother Abd
 		liege = d_oman
@@ -3990,11 +4245,11 @@ c_nizwa = {
 		holder = me_julandi_006 # Sa'id ibn Abad, co-ruled with his brother Sulayman
 	}
 #	702.1.1 = { # Replaced by Umayyad governors on the orders of al-Hajjaj
-#		holder = ### 
+#		holder = ###
 #	}
-	
+
 	749.1.1 = {
-		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman 
+		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman
 	}
 	751.1.1 = {
 		holder = me_julandi_011 # Rashid ibn an-Nadhar, Co-governed Oman with his cousin under the Abbasids
@@ -4084,11 +4339,11 @@ c_julfar = {
 		government = tribal_government
 		liege = d_oman
 	}
-	
+
 	768.1.1 = {
 		holder = 188766
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin0158
 	}
@@ -4148,15 +4403,15 @@ c_julfar = {
 
 
 c_batina = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	768.1.1 = {
 		liege = d_oman
 		holder = bedouin0119
 	}
-	
+
 	799.1.1 = {
 		#liege = e_arabia
 		holder = bedouin0120
@@ -4206,7 +4461,7 @@ c_batina = {
 	1220.1.1 = {
 		holder = bedouin0133
 	}
-	
+
 }
 
 
@@ -4215,11 +4470,11 @@ c_az-dhahira = {
 		government = tribal_government
 		liege = d_oman
 	}
-	
+
 	768.1.1 = {
 		holder = 188766
 	}
-	
+
 	830.1.1 = {
 		holder = bedouin0158
 	}
@@ -4229,7 +4484,7 @@ c_az-dhahira = {
 	882.1.1 = {
 		holder = bedouin0160
 	}
-	
+
 	#Nabhanids
 	1066.1.1 = {
 		liege = "d_kirman"
@@ -4267,10 +4522,10 @@ c_az-dhahira = {
 
 
 c_muscat = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	628.1.1 = {
 		holder = me_julandi_002 # Jayfar ibn al-Julanda, co-ruled with his brother Abd
 		liege = d_oman
@@ -4283,11 +4538,11 @@ c_muscat = {
 		holder = me_julandi_006 # Sa'id ibn Abad, co-ruled with his brother Sulayman
 	}
 #	702.1.1 = { # Replaced by Umayyad governors on the orders of al-Hajjaj
-#		holder = ### 
+#		holder = ###
 #	}
-	
+
 	749.1.1 = {
-		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman 
+		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman
 	}
 	751.1.1 = {
 		holder = me_julandi_011 # Rashid ibn an-Nadhar, Co-governed Oman with his cousin under the Abbasids
@@ -4348,7 +4603,7 @@ c_muscat = {
 	1142.1.1 = {
 		holder = 144035
 	}
-	
+
 	#Nabhanids
 	1154.1.1 = {
 		liege = "d_oman"
@@ -4376,10 +4631,10 @@ c_muscat = {
 
 
 c_duqm = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 8 }
-	
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 8 }
+
 	628.1.1 = {
 		holder = me_julandi_002 # Jayfar ibn al-Julanda, co-ruled with his brother Abd
 		liege = d_oman
@@ -4392,11 +4647,11 @@ c_duqm = {
 		holder = me_julandi_006 # Sa'id ibn Abad, co-ruled with his brother Sulayman
 	}
 #	702.1.1 = { # Replaced by Umayyad governors on the orders of al-Hajjaj
-#		holder = ### 
+#		holder = ###
 #	}
-	
+
 	749.1.1 = {
-		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman 
+		holder = 188763 # al-Julanda ibn Mas'ud, First Ibadi Imam of Oman
 	}
 	751.1.1 = {
 		holder = me_julandi_011 # Rashid ibn an-Nadhar, Co-governed Oman with his cousin under the Abbasids

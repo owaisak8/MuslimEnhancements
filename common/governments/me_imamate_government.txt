@@ -1,0 +1,46 @@
+﻿# The Ja'fari Imamate: the government of the Imams who hold the Twelver Imamate (d_imami).
+# They hold no land - the Imamate is a landless title, as vanilla does for the Ecumenical Patriarchate - and they stand
+# outside the feudal order: they can be neither vassal nor liege, have no council, and their court arranges no marriages.
+# Given by script (me_twelver_pass_imamate_effect) and in the Imamate's title history.
+me_imamate_government = {
+	government_rules = {
+		council = no
+		court_generate_spouses = no
+		inherit_from_dynastic_government = no
+		disable_regnal_numbers = yes # "Imam Ali al-Hadi", not "Imam Ali IV"
+		allow_accolades = no
+		landless_playable = yes
+	}
+
+	court_generate_commanders = 0
+
+	ai = {
+		arrange_marriage = no
+		use_lifestyle = no
+		use_decisions = no
+		use_goals = no
+		use_scripted_guis = no
+		perform_religious_reformation = no
+		use_legends = no
+	}
+
+	can_get_government = {
+		has_character_flag = me_imam_flag
+	}
+
+	royal_court = none
+
+	# The Imam of the age stands outside the intrigues of the world: no hostile scheme against him can succeed
+	character_modifier = {
+		enemy_hostile_scheme_success_chance_max_add = -100
+	}
+
+	# Use flags instead of has_government for moddability if possible (i.e., wherever not visible to the player).
+	flags = {
+		cannot_be_vassal_or_liege
+	}
+
+	color = hsv{ 0.38 0.70 0.45 }
+	realm_mask_offset = { 0.0 -0.01 }
+	realm_mask_scale = { 1 1 }
+}

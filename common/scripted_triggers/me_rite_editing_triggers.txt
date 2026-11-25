@@ -1,0 +1,41 @@
+﻿# ME: the game rule 'me_rite_editing' (How AI rulers may change the Rites of the Muslim faiths).
+# The historical Rites are marked with a variable at game start (common/on_action/me_rite_editing_on_actions.txt).
+# NOTE: an earlier version also put checks inside every tenet's and doctrine's can_pick; the game crashed at launch
+# with those in place, so they were removed. Until a safe way is found, 'Guarded' protects the historical Rites by
+# not letting AI rulers edit them (Rites founded during play stay editable).
+
+# Scope: a Rite. The historical Rites of the Muslim faiths, as opposed to Rites founded during play.
+me_is_historical_muslim_rite_trigger = {
+	has_variable = me_historical_rite
+}
+
+# Scope: the character who would edit their Rite. Only AI rulers of the Muslim faiths are ever held back.
+me_rite_editing_allowed_trigger = {
+	# The Ja'fari rite is the Imam's, and the Imam of the age does not rewrite it. Its head is the only one who could
+	# edit it; when that happened (a player or another mod acting as the Imam) the Head of Faith doctrine could be
+	# dropped, which destroyed the Imamate. Applies to players as well as the AI.
+	custom_tooltip = {
+		text = me_imam_rite_not_edited_tt
+		NOR = {
+			has_government = me_imamate_government
+			has_character_flag = me_imam_flag
+			rite = rite:imami
+		}
+	}
+	trigger_if = {
+		limit = {
+			is_ai = yes
+			faith = { religion_tag = islam_religion }
+		}
+		NOT = { has_game_rule = me_rite_editing_locked }
+		trigger_if = {
+			limit = {
+				OR = {
+					has_game_rule = me_rite_editing_guarded
+					has_game_rule = me_rite_editing_historical_locked
+				}
+			}
+			rite = { NOT = { has_variable = me_historical_rite } }
+		}
+	}
+}

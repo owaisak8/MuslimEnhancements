@@ -1,6 +1,329 @@
 ﻿me_spawn_historical_characters_effect = {
 
-	if = { # Ahmad Ibn Fadlan 
+######## Heresiarchs ########
+
+	if = { # Ibn Nusayr
+		limit = {
+			current_year >= 875
+			current_year <= 876
+			NOT = { exists = global_var:hchar_me_ibn_nusayr }
+		}
+		set_global_variable = { name = hchar_me_ibn_nusayr value = yes }
+		title:b_halab = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 50
+				name = Muhammad
+				dynasty_house = character:numayrid2.house
+				gender_female_chance = 0
+				#random_traits = no
+				location = scope:birth_location.title_province
+				rite = rite:alawite
+				culture = culture:levantine
+				father = character:numayrid2
+				trait = education_learning_3
+				trait = heresiarch
+				trait = zealous
+				trait = ME_missionary
+				trait = ME_ibn_nusayr_bab
+				trait = ME_blood_of_ibn_nusayr
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_high_skill max_template_high_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			rite:alawite = { add_rite_doctrine = special_doctrine_ibn_nusayr_trait_acceptance }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_nusayr
+				set_variable = me_heresiarch
+				save_scope_as = major
+			}
+			if = { limit = { has_variable = me_ibn_nusayr 	 } } # Error suppression
+			scope:birth_location = { save_scope_as = char_location }
+			scope:char_location = { me_spawn_heresiarch_boilerplate_effect = yes }
+		}
+	}
+	
+	if = { # Ishaq al-Ahmar
+		limit = {
+			current_year >= 876
+			current_year <= 877
+			NOT = { exists = global_var:hchar_me_ishaq_ahmar }
+		}
+		set_global_variable = { name = hchar_me_ishaq_ahmar value = yes }
+		title:b_halab = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 45
+				name = Ishaq
+				dynasty_house = character:ishaaq1.house
+				gender_female_chance = 0
+				#random_traits = no
+				location = scope:birth_location.title_province
+				rite = rite:ishaqiya
+				culture = culture:levantine
+				trait = education_learning_3
+				trait = heresiarch
+				trait = ME_missionary
+				trait = zealous
+				trait = ME_ishaq_ahmar_bab
+				trait = ME_blood_of_ishaq_ahmar
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_high_skill max_template_high_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			character:ishaaq1 = { set_house = house:me_removed_house }
+			rite:ishaqiya = { add_rite_doctrine = special_doctrine_ishaq_ahmar_trait_acceptance }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ishaq_ahmar
+				set_variable = me_heresiarch
+				save_scope_as = major
+				give_nickname = nick_me_al_ahmar
+				#add_character_modifier = me_ishaq_ahmar_modifier
+			}
+			every_living_character = {
+				limit = { has_trait = ME_ibn_nusayr_bab }
+				set_relation_nemesis = {
+					reason = me_alawite_bab_nemesis
+					target = scope:historical_character
+				}
+			}
+			if = { limit = { has_variable = me_ishaq_ahmar 	 } } # Error suppression
+			scope:birth_location = { save_scope_as = char_location }
+			scope:char_location = { me_spawn_heresiarch_boilerplate_effect = yes }
+		}
+	}
+	
+	if = { # Zakarawayh ibn Mihrawayh
+		limit = {
+			current_year >= 902
+			current_year <= 903
+			NOT = { exists = global_var:hchar_me_zakarawayh }
+		}
+		set_global_variable = { name = hchar_me_zakarawayh value = yes }
+		title:b_baidha-petra = { # Closest known region to Su'ar/Saw'ar
+			save_scope_as = birth_location
+			create_character = {
+				age = 60
+				name = Zakarawayh
+				dynasty_house = character:me_qarmatian_005.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				rite = rite:qarmatian
+				culture = culture:levantine
+				father = character:me_qarmatian_005
+				trait = education_martial_3
+				trait = heresiarch
+				trait = ME_missionary
+				random_traits_list = {
+					count = 3
+					zealous = {}
+					wrathful = {}
+					vengeful = {}
+					impatient = {}
+					brave = {}
+				}
+				diplomacy = { min_template_low_skill max_template_low_skill }
+				martial = { min_template_high_skill max_template_high_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character
+			}
+			create_character = {
+				age = 40
+				name = Yahya
+				dynasty_house = scope:historical_character.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				rite = rite:qarmatian
+				culture = culture:levantine
+				father = scope:historical_character
+				trait = ME_missionary
+				save_scope_as = yahya
+			}
+			create_character = {
+				age = 35
+				name = al-Hasan
+				dynasty_house = scope:historical_character.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				rite = rite:qarmatian
+				culture = culture:levantine
+				father = scope:historical_character
+				trait = ME_missionary
+				save_scope_as = hasan
+			}
+			character:me_qarmatian_004 = {
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone
+			}
+			scope:yahya ?= {
+				give_nickname = nick_me_sahib_al_naqah
+				add_character_modifier = me_zakarawayhist_modifier
+			}
+			scope:hasan ?= {
+				give_nickname = nick_me_sahib_al_shamah
+				add_character_modifier = me_zakarawayhist_modifier
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_zakarawayh
+				set_variable = me_heresiarch
+				save_scope_as = major
+				add_character_modifier = me_zakarawayhist_modifier
+			}
+			if = { limit = { has_variable = me_zakarawayh 	 } } # Error suppression
+			scope:birth_location = { save_scope_as = char_location }
+			scope:char_location = { me_spawn_heresiarch_boilerplate_effect = yes }
+		}
+	}
+	
+	if = { # Ibn al-Fadl al-Jayshani and Ibn Hawshab
+		limit = {
+			current_year >= 881
+			current_year <= 882
+			NOT = { exists = global_var:hchar_me_al_jayshani }
+		}
+		set_global_variable = { name = hchar_me_al_jayshani value = yes }
+		title:b_aden = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 31
+				name = Ali
+				dynasty_house = character:me_qarmatian_009.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				rite = rite:ismaili
+				culture = culture:yemeni
+				father = character:me_qarmatian_009
+				trait = education_learning_3
+				trait = ME_missionary
+				trait = zealous
+				random_traits_list = {
+					count = 2
+					wrathful = {}
+					vengeful = {}
+					ambitious = {}
+					deceitful = {}
+				}
+				diplomacy = { min_template_low_skill max_template_low_skill }
+				martial = { min_template_decent_skill max_template_decent_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character
+			}
+			create_character = {
+				age = 36
+				name = al-Hasan
+				dynasty_house = character:me_mashriqi_hchar_007.house
+				gender_female_chance = 0
+				#random_traits = no
+				location = scope:birth_location.title_province
+				rite = rite:ismaili
+				culture = culture:levantine
+				father = character:me_mashriqi_hchar_007
+				trait = education_learning_3
+				trait = ME_missionary
+				trait = zealous
+				diplomacy = { min_template_low_skill max_template_low_skill }
+				martial = { min_template_decent_skill max_template_decent_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character_3
+			}
+			character:me_qarmatian_008 = {
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone
+			}
+			character:me_mashriqi_hchar_006 = {
+				set_house = house:me_removed_house
+				set_father = character:me_ifrinid_001_dna_clone
+			}
+			scope:historical_character_3 ?= { set_variable = me_extra_adv }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_jayshani
+				set_variable = me_heresiarch
+				save_scope_as = major
+				add_character_modifier = me_jayshanist_modifier
+			}
+			if = { limit = { has_variable = me_al_jayshani 	 } } # Error suppression
+			scope:birth_location = { save_scope_as = char_location }
+			scope:char_location = { me_spawn_heresiarch_boilerplate_effect = yes }
+		}
+	}
+	
+	if = { # Abu Hatim az-Zatti
+		limit = {
+			current_year >= 907
+			current_year <= 908
+			NOT = { exists = global_var:hchar_me_baqliyyah }
+		}
+		set_global_variable = { name = hchar_me_baqliyyah value = yes }
+		title:b_kaskar = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 43
+				name = Abu_Hatim
+				#dynasty_house = scope:new_dynasty
+				gender_female_chance = 0
+				#random_traits = no
+				location = scope:birth_location.title_province
+				rite = rite:baqli
+				culture = culture:sindhi # Closest thing we have to a Jat atm
+				trait = education_learning_3
+				trait = ME_missionary
+				trait = zealous
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_baqliyyah
+				set_variable = me_heresiarch
+				save_scope_as = major
+				learn_language_of_culture = culture:bedouin
+				create_dynasty = {
+					name = dynn_me_Zuttid
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_me_Zuttid
+				}
+			}
+			if = { limit = { has_variable = me_baqliyyah 	 } } # Error suppression
+			scope:birth_location = { save_scope_as = char_location }
+			scope:char_location = { me_spawn_heresiarch_boilerplate_effect = yes }
+		}
+	}
+	
+######## Normal Hchars ########
+	
+	### Ahmad Ibn Fadlan ###
+	if = { 
 		limit = {
 			current_year >= 919
 			current_year <= 921
@@ -11,7 +334,7 @@
 			limit = { title:c_baghdad.religion ?= religion:islam_religion }
 			title:c_baghdad.faith = { save_scope_as = char_faith }
 		}
-		else = { faith:ashari = { save_scope_as = char_faith } }
+		else = { faith:sunni = { save_scope_as = char_faith } }
 		title:b_baghdad = {
 			save_scope_as = birth_location
 			create_character = {
@@ -23,7 +346,7 @@
 				location = scope:birth_location.title_province
 				faith = scope:char_faith
 				culture = culture:levantine
-				father = character:me_ibn_fadlan_002
+				father = character:me_mashriqi_hchar_002
 				trait = education_learning_4
 				trait = theologian
 				random_traits_list = {
@@ -58,11 +381,13 @@
 				}
 			}
 			if = { limit = { has_variable = me_ibn_fadlan 	 } } # Error suppression
+			scope:birth_location = { save_scope_as = char_location }
 			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
 		}
 	}
 	
-	if = { # Abd as-Samad Babek 
+	### Abd as-Samad Babek ###
+	if = {  
 		limit = {
 			current_year >= 997
 			current_year <= 999
@@ -73,7 +398,7 @@
 			limit = { title:c_hakkari.religion ?= religion:islam_religion }
 			title:b_hakkari.faith = { save_scope_as = char_faith }
 		}
-		else = { faith:ashari = { save_scope_as = char_faith } }
+		else = { faith:sunni = { save_scope_as = char_faith } }
 		random_list = {
 			10 = { title:b_hakkari = { save_scope_as = char_location } }
 			10 = { title:b_baghdad = { save_scope_as = char_location } }
@@ -137,7 +462,7 @@
 			name = Mansur
 			gender_female_chance = 0
 			location = title:b_hakkari.title_province
-			faith = faith:ashari
+			faith = faith:sunni
 			culture = culture:kurdish
 			trait = lifestyle_poet
 			save_scope_as = historical_character
@@ -156,7 +481,7 @@
 			name = Abd-al-Qasim
 			gender_female_chance = 0
 			location = title:b_hakkari.title_province
-			faith = faith:ashari
+			faith = faith:sunni
 			culture = culture:kurdish
 			father = global_var:hchar_me_babek_anc_01
 			save_scope_as = historical_character
@@ -175,13 +500,2990 @@
 			name = "Babek"
 			gender_female_chance = 0
 			location = title:b_hakkari.title_province
-			faith = faith:ashari
+			faith = faith:sunni
 			culture = culture:kurdish
 			father = global_var:hchar_me_babek_anc_02
 			save_scope_as = historical_character
 		}
 		set_global_variable = { name = hchar_me_babek_anc_03 value = scope:historical_character }
 		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	
+	### al-Mutanabbi ###
+	if = {
+		limit = {
+			current_year >= 935
+			current_year <= 936
+			NOT = { exists = global_var:hchar_me_al_mutanabbi }
+			title:c_kufa.culture = { has_cultural_pillar = language_arabic }
+			OR = {
+				title:c_kufa.religion ?= religion:islam_religion
+				title:c_kufa.holder.religion ?= religion:islam_religion
+				title:c_homs.religion ?= religion:islam_religion
+				title:c_homs.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_al_mutanabbi value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_kufa.religion ?= religion:islam_religion }
+				title:c_kufa.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_kufa.holder.religion ?= religion:islam_religion }
+				title:c_kufa.holder.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_homs.religion ?= religion:islam_religion }
+				title:c_homs.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_homs.holder.religion ?= religion:islam_religion }
+				title:c_homs.holder.faith = { save_scope_as = char_faith }
+			}
+			10 = { faith:ithna_ashari = { save_scope_as = char_faith } }
+		}
+		title:b_hims = { save_scope_as = char_location }
+		title:b_al-kufa = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 20
+				name = Ahmad
+				dynasty_house = character:me_mashriqi_hchar_012.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:char_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_mutanabbi_anc_01
+				trait = education_diplomacy_5
+				trait = lifestyle_poet
+				trait = arrogant
+				trait = ambitious
+				trait = brave
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_decent_skill max_template_decent_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_al_mutanabbi_anc_01 = { set_age = 50 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_mutanabbi
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_me_al_mutanabbi
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_al_mutanabbi 	 } } # Error suppression
+			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of al-Mutanabbi
+		limit = {
+			current_year >= 910
+			current_year <= 911
+			NOT = { exists = global_var:hchar_me_al_mutanabbi_anc_01 }
+		}
+		title:b_al-kufa = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = al-Husayn
+				dynasty_house = character:me_mashriqi_hchar_012.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				father = character:me_mashriqi_hchar_012
+				save_scope_as = historical_character
+			}
+		}
+		character:me_mashriqi_hchar_012 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_al_mutanabbi_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	
+	### al-Hariri al-Basri ###
+	if = {
+		limit = {
+			current_year >= 1084
+			current_year <= 1085
+			NOT = { exists = global_var:hchar_me_al_hariri }
+			title:c_basra.culture = { has_cultural_pillar = language_arabic }
+			OR = {
+				title:c_basra.religion ?= religion:islam_religion
+				title:c_basra.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_al_hariri value = yes }
+		if = {
+			limit = { game_start_date >= 1066.9.15 }
+			set_global_variable = { name = hchar_me_al_hariri_anc_01 value = character:me_mashriqi_hchar_017 }
+		}
+		random_list = {
+			10 = {
+				trigger = { title:c_basra.religion ?= religion:islam_religion }
+				title:c_basra.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_basra.holder.religion ?= religion:islam_religion }
+				title:c_basra.holder.faith = { save_scope_as = char_faith }
+			}
+			10 = { faith:sunni = { save_scope_as = char_faith } }
+		}
+		title:b_basra = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = al-Qasim
+				dynasty_house = global_var:hchar_me_al_hariri_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_hariri_anc_01
+				trait = education_learning_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					gregarious = {}
+					ambitious = {}
+					content = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_decent_skill max_template_decent_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_al_hariri_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_hariri
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_me_al_hariri
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_al_hariri 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of al-Hariri
+		limit = {
+			current_year >= 1050
+			current_year <= 1051
+			NOT = { exists = global_var:hchar_me_al_hariri_anc_01 }
+		}
+		title:b_basra = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ali
+				dynasty_house = global_var:hchar_me_al_hariri_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_hariri_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_al_hariri_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_al_hariri_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1020
+			current_year <= 1021
+			NOT = { exists = global_var:hchar_me_al_hariri_anc_02 }
+		}
+		title:b_basra = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_al_hariri_anc_03.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_hariri_anc_03
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_al_hariri_anc_03 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_al_hariri_anc_02 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 990
+			current_year <= 991
+			NOT = { exists = global_var:hchar_me_al_hariri_anc_03 }
+		}
+		title:b_basra = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Uthman
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_al_hariri_anc_03 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_al_Harrami
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_al_Harrami
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ali ibn Ridwan ###
+	if = {
+		limit = {
+			current_year >= 1020
+			current_year <= 1021
+			NOT = { exists = global_var:hchar_me_ibn_ridwan }
+			OR = {
+				title:c_giza.religion ?= religion:islam_religion
+				title:c_giza.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_ridwan value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_giza.religion ?= religion:islam_religion }
+				title:c_giza.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_giza.holder.religion ?= religion:islam_religion }
+				title:c_giza.holder.faith = { save_scope_as = char_faith }
+			}
+			10 = { faith:sunni = { save_scope_as = char_faith } }
+		}
+		title:b_gizeh = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 32
+				name = Ali
+				dynasty_house = global_var:hchar_me_ibn_ridwan_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_ridwan_anc_01
+				trait = education_learning_4
+				trait = lifestyle_physician
+				trait = diligent
+				random_traits_list = {
+					count = 2
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_ridwan_anc_01 = { set_age = 65 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_ridwan
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				learn_language_of_culture = culture:greek
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_ridwan 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ali bn Ridwan
+		limit = {
+			current_year >= 980
+			current_year <= 981
+			NOT = { exists = global_var:hchar_me_ibn_ridwan_anc_01 }
+		}
+		title:b_gizeh = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ridwan
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_ridwan_anc_01 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_ar_Ridwani
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_ar_Ridwani
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn al-Matran ###
+	if = {
+		limit = {
+			current_year >= 1170
+			current_year <= 1171
+			NOT = { exists = global_var:hchar_me_ibn_al_matran }
+		}
+		set_global_variable = { name = hchar_me_ibn_al_matran value = yes }
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 45
+				name = As_ad
+				dynasty_house = global_var:hchar_me_ibn_al_matran_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_matran_anc_01
+				trait = education_learning_4
+				trait = lifestyle_physician
+				trait = erudite
+				trait = arrogant
+				trait = gregarious
+				random_traits_list = {
+					count = 1
+					diligent = {}
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_al_matran_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_al_matran
+				give_nickname = nick_me_ibn_al_matran
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				learn_language_of_culture = culture:greek
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_al_matran 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn al-Matran
+		limit = {
+			current_year >= 1120
+			current_year <= 1121
+			NOT = { exists = global_var:hchar_me_ibn_al_matran_anc_01 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ilyas
+				dynasty_house = global_var:hchar_me_ibn_al_matran_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_matran_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_al_matran_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_al_matran_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1090
+			current_year <= 1091
+			NOT = { exists = global_var:hchar_me_ibn_al_matran_anc_02 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Jarjis
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_matran_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_Jarjisid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_Jarjisid
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn al-Tilmidh ###
+	if = {
+		limit = {
+			current_year >= 1105
+			current_year <= 1106
+			NOT = { exists = global_var:hchar_me_ibn_al_tilmidh }
+		}
+		set_global_variable = { name = hchar_me_ibn_al_tilmidh value = yes }
+		if = {
+			limit = { game_start_date >= 1066.9.15 }
+			set_global_variable = { name = hchar_me_ibn_al_tilmidh_anc_01 value = character:me_mashriqi_hchar_024 }
+		}
+		title:b_baghdad = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 31
+				name = Hibatullah
+				dynasty_house = global_var:hchar_me_ibn_al_tilmidh_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_tilmidh_anc_01
+				trait = education_learning_4
+				trait = lifestyle_physician
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_al_tilmidh_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_al_tilmidh
+				give_nickname = nick_me_ibn_al_tilmidh
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				learn_language_of_culture = culture:greek
+				learn_language_of_culture = culture:persian
+				learn_language_of_culture = culture:assyrian
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+			}
+			if = { limit = { has_variable = me_ibn_al_tilmidh 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn at-Tilmidh
+		limit = {
+			current_year >= 1064
+			current_year <= 1065
+			NOT = { exists = global_var:hchar_me_ibn_al_tilmidh_anc_01 }
+		}
+		title:b_baghdad = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 25
+				name = Sa_id
+				dynasty_house = global_var:hchar_me_ibn_al_tilmidh_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_tilmidh_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_al_tilmidh_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_al_tilmidh_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = {
+		limit = {
+			current_year >= 1040
+			current_year <= 1041
+			NOT = { exists = global_var:hchar_me_ibn_al_tilmidh_anc_02 }
+		}
+		title:b_baghdad = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Hibatullah
+				dynasty_house = global_var:hchar_me_ibn_al_tilmidh_anc_03.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_tilmidh_anc_03
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_al_tilmidh_anc_03 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_al_tilmidh_anc_02 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1010
+			current_year <= 1011
+			NOT = { exists = global_var:hchar_me_ibn_al_tilmidh_anc_03 }
+		}
+		title:b_baghdad = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ibrahim
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_tilmidh_anc_03 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_Ibrahimid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_Ibrahimid
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### ad-Dakhwar ###
+	if = {
+		limit = {
+			current_year >= 1200
+			current_year <= 1201
+			NOT = { exists = global_var:hchar_me_al_dakhwar }
+			OR = {
+				title:c_damascus.religion ?= religion:islam_religion
+				title:c_damascus.holder.religion ?= religion:islam_religion
+			}
+		}
+		if = {
+			limit = { game_start_date >= 1178.10.1 }
+			set_global_variable = { name = hchar_me_al_dakhwar_anc_01 value = character:me_mashriqi_hchar_028 }
+		}
+		set_global_variable = { name = hchar_me_al_dakhwar value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_damascus.religion ?= religion:islam_religion }
+				title:c_damascus.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_damascus.holder.religion ?= religion:islam_religion }
+				title:c_damascus.holder.faith = { save_scope_as = char_faith }
+			}
+			10 = { faith:sunni = { save_scope_as = char_faith } }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Abd_al-Rahim
+				dynasty_house = global_var:hchar_me_al_dakhwar_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_dakhwar_anc_01
+				trait = education_learning_4
+				trait = lifestyle_physician
+				trait = erudite
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_al_dakhwar_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_dakhwar
+				give_nickname = nick_me_al_dakhwar
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_al_dakhwar 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of ad-Dakhwar
+		limit = {
+			current_year >= 1170
+			current_year <= 1171
+			NOT = { exists = global_var:hchar_me_al_dakhwar_anc_01 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ali
+				dynasty_house = global_var:hchar_me_al_dakhwar_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_dakhwar_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_al_dakhwar_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_al_dakhwar_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1140
+			current_year <= 1141
+			NOT = { exists = global_var:hchar_me_al_dakhwar_anc_02 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Hamid
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:nestorian
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_al_dakhwar_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_al_Hamidi
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_al_Hamidi
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn Qalaqis ###
+	if = {
+		limit = {
+			current_year >= 1165
+			current_year <= 1166
+			NOT = { exists = global_var:hchar_me_ibn_qalaqis }
+			OR = {
+				title:c_alexandria.religion ?= religion:islam_religion
+				title:c_alexandria.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_qalaqis value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_alexandria.religion ?= religion:islam_religion }
+				title:c_alexandria.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_alexandria.holder.religion ?= religion:islam_religion }
+				title:c_alexandria.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_alexandria = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 28
+				name = Nasr-Allah
+				dynasty_house = character:me_lakhmid_011.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_qalaqis_anc_01
+				trait = education_learning_4
+				trait = lifestyle_poet
+				trait = lifestyle_traveler
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					gregarious = {}
+					ambitious = {}
+					content = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_decent_skill max_template_decent_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_qalaqis_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_qalaqis
+				give_nickname = nick_me_ibn_qalaqis
+				save_scope_as = explorer
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_qalaqis 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn Qalaqis
+		limit = {
+			current_year >= 1135
+			current_year <= 1136
+			NOT = { exists = global_var:hchar_me_ibn_qalaqis_anc_01 }
+		}
+		title:b_alexandria = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Abdullah
+				dynasty_house = character:me_lakhmid_011.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_qalaqis_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_qalaqis_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_qalaqis_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1105
+			current_year <= 1106
+			NOT = { exists = global_var:hchar_me_ibn_qalaqis_anc_02 }
+		}
+		title:b_alexandria = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Abdul-Qawi
+				dynasty_house = character:me_lakhmid_011.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_qalaqis_anc_02 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	
+	### Ibn Hanna ###
+	if = {
+		limit = {
+			current_year >= 1240
+			current_year <= 1241
+			NOT = { exists = global_var:hchar_me_ibn_hanna }
+			OR = {
+				title:c_cairo.religion ?= religion:islam_religion
+				title:c_cairo.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_hanna value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_cairo.religion ?= religion:islam_religion }
+				title:c_cairo.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_cairo.holder.religion ?= religion:islam_religion }
+				title:c_cairo.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 35
+				name = Ali
+				dynasty_house = global_var:hchar_me_ibn_hanna_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_hanna_anc_01
+				trait = education_stewardship_4
+				trait = administrator
+				trait = zealous
+				trait = just
+				trait = temperate
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_high_skill max_template_high_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_decent_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			create_character = {
+				age = 33
+				name = Abdullah
+				dynasty_house = global_var:hchar_me_ibn_hanna_anc_01.house
+				gender_female_chance = 0
+				#random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_hanna_anc_01
+				trait = education_diplomacy_3
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_decent_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character_3
+			}
+			global_var:hchar_me_ibn_hanna_anc_01 = { set_age = 60 }
+			scope:historical_character_3 ?= { give_nickname = nick_burhan_ud_din }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_hanna
+				give_nickname = nick_baha_ud_din
+			}
+			if = { limit = { has_variable = me_ibn_hanna 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn Hanna
+		limit = {
+			current_year >= 1210
+			current_year <= 1211
+			NOT = { exists = global_var:hchar_me_ibn_hanna_anc_01 }
+		}
+		if = {
+			limit = { game_start_date >= 1178.10.1 }
+			set_global_variable = { name = hchar_me_ibn_hanna_anc_02 value = character:me_hannawid_004 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_ibn_hanna_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_hanna_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_hanna_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_hanna_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1175
+			current_year <= 1176
+			NOT = { exists = global_var:hchar_me_ibn_hanna_anc_02 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 25
+				name = Salim
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_hanna_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_al_Hannawi
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_al_Hannawi
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn Nubatah al-Masri ###
+	if = {
+		limit = {
+			current_year >= 1320
+			current_year <= 1321
+			NOT = { exists = global_var:hchar_me_ibn_nubatah }
+			OR = {
+				title:c_cairo.religion ?= religion:islam_religion
+				title:c_cairo.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_nubatah value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_cairo.religion ?= religion:islam_religion }
+				title:c_cairo.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_cairo.holder.religion ?= religion:islam_religion }
+				title:c_cairo.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 33
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_ibn_nubatah_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_nubatah_anc_01
+				trait = education_learning_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					gregarious = {}
+					ambitious = {}
+					content = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_decent_skill max_template_decent_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_decent_skill max_template_decent_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_qalaqis_anc_01 = { set_age = 70 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_nubatah
+				give_nickname = nick_jamal_ud_din
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_nubatah 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn Nubatah
+		limit = {
+			current_year >= 1275
+			current_year <= 1276
+			NOT = { exists = global_var:hchar_me_ibn_nubatah_anc_01 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_ibn_nubatah_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_nubatah_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_nubatah_anc_02 = { set_age = 70 }
+		set_global_variable = { name = hchar_me_ibn_nubatah_anc_01 value = scope:historical_character }
+		scope:historical_character = {
+			death = { death_reason = death_disappearance } 
+			give_nickname = nick_shams_ud_din
+		}
+	}
+	if = { 
+		limit = {
+			current_year >= 1230
+			current_year <= 1231
+			NOT = { exists = global_var:hchar_me_ibn_nubatah_anc_02 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				#dynasty_house = ###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_nubatah_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			if = {
+				limit = { game_start_date < 1178.10.1 }
+				create_dynasty = {
+					name = dynn_me_al_Hudhaqi
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_me_al_Hudhaqi
+				}
+			}
+			else_if = {
+				limit = { game_start_date >= 1178.10.1 }
+				set_father = character:me_mashriqi_hchar_033
+				character:me_mashriqi_hchar_033 = { set_age = 70 }
+			}
+			give_nickname = nick_sharaf_ud_din
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn al-Khatib ###
+	if = {
+		limit = {
+			current_year >= 1350
+			current_year <= 1351
+			NOT = { exists = global_var:hchar_me_ibn_al_khatib }
+			OR = {
+				title:c_granada.religion ?= religion:islam_religion
+				title:c_granada.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_khatib value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_granada.religion ?= religion:islam_religion }
+				title:c_granada.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_granada.holder.religion ?= religion:islam_religion }
+				title:c_granada.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_granada = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 37
+				name = Muhammad
+				#dynasty_house = global_var:hchar_me_al_khatib_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				#father = global_var:hchar_me_ibn_al_khatib_anc_01
+				trait = education_learning_4
+				trait = erudite
+				trait = lifestyle_poet
+				trait = lifestyle_physician
+				trait = zealous
+				random_traits_list = {
+					count = 2
+					gregarious = {}
+					ambitious = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_al_khatib
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_lisan_ud_din
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+				create_dynasty = {
+					name = dynn_as_Salmani
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_as_Salmani
+				}
+			}
+			if = { limit = { has_variable = me_ibn_al_khatib 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### al-Battani ###
+	if = {
+		limit = {
+			current_year >= 885
+			current_year <= 886
+			NOT = { exists = global_var:hchar_me_al_battani }
+		}
+		set_global_variable = { name = hchar_me_al_battani value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_harran.religion ?= religion:islam_religion }
+				title:c_harran.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_harran.holder.religion ?= religion:islam_religion }
+				title:c_harran.holder.faith = { save_scope_as = char_faith }
+			}
+			10 = { faith:sunni = { save_scope_as = char_faith } }
+		}
+		title:b_raqqa = { save_scope_as = char_location }
+		title:b_harran = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 31
+				name = Muhammad
+				dynasty_house = character:me_mashriqi_hchar_042.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:char_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = character:me_mashriqi_hchar_042
+				trait = education_learning_4
+				trait = erudite
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_battani
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_me_al_battani
+			}
+			if = { limit = { has_variable = me_al_battani 	 } } # Error suppression
+			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### al-Quhi ###
+	if = {
+		limit = {
+			current_year >= 975
+			current_year <= 976
+			NOT = { exists = global_var:hchar_me_al_quhi }
+		}
+		set_global_variable = { name = hchar_me_al_quhi value = yes }
+		random_list = {
+			10 = { title:c_baghdad.faith = { save_scope_as = char_faith } }
+			10 = { title:c_baghdad.holder.faith = { save_scope_as = char_faith } }
+			10 = { faith:sunni = { save_scope_as = char_faith } }
+		}
+		title:b_baghdad = { save_scope_as = char_location }
+		title:b_amul = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 35
+				name = Wayjan
+				dynasty_house = global_var:hchar_me_al_quhi_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:char_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_al_quhi_anc_01
+				trait = education_learning_4
+				trait = erudite
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_quhi
+				learn_language_of_culture = culture:levantine
+			}
+			if = { limit = { has_variable = me_al_quhi 	 } } # Error suppression
+			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = { 
+		limit = {
+			current_year >= 950
+			current_year <= 951
+			NOT = { exists = global_var:hchar_me_al_quhi_anc_01 }
+		}
+		title:b_amul = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 40
+				name = Rustam
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_al_quhi_anc_01 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_Quhid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_Quhid
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn Bajjah ###
+	if = {
+		limit = {
+			current_year >= 1115
+			current_year <= 1116
+			NOT = { exists = global_var:hchar_me_ibn_bajjah }
+			OR = {
+				title:c_zaragoza.religion ?= religion:islam_religion
+				title:c_zaragoza.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_bajjah value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_zaragoza.religion ?= religion:islam_religion }
+				title:c_zaragoza.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_zaragoza.holder.religion ?= religion:islam_religion }
+				title:c_zaragoza.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		if = {
+			limit = { game_start_date >= 1066.9.15 }
+			set_global_variable = { name = hchar_me_ibn_bajjah_anc_01 value = character:me_tujibid_018 }
+		}
+		title:b_zaragoza = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				dynasty_house = character:me_tujibid_001.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_bajjah_anc_01
+				trait = education_learning_4
+				trait = erudite
+				trait = lifestyle_physician
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_bajjah_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_bajjah
+				give_nickname = nick_ibn_bajjah
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+			}
+			if = { limit = { has_variable = me_ibn_bajjah 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn Bajjah
+		limit = {
+			current_year >= 1064
+			current_year <= 1065
+			NOT = { exists = global_var:hchar_me_ibn_bajjah_anc_01 }
+		}
+		title:b_zaragoza = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 10
+				name = Yahya
+				dynasty_house = character:me_tujibid_001.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_bajjah_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	
+	### Ibn Tufayl ###
+	if = {
+		limit = {
+			current_year >= 1135
+			current_year <= 1136
+			NOT = { exists = global_var:hchar_me_ibn_bajjah }
+			OR = {
+				title:c_granada.religion ?= religion:islam_religion
+				title:c_granada.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_bajjah value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_granada.religion ?= religion:islam_religion }
+				title:c_granada.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_granada.holder.religion ?= religion:islam_religion }
+				title:c_granada.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		if = {
+			limit = { game_start_date >= 1066.9.15 }
+			set_global_variable = { name = hchar_me_ibn_tufayl_anc_01 value = character:me_ibn_tufayl_001 }
+		}
+		title:b_guadiz = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_ibn_tufayl_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_tufayl_anc_01
+				trait = education_learning_4
+				trait = erudite
+				trait = theologian
+				trait = intellect_good_2
+				trait = lifestyle_physician
+				trait = zealous
+				random_traits_list = {
+					count = 2
+					diligent = {}
+					chaste = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_tufayl_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_tufayl
+				give_nickname = nick_me_ibn_tufayl
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_tufayl 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn Tufayl
+		limit = {
+			current_year >= 1064
+			current_year <= 1065
+			NOT = { exists = global_var:hchar_me_ibn_tufayl_anc_01 }
+		}
+		title:b_guadiz = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 10
+				name = Abd-al-Malik
+				#dynasty_house = ###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_tufayl_anc_01 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_ibn_tufayl
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_ibn_tufayl
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn Jubayr ###
+	if = {
+		limit = {
+			current_year >= 1175
+			current_year <= 1176
+			NOT = { exists = global_var:hchar_me_ibn_jubayr }
+			OR = {
+				title:c_granada.religion ?= religion:islam_religion
+				title:c_granada.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_jubayr value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_granada.religion ?= religion:islam_religion }
+				title:c_granada.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_granada.holder.religion ?= religion:islam_religion }
+				title:c_granada.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_guadiz = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				dynasty_house = house:house_me_banu_damrah
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				#father = global_var:hchar_me_ibn_jubayr_anc_01
+				trait = education_diplomacy_4
+				trait = diligent
+				trait = zealous
+				trait = lifestyle_traveler
+				trait = journaller
+				random_traits_list = {
+					count = 1
+					gregarious = {}
+					impatient = {}
+					patient = {}
+					calm = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_jubayr
+				give_nickname = nick_me_ibn_jubayr
+				save_scope_as = explorer
+				if = {
+					limit = {
+						has_ep1_dlc_trigger = yes
+					}
+					create_inspiration = adventure_inspiration
+				}
+			}
+			if = { limit = { has_variable = me_ibn_jubayr 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### al-Karaji ###
+	if = {
+		limit = {
+			current_year >= 975
+			current_year <= 976
+			NOT = { exists = global_var:hchar_me_al_karaji }
+			OR = {
+				title:c_rayy.religion ?= religion:islam_religion
+				title:c_rayy.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_al_karaji value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_rayy.religion ?= religion:islam_religion }
+				title:c_rayy.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_rayy.holder.religion ?= religion:islam_religion }
+				title:c_rayy.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_rayy = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 22
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_al_karaji_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.title_province.culture
+				father = global_var:hchar_me_al_karaji_anc_01
+				trait = education_learning_5
+				trait = erudite
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_high_skill }
+				intrigue = { min_template_decent_skill max_template_high_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_al_karaji_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_karaji
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				learn_language_of_culture = culture:levantine
+			}
+			if = { limit = { has_variable = me_al_karaji 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of al-Karaji
+		limit = {
+			current_year >= 950
+			current_year <= 951
+			NOT = { exists = global_var:hchar_me_al_karaji_anc_01 }
+		}
+		title:b_rayy = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = al-Hasan
+				#dynasty_house = ###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_al_karaji_anc_01 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_Karajid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_Karajid
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn ash-Shatir ###
+	if = {
+		limit = {
+			current_year >= 1335
+			current_year <= 1336
+			NOT = { exists = global_var:hchar_me_ibn_al_shatir }
+			OR = {
+				title:c_damascus.religion ?= religion:islam_religion
+				title:c_damascus.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_shatir value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_damascus.religion ?= religion:islam_religion }
+				title:c_damascus.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_damascus.holder.religion ?= religion:islam_religion }
+				title:c_damascus.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 31
+				name = Ala_ud-Din
+				dynasty_house = global_var:hchar_me_ibn_al_shatir_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.title_province.culture
+				father = global_var:hchar_me_ibn_al_shatir_anc_01
+				trait = education_learning_5
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_high_skill max_template_high_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_al_shatir_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_al_shatir
+				give_nickname = nick_me_ibn_al_shatir
+			}
+			if = { limit = { has_variable = me_ibn_al_shatir 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn ash-Shatir
+		limit = {
+			current_year >= 1300
+			current_year <= 1301
+			NOT = { exists = global_var:hchar_me_ibn_al_shatir_anc_01 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ali
+				dynasty_house = global_var:hchar_me_ibn_al_shatir_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_shatir_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_al_shatir_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_al_shatir_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1270
+			current_year <= 1271
+			NOT = { exists = global_var:hchar_me_ibn_al_shatir_anc_02 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ibrahim
+				dynasty_house = global_var:hchar_me_ibn_al_shatir_anc_03.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_shatir_anc_03
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_al_shatir_anc_03 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_al_shatir_anc_02 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1240
+			current_year <= 1241
+			NOT = { exists = global_var:hchar_me_ibn_al_shatir_anc_03 }
+		}
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_shatir_anc_03 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_al_Ansari
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_al_Ansari
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Ibn al-Quff ###
+	if = {
+		limit = {
+			current_year >= 1263
+			current_year <= 1264
+			NOT = { exists = global_var:hchar_me_ibn_al_quff }
+		}
+		set_global_variable = { name = hchar_me_ibn_al_quff value = yes }
+		title:b_kerak = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Abul-Faraj
+				dynasty_house = global_var:hchar_me_ibn_al_quff_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = faith:orthodox
+				culture = scope:birth_location.title_province.culture
+				father = global_var:hchar_me_ibn_al_quff_anc_01
+				trait = education_learning_5
+				trait = lifestyle_physician
+				trait = honest
+				random_traits_list = {
+					count = 2
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_decent_skill max_template_decent_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_al_quff_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_al_quff
+				give_nickname = nick_me_ibn_al_quff
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_al_quff 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn al-Quff
+		limit = {
+			current_year >= 1240
+			current_year <= 1241
+			NOT = { exists = global_var:hchar_me_ibn_al_quff_anc_01 }
+		}
+		title:b_kerak = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 35
+				name = Ya_qub
+				dynasty_house = global_var:hchar_me_ibn_al_quff_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:orthodox
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_ibn_al_quff_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_al_quff_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_al_quff_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1210
+			current_year <= 1211
+			NOT = { exists = global_var:hchar_me_ibn_al_quff_anc_02 }
+		}
+		title:b_kerak = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ishaq
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:orthodox
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_quff_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_al_Karaki
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_al_Karaki
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Hasan ar-Rammah ###
+	if = {
+		limit = {
+			current_year >= 1260
+			current_year <= 1261
+			NOT = { exists = global_var:hchar_me_al_rammah }
+		}
+		set_global_variable = { name = hchar_me_al_rammah value = yes }
+		title:b_damascus = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 25
+				name = Hasan
+				#dynasty_house = global_var:###.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.title_province.culture
+				#father = global_var:###
+				trait = education_martial_4
+				trait = military_engineer
+				trait = lifestyle_blademaster
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					brave = {}
+					just = {}
+					patient = {}
+					ambitious = {}
+				}
+				diplomacy = { min_template_low_skill max_template_low_skill }
+				martial = { min_template_high_skill max_template_high_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_decent_skill }
+				prowess = { min_template_high_skill max_template_high_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_rammah
+				give_nickname = nick_me_al_rammah
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				add_trait_xp = {
+					trait = lifestyle_blademaster
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+				create_dynasty = {
+					name = dynn_al_Hasani
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_al_Hasani
+				}
+			}
+			if = { limit = { has_variable = me_al_rammah 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### Baha ud-Din Zuhayr ###
+	if = {
+		limit = {
+			current_year >= 1215
+			current_year <= 1216
+			NOT = { exists = global_var:hchar_me_baha_ud_din_zuhayr }
+			OR = {
+				title:c_damascus.religion ?= religion:islam_religion
+				title:c_damascus.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_baha_ud_din_zuhayr value = yes }
+		title:b_damascus = { save_scope_as = char_location }
+		title:b_makka = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 29
+				name = Zuhayr
+				#dynasty_house = character:###.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:char_location.title_province
+				faith = scope:birth_location.faith
+				culture = scope:birth_location.culture
+				#father = global_var:###
+				trait = education_diplomacy_5
+				trait = lifestyle_poet
+				trait = zealous
+				trait = compassionate
+				trait = gregarious
+				trait = trusting
+				trait = loyal
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_baha_ud_din_zuhayr
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_baha_ud_din
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+				create_dynasty = {
+					name = dynn_Zuhayrid
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_Zuhayrid
+				}
+			}
+			if = { limit = { has_variable = me_baha_ud_din_zuhayr 	 } } # Error suppression
+			scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### Ibn Daniyal ###
+	if = {
+		limit = {
+			current_year >= 1270
+			current_year <= 1271
+			NOT = { exists = global_var:hchar_me_ibn_daniyal }
+			OR = {
+				title:c_cairo.religion ?= religion:islam_religion
+				title:c_cairo.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_daniyal value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_cairo.religion ?= religion:islam_religion }
+				title:c_cairo.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_cairo.holder.religion ?= religion:islam_religion }
+				title:c_cairo.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 32
+				name = Muhammad
+				dynasty_house = global_var:hchar_me_ibn_daniyal_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = culture:levantine
+				father = global_var:hchar_me_ibn_daniyal_anc_01
+				trait = education_diplomacy_4
+				trait = lifestyle_physician
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+					honest = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_ibn_daniyal_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_daniyal
+				give_nickname = nick_shams_ud_din
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+				add_trait_xp = {
+					trait = lifestyle_physician
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+			}
+			if = { limit = { has_variable = me_ibn_daniyal 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Ibn Daniyal
+		limit = {
+			current_year >= 1250
+			current_year <= 1251
+			NOT = { exists = global_var:hchar_me_ibn_daniyal_anc_01 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Daniyal
+				dynasty_house = global_var:hchar_me_ibn_daniyal_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = culture:levantine
+				father = global_var:hchar_me_ibn_daniyal_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_daniyal_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_daniyal_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = {
+		limit = {
+			current_year >= 1230
+			current_year <= 1231
+			NOT = { exists = global_var:hchar_me_ibn_daniyal_anc_02 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Yusuf
+				dynasty_house = global_var:hchar_me_ibn_daniyal_anc_03.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = culture:levantine
+				father = global_var:hchar_me_ibn_daniyal_anc_03
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_ibn_daniyal_anc_03 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_ibn_daniyal_anc_02 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1210
+			current_year <= 1211
+			NOT = { exists = global_var:hchar_me_ibn_daniyal_anc_03 }
+		}
+		title:b_cairo = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Ma_tuq
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = culture:levantine
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_daniyal_anc_03 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_al_Khazai
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_al_Khazai
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### an-Nuwayri ###
+	if = {
+		limit = {
+			current_year >= 1300
+			current_year <= 1301
+			NOT = { exists = global_var:hchar_me_al_nuwayri }
+			OR = {
+				title:c_asyut.religion ?= religion:islam_religion
+				title:c_asyut.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_al_nuwayri value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_asyut.religion ?= religion:islam_religion }
+				title:c_asyut.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_asyut.holder.religion ?= religion:islam_religion }
+				title:c_asyut.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_ikhmin = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 21
+				name = Ahmad
+				#dynasty_house = ###
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				#father = global_var:###
+				trait = education_diplomacy_4
+				trait = erudite
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+					honest = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_al_nuwayri
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_shihab_ud_din
+				create_dynasty = {
+					name = dynn_me_an_Nuwayri
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_me_an_Nuwayri
+				}
+			}
+			if = { limit = { has_variable = me_al_nuwayri 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### Ibn al-Ha'ik al-Hamdani ###
+	if = {
+		limit = {
+			current_year >= 923
+			current_year <= 924
+			NOT = { exists = global_var:hchar_me_ibn_al_haik }
+			OR = {
+				title:c_sanaa.religion ?= religion:islam_religion
+				title:c_sanaa.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_ibn_al_haik value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_sanaa.religion ?= religion:islam_religion }
+				title:c_sanaa.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_sanaa.holder.religion ?= religion:islam_religion }
+				title:c_sanaa.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_sanaa = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = al-Hasan
+				dynasty_house = character:me_hamdanid_030.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = character:me_hamdanid_002
+				trait = education_learning_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					zealous = {}
+					gregarious = {}
+					ambitious = {}
+					content = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			character:me_hamdanid_002 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_ibn_al_haik
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_me_ibn_al_haik
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = 100
+				}
+			}
+			if = { limit = { has_variable = me_ibn_al_haik 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### Qutb ud-Din Aibak ###
+	if = {
+		limit = {
+			current_year >= 1173
+			current_year <= 1174
+			NOT = { exists = global_var:hchar_me_qutb_ud_din_aibak }
+			OR = {
+				title:c_ghazna.religion ?= religion:islam_religion
+				title:c_ghazna.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_qutb_ud_din_aibak value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_ghazna.religion ?= religion:islam_religion }
+				title:c_ghazna.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_ghazna.holder.religion ?= religion:islam_religion }
+				title:c_ghazna.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_ghazna = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 23
+				name = Aibak
+				#dynasty_house = character:###.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = culture:turkish
+				#father = character:###
+				trait = education_martial_3
+				trait = generous
+				trait = erudite
+				trait = tourney_participant
+				random_traits_list = {
+					count = 2
+					diligent = {}
+					zealous = {}
+					brave = {}
+					ambitious = {}
+				}
+				diplomacy = { min_template_low_skill max_template_low_skill }
+				martial = { min_template_high_skill max_template_high_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_low_skill max_template_low_skill }
+				prowess = { min_template_high_skill max_template_high_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_qutb_ud_din_aibak
+				give_nickname = nick_qutb_ud_din
+				add_trait_xp = {
+					trait = tourney_participant
+					track = bow
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+				add_trait_xp = {
+					trait = tourney_participant
+					track = horse
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+				create_dynasty = {
+					name = dynn_me_Aibakid
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_me_Aibakid
+				}
+			}
+			if = { limit = { has_variable = me_qutb_ud_din_aibak 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### Mas'ud-i Sa'd-i Salman ###
+	if = {
+		limit = {
+			current_year >= 1065
+			current_year <= 1066
+			NOT = { exists = global_var:hchar_me_masud_sad_salman }
+			OR = {
+				title:c_lahur.religion ?= religion:islam_religion
+				title:c_lahur.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_masud_sad_salman value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_lahur.religion ?= religion:islam_religion }
+				title:c_lahur.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_lahur.holder.religion ?= religion:islam_religion }
+				title:c_lahur.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_lahur = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 19
+				name = Mas_ud
+				dynasty_house = global_var:hchar_me_masud_sad_salman_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = culture:persian
+				father = global_var:hchar_me_masud_sad_salman_anc_01
+				trait = education_diplomacy_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+					honest = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_decent_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_masud_sad_salman_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_masud_sad_salman
+				learn_language_of_culture = culture:bedouin
+				learn_language_of_culture = culture:punjabi
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+			}
+			if = { limit = { has_variable = me_masud_sad_salman 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Mas'ud-i Sa'd-i Salman
+		limit = {
+			current_year >= 1040
+			current_year <= 1041
+			NOT = { exists = global_var:hchar_me_masud_sad_salman_anc_01 }
+		}
+		title:b_lahur = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Sa_d
+				dynasty_house = global_var:hchar_me_masud_sad_salman_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = culture:persian
+				father = global_var:hchar_me_masud_sad_salman_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_masud_sad_salman_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_masud_sad_salman_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1010
+			current_year <= 1011
+			NOT = { exists = global_var:hchar_me_masud_sad_salman_anc_02 }
+		}
+		title:b_lahur = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Salman
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = culture:persian
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_masud_sad_salman_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_Salmanid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_Salmanid
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Abdul-Malik Isami ###
+	if = {
+		limit = {
+			current_year >= 1341
+			current_year <= 1342
+			NOT = { exists = global_var:hchar_me_abdul_malik_isami }
+			OR = {
+				title:c_delhi.religion ?= religion:islam_religion
+				title:c_delhi.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_abdul_malik_isami value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_delhi.religion ?= religion:islam_religion }
+				title:c_delhi.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_delhi.holder.religion ?= religion:islam_religion }
+				title:c_delhi.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_indraprastha = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Abdul-Malik
+				dynasty_house = global_var:hchar_me_abdul_malik_isami_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_abdul_malik_isami_anc_01
+				trait = education_diplomacy_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+					honest = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_decent_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_abdul_malik_isami_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_abdul_malik_isami
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				learn_language_of_culture = culture:bedouin
+				learn_language_of_culture = culture:persian
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+			}
+			if = { limit = { has_variable = me_abdul_malik_isami 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Abdul-Malik Isami
+		limit = {
+			current_year >= 1310
+			current_year <= 1311
+			NOT = { exists = global_var:hchar_me_abdul_malik_isami_anc_01 }
+		}
+		title:b_indraprastha = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Izz_al-Din
+				dynasty_house = global_var:hchar_me_abdul_malik_isami_anc_02.house
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_abdul_malik_isami_anc_02
+				save_scope_as = historical_character
+			}
+		}
+		global_var:hchar_me_abdul_malik_isami_anc_02 = { set_age = 60 }
+		set_global_variable = { name = hchar_me_abdul_malik_isami_anc_01 value = scope:historical_character }
+		scope:historical_character = { death = { death_reason = death_disappearance } }
+	}
+	if = { 
+		limit = {
+			current_year >= 1280
+			current_year <= 1281
+			NOT = { exists = global_var:hchar_me_abdul_malik_isami_anc_02 }
+		}
+		title:b_indraprastha = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Fakhr_Malik
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = culture:levantine
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_abdul_malik_isami_anc_02 value = scope:historical_character }
+		scope:historical_character = { 
+			create_dynasty = {
+				name = dynn_me_Isamid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_Isamid
+			}
+			death = { death_reason = death_disappearance } 
+		}
+	}
+	
+	### Badr-i Chach ###
+	if = {
+		limit = {
+			current_year >= 1341
+			current_year <= 1342
+			NOT = { exists = global_var:hchar_me_badr_i_chach }
+			OR = {
+				title:c_delhi.religion ?= religion:islam_religion
+				title:c_delhi.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_badr_i_chach value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_delhi.religion ?= religion:islam_religion }
+				title:c_delhi.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_delhi.holder.religion ?= religion:islam_religion }
+				title:c_delhi.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		random_list = {
+			10 = {
+				trigger = { title:c_samarkand.religion ?= religion:islam_religion }
+				title:c_samarkand.culture = { save_scope_as = char_culture }
+			}
+			10 = { culture:persian = { save_scope_as = char_culture } }
+		}
+		title:b_indraprastha = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Badr
+				#dynasty_house = ###
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:char_culture
+				#father = ###
+				trait = education_diplomacy_4
+				trait = lifestyle_poet
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+					honest = {}
+				}
+				diplomacy = { min_template_high_skill max_template_high_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_low_skill max_template_low_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_decent_skill max_template_decent_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_badr_i_chach
+				learn_language_of_culture = culture:persian
+				add_trait_xp = {
+					trait = lifestyle_poet
+					value = {
+						integer_range = {
+							min = medium_lifestyle_random_xp_low
+							max = medium_lifestyle_random_xp_high
+						}
+					}
+				}
+				create_dynasty = {
+					name = dynn_me_Chachid
+					save_scope_as = new_dynasty
+				}
+				house = {
+					save_scope_as = new_house
+					set_house_name = dynn_me_Chachid
+				}
+			}
+			if = { limit = { has_variable = me_badr_i_chach 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	
+	### Minhaj-i Siraj Juzani  ###
+	if = {
+		limit = {
+			current_year >= 1223
+			current_year <= 1224
+			NOT = { exists = global_var:hchar_me_minhaj_i_siraj }
+			OR = {
+				title:c_ghur.religion ?= religion:islam_religion
+				title:c_ghur.holder.religion ?= religion:islam_religion
+			}
+		}
+		set_global_variable = { name = hchar_me_minhaj_i_siraj value = yes }
+		random_list = {
+			10 = {
+				trigger = { title:c_ghur.religion ?= religion:islam_religion }
+				title:c_ghur.faith = { save_scope_as = char_faith }
+			}
+			10 = {
+				trigger = { title:c_ghur.holder.religion ?= religion:islam_religion }
+				title:c_ghur.holder.faith = { save_scope_as = char_faith }
+			}
+		}
+		title:b_firuzkuh = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Uthman
+				dynasty_house = global_var:hchar_me_minhaj_i_siraj_anc_01.house
+				gender_female_chance = 0
+				random_traits = no
+				location = scope:birth_location.title_province
+				faith = scope:char_faith
+				culture = scope:birth_location.culture
+				father = global_var:hchar_me_minhaj_i_siraj_anc_01
+				trait = education_learning_3
+				trait = erudite
+				random_traits_list = {
+					count = 3
+					diligent = {}
+					humble = {}
+					patient = {}
+					ambitious = {}
+					honest = {}
+				}
+				diplomacy = { min_template_decent_skill max_template_decent_skill }
+				martial = { min_template_low_skill max_template_low_skill }
+				stewardship = { min_template_decent_skill max_template_decent_skill }
+				intrigue = { min_template_low_skill max_template_low_skill }
+				learning = { min_template_high_skill max_template_high_skill }
+				prowess = { min_template_low_skill max_template_low_skill }
+				save_scope_as = historical_character
+			}
+			global_var:hchar_me_minhaj_i_siraj_anc_01 = { set_age = 60 }
+			scope:historical_character ?= {
+				historical_character_finalization_effect = yes
+				set_variable = me_minhaj_i_siraj
+				set_variable = legendary_author
+				create_inspiration = book_inspiration
+				give_nickname = nick_minhaj_ud_din
+				learn_language_of_culture = culture:persian
+			}
+			if = { limit = { has_variable = me_minhaj_i_siraj 	 } } # Error suppression
+			scope:birth_location = { me_spawn_historical_characters_boilerplate_effect = yes }
+		}
+	}
+	if = {  # Ancestors of Minhaj-i Siraj Juzani
+		limit = {
+			current_year >= 1190
+			current_year <= 1191
+			NOT = { exists = global_var:hchar_me_minhaj_i_siraj_anc_01 }
+		}
+		title:b_firuzkuh = {
+			save_scope_as = birth_location
+			create_character = {
+				age = 30
+				name = Muhammad
+				#dynasty_house = global_var:###
+				gender_female_chance = 0
+				location = scope:birth_location.title_province
+				faith = faith:sunni
+				culture = scope:birth_location.culture
+				save_scope_as = historical_character
+			}
+		}
+		set_global_variable = { name = hchar_me_minhaj_i_siraj_anc_01 value = scope:historical_character }
+		scope:historical_character = { 
+			give_nickname = nick_siraj_ud_din
+			create_dynasty = {
+				name = dynn_me_Juzanid
+				save_scope_as = new_dynasty
+			}
+			house = {
+				save_scope_as = new_house
+				set_house_name = dynn_me_Juzanid
+			}
+			death = { death_reason = death_disappearance } 
+		}
 	}
 
 }
@@ -226,5 +3528,107 @@ me_spawn_historical_characters_boilerplate_effect = {
 				trigger_event = me_hchar_creation_events.001
 			}
 		}
+	}
+}
+
+me_spawn_heresiarch_boilerplate_effect = {
+	scope:historical_character = {
+		create_landless_adventurer_title_effect = {
+			REASON = flag:voluntary
+			FLAVOR_CHAR = root
+		}
+		add_courtier = scope:historical_character_3
+		add_courtier = scope:historical_character_4
+	}
+	
+	if = { # Adventeror title name setup
+		limit = { scope:historical_character = { has_variable = me_ibn_nusayr } }
+		scope:historical_character.primary_title = { set_title_name = d_laamp_me_ibn_nusayr }
+	}
+	else_if = {
+		limit = { scope:historical_character = { has_variable = me_ishaq_ahmar } }
+		scope:historical_character.primary_title = { set_title_name = d_laamp_me_ishaq_ahmar }
+	}
+	else_if = {
+		limit = { scope:historical_character = { has_variable = me_zakarawayh } }
+		scope:historical_character.primary_title = { set_title_name = d_laamp_me_zakarawayh }
+	}
+	else_if = {
+		limit = { scope:historical_character = { has_variable = me_al_jayshani } }
+		scope:historical_character.primary_title = { set_title_name = d_laamp_me_al_jayshani }
+	}
+	else_if = {
+		limit = { scope:historical_character = { has_variable = me_baqliyyah } }
+		scope:historical_character.primary_title = { set_title_name = d_laamp_me_baqliyyah }
+	}
+	
+	if = {
+		limit = { 
+			scope:historical_character = { has_variable = me_ibn_nusayr }
+			any_player = {
+				OR = {
+					rite = rite:alawite
+					rite = rite:imami
+					rite = rite:ishaqiya
+				}
+			}
+		}
+		random_player = { trigger_event = me_hchar_creation_events.001 }
+	}
+	else_if = {
+		limit = { 
+			scope:historical_character = { has_variable = me_ishaq_ahmar }
+			any_player = {
+				OR = {
+					rite = rite:alawite
+					rite = rite:imami
+					rite = rite:ishaqiya
+				}
+			}
+		}
+		random_player = { trigger_event = me_hchar_creation_events.001 }
+	}
+	else_if = {
+		limit = { 
+			scope:historical_character = { has_variable = me_zakarawayh }
+			any_player = {
+				OR = {
+					rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					rite = rite:ismaili
+				}
+			}
+		}
+		random_player = { trigger_event = me_hchar_creation_events.001 }
+	}
+	else_if = {
+		limit = { 
+			scope:historical_character = { has_variable = me_al_jayshani }
+			any_player = {
+				OR = {
+					capital_province = { county = { duchy = title:d_sanaa } }
+					capital_province = { county = { duchy = title:d_taizz } }
+					capital_province = { county = { duchy = title:d_jawf-al-yamani } }
+					capital_province = { county = { duchy = title:d_hadramawt } }
+					capital_province = { county = { duchy = title:d_mahra } }
+				}
+			}
+		}
+		random_player = { trigger_event = me_hchar_creation_events.001 }
+	}
+	else_if = {
+		limit = { 
+			scope:historical_character = { has_variable = me_baqliyyah }
+			any_player = {
+				OR = {
+					rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					rite = rite:ismaili
+				}
+			}
+		}
+		random_player = { trigger_event = me_hchar_creation_events.001 }
+	}
+	else_if = {
+		limit = { has_ep3_dlc_trigger = yes }
+		scope:char_location = { me_spawn_historical_characters_boilerplate_effect = yes }
 	}
 }

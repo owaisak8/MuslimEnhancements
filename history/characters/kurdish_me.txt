@@ -1,8 +1,84 @@
-﻿### Shaddadids
+﻿### Misc Kurds
+me_kurdish_001 = {
+	name = "Fatimah" # Fatimah bint Ahmad al-Kurdiyyah, wife of 'Nasir ud-Dawlah, al-Hasan Hamdanid and mother of a few of his children
+	female = yes
+	rite = "imami"
+	culture = "kurdish"
+	
+	father = me_kurdish_002
+	910.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}
+}
+
+me_kurdish_002 = {
+	name = "Ahmad"
+	rite = "imami"
+	culture = "kurdish"
+	
+	880.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+
+me_kurdish_003 = { # Grandfather of Musawir ibn Abdul-Hamid, Kharijite rebel in al-Bawazij
+	name = "Musawir" 
+	dynasty = kurdish_al_bawazij # Musawirid
+	rite = sufri
+	culture = kurdish
+	
+	750.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+
+me_kurdish_004 = {
+	name = "Hawtharah" # Musawir ibn Abdul-Hamid's son who had been allegedly sodomized by Mosul's Sahib as-Shurtah Husayn ibn Bakr
+	dynasty = kurdish_al_bawazij # Musawirid
+	rite = sufri
+	culture = kurdish
+	trait = lifestyle_poet
+	trait = beauty_good_2 # The reason why Husayn ibn Bakr was because he was considered beautiful
+	
+	father = extra_kurds_0010
+	853.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+me_kurdish_005 = { # Harun al-Kurdi, was given governorship of Hadhramaut in 1176 by Turanshah
+	name = "Harun" 
+	dynasty = me_kurd_hadhramaut_dynasty
+	rite = "shafii"
+	culture = "kurdish"
+	trait = callous
+	trait = wrathful
+	
+	1154.1.1 = {
+		birth = yes
+	}
+	1215.1.1 = {
+		death = yes
+	}
+}
+
+### Shaddadids
 me_shaddadid_001 = {
 	name = "Fezl" # Fadl IV
 	dynasty_house = house_shaddadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = 41604
 	1078.1.1 = {
@@ -18,7 +94,7 @@ me_shaddadid_001 = {
 me_shaddadid_002 = {
 	name = "Khushchikr" # Brother of Fadl IV
 	dynasty_house = house_shaddadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = 41604
 	1082.1.1 = {
@@ -33,7 +109,7 @@ me_shaddadid_003 = {
 	name = "Shaddad" # Fakr ud-Din Shaddad ibn Mahmud
 	dynasty_house = house_shaddadid
 	give_nickname = nick_fakhr_ud_din
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = 93521
 	1110.1.1 = {
@@ -47,7 +123,7 @@ me_shaddadid_003 = {
 me_shaddadid_004 = {
 	name = "Fezl" # Fadl V ibn Madmud
 	dynasty_house = house_shaddadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = 93521
 	1113.1.1 = {
@@ -61,7 +137,7 @@ me_shaddadid_004 = {
 me_shaddadid_005 = {
 	name = "Shahanshah" # Shahanshah ibn Madmud
 	dynasty_house = house_shaddadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = 93521
 	1115.1.1 = {
@@ -75,7 +151,7 @@ me_shaddadid_005 = {
 me_shaddadid_006 = {
 	name = "Sultan" # Sultan ibn Madmud
 	dynasty_house = house_shaddadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = 93521
 	1120.1.1 = {
@@ -89,7 +165,7 @@ me_shaddadid_006 = {
 me_shaddadid_007 = {
 	name = "Shaddad" # Semi-Fictional son of Sultan
 	dynasty_house = house_shaddadid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	father = me_shaddadid_006
 	1150.1.1 = {
@@ -104,7 +180,7 @@ me_shaddadid_007 = {
 me_babek_001 = {
 	name = "Abdul-Sammad" # Abd as-Samad Babek, First Kurdish poet to write in Kurmanji
 	dynasty_house = house_me_babek
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	trait = education_diplomacy_4
 	trait = lifestyle_poet
@@ -121,7 +197,7 @@ me_babek_001 = {
 
 me_babek_002 = {
 	name = "Babek" 
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 
 	father = me_babek_003
@@ -135,7 +211,7 @@ me_babek_002 = {
 
 me_babek_003 = {
 	name = "Abd-al-Qasim" 
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 
 	father = me_babek_004
@@ -149,7 +225,7 @@ me_babek_003 = {
 
 me_babek_004 = {
 	name = "Mansur" 
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	trait = lifestyle_poet
 
@@ -165,7 +241,7 @@ me_babek_004 = {
 me_namdarid_001 = {
 	name = "Mas_ud"
 	dynasty = me_namdarid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 
 	father = me_namdarid_002
@@ -190,7 +266,7 @@ me_namdarid_001 = {
 me_namdarid_002 = {
 	name = "Namdar"
 	dynasty = me_namdarid_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 
 	1030.1.1 = {
@@ -209,7 +285,7 @@ me_takshid_001 = {
 	name = "Khatun" # Mother of Salah ud-Din, First name is unknown with Khatun being a title
 	female = yes
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	
 	father = me_takshid_002
@@ -227,7 +303,7 @@ me_takshid_001 = {
 me_takshid_002 = {
 	name = "Taksh" # Also known as Baksh, Salah ud-Din's maternal grandfather
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 
 	1080.1.1 = {
@@ -241,7 +317,7 @@ me_takshid_002 = {
 me_takshid_003 = {
 	name = "Mahmud" # 'Shihab ud-Din' Mahmud ibn Taksh al-Harmi, Salah ud-Din's maternal uncle who was granted Hama after it's conquest
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	
 	father = me_takshid_002
@@ -259,7 +335,7 @@ me_takshid_003 = {
 me_takshid_004 = {
 	name = "Jakku" # Father of Izz ud-Din Musak and Salah ud-Din's maternal uncle
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	
 	father = me_takshid_002
@@ -274,7 +350,7 @@ me_takshid_004 = {
 me_takshid_005 = {
 	name = "Dawud" # 'Imad ud-Din' Dawud ibn Musak al-Hadhbani
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = musikid_1
@@ -299,7 +375,7 @@ me_takshid_005 = {
 me_takshid_006 = {
 	name = "Musa"  
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = musikid_1
@@ -319,7 +395,7 @@ me_takshid_006 = {
 me_takshid_007 = {
 	name = "al-Husayn"
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_takshid_006
@@ -334,7 +410,7 @@ me_takshid_007 = {
 me_takshid_008 = {
 	name = "Ahmad"
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_takshid_007
@@ -349,7 +425,7 @@ me_takshid_008 = {
 me_takshid_009 = {
 	name = "Ahmad" # Ahmad ibn Ahmad ibn al-Husayn al-Hikari, Hadith Imam and a descendant of 'Izz ud-Din' Musak ibn Jakku
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	trait = education_learning_4
 	trait = zealous
@@ -367,7 +443,7 @@ me_takshid_010 = {
 	name = "Sitt_Harim" # Aunt of Salah ud-Din, First name is unknown with Sitt Harim being a title
 	female = yes
 	dynasty = levantine_musikid # Takshids
-	religion = "ashari"
+	rite = "shafii"
 	culture = "kurdish"
 	
 	father = me_takshid_002

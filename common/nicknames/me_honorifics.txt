@@ -335,15 +335,20 @@ nick_janah_ud_din = { is_prefix = yes }
 nick_kamal_ud_din = { is_prefix = yes }
 nick_kanz_ud_din = { is_prefix = yes }
 nick_khair_ud_din = { is_prefix = yes }
+nick_layth_ud_din = { is_prefix = yes }
+nick_lisan_ud_din = { is_prefix = yes }
 nick_majd_ud_din = { is_prefix = yes }
+nick_minhaj_ud_din = { is_prefix = yes }
 nick_muayyid_ud_din = { is_prefix = yes }
 nick_mubariz_ud_din = { is_prefix = yes }
+nick_muhadhdhab_ud_din = { is_prefix = yes }
 nick_muhib_ud_din = { is_prefix = yes }
 nick_muhyi_ad_din = { is_prefix = yes }
 nick_mujir_ud_din = { is_prefix = yes }
 nick_muin_ud_din = { is_prefix = yes }
 nick_muiz_ud_din = { is_prefix = yes }
 nick_murtada_ad_din = { is_prefix = yes }
+nick_mukhlis_ud_din = { is_prefix = yes }
 nick_mumahhid_ud_din = { is_prefix = yes }
 nick_muslih_ud_din = { is_prefix = yes }
 nick_mutamid_ud_din = { is_prefix = yes }
@@ -377,11 +382,13 @@ nick_sadid_ud_din = { is_prefix = yes }
 nick_safi_ud_din = { is_prefix = yes }
 nick_sahm_ud_din = { is_prefix = yes }
 nick_samsam_ud_din = { is_prefix = yes }
+nick_sarim_ud_din = { is_prefix = yes }
 nick_sayf_ud_din = { is_prefix = yes }
 nick_sharaf_ud_din = { is_prefix = yes }
 nick_shams_ud_din = { is_prefix = yes }
 nick_shibl_ud_din = { is_prefix = yes }
 nick_shihab_ud_din = { is_prefix = yes }
+nick_sinan_ud_din = { is_prefix = yes }
 nick_siraj_ud_din = { is_prefix = yes }
 nick_taj_ud_din = { is_prefix = yes }
 nick_taqi_ud_din = { is_prefix = yes }
@@ -399,12 +406,15 @@ nick_farisat_ud_din = { is_prefix = yes }
 nick_hamiyat_ud_din = { is_prefix = yes }
 nick_hamidat_ud_din = { is_prefix = yes }
 nick_labuat_ud_din = { is_prefix = yes }
+nick_laytha_ud_din = { is_prefix = yes }
 nick_muayyidat_ud_din = { is_prefix = yes }
 nick_mubarizat_ud_din = { is_prefix = yes }
+nick_muhadhdhabat_ud_din = { is_prefix = yes }
 nick_muhibat_ud_din = { is_prefix = yes }
 nick_mujirat_ud_din = { is_prefix = yes }
 nick_muinat_ud_din = { is_prefix = yes }
 nick_muizat_ud_din = { is_prefix = yes }
+nick_mukhlisat_ud_din = { is_prefix = yes }
 nick_mumahhidat_ud_din = { is_prefix = yes }
 nick_muslihat_ud_din = { is_prefix = yes }
 nick_mutamidat_ud_din = { is_prefix = yes }
@@ -462,7 +472,10 @@ nick_janah_ul_islam = { is_prefix = yes }
 nick_kamal_ul_islam = { is_prefix = yes }
 nick_kanz_ul_islam = { is_prefix = yes }
 nick_khair_ul_islam = { is_prefix = yes }
+nick_layth_ul_islam = { is_prefix = yes }
+nick_lisan_ul_islam = { is_prefix = yes }
 nick_majd_ul_islam = { is_prefix = yes }
+nick_minhaj_ul_islam = { is_prefix = yes }
 nick_muayyid_ul_islam = { is_prefix = yes }
 nick_mubariz_ul_islam = { is_prefix = yes }
 nick_muhib_ul_islam = { is_prefix = yes }
@@ -471,6 +484,7 @@ nick_mujir_ul_islam = { is_prefix = yes }
 nick_muin_ul_islam = { is_prefix = yes }
 nick_muiz_ul_islam = { is_prefix = yes }
 nick_murtada_al_islam = { is_prefix = yes }
+nick_mukhlis_ul_islam = { is_prefix = yes }
 nick_mumahhid_ul_islam = { is_prefix = yes }
 nick_muslih_ul_islam = { is_prefix = yes }
 nick_mutamid_ul_islam = { is_prefix = yes }
@@ -503,11 +517,13 @@ nick_said_ul_islam = { is_prefix = yes }
 nick_sadid_ul_islam = { is_prefix = yes }
 nick_sahm_ul_islam = { is_prefix = yes }
 nick_samsam_ul_islam = { is_prefix = yes }
+nick_sarim_ul_islam = { is_prefix = yes }
 nick_sayf_ul_islam = { is_prefix = yes }
 nick_sharaf_ul_islam = { is_prefix = yes }
 nick_shams_ul_islam = { is_prefix = yes }
 nick_shibl_ul_islam = { is_prefix = yes }
 nick_shihab_ul_islam = { is_prefix = yes }
+nick_sinan_ul_islam = { is_prefix = yes }
 nick_siraj_ul_islam = { is_prefix = yes }
 nick_taj_ul_islam = { is_prefix = yes }
 nick_taqi_ul_islam = { is_prefix = yes }
@@ -525,12 +541,14 @@ nick_farisat_ul_islam = { is_prefix = yes }
 nick_hamiyat_ul_islam = { is_prefix = yes }
 nick_hamidat_ul_islam = { is_prefix = yes }
 nick_labuat_ul_islam = { is_prefix = yes }
+nick_laytha_ul_islam = { is_prefix = yes }
 nick_muayyidat_ul_islam = { is_prefix = yes }
 nick_mubarizat_ul_islam = { is_prefix = yes }
 nick_muhibat_ul_islam = { is_prefix = yes }
 nick_mujirat_ul_islam = { is_prefix = yes }
 nick_muinat_ul_islam = { is_prefix = yes }
 nick_muizat_ul_islam = { is_prefix = yes }
+nick_mukhlisat_ul_islam = { is_prefix = yes }
 nick_mumahhidat_ul_islam = { is_prefix = yes }
 nick_muslihat_ul_islam = { is_prefix = yes }
 nick_mutamidat_ul_islam = { is_prefix = yes }
@@ -586,7 +604,10 @@ nick_janah_ud_dawlah = { is_prefix = yes }
 nick_kamal_ud_dawlah = { is_prefix = yes }
 nick_kanz_ud_dawlah = { is_prefix = yes }
 nick_khair_ud_dawlah = { is_prefix = yes }
+nick_layth_ud_dawlah = { is_prefix = yes }
+nick_lisan_ud_dawlah = { is_prefix = yes }
 nick_majd_ud_dawlah = { is_prefix = yes }
+nick_minhaj_ud_dawlah = { is_prefix = yes }
 nick_muayyid_ud_dawlah = { is_prefix = yes }
 nick_mubariz_ud_dawlah = { is_prefix = yes }
 nick_muhib_ud_dawlah = { is_prefix = yes }
@@ -596,6 +617,7 @@ nick_muin_ud_dawlah = { is_prefix = yes }
 nick_muiz_ud_dawlah = { is_prefix = yes }
 nick_murtada_ad_dawlah = { is_prefix = yes }
 nick_musharif_ud_dawlah = { is_prefix = yes }
+nick_mukhlis_ud_dawlah = { is_prefix = yes }
 nick_mumahhid_ud_dawlah = { is_prefix = yes }
 nick_muslih_ud_dawlah = { is_prefix = yes }
 nick_mutamid_ud_dawlah = { is_prefix = yes }
@@ -630,18 +652,21 @@ nick_sahm_ud_dawlah = { is_prefix = yes }
 nick_sanad_ud_dawlah = { is_prefix = yes }
 nick_sama_ud_dawlah = { is_prefix = yes }
 nick_samsam_ud_dawlah = { is_prefix = yes }
+nick_sarim_ud_dawlah = { is_prefix = yes }
 nick_sayf_ud_dawlah = { is_prefix = yes }
 nick_sayyid_ud_dawlah = { is_prefix = yes }
 nick_sharaf_ud_dawlah = { is_prefix = yes }
 nick_shams_ud_dawlah = { is_prefix = yes }
 nick_shibl_ud_dawlah = { is_prefix = yes }
 nick_shihab_ud_dawlah = { is_prefix = yes }
+nick_sinan_ud_dawlah = { is_prefix = yes }
 nick_siraj_ud_dawlah = { is_prefix = yes }
 nick_sultan_ud_dawlah = { is_prefix = yes }
 nick_taj_ud_dawlah = { is_prefix = yes }
 nick_thiqat_ud_dawlah = { is_prefix = yes }
 nick_taqi_ud_dawlah = { is_prefix = yes }
 nick_uddat_ud_dawlah = { is_prefix = yes }
+nick_wajih_ud_dawlah = { is_prefix = yes }
 nick_wali_ud_dawlah = { is_prefix = yes }
 nick_yamin_ud_dawlah = { is_prefix = yes }
 nick_yumn_ud_dawlah = { is_prefix = yes }
@@ -659,12 +684,14 @@ nick_farisat_ud_dawlah = { is_prefix = yes }
 nick_hamiyat_ud_dawlah = { is_prefix = yes }
 nick_hamidat_ud_dawlah = { is_prefix = yes }
 nick_labuat_ud_dawlah = { is_prefix = yes }
+nick_laytha_ud_dawlah = { is_prefix = yes }
 nick_muayyidat_ud_dawlah = { is_prefix = yes }
 nick_mubarizat_ud_dawlah = { is_prefix = yes }
 nick_muhibat_ud_dawlah = { is_prefix = yes }
 nick_mujirat_ud_dawlah = { is_prefix = yes }
 nick_muinat_ud_dawlah = { is_prefix = yes }
 nick_muizat_ud_dawlah = { is_prefix = yes }
+nick_mukhlisat_ud_dawlah = { is_prefix = yes }
 nick_mumahhidat_ud_dawlah = { is_prefix = yes }
 nick_musharrifat_ud_dawlah = { is_prefix = yes }
 nick_muslihat_ud_dawlah = { is_prefix = yes }
@@ -685,6 +712,7 @@ nick_sadidat_ud_dawlah = { is_prefix = yes }
 nick_sayyidat_ud_dawlah = { is_prefix = yes }
 nick_shiblat_ud_dawlah = { is_prefix = yes }
 nick_sultanat_ud_dawlah = { is_prefix = yes }
+nick_wajihat_ud_dawlah = { is_prefix = yes }
 nick_waliyat_ud_dawlah = { is_prefix = yes }
 nick_zahirat_ud_dawlah = { is_prefix = yes }
 nick_zahrat_ud_dawlah = { is_prefix = yes }
@@ -724,7 +752,10 @@ nick_janah_ul_mulk = { is_prefix = yes }
 nick_kamal_ul_mulk = { is_prefix = yes }
 nick_kanz_ul_mulk = { is_prefix = yes }
 nick_khair_ul_mulk = { is_prefix = yes }
+nick_layth_ul_mulk = { is_prefix = yes }
+nick_lisan_ul_mulk = { is_prefix = yes }
 nick_majd_ul_mulk = { is_prefix = yes }
+nick_minhaj_ul_mulk = { is_prefix = yes }
 nick_muayyid_ul_mulk = { is_prefix = yes }
 nick_mubariz_ul_mulk = { is_prefix = yes }
 nick_muhib_ul_mulk = { is_prefix = yes }
@@ -734,6 +765,7 @@ nick_muin_ul_mulk = { is_prefix = yes }
 nick_muiz_ul_mulk = { is_prefix = yes }
 nick_murtada_al_mulk = { is_prefix = yes }
 nick_musharif_ul_mulk = { is_prefix = yes }
+nick_mukhlis_ul_mulk = { is_prefix = yes }
 nick_mumahhid_ul_mulk = { is_prefix = yes }
 nick_muslih_ul_mulk = { is_prefix = yes }
 nick_mutamid_ul_mulk = { is_prefix = yes }
@@ -768,18 +800,21 @@ nick_sahm_ul_mulk = { is_prefix = yes }
 nick_sanad_ul_mulk = { is_prefix = yes }
 nick_sama_ul_mulk = { is_prefix = yes }
 nick_samsam_ul_mulk = { is_prefix = yes }
+nick_sarim_ul_mulk = { is_prefix = yes }
 nick_sayf_ul_mulk = { is_prefix = yes }
 nick_sayyid_ul_mulk = { is_prefix = yes }
 nick_sharaf_ul_mulk = { is_prefix = yes }
 nick_shams_ul_mulk = { is_prefix = yes }
 nick_shibl_ul_mulk = { is_prefix = yes }
 nick_shihab_ul_mulk = { is_prefix = yes }
+nick_sinan_ul_mulk = { is_prefix = yes }
 nick_siraj_ul_mulk = { is_prefix = yes }
 nick_sultan_ul_mulk = { is_prefix = yes }
 nick_taj_ul_mulk = { is_prefix = yes }
 nick_thiqat_ul_mulk = { is_prefix = yes }
 nick_taqi_ul_mulk = { is_prefix = yes }
 nick_uddat_ul_mulk = { is_prefix = yes }
+nick_wajih_ul_mulk = { is_prefix = yes }
 nick_wali_ul_mulk = { is_prefix = yes }
 nick_yamin_ul_mulk = { is_prefix = yes }
 nick_yumn_ul_mulk = { is_prefix = yes }
@@ -797,12 +832,14 @@ nick_farisat_ul_mulk = { is_prefix = yes }
 nick_hamiyat_ul_mulk = { is_prefix = yes }
 nick_hamidat_ul_mulk = { is_prefix = yes }
 nick_labuat_ul_mulk = { is_prefix = yes }
+nick_laytha_ul_mulk = { is_prefix = yes }
 nick_muayyidat_ul_mulk = { is_prefix = yes }
 nick_mubarizat_ul_mulk = { is_prefix = yes }
 nick_muhibat_ul_mulk = { is_prefix = yes }
 nick_mujirat_ul_mulk = { is_prefix = yes }
 nick_muinat_ul_mulk = { is_prefix = yes }
 nick_muizat_ul_mulk = { is_prefix = yes }
+nick_mukhlisat_ul_mulk = { is_prefix = yes }
 nick_mumahhidat_ul_mulk = { is_prefix = yes }
 nick_musharrifat_ul_mulk = { is_prefix = yes }
 nick_muslihat_ul_mulk = { is_prefix = yes }
@@ -823,6 +860,7 @@ nick_sadidat_ul_mulk = { is_prefix = yes }
 nick_sayyidat_ul_mulk = { is_prefix = yes }
 nick_shiblat_ul_mulk = { is_prefix = yes }
 nick_sultanat_ul_mulk = { is_prefix = yes }
+nick_wajihat_ul_mulk = { is_prefix = yes }
 nick_waliyat_ul_mulk = { is_prefix = yes }
 nick_zahirat_ul_mulk = { is_prefix = yes }
 nick_zahrat_ul_mulk = { is_prefix = yes }
@@ -865,15 +903,20 @@ nick_janah_ud_din_nonprefix = {}
 nick_kamal_ud_din_nonprefix = {}
 nick_kanz_ud_din_nonprefix = {}
 nick_khair_ud_din_nonprefix = {}
+nick_layth_ud_din_nonprefix = {}
+nick_lisan_ud_din_nonprefix = {}
 nick_majd_ud_din_nonprefix = {}
+nick_minhaj_ud_din_nonprefix = {}
 nick_muayyid_ud_din_nonprefix = {}
 nick_mubariz_ud_din_nonprefix = {}
+nick_muhadhdhab_ud_din_nonprefix = {}
 nick_muhib_ud_din_nonprefix = {}
 nick_muhyi_ad_din_nonprefix = {}
 nick_mujir_ud_din_nonprefix = {}
 nick_mu_in_ud_din_nonprefix = {} # Set to mu_in instead of muin to avoid hash collision
 nick_muiz_ud_din_nonprefix = {}
 nick_murtada_ad_din_nonprefix = {}
+nick_mukhlis_ud_din_nonprefix = {}
 nick_mumahhid_ud_din_nonprefix = {}
 nick_muslih_ud_din_nonprefix = {}
 nick_mutamid_ud_din_nonprefix = {}
@@ -907,11 +950,13 @@ nick_sadid_ud_din_nonprefix = {}
 nick_safi_ud_din_nonprefix = {}
 nick_sahm_ud_din_nonprefix = {}
 nick_samsam_ud_din_nonprefix = {}
+nick_sarim_ud_din_nonprefix = {}
 nick_sayf_ud_din_nonprefix = {}
 nick_sharaf_ud_din_nonprefix = {}
 nick_shams_ud_din_nonprefix = {}
 nick_shibl_ud_din_nonprefix = {}
 nick_shihab_ud_din_nonprefix = {}
+nick_sinan_ud_din_nonprefix = {}
 nick_siraj_ud_din_nonprefix = {}
 nick_taj_ud_din_nonprefix = {}
 nick_taqi_ud_din_nonprefix = {}
@@ -929,12 +974,15 @@ nick_farisat_ud_din_nonprefix = {}
 nick_hamiyat_ud_din_nonprefix = {}
 nick_hamidat_ud_din_nonprefix = {}
 nick_labuat_ud_din_nonprefix = {}
+nick_laytha_ud_din_nonprefix = {}
 nick_muayyidat_ud_din_nonprefix = {}
 nick_mubarizat_ud_din_nonprefix = {}
+nick_muhadhdhabat_ud_din_nonprefix = {}
 nick_muhibat_ud_din_nonprefix = {}
 nick_mujirat_ud_din_nonprefix = {}
 nick_muinat_ud_din_nonprefix = {}
 nick_muizat_ud_din_nonprefix = {}
+nick_mukhlisat_ud_din_nonprefix = {}
 nick_mumahhidat_ud_din_nonprefix = {}
 nick_muslihat_ud_din_nonprefix = {}
 nick_mutamidat_ud_din_nonprefix = {}
@@ -992,7 +1040,10 @@ nick_janah_ul_islam_nonprefix = {}
 nick_kamal_ul_islam_nonprefix = {}
 nick_kanz_ul_islam_nonprefix = {}
 nick_khair_ul_islam_nonprefix = {}
+nick_layth_ul_islam_nonprefix = {}
+nick_lisan_ul_islam_nonprefix = {}
 nick_majd_ul_islam_nonprefix = {}
+nick_minhaj_ul_islam_nonprefix = {}
 nick_muayyid_ul_islam_nonprefix = {}
 nick_mubariz_ul_islam_nonprefix = {}
 nick_muhib_ul_islam_nonprefix = {}
@@ -1001,6 +1052,7 @@ nick_mujir_ul_islam_nonprefix = {}
 nick_muin_ul_islam_nonprefix = {}
 nick_muiz_ul_islam_nonprefix = {}
 nick_murtada_al_islam_nonprefix = {}
+nick_mukhlis_ul_islam_nonprefix = {}
 nick_mumahhid_ul_islam_nonprefix = {}
 nick_muslih_ul_islam_nonprefix = {}
 nick_mutamid_ul_islam_nonprefix = {}
@@ -1033,11 +1085,13 @@ nick_said_ul_islam_nonprefix = {}
 nick_sadid_ul_islam_nonprefix = {}
 nick_sahm_ul_islam_nonprefix = {}
 nick_samsam_ul_islam_nonprefix = {}
+nick_sarim_ul_islam_nonprefix = {}
 nick_sayf_ul_islam_nonprefix = {}
 nick_sharaf_ul_islam_nonprefix = {}
 nick_shams_ul_islam_nonprefix = {}
 nick_shibl_ul_islam_nonprefix = {}
 nick_shihab_ul_islam_nonprefix = {}
+nick_sinan_ul_islam_nonprefix = {}
 nick_siraj_ul_islam_nonprefix = {}
 nick_taj_ul_islam_nonprefix = {}
 nick_taqi_ul_islam_nonprefix = {}
@@ -1055,12 +1109,14 @@ nick_farisat_ul_islam_nonprefix = {}
 nick_hamiyat_ul_islam_nonprefix = {}
 nick_hamidat_ul_islam_nonprefix = {}
 nick_labuat_ul_islam_nonprefix = {}
+nick_laytha_ul_islam_nonprefix = {}
 nick_muayyidat_ul_islam_nonprefix = {}
 nick_mubarizat_ul_islam_nonprefix = {}
 nick_muhibat_ul_islam_nonprefix = {}
 nick_mujirat_ul_islam_nonprefix = {}
 nick_muinat_ul_islam_nonprefix = {}
 nick_muizat_ul_islam_nonprefix = {}
+nick_mukhlisat_ul_islam_nonprefix = {}
 nick_mumahhidat_ul_islam_nonprefix = {}
 nick_muslihat_ul_islam_nonprefix = {}
 nick_mutamidat_ul_islam_nonprefix = {}
@@ -1116,7 +1172,10 @@ nick_janah_ud_dawlah_nonprefix = {}
 nick_kamal_ud_dawlah_nonprefix = {}
 nick_kanz_ud_dawlah_nonprefix = {}
 nick_khair_ud_dawlah_nonprefix = {}
+nick_layth_ud_dawlah_nonprefix = {}
+nick_lisan_ud_dawlah_nonprefix = {}
 nick_majd_ud_dawlah_nonprefix = {}
+nick_minhaj_ud_dawlah_nonprefix = {}
 nick_muayyid_ud_dawlah_nonprefix = {}
 nick_mubariz_ud_dawlah_nonprefix = {}
 nick_muhib_ud_dawlah_nonprefix = {}
@@ -1126,6 +1185,7 @@ nick_muin_ud_dawlah_nonprefix = {}
 nick_muiz_ud_dawlah_nonprefix = {}
 nick_murtada_ad_dawlah_nonprefix = {}
 nick_musharif_ud_dawlah_nonprefix = {}
+nick_mukhlis_ud_dawlah_nonprefix = {}
 nick_mumahhid_ud_dawlah_nonprefix = {}
 nick_muslih_ud_dawlah_nonprefix = {}
 nick_mutamid_ud_dawlah_nonprefix = {}
@@ -1160,18 +1220,21 @@ nick_sahm_ud_dawlah_nonprefix = {}
 nick_sanad_ud_dawlah_nonprefix = {}
 nick_sama_ud_dawlah_nonprefix = {}
 nick_samsam_ud_dawlah_nonprefix = {}
+nick_sarim_ud_dawlah_nonprefix = {}
 nick_sayf_ud_dawlah_nonprefix = {}
 nick_sayyid_ud_dawlah_nonprefix = {}
 nick_sharaf_ud_dawlah_nonprefix = {}
 nick_shams_ud_dawlah_nonprefix = {}
 nick_shibl_ud_dawlah_nonprefix = {}
 nick_shihab_ud_dawlah_nonprefix = {}
+nick_sinan_ud_dawlah_nonprefix = {}
 nick_siraj_ud_dawlah_nonprefix = {}
 nick_sultan_ud_dawlah_nonprefix = {}
 nick_taj_ud_dawlah_nonprefix = {}
 nick_thiqat_ud_dawlah_nonprefix = {}
 nick_taqi_ud_dawlah_nonprefix = {}
 nick_uddat_ud_dawlah_nonprefix = {}
+nick_wajih_ud_dawlah_nonprefix = {}
 nick_wali_ud_dawlah_nonprefix = {}
 nick_yamin_ud_dawlah_nonprefix = {}
 nick_yumn_ud_dawlah_nonprefix = {}
@@ -1189,12 +1252,14 @@ nick_farisat_ud_dawlah_nonprefix = {}
 nick_hamiyat_ud_dawlah_nonprefix = {}
 nick_hamidat_ud_dawlah_nonprefix = {}
 nick_labuat_ud_dawlah_nonprefix = {}
+nick_laytha_ud_dawlah_nonprefix = {}
 nick_muayyidat_ud_dawlah_nonprefix = {}
 nick_mubarizat_ud_dawlah_nonprefix = {}
 nick_muhibat_ud_dawlah_nonprefix = {}
 nick_mujirat_ud_dawlah_nonprefix = {}
 nick_muinat_ud_dawlah_nonprefix = {}
 nick_muizat_ud_dawlah_nonprefix = {}
+nick_mukhlisat_ud_dawlah_nonprefix = {}
 nick_mumahhidat_ud_dawlah_nonprefix = {}
 nick_musharrifat_ud_dawlah_nonprefix = {}
 nick_muslihat_ud_dawlah_nonprefix = {}
@@ -1215,6 +1280,7 @@ nick_sadidat_ud_dawlah_nonprefix = {}
 nick_sayyidat_ud_dawlah_nonprefix = {}
 nick_shiblat_ud_dawlah_nonprefix = {}
 nick_sultanat_ud_dawlah_nonprefix = {}
+nick_wajihat_ud_dawlah_nonprefix = {}
 nick_waliyat_ud_dawlah_nonprefix = {}
 nick_zahirat_ud_dawlah_nonprefix = {}
 nick_zahrat_ud_dawlah_nonprefix = {}
@@ -1254,7 +1320,10 @@ nick_janah_ul_mulk_nonprefix = {}
 nick_kamal_ul_mulk_nonprefix = {}
 nick_kanz_ul_mulk_nonprefix = {}
 nick_khair_ul_mulk_nonprefix = {}
+nick_layth_ul_mulk_nonprefix = {}
+nick_lisan_ul_mulk_nonprefix = {}
 nick_majd_ul_mulk_nonprefix = {}
+nick_minhaj_ul_mulk_nonprefix = {}
 nick_muayyid_ul_mulk_nonprefix = {}
 nick_mubariz_ul_mulk_nonprefix = {}
 nick_muhib_ul_mulk_nonprefix = {}
@@ -1264,6 +1333,7 @@ nick_muin_ul_mulk_nonprefix = {}
 nick_muiz_ul_mulk_nonprefix = {}
 nick_murtada_al_mulk_nonprefix = {}
 nick_musharif_ul_mulk_nonprefix = {}
+nick_mukhlis_ul_mulk_nonprefix = {}
 nick_mumahhid_ul_mulk_nonprefix = {}
 nick_muslih_ul_mulk_nonprefix = {}
 nick_mutamid_ul_mulk_nonprefix = {}
@@ -1298,18 +1368,21 @@ nick_sahm_ul_mulk_nonprefix = {}
 nick_sanad_ul_mulk_nonprefix = {}
 nick_sama_ul_mulk_nonprefix = {}
 nick_samsam_ul_mulk_nonprefix = {}
+nick_sarim_ul_mulk_nonprefix = {}
 nick_sayf_ul_mulk_nonprefix = {}
 nick_sayyid_ul_mulk_nonprefix = {}
 nick_sharaf_ul_mulk_nonprefix = {}
 nick_shams_ul_mulk_nonprefix = {}
 nick_shibl_ul_mulk_nonprefix = {}
 nick_shihab_ul_mulk_nonprefix = {}
+nick_sinan_ul_mulk_nonprefix = {}
 nick_siraj_ul_mulk_nonprefix = {}
 nick_sultan_ul_mulk_nonprefix = {}
 nick_taj_ul_mulk_nonprefix = {}
 nick_thiqat_ul_mulk_nonprefix = {}
 nick_taqi_ul_mulk_nonprefix = {}
 nick_uddat_ul_mulk_nonprefix = {}
+nick_wajih_ul_mulk_nonprefix = {}
 nick_wali_ul_mulk_nonprefix = {}
 nick_yamin_ul_mulk_nonprefix = {}
 nick_yumn_ul_mulk_nonprefix = {}
@@ -1327,12 +1400,14 @@ nick_farisat_ul_mulk_nonprefix = {}
 nick_hamiyat_ul_mulk_nonprefix = {}
 nick_hamidat_ul_mulk_nonprefix = {}
 nick_labuat_ul_mulk_nonprefix = {}
+nick_laytha_ul_mulk_nonprefix = {}
 nick_muayyidat_ul_mulk_nonprefix = {}
 nick_mubarizat_ul_mulk_nonprefix = {}
 nick_muhibat_ul_mulk_nonprefix = {}
 nick_mujirat_ul_mulk_nonprefix = {}
 nick_muinat_ul_mulk_nonprefix = {}
 nick_muizat_ul_mulk_nonprefix = {}
+nick_mukhlisat_ul_mulk_nonprefix = {}
 nick_mumahhidat_ul_mulk_nonprefix = {}
 nick_musharrifat_ul_mulk_nonprefix = {}
 nick_muslihat_ul_mulk_nonprefix = {}
@@ -1353,6 +1428,7 @@ nick_sadidat_ul_mulk_nonprefix = {}
 nick_sayyidat_ul_mulk_nonprefix = {}
 nick_shiblat_ul_mulk_nonprefix = {}
 nick_sultanat_ul_mulk_nonprefix = {}
+nick_wajihat_ul_mulk_nonprefix = {}
 nick_waliyat_ul_mulk_nonprefix = {}
 nick_zahirat_ul_mulk_nonprefix = {}
 nick_zahrat_ul_mulk_nonprefix = {}

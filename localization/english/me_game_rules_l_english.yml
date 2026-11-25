@@ -93,7 +93,7 @@
  setting_me_adventerers_fic_egg_desc:0 "Fictional adventerers that exist as easter eggs or as extensions for dead dynasties as will continue to exist even if they are not controlled by a player."
  setting_me_adventerers_fic_only:0 "Extentions Only"
  setting_me_adventerers_fic_only_desc:0 "Fictional adventerers that are meant as extensions for dead dynasties as will continue to exist even if they are not controlled by a player."
- setting_me_adventerers_egg_only:0 "Easter Eggs Only"
+ setting_me_adventerers_egg_only:0 "Easter Eggs Enabled"
  setting_me_adventerers_egg_only_desc:0 "Fictional adventerers that exist as easter eggs will continue to exist even if they are not controlled by a player."
  setting_me_adventerers_extra_none:0 "Removed"
  setting_me_adventerers_extra_none_desc:0 "All fictional adventerers will be removed if not controlled by a player."
@@ -109,12 +109,26 @@
  setting_me_caliph_rank_abbasid:0 "Abbasid Kingdom"
  setting_me_caliph_rank_abbasid_desc:0 "The Abbasids will gain the Kingdom of Mesopotamia."
  
+ #Closed Faith Tenet
+ rule_me_closed_faith_rule:0 "@me_icon! Closed Faiths"
+ setting_me_closed_faith_yes:0 "Enabled"
+ setting_me_closed_faith_yes_desc:0 "Druze and Mandaeanism will use the Closed Faith tenet, which prevents it's members from converting characters and counties."
+ setting_me_closed_faith_no:0 "Disabled"
+ setting_me_closed_faith_no_desc:0 "No faith will have the Closed Faith tenet."
+ 
  #Ayyubid Culture
  rule_me_ayyubid_culture:0 "@me_icon! Ayyubid Culture"
  setting_me_ayyubid_mashriqi:0 "Mashriqi"
  setting_me_ayyubid_mashriqi_desc:0 "All Ayyubid characters will remain Mashriqi."
  setting_me_ayyubid_kurdish:0 "#Y Kurdish#!"
  setting_me_ayyubid_kurdish_desc:0 "All Ayyubid characters will convert to the Kurdish culture."
+ 
+ #Acre/Tyre-Ma'ab County Exchange
+ rule_me_tyre_maab_exchange:0 "@me_icon! Acre-Ma'ab County Exchange"
+ setting_me_tyre_maab_exchange_yes:0 "Enabled"
+ setting_me_tyre_maab_exchange_yes_desc:0 "in 1178, if the Muslims win the war for the Kingdom of Jerusalem then Ma'ab will be exchanged for Acre to create the historic borders of the time. #high This can be prevented if Acre is occupied.#!"
+ setting_me_tyre_maab_exchange_no:0 "Disabled"
+ setting_me_tyre_maab_exchange_no_desc:0 "Ma'ab will not be exchanged for Acre."
  
  #Fatimid Trait
  rule_me_fatimid_trait:0 "@me_icon! Fatimid Trait"
@@ -160,3 +174,24 @@
  setting_me_malay_islamic_ruler_yes_desc:0 "Muslim Acehnese dynasties of dubious historicity will be appear in the 867, 1066, and 1178 start dates."
  setting_me_malay_islamic_ruler_no:0 "Deactivated"
  setting_me_malay_islamic_ruler_no_desc:0 "Muslim Acehnese dynasties of dubious historicity will be not appear and the vanilla placeholder characters will be used instead."
+ 
+ #Clan Raiding
+ rule_me_can_can_raid_rule:0 "@me_icon! Clan Raiding"
+ setting_me_clan_can_raid_yes:0 "#high Enabled#!"
+ setting_me_clan_can_raid_yes_desc:0 "Clan governments can raid regardless of circumstance."
+ setting_me_clan_can_raid_struggle:0 "Struggle Disabled"
+ setting_me_clan_can_raid_struggle_desc:0 "Clan governments can raid unless they are involved in a struggle #EMP (Raiding via faith, culture, or vassal contracts is still enabled)#!."
+ setting_me_clan_can_raid_no:0 "#R Disabled#!"
+ setting_me_clan_can_raid_no_desc:0 "Clan governments cannot raid under normal circumstances."
+ ME_ClanRaidingYes:0 ""
+ ME_ClanRaidingStruggle:0 "#high Disabled in [struggles|E]#!"
+ ME_ClanRaidingNo:0 "#high Disabled via game rule#!"
+ 
+ #Affinal Doctrines
+ rule_me_affinal_doctrines_rule:0 "@me_icon! Affinal Restrictions"
+ setting_me_affinal_doctrines_no:0 "Deactivated"
+ setting_me_affinal_doctrines_no_desc:0 "Doctrines that disallow marriage with the spouse's family #EMP (Step-Family or In-Laws) for certain religions will be deactivated."
+ setting_me_affinal_doctrines_yes:0 "#high Activated#!"
+ setting_me_affinal_doctrines_yes_desc:0 "Doctrines that disallow marriage with the spouse's family #EMP (Step-Family or In-Laws)#! for certain religions will be activated."
+ setting_me_affinal_doctrines_concubines:0 "#high Activated - Concubines#!"
+ setting_me_affinal_doctrines_concubines_desc:0 "Doctrines that disallow marriage with the spouse's family will affect concubines aswell."

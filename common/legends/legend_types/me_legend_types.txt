@@ -174,8 +174,8 @@
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 5
-					development_growth_factor = 0.01
+					popular_opinion_add = 5
+					prosperity_growth_factor = 0.01
 				}
 				owner_modifier = {
 					monthly_dynasty_prestige = 0.1
@@ -299,8 +299,8 @@
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 10
-					development_growth_factor = 0.02
+					popular_opinion_add = 10
+					prosperity_growth_factor = 0.02
 				}
 				owner_modifier = {
 					monthly_dynasty_prestige = 0.25
@@ -437,8 +437,8 @@
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 20
-					development_growth_factor = 0.06
+					popular_opinion_add = 20
+					prosperity_growth_factor = 0.06
 				}
 				owner_modifier = {
 					monthly_dynasty_prestige = 0.5
@@ -715,8 +715,8 @@ me_legitimizing = {
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 5
-					development_growth_factor = 0.01
+					popular_opinion_add = 5
+					prosperity_growth_factor = 0.01
 				}
 				owner_modifier = {
 					monthly_dynasty_prestige = 0.1
@@ -837,8 +837,8 @@ me_legitimizing = {
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 10
-					development_growth_factor = 0.02
+					popular_opinion_add = 10
+					prosperity_growth_factor = 0.02
 				}
 				owner_modifier = {
 					monthly_dynasty_prestige = 0.25
@@ -973,8 +973,8 @@ me_legitimizing = {
 
 			impact = {
 				province_modifier = {
-					county_opinion_add = 20
-					development_growth_factor = 0.06
+					popular_opinion_add = 20
+					prosperity_growth_factor = 0.06
 				}
 				owner_modifier = {
 					monthly_dynasty_prestige = 0.5

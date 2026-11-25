@@ -2,93 +2,13 @@
 # Sanctuary of Abraham #done
 ##########
 
-sanctuary_abraham_01 = {
-	construction_time = very_slow_construction_time
-
-	type_icon = "icon_structure_me_ibrahimi_mosque.dds"
-	
-	asset = {
-		type = pdxmesh
-		name = "ibrahimi_mesh"
-	}
-	
-	can_construct_potential = {
-		building_requirement_tribal = no
-	}
-	
-	can_construct = {
-		scope:holder = {
-			religion = religion:islam_religion
-		}
-	}
-	
-	is_enabled = {
-		custom_description = {
-			text = holy_site_abrahamic_trigger
-			OR = {
-				scope:holder = {
-					religion = religion:islam_religion
-				}
-				scope:holder = {
-					religion = religion:christianity_religion
-				}
-				scope:holder = {
-					religion = religion:judaism_religion
-				}
-				custom_description = {
-					text = holy_site_building_trigger
-					barony = {
-						is_holy_site_of = scope:holder.faith
-					}
-				}
-			}
-		}
-	}
-	
-	show_disabled = yes
-	
-	cost_gold = 1000
-
-	character_modifier = {
-		monthly_piety = 0.25
-		piety_level_impact_mult = 0.2
-	}
-	county_modifier = {
-		tax_mult = 0.3
-		development_growth_factor = 0.1
-		development_growth = 0.1
-	}
-	
-	province_modifier = {
-		monthly_income = 1.5
-	}
-
-	on_complete = {
-		#Regular Mandala Boon
-		mandala_built_piety_duchy_building_t3_effect = yes
-	}
-	
-	ai_value = {
-		base = 100
-		ai_pious_building_preference_modifier = yes
-		modifier = { # Fill all building slots before going for special buildings
-			factor = 0
-			free_building_slots > 0
-		}
-	}
-	
-	type = special
-
-	flag = travel_point_of_interest_religious
-}
-
 ##########
 # Mashhad al-Hussain #done
 ##########
 mashad_al_husain_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_alhambra.dds"
+	type_icon = "special_buildings/alhambra.dds"
 
 	asset = {
 		type = pdxmesh
@@ -98,8 +18,8 @@ mashad_al_husain_01 = {
 	is_enabled = {
 		custom_description = {
 			text = ismaili_me_building_trigger
-			scope:holder.faith = {
-				has_doctrine = special_doctrine_ubaydi_trait_acceptance
+			scope:holder.rite = {
+				rite_has_doctrine = special_doctrine_ubaydi_trait_acceptance
 			}
 		}
 	}
@@ -111,8 +31,8 @@ mashad_al_husain_01 = {
 	can_construct = {
 		custom_description = {
 			text = ismaili_me_building_trigger
-			scope:holder.faith = {
-				has_doctrine = special_doctrine_ubaydi_trait_acceptance
+			scope:holder.rite = {
+				rite_has_doctrine = special_doctrine_ubaydi_trait_acceptance
 			}
 		}
 		scope:holder = {
@@ -128,14 +48,9 @@ mashad_al_husain_01 = {
 		monthly_piety = 0.3
 		same_faith_opinion = 5
 	}
-	
-	county_modifier = {
-		#monthly_income = 0.3
-		development_growth = 0.05
-	}
-	
+
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_religious_tax = 0.5
 	}
 
 	on_complete = {
@@ -146,15 +61,295 @@ mashad_al_husain_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
+}
+
+##########
+# Shrine of Fatima al-Ma'suma (Qom) - uses the Imam Reza shrine model and icon
+##########
+fatima_masuma_shrine_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/imam_reza_shrine.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "fp3_building_special_imam_reza_shrine_01_a_mesh"
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	# Same requirement as the Sanctuary of Imam Reza
+	is_enabled = {
+		custom_description = {
+			text = imami_me_building_trigger
+			OR = {
+				scope:holder = {
+					faith.religious_head_title = title:d_imami
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.2
+		learning = 2
+		monthly_learning_lifestyle_xp_gain_mult = 0.15
+		clergy_opinion = 5
+	}
+
+	province_modifier = {
+		monthly_religious_tax = 1
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_religious_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious # religious tomb/complex
+	flag = holy_building
+	flag = religious_studies_location
+}
+
+##########
+# Kadhimayn (Baghdad) - the twin shrines of the seventh and ninth Imams. Uses the Imam Ali Mosque model and icon.
+# Stands in Baquba in Baghdad county: Baghdad itself has the House of Wisdom, and Sarsar holds vanilla's slot for the University of Baghdad.
+##########
+kadhimayn_shrine_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/imam_ali_mosque.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "mosque_najaf_mesh"
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	# Same requirement as the Sanctuary of Imam Reza
+	is_enabled = {
+		custom_description = {
+			text = imami_me_building_trigger
+			OR = {
+				scope:holder = {
+					faith.religious_head_title = title:d_imami
+				}
+				custom_description = {
+					text = holy_site_building_trigger
+					barony = {
+						is_holy_site_of = scope:holder.faith
+					}
+				}
+			}
+		}
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	# al-Kadhim, "he who restrains his anger", and al-Jawad, "the generous"
+	character_modifier = {
+		monthly_piety = 0.2
+		diplomacy = 1
+		stress_loss_mult = 0.1
+		same_faith_opinion = 5
+	}
+
+	province_modifier = {
+		monthly_religious_tax = 1
+	}
+
+	county_modifier = {
+		popular_opinion_add = building_miniscule_popular_opinion_gain
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious # religious tomb/complex
+	flag = holy_building
+	flag = religious_studies_location
+}
+
+##########
+# Jannat al-Baqi' (Medina) - the cemetery of the Prophet's household and Companions. Uses vanilla's Islamic shrine model.
+# Stands in as-Sayaa in Medina county, as Medina itself holds the Prophetic Mosque.
+##########
+jannat_al_baqi_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/legendary_shrine.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "fp4_legendary_islamic_shrine_01_a_mesh"
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = muslim_me_building_trigger
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		clergy_opinion = 5
+		same_faith_opinion = 5
+	}
+
+	province_modifier = {
+		monthly_religious_tax = 1
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious # religious tomb/complex
+	flag = holy_building
 }
 
 ##########
@@ -163,7 +358,7 @@ mashad_al_husain_01 = {
 me_old_mosque_basra_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_great_mosque_of_cordoba.dds"
+	type_icon = "special_buildings/great_mosque_of_cordoba.dds"
 
 	asset = {
 		type = pdxmesh
@@ -173,9 +368,7 @@ me_old_mosque_basra_01 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -188,18 +381,13 @@ me_old_mosque_basra_01 = {
 	character_modifier = {
 		monthly_piety = 0.15
 		monthly_dynasty_prestige_mult = 0.03
-		monthly_county_control_growth_factor = 0.05
+		character_capital_county_monthly_control_change_add = 0.05
 		same_faith_opinion = 5
 	}
-	
-	county_modifier = {
-		#monthly_income = 0.3
-		development_growth = 0.08
-		development_growth_factor = 0.05
-	}
-	
+
 	province_modifier = {
-		monthly_income = 0.3
+		province_size_baseline_add = 40
+		monthly_religious_tax = 0.3
 	}
 
 	on_complete = {
@@ -210,15 +398,45 @@ me_old_mosque_basra_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_religious_tax = special_building_need_tax
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -231,7 +449,7 @@ hejra_01 = {
 	}
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_petra.dds"
+	type_icon = "icon_structure_me_madain_salih.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -239,30 +457,31 @@ hejra_01 = {
 	
 	is_enabled = {
 		custom_description = {
-		text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			text = muslim_me_building_trigger
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
 	cost_gold = 3000
 
 	county_modifier = {
-		tax_mult = -0.05
-		development_growth = -0.1
-		development_growth_factor = -0.05
+		all_tax_mult = -0.05
+		prosperity_growth = -0.1
+		prosperity_growth_factor = -0.05
+	}
+
+	province_modifier = {
+		province_size_baseline_add = -20
 	}
 
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
 
 	flag = travel_point_of_interest_wonder
 }
@@ -273,7 +492,7 @@ hejra_01 = {
 jawatha_mosque_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_zoroastric.dds"
+	type_icon = "special_buildings/cathedral_zoroastric.dds"
 
 	asset = {
 		type = pdxmesh
@@ -285,9 +504,7 @@ jawatha_mosque_01 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -299,17 +516,12 @@ jawatha_mosque_01 = {
 
 	character_modifier = {
 		monthly_piety = 0.25
-		monthly_county_control_growth_factor = 0.05
+		character_capital_county_monthly_control_change_add = 0.05
 		same_faith_opinion = 5
 	}
-	
-	county_modifier = {
-		#monthly_income = 0.25
-		development_growth = 0.05
-	}
-	
+
 	province_modifier = {
-		monthly_income = 0.25
+		monthly_religious_tax = 0.25
 	}
 
 	on_complete = {
@@ -320,15 +532,45 @@ jawatha_mosque_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 5
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -338,7 +580,7 @@ jawatha_mosque_01 = {
 great_mosque_sousse_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_zoroastric.dds"
+	type_icon = "special_buildings/cathedral_zoroastric.dds"
 	asset = {
 		type = pdxmesh
 		name = "mosque_susa_mesh"
@@ -349,18 +591,14 @@ great_mosque_sousse_01 = {
 	}
 	
 	can_construct = {
-		scope:holder = {
-			faith = { religion_tag = islam_religion }
-		}
+		islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 	}
 	
 	is_enabled = {
 		custom_description = {
 			text = holy_site_muslim_or_holy_site_trigger
 			OR = {
-				scope:holder = {
-					religion = religion:islam_religion
-				}
+				islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 				custom_description = {
 					text = holy_site_building_trigger
 					barony = {
@@ -380,8 +618,7 @@ great_mosque_sousse_01 = {
 		monthly_piety = 0.25
 	}
 	county_modifier = {
-		tax_mult = 0.2
-		development_growth = 0.15
+		religious_tax_mult = 0.2
 	}
 	province_modifier = {
 		defender_holding_advantage = normal_building_advantage_tier_1
@@ -395,15 +632,45 @@ great_mosque_sousse_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -412,7 +679,7 @@ great_mosque_sousse_01 = {
 al_zaytuna_mosque_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_alhambra.dds"
+	type_icon = "icon_structure_me_zaytuna_mosque.dds"
 
 	asset = {
 		type = pdxmesh
@@ -422,9 +689,7 @@ al_zaytuna_mosque_01 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -437,17 +702,13 @@ al_zaytuna_mosque_01 = {
 	character_modifier = {
 		monthly_piety = 0.25
 		monthly_dynasty_prestige_mult = 0.05
-		monthly_county_control_growth_factor = 0.15
+		character_capital_county_monthly_control_change_add = 0.15
 		same_faith_opinion = 5
 	}
 	
-	county_modifier = {
-		#monthly_income = 0.5
-		development_growth = 0.2
-		development_growth_factor = 0.2
-	}
 	province_modifier = {
-		monthly_income = 0.5
+		province_size_baseline_add = 40
+		monthly_religious_tax = 0.5
 	}
 
 	on_complete = {
@@ -458,15 +719,58 @@ al_zaytuna_mosque_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_religious_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -475,22 +779,18 @@ al_zaytuna_mosque_01 = {
 jameh_mosque_atigh_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_friday_mosque.dds"
+	type_icon = "special_buildings/the_friday_mosque.dds"
 
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
 	can_construct_potential = {
 		barony = title:b_shiraz-farsi
-		scope:holder = {
-			religion = religion:islam_religion
-		}
+		islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		building_requirement_tribal = no
 	}
 	
@@ -498,18 +798,14 @@ jameh_mosque_atigh_01 = {
 
 	character_modifier = {
 		monthly_piety = 0.25
-		monthly_county_control_growth_factor = 0.1
+		character_capital_county_monthly_control_change_add = 0.1
 		same_faith_opinion = 5
 		stress_loss_mult = 0.05
 	}
-	
-	county_modifier = {
-		development_growth = 0.1
-		development_growth_factor = 0.05
-	}
-	
+
 	province_modifier = {
-		monthly_income = 2
+		province_size_baseline_add = 40
+		monthly_religious_tax = 1
 	}
 
 	on_complete = {
@@ -520,15 +816,47 @@ jameh_mosque_atigh_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = duchy_capital
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = duchy_building
 
 	flag = fully_upgraded_duchy_capital_building
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 
@@ -538,7 +866,7 @@ jameh_mosque_atigh_01 = {
 juma_mosque_shemakha_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_temple_in_jerusalem.dds"
+	type_icon = "special_buildings/temple_in_jerusalem.dds"
 
 	asset = {
 		type = pdxmesh
@@ -548,9 +876,7 @@ juma_mosque_shemakha_01 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -566,13 +892,7 @@ juma_mosque_shemakha_01 = {
 	}
 	
 	county_modifier = {
-		tax_mult = 0.05
-		development_growth = 0.1
-		development_growth_factor = 0.05
-	}
-	
-	province_modifier = {
-		monthly_income = 0.5
+		religious_tax_mult = 0.05
 	}
 
 	on_complete = {
@@ -583,15 +903,46 @@ juma_mosque_shemakha_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_silk_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -600,7 +951,7 @@ juma_mosque_shemakha_01 = {
 katasraj_temples_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_indian.dds"
+	type_icon = "special_buildings/cathedral_indian.dds"
 	asset = {
 		type = pdxmesh
 		name = "katasraj1_mesh"
@@ -608,10 +959,8 @@ katasraj_temples_01 = {
 
 	is_enabled = {
 		custom_description = {
-			text = buddhas_of_bamian_trigger
-			scope:holder = {
-				religion = { is_in_family = rf_eastern }
-			}
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -628,12 +977,7 @@ katasraj_temples_01 = {
 	}
 	
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth_factor = 0.1
-	}
-	
-	province_modifier = {
-		monthly_income = 0.5
+		religious_tax_mult = 0.1
 	}
 
 	on_complete = {
@@ -644,23 +988,40 @@ katasraj_temples_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
 
 	next_building = katasraj_temples_02
 
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 katasraj_temples_02 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_indian.dds"
+	type_icon = "special_buildings/cathedral_indian.dds"
 	asset = {
 		type = pdxmesh
 		name = "katasraj2_mesh"
@@ -672,27 +1033,20 @@ katasraj_temples_02 = {
 	
 	is_enabled = {
 		custom_description = {
-			text = buddhas_of_bamian_trigger
-			scope:holder = {
-				religion = { is_in_family = rf_eastern }
-			}
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
 		}
 	}
 	
 	cost_gold = 400
 
 	character_modifier = {
-		monthly_prestige_gain_mult = 0.8
+		monthly_prestige_gain_mult = 0.08
 		monthly_piety = 1
 		same_faith_opinion = 8
 	}
 	county_modifier = {
-	tax_mult = 0.15
-	development_growth_factor = 0.2
-	}
-
-	province_modifier = {
-		monthly_income = 1
+		religious_tax_mult = 0.15
 	}
 
 	on_complete = {
@@ -703,15 +1057,45 @@ katasraj_temples_02 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_cereals_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_cereals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -725,18 +1109,13 @@ uqba_mosque_01 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
 	can_construct_potential = {
 		barony = title:b_kairouan
-		scope:holder = {
-			religion = religion:islam_religion
-		}
+		islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		building_requirement_tribal = no
 	}
 	
@@ -744,19 +1123,15 @@ uqba_mosque_01 = {
 
 	character_modifier = {
 		monthly_piety = 0.5
-		monthly_county_control_growth_factor = 0.15
+		character_capital_county_monthly_control_change_add = 0.15
 		same_faith_opinion = 5
 		monthly_prestige_gain_mult = 0.05
 		monthly_dynasty_prestige = 1
 	}
-	
-	county_modifier = {
-		development_growth = 0.15
-		development_growth_factor = 0.1
-	}
-	
+
 	province_modifier = {
-		monthly_income = 0.5
+		province_size_baseline_add = 40
+		monthly_religious_tax = 0.5
 	}
 
 	on_complete = {
@@ -767,15 +1142,45 @@ uqba_mosque_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_religious_tax = special_building_need_tax
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 uqba_mosque_01_duchy = {
@@ -786,18 +1191,13 @@ uqba_mosque_01_duchy = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
 	can_construct_potential = {
 		barony = title:b_kairouan
-		scope:holder = {
-			religion = religion:islam_religion
-		}
+		islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		building_requirement_tribal = no
 	}
 	
@@ -805,19 +1205,15 @@ uqba_mosque_01_duchy = {
 
 	character_modifier = {
 		monthly_piety = 0.5
-		monthly_county_control_growth_factor = 0.15
+		character_capital_county_monthly_control_change_add = 0.15
 		same_faith_opinion = 5
 		monthly_prestige_gain_mult = 0.05
 		monthly_dynasty_prestige = 1
 	}
-	
-	county_modifier = {
-		development_growth = 0.15
-		development_growth_factor = 0.1
-	}
-	
+
 	province_modifier = {
-		monthly_income = 0.5
+		province_size_baseline_add = 40
+		monthly_religious_tax = 0.5
 	}
 
 	on_complete = {
@@ -828,15 +1224,47 @@ uqba_mosque_01_duchy = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = duchy_capital
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_religious_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = duchy_building
 
 	flag = fully_upgraded_duchy_capital_building
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -845,7 +1273,7 @@ uqba_mosque_01_duchy = {
 great_mosque_sfax_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_muslim.dds"
+	type_icon = "special_buildings/cathedral_muslim.dds"
 
 	asset = {
 		type = pdxmesh
@@ -855,9 +1283,7 @@ great_mosque_sfax_01 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -868,17 +1294,12 @@ great_mosque_sfax_01 = {
 	cost_gold = 1000
 
 	character_modifier = {
-		monthly_county_control_growth_factor = 0.05
+		character_capital_county_monthly_control_change_add = 0.05
 		monthly_prestige_gain_mult = 0.05
 	}
-	
-	county_modifier = {
-		development_growth = 0.1
 
-	}
-	
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_religious_tax = 0.5
 	}
 
 	on_complete = {
@@ -889,15 +1310,45 @@ great_mosque_sfax_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -907,7 +1358,7 @@ great_mosque_sfax_01 = {
 mankiala_stupa_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_shwedagon_pagoda.dds"
+	type_icon = "special_buildings/shwedagon_pagoda.dds"
 
 	asset = {
 		type = pdxmesh
@@ -923,10 +1374,8 @@ mankiala_stupa_01 = {
 	
 	is_enabled = {
 		custom_description = {
-			text = buddhas_of_bamian_trigger
-			scope:holder = {
-				religion = { is_in_family = rf_eastern }
-			}
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
 		}
 	}
 	
@@ -936,13 +1385,12 @@ mankiala_stupa_01 = {
 
 	character_modifier = {
 		monthly_piety_gain_mult = 0.05
-		county_opinion_add = 5
 	}
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_religious_tax = 0.5
 	}
 	county_modifier = {
-		development_growth = 0.1
+		popular_opinion_add = building_miniscule_popular_opinion_gain
 	}
 
 	on_complete = {
@@ -953,15 +1401,32 @@ mankiala_stupa_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -971,7 +1436,7 @@ mankiala_stupa_01 = {
 prahladpuri_temple_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_khajuraho_temples.dds"
+	type_icon = "special_buildings/khajuraho_temples.dds"
 	
 	can_construct_potential = {
 		barony = title:b_multan
@@ -983,14 +1448,11 @@ prahladpuri_temple_01 = {
 	
 	is_enabled = {
 		custom_description = {
-			text = buddhas_of_bamian_trigger
-			scope:holder = {
-				religion = { is_in_family = rf_eastern }
-			}
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
 		}
 	}
-	
-	
+
 	show_disabled = yes
 	
 	cost_gold = 1000
@@ -998,13 +1460,12 @@ prahladpuri_temple_01 = {
 	character_modifier = {
 		build_gold_cost = -0.05
 		monthly_piety_gain_mult = 0.07
-		county_opinion_add = 5
 	}
 	province_modifier = {
-		monthly_income = 0.25
+		monthly_religious_tax = 0.25
 	}
 	county_modifier = {
-		development_growth = 0.15
+		popular_opinion_add = building_miniscule_popular_opinion_gain
 	}
 
 	on_complete = {
@@ -1015,15 +1476,47 @@ prahladpuri_temple_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = duchy_capital
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_dyes_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_dyes
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				popular_opinion_add = special_building_need_popular_opinion
+			}
+		}
+	}
+
+	flag = duchy_building
 
 	flag = fully_upgraded_duchy_capital_building
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -1033,7 +1526,7 @@ prahladpuri_temple_01 = {
 tarikhaneh_mosque_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_zoroastric.dds"
+	type_icon = "special_buildings/cathedral_zoroastric.dds"
 	asset = {
 		type = pdxmesh
 		name = "tarikhaneh_fire_mesh"
@@ -1046,17 +1539,14 @@ tarikhaneh_mosque_01 = {
 	is_enabled = {
 		custom_description = {
 			text = zoroastrian_me_building_trigger
-			scope:holder = {
-				religion = religion:zoroastrianism_religion
-			}
+			zoroastrian_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
 	cost_gold = 3000
 
 	county_modifier = {
-	tax_mult = 0.1
-	development_growth_factor = 0.05
+		religious_tax_mult = 0.1
 	}
 	
 	character_modifier = {
@@ -1073,21 +1563,38 @@ tarikhaneh_mosque_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_wood_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wood
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 tarikhaneh_mosque_02 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_zoroastric.dds"
+	type_icon = "special_buildings/cathedral_zoroastric.dds"
 	asset = {
 		type = pdxmesh
 		name = "mosque_tarikhaneh_mesh"
@@ -1100,9 +1607,7 @@ tarikhaneh_mosque_02 = {
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 	
@@ -1110,14 +1615,10 @@ tarikhaneh_mosque_02 = {
 
 	character_modifier = {
 		monthly_prestige_gain_mult = 0.10
+		monthly_piety_gain_mult = 0.05
 	}
 	county_modifier = {
-	tax_mult = 0.15
-	development_growth_factor = 0.1
-	}
-	
-	character_modifier = {
-		monthly_piety_gain_mult = 0.05
+		religious_tax_mult = 0.15
 	}
 
 	on_complete = {
@@ -1128,15 +1629,32 @@ tarikhaneh_mosque_02 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -1146,7 +1664,7 @@ tarikhaneh_mosque_02 = {
 alcazar_seville_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_alhambra.dds"
+	type_icon = "icon_structure_me_alcazar_seville.dds"
 	asset = {
 		type = pdxmesh
 		name = "alcazar_seville_mesh"
@@ -1165,10 +1683,9 @@ alcazar_seville_01 = {
 	cost_gold = 3000
 
 	county_modifier = {
+		control_baseline_add = 6
 		defender_holding_advantage = normal_building_advantage_tier_1
-		monthly_county_control_growth_factor = 0.1
-		monthly_county_control_growth_add = 0.1
-		tax_mult = 0.1
+		civic_tax_mult = 0.1
 	}
 
 	character_modifier = {
@@ -1179,18 +1696,49 @@ alcazar_seville_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_3
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -10
 		fort_level = good_building_fort_level_tier_2
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1202,7 +1750,7 @@ alcazar_seville_01 = {
 alcazaba_almeria_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_alhambra.dds"
+	type_icon = "special_buildings/alhambra.dds"
 	asset = {
 		type = pdxmesh
 		name = "alcazaba_almeria_mesh"
@@ -1221,9 +1769,9 @@ alcazaba_almeria_01 = {
 	cost_gold = 3000
 
 	county_modifier = {
+		control_baseline_add = 3
 		defender_holding_advantage = normal_building_advantage_tier_1
-		monthly_county_control_growth_add = 0.15
-		tax_mult = 0.05
+		civic_tax_mult = 0.05
 	}
 
 	character_modifier = {
@@ -1232,20 +1780,62 @@ alcazaba_almeria_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_2
 	province_modifier = {
+		travel_danger = -10
 		fort_level = good_building_fort_level_tier_2
-		development_growth = 0.05
-		development_growth_factor = 0.05
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_silk_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_maritime_tax = special_building_need_tax
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1257,7 +1847,7 @@ alcazaba_almeria_01 = {
 fort_alicante_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -1277,20 +1867,37 @@ fort_alicante_01 = {
 	
 	max_garrison = good_building_max_garrison_tier_1
 	province_modifier = {
+		travel_danger = -10
+		control_baseline_add = 2
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_2
-		monthly_county_control_growth_factor = 0.05
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1302,7 +1909,7 @@ fort_alicante_01 = {
 alcazaba_badajoz_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_alhambra.dds"
+	type_icon = "special_buildings/alhambra.dds"
 	asset = {
 		type = pdxmesh
 		name = "alcazaba_badajoz_mesh"
@@ -1322,7 +1929,7 @@ alcazaba_badajoz_01 = {
 
 	county_modifier = {
 		defender_holding_advantage = normal_building_advantage_tier_1
-		tax_mult = 0.05
+		civic_tax_mult = 0.05
 	}
 
 	character_modifier = {
@@ -1332,20 +1939,49 @@ alcazaba_badajoz_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_2
 	province_modifier = {
+		travel_danger = -10
+		control_baseline_add = 6
 		fort_level = good_building_fort_level_tier_2
-		monthly_county_control_growth_factor = 0.1
-		monthly_county_control_growth_add = 0.1
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_wool_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wool
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1357,7 +1993,7 @@ alcazaba_badajoz_01 = {
 faro_walls_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_aurelian_walls.dds"
+	type_icon = "special_buildings/aurelian_walls.dds"
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1373,20 +2009,50 @@ faro_walls_01 = {
 		monthly_prestige = 1
 	}
 	province_modifier = {
+		travel_danger = -10
+		control_baseline_add = 2
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_2
-		monthly_county_control_growth_factor = 0.05
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_fish_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fish
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1398,7 +2064,7 @@ faro_walls_01 = {
 qalat_bahrain_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_aurelian_walls.dds"
+	type_icon = "special_buildings/aurelian_walls.dds"
 	asset = {
 		type = pdxmesh
 		name = "bahrain_ruin_mesh"
@@ -1416,20 +2082,19 @@ qalat_bahrain_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_1
 	county_modifier = {
-		tax_mult = 0.02
+		civic_tax_mult = 0.02
 	}
 	
 	next_building = qalat_bahrain_02
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
 
 	flag = travel_point_of_interest_martial
 }
@@ -1437,7 +2102,7 @@ qalat_bahrain_01 = {
 qalat_bahrain_02 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_aurelian_walls.dds"
+	type_icon = "special_buildings/aurelian_walls.dds"
 	asset = {
 		type = pdxmesh
 		name = "bahrain_mesh"
@@ -1454,25 +2119,53 @@ qalat_bahrain_02 = {
 	}
 	max_garrison = good_building_max_garrison_tier_3
 	province_modifier = {
+		travel_danger = -10
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_3
 	}
 	county_modifier = {
-		development_growth = 0.1
-		development_growth_factor = 0.1
-		monthly_county_control_growth_add = 0.1
-		tax_mult = 0.05
+		control_baseline_add = 2
+		civic_tax_mult = 0.05
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 2 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_maritime_tax = special_building_need_tax
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1484,7 +2177,7 @@ qalat_bahrain_02 = {
 qila_baltit_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_theodosian_walls.dds"
+	type_icon = "icon_structure_me_baltit_fort.dds"
 
 	asset = {
 		type = pdxmesh
@@ -1502,6 +2195,7 @@ qila_baltit_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_2
 	province_modifier = {
+		travel_danger = -10
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_2
 	}
@@ -1509,16 +2203,31 @@ qila_baltit_01 = {
 		hostile_raid_time = 0.3
 	}
 
-	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_wood_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wood
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1530,7 +2239,7 @@ qila_baltit_01 = {
 multan_fort_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_aurelian_walls.dds"
+	type_icon = "icon_structure_me_multan_fort.dds"
 
 	asset = {
 		type = pdxmesh
@@ -1548,6 +2257,7 @@ multan_fort_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_3
 	province_modifier = {
+		travel_danger = -20
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_3
 	}
@@ -1558,53 +2268,44 @@ multan_fort_01 = {
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_cotton_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_cotton
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 5
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
-}
-
-##########
-# Port of Beirut #no model added
-##########
-port_beirut_01 = {
-	construction_time = very_slow_construction_time
-
-	type_icon = "icon_building_tradeport.dds"
-
-	can_construct_potential = {
-		building_requirement_tribal = no
-	}
-	
-	cost_gold = 1000
-
-	character_modifier = {
-		monthly_income = 2
-		
-	}
-	
-	county_modifier = {
-		tax_mult = 0.1
-		monthly_county_control_growth_factor = 0.15
-		development_growth_factor = 0.15
-	}
-	
-	ai_value = {
-		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
-	}
-	
-	type = special
-
-	flag = travel_point_of_interest_stewardship
 }
 
 ##########
@@ -1613,7 +2314,7 @@ port_beirut_01 = {
 port_tyre_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_building_tradeport.dds"
+	type_icon = "regular_buildings/tradeport.dds"
 
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -1621,105 +2322,70 @@ port_tyre_01 = {
 	
 	cost_gold = 1000
 
-	character_modifier = {
-		monthly_income = 2
-	}
-	
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth_factor = 0.2
-		development_growth = 0.2
-	}
-	
-	ai_value = {
-		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
-	}
-	
-	type = special
-
-	flag = travel_point_of_interest_stewardship
-}
-
-
-##########
-# Port of Tripoli #no model added
-##########
-port_tripoli_01 = {
-	construction_time = very_slow_construction_time
-
-	type_icon = "icon_building_tradeport.dds"
-
-	can_construct_potential = {
-		building_requirement_tribal = no
-	}
-	
-	cost_gold = 1000
-
-	character_modifier = {
-		monthly_income = 2
-		monthly_county_control_growth_factor = 0.2
-		
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
 	}
 	
 	province_modifier = {
-		tax_mult = 0.15
-		development_growth_factor = 0.15
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
 	}
-	
+
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_dyes_sell_price_mult = special_building_need_sell_price
+		trade_good_glass_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_dyes
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_glass
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_stewardship
 }
 
-##########
-# Port of Yaffa #no model added
-##########
-port_yaffa_01 = {
-	construction_time = very_slow_construction_time
-
-	type_icon = "icon_building_tradeport.dds"
-
-	can_construct_potential = {
-		building_requirement_tribal = no
-	}
-	
-	cost_gold = 1000
-
-	character_modifier = {
-		monthly_income = 2
-		monthly_county_control_growth_factor = 0.15
-		
-	}
-	
-	county_modifier = {
-		tax_mult = 0.15
-		development_growth_factor = 0.25
-	}
-	
-	ai_value = {
-		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
-	}
-	
-	type = special
-
-	flag = travel_point_of_interest_stewardship
-}
 
 ##########
 # Gonbad-e-Qavus #done
@@ -1728,7 +2394,7 @@ port_yaffa_01 = {
 gonbad_e_qavus_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_iron_pillar_of_dhar.dds"
+	type_icon = "special_buildings/iron_pillar_of_dhar.dds"
 	asset = {
 		type = pdxmesh
 		name = "gonbad_mesh"
@@ -1744,19 +2410,20 @@ gonbad_e_qavus_01 = {
 		monthly_prestige = 1
 	}
 	county_modifier = {
-		development_growth = 0.05
-		development_growth_factor = 0.05
-		monthly_county_control_growth_factor = 0.1
+		control_baseline_add = 4
 	}
+	province_modifier = {
+		travel_danger = -10
+	}
+
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
 
 	flag = travel_point_of_interest_learning
 }
@@ -1768,7 +2435,7 @@ gonbad_e_qavus_01 = {
 al_ukhaidir_fortress_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 	asset = {
 		type = pdxmesh
 		name = "ukhaidir_mesh"
@@ -1785,19 +2452,36 @@ al_ukhaidir_fortress_01 = {
 	}
 	max_garrison = good_building_max_garrison_tier_1
 	province_modifier = {
+		travel_danger = -10
 		defender_holding_advantage = normal_building_advantage_tier_1
 		fort_level = good_building_fort_level_tier_2
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -1809,7 +2493,7 @@ al_ukhaidir_fortress_01 = {
 imam_hussain_shrine_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_friday_mosque.dds"
+	type_icon = "special_buildings/the_friday_mosque.dds"
 
 	asset = {
 		type = pdxmesh
@@ -1825,11 +2509,11 @@ imam_hussain_shrine_01 = {
 	is_enabled = {
 		custom_description = {
 			text = shia_and_others_me_building_trigger
-			scope:holder.faith = {
+			scope:holder.rite = {
 				OR = {
-					has_doctrine = muhammad_succession_shia_doctrine
-					has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
-					has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					rite_has_doctrine = muhammad_succession_shia_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+					rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
 				}
 			}
 		}
@@ -1842,10 +2526,8 @@ imam_hussain_shrine_01 = {
 		same_faith_opinion = 5
 	}
 	county_modifier = {
-		tax_mult = 0.15
-		development_growth = 0.15
-		development_growth_factor = 0.15
-		monthly_county_control_growth_factor = 0.1
+		control_baseline_add = 4
+		religious_tax_mult = 0.15
 	}
 
 	on_complete = {
@@ -1856,15 +2538,45 @@ imam_hussain_shrine_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -1886,10 +2598,8 @@ ME_umayyad_mosque_01 = {
 	
 	is_enabled = {
 		custom_description = {
-		text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			text = muslim_me_building_trigger
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 	
@@ -1900,10 +2610,8 @@ ME_umayyad_mosque_01 = {
 		same_faith_opinion = 3
 	}
 	county_modifier = {
-		tax_mult = 0.1
-		development_growth = 0.1
-		development_growth_factor = 0.15
-		monthly_county_control_growth_factor = 0.1
+		control_baseline_add = 4
+		religious_tax_mult = 0.1
 	}
 
 	on_complete = {
@@ -1911,18 +2619,52 @@ ME_umayyad_mosque_01 = {
 		mandala_built_piety_duchy_building_t3_effect = yes
 	}
 	
+	province_modifier = {
+		province_size_baseline_add = 40
+	}
+
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_glass_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_glass
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -1932,7 +2674,7 @@ ME_umayyad_mosque_01 = {
 ME_al_qarawiyyin_university_01 = {  #al-Qarawiyyin University - superceeded by dlc
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_al-azhar_university.dds"
+	type_icon = "special_buildings/al-azhar_university.dds"
 
 	asset = {
 		type = pdxmesh
@@ -1957,84 +2699,37 @@ ME_al_qarawiyyin_university_01 = {  #al-Qarawiyyin University - superceeded by d
 		monthly_lifestyle_xp_gain_mult = 0.25
 		monthly_dynasty_prestige = 1
 	}
-	
-	county_modifier = {
-		development_growth_factor = 0.25
-		development_growth = 0.2
+
+	province_modifier = {
+		province_size_baseline_add = special_building_province_size_baseline
 	}
-	
+
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
-	}
-	
-	type = special
-
-	flag = travel_point_of_interest_learning
-}
-
-##########
-# Etchmiadzin Cathedral #done uses MA model
-##########
-etchmiadzin_cathedral_01 = {
-	construction_time = very_slow_construction_time
-
-	type_icon = "icon_structure_hotin_fortress.dds"
-
-	asset = {
-		type = pdxmesh
-		name = "etchmiadzin_mesh"
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 
-	is_enabled = {
-		custom_description = {
-			text = christian_me_building_trigger
-			scope:holder = {
-				religion = religion:christianity_religion
+	market_modifier = {
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
 			}
 		}
 	}
 
-	can_construct_potential = {
-		building_requirement_tribal = no
-	}
-	
-	cost_gold = 1000
-
-	character_modifier = {
-		monthly_county_control_growth_factor = 0.1
-		piety_level_impact_mult = 0.1
-		same_faith_opinion = 3
-		zealot_opinion = 5
-	}
-	
-	county_modifier = {
-		development_growth = 0.1
-	}
-	province_modifier = {
-		monthly_income = 0.5
-	}
-
-	on_complete = {
-		#Regular Mandala Boon
-		mandala_built_piety_duchy_building_t3_effect = yes
-	}
-	
-	ai_value = {
-		base = 100
-		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
-	}
-	
-	type = special
-
-	flag = travel_point_of_interest_religious
+	flag = travel_point_of_interest_learning
 }
 
 ##########
@@ -2043,7 +2738,7 @@ etchmiadzin_cathedral_01 = {
 chapel_dzordzor_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_nalanda.dds"
+	type_icon = "special_buildings/nalanda.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2053,9 +2748,7 @@ chapel_dzordzor_01 = {
 	is_enabled = {
 		custom_description = {
 			text = christian_me_building_trigger
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
+			christianity_or_syncretic_with_christianity_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -2068,11 +2761,10 @@ chapel_dzordzor_01 = {
 	character_modifier = {
 		monthly_piety = 0.5
 		same_faith_opinion = 10
-		county_opinion_add = 5
 	}
 	
 	province_modifier = {
-		monthly_income = 0.5
+		monthly_religious_tax = 0.5
 	}
 
 	on_complete = {
@@ -2080,18 +2772,52 @@ chapel_dzordzor_01 = {
 		mandala_built_piety_duchy_building_t3_effect = yes
 	}
 	
+	county_modifier = {
+		popular_opinion_add = building_miniscule_popular_opinion_gain
+	}
+
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -2100,7 +2826,7 @@ chapel_dzordzor_01 = {
 monastery_saint_thaddeus_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_palace_of_achen.dds"
+	type_icon = "special_buildings/palace_of_achen.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2110,9 +2836,7 @@ monastery_saint_thaddeus_01 = {
 	is_enabled = {
 		custom_description = {
 			text = christian_me_building_trigger
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
+			christianity_or_syncretic_with_christianity_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -2128,9 +2852,7 @@ monastery_saint_thaddeus_01 = {
 		monthly_dynasty_prestige_mult = 0.08
 	}
 	county_modifier = {
-		tax_mult = 0.05
-		development_growth_factor = 0.15
-		development_growth = 0.1
+		religious_tax_mult = 0.05
 	}
 
 	on_complete = {
@@ -2141,15 +2863,45 @@ monastery_saint_thaddeus_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_wine_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth = special_building_need_prosperity
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -2158,7 +2910,7 @@ monastery_saint_thaddeus_01 = {
 monastery_saint_stepanos_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_alhambra.dds"
+	type_icon = "special_buildings/alhambra.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2168,9 +2920,7 @@ monastery_saint_stepanos_01 = {
 	is_enabled = {
 		custom_description = {
 			text = christian_me_building_trigger
-			scope:holder = {
-				religion = religion:christianity_religion
-			}
+			christianity_or_syncretic_with_christianity_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -2186,8 +2936,7 @@ monastery_saint_stepanos_01 = {
 		build_gold_cost = -0.05
 	}
 	county_modifier = {
-		tax_mult = 0.15
-		development_growth_factor = 0.2
+		religious_tax_mult = 0.15
 
 	}
 
@@ -2199,15 +2948,45 @@ monastery_saint_stepanos_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ##########
@@ -2216,7 +2995,7 @@ monastery_saint_stepanos_01 = {
 qusayr_amra_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_zoroastric.dds"
+	type_icon = "special_buildings/cathedral_zoroastric.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2235,20 +3014,45 @@ qusayr_amra_01 = {
 		stress_loss_mult = 0.1
 
 	}
-	
-	county_modifier = {
-		development_growth = 0.1
-	}
-	
+
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_wood_sell_price_mult = special_building_need_sell_price
+		trade_good_wine_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wood
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_minimal
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_wine
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = alcohol_forbidden
+
+		modifiers = {
+			character_modifier = {
+				monthly_prestige = special_building_need_prestige
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_wonder
 }
@@ -2259,12 +3063,12 @@ qusayr_amra_01 = {
 citadel_antioch_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = icon_structure_the_citadel_of_aleppo.dds
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
-	asset = {
-		type = pdxmesh
-		name = "antioch1_mesh"
-	}
+	#asset = {
+	#	type = pdxmesh
+	#	name = "antioch1_mesh"
+	#}
 	
 	can_construct_potential = {
 		building_requirement_tribal = no
@@ -2273,10 +3077,11 @@ citadel_antioch_01 = {
 	cost_gold = 3000
 	
 	county_modifier = {
-		development_growth = 0.1
-		tax_mult = 0.05
+		civic_tax_mult = 0.05
 	}
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -10
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_2
 	}
@@ -2287,15 +3092,31 @@ citadel_antioch_01 = {
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 
-	type = special
-
 	next_building = citadel_antioch_02
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -2303,7 +3124,7 @@ citadel_antioch_01 = {
 citadel_antioch_02 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = icon_structure_the_citadel_of_aleppo.dds
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2317,10 +3138,11 @@ citadel_antioch_02 = {
 	cost_gold = 3000
 	
 	county_modifier = {
-		development_growth = 0.2
-		tax_mult = 0.08
+		civic_tax_mult = 0.08
 	}
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -20
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_3
 	}
@@ -2331,12 +3153,42 @@ citadel_antioch_02 = {
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 2 }
 	}
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -2347,7 +3199,7 @@ citadel_antioch_02 = {
 citadel_homs_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2361,26 +3213,44 @@ citadel_homs_01 = {
 	cost_gold = 3000
 	
 	county_modifier = {
+		control_baseline_add = 2
 		supply_limit_mult = 0.25
-		monthly_county_control_growth_add = 0.1
 	}
 	max_garrison = good_building_max_garrison_tier_2
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -10
 		defender_holding_advantage = normal_building_advantage_tier_2
 		fort_level = good_building_fort_level_tier_1
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 
-	type = special
-
 	next_building = citadel_homs_02
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -2388,7 +3258,7 @@ citadel_homs_01 = {
 citadel_homs_02 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2402,24 +3272,55 @@ citadel_homs_02 = {
 	cost_gold = 3000
 	
 	county_modifier = {
+		control_baseline_add = 4
 		supply_limit_mult = 0.4
-		monthly_county_control_growth_add = 0.2
 	}
 	max_garrison = good_building_max_garrison_tier_4
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -20
 		defender_holding_advantage = normal_building_advantage_tier_3
 		fort_level = good_building_fort_level_tier_2
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 2 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -2430,7 +3331,7 @@ citadel_homs_02 = {
 fortress_amida_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2444,6 +3345,8 @@ fortress_amida_01 = {
 	cost_gold = 3000
 	
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -20
 		defender_holding_advantage = normal_building_advantage_tier_3
 		fort_level = good_building_fort_level_tier_2
 	}
@@ -2455,13 +3358,42 @@ fortress_amida_01 = {
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_copper_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_copper
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -2472,7 +3404,7 @@ fortress_amida_01 = {
 citadel_alexander_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2483,28 +3415,46 @@ citadel_alexander_01 = {
 		building_requirement_tribal = no
 	}
 	county_modifier = {
+		control_baseline_add = 10
 		supply_limit_mult = 0.05
 		hostile_raid_time = 0.4
-		monthly_county_control_growth_add = 0.5
 	}
 	
 	cost_gold = 3000
 	
 	max_garrison = good_building_max_garrison_tier_3
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -20
 		defender_holding_advantage = normal_building_advantage_tier_3
 		fort_level = good_building_fort_level_tier_3
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_martial
 }
@@ -2512,7 +3462,7 @@ citadel_alexander_01 = {
 citadel_alexander_01_duchy = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_the_citadel_of_aleppo.dds"
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
 
 	asset = {
 		type = pdxmesh
@@ -2524,28 +3474,48 @@ citadel_alexander_01_duchy = {
 		building_requirement_tribal = no
 	}
 	county_modifier = {
+		control_baseline_add = 10
 		supply_limit_mult = 0.05
 		hostile_raid_time = 0.4
-		monthly_county_control_growth_add = 0.5
 	}
 	
 	cost_gold = 3000
 	
 	max_garrison = good_building_max_garrison_tier_3
 	province_modifier = {
+		province_size_baseline_add = 40
+		travel_danger = -20
 		defender_holding_advantage = normal_building_advantage_tier_3
 		fort_level = good_building_fort_level_tier_3
 	}
 	
 	ai_value = {
 		base = 100
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = duchy_capital
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	flag = duchy_building
 
 	flag = fully_upgraded_duchy_capital_building
 }
@@ -2557,7 +3527,7 @@ citadel_alexander_01_duchy = {
 holy_site_lalish_shrine_01 = {
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_zoroastric.dds"
+	type_icon = "special_buildings/cathedral_zoroastric.dds"
 	asset = {
 		type = pdxmesh
 		name = "lalish_mesh"
@@ -2568,7 +3538,7 @@ holy_site_lalish_shrine_01 = {
 	}
 	is_enabled = {
 		custom_description = {
-		text = yazidi_me_building_trigger
+			text = yazidi_me_building_trigger
 			scope:holder = {
 				religion = religion:yazidi_religion
 			}
@@ -2584,12 +3554,7 @@ holy_site_lalish_shrine_01 = {
 	}
 	
 	county_modifier = {
-		tax_mult = 0.05
-		development_growth_factor = 0.1
-	}
-	
-	province_modifier = {
-		monthly_income = 0.35
+		religious_tax_mult = 0.05
 	}
 
 	on_complete = {
@@ -2600,15 +3565,45 @@ holy_site_lalish_shrine_01 = {
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
-                modifier = { # Fill all building slots before going for special buildings
-                        factor = 0
-                        free_building_slots > 0
-                }
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
-	
-	type = special
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
 }
 
 ### Legend Buildings ###
@@ -2621,14 +3616,12 @@ me_legendary_mosque = { # Basically just a repainted legendary_shrine
 
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_cathedral_muslim.dds"
+	type_icon = "special_buildings/cathedral_muslim.dds"
 
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -2647,14 +3640,10 @@ me_legendary_mosque = { # Basically just a repainted legendary_shrine
 	}
 
 	county_modifier = {
-		tax_mult = 0.05
-		monthly_county_control_growth_add = 0.1
+		control_baseline_add = 2
+		religious_tax_mult = 0.05
 	}
 
-	province_modifier = {
-		monthly_income = 0.2
-	}
-	
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
@@ -2662,6 +3651,7 @@ me_legendary_mosque = { # Basically just a repainted legendary_shrine
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 
 	on_complete = {
@@ -2690,7 +3680,21 @@ me_legendary_mosque = { # Basically just a repainted legendary_shrine
 		}
 	}
 
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
 }
@@ -2704,14 +3708,12 @@ me_legendary_mosque_ziyadid = {
 
 	construction_time = very_slow_construction_time
 
-	type_icon = "icon_structure_imam_ali_mosque.dds"
+	type_icon = "special_buildings/imam_ali_mosque.dds"
 
 	is_enabled = {
 		custom_description = {
 			text = muslim_me_building_trigger
-			scope:holder = {
-				religion = religion:islam_religion
-			}
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
 		}
 	}
 
@@ -2733,14 +3735,10 @@ me_legendary_mosque_ziyadid = {
 	}
 
 	county_modifier = {
-		tax_mult = 0.1
-		monthly_county_control_growth_add = 0.1
+		control_baseline_add = 2
+		religious_tax_mult = 0.1
 	}
 
-	province_modifier = {
-		monthly_income = 0.2
-	}
-	
 	ai_value = {
 		base = 100
 		ai_pious_building_preference_modifier = yes
@@ -2748,6 +3746,7 @@ me_legendary_mosque_ziyadid = {
 			factor = 0
 			free_building_slots > 0
 		}
+		ai_special_district_modifier = { LEVEL = 1 }
 	}
 
 	on_complete = {
@@ -2776,7 +3775,2901 @@ me_legendary_mosque_ziyadid = {
 		}
 	}
 
-	type = special
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_high
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_religious_tax = special_building_need_tax
+			}
+		}
+	}
 
 	flag = travel_point_of_interest_religious
 }
+
+##########
+# Dhofar's Ard al-Luban/Bakhur - Land of Frankinscense
+##########
+
+me_land_of_frankinscense_01 = {
+	construction_time = slow_construction_time
+	
+	type_icon = "icon_structure_me_frankinscense.dds"
+	
+	county_modifier = {
+		commerce_tax_mult = 0.05
+	}
+	
+	next_building = me_land_of_frankinscense_02
+	
+	province_modifier = {
+		trade_good_incense_production_add = 5
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_incense_buy_price_mult = special_building_production_buy_price
+		trade_category_beasts_of_burden_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_beasts_of_burden
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+me_land_of_frankinscense_02 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_1_cost
+	
+	county_modifier = {
+		commerce_tax_mult = 0.075
+	}
+	
+	next_building = me_land_of_frankinscense_03
+	
+	province_modifier = {
+		trade_good_incense_production_add = 10
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_incense_buy_price_mult = special_building_production_buy_price
+		trade_category_beasts_of_burden_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_beasts_of_burden
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_maritime_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+me_land_of_frankinscense_03 = {
+	construction_time = slow_construction_time
+
+	can_construct_potential = {
+		building_requirement_castle_city_church = { LEVEL = 01 }
+		building_requirement_tribal = no
+	}
+	
+	show_disabled = yes
+	
+	cost_gold = expensive_building_tier_2_cost
+	
+	character_modifier = {
+		monthly_prestige_gain_mult = 0.05
+		stewardship = 1
+	}
+	
+	county_modifier = {
+		commerce_tax_mult = 0.1
+	}
+	
+	province_modifier = {
+		trade_good_incense_production_add = 15
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 3 }
+	}
+
+	market_modifier = {
+		trade_good_incense_buy_price_mult = special_building_production_buy_price
+		trade_category_beasts_of_burden_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_beasts_of_burden
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_maritime_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+##########
+# Hinglaj Mata - no model. Shakti Peetha in a cave on the Hingol river, Makran.
+##########
+
+hinglaj_mata_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/mount_damavand.dds"
+
+	asset = {
+		type = pdxmesh
+		name = "me_hinglaj_mata_mount_mesh"
+	}
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = eastern_me_building_trigger
+			eastern_or_syncretic_with_eastern_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.3
+		same_faith_opinion = 5
+	}
+	county_modifier = {
+		religious_tax_mult = 0.1
+		popular_opinion_add = building_miniscule_popular_opinion_gain
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_dyes_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_dyes
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious
+	flag = holy_building
+}
+
+##########
+# Gold Market / Mint of Sijilmasa - no model. Northern terminus of the Saharan gold trade.
+##########
+
+sijilmasa_market_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/special_silk_road_market.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	county_modifier = {
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_commerce_tax = 1
+	}
+
+	next_building = sijilmasa_market_02
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_gold_buy_price_mult = special_building_production_buy_price
+		trade_category_precious_metals_sell_price_mult = special_building_need_sell_price
+		trade_good_salt_sell_price_mult = special_building_need_sell_price
+		trade_category_beasts_of_burden_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_precious_metals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_beasts_of_burden
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+sijilmasa_market_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/special_silk_road_market.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	# Sikka: striking coin in one's own name is the mark of a sovereign
+	can_construct = {
+		scope:holder = { is_independent_ruler = yes }
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		monthly_prestige = 0.5
+	}
+	county_modifier = {
+		commerce_tax_mult = 0.15
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_commerce_tax = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_gold_buy_price_mult = special_building_production_buy_price
+		trade_category_precious_metals_sell_price_mult = special_building_need_sell_price
+		trade_good_salt_sell_price_mult = special_building_need_sell_price
+		trade_category_beasts_of_burden_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_precious_metals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_salt
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_beasts_of_burden
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+##########
+# Port of Aden - no model. Gate between the Red Sea and the Indian Ocean.
+##########
+
+aden_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+	}
+
+	next_building = aden_port_02
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+aden_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_incense_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_incense
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+##########
+# Fortress of Bahla - no model. Oldest fortress of the Omani interior.
+##########
+
+bahla_fort_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/the_citadel_of_aleppo.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 3000
+
+	character_modifier = {
+		monthly_prestige = 0.5
+	}
+	county_modifier = {
+		control_baseline_add = 5
+	}
+	max_garrison = good_building_max_garrison_tier_2
+	province_modifier = {
+		travel_danger = -10
+		defender_holding_advantage = normal_building_advantage_tier_2
+		fort_level = good_building_fort_level_tier_2
+	}
+
+	ai_value = {
+		base = 100
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		culture_likely_to_fortify_modifier = yes
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_martial
+}
+
+##########
+# Darb Zubayda - no model. The Kufa-Mecca pilgrim road, at the station of al-Rabadha.
+##########
+
+darb_zubayda_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/kairouan_basins.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = muslim_me_building_trigger
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	cost_gold = 1000
+
+	county_modifier = {
+		supply_limit_mult = 0.1
+	}
+
+	next_building = darb_zubayda_02
+
+	province_modifier = {
+		travel_danger = -5
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	flag = travel_point_of_interest_religious
+}
+
+darb_zubayda_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/kairouan_basins.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = muslim_me_building_trigger
+			islam_or_syncretic_with_islam_trigger = { CHARACTER = scope:holder }
+		}
+	}
+
+	cost_gold = 1500
+
+	character_modifier = {
+		monthly_piety = 0.3
+		same_faith_opinion = 5
+	}
+	county_modifier = {
+		supply_limit_mult = 0.3
+		popular_opinion_add = building_minor_popular_opinion_gain
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	province_modifier = {
+		travel_danger = -20
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_beasts_of_burden_sell_price_mult = special_building_need_sell_price
+		trade_category_cereals_sell_price_mult = special_building_need_sell_price
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_beasts_of_burden
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_cereals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				popular_opinion_add = special_building_need_popular_opinion
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious
+}
+
+##########
+# Seat of the Imamate, Nizwa - no model. Capital of the Ibadi Imams of Oman from the end of the 8th century.
+# Only an Imam sitting here wakes it; under anyone else it is just the town's Friday mosque (fallback).
+##########
+
+nizwa_imamate_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/the_friday_mosque.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	is_enabled = {
+		custom_description = {
+			text = ibadi_imam_me_building_trigger
+			scope:county.holder = {
+				OR = {
+					has_title = title:d_ibadi
+					has_title = title:d_wahbiya
+				}
+			}
+		}
+	}
+
+	show_disabled = yes
+
+	cost_gold = 1000
+
+	character_modifier = {
+		monthly_piety = 0.5
+		learning = 1
+		same_faith_opinion = 5
+		clergy_opinion = 5
+		men_at_arms_maintenance = -0.05
+	}
+	county_modifier = {
+		religious_tax_mult = 0.15
+		control_baseline_add = 5
+	}
+
+	fallback = {
+		province_modifier = {
+			monthly_religious_tax = 0.5
+		}
+	}
+
+	on_complete = {
+		#Regular Mandala Boon
+		mandala_built_piety_duchy_building_t3_effect = yes
+	}
+
+	ai_value = {
+		base = 100
+		ai_pious_building_preference_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_books_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_books
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			character_modifier = {
+				monthly_piety = special_building_need_piety
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_religious
+	flag = holy_building
+	flag = religious_studies_location
+}
+
+##########
+# Siraf - the Gulf's greatest port in the 9th-10th c., declined after the 977 earthquake
+##########
+
+siraf_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = siraf_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+siraf_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+		trade_good_silk_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_silk
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Hormuz - old (mainland) Hormuz, port of Kerman, horse trade to India. The island of Jarun, where it moved c. 1300, is not in this province
+##########
+
+hormuz_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = hormuz_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_horses_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+hormuz_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_horses_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Sohar - Oman's great port of the 9th-10th c., copper from its hinterland; sacked 965
+##########
+
+sohar_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = sohar_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+		trade_good_copper_production_add = 10
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_copper_buy_price_mult = special_building_production_buy_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+sohar_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+		trade_good_copper_production_add = 15
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_copper_buy_price_mult = special_building_production_buy_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_ceramics_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_ceramics
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Alexandria - the Pharos, standing (repaired) until the earthquakes of 1303 and 1323
+##########
+
+port_alexandria_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = port_alexandria_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+		travel_danger = -10
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_good_flax_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_flax
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+port_alexandria_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.3
+		monthly_prestige = 0.5
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+		travel_danger = -20
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+		trade_good_flax_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_flax
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Mahdia - Fatimid capital and naval base founded 916, rock-cut harbour; Zirid capital
+##########
+
+mahdia_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+		fort_level = 2
+	}
+
+	next_building = mahdia_port_02
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+mahdia_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.3
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+		fort_level = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_oil_sell_price_mult = special_building_need_sell_price
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+		trade_good_iron_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_oil
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_iron
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_maritime_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Acre - harbour walled for Ibn Tulun; chief port of the Crusader kingdom
+##########
+
+acre_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+		fort_level = 1
+	}
+
+	next_building = acre_port_02
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_glass_sell_price_mult = special_building_need_sell_price
+		trade_good_cotton_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_glass
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_cotton
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+acre_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.2
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.2
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+		fort_level = 1
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_glass_sell_price_mult = special_building_need_sell_price
+		trade_good_cotton_sell_price_mult = special_building_need_sell_price
+		trade_good_sugar_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_glass
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_cotton
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_sugar
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Damietta - Nile-mouth port of the Delta linens; chain tower (taken 1218)
+##########
+
+damietta_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.1
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = damietta_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+		trade_good_textiles_production_add = 10
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_textiles_buy_price_mult = special_building_production_buy_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_flax_sell_price_mult = special_building_need_sell_price
+		trade_good_fish_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_flax
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fish
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+damietta_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+		trade_good_textiles_production_add = 15
+		fort_level = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_textiles_buy_price_mult = special_building_production_buy_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_flax_sell_price_mult = special_building_need_sell_price
+		trade_good_fish_sell_price_mult = special_building_need_sell_price
+		trade_good_stone_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_flax
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fish
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_stone
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				control_baseline_add = special_building_need_control
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Ceuta (Sabta) - port of the Strait, coral (al-Idrisi, Ibn Hawqal), Almohad naval base
+##########
+
+ceuta_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = ceuta_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+		trade_good_jewelry_production_add = 10
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_good_jewelry_buy_price_mult = special_building_production_buy_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_fish_sell_price_mult = special_building_need_sell_price
+		trade_category_cereals_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fish
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_cereals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+ceuta_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.3
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.1
+	}
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+		trade_good_jewelry_production_add = 15
+		fort_level = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_good_jewelry_buy_price_mult = special_building_production_buy_price
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_fish_sell_price_mult = special_building_need_sell_price
+		trade_category_cereals_sell_price_mult = special_building_need_sell_price
+		trade_good_iron_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fish
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_cereals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_iron
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_maritime_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Antalya (Attaleia) - Byzantine naval port; Seljuk Rum's Mediterranean port from 1207
+##########
+
+antalya_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = antalya_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+antalya_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_textiles_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_textiles
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+##########
+# Daybul - port of the Indus delta, taken by Muhammad ibn al-Qasim 711-712; silted up by the 13th c.
+##########
+
+daybul_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = daybul_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_cotton_sell_price_mult = special_building_need_sell_price
+		trade_good_horses_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_cotton
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+daybul_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_good_cotton_sell_price_mult = special_building_need_sell_price
+		trade_good_horses_sell_price_mult = special_building_need_sell_price
+		trade_good_fruit_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_cotton
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_horses
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			province_modifier = {
+				province_size_baseline_add = 10
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_fruit
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+
+##########
+# Jeddah - port of Mecca since Uthman (646/7); the pilgrim toll Ibn Jubayr complained of (1183)
+##########
+
+jeddah_port_01 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 1000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.15
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.1
+		commerce_tax_mult = 0.1
+	}
+
+	next_building = jeddah_port_02
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 2
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 1 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_category_cereals_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_cereals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				popular_opinion_add = special_building_need_popular_opinion
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+
+jeddah_port_02 = {
+	construction_time = very_slow_construction_time
+
+	type_icon = "special_buildings/swahili_port.dds"
+
+	can_construct_potential = {
+		building_requirement_tribal = no
+	}
+
+	cost_gold = 2000
+
+	character_modifier = {
+		embarkation_cost_mult = -0.25
+	}
+	county_modifier = {
+		maritime_tax_mult = 0.15
+		commerce_tax_mult = 0.15
+		religious_tax_mult = 0.1
+	}
+
+	province_modifier = {
+		province_size_baseline_add = 40
+		monthly_maritime_tax = 3
+	}
+
+	ai_value = {
+		base = 100
+		directive_to_build_economy_modifier = yes
+		modifier = { # Fill all building slots before going for special buildings
+			factor = 0
+			free_building_slots > 0
+		}
+		ai_special_district_modifier = { LEVEL = 2 }
+	}
+
+	market_modifier = {
+		trade_category_carpentry_supplies_sell_price_mult = special_building_need_sell_price
+		trade_category_cereals_sell_price_mult = special_building_need_sell_price
+		trade_good_spices_sell_price_mult = special_building_need_sell_price
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_carpentry_supplies
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				prosperity_growth_factor = special_building_need_prosperity_medium
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good_category = trade_category_cereals
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+
+		modifiers = {
+			county_modifier = {
+				popular_opinion_add = special_building_need_popular_opinion
+			}
+		}
+	}
+
+	trade_good_need = {
+		trade_good = trade_good_spices
+		amount = special_building_need_amount
+		can_be_filled_multiple_times = 5
+		not_rite_parameter = luxury_forbidden
+
+		modifiers = {
+			province_modifier = {
+				monthly_commerce_tax = special_building_need_tax
+			}
+		}
+	}
+
+	flag = travel_point_of_interest_economic
+}
+

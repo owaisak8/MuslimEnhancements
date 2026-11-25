@@ -1,7 +1,17 @@
 k_makran = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 24 }
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
+	## Umayyad Governors
+	694.1.1 = {
+		holder = me_hawazin_033 # Sa'id ibn Aslam al-Kilabi
+		liege = e_arabia
+	}
+	694.6.1 = {
+		holder = 0
+		liege = 0
+	}
 
 	#Saffarid
 	861.1.1 = {
@@ -14,10 +24,20 @@ k_makran = {
 }
 
 d_makran = {
-	867.1.1 = {	change_development_level = 3 }
-	1066.1.1 = { change_development_level = 6 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 3 }
+	1066.1.1 = { change_prosperity_level = 6 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
+	## Umayyad Governors
+	694.1.1 = {
+		holder = me_hawazin_033 # Sa'id ibn Aslam al-Kilabi
+		liege = e_arabia
+	}
+	694.6.1 = {
+		holder = 0
+		liege = 0
+	}
+
 	1066.1.1 = {
 		liege = k_kabulistan
 		holder = 188546
@@ -40,7 +60,7 @@ c_panjgur = {
 		liege = k_makran
 		holder = 163164 # Amr of Makran
 	}
-	
+
 	# Independence for most of the 900s under b Ahmad family and Azariqas
 	1010.1.1 = {
 		liege = k_kabulistan
@@ -102,7 +122,7 @@ c_panjgur = {
 		holder = 93285
 	}
 	1255.1.1 = {
-	
+
 		holder = 93287
 	}
 	1318.1.1 = {
@@ -120,7 +140,7 @@ c_kiz = {
 		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
-	
+
 	977.1.1 = {
 		holder = 144123 # Sabuktigin
 	}
@@ -169,7 +189,7 @@ c_kiz = {
 	#1118.1.1 = {
 	#	holder = 0 # Ghaznavid vassalage under Seljuks
 	#}
-	
+
 	1157.1.1 = {
 		holder = 144138 # Khusraw Shah
 	}
@@ -201,7 +221,7 @@ c_sanij = {
 		holder = 163164	#Amr Saffarid
 		liege = k_makran
 	}
-	
+
 	977.1.1 = {
 		government = clan_government
 		holder = 144123 # Sabuktigin
@@ -260,7 +280,7 @@ c_sanij = {
 	#1118.1.1 = {
 	#	holder = 0 # Ghaznavid vassalage under Seljuks
 	#}
-	
+
 	1157.1.1 = {
 		holder = 144138 # Khusraw Shah
 	}
@@ -287,10 +307,10 @@ c_sanij = {
 
 
 c_khawr = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	765.1.1 = {
 		holder = 188605
 	}
@@ -298,7 +318,7 @@ c_khawr = {
 		liege = k_sindh
 		holder = baloch0001 # fictional Baloch
 	}
-	
+
 	# Independence for most of the 900s under b Ahmad family and Azariqas
 	1010.1.1 = {
 		liege = k_kabulistan
@@ -357,7 +377,7 @@ c_khawr = {
 		holder = 93285
 	}
 	1255.1.1 = {
-	
+
 		holder = 93287
 	}
 	1318.1.1 = {
@@ -370,10 +390,10 @@ c_khawr = {
 
 
 c_turan = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	644.1.1 = {
 		liege = d_makran
 	}
@@ -384,7 +404,7 @@ c_turan = {
 		liege = k_sindh
 		holder = baloch0001 # fictional Baloch
 	}
-	
+
 	# Independence for most of the 900s under b Ahmad family and Azariqas
 	1010.1.1 = {
 		liege = k_kabulistan
@@ -446,7 +466,7 @@ c_turan = {
 		holder = 93285
 	}
 	1255.1.1 = {
-	
+
 		holder = 93287
 	}
 	1318.1.1 = {
@@ -479,7 +499,7 @@ c_bampur = {
 		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
-	
+
 	977.1.1 = {
 		holder = 144123 # Sabuktigin
 	}
@@ -528,7 +548,7 @@ c_bampur = {
 	#1118.1.1 = {
 	#	holder = 0 # Ghaznavid vassalage under Seljuks
 	#}
-	
+
 	1157.1.1 = {
 		holder = 144138 # Khusraw Shah
 	}
@@ -562,16 +582,16 @@ c_bampur = {
 
 
 c_jabal_kufs = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 24 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 24 }
+
 	867.1.1 = {
 		government = clan_government
 		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
-	
+
 	977.1.1 = {
 		holder = 144123 # Sabuktigin
 	}
@@ -620,7 +640,7 @@ c_jabal_kufs = {
 	#1118.1.1 = {
 	#	holder = 0 # Ghaznavid vassalage under Seljuks
 	#}
-	
+
 	1157.1.1 = {
 		holder = 144138 # Khusraw Shah
 	}
@@ -656,7 +676,7 @@ c_riqan = {
 		holder = 302700	#Placeholder Feraz
 		liege = k_makran
 	}
-	
+
 	977.1.1 = {
 		holder = 144123 # Sabuktigin
 	}
@@ -705,7 +725,7 @@ c_riqan = {
 	#1118.1.1 = {
 	#	holder = 0 # Ghaznavid vassalage under Seljuks
 	#}
-	
+
 	1157.1.1 = {
 		holder = 144138 # Khusraw Shah
 	}
@@ -735,9 +755,9 @@ c_riqan = {
 }
 
 d_sistan = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
 
 	### Umayyad Governors ###
 	673.1.1 = {
@@ -760,15 +780,15 @@ d_sistan = {
 	}
 
 	801.1.1 = {
-		change_development_level = 6
+		change_prosperity_level = 6
 	}
-	
+
 	1000.1.1 = {
-		change_development_level = 8
+		change_prosperity_level = 8
 	}
-	
+
 	1100.1.1 = {
-		change_development_level = 14
+		change_prosperity_level = 14
 	}
 
 #	680.1.1 = {
@@ -801,7 +821,7 @@ d_sistan = {
 		liege = k_makran
 		holder = 163101 #Saffarid
 	}
-	
+
 	977.1.1 = {
 		liege = k_kabulistan
 		holder = 144123 # Sabuktigin Ghaznavid
@@ -833,7 +853,7 @@ d_sistan = {
 	1053.1.1 = {
 		holder = 144132 # Farrukhzad
 	}
-	
+
 	#Seljuks take the duchy
 	1057.1.1 = {
 		liege = e_persia
@@ -845,7 +865,7 @@ d_sistan = {
 	1089.1.2 = {
 		holder = 1000229901 # Musa Yabghu again
 	}
-	
+
 	#ahistorical - Ghaznavids again
 	1090.1.2 = {
 		holder = 144134 # Masud II
@@ -892,8 +912,8 @@ d_sistan = {
 		liege = "k_persia"
 		holder = 93153
 	}
-	
-	
+
+
 	1221.1.1 = {
 		liege = e_mongol_empire
 	}
@@ -902,7 +922,7 @@ d_sistan = {
 	}
 	1245.1.1 = {
 		holder = 93154
-	
+
 	}
 	1277.1.1 = {
 		holder = 93155
@@ -924,18 +944,18 @@ d_sistan = {
 
 
 c_zaranj = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	680.1.1 = {
 		liege = d_sistan
 	}
-	
+
 	766.1.1 = {
 		holder = 188722
 	}
-	
+
 	865.1.1 = {
 		holder = 163101
 	}
@@ -1010,7 +1030,7 @@ c_zaranj = {
 		holder = 93153
 	}
 	1245.1.1 =
-	
+
 	{
 		holder = 93154
 	}
@@ -1027,10 +1047,10 @@ c_zaranj = {
 		holder = 93158
 	}
 	1332.1.1 = {
-	
+
 		holder = 93159
 	}
-	
+
 }
 
 
@@ -1038,15 +1058,15 @@ c_nih = {
 	661.2.28 = {
 		liege = d_sistan
 	}
-	
+
 	764.1.1 = {
 		holder = 188604 # Ma'n bin Za'idah al-Shaybani
 	}
-	
+
 	865.1.1 = {
 		holder = 163101
 	}
-	
+
 	1057.1.1 = {
 		liege = d_sistan
 		holder = 1000229901 # Musa Yabghu
@@ -1095,11 +1115,11 @@ c_nih = {
 		holder = 93285
 	}
 	1255.1.1 = {
-	
+
 		holder = 93154
 	}
 	1261.1.1 = {
-	
+
 		holder = 93287
 	}
 	1318.1.1 = {
@@ -1116,11 +1136,11 @@ c_farah = {
 	680.1.1 = {
 		liege = d_sistan
 	}
-	
+
 	766.1.1 = {
 		holder = 188722
 	}
-	
+
 	865.1.1 = {
 		holder = 163101
 	}
@@ -1195,7 +1215,7 @@ c_farah = {
 		holder = 93153
 	}
 	1245.1.1 =
-	
+
 	{
 		holder = 93154
 	}
@@ -1212,24 +1232,24 @@ c_farah = {
 		holder = 93158
 	}
 	1332.1.1 = {
-	
+
 		holder = 93159
 	}
 }
 
 c_rudbar = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 20 }
-	
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	680.1.1 = {
 		liege = d_sistan
 	}
-	
+
 	766.1.1 = {
 		holder = 188722
 	}
-	
+
 	865.1.1 = {
 		holder = 163101
 	}
@@ -1301,7 +1321,7 @@ c_rudbar = {
 		holder = 93153
 	}
 	1245.1.1 =
-	
+
 	{
 		holder = 93154
 	}
@@ -1318,14 +1338,14 @@ c_rudbar = {
 		holder = 93158
 	}
 	1332.1.1 = {
-	
+
 		holder = 93159
 	}
 }
 
 
 c_bost = {
-	1178.1.1 = { change_development_level = 34 }
+	1178.1.1 = { change_prosperity_level = 34 }
 
 	680.1.1 = {
 		liege = 0
@@ -1357,7 +1377,7 @@ c_bost = {
 		holder = 188710 # Zunbil cousin
 	}
 	1020.1.1 = {
-		liege = d_ghur 
+		liege = d_ghur
 		holder = extra_ghaznavids_2
 	}
 	1068.1.1 = {
@@ -1404,7 +1424,7 @@ c_bost = {
 		holder = 93158
 	}
 	1332.1.1 = {
-	
+
 		holder = 93159
 	}
 }

@@ -28,6 +28,9 @@ ME_three_year_playable_pulse = {
 
 ME_yearly_global_pulse = {
 	effect = {
+		# Islamic Holy Days
+		trigger_event = { on_action = ME_ihd_yearly_pulse }
+		
 		# Historical character spawner
 		if = {
 			limit = {
@@ -114,7 +117,7 @@ ME_yearly_global_pulse = {
 			}
 			every_living_character = {
 				limit = {
-					faith = { has_doctrine = muhammad_succession_sunni_doctrine }
+					rite = { rite_has_doctrine = muhammad_succession_sunni_doctrine }
 					OR = {
 						is_ai = no
 						highest_held_title_tier >= tier_kingdom 
@@ -284,6 +287,18 @@ on_raid_action_completion = {
 	}
 }
 
+on_war_started = {
+	on_actions = { ME_on_war_started }
+}
+
+on_war_won_defender = {
+	on_actions = { ME_on_war_won_defender }
+}
+
+on_war_won_attacker = {
+	on_actions = { ME_on_war_won_attacker }
+}
+
 on_title_gain = {
 	on_actions = {
 		ME_on_title_gain
@@ -300,8 +315,12 @@ on_faith_conversion = {
 	on_actions = { ME_on_faith_conversion }
 }
 
-on_character_faith_change = {
+on_rite_change = { # 1.20: replaces on_character_faith_change; fires on a change of faith or of Rite
 	on_actions = { ME_on_character_faith_change }
+}
+
+on_faith_created = {
+	on_actions = { ME_on_faith_created }
 }
 
 ME_on_faith_conversion = {	
@@ -316,7 +335,104 @@ ME_on_character_faith_change = {
 	}
 }
 
+ME_on_faith_created = {
+	effect = {
+		faith = {
+			if = {
+				limit = { has_tenet = tenet_me_closed_faith }
+				set_variable = { name = block_conversion_till_decision_taken }
+			}
+		}
+		if = { # Heresiarch Adventeror Event
+			limit = {
+				OR = {
+					AND = {
+						has_character_modifier = me_ishaq_ahmar_modifier
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+					}
+					AND = {
+						OR = {
+							has_character_modifier = me_zakarawayhist_modifier
+							has_character_modifier = me_jayshanist_modifier
+						}
+						rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+					}
+				}
+			}
+			trigger_event = me_misc_religion_event.0004
+		}
+	}
+}
+
+ME_on_war_started ={
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = me_tyre_county_exchange_flag
+				scope:war = { scope:target_title = title:k_jerusalem }
+				scope:attacker = { faith.religion = religion:islam_religion }
+				scope:defender = { 
+					faith.religion = religion:christianity_religion 
+					completely_controls = title:c_maab
+				}
+				NOT = {
+					title:c_maab = { 
+						any_neighboring_county = {
+							holder.top_liege = title:k_jerusalem.holder
+							de_jure_liege.de_jure_liege = title:k_jerusalem
+						}
+					}
+				}
+			}
+			scope:attacker = { trigger_event = me_misc_event.0005 }
+			scope:defender = { trigger_event = me_misc_event.0005 }
+		}
+	}
+}
+
+ME_on_war_won_defender = {
+	effect = {
+		if = {
+			limit = {
+				scope:attacker = { is_landed = no }
+				scope:war = { using_cb = azariqa_rebellion_cb }
+			}
+			scope:attacker = { destroy_title = scope:attacker.primary_title }
+		}
+	}
+}
+
+ME_on_war_won_attacker = {
+	effect = {
+		if = {
+			limit = {
+				has_global_variable = me_tyre_county_exchange_flag
+				any_in_list = {
+					list = target_titles
+					this = title:k_jerusalem
+				}
+				scope:attacker = { faith.religion = religion:islam_religion }
+				scope:defender = { 
+					faith.religion = religion:christianity_religion 
+					completely_controls = title:c_maab
+				}
+				NOT = { title:c_maab = { any_neighboring_county = { holder.top_liege = title:k_jerusalem.holder } } }
+			}
+			me_tyre_maab_county_exchange_effect = yes
+		}
+	}
+}
+
 ME_on_title_gain = {
+	effect = {
+		trigger_event = { on_action = ME_on_title_gain_delayed delayed = yes }
+	}
+	events = {
+		me_hidden_imam_event.0002 # Become the Isma'ili Caliph
+	}
+}
+
+ME_on_title_gain_delayed = {
 	effect = {
 		if = {
 			limit = {
@@ -331,14 +447,14 @@ ME_on_title_gain = {
 			limit = {
 				any_held_title = { is_head_of_faith = yes }
 				faith.religion = religion:islam_religion
-				has_any_nickname = no
+				OR = {
+					has_any_nickname = no
+					ME_has_any_laqab_nickname_trigger = yes
+				}
 				is_ai = yes
 			}
 			ME_caliphal_honorific_ai_ruler_effect = yes
 		}
-	}
-	events = {
-		me_hidden_imam_event.0002 # Become the Isma'ili Caliph
 	}
 }
 
@@ -370,6 +486,22 @@ hire_hafidh_events = {
 
 me_on_county_occupied = {
 	effect = {
+		# Acre-Ma'ab exchange related modifier 
+		if = {
+			limit = {
+				scope:county = { this = title:c_acre }
+				has_global_variable = me_tyre_county_exchange_flag
+			}
+			add_county_modifier = {
+				modifier = me_acre_occupied_modifier
+				years = 1
+			}
+			trigger_event = {
+				id = me_misc_event.0007 
+				days = 365
+			}
+		}
+		
 		# Nukkari Lootings
 		if = {
 			limit = {
@@ -391,7 +523,7 @@ me_on_county_occupied = {
 				left_icon = scope:previous_controller
 				right_icon = scope:county
 				add_gold = {
-					add = scope:county.development_level
+					add = scope:county.prosperity_level
 					multiply = 2
 				}
 				show_as_tooltip = {
@@ -429,3 +561,253 @@ me_on_county_occupied = {
 	}
 }
 
+### Islamic Holy Days ###
+ME_ihd_yearly_pulse = {
+	effect = {
+		trigger_event = {
+			on_action = ME_ramadan_global_pulse 
+			days = rc_DRem_Ram
+		}
+		trigger_event = {
+			on_action = ME_rajab_global_pulse
+			days = rc_DRem_Raj
+		}
+	#	trigger_event = {
+	#		on_action = ME_eid_ul_adha_global_pulse
+	#		days = rc_DRem_Adha
+	#	}
+		trigger_event = {
+			on_action = ME_eid_ul_adha_notification_global_pulse
+			days = rc_DRem_Adha_notif
+		}
+		trigger_event = {
+			on_action = ME_muharram_global_pulse
+			days = rc_DRem_Muh
+		}
+		trigger_event = {
+			on_action = ME_ashura_global_pulse
+			days = rc_DRem_Ash
+		}
+	}
+}
+
+ME_ramadan_global_pulse = {
+	effect = {
+		every_living_character = {
+			limit = {
+				rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+				OR = {
+					is_ai = no
+					highest_held_title_tier >= tier_kingdom
+					any_held_title = { is_head_of_faith = yes }
+				}
+			}
+			trigger_event = {
+				on_action = ME_ramadan_events
+				days = { 1 14 }
+			}
+		}
+		every_living_character = {
+			if = {
+				limit = {
+					is_landed = yes
+					is_ai = yes
+					is_at_war = no
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					capital_county.faith ?= faith
+					NOT = { has_trait = greedy }
+					OR = {
+						highest_held_title_tier >= tier_kingdom
+						any_held_title = { is_head_of_faith = yes }
+					}
+					short_term_gold >= major_gold_value
+				}
+				capital_county = { add_county_modifier = me_iftar_sponsorship_substantial_modifier }
+			}
+			else_if = {
+				limit = {
+					is_landed = yes
+					is_ai = yes
+					is_at_war = no
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					capital_county.faith ?= faith
+					NOT = { has_trait = greedy }
+					highest_held_title_tier >= tier_duchy
+					short_term_gold >= major_gold_value
+				}
+				capital_county = { add_county_modifier = me_iftar_sponsorship_modest_modifier }
+			}
+		}
+		every_player = {
+			limit = {
+				is_landed = yes
+				rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			}
+			trigger_event = me_ihd_events.9000
+		}
+	}
+}
+
+ME_rajab_global_pulse = {
+	effect = {
+		every_living_character = {
+			limit = {
+				rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+				OR = {
+					is_ai = no
+					highest_held_title_tier >= tier_kingdom
+					any_held_title = { is_head_of_faith = yes }
+				}
+			}
+			trigger_event = {
+				on_action = ME_ramadan_events
+				days = { 1 14 }
+			}
+		}
+		every_living_character = {
+			if = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					capital_county.faith ?= faith
+					is_ai = yes
+					is_at_war = no
+					NOT = { has_trait = greedy }
+					OR = {
+						highest_held_title_tier >= tier_kingdom
+						any_held_title = { is_head_of_faith = yes }
+					}
+					short_term_gold >= major_gold_value
+				}
+				capital_county = { add_county_modifier = me_iftar_sponsorship_substantial_modifier }
+			}
+			else_if = {
+				limit = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					capital_county.faith ?= faith
+					is_ai = yes
+					is_at_war = no
+					NOT = { has_trait = greedy }
+					highest_held_title_tier >= tier_duchy
+					short_term_gold >= major_gold_value
+				}
+				capital_county = { add_county_modifier = me_iftar_sponsorship_modest_modifier }
+			}
+		}
+		every_player = {
+			limit = {
+				is_landed = yes
+				rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+			}
+			trigger_event = me_ihd_events.9001
+		}
+	}
+}
+
+ME_eid_ul_adha_notification_global_pulse = {
+	effect = {
+		every_player = {
+			limit = {
+				is_landed = yes
+				OR = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+				}
+			}
+			trigger_event = me_ihd_events.9002
+		}
+	}
+}
+
+ME_muharram_global_pulse = {
+	effect = {
+		# Muharram On the first day of Muharram, apply each Shia character's stored mourning & patronage choice.
+		every_living_character = {
+			limit = {
+				OR = {
+					rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+					rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+					rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+				}
+				OR = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+				}
+				exists = var:me_muharram_approach
+			}
+			me_apply_muharram_modifier_effect = yes
+		}
+		every_living_character = {
+			limit = {
+				OR = {
+					rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+					rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+					rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+				}
+				OR = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+				}
+				is_landed = yes
+				is_independent_ruler = yes
+				exists = var:me_muharram_patronage
+			}
+			me_apply_muharram_patronage_effect = yes
+		}
+	}
+}
+
+ME_ashura_global_pulse = {
+	effect = {
+		every_living_character = {
+			limit = {
+				basic_is_valid_for_yearly_events_trigger = yes
+				OR = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+				}
+				OR = {
+					is_ai = no
+					highest_held_title_tier >= tier_kingdom
+					any_held_title = { is_head_of_faith = yes }
+				}
+			}
+			random_list = {
+				90 = {}
+				10 = { trigger_event = me_ihd_events.9000 }		# Ashura
+			}
+		}
+	}
+}
+
+ME_ramadan_events = {
+	trigger = {
+		basic_is_valid_for_yearly_events_trigger = yes
+		OR = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+		}
+	}
+	random_events = {
+		chance_of_no_event = 80
+		
+		10 = me_ihd_events.0001		# Divine Smell
+		10 = me_ihd_events.0002		# Drink Of Water
+		10 = me_ihd_events.0003		# Absentminded Mistakes
+		10 = me_ihd_events.0004		# Frustration and Fasting
+		10 = me_ihd_events.0005		# Vice and Will
+		10 = me_ihd_events.0006		# Court Food Level
+		10 = me_ihd_events.0007		# Lead the Prayer
+		10 = me_ihd_events.0008		# Solace in Prayer
+		10 = me_ihd_events.0009		# Easy Day of Fasting
+		10 = me_ihd_events.0010		# Last Days of Ramadan
+		10 = me_ihd_events.0011		# Taraweeh Prayers
+		10 = me_ihd_events.0012		# Suhur
+		10 = me_ihd_events.0013		# Irritable Courtier
+		10 = me_ihd_events.0014		# Heretical Opinions
+		10 = me_ihd_events.0015		# Standing on Maghrib
+		10 = me_ihd_events.0016		# Closer to Family
+		
+		10 = me_ihd_events.0101		# Ajwah Dates Merchant
+		
+	}
+}

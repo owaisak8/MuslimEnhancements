@@ -3,7 +3,7 @@
 6882 = {
 	name = Berkan # Fantasy
 	dynasty = 841
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	825.1.1 = {
 		birth = yes
@@ -15,7 +15,7 @@
 6883 = {
 	name = Mezwar # Fantasy
 	dynasty = 842
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	829.1.1 = {
 		birth = yes
@@ -27,7 +27,7 @@
 6884 = {
 	name = Firhun # Fantasy
 	dynasty = 843
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	830.1.1 = {
 		birth = yes
@@ -40,7 +40,7 @@
 6886 = {
 	name = Tegama # Fantasy
 	dynasty = 845
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	831.1.1 = {
 		birth = yes
@@ -52,7 +52,7 @@
 6887 = {
 	name = Isli # Fantasy
 	dynasty = 846
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	832.1.1 = {
 		birth = yes
@@ -64,7 +64,7 @@
 6888 = {
 	name = Yabdas # Fantasy
 	dynasty = 847
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	830.1.1 = {
 		birth = yes
@@ -77,11 +77,11 @@
 144232 = {
 	name = "al-Hasan" # 'Amin ud-Dawlah' Abu Talib al-Hasan ibn Ammar, Founder of the Ammarid Emirate
 	dynasty = 793
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = education_learning_3 # Was a Qadi
 	trait = kutama
-	
+
 	father = me_baranis_001
 	1020.1.1 = {
 		birth = yes
@@ -97,10 +97,10 @@
 144233 = {
 	name = "Ali" # 'Jalal ul-Mulk' Ali ibn Muhammad ibn Ammar, Second Ammarid ruler
 	dynasty = 793
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = kutama
-	
+
 	father = 20769
 	1040.1.1 = {
 		birth = yes
@@ -117,10 +117,10 @@
 144234 = {
 	name = "Ammar" # 'Fakhr ul-Mulk' Abu Ali Ammar ibn Muhammad ibn Ammar, Third and last Ammarid ruler
 	dynasty = 793
-	religion = "ismaili"
+	rite = ismaili
 	culture = baranis
 	trait = kutama
-	
+
 	father = 20769
 	1050.1.1 = {
 		birth = yes
@@ -128,7 +128,7 @@
 	1099.1.1 = {
 		give_nickname = nick_fakhr_ul_mulk
 		trait = education_learning_3 # Was a Qadi(?)
-		religion = "ashari" # Disputed, allied with Sunnis before being deposed by Pro-Fatimid nobility and died while in the service of the Abbasid Caliph
+		rite = "shafii" # Disputed, allied with Sunnis before being deposed by Pro-Fatimid nobility and died while in the service of the Abbasid Caliph
 	}
 	1118.1.1 = {
 		death = yes
@@ -142,12 +142,12 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 8
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = cynical
 	trait = education_learning_2
 	trait = kutama
-	
+
 	father = me_baranis_001
 	1022.1.1 = {
 		birth = yes
@@ -164,7 +164,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lazy
 	trait = education_martial_2
@@ -183,7 +183,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = calm
 	trait = cynical
@@ -205,7 +205,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = deceitful
 	trait = education_martial_3
@@ -224,7 +224,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = humble
 	trait = gluttonous
@@ -244,7 +244,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = calm
 	trait = cynical
@@ -265,7 +265,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_3
 	1039.1.1 = {
@@ -283,7 +283,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_3
 	1039.1.1 = {
@@ -302,7 +302,7 @@
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_learning_3
 	father = 155137
@@ -321,7 +321,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_2
 	1039.1.1 = {
@@ -339,7 +339,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = honest
 	trait = arbitrary
@@ -360,7 +360,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_learning_3
 	trait = cynical
@@ -379,16 +379,16 @@
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 
 	trait = sanhaja
-	trait = greedy
+	trait = forgiving
+	trait = ambitious
+	trait = lifestyle_poet
 	trait = education_martial_3
+	trait = brave
 	father = 20935
-	# 1062.1.1 = { # These are the years of his reign, not his birth year
-	# 	birth = yes
-	# }
 	1031.7.6 = {
 		birth = yes
 	}
@@ -405,7 +405,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = diligent
 	trait = deceitful
@@ -427,7 +427,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	trait = diligent
@@ -448,7 +448,7 @@
 20842 = {
 	name = "Guanarigato"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166432
 	1039.1.1 = {
@@ -461,7 +461,7 @@
 
 20843 = {
 	name = "Ana" #Fictitious
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	dynasty = 1048013
 	father = tagatemiotise_5
@@ -475,7 +475,7 @@
 
 20844 = {
 	name = "Masnsen" #Fictitious
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	dynasty = 1048014
 	father = tejalire_11
@@ -494,7 +494,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_stewardship_3
 	1039.1.1 = {
@@ -513,7 +513,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 
 	father = me_zirids_003 # Mankush ibn Sanhaj al-Asghar (found in berber_me.txt)
@@ -521,7 +521,7 @@
 		birth = yes
 	}
 	910.1.1 = {
-		religion = "ismaili"
+		rite = "ismaili"
 	}
 	920.1.1 = {
 		death = yes
@@ -536,7 +536,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = education_martial_3
 	father = 20930
@@ -556,7 +556,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = education_stewardship_3
 	father = 20931
@@ -577,7 +577,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 6
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = education_martial_2
 	father = 20932
@@ -597,7 +597,7 @@
 	diplomacy = 5
 	intrigue = 9
 	stewardship = 6
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	father = 20933
 	965.1.1 = {
@@ -617,7 +617,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_2
 	father = 20934
@@ -637,7 +637,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_3
 	trait = ambitious
@@ -659,7 +659,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 20936
 	1000.1.1 = {
@@ -678,7 +678,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = deceitful
 	trait = just
@@ -699,7 +699,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = just
 	trait = calm
@@ -720,7 +720,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = wrathful
 	trait = cynical
@@ -742,7 +742,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	1150.1.1 = {
@@ -760,7 +760,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lustful
 	trait = education_martial_2
@@ -779,7 +779,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arbitrary
 	trait = education_martial_3
@@ -798,7 +798,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_1
 	1150.1.1 = {
@@ -816,7 +816,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = calm
 	trait = education_stewardship_3
@@ -835,7 +835,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lazy
 	trait = education_learning_3
@@ -854,7 +854,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_2
 	1150.1.1 = {
@@ -872,7 +872,7 @@
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = greedy
 	trait = temperate
@@ -893,7 +893,7 @@
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arrogant
 	trait = education_learning_2
@@ -913,7 +913,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_stewardship_2
 	1150.1.1 = {
@@ -931,7 +931,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_learning_3
 	1150.1.1 = {
@@ -949,7 +949,7 @@
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = gluttonous
 	trait = education_martial_3
@@ -968,7 +968,7 @@
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_2
 	1150.1.1 = {
@@ -987,7 +987,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = calm
 	trait = education_learning_2
@@ -1006,7 +1006,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = honest
 	trait = greedy
@@ -1027,7 +1027,7 @@
 	diplomacy = 6
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lustful
 	trait = diligent
@@ -1050,7 +1050,7 @@
 	diplomacy = 7
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = just
 	trait = education_stewardship_2
@@ -1069,7 +1069,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = diligent
 	trait = just
@@ -1091,7 +1091,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arbitrary
 	trait = education_martial_3
@@ -1110,7 +1110,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zealous
 	trait = education_martial_3
@@ -1129,7 +1129,7 @@
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = deceitful
 	trait = education_intrigue_1
@@ -1148,7 +1148,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lustful
 	trait = education_learning_3
@@ -1167,7 +1167,7 @@
 	diplomacy = 6
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_diplomacy_2
 	1150.1.1 = {
@@ -1185,7 +1185,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = honest
 	trait = education_learning_2
@@ -1204,7 +1204,7 @@
 	diplomacy = 6
 	intrigue = 4
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_1
 	1150.1.1 = {
@@ -1223,7 +1223,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = just
 	trait = arrogant
@@ -1243,7 +1243,7 @@
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_3
 	1150.1.1 = {
@@ -1261,7 +1261,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lazy
 	trait = calm
@@ -1281,7 +1281,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	1150.1.1 = {
@@ -1300,7 +1300,7 @@
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	1150.1.1 = {
@@ -1319,7 +1319,7 @@
 	diplomacy = 3
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = honest
 	trait = cynical
@@ -1341,7 +1341,7 @@
 	diplomacy = 3
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	father = 3210
@@ -1361,7 +1361,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_3
 	father = 20825 # Tamim ibn al-Mu'izz, the Zirid Emir
@@ -1380,7 +1380,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_2
 	1300.1.1 = {
@@ -1399,7 +1399,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_diplomacy_2
 	father = 20936
@@ -1419,7 +1419,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_diplomacy_2
 	father = 20936
@@ -1439,7 +1439,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_diplomacy_2
 	father = 20936
@@ -1459,7 +1459,7 @@
 	diplomacy = 4
 	intrigue = 2
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_1
 	father = 45018
@@ -1479,7 +1479,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 20936
 	991.1.1 = {
@@ -1498,7 +1498,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_4
 	trait = paranoid
@@ -1520,7 +1520,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = diligent
 	trait = education_stewardship_2
@@ -1540,7 +1540,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arbitrary
 	trait = education_intrigue_1
@@ -1559,7 +1559,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_learning_3
 	1300.1.1 = {
@@ -1577,7 +1577,7 @@
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = chaste
 	trait = education_intrigue_1
@@ -1596,7 +1596,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = just
 	trait = brave
@@ -1616,7 +1616,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = brave
 	trait = lisping
@@ -1636,7 +1636,7 @@
 	diplomacy = 4
 	intrigue = 7
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arbitrary
 	trait = education_martial_2
@@ -1655,7 +1655,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arrogant
 	trait = cynical
@@ -1675,7 +1675,7 @@
 	diplomacy = 4
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	1300.1.1 = {
@@ -1693,7 +1693,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_learning_3
 	1300.1.1 = {
@@ -1712,7 +1712,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = hunchbacked
 	trait = education_martial_2
@@ -1732,7 +1732,7 @@
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_1
 	1300.1.1 = {
@@ -1751,7 +1751,7 @@
 	diplomacy = 4
 	intrigue = 8
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_martial_2
 	1300.1.1 = {
@@ -1769,7 +1769,7 @@
 	diplomacy = 8
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = greedy
 	trait = calm
@@ -1789,7 +1789,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	1300.1.1 = {
@@ -1807,7 +1807,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = generous
 	trait = greedy
@@ -1827,7 +1827,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_1
 	1300.1.1 = {
@@ -1845,7 +1845,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = generous
 	trait = cynical
@@ -1866,7 +1866,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_learning_3
 	1300.1.1 = {
@@ -1884,7 +1884,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 4
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = lazy
 	trait = calm
@@ -1905,7 +1905,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = wrathful
 	trait = cynical
@@ -1925,7 +1925,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = arbitrary
 	trait = education_diplomacy_2
@@ -1944,7 +1944,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_2
 	1300.1.1 = {
@@ -1962,7 +1962,7 @@
 	diplomacy = 6
 	intrigue = 4
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = humble
 	trait = wrathful
@@ -1982,7 +1982,7 @@
 	diplomacy = 5
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = calm
 	trait = gluttonous
@@ -2003,7 +2003,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = honest
 	trait = hunchbacked
@@ -2023,7 +2023,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = humble
 	trait = education_intrigue_2
@@ -2043,7 +2043,7 @@
 	diplomacy = 8
 	intrigue = 4
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = generous
 	trait = education_intrigue_1
@@ -2063,7 +2063,7 @@
 	diplomacy = 7
 	intrigue = 7
 	stewardship = 7
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zealous
 	trait = education_learning_3
@@ -2082,7 +2082,7 @@
 	diplomacy = 8
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = wrathful
 	trait = education_learning_2
@@ -2101,7 +2101,7 @@
 	diplomacy = 4
 	intrigue = 6
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = gluttonous
 	trait = education_learning_2
@@ -2120,7 +2120,7 @@
 	diplomacy = 7
 	intrigue = 6
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = just
 	trait = zealous
@@ -2140,7 +2140,7 @@
 	diplomacy = 6
 	intrigue = 8
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = humble
 	trait = cynical
@@ -2160,7 +2160,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 8
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = ill
 	trait = education_stewardship_3
@@ -2180,7 +2180,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 5
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_stewardship_2
 	father = 20934
@@ -2196,7 +2196,7 @@
 	name = "Abu-Yakni" #Constantine
 	dynasty_house = house_hammadid
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 45021
 	1045.1.1 = {
@@ -2211,7 +2211,7 @@
 	name = "Badis" #Alger 1105-1106
 	dynasty_house = house_hammadid
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 45024
 	1085.1.1 = {
@@ -2226,7 +2226,7 @@
 	name = "Abd-al-Aziz" #Alger 1106-1121
 	dynasty_house = house_hammadid
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 45024
 	1090.1.1 = {
@@ -2241,7 +2241,7 @@
 	name = "Yahya" #Alger 1121-1152
 	dynasty_house = house_hammadid
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 45024
 	1110.1.1 = {
@@ -2255,7 +2255,7 @@
 32973 = {
 	name = "Muhammad"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155071
@@ -2282,7 +2282,7 @@
 32974 = {
 	name = "Ishaq"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 32973
@@ -2307,7 +2307,7 @@
 32975 = {
 	name = "Muhammad"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 32974
@@ -2339,7 +2339,7 @@
 32976 = {
 	name = "Ali"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 32974
@@ -2367,7 +2367,7 @@
 32977 = {
 	name = "Yahya"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 32974
@@ -2386,7 +2386,7 @@
 32978 = {
 	name = "Abd-al-Mu_min" #Mauretania 1147-1163
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	1094.1.1 = {
@@ -2425,7 +2425,7 @@
 32979 = {
 	name = "Muhammed"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 32978
 	trait = education_stewardship_1
@@ -2444,7 +2444,7 @@
 32980 = {
 	name = "Ya_qub" #1184-1199
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224000
@@ -2462,7 +2462,7 @@
 32981 = {
 	name = "Yusuf" #1213-1224
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224005
@@ -2480,7 +2480,7 @@
 32982 = {
 	name = "Abdul-Wahid" #1224
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32981
@@ -2495,7 +2495,7 @@
 32983 = {
 	name = "Abdallah" #1225-1227
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32980
@@ -2513,7 +2513,7 @@
 32984 = {
 	name = "Yahya" #1227-1229
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224005
@@ -2531,7 +2531,7 @@
 32985 = {
 	name = "Idris" #1229-1233
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32980
@@ -2550,7 +2550,7 @@
 32986 = {
 	name = "Abdul-Wahid" #1233-1242
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32985
@@ -2568,7 +2568,7 @@
 32987 = {
 	name = "Ali" #1242-1248
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32985
@@ -2583,7 +2583,7 @@
 32988 = {
 	name = "Ishaq"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32980
@@ -2597,7 +2597,7 @@
 32989 = {
 	name = "Umar" #1248-1266
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32988
@@ -2612,7 +2612,7 @@
 32990 = {
 	name = "Idris" #1266-1269
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32989
@@ -2627,7 +2627,7 @@
 32992 = {
 	name = "Mussa"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32980
@@ -2643,7 +2643,7 @@
 	name = "Abd-al-Haqq" #Fez 1212-1217
 	dna = "bookmark_nomads_mihyu_abd_al_haqq_32993"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = education_martial_2
 	trait = ambitious
@@ -2666,7 +2666,7 @@
 32994 = {
 	name = "Uthman" #Fez 1217-1240
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32993
@@ -2686,7 +2686,7 @@
 32995 = {
 	name = "Muhammad" #Fez 1240-1244
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32993
@@ -2706,7 +2706,7 @@
 32996 = {
 	name = "Yahya" #Fez 1244-1258
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32993
@@ -2726,7 +2726,7 @@
 32997 = {
 	name = "Yusuf" #Fez 1258-1286, Mauretania 1269-1286
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32993
@@ -2749,7 +2749,7 @@
 32998 = {
 	name = "Ya_qub" #Mauretania 1286-1307
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32997
@@ -2767,7 +2767,7 @@
 32999 = {
 	name = "Amir"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32998
@@ -2782,7 +2782,7 @@
 33000 = {
 	name = "Thabit" #1307-1308
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32999
@@ -2801,7 +2801,7 @@
 33001 = {
 	name = "al-Rabi" #1308-1310
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32999
@@ -2820,7 +2820,7 @@
 33002 = {
 	name = "Uthman" #1310-1331
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32998
@@ -2838,7 +2838,7 @@
 33003 = {
 	name = "Ali"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33002
@@ -2853,7 +2853,7 @@
 33004 = {
 	name = "al-Hasan" #1331-1351
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32998
@@ -2871,7 +2871,7 @@
 33005 = {
 	name = "al-Halein"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33002
@@ -2886,7 +2886,7 @@
 33006 = {
 	name = "Ali"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33004
@@ -2901,7 +2901,7 @@
 33007 = {
 	name = "Inan_Faris"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33004
@@ -2916,7 +2916,7 @@
 33008 = {
 	name = "Muhammad"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33004
@@ -2931,7 +2931,7 @@
 33009 = {
 	name = "Ibrahim"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33004
@@ -2946,7 +2946,7 @@
 33010 = {
 	name = "Ya_qub"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33004
@@ -2961,7 +2961,7 @@
 33011 = {
 	name = "Faris"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 33004
@@ -2976,7 +2976,7 @@
 33012 = {
 	name = "Hafs-Umar"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	1105.1.1 = {
 		birth = "1105.1.1"
@@ -2989,7 +2989,7 @@
 33013 = {
 	name = "Othman"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33012
 	1144.1.1 = {
@@ -3003,7 +3003,7 @@
 33014 = {
 	name = "Abd-al-Wahid" #Tunis 1207-1224
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33012
 	1176.1.1 = {
@@ -3022,7 +3022,7 @@
 33015 = {
 	name = "Ishaq"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33012
 	1156.1.1 = {
@@ -3036,7 +3036,7 @@
 33016 = {
 	name = "Abd-ar-Rahman"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33012
 	1158.1.1 = {
@@ -3050,7 +3050,7 @@
 33017 = {
 	name = "Abd-ar-Rahman" #Africa 1284-1295
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33016
 	1200.1.1 = {
@@ -3064,7 +3064,7 @@
 33018 = {
 	name = "Abu-Bakr"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33016
 	1201.1.1 = {
@@ -3078,7 +3078,7 @@
 33019 = {
 	name = "Abd-al-Ouahed"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33016
 	1202.1.1 = {
@@ -3092,7 +3092,7 @@
 33020 = {
 	name = "Abdallah" #Tunis 1224-1229
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33016
 	1203.1.1 = {
@@ -3111,7 +3111,7 @@
 33021 = {
 	name = "Zakariya" #Africa 1229-1251
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33016
 	1204.1.1 = {
@@ -3129,7 +3129,7 @@
 33022 = {
 	name = "Abdallah"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33020
 	1220.1.1 = {
@@ -3143,7 +3143,7 @@
 33023 = {
 	name = "Idris"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33020
 	1221.1.1 = {
@@ -3157,7 +3157,7 @@
 33024 = {
 	name = "Abdallah" #Africa 1251-1276
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33021
 	1221.1.1 = {
@@ -3170,7 +3170,7 @@
 33025 = {
 	name = "Ishaq" #Africa 1279-1284
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33021
 	1223.1.1 = {
@@ -3184,7 +3184,7 @@
 33026 = {
 	name = "Zakariya" #Africa 1276-1279
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33024
 	1240.1.1 = {
@@ -3198,7 +3198,7 @@
 33027 = {
 	name = "Muhammad" #Africa 1295-1309
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33026
 	1260.1.1 = {
@@ -3212,7 +3212,7 @@
 33028 = {
 	name = "Yahya" #Africa 1309
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33027
 	1290.1.1 = {
@@ -3226,7 +3226,7 @@
 33029 = {
 	name = "Zakariya"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33025
 	1243.1.1 = {
@@ -3240,7 +3240,7 @@
 33030 = {
 	name = "Zakariya"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33029
 	1260.1.1 = {
@@ -3254,7 +3254,7 @@
 33031 = {
 	name = "Khalid" #Africa 1310-1311
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33029
 	1262.1.1 = {
@@ -3268,7 +3268,7 @@
 33032 = {
 	name = "Yahya" #Africa 1318-1346
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33029
 	1266.1.1 = {
@@ -3282,7 +3282,7 @@
 33033 = {
 	name = "Abdallah"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33029
 	1263.1.1 = {
@@ -3296,7 +3296,7 @@
 33034 = {
 	name = "Ishaq"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33032
 	1300.1.1 = {
@@ -3310,7 +3310,7 @@
 33035 = {
 	name = "Umar"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33032
 	1302.1.1 = {
@@ -3324,7 +3324,7 @@
 33036 = {
 	name = "Abdallah"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33032
 	1304.1.1 = {
@@ -3338,7 +3338,7 @@
 33037 = {
 	name = "Khalid"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33034
 	1321.1.1 = {
@@ -3352,7 +3352,7 @@
 33038 = {
 	name = "al-Mutawakki"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33035
 	1329.1.1 = {
@@ -3366,7 +3366,7 @@
 33039 = {
 	name = "al-Mustansir"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33035
 	1333.1.1 = {
@@ -3380,7 +3380,7 @@
 33040 = {
 	name = "Muhammad"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33019
 	1220.1.1 = {
@@ -3394,7 +3394,7 @@
 33041 = {
 	name = "Ahmad"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33040
 	1240.1.1 = {
@@ -3408,7 +3408,7 @@
 33042 = {
 	name = "Yahya" #Africa 1311-1317
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33041
 	1270.1.1 = {
@@ -3422,7 +3422,7 @@
 33043 = {
 	name = "Muhammad" #Africa 1317-1318
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33042
 	1300.1.1 = {
@@ -3436,7 +3436,7 @@
 33044 = {
 	name = "Zyan"
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1180.1.1 = {
 		birth = "1180.1.1"
@@ -3449,7 +3449,7 @@
 33045 = {
 	name = "Yghomracen" #Alger 1229-1283
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33044
 	1210.1.1 = {
@@ -3463,7 +3463,7 @@
 33046 = {
 	name = "Othman" #Alger 1283-1304
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33045
 	1250.1.1 = {
@@ -3477,7 +3477,7 @@
 33047 = {
 	name = "Zyan" #Alger 1304-1308
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33046
 	1280.1.1 = {
@@ -3491,7 +3491,7 @@
 33048 = {
 	name = "Hammu" #Alger 1308-1318
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33046
 	1285.1.1 = {
@@ -3505,7 +3505,7 @@
 33049 = {
 	name = "Tashfin" #Alger 1318-1337
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33048
 	1305.1.1 = {
@@ -3519,7 +3519,7 @@
 33050 = {
 	name = "Othman"
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33049
 	1332.1.1 = {
@@ -3533,7 +3533,7 @@
 33051 = {
 	name = "Thabit"
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33049
 	1333.1.1 = {
@@ -3547,7 +3547,7 @@
 33052 = {
 	name = "Hammu"
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33049
 	1335.1.1 = {
@@ -3566,7 +3566,7 @@
 	diplomacy = 6
 	intrigue = 5
 	stewardship = 6
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = education_intrigue_1
 	1040.1.2 = {
@@ -3585,7 +3585,7 @@
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 8
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = just
 	trait = brave
@@ -3614,7 +3614,7 @@
 	diplomacy = 5
 	intrigue = 4
 	stewardship = 5
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = stuttering
 	trait = education_martial_2
@@ -3634,7 +3634,7 @@
 73222 = {
 	name = "SI_r"
 	dynasty = 12200
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1048.1.1 = {
 		birth = "1048.1.1"
@@ -3647,7 +3647,7 @@
 73229 = {
 	name = "Wanur"
 	dynasty = 12203
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1072.1.1 = {
 		birth = "1072.1.1"
@@ -3660,7 +3660,7 @@
 73230 = {
 	name = "Tashfin"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 32974
@@ -3690,7 +3690,7 @@
 73231 = {
 	name = "Abdallah"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 32974
@@ -3716,7 +3716,7 @@
 73232 = {
 	name = "Sa_d"
 	dynasty = 7279
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33057
 	1252.1.1 = {
@@ -3730,7 +3730,7 @@
 73233 = {
 	name = "Abdallah"
 	dynasty = 12207
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	1154.1.1 = {
 		birth = "1154.1.1"
@@ -3743,7 +3743,7 @@
 73234 = {
 	name = "Hakam"
 	dynasty = 7279
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33056
 	1204.1.1 = {
@@ -3768,7 +3768,7 @@
 33056 = {
 	name = "Sa_d"
 	dynasty = 7279
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	1176.1.1 = {
 		birth = "1176.1.1"
@@ -3796,7 +3796,7 @@
 33057 = {
 	name = "Umar"
 	dynasty = 7279
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73234
 	1228.1.1 = {
@@ -3814,7 +3814,7 @@
 	name = "Abd-al-Razzaq"
 	dynasty = 12225
 
-	religion = masmudi
+	rite = masmudi
 	culture = baranis
 
 	1126.1.1 = {
@@ -3829,7 +3829,7 @@
 	name = "Abd-al-Aziz"
 	dynasty = 12218
 
-	religion = masmudi
+	rite = masmudi
 	culture = baranis
 
 	1133.1.1 = {
@@ -3847,7 +3847,7 @@
 	diplomacy = 6
 	intrigue = 4
 	stewardship = 7
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = calm
 	trait = education_martial_2
@@ -3866,7 +3866,7 @@
 	diplomacy = 7
 	intrigue = 8
 	stewardship = 8
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = just
 	trait = arrogant
@@ -3887,7 +3887,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 8
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = education_martial_3
 	1112.1.1 = {
@@ -3902,7 +3902,7 @@
 	name = "Abd-al-Aziz"
 	dynasty = 12217
 
-	religion = masmudi
+	rite = masmudi
 	culture = baranis
 
 	1119.1.1 = {
@@ -3920,7 +3920,7 @@
 	diplomacy = 5
 	intrigue = 8
 	stewardship = 8
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = education_martial_2
 	1127.1.1 = {
@@ -3938,7 +3938,7 @@
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 6
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = greedy
 	trait = education_intrigue_2
@@ -3960,7 +3960,7 @@
 	diplomacy = 5
 	intrigue = 7
 	stewardship = 6
-	religion = "ismaili"
+	rite = "ismaili"
 	culture = baranis
 	trait = calm
 	trait = temperate
@@ -3993,7 +3993,7 @@
 73311 = {
 	name = "Hasan"
 	dynasty = 12238
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1030.1.1 = {
 		birth = "1030.1.1"
@@ -4007,7 +4007,7 @@
 	name = "Abdul-Qadir"
 	dynasty_house = house_hammadid
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 45018
 	1010.1.1 = {
@@ -4035,8 +4035,8 @@
 155000 = {
 	name = "Ibrahim"
 	dynasty = 1027003
-	trait = miknasa	
-	religion = "ashari"
+	trait = miknasa
+	rite = "shafii"
 	culture = baranis
 	950.1.1 = {
 		birth = "950.1.1"
@@ -4049,8 +4049,8 @@
 155001 = {
 	name = "abd-al-Rahman" #ibn Ibrahim
 	dynasty = 1027003
-	trait = miknasa	
-	religion = "ashari"
+	trait = miknasa
+	rite = "shafii"
 	culture = baranis
 	father = 155000
 	980.1.1 = {
@@ -4064,8 +4064,8 @@
 155002 = {
 	name = "Muhammad" #ibn abd-al-Rahman
 	dynasty = 1027003
-	trait = miknasa	
-	religion = "ashari"
+	trait = miknasa
+	rite = "shafii"
 	culture = baranis
 	father = 155001
 	1010.1.1 = {
@@ -4079,8 +4079,8 @@
 155003 = {
 	name = "Qasim" #ibn Muhammad
 	dynasty = 1027003
-	trait = miknasa	
-	religion = "ashari"
+	trait = miknasa
+	rite = "maliki"
 	culture = baranis
 	father = 155002
 	1040.1.1 = {
@@ -4094,7 +4094,7 @@
 155004 = {
 	name = "Muhammad"
 	dynasty = 1027006
-	religion = "ashari" #heretic?
+	rite = "shafii" #heretic?
 	culture = baranis
 	trait = masmudi
 	990.1.1 = {
@@ -4108,7 +4108,7 @@
 155005 = {
 	name = "Suqut" # Suqut ibn Muhammad al-Barghawati
 	dynasty = 1027006
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = education_martial_2
 	trait = masmudi
@@ -4120,7 +4120,7 @@
 	1078.10.8 = { #supposedly ~90!
 		death = {
 			death_reason = death_battle
-		} 
+		}
 	}
 }
 
@@ -4128,7 +4128,7 @@
 	name = "al-Mu_izz"  #al-Mu'izz 'Diya' ud-Dawlah' ibn Suqut
 	dynasty = 1027006
 	give_nickname = nick_diya_ud_dawlah
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -4145,7 +4145,7 @@
 	name = "Yahya"
 	#placeholder
 	dynasty = 1027004
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1040.1.1 = {
 		birth = "1040.1.1"
@@ -4160,7 +4160,7 @@
 	#placeholder
 	dynasty = 1027000
 	trait = zenata
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1045.1.1 = {
 		birth = "1045.1.1"
@@ -4175,7 +4175,7 @@
 	#placeholder
 	dynasty = 1027000
 	trait = zenata
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1087.1.1 = {
 		birth = "1087.1.1"
@@ -4189,7 +4189,7 @@
 	name = "Abdul-Razzaq"
 	#placeholder
 	dynasty = 1027009
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1030.1.1 = {
 		birth = "1030.1.1"
@@ -4203,7 +4203,7 @@
 	name = "Abu-Sahl"
 	#placeholder
 	dynasty = 1027005
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1045.1.1 = {
 		birth = "1045.1.1"
@@ -4217,7 +4217,7 @@
 	name = "Rashid"
 	#placeholder
 	dynasty = 1027005
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1087.1.1 = {
 		birth = "1087.1.1"
@@ -4231,7 +4231,7 @@
 	name = "Shiruyah"
 	#placeholder
 	dynasty = 101733
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1045.1.1 = {
 		birth = "1045.1.1"
@@ -4244,7 +4244,7 @@
 	name = "Hisham"
 	#placeholder
 	dynasty = 101733
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1087.1.1 = {
 		birth = "1087.1.1"
@@ -4256,7 +4256,7 @@
 155032 = {
 	name = "Sulayman"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155084
@@ -4270,7 +4270,7 @@
 155033 = {
 	name = "Umar" #ibn Sulayman
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155032
@@ -4279,12 +4279,12 @@
 	}
 	1100.1.1 = {
 		death = "1100.1.1"
-	}	
+	}
 }
 155034 = {
 	name = "Tinaghmar"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155084
@@ -4298,7 +4298,7 @@
 155035 = {
 	name = "Muhammad" #ibn Tinaghmar
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155034
@@ -4313,7 +4313,7 @@
 	name = "Nusayr"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -4329,7 +4329,7 @@
 	name = "Musaddid"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -4345,7 +4345,7 @@
 	name = "Abu-Hazim"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -4361,7 +4361,7 @@
 	name = "Abdul-Wahid"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -4376,7 +4376,7 @@
 155041 = {
 	name = "al-_Urwah"
 	dynasty = 1027014
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1180.1.1 = {
 		birth = "1180.1.1"
@@ -4388,7 +4388,7 @@
 155042 = {
 	name = "Ali" #ibn al-'Urwah
 	dynasty = 1027014
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155041
 	1200.1.1 = {
@@ -4401,7 +4401,7 @@
 155043 = {
 	name = "Talha" #ibn Ali
 	dynasty = 1027014
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155042
 	1235.1.1 = {
@@ -4414,7 +4414,7 @@
 155044 = {
 	name = "Yahya" #ibn Ali
 	dynasty = 1027014
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155042
 	1240.1.1 = {
@@ -4427,7 +4427,7 @@
 155045 = {
 	name = "Mendil" #ibn Ali
 	dynasty = 1027014
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155042
 	1265.1.1 = {
@@ -4440,7 +4440,7 @@
 155046 = {
 	name = "Tazir" #ibn Talha
 	dynasty = 1027014
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155043
 	1265.1.1 = {
@@ -4453,7 +4453,7 @@
 155047 = {
 	name = "Abd-al-_Aziz" #ibn Khurasan
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1020.1.1 = {
 		birth = "1020.1.1"
@@ -4466,7 +4466,7 @@
 	name = "Abd-al_Haqq" #ibn Abd-al-'Aziz
 	#Abu-Muhammad-Abd-al'Haqq
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155047
 	1040.1.1 = {
@@ -4480,7 +4480,7 @@
 	name = "Abd-al-_Aziz" #ibn Abd-al'Haqq
 	#Abu-Muhammad-Abd-al-'Aziz
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155048
 	1060.1.1 = {
@@ -4494,7 +4494,7 @@
 	name = "Ismail" #ibn Abd-al'Haqq
 	#Abu-al-Tahir-Ismail
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155048
 	1062.1.1 = {
@@ -4507,7 +4507,7 @@
 155051 = {
 	name = "Ahmad" #ibn Abu-Muhammad-Abd-al-'Aziz
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155049
 	1080.1.1 = {
@@ -4516,7 +4516,7 @@
 	1107.3.8 = {
 		trait = kinslayer_3
 		#assassinated his uncle, Ismail
-	}	
+	}
 	1128.1.1 = {
 		death = "1128.1.1"
 	}
@@ -4524,7 +4524,7 @@
 155052 = {
 	name = "Abu-Bakr" #ibn Abu-al-Tahir-Ismail
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155050
 	1080.1.1 = {
@@ -4537,7 +4537,7 @@
 155053 = {
 	name = "Abd-al-_Aziz" #ibn Abu-al-Tahir-Ismail
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155050
 	1082.1.1 = {
@@ -4550,7 +4550,7 @@
 155054 = {
 	name = "Abd-_Allah" #ibn Abd-al-'Aziz
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155053
 	1100.1.1 = {
@@ -4567,7 +4567,7 @@
 155055 = {
 	name = "Ali" #ibn Ahmad
 	dynasty = 1027010
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155051
 	1100.1.1 = {
@@ -4583,7 +4583,7 @@
 	female = yes
 	dynasty = 595
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 20935
 	1041.1.1 = {
@@ -4596,7 +4596,7 @@
 155064 = {
 	name = "Ishaq" #ibn Muhammad ibn Tinaghmar
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155035
@@ -4610,7 +4610,7 @@
 155065 = {
 	name = "Yahya" #ibn Ishaq
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155064
@@ -4624,7 +4624,7 @@
 155066 = {
 	name = "Tifilwit"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155084
@@ -4638,7 +4638,7 @@
 155067 = {
 	name = "Ibrahim" #ibn Tifilwit
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155066
@@ -4652,7 +4652,7 @@
 155068 = {
 	name = "Abu-Bakr" #ibn Ibrahim
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155067
@@ -4666,7 +4666,7 @@
 155070 = {
 	name = "Yusuf"
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155084
@@ -4680,7 +4680,7 @@
 155071 = {
 	name = "Ali" #ibn Yusuf
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155070
@@ -4697,7 +4697,7 @@
 155072 = {
 	name = "Yahya" #ibn Ghaniya
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = sanhaja
 	father = 155071
@@ -4712,7 +4712,7 @@
 	name = "Massufa"
 	#placeholder
 	dynasty = 1027007
-	religion = "ashari"
+	rite = "shafii"
 	trait = sanhaja
 	culture = baranis
 	980.1.1 = {
@@ -4726,7 +4726,7 @@
 73609 = {
 	name = "Utman"
 	dynasty = 12257
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	1163.1.1 = {
 		birth = "1163.1.1"
@@ -4739,7 +4739,7 @@
 73610 = {
 	name = "Abdallah"
 	dynasty = 12256
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73611
 	1188.1.1 = {
@@ -4753,7 +4753,7 @@
 73611 = {
 	name = "Yahya"
 	dynasty = 12256
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	1156.1.1 = {
 		birth = "1156.1.1"
@@ -4766,7 +4766,7 @@
 73612 = {
 	name = "Umar"
 	dynasty = 12256
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73611
 	1181.1.1 = {
@@ -4781,7 +4781,7 @@
 	name = "Abd-al-Rahman"
 	dynasty = 12258
 
-	religion = masmudi
+	rite = masmudi
 	culture = baranis
 
 	1145.1.1 = {
@@ -4795,7 +4795,7 @@
 73614 = {
 	name = "Rashid"
 	dynasty = 12258
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73613
 	1173.1.1 = {
@@ -4809,7 +4809,7 @@
 73615 = {
 	name = "Muhammad"
 	dynasty = 12259
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	1155.1.1 = {
 		birth = "1155.1.1"
@@ -4822,7 +4822,7 @@
 73616 = {
 	name = "Yahya"
 	dynasty = 12259
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73615
 	1178.1.1 = {
@@ -4836,7 +4836,7 @@
 73617 = {
 	name = "Tariq"
 	dynasty = 12258
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73613
 	1177.1.1 = {
@@ -4850,7 +4850,7 @@
 73618 = {
 	name = "Umar"
 	dynasty = 12258
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 73613
 	1175.1.1 = {
@@ -4864,7 +4864,7 @@
 73619 = {
 	name = "Muhammad"
 	dynasty = 7276
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 33012
 	1160.1.1 = {
@@ -4881,7 +4881,7 @@
 
 	father = 73619
 
-	religion = masmudi
+	rite = masmudi
 	culture = baranis
 
 	1198.1.1 = {
@@ -4895,7 +4895,7 @@
 73655 = {
 	name = "Betzenuriga"
 	dynasty = 100848
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	father = 73656
 	1300.1.1 = {
@@ -4909,7 +4909,7 @@
 73656 = {
 	name = "Vinque"
 	dynasty = 100848
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	father = 73657
 	1272.1.1 = {
@@ -4923,7 +4923,7 @@
 73657 = {
 	name = "Chindia"
 	dynasty = 100848
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	father = 73658
 	1257.1.1 = {
@@ -4937,7 +4937,7 @@
 73658 = {
 	name = "Binicherque"
 	dynasty = 100848
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	father = 73659
 	1220.1.1 = {
@@ -4951,7 +4951,7 @@
 73659 = {
 	name = "Archinife"
 	dynasty = 100848
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	mother = 73660
 	1196.1.1 = {
@@ -4966,7 +4966,7 @@
 	name = "Yaiza"
 	dynasty = 100848
 	female = yes
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 73661
 	1170.1.1 = {
@@ -4980,7 +4980,7 @@
 73661 = {
 	name = "Tamanca"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 73662
 	1138.1.1 = {
@@ -4994,7 +4994,7 @@
 73662 = {
 	name = "Bencomo"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 73663
 	1115.1.1 = {
@@ -5008,7 +5008,7 @@
 73663 = {
 	name = "Guanareme"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 73664
 	1088.1.1 = {
@@ -5022,7 +5022,7 @@
 73664 = {
 	name = "Betancaice"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 20842
 	1064.1.1 = {
@@ -5036,7 +5036,7 @@
 155085 = {
 	name = "Umar"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -5051,7 +5051,7 @@
 155086 = {
 	name = "Uthman"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -5066,7 +5066,7 @@
 155087 = {
 	name = "Abd-_Allah"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -5081,7 +5081,7 @@
 155088 = {
 	name = "Ali"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -5097,7 +5097,7 @@
 	name = "Umar" #ibn Al-Muizz
 	dynasty = 595
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 20935
 	1038.1.1 = {
@@ -5116,7 +5116,7 @@
 	female = yes
 	dynasty = 595
 	trait = sanhaja
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 20825 # Tamim ibn al-Mu'izz, the Zirid Emir
 	1055.1.1 = {
@@ -5130,7 +5130,7 @@
 155091 = {
 	name = "Abu-Nas"
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 155134
 	trait = zenata
@@ -5145,7 +5145,7 @@
 155092 = {
 	name = "Abd-al-Rahman" #ibn Abu-Nas
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 155091
 	trait = zenata
@@ -5160,7 +5160,7 @@
 155093 = {
 	name = "Mandil" #ibn Abd-al-Rahman
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155092
 	trait = zenata
@@ -5175,7 +5175,7 @@
 155094 = {
 	name = "Al-_Abbas" #ibn Mandil
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155093
 	trait = zenata
@@ -5190,7 +5190,7 @@
 155095 = {
 	name = "Muhammad" #ibn Mandil
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155093
 	trait = zenata
@@ -5205,7 +5205,7 @@
 155096 = {
 	name = "Ayd" #ibn Mandil
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155093
 	trait = zenata
@@ -5223,7 +5223,7 @@
 155097 = {
 	name = "Umar" #ibn Mandil
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155093
 	trait = zenata
@@ -5238,7 +5238,7 @@
 155098 = {
 	name = "Thabit" #ibn Mandil
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155093
 	trait = zenata
@@ -5252,7 +5252,7 @@
 155099 = {
 	name = "Muhammad" #ibn Thabit
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155098
 	trait = zenata
@@ -5267,7 +5267,7 @@
 155100 = {
 	name = "Rashid" #ibn Thabit
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155098
 	trait = zenata
@@ -5282,7 +5282,7 @@
 155101 = {
 	name = "Waghram" #ibn Mandil
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155093
 	trait = zenata
@@ -5297,7 +5297,7 @@
 155102 = {
 	name = "Umar" #ibn Maghram
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155101
 	trait = zenata
@@ -5312,7 +5312,7 @@
 155103 = {
 	name = "Ali" #ibn Rashid
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155100
 	trait = zenata
@@ -5328,7 +5328,7 @@
 	name = "Khalaf"
 	#placeholder
 	dynasty = 1027012
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	1134.1.1 = {
@@ -5343,7 +5343,7 @@
 	name = "Duwud"
 	#placeholder
 	dynasty = 1027012
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155104
@@ -5359,7 +5359,7 @@
 	name = "Sufyan"
 	#placeholder
 	dynasty = 1027012
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 155171
@@ -5375,7 +5375,7 @@
 	name = "Imran"
 	#placeholder
 	dynasty = 1027012
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 155106
@@ -5390,7 +5390,7 @@
 155108 = {
 	name = "Muhammad"
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1140.1.1 = {
 		birth = "1140.1.1"
@@ -5403,7 +5403,7 @@
 155109 = {
 	name = "Yusuf" #ibn Muhammad
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155108
 	1160.1.1 = {
@@ -5417,7 +5417,7 @@
 155110 = {
 	name = "Djabar" #ibn Yusuf
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155109
 	1180.1.1 = {
@@ -5431,7 +5431,7 @@
 155111 = {
 	name = "Uthman" #ibn Yusuf
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155109
 	1185.1.1 = {
@@ -5445,7 +5445,7 @@
 155112 = {
 	name = "Zaydan" #ibn Zayyan
 	dynasty = 7277
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 33044
 	1200.1.1 = {
@@ -5459,7 +5459,7 @@
 155115 = {
 	name = "Muhammad" #ibn Abd-al-Karim
 	dynasty = 1027015
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155235
 	1160.1.1 = {
@@ -5489,7 +5489,7 @@
 155117 = {
 	name = "Fulful" # Fulful ibn Khazar ibn Muhammad ibn Khazar
 	dynasty_house = house_me_khazarids # Banu Khazar
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5524,7 +5524,7 @@
 155119 = {
 	name = "Abd-_Allah" # Abdullah ibn Khazar ibn Muhammad
 	dynasty_house = house_me_khazarids # Banu Khazar
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5541,7 +5541,7 @@
 155120 = {
 	name = "_Atiyya" #ibn Abdallah
 	dynasty_house = house_me_atiyyids # Banu 'Aṭiyya
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5556,7 +5556,7 @@
 155121 = {
 	name = "Ziri" #ibn Attia
 	dynasty_house = house_me_atiyyids # Banu 'Aṭiyya
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5571,7 +5571,7 @@
 155122 = {
 	name = "Sa_id" # Sa'id ibn Khazrun ibn Fulful
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5586,7 +5586,7 @@
 155123 = {
 	name = "Fulful" #ibn Said
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5601,7 +5601,7 @@
 155124 = {
 	name = "Warru" #ibn Said
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5616,7 +5616,7 @@
 155125 = {
 	name = "Khazrun" #ibn Said
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5631,7 +5631,7 @@
 155126 = {
 	name = "Khalifa" #ibn Warru
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5646,7 +5646,7 @@
 155127 = {
 	name = "Sa_id" #ibn Khazrun-ibn-Said
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5661,7 +5661,7 @@
 155128 = {
 	name = "Khazrun" #ibn Khalifa-ibn-Warru
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5691,7 +5691,7 @@
 155130 = {
 	name = "al-Muntasir" # al-Muntasir ibn Khazrun ibn Sa'id
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5712,7 +5712,7 @@
 155131 = {
 	name = "Khalifa" #ibn Khazrun
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5746,7 +5746,7 @@
 155133 = {
 	name = "Khazrun" # Khazrun ibn Khalifa
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5761,7 +5761,7 @@
 155134 = {
 	name = "Muhammad" #ibn Khazrun
 	dynasty_house = house_me_khazrunids # The Khazrunids
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 
@@ -5776,7 +5776,7 @@
 155135 = {
 	name = "Matruh"
 	dynasty = 1027016
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1100.1.1 = {
 		birth = "1100.1.1"
@@ -5788,7 +5788,7 @@
 155136 = {
 	name = "Abu-Yahya" #ibn Matruh
 	dynasty = 1027016
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155135
 	1120.1.1 = {
@@ -5801,7 +5801,7 @@
 155163 = {
 	name = "Abd-_Allah" #ibn Abd-al-Haqq
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 32993
@@ -5815,7 +5815,7 @@
 155164 = {
 	name = "Yakub" #ibn Abd-'Allah
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 155163
@@ -5830,7 +5830,7 @@
 	name = "Mansur"
 	#placeholder
 	dynasty = 1027020
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1220.1.1 = {
 		birth = "1220.1.1"
@@ -5843,7 +5843,7 @@
 	name = "Amr"
 	#placeholder
 	dynasty = 1027019
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1215.1.1 = {
 		birth = "1215.1.1"
@@ -5855,7 +5855,7 @@
 155167 = {
 	name = "Abd-al-Qasim"
 	dynasty = 1027019
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155166
 	1240.1.1 = {
@@ -5869,7 +5869,7 @@
 	name = "Umar"
 	#placeholder
 	dynasty = 1027019
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155167
 	1265.1.1 = {
@@ -5882,7 +5882,7 @@
 155169 = {
 	name = "Yahya"
 	dynasty = 1027019
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155168
 	1290.1.1 = {
@@ -5896,7 +5896,7 @@
 155170 = {
 	name = "Abd-al-Qawi"
 	dynasty = 1027012
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 155105
@@ -5910,7 +5910,7 @@
 155171 = {
 	name = "Muhammad" #ibn Abd-al-Qawi
 	dynasty = 1027012
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = zenata
 	father = 155170
@@ -5925,7 +5925,7 @@
 155235 = {
 	name = "Abd-al-Karim"
 	dynasty = 1027015
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1144.1.1 = {
 		birth = "1144.1.1"
@@ -5938,7 +5938,7 @@
 155236 = {
 	name = "Muhammad"
 	dynasty = 1027021
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	1255.1.1 = {
 		birth = "1255.1.1"
@@ -5950,7 +5950,7 @@
 155237 = {
 	name = "Thabit"
 	dynasty = 1027021
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155236
 	1280.1.1 = {
@@ -5963,7 +5963,7 @@
 155238 = {
 	name = "Muhammad"
 	dynasty = 1027021
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155237
 	1305.1.1 = {
@@ -5976,7 +5976,7 @@
 155239 = {
 	name = "Thabit"
 	dynasty = 1027021
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	father = 155238
 	1330.1.1 = {
@@ -5990,7 +5990,7 @@
 159502 = {
 	name = "Idris"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159501
@@ -6005,7 +6005,7 @@
 159503 = {
 	name = "Muhammad"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159502
@@ -6019,7 +6019,7 @@
 159504 = {
 	name = "Ali"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159503
@@ -6033,7 +6033,7 @@
 159505 = {
 	name = "Yahya"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159503
@@ -6047,7 +6047,7 @@
 159506 = {
 	name = "Yahya"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159505
@@ -6061,7 +6061,7 @@
 159507 = {
 	name = "Umar"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 
@@ -6076,7 +6076,7 @@
 159508 = {
 	name = "Ali"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159507
@@ -6090,7 +6090,7 @@
 159509 = {
 	name = "Al-Qasim"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 
@@ -6106,7 +6106,7 @@
 	name = "Yahya"
 	dynasty = 1029055
 	give_nickname = nick_me_al_miqdam # al-Miqdam
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	trait = education_martial_3 # Military commander, saved Fas from a Kharijite rebel
@@ -6123,7 +6123,7 @@
 159511 = {
 	name = "Idris"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159507
@@ -6137,7 +6137,7 @@
 159512 = {
 	name = "Yahya"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159511
@@ -6151,7 +6151,7 @@
 159513 = {
 	name = "Muhammad"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159509
@@ -6166,7 +6166,7 @@
 	name = "Al-Hassan"
 	dynasty = 1029055
 	give_nickname = nick_me_al_hajjam # al-Hajjam, comparing his bloodshedding nature to Hijama (Wet Cupping)
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	trait = wrathful
@@ -6182,7 +6182,7 @@
 159515 = {
 	name = "Ibrahim"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159513
@@ -6197,7 +6197,7 @@
 	name = "Al-Qasim"
 	dynasty = 1029055
 	give_nickname = nick_me_kannun
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159513
@@ -6212,7 +6212,7 @@
 	name = "Ahmad"
 	dynasty = 1029055
 	give_nickname = nick_me_abul_aysh # Abu'l 'Aysh (Father of Livelihood)
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	trait = generous
@@ -6228,7 +6228,7 @@
 159518 = {
 	name = "Al-Hasan"
 	dynasty = 1029055
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	father = 159516
@@ -6248,7 +6248,7 @@
 	dna = me_sawdan_dna
 	dynasty = 806 # Sawdānid
 	give_nickname = nick_me_al_mawri # al-Māwri
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	830.1.1 = {
 		birth = yes
@@ -6261,7 +6261,7 @@
 166423 = {
 	name = "Guanareme"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	831.1.1 = {
 		birth = "831.1.1"
@@ -6274,7 +6274,7 @@
 166424 = {
 	name = "AN_aterve"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166423
 	850.1.1 = {
@@ -6288,7 +6288,7 @@
 166425 = {
 	name = "Zonzamas"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166424
 	867.1.1 = {
@@ -6302,7 +6302,7 @@
 166426 = {
 	name = "TitaN_e"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166425
 	890.1.1 = {
@@ -6316,7 +6316,7 @@
 166427 = {
 	name = "Ayoze"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166426
 	911.1.1 = {
@@ -6330,7 +6330,7 @@
 166428 = {
 	name = "Dardamo"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166427
 	936.1.1 = {
@@ -6344,7 +6344,7 @@
 166429 = {
 	name = "Betzenuhya"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166428
 	955.1.1 = {
@@ -6358,7 +6358,7 @@
 166430 = {
 	name = "GuardafI_a"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166429
 	977.1.1 = {
@@ -6372,7 +6372,7 @@
 166431 = {
 	name = "Imobach"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166430
 	994.1.1 = {
@@ -6386,7 +6386,7 @@
 166432 = {
 	name = "AdxoN_a"
 	dynasty = 100848
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	father = 166431
 	1017.1.1 = {
@@ -6400,7 +6400,7 @@
 168253 = {
 	name = "Mansur"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	660.1.1 = {
 		birth = "660.1.1"
@@ -6413,7 +6413,7 @@
 168254 = {
 	name = "Salih"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168253
 	690.1.1 = {
@@ -6427,7 +6427,7 @@
 168255 = {
 	name = "al-Mu_tasim"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168254
 	710.1.1 = {
@@ -6441,7 +6441,7 @@
 168256 = {
 	name = "Idris"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168255
 	728.1.1 = {
@@ -6455,7 +6455,7 @@
 168257 = {
 	name = "Sa_id"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168256
 	745.1.1 = {
@@ -6469,7 +6469,7 @@
 168258 = {
 	name = "Salih"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168257
 	790.1.1 = {
@@ -6484,7 +6484,7 @@
 168259 = {
 	name = "Sa_id"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168258
 	830.1.1 = {
@@ -6498,7 +6498,7 @@
 168260 = {
 	name = "Salih"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168259
 	855.1.1 = {
@@ -6512,7 +6512,7 @@
 168261 = {
 	name = "Abd-al-Badi"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168260
 	875.1.1 = {
@@ -6526,7 +6526,7 @@
 168262 = {
 	name = "Abd-ar-Rahman"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168259
 	860.1.1 = {
@@ -6540,7 +6540,7 @@
 168263 = {
 	name = "Abd-al-Malik"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168262
 	880.1.1 = {
@@ -6554,7 +6554,7 @@
 168264 = {
 	name = "Isma_il"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168263
 	900.1.1 = {
@@ -6568,7 +6568,7 @@
 168265 = {
 	name = "Idris"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168257
 	795.1.1 = {
@@ -6582,7 +6582,7 @@
 168266 = {
 	name = "Abd-as-Sami"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168265
 	830.1.1 = {
@@ -6596,7 +6596,7 @@
 168267 = {
 	name = "Rumi"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168266
 	850.1.1 = {
@@ -6610,7 +6610,7 @@
 168268 = {
 	name = "Musa"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168267
 	880.1.1 = {
@@ -6624,7 +6624,7 @@
 168269 = {
 	name = "Idris"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168258
 	835.1.1 = {
@@ -6638,7 +6638,7 @@
 168270 = {
 	name = "Jurthum"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168269
 	855.1.1 = {
@@ -6652,7 +6652,7 @@
 168271 = {
 	name = "Abd-as-Sami"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168270
 	885.1.1 = {
@@ -6668,7 +6668,7 @@
 168272 = {
 	name = "Sa_id"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168269
 	860.1.1 = {
@@ -6683,7 +6683,7 @@
 168273 = {
 	name = "Ziyadet"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168272
 	880.1.1 = {
@@ -6697,7 +6697,7 @@
 168274 = {
 	name = "Jurthum"
 	dynasty = 9575
-	religion = "muwalladi"
+	rite = "maliki"
 	culture = baranis
 	father = 168282
 	920.1.1 = {
@@ -6714,7 +6714,7 @@
 	dynasty = 9576 # Barghawata
 	give_nickname = nick_me_al_matghari # al-Matghari
 	trait = masmudi
-	religion = "sufri" # He died a muslim dispite the possibilty of his son claiming prophethood during his lifetime  
+	rite = "sufri" # He died a muslim dispite the possibilty of his son claiming prophethood during his lifetime
 	culture = baranis
 	690.1.1 = {
 		birth = yes
@@ -6725,14 +6725,15 @@
 }
 
 168276 = {
-	name = "Salih" # Salih bin Tarif, Self-Proclaimed Prophet of the Barghawata        
+	name = "Salih" # Salih bin Tarif, Self-Proclaimed Prophet of the Barghawata
 	dynasty = 9576 # Barghawata
 	give_nickname = nick_salih_barghawata
 	trait = masmudi
-	religion = barghawata # He claimed to be a Muslim but hid his true faith from the public        ##It is possible that Salih was nothing more than a sufri, and that Yunus created the myth of prophethood
+	rite = barghawata # He claimed to be a Muslim but hid his true faith from the public        ##It is possible that Salih was nothing more than a sufri, and that Yunus created the myth of prophethood
 	culture = baranis
 	trait = deceitful
 	trait = shrewd
+	trait = lifestyle_mystic
 
 	father = 168275 # Tarif al-Matghari
 	728.1.1 = {
@@ -6750,9 +6751,19 @@
 			}
 		}
 	}
-	792.1.1 = { 
+	792.1.1 = {
 		death = {
 			death_reason = death_salih_baraghawata
+		}
+	}
+	792.2.1 = {
+		effect_even_if_dead = {
+			# ME: Salih ibn Tarif: he left for the East, promising to return; no tomb; registered at Anfa in Tamasna, the seat of his faith
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:4703
+				FAITH = barghawata
+			}
+			me_wali_revered_by_effect = { FAITH = barghawata }
 		}
 	}
 }
@@ -6762,7 +6773,7 @@
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata # He claimed to be a Muslim but hid his true faith from the public
+	rite = barghawata # He claimed to be a Muslim but hid his true faith from the public
 	culture = baranis
 
 	father = 168276 # Salih bin Tarif
@@ -6779,7 +6790,7 @@
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata # He was the first to publicly proclaim his faith.
+	rite = barghawata # He was the first to publicly proclaim his faith.
 	culture = baranis
 
 	father = 168277 # Ilyas/al-Yasa' ibn Salih
@@ -6798,8 +6809,8 @@
 					type = camel_rider
 					stacks = 3
 				}
-				location = province:4703 
-				origin = province:4703 
+				location = province:4703
+				origin = province:4703
 				inheritable = yes
 			}
 	}
@@ -6813,7 +6824,7 @@
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 
 	father = baranis0010 # Mu'ad ibn Ilyas/al-Yasa'
@@ -6830,7 +6841,7 @@
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 
 	father = 168279 # Abu Ghufayl Yahmad ibn Mu'ad
@@ -6847,7 +6858,7 @@
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 
 	father = 168280
@@ -6863,7 +6874,7 @@
 168282 = {
 	name = "Ahmad"
 	dynasty = 9575
-	religion = "najdat"
+	rite = "najdat"
 	culture = baranis
 	father = 168273
 	900.1.1 = {
@@ -6878,7 +6889,7 @@
 	name = "Abd-al-Malik"
 	dynasty = 1046028
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
 	729.1.1 = {
@@ -6899,7 +6910,7 @@
 	father = 200230
 	mother = 200231
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
 	762.1.1 = {
@@ -6914,7 +6925,7 @@
 	name = "Yahya"
 	dynasty = 1046021
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
 	748.1.1 = {
@@ -6929,7 +6940,7 @@
 	name = "Muhammad"
 	dynasty = 1046022
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
 	730.1.1 = {
@@ -6947,7 +6958,7 @@
 210031 = {
 	name = "Ya_qub" # Abū Ḥātim Yaqub ibn Labid al-Malzūzī, Second Ibadi Imam in the Maghreb
 	dynasty = 1048003 # al-Malzūzī, But a Kindi by alligance
-	religion = ibadi
+	rite = ibadi
 	culture = butr #Descended from the Maghila berbers
 	trait = zenata
 
@@ -6966,7 +6977,7 @@
 210032 = {
 	name = "Abu_Qurra" #first Ifrinid leader
 	dynasty = 1048004 # Ifrinid
-	religion = sufri
+	rite = sufri
 	culture = baranis
 	trait = zenata
 
@@ -6982,7 +6993,7 @@
 210033 = {
 	name = "Al-Qasim" # Midrarid leader
 	dynasty = 1048005
-	religion = ibadi
+	rite = ibadi
 	culture = baranis
 	725.1.1 = {
 		birth = "725.1.1"
@@ -6994,7 +7005,7 @@
 210034 = {
 	name = "Azim" # fictitious ruler of Cyrenaica
 	dynasty = 1048006
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	730.1.1 = {
 		birth = "730.1.1"
@@ -7006,7 +7017,7 @@
 210035 = {
 	name = "Hashim" # fictitious ruler of Kabylia
 	dynasty = 1048007
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	735.1.1 = {
 		birth = "735.1.1"
@@ -7018,7 +7029,7 @@
 210036 = {
 	name = "Kamal" # fictitious
 	dynasty = 1048008
-	religion = ibadi
+	rite = ibadi
 	culture = baranis
 	728.1.1 = {
 		birth = "728.1.1"
@@ -7030,7 +7041,7 @@
 210037 = {
 	name = "Abdul-Rahman" # fictitious
 	dynasty = 1048009
-	religion = ibadi
+	rite = ibadi
 	culture = baranis
 	732.1.1 = {
 		birth = "732.1.1"
@@ -7042,7 +7053,7 @@
 210038 = {
 	name = "Hamad" # fictitious
 	dynasty = 1048010
-	religion = ibadi
+	rite = ibadi
 	culture = baranis
 	735.1.1 = {
 		birth = "735.1.1"
@@ -7054,7 +7065,7 @@
 210039 = {
 	name = "Masmud" # fictitious
 	dynasty = 1048011
-	religion = ismaili
+	rite = ismaili
 	culture = baranis
 	733.1.1 = {
 		birth = "733.1.1"
@@ -7066,7 +7077,7 @@
 210040 = {
 	name = "Mahtar" # fictitious
 	dynasty = 1048012
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	740.1.1 = {
 		birth = "740.1.1"
@@ -7077,7 +7088,7 @@
 }
 210041 = {
 	name = "Kadidu" # fictitious
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	840.1.1 = {
@@ -7089,7 +7100,7 @@
 }
 210042 = {
 	name = "Massnsen" # fictitious
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048014
 	culture = guanches
 	840.1.1 = {
@@ -7102,7 +7113,7 @@
 188756 = {
 	name = "Ugdada" # fictitious holder of Ouadane
 	dynasty = 1042177
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	742.1.1 = {
 		birth = yes
@@ -7115,7 +7126,7 @@
 188757 = {
 	name = "Awzal" # fictitious holder of Idjil
 	dynasty = 1042178
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	733.1.1 = {
 		birth = yes
@@ -7128,7 +7139,7 @@
 188758 = {
 	name = "Akateiaji" # fictitious holder of Taghaza
 	dynasty = 1042179
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	718.1.1 = {
 		birth = yes
@@ -7141,7 +7152,7 @@
 188759 = {
 	name = "Gulusa" # fictitious holder of Araouane
 	dynasty = 1042180
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	750.1.1 = {
 		birth = yes
@@ -7154,7 +7165,7 @@
 188760 = {
 	name = "Lacumaces" # fictitious
 	dynasty = 1042179
-	religion = "west_african_pagan"
+	rite = "west_african_pagan"
 	culture = baranis
 	father = 188758
 	748.1.1 = {
@@ -7173,7 +7184,7 @@ baranis0010 = {
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 
 	father = 168277 # Ilyas/al-Yasa' ibn Salih
@@ -7190,7 +7201,7 @@ baranis0011 = {
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 
 	father = 168281 # Abu Mansur 'Isa ibn Abu al-Ansar
@@ -7206,7 +7217,7 @@ baranis0012 = {
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 	father = baranis0011
 	1003.1.1 = {
@@ -7221,7 +7232,7 @@ baranis0013 = {
 	dynasty = 9576 # Barghawata
 	trait = masmudi
 	trait = blood_of_salih
-	religion = barghawata
+	rite = barghawata
 	culture = baranis
 	father = baranis0012
 	1033.1.1 = {
@@ -7237,7 +7248,7 @@ baranis0013 = {
 baranis0014 = {
 	name = "Tifan"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7255,7 +7266,7 @@ baranis0014 = {
 baranis0015 = {
 	name = "T_ar_iq"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7270,7 +7281,7 @@ baranis0015 = {
 baranis0016 = {
 	name = "Amud"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7285,7 +7296,7 @@ baranis0016 = {
 baranis0017 = {
 	name = "Sifal"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7300,7 +7311,7 @@ baranis0017 = {
 baranis0018 = {
 	name = "T_ar_iq"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7315,7 +7326,7 @@ baranis0018 = {
 baranis0019 = {
 	name = "Sifal"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7330,7 +7341,7 @@ baranis0019 = {
 baranis0020 = {
 	name = "Tifan"
 	dynasty = baranisdyn001
-	religion = "ashari"
+	rite = "maliki"
 	culture = baranis
 	trait = masmudi
 
@@ -7350,7 +7361,7 @@ baranis0021 = {
 	name = "Khalaf"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -7366,7 +7377,7 @@ baranis0022 = {
 	name = "Mahtar"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -7382,7 +7393,7 @@ baranis0023 = {
 	name = "Abbad"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -7398,7 +7409,7 @@ baranis0024 = {
 	name = "Talha"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -7414,7 +7425,7 @@ baranis0025 = {
 	name = "Nusayr"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = kutama
 
@@ -7430,7 +7441,7 @@ baranis0026 = {
 	name = "Thabit"
 	#placeholder
 	dynasty = 1027008
-	religion = "ashari"
+	rite = "shafii"
 	trait = kutama
 
 	culture = baranis
@@ -7446,57 +7457,57 @@ danis0000 = {
 	name = "Immeghar" #fictional ancestor
 	dynasty = baranisdyn002
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 	trait = education_stewardship_1
 	trait = masmudi
-	
+
 	700.1.1 = {
 		birth = yes
 	}
 	764.5.2 = {
 		death = {
 			death_reason = death_possessed
-		}	
+		}
 	}
 }
 
-danis0001 = { 
+danis0001 = {
 	name = "Abdul-Azeem" #fictional ancestor
 	dynasty = baranisdyn002
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 	father = danis0000
 	trait = education_stewardship_1
 	trait = masmudi
-	
+
 	736.1.1 = {
 		birth = yes
 	}
 	804.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
-danis0002 = { 
+danis0002 = {
 	name = "Awsaga" #fictional patriarch
 	dynasty = baranisdyn002
-	
-	religion = ashari
-	culture = baranis 
+
+	rite = shafii
+	culture = baranis
 	father = danis0001
 	trait = education_diplomacy_1
 	trait = masmudi
-	
+
 	786.1.1 = {
 		birth = yes
 	}
 	855.6.8 = {
-		death = { 
+		death = {
 			death_reason = death_raid
 			killer = 6878 #Hæsteinn of Nantes
-		}		
+		}
 	}
 }
 
@@ -7504,28 +7515,28 @@ danis0003 = {
 	name = "Amayas" #fictional
 	dynasty = baranisdyn002
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	father = danis0001
 	trait = education_martial_1
 	trait = masmudi
-	
+
 	798.1.1 = {
 		birth = yes
 	}
 	842.12.3 = {
 		death = {
-			death_reason = death_horse_riding_accident 
-		}		
+			death_reason = death_horse_riding_accident
+		}
 	}
 }
 
-danis0004 = { #fictional, a vassal under danis0005, kept it in the family to make things more interesting 
+danis0004 = { #fictional, a vassal under danis0005, kept it in the family to make things more interesting
 	name = "Nizamaddin"
-	dynasty_house = house_danis 
+	dynasty_house = house_danis
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 	father = danis0003
 
 	martial = 10
@@ -7534,13 +7545,13 @@ danis0004 = { #fictional, a vassal under danis0005, kept it in the family to mak
 	stewardship = 6
 	learning = 5
 	prowess = 7
-	
-	trait = one_eyed 
+
+	trait = one_eyed
 	trait = cautious_leader
-	trait = pilgrim 
+	trait = pilgrim
 	trait = education_martial_2
 	trait = masmudi
-	
+
 	827.1.1 = {
 		birth = yes
 	}
@@ -7553,41 +7564,41 @@ danis0004 = { #fictional, a vassal under danis0005, kept it in the family to mak
 		}
 	}
 	889.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
 danis0005 = {
 	name = "Adanis" #Adanis ibn Awsaga (historical), Walih of Beja (848-875) 6 Sheik of Alcacer do Sal & Lisboa (848-883), Coimbra & Viseu (848-875)
 	dna = danis0005_emir_adanis
-	dynasty_house = house_danis 
-	
-	religion = ashari
-	culture = baranis 
+	dynasty_house = house_danis
+
+	rite = shafii
+	culture = baranis
 	father = danis0002
-	
+
 	martial = 10
 	diplomacy = 7
 	intrigue = 5
 	stewardship = 3
 	learning = 4
 	prowess = 11
-	
+
 	trait = diligent
-	trait = stubborn 
+	trait = stubborn
 	trait = zealous
 	trait = education_stewardship_3
 	trait = scarred
 	trait = unyielding_defender
-	trait = architect 
+	trait = architect
 	trait = masmudi
 	disallow_random_traits = yes
-	
+
 	823.1.1 = {
 		birth = yes
 		effect = {
 			add_character_flag = has_scripted_appearance
-		}	
+		}
 	}
 	857.1.1 = {
 		add_spouse = danis0007
@@ -7605,49 +7616,49 @@ danis0005 = {
 			set_relation_rival = {
 				target = character:surunbaqi0001
 				reason = rival_historical
-			} #Sad'un al-Surunbaqi 
-			set_realm_capital = title:c_alcacer_do_sal #Qasr abi Danis was an important fortress that they built 
+			} #Sad'un al-Surunbaqi
+			set_realm_capital = title:c_alcacer_do_sal #Qasr abi Danis was an important fortress that they built
 			learn_language_of_culture = culture:bedouin
 			reverse_add_opinion = {
 				target = character:73683
-				opinion = 20 
+				opinion = 20
 				modifier = favored_vassal_opinion
 			}
 		}
 	}
 	883.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
 danis0006 = { #fictional
 	name = "al-Araka"
-	female = yes 
-	
-	religion = ashari
+	female = yes
+
+	rite = shafii
 	culture = russian # Saqaliba
-	
+
 	trait = beauty_good_2
 	trait = education_intrigue_1
-	
+
 	840.1.1 = {
 		birth = yes
 	}
 	861.3.4 = {
 		death = {
-			death_reason = death_childbirth 
+			death_reason = death_childbirth
 		}
 	}
 }
 
-danis0007 = { 
+danis0007 = {
 	name = "Daw_al_sabah" #fictional
 	dna = danis0007_emira_daw
-	female = yes 
-#	dynasty = salimid 
-	
-	religion = ashari
-	culture = baranis 
+	female = yes
+#	dynasty = salimid
+
+	rite = shafii
+	culture = baranis
 
 #	father = baranis0007 (Salmid Duplicate)
 
@@ -7658,15 +7669,15 @@ danis0007 = {
 	learning = 8
 
 	trait = gluttonous
-	trait = vengeful 
-	trait = zealous 
+	trait = vengeful
+	trait = zealous
 	trait = education_intrigue_3
-	
+
 	837.1.1 = {
 		birth = yes
 	}
 	895.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
@@ -7674,16 +7685,16 @@ danis0008 = { #Hayzuran (fictional daughter)
 	name = "Hayzuran"
 	dynasty_house = house_danis
 	female = yes
-	
+
 	father = danis0005
 	mother = danis0006
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
-	trait = child_of_concubine_female 
+	trait = child_of_concubine_female
 	trait = masmudi
-	
+
 	859.1.1 = {
 		birth = yes
 	}
@@ -7694,23 +7705,23 @@ danis0008 = { #Hayzuran (fictional daughter)
 		trait = education_diplomacy_1
 	}
 	909.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
 danis0009 = { #Mas'ud ibn Abu Danis (historical), Sheik of Alcacer do Sal & Lisboa (883-930)
 	name = "Mas_ud"
 	dynasty_house = house_danis
-	
+
 	father = danis0005
 	mother = danis0006
 
-	religion = ashari 
+	rite = shafii
 	culture = baranis
 
-	trait = child_of_concubine_male 
+	trait = child_of_concubine_male
 	trait = masmudi
-	
+
 	861.3.4 = {
 		birth = yes
 	}
@@ -7718,21 +7729,21 @@ danis0009 = { #Mas'ud ibn Abu Danis (historical), Sheik of Alcacer do Sal & Lisb
 		trait = education_diplomacy_2
 	}
 	930.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
 danis0010 = { #Yahya ibn Abu Danis (historical)
 	name = "Yahya"
 	dynasty_house = house_danis
-	
+
 	father = danis0005
 	mother = danis0007
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 
-	
+
 	trait = masmudi
 
 	865.1.1 = {
@@ -7742,7 +7753,7 @@ danis0010 = { #Yahya ibn Abu Danis (historical)
 		trait = education_martial_2
 	}
 	941.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
@@ -7750,18 +7761,18 @@ danis0011 = { #Tariwelt (fictional)
 	name = "Tariwelt"
 	female = yes
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 	trait = education_stewardship_1
-	
+
 	838.1.1 = {
 		birth = yes
 	}
 
 	864.11.2 = {
 		death = {
-			death_reason = death_treatment 
-		}	
+			death_reason = death_treatment
+		}
 	}
 }
 
@@ -7770,8 +7781,8 @@ danis0012 = { #Izza (fictional)
 	dynasty_house = house_danis
 	female = yes
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 
 	trait = masmudi
 
@@ -7785,7 +7796,7 @@ danis0012 = { #Izza (fictional)
 		trait = education_stewardship_1
 	}
 	907.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
@@ -7793,14 +7804,14 @@ danis0013 = { #Darras ibn Abu Danis (fictional)
 	name = "Darras"
 	dynasty_house = house_danis
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 
 	father = danis0004
 	mother = danis0011
 
-	trait = albino 
-	trait = shrewd 
+	trait = albino
+	trait = shrewd
 	trait = masmudi
 
 	861.1.1 = {
@@ -7810,17 +7821,17 @@ danis0013 = { #Darras ibn Abu Danis (fictional)
 		trait = education_martial_1
 	}
 	894.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
 danis0014 = { #Hadiya (fictional)
 	name = "Hadiya"
 	dynasty_house = house_danis
-	female = yes 
+	female = yes
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 
 	father = danis0002
 
@@ -7832,7 +7843,7 @@ danis0014 = { #Hadiya (fictional)
 	}
 
 	921.1.1 = {
-		death = yes		
+		death = yes
 	}
 }
 
@@ -7840,12 +7851,12 @@ danis0015 = { #Aheyyad (fictional)
 	name = "Aheyyad"
 	dynasty_house = house_danis
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
 	father = danis0002
 
-	trait = education_martial_1 
+	trait = education_martial_1
 	trait = masmudi
 
 	834.1.1 = {
@@ -7853,20 +7864,20 @@ danis0015 = { #Aheyyad (fictional)
 	}
 
 	855.6.8 = {
-		death = { 
+		death = {
 			death_reason = death_raid
 			killer = 6878 #Hæsteinn of Nantes
-		}		
+		}
 	}
 }
 
 danis0016 = { #Aaliyah (fictional)
 	name = "Aaliyah"
 	dynasty_house = house_danis
-	female = yes 
+	female = yes
 
-	religion = ashari
-	culture = baranis 
+	rite = shafii
+	culture = baranis
 
 	father = danis0002
 
@@ -7878,9 +7889,9 @@ danis0016 = { #Aaliyah (fictional)
 	}
 
 	855.6.8 = {
-		death = { 
-			death_reason = death_disappearance 
-		}		
+		death = {
+			death_reason = death_disappearance
+		}
 	}
 }
 
@@ -7888,7 +7899,7 @@ danis0017 = { #'Abd Allah ubn Umar ibn Abu Danis (historical, used to plug a tit
 	name = "Abdallah"
 	dynasty_house = house_danis
 
-	religion = ashari
+	rite = shafii
 	culture = baranis
 
 	father = baranis0052 # Umar ibn Adanis
@@ -7904,13 +7915,13 @@ danis0017 = { #'Abd Allah ubn Umar ibn Abu Danis (historical, used to plug a tit
 		death = yes
 	}
 }
-	
+
 # Zirid sons of Tamim
 
 baranis0027 = {
 	name = "Ayyub" # Ayyub ibn Tamim, son of the Zirid Emir and Governer of Sicily
 	dynasty = 595 # Zirid
-	religion = "ashari"
+	rite = "shafii"
 	culture = baranis
 	trait = deceitful
 	trait = education_martial_4
@@ -7927,13 +7938,13 @@ baranis0027 = {
 khali0001 = { #Banu Khali ancestor (fictional)
 	name = "Khali"
 	dynasty_house = house_khali
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_1
 	trait = masmudi
 
 	father = danis0000
- 
+
 	731.1.1 = {
 		birth = yes
 	}
@@ -7946,14 +7957,14 @@ khali0001 = { #Banu Khali ancestor (fictional)
 khali0002 = { #Banu Khali ancestor (fictional)
 	name = "Yahya"
 	dynasty_house = house_khali
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = pilgrim
 	trait = education_diplomacy_1
 	trait = masmudi
 
 	father = khali0001
- 
+
 	762.1.1 = {
 		birth = yes
 	}
@@ -7968,7 +7979,7 @@ khali0002 = { #Banu Khali ancestor (fictional)
 khali0003 = {
 	name = "Bakr" # Bakr ibn Yahya, Walih of Algarve (827-870) & Sheik of Faro & Silves (827-870)
 	dynasty_house = house_khali
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	martial = 7
 	diplomacy = 9
@@ -7999,7 +8010,7 @@ khali0003 = {
 khali0004 = {
 	name = "Yahya" # Yahya ibn Bakr, Emir of Algarve (870-901) & Sheik of Faro & Silves (875-901)
 	dynasty_house = house_khali
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	martial = 8
 	diplomacy = 4
@@ -8012,12 +8023,12 @@ khali0004 = {
 	trait = paranoid
 	trait = education_martial_2
 	trait = masmudi
- 
+
 	father = khali0003
 	mother = khali0008
 
 
- 
+
 	834.1.1 = {
 		birth = yes
 	}
@@ -8031,14 +8042,14 @@ khali0005 = { #Banu Khali scion (fictional)
 	name = "Tiziri"
 	dynasty_house = house_khali
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_intrigue_1
 	trait = masmudi
 
 	father = khali0003
 	mother = khali0008
- 
+
 	837.1.1 = {
 		birth = yes
 	}
@@ -8051,7 +8062,7 @@ khali0005 = { #Banu Khali scion (fictional)
 khali0006 = { #Banu Khali scion (fictional)
 	name = "Mu_izz"
 	dynasty_house = house_khali
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = intellect_bad_2
 	trait = education_learning_1
@@ -8059,7 +8070,7 @@ khali0006 = { #Banu Khali scion (fictional)
 
 	father = khali0003
 	mother = khali0008
- 
+
 	838.1.1 = {
 		birth = yes
 	}
@@ -8073,14 +8084,14 @@ khali0007 = { #Banu Khali scion (fictional)
 	name = "Nuwayra"
 	dynasty_house = house_khali
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_diplomacy_1
 	trait = masmudi
 
 	father = khali0003
 	mother = khali0008
- 
+
 	849.1.1 = {
 		birth = yes
 	}
@@ -8093,7 +8104,7 @@ khali0007 = { #Banu Khali scion (fictional)
 khali0008 = { #Banu Khali matriarch (fictional)
 	name = "Hawwa"
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -8104,7 +8115,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	900.1.1 = {
 		death = yes
 	}
- 
+
 }
 
 3900 = {
@@ -8114,7 +8125,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 2
 	intrigue = 6
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = generous
 	trait = wrathful
@@ -8142,7 +8153,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 5
 	intrigue = 5
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = honest
 	trait = education_intrigue_1
@@ -8170,7 +8181,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = wrathful
 	trait = education_intrigue_3
@@ -8187,7 +8198,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 		add_pressed_claim = title:c_medellin
 		add_pressed_claim = title:c_merida
 		add_pressed_claim = title:c_plasencia
- 
+
 	}
 	1079.1.1 = {
 		name = "Al-Mutawakkil"
@@ -8233,7 +8244,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 6
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = wrathful
 	trait = cynical
@@ -8261,7 +8272,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 8
 	intrigue = 12
 	stewardship = 7
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	disallow_random_traits = yes
 	trait = just
@@ -8285,9 +8296,9 @@ khali0008 = { #Banu Khali matriarch (fictional)
 				target = character:3214
 				reason = rival_historical
 			} # Muhammad ibn Abbad, 26 year old in 1066, and heir to the Abbadid Emirate
-			
+
 			learn_language = language_arabic
-			
+
 			refund_all_perks = yes
 			remove_all_perk_lifestyle_traits_effect = yes
 			add_intrigue_lifestyle_perk_points = -10
@@ -8324,7 +8335,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 2
 	intrigue = 7
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	disallow_random_traits = yes
 	trait = calm
@@ -8362,7 +8373,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 8
 	intrigue = 7
 	stewardship = 8
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = gluttonous
 	trait = education_diplomacy_3
@@ -8381,7 +8392,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	dna = 20858_zahida
 	female = yes
 	dynasty = 570
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	disallow_random_traits = yes
 	trait = generous
@@ -8395,7 +8406,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	1038.1.1 = {
 		birth = yes
 	}
-	1067.9.1 = { #left as a historical note from the FP2 history pass, but keeping her alive for the Rags to Riches bookmark. 
+	1067.9.1 = { #left as a historical note from the FP2 history pass, but keeping her alive for the Rags to Riches bookmark.
 		death = yes
 	}
 }
@@ -8403,7 +8414,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 20883 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Hudayl, Sheik of Albarracín (1045-1103)
 	dynasty = 586 # Banu Razin Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_4
 	trait = hawwara
@@ -8425,7 +8436,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 3
 	intrigue = 4
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = hawwara
 
@@ -8449,7 +8460,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 2
 	intrigue = 6
 	stewardship = 4
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = generous
 	trait = wrathful
@@ -8475,7 +8486,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 
 	father = 3902 # Emir al-Mutawakkil of Badajoz
@@ -8501,7 +8512,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	diplomacy = 8
 	intrigue = 8
 	stewardship = 5
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 
 	father = 3902 # Emir al-Mutawakkil of Badajoz
@@ -8524,7 +8535,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	name = "Abda" # Abda ibn Abd al-Rahman, wife of Emir al-Muzaffar of Zaragoza (73185 - yemeni.txt)
 	female = yes
 	dynasty = 570 # Banu Dhu-l-nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_2
 	trait = hawwara
@@ -8542,7 +8553,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 73194 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Isma'il, Sheik of Cuenca (980-1018) & Uclés (984-1018)
 	dynasty = 570 # Banu Dhu-l-nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_martial_3
 	trait = hawwara
@@ -8560,7 +8571,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 73195 = {
 	name = "Isma_il" # Isma'il ibn Yahya, Sheik of Cuenca & Uclés (1066-1074)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	disallow_random_traits = yes
 	trait = honest
@@ -8582,7 +8593,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 73196 = {
 	name = "Muhammad" # Muhammad ibn Umar, known as al-Mansur III, Emir of Badajoz (1094-1095) & Sheik of Cáceres (1081-1095)
 	dynasty = 573 # Banu-l-Aftas Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 
 	father = 3902 # Emir al-Mutawakkil of Badajoz
@@ -8604,7 +8615,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 73200 = {
 	name = "Jyad" # Jyad
 	dynasty = 12196 # Banu Jyad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -8622,7 +8633,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 73201 = {
 	name = "Muhammad"
 	dynasty = 12196
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	father = 73200
 	1084.1.1 = {
@@ -8651,7 +8662,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 	name = "Thashim"
 	female = yes
 	dynasty = 12196
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	father = 73200
 	1105.1.1 = {
@@ -8665,7 +8676,7 @@ khali0008 = { #Banu Khali matriarch (fictional)
 baranis0052 = {
 	name = "Umar" # Umar ibn Adanis
 	dynasty_house = house_danis # House Banu Adanis
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_stewardship_2
 
@@ -8685,7 +8696,7 @@ baranis0052 = {
 baranis0053 = {
 	name = "Musa" # Musa ibn Suleyman, Sheik of Uclés (893-908)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_1
 	trait = hawwara
@@ -8706,7 +8717,7 @@ baranis0053 = {
 baranis0054 = {
 	name = "Mutarrif" # Mutarrif ibn Musa, Sheik of Uclés (920-924)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_intrigue_2
 	trait = hawwara
@@ -8724,7 +8735,7 @@ baranis0054 = {
 baranis0055 = {
 	name = "al-Fath" # al-Fath ibn Musa, Sheik of Uclés (908-920)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_stewardship_1
 	trait = hawwara
@@ -8742,7 +8753,7 @@ baranis0055 = {
 baranis0056 = {
 	name = "Yahya" # Yahya ibn al-Fath, Sheik of Uclés (924-942) & Cuenca (925-942)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_martial_2
 	trait = hawwara
@@ -8760,7 +8771,7 @@ baranis0056 = {
 baranis0057 = {
 	name = "Amir" # Amir ibn Mutarrif
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_martial_1
 	trait = hawwara
@@ -8778,7 +8789,7 @@ baranis0057 = {
 baranis0058 = {
 	name = "al-Fath" # al-Fath ibn Yahya, Sheik of Uclés & Cuenca (942-966)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_2
 	trait = hawwara
@@ -8796,7 +8807,7 @@ baranis0058 = {
 baranis0059 = {
 	name = "Isma_il" # Isma'il ibn Amir, Sheik of Cuenca (966-980)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_2
 	trait = hawwara
@@ -8814,7 +8825,7 @@ baranis0059 = {
 baranis0060 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman, real name unknown, ibn Isma'il, Sheik of Madrid (1043-1075)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_intrigue_1
 	trait = hawwara
@@ -8833,7 +8844,7 @@ baranis0061 = {
 	name = "Kassilda" # Saint Kassilda
 	female = yes
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty
-	religion = mozarabic_church
+	rite = mozarabic_church
 	culture = baranis
 	trait = education_learning_3
 	trait = hawwara
@@ -8859,7 +8870,7 @@ baranis0061 = {
 		}
 	}
 	1085.5.6 = {
-		religion = catholic
+		rite = roman_rite
 	}
 	1127.1.1 = {
 		death = yes
@@ -8870,7 +8881,7 @@ baranis0061 = {
 baranis0062 = {
 	name = "Rah" # Rah, wife of Mu'awiya ibn Hisham (163000 - levantine.txt)
 	female = yes
-	religion = ibadi
+	rite = ibadi
 	culture = baranis
 	trait = education_diplomacy_1
 
@@ -8885,7 +8896,7 @@ baranis0062 = {
 baranis0063 = {
 	name = "Suleyman" # Suleyman Banu Dhu-l-Nun, Sheik of Uclés (867-893)
 	dynasty = 570 # Banu Dhu-l-Nun Dynasty, Founder
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_diplomacy_3
 	trait = hawwara
@@ -8901,7 +8912,7 @@ baranis0063 = {
 baranis0064 = {
 	name = "Qasim" # Qasim, Sheik of Teruel (990-1009)
 	dynasty = banu_qasim # Banu Qasim Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -8916,7 +8927,7 @@ baranis0064 = {
 baranis0065 = {
 	name = "Abdallah" # Abdallah ibn Qasim, known as Nizam al-Dawla (I), Sheik of Teruel (1009-1030)
 	dynasty = banu_qasim # Banu Qasim Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_4
 
@@ -8936,7 +8947,7 @@ baranis0065 = {
 baranis0066 = {
 	name = "Muhammad" # Muhammad ibn Abdallah, known as Yumn ud-Dawla, Sheik of Teruel (1030-1042)
 	dynasty = banu_qasim # Banu Qasim Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_3
 
@@ -8956,7 +8967,7 @@ baranis0066 = {
 baranis0067 = {
 	name = "Ahmad" # Ahmad ibn Muhammad ibn Abdallah, known as Adud al-Dawla, Sheik of Teruel (1042-1043)
 	dynasty = banu_qasim # Banu Qasim Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -8979,7 +8990,7 @@ baranis0067 = {
 baranis0068 = {
 	name = "Lunja" # Lunja, name unknown, bint Qasim, wife of Sheik Adud al-Dawla of Teruel (baranis0067) & Nizam al-Dawla (II) of Teruel (baranis0070)
 	female = yes
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_1
 
@@ -8995,7 +9006,7 @@ baranis0068 = {
 baranis0069 = {
 	name = "Muhammad" # Muhammad ibn Ahmad, Sheik of Teruel (1043)
 	dynasty = banu_qasim # Banu Qasim Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = content
 	trait = education_stewardship_1
@@ -9017,7 +9028,7 @@ baranis0069 = {
 baranis0070 = {
 	name = "Abdallah" # Abdallah ibn Muhammad, known as Nizam al-Dawla (II), Sheik of Teruel (1043-1106)
 	dynasty = banu_qasim # Banu Qasim Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_2
 
@@ -9040,7 +9051,7 @@ baranis0070 = {
 baranis0071 = {
 	name = "Buluggin" # Buluggin ibn Habus
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_1
 	trait = sanhaja
@@ -9058,7 +9069,7 @@ baranis0071 = {
 baranis0072 = {
 	name = "Hubasa" # Hubasa ibn Maksan
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_1
 	trait = sanhaja
@@ -9076,7 +9087,7 @@ baranis0072 = {
 baranis0073 = {
 	name = "Yaddair" # Yaddair ibn Hubasa
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_intrigue_2
 	trait = sanhaja
@@ -9097,7 +9108,7 @@ baranis0073 = {
 baranis0074 = {
 	name = "Maksan" # Maksan ibn Badis ibn Habus, Sheikh of Jaen (1065-1067 & 1073-1074)
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 	trait = sanhaja
@@ -9116,7 +9127,7 @@ baranis0075 = {
 	name = "Hadiya" # Hadiya, name unknown, bint Ali, wife of Emir (Caliph) Muhammad ibn al-Qasim of Algeciras (159490)
 	female = yes
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -9134,7 +9145,7 @@ baranis0075 = {
 baranis0076 = {
 	name = "Ali" # Ali ibn Idris
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_2
@@ -9152,7 +9163,7 @@ baranis0076 = {
 baranis0077 = {
 	name = "Hasan" # Hasan ibn Idris
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -9174,7 +9185,7 @@ baranis0078 = {
 	name = "Rahima" # Rahima, name unknown, bint Ali, wife of Emir Hasan ibn Muhammad of Rif (159495) who she poison in revenge for the assassination of her brother Yahya
 	female = yes
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -9195,7 +9206,7 @@ baranis0078 = {
 baranis0079 = {
 	name = "Lubb" # Lubb Banu Razin, Sheik of Albarracin (968-1000)
 	dynasty = 586 # Banu Razin Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 	trait = hawwara
@@ -9211,7 +9222,7 @@ baranis0079 = {
 baranis0080 = {
 	name = "Jalaf" # Jalaf ibn Lubb, Sheik of Albarracin (1000-1012)
 	dynasty = 586 # Banu Razin Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_martial_1
 	trait = hawwara
@@ -9229,7 +9240,7 @@ baranis0080 = {
 baranis0081 = {
 	name = "Hudhayl" # Hudhayl ibn Jalaf, Sheik of Albarracin (1012-1045)
 	dynasty = 586 # Banu Razin Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_3
 	trait = hawwara
@@ -9248,7 +9259,7 @@ baranis0082 = {
 	name = "Barakah" # Barakah, name unknown, bint Muhammad
 	female = yes
 	dynasty = 101700 # Banu Jizrun Dynasty
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_1
 
@@ -9271,7 +9282,7 @@ baranis0082 = {
 baranis0083 = {
 	name = "Dimah" # Dimah, name unknown, wife of Sheik al-Qaim of Cadiz (73221)
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_diplomacy_1
 
@@ -9290,7 +9301,7 @@ baranis0084 = {
 	name = "Durriyya" # Durriya, name unknown, bint Abd al-Malik, wife of Sheik Ubayd Allah al-Urqubí of Alarcon (baranis0085)
 	female = yes
 	dynasty = 586 # Banu Razin Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = hawwara
 
@@ -9310,7 +9321,7 @@ baranis0084 = {
 baranis0085 = {
 	name = "Ubayd-Allah" # Ubayd Allah al-Urqubi, Sheik of Alarcon (1085-1100)
 	dynasty = al-urqubi # Banu al-Urqubi Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 
 	1060.1.1 = {
@@ -9334,7 +9345,7 @@ baranis0085 = {
 baranis0086 = {
 	name = "Hudhayl" # Hucalao, Sheik of Molina (1036-1082)
 	dynasty = mulinid # Sheik of Molina Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_2
 
@@ -9352,7 +9363,7 @@ baranis0086 = {
 baranis0087 = {
 	name = "Ishaq" # Ishaq al-Wardanasi al-Birzali
 	dynasty = al-birzali # Banu al-Birzali Dynasty
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = education_stewardship_1
 	trait = zenata
@@ -9368,7 +9379,7 @@ baranis0087 = {
 baranis0088 = {
 	name = "Abdallah" # Abdallah ibn Ishaq, Naib of Carmona (1013-1024)
 	dynasty = al-birzali # Banu al-Birzali Dynasty
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = education_stewardship_1
 	trait = zenata
@@ -9386,7 +9397,7 @@ baranis0088 = {
 baranis0089 = {
 	name = "Muhammad" # Abu Abdullah Muhammad ibn Abdallah, Naib of Carmona (1024-1048)
 	dynasty = al-birzali # Banu al-Birzali Dynasty
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = education_martial_2
 	trait = zenata
@@ -9407,7 +9418,7 @@ baranis0089 = {
 baranis0090 = {
 	name = "Ishaq" # Ishaq ibn Muhammad, Naib of Carmona (1048-1053)
 	dynasty = al-birzali # Banu al-Birzali Dynasty
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = education_martial_1
 	trait = zenata
@@ -9428,7 +9439,7 @@ baranis0090 = {
 baranis0091 = {
 	name = "al-Aziz" # al-Aziz ibn Muhammad, known as al-Mustazhir, Naib of Carmona (1053-1067), and would later serve as the Wali of Hisn al-Mudawar after giving Carmona away
 	dynasty = al-birzali # Banu al-Birzali Dynasty
-	religion = wahbiya
+	rite = wahbiya
 	culture = baranis
 	trait = education_diplomacy_1
 	trait = zenata
@@ -9449,7 +9460,7 @@ baranis0091 = {
 baranis0092 = {
 	name = "Yusuf" # Ibn Masarra, Emir of Toledo (1010-1012) & Sheik of Alarcon, Alarcos, Calatrava, Madrid, Malagon, Soria & Toledo (1010-1012)
 	dynasty = banu_masarra # Banu Masarra Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_1
 
@@ -9464,7 +9475,7 @@ baranis0092 = {
 baranis0093 = {
 	name = "Ishaq" # Ishaq, name unknown, ibn Masarra
 	dynasty = banu_masarra # Banu Masarra Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -9481,7 +9492,7 @@ baranis0093 = {
 baranis0094 = {
 	name = "Ya_is" # Ya'is ibn Muhammad, Emir of Toledo (1012-1026) & Sheik of Alarcon, Alarcos, Madrid, Malagon, Molina, Soria & Toledo (1012-1026), Calatrava (1012-1018) & Cuenca (1018-1026)
 	dynasty = muhammadid # Ya'is ibn Muhammad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_2
 
@@ -9496,7 +9507,7 @@ baranis0094 = {
 baranis0095 = {
 	name = "Muhammad" # Muhammad
 	dynasty = muhammadid # Ya'is ibn Muhammad Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_diplomacy_1
 
@@ -9511,7 +9522,7 @@ baranis0095 = {
 baranis0096 = {
 	name = "Abd-al-Rahman" # Abd al-Rahman ibn Manyuh, Emir of Toledo (1026-1030) & Sheik of Alarcon, Alarcos, Cuenca, Madrid, Malagon, Molina, Soria & Toledo (1026-1030)
 	dynasty = banu_manyuh # Banu Manyuh Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -9526,7 +9537,7 @@ baranis0096 = {
 baranis0097 = {
 	name = "Abd-al-Malik" # Abd al-Malik ibn Abd al-Rahman, Emir of Toledo (1030-1032) & Sheik of Alarcon, Alarcos, Cuenca, Madrid, Malagon, Molina, Soria & Toledo (1030-1032)
 	dynasty = banu_manyuh # Banu Manyuh Dynasty
-	religion = muwalladi
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_1
 
@@ -9543,7 +9554,7 @@ baranis0097 = {
 baranis0098 = {
 	name = "Ibrahim" # Ibrahim ibn Abdallah
 	dynasty = 12303 # Banu Masarra Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_learning_1
 
@@ -9560,7 +9571,7 @@ baranis0098 = {
 baranis0099 = {
 	name = "Muhammad" # Muhammad ibn Abdallah
 	dynasty = 12303 # Banu Masarra Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_learning_1
 
@@ -9578,13 +9589,13 @@ khali0009 = {
 	name = "Bakr" # Bakr ibn Yahya, Emir of Algarve (901-920) & Sheik of Faro & Silves (901-920)
 	dynasty_house = house_khali
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_2
 	trait = masmudi
 
 	father = khali0004 # Emir Yahya ibn Bakr of Algarve
- 
+
 	867.1.1 = {
 		birth = yes
 	}
@@ -9597,7 +9608,7 @@ khali0009 = {
 32951 = {
 	name = "Tamim" # Tamim ibn Buluggin, Sheik of Malaga (1073-1090)
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = sanhaja
 
@@ -9621,7 +9632,7 @@ khali0009 = {
 32952 = {
 	name = "Abdallah" # Abdallah ibn Buluggin, Emir of Granada (1073-1090) & Sheik of Granada (1073-1090)
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = lifestyle_poet
 	trait = sanhaja
@@ -9649,7 +9660,7 @@ khali0009 = {
 32991 = {
 	name = "Buluggin" # Buluggin ibn Badis, Sheik of Malaga (1057-1064)
 	dynasty = 595 # Zirid Dynasty
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = education_stewardship_2
 	trait = sanhaja
@@ -9676,7 +9687,7 @@ khali0009 = {
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = just
 	trait = wrathful
@@ -9703,7 +9714,7 @@ khali0009 = {
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_stewardship_2
 	trait = sanhaja
@@ -9725,7 +9736,7 @@ khali0009 = {
 	diplomacy = 5
 	intrigue = 9
 	stewardship = 6
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = greedy
 	trait = arbitrary
@@ -9733,7 +9744,7 @@ khali0009 = {
 	trait = sanhaja
 
 	father = 45015 # Emir Habus ibn Maksan of Granada
- 
+
 	1002.1.1 = {
 		birth = yes
 	}
@@ -9749,7 +9760,7 @@ khali0009 = {
 	diplomacy = 4
 	intrigue = 4
 	stewardship = 6
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_1
 	trait = sanhaja
@@ -9767,7 +9778,7 @@ khali0009 = {
 73219 = {
 	name = "Muhammad" # Muhammad ibn Jizrun, Sheik of Cadiz (1011-1029)
 	dynasty = 101700 # Banu Jizrun Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_martial_2
 
@@ -9782,7 +9793,7 @@ khali0009 = {
 73220 = {
 	name = "Abdun" # Abdun ibn Muhammad, Sheik of Cadiz (1029-1053)
 	dynasty = 101700 # Banu Jizrun Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_stewardship_2
 
@@ -9802,12 +9813,12 @@ khali0009 = {
 73221 = {
 	name = "Muhammad" # Muhammad ibn Muhammad, known as al-Qaim, Sheik of Cadiz (1053-1068)
 	dynasty = 101700 # Banu Jizrun Dynasty
-	religion = ashari
+	rite = maliki
 	culture = baranis
 	trait = education_intrigue_1
 
 	father = 73219 # Sheik Muhammad ibn Jizrun of Cadiz
- 
+
 	1010.1.1 = {
 		birth = yes
 	}
@@ -9828,7 +9839,7 @@ khali0009 = {
 73687 = {
 	name = "Ali" # Ali (I) ibn Hammud, Muwalladi Caliph (1016-1018), Sultan of Andalusia (1016-1018), Walih of Rif (1011-1016),  &Sheik of Ceuta & Tangiers (1011-1016), Cabra, Cordoba, Moura & Niebla (1016-1018)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_2
@@ -9851,7 +9862,7 @@ khali0009 = {
 73688 = {
 	name = "Hammud" # Hammud ibn Maymun
 	dynasty_house = house_hammudid # House Hammudid
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	trait = education_martial_1
@@ -9869,7 +9880,7 @@ khali0009 = {
 73689 = {
 	name = "al-Qasim" # al-Qasim [I] ibn Hammud, Muwalladi Caliph (1018-1021 & 1023-1036), Sultan of Andalusia (1018-1021 & 1023), Walih of Seville (1011-1023) & Sheik of Sevilla (1011-1023), Cabra, Cordoba, & Moura (1018-1021 & 1023-1036) & Niebla (1018-1021)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_3
@@ -9896,7 +9907,7 @@ khali0009 = {
 73690 = {
 	name = "Yahya" # Yahya (I) ibn Ali, Muwalladi Caliph (1021-1023 & 1025-1027), Sultan of Andalusia (1021-1023 & 1025-1027), Emir of Rif (1016-1035), Sheik of Cauta & Tangiers (1016-1018), Algeciras & Malaga (1018-1035), Cabra, Cordoba & Moura (1021-1023 & 1025-1027), Niebla (1021-1023) & Naib of Carmona (1035)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_intrigue_3
@@ -9923,7 +9934,7 @@ khali0009 = {
 73949 = {
 	name = "Masarra" # Masarra, creator of the Masarrid Doctrine
 	dynasty = 12303 # Banu Masarra Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_learning_3
 
@@ -9941,7 +9952,7 @@ khali0009 = {
 73950 = {
 	name = "Ibrahim" # Ibrahim ibn Masarra
 	dynasty = 12303 # Banu Masarra Dyansty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_learning_1
 
@@ -9961,7 +9972,7 @@ khali0009 = {
 73951 = {
 	name = "Abdallah" # Abdallah ibn Ibrahim
 	dynasty = 12303 # Banu Masarra Dynasty
-	religion = ashari
+	rite = shafii
 	culture = baranis
 	trait = education_learning_2
 
@@ -9981,7 +9992,7 @@ khali0009 = {
 159490 = {
 	name = "Muhammad" # Muhammad ibn al-Qasim, Emir (Caliph) of Algeciras (1035-1048)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_3
@@ -10006,7 +10017,7 @@ khali0009 = {
 	name = "Fatima" # Fatima bint al-Qasim, wife of Caliph Yahya I of Andalusia (73690)
 	female = yes
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -10024,7 +10035,7 @@ khali0009 = {
 159492 = {
 	name = "al-Qasim" # al-Qasim (II) ibn Muhammad, Emir (Caliph) of Algeciras (1048-1055)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_2
@@ -10050,7 +10061,7 @@ khali0009 = {
 159493 = {
 	name = "Maymun" # Maymun ibn Hammud
 	dynasty_house = house_hammudid # House Hammudid
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_1
@@ -10068,7 +10079,7 @@ khali0009 = {
 159494 = {
 	name = "Idris" # Idris ibn Yahya
 	dynasty_house = house_hammudid # House Hammudid
-	religion = "zayidi"
+	rite = "zayidi"
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_1
@@ -10086,7 +10097,7 @@ khali0009 = {
 159495 = {
 	name = "Hasan" # Hasan 'al-Mustansir Billah' ibn Yahya, Wali of Ceuta & Tangiers (1035-1040) & Emir (Caliph) of ar-Rif (1039-1042) & Malaga (1040-1042)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_3
@@ -10111,13 +10122,13 @@ khali0009 = {
 159496 = {
 	name = "Yahya" # Yahya 'al-Qa'im bi-Amr Allah' ibn Idris, Emir (Caliph) of Malaga (1039-1040)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
 
 	father = 159497 # Emir Idris I of Rif
- 
+
 	1010.1.1 = {
 		birth = yes
 	}
@@ -10135,7 +10146,7 @@ khali0009 = {
 159497 = {
 	name = "Idris" # Idris (I) ibn Ali, Emir of Rif (1035-1039) & Sheik of Algeciras & Malaga (1016-1018), Ceuta & Tangiers (1018-1039)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_2
@@ -10158,7 +10169,7 @@ khali0009 = {
 159498 = {
 	name = "Idris" # Idris (II) 'al-Muta'ali/Aali Billah' ibn Yahya, Emir of Rif (1043-1055)&  Sheik Ceuta & Tangiers (1040-1041 & 1043-1053) & Malaga (1043-1046 & 1053-1055)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -10183,7 +10194,7 @@ khali0009 = {
 159499 = {
 	name = "Muhammad" # Muhammad 'al-Mahdi Billah' ibn Idris, Emir (Caliph) of Malaga (1046-1053)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_stewardship_2
@@ -10207,7 +10218,7 @@ khali0009 = {
 159500 = {
 	name = "Yahya" # Yahya ibn Idris
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -10225,7 +10236,7 @@ khali0009 = {
 200233 = {
 	name = "Idris" # Idris (III) 'as-Sami Billah' ibn Yahya, Sheik of Malaga (1053)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = lunatic_1
 	trait = sayyid
@@ -10247,7 +10258,7 @@ khali0009 = {
 200234 = {
 	name = "Muhammad" # Muhammad 'al-Musta'li Billah' ibn Idris, Emir (Caliph) of Malaga (1055-1058) & Melilla (1064-1073)
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = sayyid
 	trait = education_diplomacy_1
@@ -10269,7 +10280,7 @@ khali0009 = {
 	name = "Rahima" # Rahima bint Idris, wife of Sheik Buluggin ibn Badis of Malaga (32991)
 	female = yes
 	dynasty_house = house_hammudid # House Hammudid
-	religion = muwalladi
+	rite = maliki
 	culture = maghrebi
 	trait = education_diplomacy_2
 	trait = sayyid
@@ -10290,7 +10301,7 @@ khali0009 = {
 almohad_1 = {
 	name = "Idris"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224000
@@ -10305,7 +10316,7 @@ almohad_1 = {
 almohad_2 = {
 	name = "Ibrahim"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224000
@@ -10320,7 +10331,7 @@ almohad_2 = {
 almohad_3 = {
 	name = "Umar"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224000
@@ -10335,7 +10346,7 @@ almohad_3 = {
 almohad_4 = {
 	name = "Muhammad"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224000
@@ -10350,7 +10361,7 @@ almohad_4 = {
 almohad_5 = {
 	name = "Abd-al-Wahid" # Abd al-Wahid I
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 224000
@@ -10365,7 +10376,7 @@ almohad_5 = {
 almohad_6 = {
 	name = "Abd-al-Rahman"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155085
@@ -10380,7 +10391,7 @@ almohad_6 = {
 almohad_7 = {
 	name = "Yahya"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155085
@@ -10395,7 +10406,7 @@ almohad_7 = {
 almohad_8 = {
 	name = "Ali"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155085
@@ -10410,7 +10421,7 @@ almohad_8 = {
 almohad_9 = {
 	name = "Yaqub"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155085
@@ -10425,7 +10436,7 @@ almohad_9 = {
 almohad_10 = {
 	name = "Sulayman"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155085
@@ -10440,7 +10451,7 @@ almohad_10 = {
 almohad_11 = {
 	name = "Muhammad"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 155085
@@ -10455,7 +10466,7 @@ almohad_11 = {
 almohad_12 = {
 	name = "Abd-ar-Rahman"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -10470,7 +10481,7 @@ almohad_12 = {
 almohad_13 = {
 	name = "Yaqub"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -10485,7 +10496,7 @@ almohad_13 = {
 almohad_14 = {
 	name = "Ismail"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -10500,7 +10511,7 @@ almohad_14 = {
 almohad_15 = {
 	name = "al-Hussein"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -10515,7 +10526,7 @@ almohad_15 = {
 almohad_16 = {
 	name = "Abdallah"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -10530,7 +10541,7 @@ almohad_16 = {
 almohad_17 = {
 	name = "Isa"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	trait = zenata
 	father = 32978
@@ -10545,7 +10556,7 @@ almohad_17 = {
 almohad_18 = {
 	name = "Ibrahim"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 32978
 	trait = zenata
@@ -10560,7 +10571,7 @@ almohad_18 = {
 almohad_19 = {
 	name = "Sulayman"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 32978
 	trait = zenata
@@ -10575,7 +10586,7 @@ almohad_19 = {
 almohad_20 = {
 	name = "Musa"
 	dynasty = 101875
-	religion = "masmudi"
+	rite = "masmudi"
 	culture = baranis
 	father = 32978
 	trait = zenata
@@ -10589,7 +10600,7 @@ almohad_20 = {
 
 tejalire_1 = {
 	name = "Bentago" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	dynasty = 1048014
 	father = 20844
@@ -10603,7 +10614,7 @@ tejalire_1 = {
 
 tejalire_2 = {
 	name = "Tamadaba" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	dynasty = 1048014
 	father = tejalire_1
@@ -10617,7 +10628,7 @@ tejalire_2 = {
 
 tejalire_3 = {
 	name = "Gararasa" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	culture = guanches
 	dynasty = 1048014
 	father = tejalire_2
@@ -10631,7 +10642,7 @@ tejalire_3 = {
 
 tejalire_4 = {
 	name = "Belicar" # Fictional placeholder
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	dynasty = 1048014
 	father = tejalire_3
@@ -10646,7 +10657,7 @@ tejalire_4 = {
 tejalire_5 = {
 	name = "Bentor" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = 210042
 	870.1.1 = {
@@ -10660,7 +10671,7 @@ tejalire_5 = {
 tejalire_6 = {
 	name = "Guanarteme" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = tejalire_5
 	895.1.1 = {
@@ -10674,7 +10685,7 @@ tejalire_6 = {
 tejalire_7 = {
 	name = "Tagooreate" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = tejalire_6
 	919.1.1 = {
@@ -10688,7 +10699,7 @@ tejalire_7 = {
 tejalire_8 = {
 	name = "Nauzet" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = tejalire_7
 	939.1.1 = {
@@ -10702,7 +10713,7 @@ tejalire_8 = {
 tejalire_9 = {
 	name = "Egenenaca" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = tejalire_8
 	958.1.1 = {
@@ -10716,7 +10727,7 @@ tejalire_9 = {
 tejalire_10 = {
 	name = "Anaterve" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = tejalire_9
 	977.1.1 = {
@@ -10730,7 +10741,7 @@ tejalire_10 = {
 tejalire_11 = {
 	name = "Alguim" # Fictional placeholder
 	dynasty = 1048014
-	religion = north_african_acham_pagan
+	rite = north_african_acham_pagan
 	culture = guanches
 	father = tejalire_10
 	996.1.1 = {
@@ -10743,7 +10754,7 @@ tejalire_11 = {
 
 sicilian_qaid_1 = {
 	name = "Richard" # Qaid Richard
-	religion = catholic
+	rite = roman_rite
 	culture = baranis
 	trait = education_stewardship_3
 	trait = beardless_eunuch
@@ -10753,8 +10764,8 @@ sicilian_qaid_1 = {
 	1178.1.1  = {
 		employer = 211500 # William of Sicily
 		effect = {
-			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:ibadi }
-		} 
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:kharijite }
+		}
 	}
 	1188.1.1 = {
 		death = yes
@@ -10763,7 +10774,7 @@ sicilian_qaid_1 = {
 
 sicilian_qaid_2 = {
 	name = "Martin" # Qaid Martin
-	religion = catholic
+	rite = roman_rite
 	culture = baranis
 	trait = education_stewardship_3
 	trait = vengeful
@@ -10774,8 +10785,8 @@ sicilian_qaid_2 = {
 	1178.1.1  = {
 		employer = 211500 # William of Sicily
 		effect = {
-			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:ibadi }
-		} 
+			make_character_crypto_religionist_effect = { CRYPTO_RELIGION = faith:kharijite }
+		}
 	}
 	1179.1.1 = {
 		death = yes
@@ -10784,7 +10795,7 @@ sicilian_qaid_2 = {
 
 tagatemiotise_1 = {
 	name = "Abentahar" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = 210041
@@ -10798,7 +10809,7 @@ tagatemiotise_1 = {
 
 tagatemiotise_2 = {
 	name = "Adiam" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_1
@@ -10812,7 +10823,7 @@ tagatemiotise_2 = {
 
 tagatemiotise_3 = {
 	name = "Alcoidar" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_2
@@ -10826,7 +10837,7 @@ tagatemiotise_3 = {
 
 tagatemiotise_4 = {
 	name = "Acosayda" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_3
@@ -10840,7 +10851,7 @@ tagatemiotise_4 = {
 
 tagatemiotise_5 = {
 	name = "Achurteyga" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_4
@@ -10854,7 +10865,7 @@ tagatemiotise_5 = {
 
 tagatemiotise_6 = {
 	name = "Bentagai" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = 20843
@@ -10868,7 +10879,7 @@ tagatemiotise_6 = {
 
 tagatemiotise_7 = {
 	name = "Bentago" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_6
@@ -10882,7 +10893,7 @@ tagatemiotise_7 = {
 
 tagatemiotise_8 = {
 	name = "Bentahor" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_7
@@ -10896,7 +10907,7 @@ tagatemiotise_8 = {
 
 tagatemiotise_9 = {
 	name = "Bentejui" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_8
@@ -10910,7 +10921,7 @@ tagatemiotise_9 = {
 
 tagatemiotise_10 = {
 	name = "Caitafa" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_9
@@ -10924,7 +10935,7 @@ tagatemiotise_10 = {
 
 tagatemiotise_11 = {
 	name = "Doramas" # Fictional placeholder
-	religion = "north_african_acham_pagan"
+	rite = "north_african_acham_pagan"
 	dynasty = 1048013
 	culture = guanches
 	father = tagatemiotise_10
@@ -10940,7 +10951,7 @@ marinid_1 = {
 	name = "Mihyu" # Miḥyū ibn Abī Bakr ibn Ḥamāma
 	dna = "bookmark_nomads_mihyu_marinid_1"
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	diplomacy = 4
 	martial = 6
@@ -10964,7 +10975,7 @@ marinid_1 = {
 marinid_2 = {
 	name = "Abu_Bakr" # Abī Bakr ibn Ḥamāma
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 	father = marinid_3
@@ -10979,13 +10990,119 @@ marinid_2 = {
 marinid_3 = {
 	name = "Hamama" # Ḥamāma
 	dynasty = 101732
-	religion = "ashari"
+	rite = "shafii"
 	culture = butr
 	trait = zenata
 	1078.1.1 = {
 		birth = yes
 	}
 	1125.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional
+ghazi_6 = {
+	name = "al-Qaid"
+	rite = shafii
+	culture = maghrebi
+	trait = order_member
+	trait = education_martial_4
+	trait = reaver
+	1019.1.1 = {
+		birth = yes
+	}
+	1076.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional
+ghazi_7 = {
+	name = "Ismail"
+	rite = masmudi
+	culture = baranis
+	trait = order_member
+	trait = education_martial_3
+	trait = reaver
+	1132.1.1 = {
+		birth = yes
+	}
+	1193.1.1 = {
+		death = yes
+	}
+}
+
+#Fictional
+ghazi_8 = {
+	name = "Ali"
+	rite = masmudi
+	culture = butr
+	trait = order_member
+	trait = education_martial_3
+	trait = reaver
+	1132.1.1 = {
+		birth = yes
+	}
+	1202.1.1 = {
+		death = yes
+	}
+}
+
+baranis_sabaid_1 = {
+	name = "Sabah"
+	dynasty = baranis_sabahid
+	religion = sunni
+	rite = shafii
+	culture = baranis
+	825.1.1 = {
+		birth = yes
+	}
+	872.1.1 = {
+		death = yes
+	}
+}
+
+baranis_sabaid_2 = {
+	name = "Uthman"
+	dynasty = baranis_sabahid
+	religion = sunni
+	rite = shafii
+	culture = baranis
+	father = baranis_sabaid_1
+	851.1.1 = {
+		birth = yes
+	}
+	925.1.1 = {
+		death = yes
+	}
+}
+
+baranis_jafarid_1 = {
+	name = "Abu_Ja_far"
+	dynasty = baranis_jafarid
+	religion = sunni
+	rite = shafii
+	culture = baranis
+	801.1.1 = {
+		birth = yes
+	}
+	843.1.1 = {
+		death = yes
+	}
+}
+
+baranis_jafarid_2 = {
+	name = "Abu_Ma_shar"
+	dynasty = baranis_jafarid
+	religion = sunni
+	rite = shafii
+	culture = baranis
+	father = baranis_jafarid_1
+	824.1.1 = {
+		birth = yes
+	}
+	851.1.1 = {
 		death = yes
 	}
 }

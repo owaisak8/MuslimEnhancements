@@ -1113,8 +1113,8 @@ me_missionary_event.3004 = {
 				desc = me_missionary_event.3004.a.toast.lost
 				scope:liege = {
 					imprison = {
-							target = root
-							type = dungeon
+						target = root
+						type = dungeon
 					}
 				}
 				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
@@ -1196,8 +1196,8 @@ me_missionary_event.3004 = {
 				desc = me_missionary_event.3004.b.toast.lost
 				scope:liege = {
 					imprison = {
-							target = root
-							type = dungeon
+						target = root
+						type = dungeon
 					}
 				}
 				hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
@@ -1283,8 +1283,8 @@ me_missionary_event.3004 = {
 					desc = me_missionary_event.3004.c.toast.lost
 					scope:liege = {
 						imprison = {
-								target = scope:bodyguard
-								type = dungeon
+							target = scope:bodyguard
+							type = dungeon
 						}
 					}
 					hidden_effect = { scope:guard = { death = { death_reason = death_disappearance } } }
@@ -1620,8 +1620,8 @@ me_missionary_event.3007 = {
 					}
 					scope:liege = {
 						imprison = {
-								target = root
-								type = dungeon
+							target = root
+							type = dungeon
 						}
 					}
 				}
@@ -1675,8 +1675,8 @@ me_missionary_event.3007 = {
 					}
 					scope:liege = {
 						imprison = {
-								target = root
-								type = dungeon
+							target = root
+							type = dungeon
 						}
 					}
 				}
@@ -1764,8 +1764,8 @@ me_missionary_event.3008 = {
 					}
 					scope:liege = {
 						imprison = {
-								target = root
-								type = dungeon
+							target = root
+							type = dungeon
 						}
 					}
 				}

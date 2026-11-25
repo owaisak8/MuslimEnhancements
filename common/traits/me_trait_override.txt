@@ -1,13 +1,15 @@
 ﻿drunkard = { # Substance Abuse (Alcohol)
 	category = fame
+	flag = trait_can_be_replaced
 	stewardship = -2
 	prowess = -2
 	health = -0.15
 	stress_loss_mult = 0.2
+	trade_category_alcohol_xp_gain_mult = 0.2
 
-	same_opinion = 10
+	same_opinion = 5
 	character_travel_safety = -10
-	
+
 	ruler_designer_cost = -10
 
 	desc = {
@@ -24,11 +26,6 @@
 
 	ai_rationality = -10
 	ai_energy = -15
-
-	triggered_opinion = {
-		parameter = me_intoxication_illegal
-		opinion_modifier = me_drunkard_crime
-	}
 
 	compatibility = {
 		temperate = @neg_compat_low
@@ -59,7 +56,6 @@ knight_errant = {
 					location = {
 						OR = {
 							geographical_region = world_india
-							geographical_region = world_burma
 							geographical_region = ghw_region_caucasus
 							geographical_region = world_asia_china
 							geographical_region = world_asia_japan
@@ -96,7 +92,7 @@ knight_errant = {
 		parameter = knight_errant_trait_bonuses
 		monthly_prestige_gain_mult = 0.02
 	}
-	
+
 	track = {
 		50 = { # Defender
 			prowess_per_prestige_level = 1
@@ -145,4 +141,351 @@ knight_errant = {
 			desc = trait_knight_errant_character_desc
 		}
 	}
+}
+
+##################################################
+# Religious life among Muslims (1.20)
+# Vanilla 1.20 traits with ME changes marked. Islam knows no celibate monasticism, so for Muslims these traits take
+# Muslim names and say that marriage is open to them.
+##################################################
+
+devoted = {
+	category = fame
+	flag = trait_can_be_replaced
+	monthly_piety = 0.3
+	monthly_learning_lifestyle_xp_gain_mult = 0.1
+	same_faith_opinion = 5
+
+	culture_modifier = {
+		parameter = prowess_from_religious_traits
+		prowess = 3
+	}
+
+	culture_modifier = {
+		parameter = devoted_trait_bonuses
+		learning = 3
+	}
+
+	# ME: the can_not_marry flag is removed (its 'May not marry' line would also show on Muslims, who may marry).
+	# Non-Muslims are still barred by can_marry_common_trigger and marriage_clergy_can_marry_trigger.
+	inheritance_blocker = secular
+
+	clergy = yes
+
+	ai_sociability = very_low_negative_ai_value
+
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_devoted_male
+			}
+			### ME Addition: among Muslims ###
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					is_adult = no
+				}
+				desc = trait_devoted_islam_child
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= {
+						OR = {
+							has_cultural_pillar = heritage_iranian
+							has_cultural_pillar = heritage_turkic
+							has_cultural_pillar = heritage_caucasian
+						}
+					}
+				}
+				desc = trait_devoted_islam_persianate
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= {
+						OR = {
+							has_cultural_pillar = heritage_berber
+							has_cultural_pillar = heritage_iberian
+						}
+					}
+					is_female = no
+				}
+				desc = trait_devoted_islam_maghrebi_male
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= {
+						OR = {
+							has_cultural_pillar = heritage_berber
+							has_cultural_pillar = heritage_iberian
+						}
+					}
+					is_female = yes
+				}
+				desc = trait_devoted_islam_maghrebi_female
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= {
+						OR = {
+							has_cultural_pillar = heritage_sahelian
+							has_cultural_pillar = heritage_west_african
+							has_cultural_pillar = heritage_senegambian
+							has_cultural_pillar = heritage_yoruba
+							has_cultural_pillar = heritage_akan
+							has_cultural_pillar = heritage_central_african
+						}
+					}
+				}
+				desc = trait_devoted_islam_sudani
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= { has_cultural_pillar = heritage_somalian }
+				}
+				desc = trait_devoted_islam_somali
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= {
+						OR = {
+							has_cultural_pillar = heritage_arabic
+							has_cultural_pillar = heritage_egyptian
+							has_cultural_pillar = heritage_syriac
+							has_cultural_pillar = heritage_indo_aryan
+							has_cultural_pillar = heritage_dravidian
+							has_cultural_pillar = heritage_malayic
+							has_cultural_pillar = heritage_austronesian
+						}
+					}
+					is_female = no
+				}
+				desc = trait_devoted_islam_arabic_male
+			}
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					culture ?= {
+						OR = {
+							has_cultural_pillar = heritage_arabic
+							has_cultural_pillar = heritage_egyptian
+							has_cultural_pillar = heritage_syriac
+							has_cultural_pillar = heritage_indo_aryan
+							has_cultural_pillar = heritage_dravidian
+							has_cultural_pillar = heritage_malayic
+							has_cultural_pillar = heritage_austronesian
+						}
+					}
+					is_female = yes
+				}
+				desc = trait_devoted_islam_arabic_female
+			}
+			triggered_desc = { # every other Muslim
+				trigger = { faith.religion ?= religion:islam_religion }
+				desc = trait_devoted_islam
+			}
+			### End of ME Addition ###
+			triggered_desc = {
+				trigger = {
+					is_adult = no
+				}
+				desc = trait_devoted_child
+			}
+			triggered_desc = {
+				trigger = {
+					faith ?= {
+						faith:theravada_faith.religion ?= religion
+					}
+					culture ?= { has_cultural_pillar = language_japonic }
+					is_female = no
+				}
+				desc = trait_devoted_buddhism_japanese_male
+			}
+			triggered_desc = {
+				trigger = {
+					faith ?= {
+						faith:theravada_faith.religion ?= religion
+					}
+					culture ?= { has_cultural_pillar = language_japonic }
+					is_female = yes
+				}
+				desc = trait_devoted_buddhism_japanese_female
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religion
+					faith.religion = faith:theravada_faith.religion
+					is_female = no
+				}
+				desc = trait_devoted_buddhism_male
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religion
+					faith.religion = faith:theravada_faith.religion
+					is_female = yes
+				}
+				desc = trait_devoted_buddhism_female
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religion
+					faith.religion = faith:vaishnava_faith.religion
+					is_female = no
+				}
+				desc = trait_devoted_hinduism_male
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religion
+					faith.religion = faith:vaishnava_faith.religion
+					is_female = yes
+				}
+				desc = trait_devoted_hinduism_female
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religion
+					faith.religion = faith:jain_faith.religion
+					is_female = no
+				}
+				desc = trait_devoted_jainism_male
+			}
+			triggered_desc = {
+				trigger = {
+					exists = faith.religion
+					faith.religion = faith:jain_faith.religion
+					is_female = yes
+				}
+				desc = trait_devoted_jainism_female
+			}
+			triggered_desc = {
+				trigger = { is_female = yes }
+				desc = trait_devoted_female
+			}
+			desc = trait_devoted_male
+		}
+	}
+
+	tracks = {
+		monastic = {
+			30 = {
+				character_spiritual_fulfillment_gain_mult = 0.1
+				character_spiritual_fulfillment_loss_mult = -0.1
+				stress_gain_mult = -0.04
+				health = 0.01
+				learning_mult = 0.05
+				monthly_piety = 0.1
+			}
+			65 = {
+				character_spiritual_fulfillment_gain_mult = 0.1
+				character_spiritual_fulfillment_loss_mult = -0.1
+				stress_gain_mult = -0.06
+				health = 0.05
+				learning_mult = 0.1
+				clergy_opinion = 10
+				monthly_piety = 0.2
+			}
+			100 = {
+				character_spiritual_fulfillment_gain_mult = 0.15
+				character_spiritual_fulfillment_loss_mult = -0.15
+				stress_gain_mult = -0.1
+				health = 0.1
+				learning_mult = 0.15
+				clergy_opinion = 15
+				monthly_piety = 0.4
+			}
+		}
+	}
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_devoted_desc_me
+			}
+			### ME Addition: among Muslims ###
+			triggered_desc = {
+				trigger = {
+					faith.religion ?= religion:islam_religion
+					is_adult = no
+				}
+				desc = trait_devoted_islam_child_character_desc
+			}
+			triggered_desc = {
+				trigger = { faith.religion ?= religion:islam_religion }
+				desc = trait_devoted_islam_character_desc
+			}
+			### End of ME Addition ###
+			triggered_desc = {
+				trigger = { is_adult = no }
+				desc = trait_devoted_child_desc
+			}
+			desc = trait_devoted_character_desc_me # ME: vanilla text plus the marriage warning the flag used to show
+		}
+	}
+	flag = gnostic_learning_piety_trait
+}
+
+order_member = {
+	category = fame
+	# ME: the can_not_marry flag is removed, as on the devoted trait above
+	inheritance_blocker = all
+
+	martial = 1
+	prowess = 4
+
+	culture_modifier = {
+		parameter = faith_warrior_traits_more_valued
+		monthly_prestige = 1
+	}
+
+	same_opinion_if_same_faith = 15
+
+	shown_in_ruler_designer = no
+
+	### ME Addition: among Muslims ###
+	name = {
+		first_valid = {
+			triggered_desc = {
+				trigger = { NOT = { exists = this } }
+				desc = trait_order_member
+			}
+			triggered_desc = {
+				trigger = { faith.religion ?= religion:islam_religion }
+				desc = trait_order_member_islam
+			}
+			desc = trait_order_member
+		}
+	}
+	### End of ME Addition ###
+
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					NOT = { exists = this }
+				}
+				desc = trait_order_member_desc_me
+			}
+			### ME Addition: among Muslims ###
+			triggered_desc = {
+				trigger = { faith.religion ?= religion:islam_religion }
+				desc = trait_order_member_islam_character_desc
+			}
+			### End of ME Addition ###
+			desc = trait_order_member_character_desc_me # ME: vanilla text plus the marriage warning the flag used to show
+		}
+	}
+
+	ai_zeal = 10
+	ai_honor = 5
+	ai_greed = -10
+	flag = gnostic_learning_piety_trait
 }

@@ -4,11 +4,22 @@
  building_type_the_friday_mosque_01:0 "Jameh Mosque of Isfahan"
  building_type_the_friday_mosque_01_desc:0 "#F The Jameh Mosque of Isfahan, otherwise known as the Friday Mosque, was built during the rule of the Umayyad dynasty. It is said that the Caliph personally made one of the pillars in the mosque. Before becoming a mosque, it is said that it used to be a house of worship for Zoroastrians.#!"
 
+ # Shrine and holy mosque descriptions (vanilla keys, rewritten)
+ building_type_holy_site_imam_ali_mosque_01_desc:0 "#F On the high ground of Najaf, beyond the walls of Kufa, rests Ali ibn Abi Talib, cousin and son-in-law of the Prophet, struck down at prayer in the month of Ramadan. For generations his family kept the grave hidden for fear of his enemies; now that it is known, pilgrims cross the desert to stand beneath its dome, and the faithful ask to be buried in the valley beside him."
+ building_type_imam_reza_shrine_01_desc:0 "#F In a garden outside Tus rests Ali ar-Ridha, the eighth Imam, summoned east to be named heir to the Caliph and dead, many say by poison, before he could return home. He lies far from the graves of his forefathers, and so is called the Imam of the Stranger; those who make the long road to him trust that he will answer for them in turn. Around the tomb a sanctuary grows with every caravan: prayer halls, a library, a bazaar."
+ building_type_holy_site_great_mosque_of_mecca_01_desc:0 "#F At the heart of Mecca stands the Kaaba, the House raised by Ibrahim and his son Ismail for the worship of the one God, and around it the mosque toward which every Muslim turns in prayer. Ruler after ruler has widened its courts and colonnades to hold the multitudes of the Hajj, who come from every land to circle the House as the Prophet did."
+ building_type_holy_site_prophetic_mosque_01_desc:0 "#F When the Prophet came to Medina he let his camel choose the ground, and there, with his own hands, he helped raise a mosque of palm trunks and mud brick beside his home. In that home he was laid to rest, and the mosque has since grown to enclose the chamber. It is said that the ground between his grave and his pulpit is a garden from the gardens of Paradise."
+
+ # Current Date, Overriden to support Islamic calendar display
+ CURRENT_DATE:0 "[SelectLocalization(GetPlayer.IsPlayer, 'ME_PLAYER_DISPLAY_DATE', 'ME_OBSERVER_DISPLAY_DATE')]"
+ ME_PLAYER_DISPLAY_DATE:0 "[GetPlayer.Custom('ME_GetDisplayDate')]"
+ ME_OBSERVER_DISPLAY_DATE:0 "$ME_GREGORIAN_DISPLAY_DATE$"
+ 
  #Decisions
  appoint_a_righteous_caliph_decision:0 "Appoint a Righteous [ROOT.Char.GetFaith.ReligiousHeadName]"
  
  #Events
- head_of_faith.0021.desc:0 "Rejecting the tawdry politics of the Sunnis and Shi'as has left [ROOT.Char.GetFaith.GetName] an adherent to the Muhakkima strand of Islam. However, the followers of our movement are confused on where we stand on the Muhakkima spectrum, do we consider ourselves Ibadis or are we our own people? and if so, who's leaders do we follow?"
+ head_of_faith.0021.desc:0 "Rejecting the tawdry politics of the Sunnis and Shi'ites has left [ROOT.Char.GetFaith.GetName] an adherent to the Muhakkima strand of Islam. However, the followers of our movement are confused on where we stand on the Muhakkima spectrum, do we consider ourselves Ibadis or are we our own people? and if so, who's leaders do we follow?"
  head_of_faith.0021.ME.a:0 "We are Ibadis, but our leaders are our own."
 
  #Knight Cultural Name
@@ -16,13 +27,49 @@
  knight_faris_no_tooltip_lowercase_plural:0 "fursān"
  knight_faris_no_tooltip_lowercase_plural_possessive:0 "fursān's"
  
+ #HChar
+ HISTORICAL_CHARACTER_TOOLTIP: "#T Historical Character#!\n\n#high [Character.Custom('ME_HistoricalCharacterDesc')]#!\n\n#weak This character is historical, but might deviate compared to [Character.GetHerHis] real-life counterpart based on the [culture|E] and [faith|E] of [Character.GetHerHis] place of origin. [Character.GetSheHe|U] might also appear slightly outside of [Character.GetHerHis] historical date of prominence by around 1-5 years.#!"
+ 
  #Bari Culture Creation Name
  bari_name:0 "Barī"
  bari_collective_noun:0 "Barīs"
  bari_prefix:0 "Barī"
+ 
+ #Wars
+ azariqa_fanatics: "Kharijite Fanatics"
+ war_Azariqa_Rebellion: "Kharijite Rebellion"
  
  #Languages
  language_vrachada_name:0 "Punjabi"
  
  #Legends
  legend_chapter_conclusion_new_faith:0 "With the [ROOT.Legend.GetProperty( 'faith' ).Faith.PriestNeuterPlural] gathered and the Exegesis of the [ROOT.Legend.GetProperty( 'faith' ).Faith.ReligiousText|U] written anew, [ROOT.Legend.GetProperty( 'religion' ).Religion.GetNameNoTooltip|U] was at last restored in the vision of [ROOT.Legend.GetProperty( 'faith' ).Faith.PantheonTerm]!"
+
+ # Religious life among Muslims: the Devoted and Order Member traits (see common/traits/me_trait_override.txt)
+ trait_devoted_islam:0 "Sufi" # Muslims of any culture not listed below
+ trait_devoted_islam_persianate:0 "Dervish"
+ trait_devoted_islam_maghrebi_male:0 "Murabit"
+ trait_devoted_islam_maghrebi_female:0 "Murabita"
+ trait_devoted_islam_sudani:0 "Marabout"
+ trait_devoted_islam_somali:0 "Wadaad"
+ trait_devoted_islam_arabic_male:0 "Faqir"
+ trait_devoted_islam_arabic_female:0 "Faqira"
+ trait_devoted_islam_child:0 "Young Murid"
+ trait_devoted_islam_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has given [ROOT.GetCharacter.GetHerHis] life to the remembrance of God, walking the path under the guidance of a master.\n\n#P Free to marry:#! Islam knows no monasticism, and no vow of celibacy is asked of [ROOT.GetCharacter.GetHerHim]."
+ trait_devoted_islam_child_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] has been entrusted to a master as a disciple, and will one day walk the path [ROOT.GetCharacter.GetHerselfHimself].\n\n#P Free to marry:#! Islam knows no monasticism, and no vow of celibacy is asked of [ROOT.GetCharacter.GetHerHim]."
+ trait_devoted_desc_me:0 "$trait_devoted_desc$\n\n$TRAIT_FLAG_DESC_can_not_marry$ #weak (Muslims excepted)#!"
+ trait_devoted_character_desc_me:0 "$trait_devoted_character_desc$\n\n$TRAIT_FLAG_DESC_can_not_marry$"
+ trait_order_member_islam:0 "Ghazi"
+ trait_order_member_islam_character_desc:0 "[ROOT.GetCharacter.GetFirstNameNoTooltip] serves among the ghazis, sworn to defend the frontiers of [ROOT.GetCharacter.GetHerHis] faith.\n\n#P Free to marry:#! Islam knows no monasticism, and no vow of celibacy is asked of [ROOT.GetCharacter.GetHerHim]."
+ trait_order_member_desc_me:0 "$trait_order_member_desc$\n\n$TRAIT_FLAG_DESC_can_not_marry$ #weak (Muslims excepted)#!"
+ trait_order_member_character_desc_me:0 "$trait_order_member_character_desc$\n\n$TRAIT_FLAG_DESC_can_not_marry$"
+
+ # Muslim saints: no "Wali" before their names; the Imams and Ali have their own titles (see me_title_flavorization.txt)
+ muslim_saint:0 ""
+ muslim_female_saint:0 ""
+ trait_wali:0 "Waliullah"
+ trait_waliyya:0 "Waliyyatullah"
+ me_imam_saint:0 "Imam"
+ me_caliph_saint:0 "Caliph"
+ nick_me_ibn_abi_talib:0 "ibn Abi Talib"
+ nick_me_ibn_abi_talib_desc:0 "The son of Abu Talib, uncle of the Prophet and protector of his household."

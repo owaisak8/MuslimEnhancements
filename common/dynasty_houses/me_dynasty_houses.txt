@@ -1,4 +1,10 @@
-﻿### Spawned Historical Characters ###
+﻿### Override ###
+house_zaydid = {
+	name = "dynn_me_al_zaydi"
+	dynasty = 7296 # Hashimid
+}
+
+### Spawned Historical Characters ###
 house_me_babek = {
 	name = "dynn_me_babek"
 	dynasty = me_babek_dynasty
@@ -72,6 +78,18 @@ house_me_jadhmi = { # al-Jadhmi, 1066 Ruling House of Qatif
 house_me_uyunids = { # al-Uyuni, The Uyunid Dynasty
 	name = "dynn_me_uyunids"
 	dynasty = 1042121 # Banu Abd al-Qays
+}
+
+### Kalb Tribe
+house_me_munqidhid = { # Banu Munqidh
+	name = "dynn_me_al_Munqidhi"
+	dynasty = 12240 # Banu Kalb
+}
+
+### Kinana Tribe ###
+house_me_banu_damrah = { # Banu Ḍamrah
+	name = "dynn_me_banu_damrah"
+	dynasty = 1042120 # Banu Damrah
 }
 
 ### Kinda Tribe ###

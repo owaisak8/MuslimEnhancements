@@ -11,13 +11,13 @@ ME_become_ismaili_mahdi_decision = {
 
 	is_shown = {
 		is_landless_adventurer = yes
-		faith = faith:ismaili
+		rite = rite:ismaili
 		has_trait = me_hidden_imam
 	}
 
 	is_valid = {
 		is_landless_adventurer = yes
-		faith = faith:ismaili
+		rite = rite:ismaili
 		has_trait_xp = {
 			trait = me_hidden_imam
 			value >= 100
@@ -70,6 +70,7 @@ ME_laamp_proselytize = {
 			has_character_flag = zealous_missionary_start
 			has_character_flag = zealous_missionary_timer
 		}
+		NOT = { rite = { rite_has_tenet = tenet_me_closed_faith } }
 	}
 
 	is_valid_showing_failures_only = {
@@ -420,6 +421,7 @@ ME_laamp_proselytize_type = {
 			has_character_flag = zealous_missionary_start
 			has_character_flag = zealous_missionary_timer
 		}
+		NOT = { rite = { rite_has_tenet = tenet_me_closed_faith } }
 	}
 	is_valid = {
 		has_variable = social_type
@@ -607,24 +609,18 @@ ME_laamp_proselytize_type = {
 					NOR = { # To stop proselytization attempts after reaching full level
 						AND = {
 							var:social_type = flag:preach_nobility
-							AND = {
-								root.location.county.var:converts_nobility_public_faith = root.faith
-								root.location.county.var:converts_nobility_public_tier = 5
-							}
+							root.location.county.var:converts_nobility_public_faith = root.faith
+							root.location.county.var:converts_nobility_public_tier = 5
 						}
 						AND = {
 							var:social_type = flag:preach_workers
-							AND = {
-								root.location.county.var:converts_workers_public_faith = root.faith
-								root.location.county.var:converts_workers_public_tier = 5
-							}
+							root.location.county.var:converts_workers_public_faith = root.faith
+							root.location.county.var:converts_workers_public_tier = 5
 						}
 						AND = {
 							var:social_type = flag:preach_villagers
-							AND = {
-								root.location.county.var:converts_villagers_public_faith = root.faith
-								root.location.county.var:converts_villagers_public_tier = 5
-							}
+							root.location.county.var:converts_villagers_public_faith = root.faith
+							root.location.county.var:converts_villagers_public_tier = 5
 						}
 					}
 				}
@@ -657,24 +653,18 @@ ME_laamp_proselytize_type = {
 					NOR = { # To stop proselytization attempts after reaching full level
 						AND = {
 							var:social_type = flag:preach_nobility
-							AND = {
-								root.location.county.var:converts_nobility_gold_faith = root.faith
-								root.location.county.var:converts_nobility_gold_tier = 5
-							}
+							root.location.county.var:converts_nobility_gold_faith = root.faith
+							root.location.county.var:converts_nobility_gold_tier = 5
 						}
 						AND = {
 							var:social_type = flag:preach_workers
-							AND = {
-								root.location.county.var:converts_workers_gold_faith = root.faith
-								root.location.county.var:converts_workers_gold_tier = 5
-							}
+							root.location.county.var:converts_workers_gold_faith = root.faith
+							root.location.county.var:converts_workers_gold_tier = 5
 						}
 						AND = {
 							var:social_type = flag:preach_villagers
-							AND = {
-								root.location.county.var:converts_villagers_gold_faith = root.faith
-								root.location.county.var:converts_villagers_gold_tier = 5
-							}
+							root.location.county.var:converts_villagers_gold_faith = root.faith
+							root.location.county.var:converts_villagers_gold_tier = 5
 						}
 					}
 				}
@@ -700,7 +690,7 @@ ME_laamp_proselytize_type = {
 				custom_tooltip = {
 					text = ME_must_be_secret_faith_or_false_conv_tt
 					OR = {
-						faith = { has_doctrine_parameter = sanctioned_false_conversion }
+						rite = { rite_has_parameter = sanctioned_false_conversion }
 						any_secret = { secret_type = secret_crypto_religionist }
 					}
 				}
@@ -709,49 +699,43 @@ ME_laamp_proselytize_type = {
 					NOR = {
 						AND = {
 							var:social_type = flag:preach_nobility
-							AND = {
-								root.location.county.var:converts_nobility_secret_tier = 5
-								OR = {
-									AND = {
-										NOT = { any_secret = { secret_type = secret_crypto_religionist } }
-										root.location.county.var:converts_nobility_secret_faith = root.faith
-									}
-									AND = {
-										any_secret = { secret_type = secret_crypto_religionist }
-										root.location.county.var:converts_nobility_secret_faith = root.secret_faith
-									}
+							root.location.county.var:converts_nobility_secret_tier = 5
+							OR = {
+								AND = {
+									NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+									root.location.county.var:converts_nobility_secret_faith = root.faith
+								}
+								AND = {
+									any_secret = { secret_type = secret_crypto_religionist }
+									root.location.county.var:converts_nobility_secret_faith = root.secret_faith
 								}
 							}
 						}
 						AND = {
 							var:social_type = flag:preach_workers
-							AND = {
-								root.location.county.var:converts_workers_secret_tier = 5
-								OR = {
-									AND = {
-										NOT = { any_secret = { secret_type = secret_crypto_religionist } }
-										root.location.county.var:converts_workers_secret_faith = root.faith
-									}
-									AND = {
-										any_secret = { secret_type = secret_crypto_religionist }
-										root.location.county.var:converts_workers_secret_faith = root.secret_faith
-									}
+							root.location.county.var:converts_workers_secret_tier = 5
+							OR = {
+								AND = {
+									NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+									root.location.county.var:converts_workers_secret_faith = root.faith
+								}
+								AND = {
+									any_secret = { secret_type = secret_crypto_religionist }
+									root.location.county.var:converts_workers_secret_faith = root.secret_faith
 								}
 							}
 						}
 						AND = {
 							var:social_type = flag:preach_villagers
-							AND = {
-								root.location.county.var:converts_villagers_secret_tier = 5
-								OR = {
-									AND = {
-										NOT = { any_secret = { secret_type = secret_crypto_religionist } }
-										root.location.county.var:converts_villagers_secret_faith = root.faith
-									}
-									AND = {
-										any_secret = { secret_type = secret_crypto_religionist }
-										root.location.county.var:converts_villagers_secret_faith = root.secret_faith
-									}
+							root.location.county.var:converts_villagers_secret_tier = 5
+							OR = {
+								AND = {
+									NOT = { any_secret = { secret_type = secret_crypto_religionist } }
+									root.location.county.var:converts_villagers_secret_faith = root.faith
+								}
+								AND = {
+									any_secret = { secret_type = secret_crypto_religionist }
+									root.location.county.var:converts_villagers_secret_faith = root.secret_faith
 								}
 							}
 						}
@@ -941,14 +925,14 @@ ME_laamp_proselytize_type = {
 			}
 		}
 	}
-    
-    ai_check_interval = 0
-    ai_potential = {
-        is_playable_character = yes
-    }
-    ai_will_do = {
-        base = 0
-    }
+	
+	ai_check_interval = 0
+	ai_potential = {
+		is_playable_character = yes
+	}
+	ai_will_do = {
+		base = 0
+	}
 }
 
 ME_laamp_proselytize_convert_county = {
@@ -966,6 +950,7 @@ ME_laamp_proselytize_convert_county = {
 			has_character_flag = zealous_missionary_start
 			has_character_flag = zealous_missionary_timer
 		}
+		NOT = { rite = { rite_has_tenet = tenet_me_closed_faith } }
 	}
 	is_valid_showing_failures_only = {
 		is_adult = yes
@@ -1025,10 +1010,10 @@ ME_laamp_proselytize_convert_county = {
 					NOT = { exists = root.location.county.var:ME_attempted_convert_county }
 				}
 				NOT = { any_secret = { secret_type = secret_crypto_religionist } }
-				root.faith = {
+				root.rite = {
 					NOR = {
-						has_doctrine = tenet_dharmic_pacifism
-						has_doctrine = tenet_pacifism
+						rite_has_tenet = tenet_dharmic_pacifism
+						rite_has_tenet = tenet_pacifism
 					}
 				}
 			}
@@ -1086,13 +1071,13 @@ ME_laamp_proselytize_convert_county = {
 		}
 	}
     
-    ai_check_interval = 0
-    ai_potential = {
-        is_playable_character = yes
-    }
-    ai_will_do = {
-        base = 0
-    }
+	ai_check_interval = 0
+	ai_potential = {
+		is_playable_character = yes
+	}
+	ai_will_do = {
+		base = 0
+	}
 }
 
 ME_laamp_proselytize_contact_communities = {
@@ -1110,6 +1095,7 @@ ME_laamp_proselytize_contact_communities = {
 			has_character_flag = zealous_missionary_start
 			has_character_flag = zealous_missionary_timer
 		}
+		NOT = { rite = { rite_has_tenet = tenet_me_closed_faith } }
 		NOT = { exists = root.location.county.var:ME_visited_community }
 	}
 	is_valid_showing_failures_only = {
@@ -1425,11 +1411,11 @@ ME_laamp_proselytize_contact_communities = {
 		}
 	}
     
-    ai_check_interval = 0
-    ai_potential = {
-        is_playable_character = yes
-    }
-    ai_will_do = {
-        base = 0
-    }
+	ai_check_interval = 0
+	ai_potential = {
+		is_playable_character = yes
+	}
+	ai_will_do = {
+		base = 0
+	}
 }

@@ -1,54 +1,48 @@
 ﻿## Alawite sect founders
-numayrid1 = {
-	name = "Muhammad" # Abu Shu'ayb Muhammad, Founder of the Nusayri Alawites, (by Ace, Muslim Enhancements)
-	dynasty = me_numayri
-	religion = "alawite"
-	culture = levantine
-	trait = zealous
-
-	father = numayrid2
-	824.4.11 = {
-		birth = yes
-	}
-	850.1.6 = {
-		set_relation_rival = character:ishaaq1 # Abu Yaqub Ishaq
-	}
-#	867.1.1 = { # His father had Ali set as his liege, but his father is dead, and Ali has no titles
-#		employer = 163025 # Ali al-Hadi (exists in bedouin.txt)
+#numayrid1 = {
+#	name = "Muhammad" # Abu Shu'ayb Muhammad, Founder of the Nusayri Alawites, (by Ace, Muslim Enhancements)
+#	dynasty = me_numayri
+#	religion = "alawite"
+#	culture = levantine
+#	trait = zealous
+#
+#	father = numayrid2
+#	821.1.1 = {
+#		birth = yes
 #	}
-	868.9.14 = {
-		death = yes
-	}
-}
+#	850.1.1 = {
+#		set_relation_rival = character:ishaaq1 # Abu Yaqub Ishaq
+#	}
+#	881.1.1 = {
+#		death = yes
+#	}
+#}
 
 numayrid2 = {
 	name = "Nusayr" #Father of Abu Shu'ayb Muhammad, (by Ace, Muslim Enhancements)
 	dynasty = me_numayri
-	religion = "imami"
+	rite = "imami"
 	culture = levantine
 
-	782.2.5 = {
+	790.1.1 = {
 		birth = yes
 	}
-	841.12.9 = {
+	850.1.1 = {
 		death = yes
 	}
 }
 
 ishaaq1 = {
 	name = "Ishaq" # Abu Yaqub Ishaq, Founder of the Ishaqi Alawites, (by Ace, Muslim Enhancements)
-	dynasty = me_ishaaq
-	religion = "ishaqiya"
+	dynasty = me_nakhai_dynasty
+	rite = "ishaqiya"
 	culture = levantine
 	trait = zealous
 
-	826.5.2 = {
+	830.1.1 = {
 		birth = yes
 	}
-#	867.1.1 = { # He had him set as his liege, but Ali has no titles
-#		employer = 163025 # Ali al-Hadi (exists in bedouin.txt)
-#	}
-	869.1.9 = {
+	865.1.1 = { # 899.1.1
 		death = yes
 	}
 }
@@ -58,14 +52,14 @@ me_mashriqi_001 = {
 	name = "Yusuf" # Yusuf 'Ibn al-Dayah' ibn Ibrahim, Son of the midwife/wet-nurse of Ibrahim ibn al-Mahdi, was influencial in Abbasid scholarly circles
 	dynasty = me_ibrahimid_egypt_dynasty
 	give_nickname = nick_me_ibn_al_dayah # Ibn al-Dayah (Son of the midwife/wet-nurse)
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	trait = education_learning_4
 	trait = intellect_good_1
 	trait = gregarious # Close links with the ruling elites of the Abbasid court and Egypt
 	trait = generous # Did a lot of charity, it is said that 30 men who were living off his charity came upon Ibn Tulun and asked him to kill them if he wished to kill Ibn al-Dayah
 	trait = diligent # Scholar
-	trait = scholar
+	trait = erudite
 	
 	father = me_mashriqi_002
 	810.1.1 = {
@@ -82,7 +76,7 @@ me_mashriqi_001 = {
 me_mashriqi_002 = {
 	name = "Ibrahim"
 	dynasty = me_ibrahimid_egypt_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	770.1.1 = {
@@ -96,12 +90,12 @@ me_mashriqi_002 = {
 me_mashriqi_003 = {
 	name = "Ahmad" # Ahmad ibn Yusuf 'Ibn al-'Dayah', Tulunid secretary, mathematician, and historian
 	dynasty = me_ibrahimid_egypt_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "egyptian"
 	trait = education_learning_4
 	trait = intellect_good_1
 	trait = lifestyle_poet
-	trait = scholar
+	trait = erudite
 	
 	father = me_mashriqi_001
 	869.1.1 = {
@@ -115,7 +109,7 @@ me_mashriqi_003 = {
 me_mashriqi_004 = {
 	name = "al-Hasan"
 	dynasty = me_ibrahimid_egypt_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_mashriqi_001
@@ -130,7 +124,7 @@ me_mashriqi_004 = {
 me_mashriqi_005 = {
 	name = "Ya_qub"
 	dynasty = me_ibrahimid_egypt_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_mashriqi_001
@@ -145,7 +139,7 @@ me_mashriqi_005 = {
 me_mashriqi_006 = {
 	name = "Muhammad" # 'Majd al-Dawla' Muhammad ibn Udai, Surrendered the city of Sidon to the Crusaders in 1110 and died fighting them in 1137
 	dynasty = me_abdullah_lebanon_dynasty # Banu Abdullah - migrated to Lebanon around the same time as the Lakhmid Arslanids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_mashriqi_007
@@ -163,7 +157,7 @@ me_mashriqi_006 = {
 me_mashriqi_007 = {
 	name = "Udai"
 	dynasty = me_abdullah_lebanon_dynasty # Banu Abdullah - migrated to Lebanon around the same time as the Lakhmid Arslanids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_mashriqi_008
@@ -178,7 +172,7 @@ me_mashriqi_007 = {
 me_mashriqi_008 = {
 	name = "Sulayman"
 	dynasty = me_abdullah_lebanon_dynasty # Banu Abdullah - migrated to Lebanon around the same time as the Lakhmid Arslanids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	father = me_mashriqi_009
@@ -193,7 +187,7 @@ me_mashriqi_008 = {
 me_mashriqi_009 = {
 	name = "Abdullah"
 	dynasty = me_abdullah_lebanon_dynasty # Banu Abdullah - migrated to Lebanon around the same time as the Lakhmid Arslanids
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	990.1.1 = {
@@ -207,7 +201,7 @@ me_mashriqi_009 = {
 me_mashriqi_010 = {
 	name = "al-Muqaddam"
 	dynasty = levantine_al-muqaddam
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	1100.1.1 = {
@@ -221,7 +215,7 @@ me_mashriqi_010 = {
 me_mashriqi_011 = { # Father of Rashid al-Din Sinan of the Hashashin
 	name = "Salman"
 	dynasty = 100765
-	religion = "ismaili" # Unsure but not Nizari, might be nsome other form of Shi'ite
+	rite = "ismaili" # Unsure but not Nizari, might be nsome other form of Shi'ite
 	culture = "levantine"
 	
 	father = me_mashriqi_012
@@ -236,7 +230,7 @@ me_mashriqi_011 = { # Father of Rashid al-Din Sinan of the Hashashin
 me_mashriqi_012 = {
 	name = "Muhammad"
 	dynasty = 100765
-	religion = "ismaili" # Unsure but not Nizari, might be nsome other form of Shi'ite
+	rite = "ismaili" # Unsure but not Nizari, might be nsome other form of Shi'ite
 	culture = "levantine"
 	
 	father = me_mashriqi_013
@@ -251,7 +245,7 @@ me_mashriqi_012 = {
 me_mashriqi_013 = {
 	name = "Rashid"
 	dynasty = 100765
-	religion = "ismaili" # Unsure but not Nizari, might be nsome other form of Shi'ite
+	rite = "ismaili" # Unsure but not Nizari, might be some other form of Shi'ite
 	culture = "levantine"
 	
 	1040.1.1 = {
@@ -262,12 +256,987 @@ me_mashriqi_013 = {
 	}
 }
 
+me_mashriqi_014 = {
+	name = "Ubaydah" # Ubaydah of Banu Zuhayr al-Amrawi, Kharijite who disagreed with Musawir ibn Abdul-Hamid on the repentence of the sinner then gathered an army and fought him
+	dynasty = me_zuhayrid_khariji_dynasty ## Banu Zuhayr al-Amrawi
+	rite = "azariqa"
+	culture = "levantine"
+	trait = education_martial_3
+	trait = zealous
+	trait = wrathful
+	
+	842.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = extra_kurds_0010
+	}
+	868.1.1 = {
+		death = {
+			death_reason = death_battle
+			killer = extra_kurds_0010
+		}
+	}
+}
+
+me_mashriqi_015 = {
+	name = "As_ad" # Muwaffaq ud-Din As'ad 'Ibn al-Matran', Syrian physican who worked for Salah ud-Din
+	dynasty = me_ibn_matran_dynasty
+	give_nickname = nick_me_ibn_al_matran # Ibn al-Matran (Son of the Bishop)
+	rite = "hanafi"
+	culture = "levantine"
+	trait = education_learning_4
+	trait = lifestyle_physician
+	trait = erudite
+	trait = arrogant # Known for his pride, even towards rulers
+	trait = gregarious # Was considered to be a pleasant companion by those who discribed him
+	
+	father = me_mashriqi_016
+	1125.1.1 = { # Unknown
+		birth = yes
+	}
+	1170.1.1 = {
+		employer = 226000 # Salah ud-Din al-Ayyubi
+		set_relation_friend = { reason = friend_generic_history target = character:226000 } # Close confidant of Salah ud-Din and almost became a vizier
+	}
+	1191.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_016 = {
+	name = "Ilyas"
+	dynasty = me_ibn_matran_dynasty
+	rite = "nestorian"
+	culture = "levantine"
+	
+	father = me_mashriqi_017
+	1100.1.1 = {
+		birth = yes
+	}
+	1160.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_017 = {
+	name = "Jarjis"
+	dynasty = me_ibn_matran_dynasty
+	rite = "nestorian"
+	culture = "levantine"
+	
+	1070.1.1 = {
+		birth = yes
+	}
+	1130.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_018 = {
+	name = "al-Ash_ath" # Father of Hamdan Qarmat
+	rite = "imami"
+	culture = "levantine"
+
+	810.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_019 = {
+	name = "Uthman" # 'Izz ud-Din' Uthman ibn Ali az-Zanjili/az-Zanjabili, Ayyubid governor of Aden (1174-1184), His deeds (or misdeeds) and personality differ greatly between sources
+	dynasty = me_zanjili_dynasty
+	give_nickname = nick_izz_ud_din
+	rite = "hanafi"
+	culture = "levantine"
+	trait = generous
+	trait = zealous
+	
+	father = me_mashriqi_020
+	1144.1.1 = {
+		birth = yes
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_020 = {
+	name = "Ali"
+	dynasty = me_zanjili_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	1110.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+
+## Mashriqi characters related to spawnable historical characters
+me_mashriqi_hchar_001 = {
+	name = "Ahmad" # Ahmad ibn Fadlan, Abbasid Embassy to the Bulgars
+	dynasty_house = house_me_fadlanid
+	rite = hanafi
+	culture = "levantine"
+	trait = education_learning_4
+	trait = theologian
+	trait = zealous
+	
+	father = me_mashriqi_hchar_002
+	885.1.1 = {
+		birth = yes
+	}
+	950.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_002 = {
+	name = "Fadlan"
+	rite = hanafi
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_003
+	845.1.1 = {
+		birth = yes
+	}
+	905.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_003 = {
+	name = "al-Abbas"
+	rite = hanafi
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_004
+	815.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_004 = {
+	name = "Rashid"
+	rite = hanafi
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_005
+	785.1.1 = {
+		birth = yes
+	}
+	845.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_005 = {
+	name = "Hammad"
+	rite = hanafi
+	culture = "levantine"
+	
+	755.1.1 = {
+		birth = yes
+	}
+	815.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_006 = {
+	name = "al-Hasan" # al-Hasan 'Mansur al-Yaman' ibn Faraj ibn Hawshab, Ismaili missionary sent to Yemen
+	dynasty = me_hawshabi_dynasty
+	rite = "imami"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_007
+	845.1.1 = {
+		birth = yes
+	}
+	881.6.1 = {
+		trait = ME_missionary
+		rite = "ismaili"
+	}
+	892.1.1 = {
+		#give_nickname = nick_me_mansur_al_yaman
+	}
+	914.12.31 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_007 = {
+	name = "Faraj"
+	dynasty = me_hawshabi_dynasty
+	rite = "imami"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_008
+	810.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_008 = {
+	name = "Hawshab"
+	dynasty = me_hawshabi_dynasty
+	rite = "imami"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_009
+	780.1.1 = {
+		birth = yes
+	}
+	840.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_009 = {
+	name = "Zadan"
+	rite = "imami"
+	culture = "levantine"
+	
+	750.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_010 = {
+	name = "Ahmad" # Abu at-Tayyib al-Mutanabbi, One of the most famous Arabic poets in history
+	dynasty = me_mutanabbi_dynasty
+	give_nickname = nick_me_al_mutanabbi
+	rite = "imami"
+	culture = "levantine"
+	trait = education_diplomacy_4
+	trait = lifestyle_poet
+	trait = arrogant
+	trait = ambitious
+	trait = brave
+	
+	father = me_mashriqi_hchar_011
+	915.1.1 = {
+		birth = yes
+	}
+	965.1.1 = {
+		death = {
+			death_reason = death_battle
+			#killer = ### # Fatik ibn Abi Jahl al-Asadi
+		}
+	}
+}
+
+me_mashriqi_hchar_011 = {
+	name = "al-Husayn"
+	dynasty = me_mutanabbi_dynasty
+	rite = "imami"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_012
+	880.1.1 = {
+		birth = yes
+	}
+	940.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_012 = {
+	name = "al-Hasan"
+	dynasty = me_mutanabbi_dynasty
+	rite = "imami"
+	culture = "bedouin"
+	
+	father = me_mashriqi_hchar_013
+	850.1.1 = {
+		birth = yes
+	}
+	910.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_013 = {
+	name = "Abdul-Sammad"
+	dynasty = me_mutanabbi_dynasty
+	rite = "imami"
+	culture = "bedouin"
+	
+	820.1.1 = {
+		birth = yes
+	}
+	865.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_014 = {
+	name = "al-Qasim" # Abu Muhammad al-Qasim al-Hariri al-Basri, Famous 11th century Arab poet
+	dynasty = me_harrami_dynasty
+	give_nickname = nick_me_al_hariri
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_017
+	1054.1.1 = {
+		birth = yes
+	}
+	1070.1.1 = {
+		trait = education_diplomacy_4
+		trait = lifestyle_poet
+	}
+	1122.1.10 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_015 = {
+	name = "Abdullah" # 'Najm ud-Din' Abu al-Qasim Abdullah, son of al-Hariri al-Basri
+	dynasty = me_harrami_dynasty
+	give_nickname = nick_najm_ud_din # Najm ud-Din
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_014
+	1085.1.1 = {
+		birth = yes
+	}
+	1150.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_016 = {
+	name = "Ubayd-Allah" # 'Diya ul-Islam' Ubaydullah, son of al-Hariri al-Basri and Qadi of al-Basra
+	dynasty = me_harrami_dynasty
+	give_nickname = nick_diya_ul_islam # Diya' ul-Islam
+	rite = "hanafi"
+	culture = "levantine"
+	trait = education_learning_3
+	
+	father = me_mashriqi_hchar_014
+	1090.1.1 = {
+		birth = yes
+	}
+	1155.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_017 = {
+	name = "Ali"
+	dynasty = me_harrami_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_018
+	1020.1.1 = {
+		birth = yes
+	}
+	1080.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_018 = {
+	name = "Muhammad"
+	dynasty = me_harrami_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_019
+	990.1.1 = {
+		birth = yes
+	}
+	1050.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_019 = {
+	name = "Uthman"
+	dynasty = me_harrami_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	960.1.1 = {
+		birth = yes
+	}
+	1020.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_020 = {
+	name = "al-Hasan" # al-Hasan 'Ibn al-Haytham', known in Latin as 'Alhazen', physicist and father of modern optics
+	dynasty = me_haythami_dynasty
+	give_nickname = nick_alhazen
+	rite = "hanafi"
+	culture = "levantine"
+	trait = education_learning_4
+	trait = lifestyle_physician
+	
+	father = me_mashriqi_hchar_021
+	965.7.1 = {
+		birth = yes
+	}
+	1040.3.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_021 = {
+	name = "al-Hasan" 
+	dynasty = me_haythami_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_022
+	930.1.1 = {
+		birth = yes
+	}
+	990.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_022 = {
+	name = "al-Haytham" 
+	dynasty = me_haythami_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	900.1.1 = {
+		birth = yes
+	}
+	960.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_023 = {
+	name = "Hibatullah" # Amin ud-Dawlah Hibatullah 'Ibn at-Tilmidh', Christian Arab physican who served at the Abbasid court
+	dynasty = me_ibn_al_tilmidh_dynasty
+	give_nickname = nick_me_ibn_al_tilmidh # Ibn at-Tilmidh
+	rite = "nestorian"
+	culture = "levantine"
+	trait = education_learning_4
+	trait = lifestyle_physician
+	
+	father = me_mashriqi_hchar_024
+	1074.1.1 = {
+		birth = yes
+	}
+	1165.4.11 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_024 = {
+	name = "Sa_id" # Father of 'Ibn at-Tilmidh', Christian Arab physican who worked at al-Adudi hospital
+	dynasty = me_ibn_al_tilmidh_dynasty
+	rite = "nestorian"
+	culture = "levantine"
+	trait = education_learning_3
+	trait = lifestyle_physician
+	
+	father = me_mashriqi_hchar_025
+	1040.1.1 = {
+		birth = yes
+	}
+	1100.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_025 = {
+	name = "Hibatullah" 
+	dynasty = me_ibn_al_tilmidh_dynasty
+	rite = "nestorian"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_026
+	1010.1.1 = {
+		birth = yes
+	}
+	1065.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_026 = {
+	name = "Ibrahim" 
+	dynasty = me_ibn_al_tilmidh_dynasty
+	rite = "nestorian"
+	culture = "levantine"
+	
+	980.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_027 = {
+	name = "Abd_al-Rahim" # Muhadhdhab ud-Din Abd al-Rahim 'ad-Dakhwar', Ayyubid head of medicine and founder of ad-Dakhwariyyah medical school
+	dynasty = me_al_dakhwar_dynasty
+	give_nickname = nick_me_al_dakhwar # ad-Dakhwar
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_028
+	1170.1.1 = {
+		birth = yes
+	}
+	1190.1.1 = {
+		trait = education_learning_4
+		trait = lifestyle_physician
+	}
+	1230.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_028 = {
+	name = "Ali"
+	dynasty = me_al_dakhwar_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	trait = education_learning_3
+	trait = lifestyle_physician
+	
+	father = me_mashriqi_hchar_029
+	1140.1.1 = {
+		birth = yes
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_029 = {
+	name = "Hamid"
+	dynasty = me_al_dakhwar_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	1110.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_030 = {
+	name = "Muhammad" # Abu Bakr Jamal ud-Din Muhammad 'Ibn Nubatah', Mumluk era poet
+	dynasty = me_ibn_nubatah_dynasty
+	give_nickname = nick_jamal_ud_din
+	rite = "shafii"
+	culture = "egyptian"
+	trait = lifestyle_poet
+	
+	father = me_mashriqi_hchar_031
+	1287.4.1 = {
+		birth = yes
+	}
+	1366.10.14 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_031 = {
+	name = "Muhammad"
+	dynasty = me_ibn_nubatah_dynasty
+	give_nickname = nick_shams_ud_din
+	rite = "shafii"
+	culture = "egyptian"
+	trait = education_learning_3
+	
+	father = me_mashriqi_hchar_032
+	1245.1.1 = {
+		birth = yes
+	}
+	1315.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_032 = {
+	name = "Muhammad"
+	dynasty = me_ibn_nubatah_dynasty
+	give_nickname = nick_sharaf_ud_din
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_033
+	1200.1.1 = {
+		birth = yes
+	}
+	1270.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_033 = {
+	name = "al-Hasan"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_034
+	1155.1.1 = {
+		birth = yes
+	}
+	1225.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_034 = {
+	name = "Salih"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_035
+	1110.1.1 = {
+		birth = yes
+	}
+	1180.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_035 = {
+	name = "Yahya"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_036
+	1065.1.1 = {
+		birth = yes
+	}
+	1135.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_036 = {
+	name = "Tahir"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_037
+	1025.1.1 = {
+		birth = yes
+	}
+	1095.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_037 = {
+	name = "Muhammad"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_038
+	980.1.1 = {
+		birth = yes
+	}
+	1040.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_038 = {
+	name = "Abd_al-Rahim" # Abd al-Rahim 'Ibn Nubatah' al-Fariqi, preacher at the court of Sayf ud-Dawlah al-Hamdani
+	dynasty = me_ibn_nubatah_dynasty
+	give_nickname = nick_me_ibn_nubatah
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_039
+	946.1.1 = {
+		birth = yes
+	}
+	984.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_039 = {
+	name = "Muhammad"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_040
+	915.1.1 = {
+		birth = yes
+	}
+	970.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_040 = {
+	name = "Isma_il"
+	dynasty = me_ibn_nubatah_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	885.1.1 = {
+		birth = yes
+	}
+	945.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_041 = {
+	name = "Muhammad" # Muhammad 'al-Battani' known in Latin as 'Albategnius', famous astrologer and mathematician from Harran
+	dynasty = me_al_battani_dynasty
+	give_nickname = nick_me_al_battani
+	rite = "hanafi"
+	culture = "levantine"
+	trait = education_learning_4
+	trait = erudite
+	
+	father = me_mashriqi_hchar_042
+	854.1.1 = {
+		birth = yes
+	}
+	929.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_042 = {
+	name = "Jabir"
+	dynasty = me_al_battani_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_043
+	820.1.1 = {
+		birth = yes
+	}
+	880.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_043 = {
+	name = "Sinan"
+	dynasty = me_al_battani_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	790.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_044 = {
+	name = "Ala_ud-Din" # Ala' ud-Din 'Ibn al-Shatir', Mamluk era astronomer who worked as a Muwaqqit for the Umayyad Mosque
+	dynasty = me_ibn_al_shatir_dynasty
+	give_nickname = nick_me_ibn_al_shatir
+	rite = "hanafi"
+	culture = "levantine"
+	trait = education_learning_4
+	
+	father = me_mashriqi_hchar_045
+	1304.1.1 = {
+		birth = yes
+	}
+	1375.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_045 = {
+	name = "Ali"
+	dynasty = me_ibn_al_shatir_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_046
+	1270.1.1 = {
+		birth = yes
+	}
+	1330.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_046 = {
+	name = "Ibrahim"
+	dynasty = me_ibn_al_shatir_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_047
+	1240.1.1 = {
+		birth = yes
+	}
+	1300.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_047 = {
+	name = "Muhammad"
+	dynasty = me_ibn_al_shatir_dynasty
+	rite = "hanafi"
+	culture = "levantine"
+	
+	1210.1.1 = {
+		birth = yes
+	}
+	1270.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_048 = {
+	name = "Abul-Faraj" # Amin ud-Dawlah Abu'l Faraj 'Ibn al-Quff', famous Christian Arab physician and surgeon
+	dynasty = me_ibn_al_quff_dynasty
+	give_nickname = nick_me_ibn_al_quff
+	rite = byzantine_rite
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_049
+	1233.8.22 = {
+		birth = yes
+	}
+	1286.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_049 = {
+	name = "Ya_qub"
+	dynasty = me_ibn_al_quff_dynasty
+	rite = byzantine_rite
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_050
+	1205.1.1 = {
+		birth = yes
+	}
+	1265.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_050 = {
+	name = "Ishaq"
+	dynasty = me_ibn_al_quff_dynasty
+	rite = byzantine_rite
+	culture = "levantine"
+	
+	1180.1.1 = {
+		birth = yes
+	}
+	1240.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_051 = {
+	name = "Muhammad" # Muhammad ibn Daniyal, Mamluk era playwrite who was famous for his shadow puppetry shows
+	dynasty = me_ibn_daniyal_dynasty # al-Khaza'i
+	give_nickname = nick_shams_ud_din
+	rite = "hanafi"
+	culture = "levantine"
+	trait = lifestyle_physician
+	trait = lifestyle_poet
+	
+	father = me_mashriqi_hchar_052
+	1248.1.1 = {
+		birth = yes
+	}
+	1310.11.5 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_052 = {
+	name = "Daniyal"
+	dynasty = me_ibn_daniyal_dynasty # al-Khaza'i
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_053
+	1220.1.1 = {
+		birth = yes
+	}
+	1290.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_053 = {
+	name = "Yusuf"
+	dynasty = me_ibn_daniyal_dynasty # al-Khaza'i
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_054
+	1200.1.1 = {
+		birth = yes
+	}
+	1260.1.1 = {
+		death = yes
+	}
+}
+
+me_mashriqi_hchar_054 = {
+	name = "Ma_tuq"
+	dynasty = me_ibn_daniyal_dynasty # al-Khaza'i
+	rite = "hanafi"
+	culture = "levantine"
+	
+	father = me_mashriqi_hchar_054
+	1180.1.1 = {
+		birth = yes
+	}
+	1240.1.1 = {
+		death = yes
+	}
+}
+
 ### Madhara'i family
 me_al_madharai_001 = {
 	name = "Ahmad" # Abu Bakr Ahmad 'al-Atrash' ibn Ibrahim al-Madhara'i, Governor of finances in Egypt and Syria
 	dynasty = me_al_madharai_dynasty
 	give_nickname = nick_me_al_atrash # al-Atrash (The Deaf)
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	stewardship = 8
 	trait = education_stewardship_4
@@ -289,7 +1258,7 @@ me_al_madharai_001 = {
 me_al_madharai_002 = {
 	name = "Ibrahim"
 	dynasty = me_al_madharai_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	
 	800.1.1 = {
@@ -303,7 +1272,7 @@ me_al_madharai_002 = {
 me_al_madharai_003 = {
 	name = "Ali" # Ali ibn Ahmad al-Madhara'i, Tulunid wazir 884-896 who handled finances alongside his brother al-Hasayn
 	dynasty = me_al_madharai_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	stewardship = 7
 	trait = education_stewardship_3
@@ -325,7 +1294,7 @@ me_al_madharai_003 = {
 me_al_madharai_004 = {
 	name = "al-Husayn" # al-Husayn ibn Ahmad al-Madhara'i, handled Tulunid finances in Syria and financial director of Egypt post-Tulunids
 	dynasty = me_al_madharai_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	stewardship = 7
 	trait = education_stewardship_3
@@ -346,7 +1315,7 @@ me_al_madharai_004 = {
 me_al_madharai_005 = {
 	name = "Muhammad" # Abu Bakr Muhammad ibn Ali al-Madhara'i, The last of the Madhara'ids
 	dynasty = me_al_madharai_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "egyptian"
 	diplomacy = 6
 	stewardship = 7
@@ -364,7 +1333,7 @@ me_al_madharai_005 = {
 me_al_madharai_006 = {
 	name = "Ahmad" # Ahmad ibn Ali al-Madhara'i
 	dynasty = me_al_madharai_dynasty
-	religion = "ashari"
+	rite = "shafii"
 	culture = "egyptian"
 	stewardship = 7
 	trait = education_stewardship_3
@@ -378,12 +1347,78 @@ me_al_madharai_006 = {
 	}
 }
 
+### Family of Husayn al-Ahwazi
+me_ahwazi_001 = {
+	name = "Sa_id"
+	dynasty = levantine_al-ahwazi
+	rite = "imami"
+	culture = "levantine"
+	
+	father = me_ahwazi_003
+	790.1.1 = {
+		birth = yes
+	}
+	850.1.1 = {
+		death = yes
+	}
+}
+
+me_ahwazi_002 = {
+	name = "al-Hasan"
+	dynasty = levantine_al-ahwazi
+	rite = "imami"
+	culture = "levantine"
+	trait = education_learning_3
+	trait = zealous
+	trait = erudite
+	
+	father = me_ahwazi_001
+	820.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = al_ahwazi_1
+	}
+	870.1.1 = {
+		death = yes
+	}
+}
+
+me_ahwazi_003 = {
+	name = "Hammad"
+	dynasty = levantine_al-ahwazi
+	rite = "imami"
+	culture = "levantine"
+	
+	father = me_ahwazi_004
+	770.1.1 = {
+		birth = yes
+	}
+	830.1.1 = {
+		death = yes
+	}
+}
+
+me_ahwazi_004 = {
+	name = "Mihran"
+	dynasty = levantine_al-ahwazi
+	rite = "imami"
+	culture = "levantine"
+	
+	750.1.1 = {
+		birth = yes
+	}
+	810.1.1 = {
+		death = yes
+	}
+}
+
 ### Extra Abbasids
 me_abbasids_001 = {
 	name = "Zabaidah" # Sukhainah/Amat al-Aziz (Nicknamed Zubaidah by her grandfather, which meant little butterball), Wife of Harun ar-Rashid and Mother of al-Amin 
 	female = yes
 	dynasty_house = house_abbasid
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = quraysh
 	trait = hajjaj # Went to the Hajj more than five times
@@ -405,7 +1440,7 @@ me_abbasids_001 = {
 me_abbasids_002 = {
 	name = "Ibrahim" # Ibrahim ibn Jafar, brother of Zubaidah
 	dynasty_house = house_abbasid
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = quraysh
 	
@@ -423,7 +1458,7 @@ me_abbasids_003 = {
 	name = "Lubabah" # Wife of al-Hadi and Daughter of Jafar ibn al-Mansur
 	female = yes
 	dynasty_house = house_abbasid
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = quraysh
 	
@@ -442,7 +1477,7 @@ me_abbasids_003 = {
 me_abbasids_004 = {
 	name = "Sulayman" # Sulayman ibn Ali al-Hashimi, Governor of Basra (750-755) 
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 	trait = hajjaj
@@ -459,7 +1494,7 @@ me_abbasids_004 = {
 me_abbasids_005 = {
 	name = "Muhammad"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 	trait = hajjaj
@@ -480,7 +1515,7 @@ me_abbasids_005 = {
 me_abbasids_006 = {
 	name = "Ja_far"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -496,7 +1531,7 @@ me_abbasids_006 = {
 me_abbasids_007 = {
 	name = "Abd_al-Rahim"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -514,7 +1549,7 @@ me_abbasids_007 = {
 me_abbasids_008 = {
 	name = "Abd-al-Wahid"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -530,7 +1565,7 @@ me_abbasids_008 = {
 me_abbasids_009 = {
 	name = "Ja_far" # Ja'far ibn Abdul-Wahid al-Hashimi, Abbasid Chief Judge (854-863)
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 	trait = education_learning_3
@@ -548,7 +1583,7 @@ me_abbasids_009 = {
 me_abbasids_010 = {
 	name = "Ishaq"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -568,7 +1603,7 @@ me_abbasids_011 = {
 	name = "Aliyah"
 	female = yes
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 
@@ -588,7 +1623,7 @@ me_abbasids_011 = {
 me_abbasids_012 = {
 	name = "al-Fadl"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -605,7 +1640,7 @@ me_abbasids_012 = {
 me_abbasids_013 = {
 	name = "Ja_far"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -623,7 +1658,7 @@ me_abbasids_014 = {
 	name = "Abbasah" # al-Abbasah bint al-Mahdi
 	female = yes
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -645,7 +1680,7 @@ me_abbasids_014 = {
 me_abbasids_015 = {
 	name = "Ali"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -661,7 +1696,7 @@ me_abbasids_015 = {
 me_abbasids_016 = {
 	name = "Isma_il"
 	dynasty_house = house_abbasid # Abbasid
-	religion = "ashari"
+	rite = "shafii"
 	culture = "bedouin"
 	trait = quraysh
 
@@ -678,7 +1713,7 @@ me_abbasids_017 = {
 	name = "Raytah" # Daughter of Caliph al-Saffah and wife of Caliph al-Mahdi
 	female = yes
 	dynasty_house = house_abbasid # Abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	trait = quraysh
 
@@ -698,7 +1733,7 @@ me_abbasids_017 = {
 me_abbasids_018 = {
 	name = "Muhammad" # Son of Caliph al-Saffah
 	dynasty_house = house_abbasid # Abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	trait = quraysh
 
@@ -715,7 +1750,7 @@ me_abbasids_018 = {
 me_abbasids_019 = {
 	name = "Ubayd-Allah" # Son of Caliph al-Mahdi, Governed Egypt for two short periods
 	dynasty_house = house_abbasid # Abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	trait = quraysh
 
@@ -732,7 +1767,7 @@ me_abbasids_019 = {
 me_abbasids_020 = {
 	name = "Ali" 
 	dynasty_house = house_abbasid # Abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = "levantine"
 	trait = quraysh
 
@@ -749,7 +1784,7 @@ me_abbasids_020 = {
 me_abbasids_021 = {
 	name = "Musa"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -765,7 +1800,7 @@ me_abbasids_021 = {
 me_abbasids_022 = {
 	name = "Isa"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -781,7 +1816,7 @@ me_abbasids_022 = {
 me_abbasids_023 = {
 	name = "Dawud"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -797,7 +1832,7 @@ me_abbasids_023 = {
 me_abbasids_024 = {
 	name = "Muhammad"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -813,7 +1848,7 @@ me_abbasids_024 = {
 me_abbasids_025 = {
 	name = "Abdullah" # Abdullah ibn Muahmmad ibn Dawud al-Abbasi, Governor of Mecca and Medina 869
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -832,7 +1867,7 @@ me_abbasids_025 = {
 me_abbasids_026 = {
 	name = "Isa"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -849,7 +1884,7 @@ me_abbasids_026 = {
 me_abbasids_027 = {
 	name = "Ahmad"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -866,7 +1901,7 @@ me_abbasids_028 = {
 	name = "Muhammad" # Muhammad 'Ka'b al-Baqar' ibn Ahmad ibn Isa ibn al-Mansur, believed to have governed Medina and Mecca in a period between 255 - 266 AH ()
 	dynasty_house = house_abbasid
 	give_nickname = nick_me_kab_al_baqar # Ka'b al-Baqar
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -882,7 +1917,7 @@ me_abbasids_028 = {
 me_abbasids_029 = {
 	name = "Abi_Ya_qub"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -898,7 +1933,7 @@ me_abbasids_029 = {
 me_abbasids_030 = {
 	name = "Muhammad"
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -914,7 +1949,7 @@ me_abbasids_030 = {
 me_abbasids_031 = {
 	name = "Ahmad" # Ahmad ibn Muhammad ibn Abi Ya'qub ibn Harun al-Rashid, In charge of ruling on grievances and religious matters during al-Muqtadir's time
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -924,7 +1959,7 @@ me_abbasids_031 = {
 	}
 	885.1.1 = {
 		trait = education_learning_3
-		trait = scholar
+		trait = erudite
 		trait = just
 		effect = {
 			add_trait = hafidh
@@ -943,7 +1978,7 @@ me_abbasids_032 = {
 	name = "Kulthum"
 	female = yes
 	dynasty_house = house_abbasid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 	trait = quraysh
 	
@@ -956,12 +1991,80 @@ me_abbasids_032 = {
 	}
 }
 
+me_abbasids_033 = {
+	name = "al-Harith"
+	dynasty_house = house_abbasid
+	rite = "shafii"
+	culture = "bedouin"
+	trait = quraysh
+	trait = zealous
+	
+	father = 33900
+	620.1.1 = {
+		birth = yes
+	}
+	680.1.1 = {
+		death = yes
+	}
+}
+
+me_abbasids_034 = {
+	name = "Abdullah"
+	dynasty_house = house_abbasid
+	rite = "shafii"
+	culture = "bedouin"
+	trait = quraysh
+	trait = zealous
+	
+	father = me_abbasids_033
+	660.1.1 = {
+		birth = yes
+	}
+	720.1.1 = {
+		death = yes
+	}
+}
+
+me_abbasids_035 = {
+	name = "as-Sari" # as-Sari ibn Abdullah al-Abbasi, Abbasid governor of al-Yamamah in 750
+	dynasty_house = house_abbasid
+	rite = "shafii"
+	culture = "bedouin"
+	trait = quraysh
+	trait = zealous
+	
+	father = me_abbasids_034
+	700.1.1 = {
+		birth = yes
+	}
+	765.1.1 = { # Unknown
+		death = yes
+	}
+}
+
+me_abbasids_036 = {
+	name = "Hashim" # Abu al-Mansur Hashim ibn al-Hasan 'al-Mustadi bi-Amr Allah'
+	dynasty_house = house_abbasid
+	rite = "shafii"
+	culture = "bedouin"
+	trait = quraysh
+
+	father = 144064 # Caliph al-Mustadi
+	mother = me_abbasid_consort_011 # Sharaf Khatun
+	1160.1.1 = {
+		birth = yes
+	}
+	1240.1.1 = {
+		death = yes
+	}
+}
+
 ## Abbasid Governors
 
 me_abbasid_gov_001 = {
 	name = "al-Abbas" # al-Abbas ibn 'Amr al-Ghanawi, placed as governor of multiple regions under the Abbasids
 	dynasty = me_ghanawi_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 
 	father = me_abbasid_gov_002
@@ -976,7 +2079,7 @@ me_abbasid_gov_001 = {
 me_abbasid_gov_002 = {
 	name = "Amr" # Father of al-Abbas ibn 'Amr al-Ghanawi
 	dynasty = me_ghanawi_dynasty
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 
 	835.1.1 = {
@@ -989,7 +2092,7 @@ me_abbasid_gov_002 = {
 
 me_abbasid_gov_003 = {
 	name = "Abdullah" # Placeholder for Abbasid governor of Bahrain in 901
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 
 	870.1.1 = {
@@ -1002,7 +2105,7 @@ me_abbasid_gov_003 = {
 
 me_abbasid_gov_004 = {
 	name = "Ibn_Banwa" # Abbasid ruler of Bahrain in 903
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 
 	870.1.1 = {
@@ -1016,7 +2119,7 @@ me_abbasid_gov_004 = {
 me_abbasid_gov_005 = {
 	name = "al-_Ala_" # al-'Ala' ibn Ahamd, Governor of Armenia around 865-866
 	dynasty = arabic_azd # Azdid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 
 	father = me_abbasid_gov_006
@@ -1034,7 +2137,7 @@ me_abbasid_gov_005 = {
 me_abbasid_gov_006 = {
 	name = "Ahmad"
 	dynasty = arabic_azd # Azdid
-	religion = "ashari"
+	rite = "hanafi"
 	culture = levantine
 
 	790.1.1 = {
@@ -1048,7 +2151,7 @@ me_abbasid_gov_006 = {
 me_abbasid_gov_007 = {
 	name = "al-Faraj" # Father of Muhammad al-Farghani, governor of Barqa and Alexandria
 	dynasty = levantine_al-farghani
-	religion = "ashari"
+	rite = "shafii"
 	culture = sogdian
 
 	800.1.1 = {
@@ -1060,13 +2163,68 @@ me_abbasid_gov_007 = {
 }
 
 
-## Abbasid wifes and concubines
+## Abbasid wives and concubines
+me_banafsha_rumiyyah = {
+	name = "Banafshah" # Banafshah bint Abdullah ar-Rumiyyah, a concubine-turned-wife of Caliph al-Mustadi
+	female = yes
+	give_nickname = nick_me_al_rumiyyah
+	rite = "shafii" 
+	culture = "greek"
+	trait = generous
+	trait = compassionate
+	trait = beauty_good_2
+	
+	#father = ### # She does not actually have a father by the name of Abdullah, this is simply as patronymic given to slave women of non-Muslim fathers
+	1152.1.1 = {
+		birth = yes
+	}
+	1170.1.1 = {
+		add_spouse = 144064
+		effect = {
+			set_relation_lover = { reason = lover_history target = character:144064 } # Caliph al-Mustadi
+			learn_language_of_culture = culture:levantine
+		}
+	}
+	1173.1.1 = {
+		effect = {
+			set_relation_friend = { reason = friend_generic_history target = character:227000 } # Her step-son, Caliph an-Nasir
+		}
+	}
+	1201.1.1 = {
+		death = yes
+	}
+}
+
+me_zumurrud_khatun = {
+	name = "Zumurrud" # Zumurrud Khatun, a Turkish concubine-turned-wife of Caliph al-Mustadi and mother of Caliph an-Nasir
+	female = yes
+	rite = "shafii" 
+	culture = "turkish"
+	trait = architect
+	trait = generous
+	trait = zealous
+	trait = hajjaj
+	
+	1132.1.1 = {
+		birth = yes
+	}
+	1156.1.1 = {
+		add_spouse = 144064
+		effect = {
+			learn_language_of_culture = culture:levantine
+		}
+	}
+	1203.2.1 = {
+		death = yes
+	}
+}
+
 me_abbasid_consort_001 = {
 	name = "_Arib" # Arib al-Ma'muniyyah
 	female = yes
 	dynasty = 1042125 # Barmakid
 	give_nickname = nick_me_al_mamuniyyah # al-Ma'muniyyah
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = lifestyle_poet
 	trait = education_diplomacy_4
@@ -1095,7 +2253,7 @@ me_abbasid_consort_001 = {
 me_abbasid_consort_002 = {
 	name = "Shariyah" # Shariyah, Arib's rival
 	female = yes
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = lifestyle_poet
 	trait = education_diplomacy_3
@@ -1114,7 +2272,7 @@ me_abbasid_consort_002 = {
 me_abbasid_consort_003 = {
 	name = "Sallamah" # Sallamah, grandmother of the ruling Abbasid dynasty
 	female = yes
-	religion = ashari
+	rite = shafii
 	culture = "baranis"
 	
 	695.1.1 = {
@@ -1132,7 +2290,7 @@ me_abbasid_consort_004 = {
 	name = "al-Khayzuran" # al-Khayzuran bint Atta', Mother of the al-Hadi and Harun ar-Rashid
 	female = yes
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = shafii
 	culture = "bedouin"
 	trait = hajjaj
 	
@@ -1151,7 +2309,7 @@ me_abbasid_consort_004 = {
 me_abbasid_consort_005 = {
 	name = "Atta_"
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = shafii
 	culture = "bedouin"
 	
 	715.1.1 = {
@@ -1166,7 +2324,7 @@ me_abbasid_consort_006 = {
 	name = "Salsal" # Older sister of al-Khayzuran bint Atta' and wife of Ja'far ibn al-Mansur
 	female = yes
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = shafii
 	culture = "bedouin"
 	
 	father = me_abbasid_consort_005
@@ -1185,7 +2343,7 @@ me_abbasid_consort_007 = {
 	name = "Asma" # sister of al-Khayzuran bint Atta'
 	female = yes
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = shafii
 	culture = "bedouin"
 	
 	father = me_abbasid_consort_005
@@ -1200,7 +2358,7 @@ me_abbasid_consort_007 = {
 me_abbasid_consort_008 = {
 	name = "Ghitrif" # brother of al-Khayzuran bint Atta' and father-in-law and uncle of al-Hadi and Harun ar-Rashid
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = shafii
 	culture = "bedouin"
 	
 	father = me_abbasid_consort_005
@@ -1216,7 +2374,7 @@ me_abbasid_consort_009 = {
 	name = "Ubaidah" # Wife of al-Hadi, he would divorce her after an incident with his mother
 	female = yes
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_abbasid_consort_008
@@ -1238,7 +2396,7 @@ me_abbasid_consort_010 = {
 	name = "Azizah" # Wife of Harun ar-Rashid
 	female = yes
 	dynasty = me_jarashi_dynasty # al-Jarashi
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_abbasid_consort_008
@@ -1253,86 +2411,32 @@ me_abbasid_consort_010 = {
 	}
 }
 
-
-## Ahmad Ibn Fadlan
-me_ibn_fadlan_001 = {
-	name = "Ahmad" # Ahmad ibn Fadlan, Abbasid Embassy to the Bulgars
-	dynasty_house = house_me_fadlanid
-	religion = ashari
-	culture = "levantine"
-	trait = education_learning_4
-	trait = theologian
-	trait = zealous
+me_abbasid_consort_011 = {
+	name = "Sharaf" # Sharaf Khatun, a Turkish concubine-turned-wife of Caliph al-Mustadi and mother of Abu al-Mansur Hashim
+	female = yes
+	rite = "shafii" 
+	culture = "turkish"
 	
-	father = me_ibn_fadlan_002
-	885.1.1 = {
+	1140.1.1 = {
 		birth = yes
 	}
-	950.1.1 = {
+	1158.1.1 = {
+		add_spouse = 144064
+		effect = {
+			learn_language_of_culture = culture:levantine
+		}
+	}
+	1211.12.26 = {
 		death = yes
 	}
 }
 
-me_ibn_fadlan_002 = {
-	name = "Fadlan"
-	religion = ashari
-	culture = "levantine"
-	
-	father = me_ibn_fadlan_003
-	845.1.1 = {
-		birth = yes
-	}
-	867.1.1 = {
-		death = yes
-	}
-}
-
-me_ibn_fadlan_003 = {
-	name = "al-Abbas"
-	religion = ashari
-	culture = "levantine"
-	
-	father = me_ibn_fadlan_004
-	815.1.1 = {
-		birth = yes
-	}
-	865.1.1 = {
-		death = yes
-	}
-}
-
-me_ibn_fadlan_004 = {
-	name = "Rashid"
-	religion = ashari
-	culture = "levantine"
-	
-	father = me_ibn_fadlan_005
-	785.1.1 = {
-		birth = yes
-	}
-	845.1.1 = {
-		death = yes
-	}
-}
-
-me_ibn_fadlan_005 = {
-	name = "Hammad"
-	religion = ashari
-	culture = "levantine"
-	
-	755.1.1 = {
-		birth = yes
-	}
-	815.1.1 = {
-		death = yes
-	}
-}
 
 ## The Qaysite (Banu Qays) dynasty of Apahunik
 me_qaysite_001 = {
 	name = "Abd_al-Hamid"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = 159722 # Abu al-Ward, first known Qaysite ruler
@@ -1347,7 +2451,7 @@ me_qaysite_001 = {
 me_qaysite_002 = {
 	name = "Abd_ar-Rahman"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = 159722 # Abu al-Ward, first known Qaysite ruler
@@ -1362,7 +2466,7 @@ me_qaysite_002 = {
 me_qaysite_003 = {
 	name = "Ahmad" # Adoptive son of Abd ar-Rahman
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = me_qaysite_002
@@ -1377,7 +2481,7 @@ me_qaysite_003 = {
 me_qaysite_004 = {
 	name = "Abu_Sawada"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = me_qaysite_001
@@ -1392,7 +2496,7 @@ me_qaysite_004 = {
 me_qaysite_005 = {
 	name = "Abd_al-Rahim"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = me_qaysite_004
@@ -1407,7 +2511,7 @@ me_qaysite_005 = {
 me_qaysite_006 = {
 	name = "Abu_al_Mu_izz"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = me_qaysite_004
@@ -1422,7 +2526,7 @@ me_qaysite_006 = {
 me_qaysite_007 = {
 	name = "Abu_al_Aswad"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = me_qaysite_001
@@ -1437,7 +2541,7 @@ me_qaysite_007 = {
 me_qaysite_008 = {
 	name = "Abu_Salim"
 	dynasty = 1029119 # al-Qaysi (Qaysite/Kaysite)
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 
 	father = me_qaysite_001
@@ -1453,7 +2557,7 @@ me_qaysite_008 = {
 me_uthmanid_berkri_001 = {
 	name = "Abdullah"
 	dynasty = me_uthmanid_berkri_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_uthmanid_berkri_003
@@ -1471,7 +2575,7 @@ me_uthmanid_berkri_001 = {
 me_uthmanid_berkri_002 = {
 	name = "Musa"
 	dynasty = me_uthmanid_berkri_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_uthmanid_berkri_003
@@ -1486,7 +2590,7 @@ me_uthmanid_berkri_002 = {
 me_uthmanid_berkri_003 = {
 	name = "Muhammad"
 	dynasty = me_uthmanid_berkri_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_uthmanid_berkri_004
@@ -1501,7 +2605,7 @@ me_uthmanid_berkri_003 = {
 me_uthmanid_berkri_004 = {
 	name = "Uthman"
 	dynasty = me_uthmanid_berkri_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	770.1.1 = {
@@ -1515,7 +2619,7 @@ me_uthmanid_berkri_004 = {
 me_uthmanid_berkri_005 = {
 	name = "Muhammad"
 	dynasty = me_uthmanid_berkri_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_uthmanid_berkri_001
@@ -1531,7 +2635,7 @@ me_uthmanid_berkri_005 = {
 me_jahhafid_001 = {
 	name = "Jahhaf"
 	dynasty = me_jahhafid_dynasty
-	religion = ashari
+	rite = shafii
 	culture = "bedouin"
 	trait = gallowsbait
 	
@@ -1549,7 +2653,7 @@ me_jahhafid_001 = {
 me_jahhafid_002 = {
 	name = "Abd_al-Malik"
 	dynasty = me_jahhafid_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = gallowsbait
 	
@@ -1568,7 +2672,7 @@ me_jahhafid_002 = {
 me_jahhafid_003 = {
 	name = "Abd_al-Hamid"
 	dynasty = me_jahhafid_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	
 	father = me_jahhafid_001
@@ -1585,7 +2689,7 @@ me_jahhafid_004 = {
 	name = "Sawada"
 	dynasty = me_jahhafid_dynasty
 	give_nickname = nick_me_awaranshah
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = gallowsbait
 	
@@ -1604,7 +2708,7 @@ me_jahhafid_004 = {
 me_jahhafid_005 = {
 	name = "Jahhaf"
 	dynasty = me_jahhafid_dynasty
-	religion = ashari
+	rite = hanafi
 	culture = "levantine"
 	trait = gallowsbait
 	

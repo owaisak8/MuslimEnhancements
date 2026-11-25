@@ -1,0 +1,6 @@
+﻿# 1.20: law groups are their own database; the laws themselves are in common/laws/me_laws.txt
+me_succession_caliphal = {
+	default = me_qurashi_preference_succession_law
+	cumulative = no
+	flag = admin_law
+}

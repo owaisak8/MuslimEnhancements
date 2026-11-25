@@ -1,9 +1,4 @@
-﻿me_drunkard_crime = {
-	imprisonment_reason = yes
-	revoke_title_reason = yes
-}
-
-sayyid_opinion_normal = {
+﻿sayyid_opinion_normal = {
 	opinion = 10
 }
 
@@ -49,6 +44,10 @@ me_fugitive_opinion = {
 	decaying = yes
 }
 
+me_opened_our_faith_opinion = {
+	years = 30
+}
+
 me_laamp_cc_success_astray_opinion = {
 	monthly_change = 0.05
 	decaying = yes
@@ -87,4 +86,22 @@ me_laamp_cc_fail_evil_opinion = {
 me_laamp_cc_force_opinion = {
 	monthly_change = 0.05
 	decaying = yes
+}
+
+ME_gifted_dates_muslim_opinion = {
+	years = 10
+	decaying = yes
+	opinion = 10
+}
+
+ME_gifted_dates_non_muslim_opinion = {
+	years = 10
+	decaying = yes
+	opinion = 5
+}
+
+me_remourseful_opinion = {
+	monthly_change = 0.1
+	decaying = yes
+	stacking = yes
 }

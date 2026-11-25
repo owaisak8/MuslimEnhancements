@@ -1,0 +1,7 @@
+﻿# ME: Muslim of an Austronesian culture (Malay, Javanese, Acehnese, Bugis...), for the dress mix in
+# gfx/portraits/portrait_modifiers/me_clothes_austronesian_muslim.txt
+me_portrait_austronesian_muslim_trigger = {
+	exists = this
+	religion = religion:islam_religion
+	culture = { has_cultural_pillar = heritage_austronesian }
+}

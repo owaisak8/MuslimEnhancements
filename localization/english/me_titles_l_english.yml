@@ -20,8 +20,10 @@
  d_laamp_me_uthmanid_berkri_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_jahhafid: "Prince of Looters"
  d_laamp_me_jahhafid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
- d_laamp_me_ibn_wahb: "Inqusitive Basris"
+ d_laamp_me_ibn_wahb: "Travellers of Basra"
  d_laamp_me_ibn_wahb_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_hisni_umayyads: "Children of the Fortress"
+ d_laamp_me_hisni_umayyads_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_ibn_as_sufi_867: "Swords of Ibn as-Sufi"
  d_laamp_me_ibn_as_sufi_867_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_balnubi: "Wanderers of Ballanubah"
@@ -32,28 +34,52 @@
  d_laamp_me_hujwiri_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_maghila: "Maghila Clan"
  d_laamp_me_maghila_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
- d_laamp_me_ba_alawi_1066: "Ba'Alawi Sadat"
+ d_laamp_me_munqidhi: "Sons of Munqidh"
+ d_laamp_me_munqidhi_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ba_alawi_1066: "Ba'Alawi Clan"
  d_laamp_me_ba_alawi_1066_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_ibn_as_sufi_1066: "Scholars of the Sacred Bloodline"
  d_laamp_me_ibn_as_sufi_1066_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
- d_laamp_me_ba_alawi_1178: "Ba'Alawi Sadat"
+ d_laamp_me_umayyad_andalus_1066: "Heirs of Umayyah"
+ d_laamp_me_umayyad_andalus_1066_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ba_alawi_1178: "Ba'Alawi Clan"
  d_laamp_me_ba_alawi_1178_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_umayyad_andalus_1178: "Teachers of Sharish"
+ d_laamp_me_umayyad_andalus_1178_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_idrisid: "Children of Idris"
  d_laamp_me_idrisid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_ganjavid: "Poets of Ganja"
  d_laamp_me_ganjavid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_suhrawardid:0 "Masters of Illumination"
  d_laamp_me_suhrawardid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ibn_jubayr:0 "Pilgrim's Banner"
+ d_laamp_me_ibn_jubayr_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_buhturid:0 "Warriors of al-Gharb"
  d_laamp_me_buhturid_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  
  ## Fictional/Easter Egg
- d_laamp_me_umayyad_fic_1: "Heirs of Umayyah"
- d_laamp_me_umayyad_fic_1_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
- d_laamp_me_umayyad_fic_2: "Heirs of Umayyah"
- d_laamp_me_umayyad_fic_2_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
  d_laamp_me_ea_cats: "Lions of War"
  d_laamp_me_ea_cats_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ 
+ ## Heresiarch Spawnable
+ d_laamp_me_ibn_nusayr:0 "Nusayri Faithful"
+ d_laamp_me_ibn_nusayr_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_ishaq_ahmar:0 "Ishaqi Faithful"
+ d_laamp_me_ishaq_ahmar_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_zakarawayh:0 "Swords of Zakarawayh"
+ d_laamp_me_zakarawayh_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_al_jayshani:0 "Bringers of Truth"
+ d_laamp_me_al_jayshani_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ d_laamp_me_baqliyyah:0 "Baqli Faithful"
+ d_laamp_me_baqliyyah_article: "$DEFAULT_TITLE_NAME_ARTICLE$"
+ 
+ 
+ ### HoF Titles
+ d_ibadi:0 "The Ibadi Imamate"
+ d_ibadi_adj:0 "Ibadi"
+ d_hafizi:0 "Hafizi Caliphate"
+ d_hafizi_adj:0 "Hafizi"
+
 
  #Jerusalem
  c_quds_arabic:0 "al-Quds"
@@ -88,7 +114,7 @@
  #(Caucasus)
  me_derbent_persian:0 "Darband"
 
- 
+
 
  #By Ace, Muslim Enhancements.
  #(Georgia)

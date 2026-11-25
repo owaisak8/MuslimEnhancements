@@ -1,0 +1,265 @@
+﻿# ME: game rule me_rite_editing - marks the historical Muslim Rites and the faiths bound by the law, for the pick-time
+# guards in common/scripted_triggers/me_rite_editing_triggers.txt (which must not name rites or faiths themselves).
+on_game_start = {
+	on_actions = { me_rite_editing_marks }
+}
+yearly_global_pulse = {
+	on_actions = { me_rite_editing_marks }
+}
+
+me_rite_editing_marks = {
+	effect = {
+		rite:alawite ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:alevi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:azariqa ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:baqli ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:druze ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:ghulat ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:hafizi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:hanafi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:hanbali ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:ibadi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:imami ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:ishaqiya ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:ismaili ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:karrami ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:maliki ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:masmudi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:mutazila ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:nabi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:najdat ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:nizari ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:nukkari ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:qarmatian ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:quranist ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:sahabah ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:salihi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:shafii ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:sufri ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:tabiun ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:tayyibi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:wahbiya ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:zayidi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		faith:sadr_al_islam ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:sunni ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:masmudi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:shia ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:ithna_ashari ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:zayidi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:ibadi ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:kharijite ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:najdat ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:sufri ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+		faith:quranist ?= {
+			if = {
+				limit = { NOT = { has_variable = me_law_faith } }
+				set_variable = { name = me_law_faith value = yes }
+			}
+		}
+	}
+}

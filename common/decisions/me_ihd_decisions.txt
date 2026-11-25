@@ -1,0 +1,1325 @@
+﻿ME_observe_islamic_holy_days = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/give_zakat.dds"
+	}
+	#decision_group_type = major
+	#sort_order = 100
+
+	is_shown = {
+		is_landed = yes
+		OR = { # For reference, Muslims fast in Ramadan while the Barghawata fast in Rajab
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+		}
+	}
+
+	is_valid_showing_failures_only = {}
+	
+	desc = {
+		desc = ME_observe_islamic_holy_days_desc
+		desc = ME_hijri_calender
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					NOT = { me_hijri_month_value = 9 }
+				}
+				desc = ME_days_until_ramadan
+			}
+			triggered_desc = {
+				trigger = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					me_hijri_month_value = 9
+				}
+				desc = ME_it_is_currently_ramadan
+			}
+			triggered_desc = {
+				trigger = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					NOT = { me_hijri_month_value = 7 }
+				}
+				desc = ME_days_until_rajab
+			}
+			triggered_desc = {
+				trigger = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					me_hijri_month_value = 7
+				}
+				desc = ME_it_is_currently_rajab
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					me_hijri_month_value = 12
+					me_hijri_day_display >= 10
+					me_hijri_day_display <= 13
+				}
+				desc = ME_it_is_currently_eid_al_adha
+			}
+			triggered_desc = {
+				trigger = {}
+				desc = ME_days_until_eid_al_adha
+			}
+		}
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					rite = {
+						OR = {
+							rite_has_doctrine = muhammad_succession_shia_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+						}
+					}
+					NOT = { me_hijri_month_value = 1 }
+				}
+				desc = ME_days_until_muharram
+			}
+			triggered_desc = {
+				trigger = {
+					rite = {
+						OR = {
+							rite_has_doctrine = muhammad_succession_shia_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+							rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+						}
+					}
+					me_hijri_month_value = 1
+				}
+				desc = ME_it_is_currently_muharram
+			}
+		}
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "GENERIC_CHOOSE_OPTION"
+		show_from_start = yes
+
+		item = { # Setup Iftar tents
+			value = me_setup_iftar_tents
+			is_valid = {
+				custom_tooltip = {
+					text = me_not_currently_ramadan_tt
+					trigger_if = { 
+						limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+						me_hijri_month_value = 9
+					}
+				}
+				trigger_if = { 
+					limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+					custom_tooltip = {
+						text = me_county_doesnt_have_ramadan_iftar_tt
+						any_sub_realm_county = {
+							rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+							NOR = {
+								has_county_modifier = me_iftar_sponsorship_modest_modifier
+								has_county_modifier = me_iftar_sponsorship_substantial_modifier
+								has_county_modifier = me_iftar_sponsorship_grand_modifier
+							}
+						}
+					}
+				}
+				custom_tooltip = {
+					text = me_not_currently_rajab_tt
+					trigger_if = {
+						limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+						me_hijri_month_value = 7
+					}
+				}
+				trigger_if = { 
+					limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+					custom_tooltip = {
+						text = me_county_doesnt_have_rajab_iftar_tt
+						any_sub_realm_county = {
+							rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+							NOR = {
+								has_county_modifier = me_iftar_sponsorship_modest_modifier
+								has_county_modifier = me_iftar_sponsorship_substantial_modifier
+								has_county_modifier = me_iftar_sponsorship_grand_modifier
+							}
+						}
+					}
+				}
+			}
+			current_description = me_setup_iftar_tents_desc
+			localization = me_setup_iftar_tents
+			icon = "gfx/interface/icons/widgets/ramadan_lantern.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Udhiyat for Eid al-Adha
+			value = me_choose_udhiyah_amount
+			is_valid = {
+				custom_tooltip = {
+					text = me_not_currently_eid_al_adha_tt
+					me_hijri_month_value = 12
+					me_hijri_day_display >= 10
+					me_hijri_day_display <= 13
+				}
+			}
+			current_description = me_choose_udhiyah_amount_desc
+			localization = me_choose_udhiyah_amount
+			icon = "gfx/interface/icons/widgets/sheep.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Muharram decision
+			value = me_choose_muharram
+			is_shown = {
+				rite = {
+					OR = {
+						rite_has_doctrine = muhammad_succession_shia_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine
+						rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine
+					}
+				}
+			}
+			is_valid = {
+				custom_tooltip = {
+					text = me_not_currently_muharram_tt
+					#me_hijri_month_value = 1
+				}
+			}
+			current_description = me_choose_muharram_desc
+			localization = me_choose_muharram
+			icon = "gfx/interface/icons/widgets/shia_sword.dds"
+			ai_chance = { value = 10 }
+		}
+#		item = { # Settle unfasted days
+#			value = me_settle_unfasted_days
+#			is_valid = {
+#				OR = {
+#					custom_tooltip = {
+#						text = me_cannot_currently_fast_tt
+#						faith = { has_doctrine = doctrine_me_fasting_month_ramadan }
+#						### CHECK IF NOT RAMADAN OR EID ###
+#						OR = {
+#							me_hijri_month_value = 9
+#							AND = {
+#								me_hijri_month_value = 10
+#								me_hijri_day_display >= 1
+#								me_hijri_day_display <= 3
+#							}
+#							AND = {
+#								me_hijri_month_value = 12
+#								me_hijri_day_display >= 10
+#								me_hijri_day_display <= 13
+#							}
+#						}
+#					}
+#					custom_tooltip = {
+#						text = me_cannot_currently_fast_tt
+#						faith = { has_doctrine = doctrine_me_fasting_month_rajab }
+#						OR = {
+#							me_hijri_month_value = 7
+#							AND = {
+#								me_hijri_month_value = 8
+#								me_hijri_day_display >= 1
+#								me_hijri_day_display <= 3
+#							}
+#							AND = {
+#								me_hijri_month_value = 12
+#								me_hijri_day_display >= 10
+#								me_hijri_day_display <= 13
+#							}
+#						}
+#					}
+#				}
+#				#### INSERT HEALTH PROHIBITIONS ####
+#			}
+#			current_description = me_settle_unfasted_days_desc
+#			localization = me_settle_unfasted_days
+#			#icon = "###"
+#			ai_chance = { value = 10 }
+#		}
+#		item = { # Other Holy Days - Where we handle the adoption of holy days not available at 867 such as Mawlid or Ghadir Khumm
+#			value = me_other_islamic_holy_days
+#			is_valid = {
+#				
+#			}
+#			current_description = me_other_islamic_holy_days_desc
+#			localization = me_other_islamic_holy_days
+#			#icon = "###"
+#			ai_chance = { value = 10 }
+#		}
+		item = { # Notifications - Player gets to choose whether they wish to be notified of Ramadan/Eid or not
+			value = me_islamic_holy_days_notifications
+			is_valid = {}
+			current_description = me_islamic_holy_days_notifications_desc
+			localization = me_islamic_holy_days_notifications
+			icon = "gfx/interface/icons/widgets/icon_group_of_characters.dds"
+			ai_chance = { value = 10 }
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			scope:me_setup_iftar_tents = {
+				custom_tooltip = me_iftar_type_choose_tt
+				open_view_data = {
+					view = decision_detail
+					data = decision:ME_pick_iftar_tent_type_decision
+					player = root
+				}
+			}
+			scope:me_choose_udhiyah_amount = {	
+				custom_tooltip = me_udhiyah_choose_tt
+				open_view_data = {
+					view = decision_detail
+					data = decision:ME_choose_udhiyah_amount_decision
+					player = root
+				}
+			}
+			scope:me_choose_muharram = {
+				custom_tooltip = me_choose_muharram_tt
+				open_view_data = {
+					view = decision_detail
+					data = decision:me_approach_to_muharram_decision
+					player = root
+				}
+			}
+			#scope:me_settle_unfasted_days = {
+			#	##### #####
+			#}
+			#scope:me_other_islamic_holy_days = {
+			#	open_view_data = {
+			#		view = decision_detail
+			#		data = decision:####
+			#		player = root
+			#	}
+			#}
+			scope:me_islamic_holy_days_notifications = {
+				custom_tooltip = me_choose_ihd_notifications_tt
+				open_view_data = {
+					view = decision_detail
+					data = decision:ME_islamic_holy_days_notifications_decision
+					player = root
+				}
+			}
+		}
+	}
+	ai_check_interval = 36
+	ai_potential = {
+		is_at_war = no
+		ai_greed < medium_positive_ai_value
+		short_term_gold > ai_war_chest_desired_gold_value
+		war_chest_gold >= halved_ai_war_chest_gold_maximum
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+ME_pick_iftar_tent_type_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/give_zakat.dds"
+	}
+	is_invisible = yes
+
+	is_valid = {
+		is_landed = yes
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+			custom_tooltip = {
+				text = me_is_currently_ramadan_tt
+				me_hijri_month_value = 9
+			}
+		}
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+			custom_tooltip = {
+				text = me_county_must_have_ramadan_iftar_tt
+				any_sub_realm_county = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					me_hijri_month_value = 9
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+			}
+		}
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+			custom_tooltip = {
+				text = me_is_currently_rajab_tt
+				me_hijri_month_value = 7
+			}
+		}
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+			custom_tooltip = {
+				text = me_county_must_have_rajab_iftar_tt
+				any_sub_realm_county = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					me_hijri_month_value = 7
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_IFTAR_TYPE"
+		show_from_start = yes
+
+		item = { # Modest
+			value = me_setup_iftar_modest
+			is_valid = {}
+			current_description = me_setup_iftar_modest_desc
+			localization = me_setup_iftar_modest
+			icon = "gfx/interface/icons/amenities/court_food_quality_decent.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Substantial
+			value = me_setup_iftar_substantial
+			is_valid = {}
+			current_description = me_setup_iftar_substantial_desc
+			localization = me_setup_iftar_substantial
+			icon = "gfx/interface/icons/amenities/court_food_quality_lavish.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Grand
+			value = me_setup_iftar_grand
+			is_valid = {}
+			current_description = me_setup_iftar_grand_desc
+			localization = me_setup_iftar_grand
+			icon = "gfx/interface/icons/amenities/court_food_quality_exotic.dds"
+			ai_chance = { value = 10 }
+		}
+		
+		# Return to main decision
+		item = {
+			value = ME_return_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_honorific_return_option_desc
+			localization = ME_honorific_return_option
+			icon = "gfx/interface/icons/widgets/ME_return.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			scope:me_setup_iftar_modest = {
+				custom_tooltip = me_iftar_scope_choose_tt
+				set_variable = {
+					name = iftar_type
+					value = flag:iftar_modest
+				}
+			}
+			scope:me_setup_iftar_substantial = {
+				custom_tooltip = me_iftar_scope_choose_tt
+				set_variable = {
+					name = iftar_type
+					value = flag:iftar_substantial
+				}
+			}
+			scope:me_setup_iftar_grand = {
+				custom_tooltip = me_iftar_scope_choose_tt
+				set_variable = {
+					name = iftar_type
+					value = flag:iftar_grand
+				}
+			}
+		}
+		if = {
+			limit = { scope:ME_return_option = no }
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_pick_iftar_tent_scope_decision
+				player = root
+			}
+		}
+		
+		if = { # Return to main decision
+			limit = { scope:ME_return_option = yes }
+			
+			custom_tooltip = ME_return_option_tooltip
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_observe_islamic_holy_days
+				player = root
+			}
+		}
+	}
+	ai_check_interval = 36
+	ai_potential = {
+		is_at_war = no
+		ai_greed < medium_positive_ai_value
+		short_term_gold > ai_war_chest_desired_gold_value
+		war_chest_gold >= halved_ai_war_chest_gold_maximum
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+ME_pick_iftar_tent_scope_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/give_zakat.dds"
+	}
+	is_invisible = yes
+
+	is_valid = {
+		is_landed = yes
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+			custom_tooltip = {
+				text = me_is_currently_ramadan_tt
+				me_hijri_month_value = 9
+			}
+		}
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+			custom_tooltip = {
+				text = me_county_must_have_ramadan_iftar_tt
+				any_sub_realm_county = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+					me_hijri_month_value = 9
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+			}
+		}
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+			custom_tooltip = {
+				text = me_is_currently_rajab_tt
+				me_hijri_month_value = 7
+			}
+		}
+		trigger_if = { 
+			limit = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+			custom_tooltip = {
+				text = me_county_must_have_rajab_iftar_tt
+				any_sub_realm_county = {
+					rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					me_hijri_month_value = 7
+					NOR = {
+						has_county_modifier = me_iftar_sponsorship_modest_modifier
+						has_county_modifier = me_iftar_sponsorship_substantial_modifier
+						has_county_modifier = me_iftar_sponsorship_grand_modifier
+					}
+				}
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_IFTAR_SCOPE"
+		show_from_start = yes
+
+		item = { # Realm
+			value = me_setup_iftar_realm
+			is_valid = {}
+			current_description = {
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+					desc = me_setup_iftar_realm_ramadan_desc
+				}
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+					desc = me_setup_iftar_realm_rajab_desc
+				}
+			}
+			localization = me_setup_iftar_realm
+			icon = "gfx/interface/icons/icon_liege.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Domain
+			value = me_setup_iftar_domain
+			is_valid = {}
+			current_description = {
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+					desc = me_setup_iftar_domain_ramadan_desc
+				}
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+					desc = me_setup_iftar_domain_rajab_desc
+				}
+			}
+			localization = me_setup_iftar_domain
+			icon = "gfx/interface/icons/icon_vassal.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Selected county
+			value = me_setup_iftar_county
+			is_valid = {}
+			current_description = me_setup_iftar_county_desc
+			localization = me_setup_iftar_county
+			icon = "gfx/interface/icons/casus_bellis/individual_county_de_jure_cb.dds"
+			ai_chance = { value = 10 }
+		}
+		
+		# Return to main decision
+		item = {
+			value = ME_return_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_honorific_return_option_desc
+			localization = ME_honorific_return_option
+			icon = "gfx/interface/icons/widgets/ME_return.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			scope:me_setup_iftar_realm = {
+				ME_apply_iftar_tent_realm_effect = yes
+			}
+			scope:me_setup_iftar_domain = {
+				ME_apply_iftar_tent_domain_effect =yes
+			}
+			scope:me_setup_iftar_county = {
+				custom_tooltip = me_iftar_county_choose_tt
+				open_view_data = {
+					view = decision_detail
+					data = decision:ME_pick_iftar_tent_county_decision
+					player = root
+				}
+			}
+		}
+		
+		if = { # Return to main decision
+			limit = { scope:ME_return_option = yes }
+			
+			custom_tooltip = ME_return_option_tooltip
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_pick_iftar_tent_type_decision
+				player = root
+			}
+		}
+	}
+	ai_check_interval = 36
+	ai_potential = {
+		is_at_war = no
+		ai_greed < medium_positive_ai_value
+		short_term_gold > ai_war_chest_desired_gold_value
+		war_chest_gold >= halved_ai_war_chest_gold_maximum
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+ME_pick_iftar_tent_county_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/give_zakat.dds"
+	}
+	is_invisible = yes
+	
+	widget = {
+		controller = create_holy_order
+		title_valid = {
+			trigger_if = {
+				limit = { exists = this }
+				NOR = {
+					this.county = { has_county_modifier = me_iftar_sponsorship_modest_modifier }
+					this.county = { has_county_modifier = me_iftar_sponsorship_substantial_modifier }
+					this.county = { has_county_modifier = me_iftar_sponsorship_grand_modifier }
+				}
+				OR = {
+					AND = {
+						this.county.rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+						me_hijri_month_value = 9
+					}
+					AND = {
+						this.county.rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+						me_hijri_month_value = 7
+					}
+				}
+				is_capital_barony = yes
+				is_leased_out = no
+				holder = {
+					OR = {
+						is_vassal_of = scope:ruler 
+						this = scope:ruler
+					}
+				}
+			}
+		}
+	}
+	is_valid_showing_failures_only = { 
+	}
+	cost = {
+	}
+	effect = {
+		if = {
+			limit = { var:iftar_type = flag:iftar_modest }
+			scope:barony.county = { add_county_modifier = { modifier = me_iftar_sponsorship_modest_modifier days = 140 } }
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_substantial }
+			scope:barony.county = { add_county_modifier = { modifier = me_iftar_sponsorship_substantial_modifier days = 140 } }
+		}
+		else_if = {
+			limit = { var:iftar_type = flag:iftar_grand }
+			scope:barony.county = { add_county_modifier = { modifier = me_iftar_sponsorship_grand_modifier days = 140 } }
+		}
+	}
+	
+	ai_check_interval = 0
+	ai_potential = {
+		is_playable_character = yes
+	}
+	ai_will_do = {
+		base = 200
+	}
+}
+
+ME_choose_udhiyah_amount_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/give_zakat.dds"
+	}
+	is_invisible = yes
+	cooldown = { years = 3 }
+	
+	is_valid = {
+		is_landed = yes
+		custom_tooltip = {
+			text = me_is_currently_eid_al_adha_tt
+			me_hijri_month_value = 12
+			me_hijri_day_display >= 10
+			me_hijri_day_display <= 13
+		}
+	}
+
+	is_valid_showing_failures_only = {}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "CHOOSE_UDHIYAH_AMOUNT"
+		show_from_start = yes
+
+		item = { # Small
+			value = me_udhiyah_amount_modest
+			is_valid = {
+				short_term_gold >= 75
+				custom_tooltip = {
+					text = me_udhiyah_cooldown_tt
+					NOT = { exists = root.var:ME_udhiyah_cooldown }
+				}
+			}
+			current_description = me_udhiyah_amount_modest_desc
+			localization = me_udhiyah_amount_modest
+			icon = "gfx/interface/icons/widgets/sheep_profile.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Modest
+			value = me_udhiyah_amount_large
+			is_valid = {
+				short_term_gold >= 125
+				custom_tooltip = {
+					text = me_udhiyah_cooldown_tt
+					NOT = { exists = root.var:ME_udhiyah_cooldown }
+				}
+			}
+			current_description = me_udhiyah_amount_large_desc
+			localization = me_udhiyah_amount_large
+			icon = "gfx/interface/icons/widgets/camel_profile.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Large
+			value = me_udhiyah_amount_great
+			is_valid = {
+				short_term_gold >= 310 
+				custom_tooltip = {
+					text = me_udhiyah_cooldown_tt
+					NOT = { exists = root.var:ME_udhiyah_cooldown }
+				}
+			}
+			current_description = me_udhiyah_amount_great_desc
+			localization = me_udhiyah_amount_great
+			icon = "gfx/interface/icons/widgets/herd_profile.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Massive
+			value = me_udhiyah_amount_massive
+			is_valid = {
+				short_term_gold >= 625
+				custom_tooltip = {
+					text = me_udhiyah_cooldown_tt
+					NOT = { exists = root.var:ME_udhiyah_cooldown }
+				}
+			}
+			current_description = me_udhiyah_amount_massive_desc
+			localization = me_udhiyah_amount_massive
+			icon = "gfx/interface/icons/widgets/animals_profile.dds"
+			ai_chance = { value = 10 }
+		}
+		
+	#	# Return to main decision
+	#	item = {
+	#		value = ME_return_option
+	#		is_valid = {
+	#			is_ai = no
+	#		}
+	#		current_description = ME_honorific_return_option_desc
+	#		localization = ME_honorific_return_option
+	#		icon = "gfx/interface/icons/widgets/ME_return.dds"
+	#
+	#		ai_chance = {
+	#			value = 0
+	#		}
+	#	}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			scope:me_udhiyah_amount_modest = {
+				remove_short_term_gold = 75
+				add_piety = minor_piety_value #50
+			}
+			scope:me_udhiyah_amount_large = {
+				remove_short_term_gold = 125
+				add_piety = medium_piety_value #100
+			}
+			scope:me_udhiyah_amount_great = {
+				remove_short_term_gold = 310
+				add_piety = major_piety_value #250
+			}
+			scope:me_udhiyah_amount_massive = {
+				remove_short_term_gold = 625
+				add_piety = massive_piety_value #500
+			}
+		}
+		if = { 
+			limit = { scope:ME_return_option = no }
+			
+			#custom_tooltip = ME_will_have_udhiyah_cooldown_tt
+			#set_variable = { name = ME_udhiyah_cooldown days = 1095 }
+		}
+		
+		if = { # Return to main decision
+			limit = { scope:ME_return_option = yes }
+			
+			custom_tooltip = ME_return_option_tooltip
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_observe_islamic_holy_days
+				player = root
+			}
+		}
+	}
+	ai_check_interval = 36
+	ai_potential = {
+		is_at_war = no
+		ai_greed < medium_positive_ai_value
+		short_term_gold > ai_war_chest_desired_gold_value
+		war_chest_gold >= halved_ai_war_chest_gold_maximum
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+ME_islamic_holy_days_notifications_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/give_zakat.dds"
+	}
+	is_invisible = yes
+
+	is_valid = {}
+
+	is_valid_showing_failures_only = {}
+	
+	desc = {
+		desc = ME_islamic_holy_days_notifications_decision_desc
+	#	first_valid = {
+	#		triggered_desc = {
+	#			trigger = {
+	#				faith = { has_doctrine = doctrine_me_fasting_month_ramadan }
+	#				exists = global_var:ihd_notif_ramadan
+	#			}
+	#			desc = ME_ramadan_notif_on
+	#		}
+	#		triggered_desc = {
+	#			trigger = {
+	#				faith = { has_doctrine = doctrine_me_fasting_month_ramadan }
+	#				NOT = { exists = global_var:ihd_notif_ramadan }
+	#			}
+	#			desc = ME_ramadan_notif_off
+	#		}
+	#		triggered_desc = {
+	#			trigger = {
+	#				faith = { has_doctrine = doctrine_me_fasting_month_rajab }
+	#				exists = global_var:ihd_notif_ramadan
+	#			}
+	#			desc = ME_rajab_notif_on
+	#		}
+	#		triggered_desc = {
+	#			trigger = {
+	#				faith = { has_doctrine = doctrine_me_fasting_month_rajab }
+	#				NOT = { exists = global_var:ihd_notif_ramadan }
+	#			}
+	#			desc = ME_rajab_notif_off
+	#		}
+	#	}
+	#	first_valid = {
+	#		triggered_desc = {
+	#			trigger = { exists = global_var:ihd_notif_eid }
+	#			desc = ME_eid_al_adha_notif_on
+	#		}
+	#		triggered_desc = {
+	#			trigger = { NOT = { exists = global_var:ihd_notif_eid } }
+	#			desc = ME_eid_al_adha_notif_off
+	#		}
+	#	}
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "GENERIC_CHOOSE_OPTION"
+		show_from_start = yes
+
+		item = { # All currently on
+			value = me_ihd_all_on
+			is_shown = {
+				NOR = {
+					NOT = { exists = global_var:ihd_notif_ramadan }
+					NOT = { exists = global_var:ihd_notif_eid }
+				}
+			}
+			current_description = me_ihd_all_on_desc
+			localization = me_ihd_all_on
+			icon = "gfx/interface/icons/widgets/me_check.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # All currently off
+			value = me_ihd_all_off
+			is_shown = {
+				OR = {
+					NOT = { exists = global_var:ihd_notif_ramadan }
+					NOT = { exists = global_var:ihd_notif_eid }
+				}
+			}
+			current_description = me_ihd_all_off_desc
+			localization = me_ihd_all_off
+			icon = "gfx/interface/icons/widgets/me_x.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Ramadan currently on
+			value = me_ihd_ramadan_on
+			is_shown = { exists = global_var:ihd_notif_ramadan }
+			current_description = me_ihd_ramadan_on_desc
+			localization = {
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+					desc = me_ihd_ramadan_on
+				}
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+					desc = me_ihd_rajab_on
+				}
+			}
+			icon = "gfx/interface/icons/widgets/ramadan_lantern_check.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Ramadan currently off
+			value = me_ihd_ramadan_off
+			is_shown = { NOT = { exists = global_var:ihd_notif_ramadan } }
+			current_description = me_ihd_ramadan_off_desc
+			localization = {
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan } }
+					desc = me_ihd_ramadan_off
+				}
+				triggered_desc = {
+					trigger = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } }
+					desc = me_ihd_rajab_off
+				}
+			}
+			icon = "gfx/interface/icons/widgets/ramadan_lantern_x.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Eid ul-Adha currently on
+			value = me_ihd_eid_ul_adha_on
+			is_shown = { exists = global_var:ihd_notif_eid }
+			current_description = me_ihd_eid_ul_adha_on_desc
+			localization = me_ihd_eid_ul_adha_on
+			icon = "gfx/interface/icons/widgets/sheep_check.dds"
+			ai_chance = { value = 10 }
+		}
+		item = { # Eid ul-Adha currently off
+			value = me_ihd_eid_ul_adha_off
+			is_shown = { NOT = { exists = global_var:ihd_notif_eid } }
+			current_description = me_ihd_eid_ul_adha_off_desc
+			localization = me_ihd_eid_ul_adha_off
+			icon = "gfx/interface/icons/widgets/sheep_x.dds"
+			ai_chance = { value = 10 }
+		}
+		
+		# Return to main decision
+		item = {
+			value = ME_return_option
+			is_valid = {
+				is_ai = no
+			}
+			current_description = ME_honorific_return_option_desc
+			localization = ME_honorific_return_option
+			icon = "gfx/interface/icons/widgets/ME_return.dds"
+
+			ai_chance = {
+				value = 0
+			}
+		}
+	}
+
+	effect = {
+		switch = {
+			trigger = yes
+			scope:me_ihd_all_on = {
+				custom_tooltip = me_ihd_all_on_desc
+				remove_global_variable = ihd_notif_ramadan
+				remove_global_variable = ihd_notif_eid
+			}
+			scope:me_ihd_all_off = {
+				custom_tooltip = me_ihd_all_off_desc
+				set_global_variable = {
+					name = ihd_notif_ramadan
+					value = flag:on_notif
+				}
+				set_global_variable = {
+					name = ihd_notif_eid
+					value = flag:on_notif
+				}
+			}
+			scope:me_ihd_ramadan_on = {
+				custom_tooltip = me_ihd_ramadan_on_desc
+				remove_global_variable = ihd_notif_ramadan
+			}
+			scope:me_ihd_ramadan_off = {
+				custom_tooltip = me_ihd_ramadan_off_desc
+				set_global_variable = {
+					name = ihd_notif_ramadan
+					value = flag:on_notif
+				}
+			}
+			scope:me_ihd_eid_ul_adha_on = {
+				custom_tooltip = me_ihd_eid_ul_adha_on_desc
+				remove_global_variable = ihd_notif_eid
+			}
+			scope:me_ihd_eid_ul_adha_off = {
+				custom_tooltip = me_ihd_eid_ul_adha_off_desc
+				set_global_variable = {
+					name = ihd_notif_eid
+					value = flag:on_notif
+				}
+			}
+		}
+		if = {
+			limit = { scope:ME_return_option = no }
+			
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_islamic_holy_days_notifications_decision
+				player = root
+			}
+		}
+		
+		if = { # Return to main decision
+			limit = { scope:ME_return_option = yes }
+			
+			custom_tooltip = ME_return_option_tooltip
+			open_view_data = {
+				view = decision_detail
+				data = decision:ME_observe_islamic_holy_days
+				player = root
+			}
+		}
+	}
+	ai_check_interval = 36
+	ai_potential = {
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+### Approach to Muharram ###
+me_approach_to_muharram_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/me_decision_muharram.dds"
+	}
+
+	is_invisible = yes
+	cooldown = { years = 1 }
+	ai_check_interval = 120
+
+	is_valid = {
+		OR = {
+			rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+			rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+			rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+		}
+		OR = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_capable_adult = yes
+	}
+
+	widget = {
+		gui = "decision_view_widget_option_list_generic"
+		controller = decision_option_list_controller
+		decision_to_second_step_button = "me_muharram_choose_approach"
+		show_from_start = yes
+
+		# Deep Mourning
+		item = {
+			value = me_muharram_deep_option
+			is_valid = {}
+			current_description = me_muharram_deep_option_desc
+			localization = me_muharram_deep_option
+			icon = "gfx/interface/icons/traits/compassionate.dds"
+			ai_chance = {
+				value = me_ai_devout_weight
+			}
+		}
+
+		# Moderate Mourning
+		item = {
+			value = me_muharram_moderate_option
+			is_valid = {}
+			current_description = me_muharram_moderate_option_desc
+			localization = me_muharram_moderate_option
+			icon = "gfx/interface/icons/traits/humble.dds"
+			ai_chance = {
+				value = me_ai_casual_weight
+			}
+		}
+
+		# Tatbir (flagellant option)
+		item = {
+			value = me_muharram_tatbir_option
+			is_shown = {
+				OR = {
+					rite = { rite_has_tenet = tenet_exaltation_of_pain }
+					rite = rite:imami
+				}
+			}
+			is_valid = { has_trait = flagellant }
+			current_description = me_muharram_tatbir_option_desc
+			localization = me_muharram_tatbir_option
+			icon = "gfx/interface/icons/traits/flagellant.dds"
+			ai_chance = {
+				value = me_ai_tatbir_weight
+			}
+		}
+
+		# Skip Muharram
+		item = {
+			value = me_muharram_skip_option
+			is_valid = {}
+			current_description = me_muharram_skip_option_desc
+			localization = me_muharram_skip_option
+			icon = "gfx/interface/icons/traits/callous.dds"
+			ai_chance = {
+				value = me_ai_skip_weight
+			}
+		}
+	}
+
+	effect = {
+		# Record the chosen approach as a persistent character variable.
+		# The actual mourning modifier is applied when Muharram arrives (see me_hijri_on_actions).
+		# Deep Mourning
+		if = {
+			limit = { scope:me_muharram_deep_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:deep }
+		}
+		# Moderate Mourning
+		else_if = {
+			limit = { scope:me_muharram_moderate_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:moderate }
+		}
+		# Tatbir
+		else_if = {
+			limit = { scope:me_muharram_tatbir_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:tatbir }
+			# Tatbir's immediate cathartic stress loss fires whenever the approach is chosen.
+			add_stress = medium_stress_loss
+		}
+		# Skip Muharram
+		else_if = {
+			limit = { scope:me_muharram_skip_option = yes }
+			set_variable = { name = me_muharram_approach value = flag:skip }
+		}
+
+		# If Muharram mourning is currently active (first 12 days), apply the chosen modifier immediately.
+		if = {
+			limit = {
+				me_hijri_month_value = 1
+				me_hijri_day_display <= 12
+			}
+			me_apply_muharram_modifier_effect = yes
+		}
+
+		# Second window: realm patronage choice for top lieges — always offered, effect activates only when Muharram arrives.
+		if = {
+			limit = {
+				is_landed = yes
+				is_independent_ruler = yes
+			}
+			hidden_effect = {
+				trigger_event = {
+					id = me_ihd_events.5010
+					days = 1
+				}
+			}
+			custom_tooltip = me_muharram_patronage_window_tt
+		}
+	}
+
+	ai_potential = {
+		OR = {
+			rite = { rite_has_doctrine = muhammad_succession_shia_doctrine }
+			rite = { rite_has_doctrine = islam_secondary_group_zandaqa_ghulat_doctrine }
+			rite = { rite_has_doctrine = islam_secondary_group_zandaqa_qarmatian_doctrine }
+		}
+		OR = {
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+			rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+		}
+	}
+
+	ai_will_do = {
+		base = 80
+	}
+}
+
+
+### Attend Public Iftar ###
+ME_public_iftar_decision = {
+	picture = { reference = "gfx/interface/illustrations/decisions/fp3/friendly.dds" }
+	title = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {	
+					OR = {
+						rite = { rite_has_doctrine = doctrine_me_fasting_month_ramadan }
+						rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab }
+					}
+				}
+				desc = ME_public_iftar_decision_iftar
+			}
+			desc = ME_public_iftar_decision_feast
+		}
+	}
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {	location = { rite = { rite_has_doctrine = doctrine_me_fasting_month_rajab } } }
+				desc = ME_public_iftar_decision_desc_rajab
+			}
+			desc = ME_public_iftar_decision_desc_ramadan
+		}
+	}
+	selection_tooltip = ME_public_iftar_tooltip
+
+	ai_check_interval_by_tier = {
+		barony = 0
+		county = 0
+		duchy = 24
+		kingdom = 0
+		empire = 0
+		hegemony = 0
+	}
+	cooldown = { years = 2 }
+	decision_group_type = adventurer_minor
+
+	is_shown = {
+		#DLC check.
+		has_ep3_dlc_trigger = yes
+		has_government = landless_adventurer_government
+		location.county = {
+			OR = {
+				has_county_modifier = me_iftar_sponsorship_modest_modifier
+				has_county_modifier = me_iftar_sponsorship_substantial_modifier
+				has_county_modifier = me_iftar_sponsorship_grand_modifier
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_available = yes
+	}
+
+	effect = {
+		#custom_tooltip = {
+		#	text = ME_public_iftar_decision_effect_tt
+		#	trigger_event = me_ihd_events.8000 #TBD
+		#}
+		if = { ## Temporary, will be replaced by an event
+			limit = { location.county = { has_county_modifier = me_iftar_sponsorship_modest_modifier } }
+			domicile = {
+				change_provisions = miniscule_provisions_value
+			}
+		}
+		else_if = {
+			limit = { location.county = { has_county_modifier = me_iftar_sponsorship_substantial_modifier } }
+			domicile = {
+				change_provisions = minor_provisions_value
+			}
+		}
+		else_if = {
+			limit = { location.county = { has_county_modifier = me_iftar_sponsorship_grand_modifier } }
+			domicile = {
+				change_provisions = medium_provisions_value
+			}
+		}
+		close_view = {
+			view = decisions
+			player = root
+		}
+	}
+
+	ai_potential = {
+		always = yes
+	}
+
+	ai_will_do = {
+		base = 100
+	}
+}

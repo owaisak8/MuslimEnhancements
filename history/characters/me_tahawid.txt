@@ -6,7 +6,7 @@ attahawi001 = { # Abu Ja'far Ahmad at-Tahawi, the scholar
 	name = "Ahmad"
 	dynasty = me_tahawi
 	culture = "egyptian"
-	religion = "ashari"
+	rite = "shafii"
 
 	diplomacy = 9
 	martial = 3

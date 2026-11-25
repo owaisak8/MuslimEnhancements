@@ -21,14 +21,26 @@
  ahwazi_collective_noun:0 "Ahwazis"
  ahwazi_prefix:0 "Ahwazi"
  
+ hui_name:0 "Hui"
+ hui_collective_noun:0 "Hui"
+ hui_prefix:0 "Hui"
+ 
+ boszormeny_name:0 "Böszörmény"
+ boszormeny_collective_noun:0 "Böszörmények"
+ boszormeny_prefix:0 "Böszörmény"
+ 
 ## Hybrid Cultures
+ siculo_norman_name:0 "Siculo-Norman"
+ siculo_norman_collective_noun:0 "Siculo-Normans"
+ siculo_norman_prefix:0 "Siculo-Norman"
+ 
  siculo_barbari_name:0 "Siculo-Barbari"
  siculo_barbari_collective_noun:0 "Siculo-Barbaris"
  siculo_barbari_prefix:0 "Siculo-Barbaro"
  
  siculo_greek_hybrid_name:0 "$siculo_greek_name$" #Siculo-Greek
  siculo_greek_hybrid_collective_noun:0 "$siculo_greek_collective_noun$" #Siculo-Greeks
- siculo_greek_hybrid_prefix:0 "$siculo_greek_hybrid_prefix$" #Siculo-Greco
+ siculo_greek_hybrid_prefix:0 "$siculo_greek_prefix$" #Siculo-Greco
  
  #Alt "Grico" and "Grici/Grichi"(Plural)
  italo_greek_name:0 "Griko" 
@@ -59,6 +71,14 @@
  khache_name:0 "Khache"
  khache_collective_noun:0 "Khaches"
  khache_prefix:0 "Khache"
+ 
+ hui_hybrid_name:0 "$hui_name$"
+ hui_hybrid_collective_noun:0 "$hui_collective_noun$"
+ hui_hybrid_prefix:0 "$hui_prefix$"
+ 
+ boszormeny_hybrid_name:0 "$boszormeny_name$"
+ boszormeny_hybrid_collective_noun:0 "$boszormeny_collective_noun$"
+ boszormeny_hybrid_prefix:0 "$boszormeny_prefix$"
  
  #######################
 

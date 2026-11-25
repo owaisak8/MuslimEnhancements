@@ -69,11 +69,11 @@ alb_cm.0001 = {
 		desc = alb_cm.0001.desc.intro
 		first_valid = {
 			triggered_desc = {
-				trigger = { root.faith = faith:ns_islam }
+				trigger = { always = yes } # 1.20: the non-sectarian Shia Rite no longer exists
 				desc = alb_cm.0001.desc.main
 			}
 			triggered_desc = {
-				trigger = { root.faith = faith:ns_islam_shia }
+				trigger = { always = no } # 1.20: the non-sectarian Shia Rite no longer exists
 				desc = alb_cm.0001.desc.shia
 			}
 		}
@@ -106,7 +106,7 @@ alb_cm.0001 = {
 		trigger = {
 			is_ai = no
 			is_landed = yes
-			root.capital_county.faith = { NOT = { religion_tag = alb_religion } }
+			NOT = { root.capital_county.faith = faith:sadr_al_islam }
 		}
 
 		set_character_faith = root.capital_county.faith
@@ -211,28 +211,28 @@ alb_cm.0003 = {
 	option = {
 		name = alb_cm.0003.a
 
-		set_character_faith = faith:ashari
+		set_character_rite = rite:shafii
 	}
 
 	#Muwalladi
 	option = {
 		name = alb_cm.0003.b
 
-		set_character_faith = faith:muwalladi
+		set_character_rite = rite:maliki
 	}
 
 	#Maturidi
 	option = {
 		name = alb_cm.0003.c
 
-		set_character_faith = faith:maturidi
+		set_character_rite = rite:hanafi
 	}
 
 	#Masmudi (Almohad)
 	option = {
 		name = alb_cm.0003.d
 
-		set_character_faith = faith:masmudi
+		set_character_rite = rite:masmudi
 	}
 
 	#Previous list
@@ -260,35 +260,35 @@ alb_cm.0004 = {
 	option = {
 		name = alb_cm.0004.a
 
-		set_character_faith = faith:ismaili
+		set_character_rite = rite:ismaili
 	}
 
 	#Nizari
 	option = {
 		name = alb_cm.0004.b
 
-		set_character_faith = faith:nizari
+		set_character_rite = rite:nizari
 	}
 
 	#Zayidi
 	option = {
 		name = alb_cm.0004.c
 
-		set_character_faith = faith:zayidi
+		set_character_rite = rite:zayidi
 	}
 
 	#Itha 'Ashri (imami)
 	option = {
 		name = alb_cm.0004.d
 
-		set_character_faith = faith:imami
+		set_character_rite = rite:imami
 	}
 
 	#Hafizi
 	option = {
 		name = alb_cm.0004.e
 
-		set_character_faith = faith:hafizi
+		set_character_rite = rite:hafizi
 	}
 
 	#return
@@ -316,7 +316,7 @@ alb_cm.0005 = {
 	option = {
 		name = alb_cm.0005.a
 
-		set_character_faith = faith:salihi
+		set_character_rite = rite:salihi
 	}
 
 	#return
@@ -344,42 +344,42 @@ alb_cm.0006 = {
 	option = {
 		name = alb_cm.0006.a
 
-		set_character_faith = faith:ibadi
+		set_character_rite = rite:ibadi
 	}
 
 	#wahbiya
 	option = {
 		name = alb_cm.0006.b
 
-		set_character_faith = faith:wahbiya
+		set_character_rite = rite:wahbiya
 	}
 
 	#Nukkari
 	option = {
 		name = alb_cm.0006.c
 
-		set_character_faith = faith:nukkari
+		set_character_rite = rite:nukkari
 	}
 
 	#Azariqa
 	option = {
 		name = alb_cm.0006.d
 
-		set_character_faith = faith:azariqa
+		set_character_rite = rite:azariqa
 	}
 
 	#Najdat
 	option = {
 		name = alb_cm.0006.e
 
-		set_character_faith = faith:najdat
+		set_character_rite = rite:najdat
 	}
 
 	#Sufri
 	option = {
 		name = alb_cm.0006.f
 
-		set_character_faith = faith:sufri
+		set_character_rite = rite:sufri
 	}
 
 	#return
@@ -407,14 +407,14 @@ alb_cm.0007 = {
 	option = {
 		name = alb_cm.0007.a
 
-		set_character_faith = faith:mutazila
+		set_character_rite = rite:mutazila
 	}
 
 	#Qur'anist
 	option = {
 		name = alb_cm.0007.b
 
-		set_character_faith = faith:quranist
+		set_character_rite = rite:quranist
 	}
 
 	#Nazzamism (REMOVED)
@@ -428,7 +428,7 @@ alb_cm.0007 = {
 	option = {
 		name = alb_cm.0007.d
 
-		set_character_faith = faith:barghawata
+		set_character_rite = rite:barghawata
 	}
 
 	#return
@@ -456,42 +456,42 @@ alb_cm.0008 = {
 	option = {
 		name = alb_cm.0008.a
 
-		set_character_faith = faith:qarmatian
+		set_character_rite = rite:qarmatian
 	}
 
 	#(Ikhtilafism) ghulat 
 	option = {
 		name = alb_cm.0008.b
 
-		set_character_faith = faith:ghulat
+		set_character_rite = rite:ghulat
 	}
 
 	#Alawite
 	option = {
 		name = alb_cm.0008.c
 
-		set_character_faith = faith:alawite
+		set_character_rite = rite:alawite
 	}
 
 	#Ishaqiya
 	option = {
 		name = alb_cm.0008.d
 
-		set_character_faith = faith:ishaqiya
+		set_character_rite = rite:ishaqiya
 	}
 
 	#Alevi
 	option = {
 		name = alb_cm.0008.e
 
-		set_character_faith = faith:alevi
+		set_character_rite = rite:alevi
 	}
 
 	#Druze
 	option = {
 		name = alb_cm.0008.f
 
-		set_character_faith = faith:druze
+		set_character_rite = rite:druze
 	}
 
 	#return
@@ -509,12 +509,12 @@ alb_cm.0100 = {
 	hidden = yes
 	
 	trigger = { 
-		}	
+	}	
 	
 	immediate = {	
 		if = {
 			limit = {
-				faith = { religion_tag = alb_religion }
+				faith = faith:sadr_al_islam
 			}
 			trigger_event = alb_cm.0001
 		}

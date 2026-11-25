@@ -13,22 +13,36 @@ on_game_start_after_lobby = {
 
 me_game_start = {
 	effect = {
-		## Block conversion for Non-sectarian Islam
-		faith:ns_islam = {
+		## Block conversion for Non-sectarian Islam (1.20: the vanilla Sadr al-Islam faith holds the pre-sectarian Rites)
+		faith:sadr_al_islam = {
 			set_variable = { name = block_conversion_ALB }
 		}
-		faith:ns_islam_shia = {
-			set_variable = { name = block_conversion_ALB }
+
+		## Closed Faith tenet setup
+		# Mandaeanism (1.20: a Rite of the Mandaean faith; core tenets live on the Rite)
+		if = {
+			limit = { rite:mandeaism = { rite_has_tenet = tenet_christian_syncretism } }
+			rite:mandeaism = { remove_rite_tenet = tenet_christian_syncretism }
+		}
+		else_if = {
+			limit = { rite:mandeaism = { rite_has_tenet = tenet_communal_identity } }
+			rite:mandeaism = { remove_rite_tenet = tenet_communal_identity }
+		}
+		if = {
+			limit = { rite:mandeaism = { NOT = { rite_has_tenet = tenet_me_closed_faith } } }
+			rite:mandeaism = { add_rite_tenet = tenet_me_closed_faith }
 		}
  
+		title:c_al-arid = { set_county_rite = rite:shafii }
+		title:c_surrah = { set_county_rite = rite:shafii }
 		if = {
 			limit = { game_start_date = 867.1.1 }
 			shia_imamates_startup_effect = yes
 			title:e_arabia = { set_capital_county = title:c_baghdad }
-			title:c_arawan = { set_county_faith = faith:wahbiya }
-			title:c_kalat = { set_county_faith = faith:imami }
-			title:c_rukhaj = { set_county_faith = faith:imami }
-			title:c_sibi = { set_county_faith = faith:imami }
+			title:c_arawan = { set_county_rite = rite:wahbiya }
+			title:c_kalat = { set_county_rite = rite:imami }
+			title:c_rukhaj = { set_county_rite = rite:imami }
+			title:c_sibi = { set_county_rite = rite:imami }
 			
 			character:sogdian0008 = { remove_trait = fp3_struggle_detractor add_trait = fp3_struggle_supporter }
 			character:sogdian0009 = { remove_trait = fp3_struggle_detractor add_trait = fp3_struggle_supporter }
@@ -38,13 +52,17 @@ me_game_start = {
 				change_first_name = Sumitra
 				set_father = character:me_malay_fic_001
 				set_house = character:malay_perlak_01_fic.house
-				set_character_faith = faith:vajrayana
-				change_government = mandala_government
+				set_character_rite = rite:vajrayana
+				if = {
+					limit = { has_tgp_dlc_trigger = yes }
+					change_government = mandala_government
+				}
+				else = { change_government = feudal_government }
 			}
 			character:malay_perlak_03 = {
 				change_first_name = Darma
 				set_house = character:malay_perlak_01_fic.house
-				set_character_faith = faith:vajrayana
+				set_character_rite = rite:vajrayana
 			}
 			
 			## Setup Ibn Tulun to not confuse people
@@ -63,16 +81,21 @@ me_game_start = {
 				add_courtier = character:me_al_madharai_001 # Ahmad al-Madhara'i
 				add_courtier = character:me_al_madharai_003 # Ali ibn Ahmad al-Madhara'i
 				add_courtier = character:me_al_madharai_004 # al-Husayn ibn Ahmad al-Madhara'i
+				add_courtier = character:me_umayyads_008
+				add_courtier = character:me_umayyads_057 # Ali ibn Asim ibn Abi al-'As al-Maslami al-Umawi
 			}
 		}
 		if = {
 			limit = { game_start_date = 1066.9.15 }
-			title:c_kouga = { set_county_faith = faith:wahbiya }
-			title:c_kalat = { set_county_faith = faith:ashari }
-			title:c_rukhaj = { set_county_faith = faith:ashari }
-			title:c_sibi = { set_county_faith = faith:ashari }
-			title:c_showa = { set_county_faith = faith:ashari }
-			title:c_waj = { set_county_faith = faith:ashari }
+			title:c_kouga = { set_county_rite = rite:wahbiya }
+			title:c_kalat = { set_county_rite = rite:hanafi }
+			title:c_rukhaj = { set_county_rite = rite:hanafi }
+			title:c_sibi = { set_county_rite = rite:hanafi }
+			title:c_showa = { set_county_rite = rite:shafii }
+			title:c_waj = { set_county_rite = rite:shafii }
+			
+			character:me_umayyads_466.house = { set_house_head = character:me_umayyads_466 }
+			title:d_laamp_wallada = { set_coa = d_laamp_wallada_other }
 
 			## Title name changes
 			title:c_dausar = { set_title_name = c_qalat_ja_bar }
@@ -100,72 +123,63 @@ me_game_start = {
 				change_first_name = Sudirman
 				set_father = character:me_malay_fic_001
 				set_house = character:malay_perlak_10_fic.house
-				set_character_faith = faith:vajrayana
-				change_government = mandala_government
+				set_character_rite = rite:vajrayana
+				if = {
+					limit = { has_tgp_dlc_trigger = yes }
+					change_government = mandala_government
+				}
+				else = { change_government = feudal_government }
 			}
 			character:malay_perlak_13 = {
 				change_first_name = Thang
 				set_house = character:malay_perlak_10_fic.house
-				set_character_faith = faith:vajrayana
+				set_character_rite = rite:vajrayana
 			}
 		}
 		if = {
 			limit = { game_start_date = 1178.10.1 }
-			title:c_satfura = { set_county_faith = faith:ashari }
-			title:c_constantine = { set_county_faith = faith:ashari }
-			title:c_annaba = { set_county_faith = faith:ashari }
-			title:c_bilizma = { set_county_faith = faith:ashari }
-			title:c_tamentit = { set_county_faith = faith:ashari }
-			title:c_touat = { set_county_faith = faith:ashari }
-			title:c_saoura = { set_county_faith = faith:ashari }
-			title:c_taghaza = { set_county_faith = faith:ashari }
-			title:c_showa = { set_county_faith = faith:ashari }
-			title:c_waj = { set_county_faith = faith:ashari }
+			title:c_satfura = { set_county_rite = rite:maliki }
+			title:c_constantine = { set_county_rite = rite:maliki }
+			title:c_annaba = { set_county_rite = rite:maliki }
+			title:c_bilizma = { set_county_rite = rite:maliki }
+			title:c_tamentit = { set_county_rite = rite:maliki }
+			title:c_touat = { set_county_rite = rite:maliki }
+			title:c_saoura = { set_county_rite = rite:maliki }
+			title:c_taghaza = { set_county_rite = rite:maliki }
+			title:c_showa = { set_county_rite = rite:shafii }
+			title:c_waj = { set_county_rite = rite:shafii }
 
 			character:malay_kedah_20_fic = { # First Muslim ruler of Kedah
 				change_first_name = Muzaffar
-				set_character_faith = faith:ashari
+				set_character_rite = rite:shafii
 				set_age = 58
 			}
 			character:me_kedah_002 = { set_father = character:malay_kedah_20_fic }
 			character:me_kedah_003 = { set_father = character:malay_kedah_20_fic }
 			character:me_kedah_004 = { set_father = character:malay_kedah_20_fic }
-			title:c_MAL_kedah = { set_county_faith = faith:ashari } # 'The rakyat (masses) followed suit decades later', not sure if three decades can be considered enough
-			character:malay_perlak_20_fic = { change_government = clan_government }
-			character:malay_lambri_20_fic = { change_government = clan_government }
+			title:c_MAL_kedah = { set_county_rite = rite:shafii } # 'The rakyat (masses) followed suit decades later', not sure if three decades can be considered enough
+			#character:malay_perlak_20_fic = { change_government = clan_government }
+			#character:malay_lambri_20_fic = { change_government = clan_government }
 			
-			character:32913 = { set_mother = character:me_takshid_001 } # Make Salah ud-Din's mother also Nur ud-Din's mother, done like this to avoid editing Kurdish.txt
 			
 			if = {
 				limit = { exists = struggle:iberian_struggle }
 				struggle:iberian_struggle = { set_faith_as_involved = faith:masmudi }
 			}
 
-			if = {
-				limit = {
-					OR = {
-						has_game_rule = me_sunni_united
-						has_game_rule = me_sunni_maturidi_only
-					}
-				}
-				title:c_kalat = { set_county_faith = faith:ashari }
-				title:c_rukhaj = { set_county_faith = faith:ashari }
-				title:c_sibi = { set_county_faith = faith:ashari }
-			}
-			else = {
-				title:c_kalat = { set_county_faith = faith:maturidi }
-				title:c_rukhaj = { set_county_faith = faith:maturidi }
-				title:c_sibi = { set_county_faith = faith:maturidi }
-			}
-			
+			# 1.20: the old Ash'ari/Maturidi split (and its game rule) is gone; these counties simply follow the Hanafi rite
+			title:c_kalat = { set_county_rite = rite:hanafi }
+			title:c_rukhaj = { set_county_rite = rite:hanafi }
+			title:c_sibi = { set_county_rite = rite:hanafi }
+
 			## Title name changes
 			title:c_dausar = { set_title_name = c_qalat_ja_bar }
 			title:b_dausar = { set_title_name = c_qalat_ja_bar }
 
-			## Setup for the Musta'li schism
-			faith:ismaili = { add_doctrine = special_doctrine_mustali_main }
-			faith:hafizi = { add_doctrine = special_doctrine_mustali_schismed_sect }
-			faith:tayyibi = { add_doctrine = special_doctrine_mustali_schismed_sect }
+			## Setup for the Musta'li schism (1.20: these are Rites of the Isma'ili faith)
+			rite:ismaili = { add_rite_doctrine = special_doctrine_mustali_main }
+			rite:hafizi = { add_rite_doctrine = special_doctrine_mustali_schismed_sect }
+			rite:tayyibi = { add_rite_doctrine = special_doctrine_mustali_schismed_sect }
 		}
 		
 		# Hamamshen setup
@@ -185,26 +199,33 @@ me_game_start = {
 				exists = struggle:persian_struggle
 			}
 			if = {
-				limit = {
-					NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:karrami } }
-				}
-				struggle:persian_struggle = { set_faith_as_involved = faith:karrami }
+				limit = { NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:sunni } } }
+				struggle:persian_struggle = { set_faith_as_involved = faith:sunni }
+			}
+			if = {
+				limit = { NOT = { struggle:persian_struggle = { is_faith_involved_in_struggle = faith:kharijite } } }
+				struggle:persian_struggle = { set_faith_as_involved = faith:kharijite }
 			}
 		}
 
-		if = { # If PiGu's Medieval Monuments pack isn't active, we add the old ME buildings
-			limit = { 
-				has_cp3_dlc_trigger = no
+		# 1.21: history gives Kairouan and Herat their ME buildings as duchy-capital districts, because with the
+		# relevant DLC vanilla puts its own special building there (Kairouan Basins, Herat Bazaar). Without that DLC
+		# the special slot is free, so they become special districts instead, as before.
+		if = { # Medieval Monuments pack (cp3) not active: ME's old special buildings
+			limit = { has_cp3_dlc_trigger = no }
+			title:b_damascus.title_province = { add_special_district = ME_umayyad_mosque_01_district } #5924
+			title:b_fes.title_province = { add_special_district = ME_al_qarawiyyin_university_01_district } #4694
+			title:b_kairouan.title_province = { #4594
+				remove_district_type = uqba_mosque_01_duchy_district
+				add_special_district = uqba_mosque_01_district
 			}
-			title:b_damascus.title_province = { add_special_building = ME_umayyad_mosque_01 } #5924
-			title:b_fes.title_province = { add_special_building = ME_al_qarawiyyin_university_01 } #4694
-			title:b_kairouan.title_province = { add_special_building = uqba_mosque_01 } #4594
 		}
-		else_if = { # If PiGu's Medieval Monuments pack IS active, we add the old ME buildings as duchy buildings
-			limit = { 
-				has_cp3_dlc_trigger = yes
+		if = { # All Under Heaven (tgp) not active: no Herat Bazaar, so the Citadel of Alexander takes the special slot
+			limit = { has_tgp_dlc_trigger = no }
+			title:b_herat.title_province = { #4215
+				remove_district_type = citadel_alexander_01_duchy_district
+				add_special_district = citadel_alexander_01_district
 			}
-			title:b_kairouan.title_province = { add_building = uqba_mosque_01_duchy } #4594
 		}
 
 		me_RICE_effect = yes
@@ -213,6 +234,7 @@ me_game_start = {
 		me_add_doctrine_startup_effect = yes
 		me_add_innovations_startup_effect = yes
 		me_byzantine_dejure_effect = yes
+		me_hchar_character_fix = yes
 		me_shewa_setup_effect = yes # To avoid overwriting k_adal
 	}
 }
@@ -220,52 +242,14 @@ me_game_start = {
 me_after_game_start = {
 	effect = {	
 		hfc_bedouin_traditions = yes
-		#hfc_bedouin_counties = yes
+		hfc_bedouin_counties = yes
 		me_muslim_sicily_wars_startup_effect = yes
 
 		culture:afghan = { set_culture_pillar = ethos_bellicose }
 		#culture:rajput = { set_culture_pillar = martial_custom_male_only }
 	
-		## Convert Muwalladi/Maturidi counties to Sunni
-		if = {
-			limit = {
-				OR = {
-					has_game_rule = me_sunni_united
-					has_game_rule = me_sunni_muwalladi_only
-				}
-			}
-			every_county = {
-				limit = { faith = faith:muwalladi }
-				set_county_faith = faith:ashari
-			}
-			every_living_character = {
-				limit = { faith = faith:muwalladi }
-				set_character_faith = faith:ashari
-			}
-		}
-		if = {
-			limit = {
-				OR = {
-					has_game_rule = me_sunni_united
-					has_game_rule = me_sunni_maturidi_only
-				}
-			}
-			every_county = {
-				limit = { faith = faith:maturidi }
-				set_county_faith = faith:ashari
-			}
-			every_living_character = {
-				limit = { faith = faith:maturidi }
-				set_character_faith = faith:ashari
-			}
-
-			every_player = {
-				trigger_event = {
-					id = me_misc_religion_event.0003 # Clean up any maturidi characters that are left for some reason
-					days = 1
-				}
-			}
-		}
+		## 1.20: the 'Sunni Sect Divisions' game rule (Muwalladi/Maturidi -> Sunni) was retired.
+		## Ash'ari, Maturidi and Muwalladi are no longer faiths: all Sunnis share one faith, divided into the four madhhab Rites.
 
 		# Which name Siqilli and Mahri cultures use
 		if = {
@@ -304,6 +288,7 @@ me_after_game_start = {
 					has_game_rule = me_rice_culture_name_ME
 					has_game_rule = me_rice_culture_name_M_SA
 				}
+				title:c_mahra.culture = title:c_socotra.culture # Check if Soqatri and Mahri are seprated (CE)
 			}
 			culture:south_arabian = {
 				set_culture_name = {
@@ -319,6 +304,7 @@ me_after_game_start = {
 					has_game_rule = me_rice_culture_name_RICE
 					has_game_rule = me_rice_culture_name_S_SA
 				}
+				title:c_mahra.culture = title:c_socotra.culture # Check if Soqatri and Mahri are seprated (CE)
 			}
 			culture:south_arabian = {
 				set_culture_name = {
@@ -361,20 +347,20 @@ me_after_game_start = {
 		}
 
 		# Fictional Adventerers
-		if = {
-			limit = {
-				NOR = {
-					has_game_rule = me_adventerers_fic_only
-					has_game_rule = me_adventerers_fic_egg
-				}
-			}
-			ME_remove_adventerers_fic_effect = yes
-		}
+	#	if = {
+	#		limit = {
+	#			NOR = {
+	#				has_game_rule = me_adventerers_fic_only
+	#				has_game_rule = me_adventerers_fic_egg
+	#			}
+	#		}
+	#		ME_remove_adventerers_fic_effect = yes
+	#	}
 		if = {
 			limit = {
 				NOR = {
 					has_game_rule = me_adventerers_egg_only
-					has_game_rule = me_adventerers_fic_egg
+	#				has_game_rule = me_adventerers_fic_egg
 				}
 			}
 			ME_remove_adventerers_egg_effect = yes
@@ -410,6 +396,18 @@ me_after_game_start = {
 					limit = { NOT = { knows_language = language_arabic } }
 					learn_language = language_arabic
 				}
+			}
+		}
+		
+		# Whether the Ma'ab will be exchanged for Acre/Tyre upon the Muslim retaking of Jerusalem
+		if = {
+			limit = {
+				has_game_rule = me_tyre_maab_exchange_yes
+				current_date = 1178.10.1
+			}
+			set_global_variable = {
+				name = me_tyre_county_exchange_flag
+				value = yes
 			}
 		}
 
@@ -597,6 +595,51 @@ me_after_game_start = {
 			resolve_title_and_vassal_change = scope:title_change
 		}
 
+		## Closed Faith Tenet
+		if = {
+			limit = {
+				has_game_rule = me_closed_faith_yes
+			}
+			## Given the variable to make them an invalid heresy
+			faith:druze = {
+				set_variable = { name = block_conversion_till_decision_taken }
+			}
+			faith:mandaean_faith = {
+				set_variable = { name = block_conversion_till_decision_taken }
+			}
+		}
+		if = {
+			limit = {
+				has_game_rule = me_closed_faith_no
+			}
+			# Druze
+			if = {
+				limit = {
+					rite:druze = {
+						rite_has_tenet = tenet_me_closed_faith
+						NOT = { rite_has_tenet = tenet_false_conversion_sanction }
+					}
+				}
+				rite:druze = {
+					remove_rite_tenet = tenet_me_closed_faith
+					add_rite_tenet = tenet_false_conversion_sanction
+				}
+			}
+			# Mandaeanism
+			if = {
+				limit = {
+					rite:mandeaism = {
+						rite_has_tenet = tenet_me_closed_faith
+						NOT = { rite_has_tenet = tenet_communal_identity }
+					}
+				}
+				rite:mandeaism = {
+					remove_rite_tenet = tenet_me_closed_faith
+					add_rite_tenet = tenet_communal_identity
+				}
+			}
+		}
+
 		## HoF Administrative laws
 		if = {
 			limit = {
@@ -604,6 +647,7 @@ me_after_game_start = {
 				game_start_date = 867.1.1
 			}
 			title:d_sunni = { clear_title_laws = yes }
+			title:d_cilicia.holder ?= { convert_to_administrative_from_feudalism_game_start_effect = yes }
 		}
 		if = {
 			limit = {
@@ -632,6 +676,7 @@ me_after_game_start = {
 			# Italian-Bari War startup events
 			title:k_italy.holder = { trigger_event = { id = ss_wars.0200 days = 1 } }
 			title:c_bari.holder = { trigger_event = { id = ss_wars.0200 days = 1 } }
+			character:extra_kurds_0010 = { trigger_event = { id = me_misc_event.0004 days = 1 } } ## Musawir al-Khariji
 		}
 		if = {
 			limit = { game_start_date = 1066.9.15 }
@@ -754,7 +799,7 @@ me_after_game_start = {
 #				}
 			}
 			## Ziri ibn Manad's grandfather
-			character:me_zirid_pre_1 ?= {
+			character:me_zirids_003 ?= {
 				if = {
 					limit = {
 						is_alive = yes
@@ -763,7 +808,7 @@ me_after_game_start = {
 					if = {
 						limit = {
 							character:20930 = {
-								NOT = { is_courtier_of = character:me_zirid_pre_1 }
+								NOT = { is_courtier_of = character:me_zirids_003 }
 							}
 						}
 						add_courtier = character:20930
@@ -853,11 +898,11 @@ me_after_game_start = {
 					add_realm_law_skip_effects = camp_purpose_explorers # 
 					if = {
 						limit = {
-							character:me_andalusian_011 = {
+							character:me_andalusian_009 = {
 								NOT = { is_courtier_of = character:me_andalusian_010 }
 							}
 						}
-						add_courtier = character:me_andalusian_011
+						add_courtier = character:me_andalusian_009
 					}
 				}
 				# Introduction event
@@ -920,6 +965,36 @@ me_after_game_start = {
 						is_landless_adventurer = yes
 					}
 					add_realm_law_skip_effects = camp_purpose_explorers
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Umayyads of Hisn Maslamah, Descendants of Maslamah ibn Abd al-Malik
+			character:me_umayyads_065 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					if = {
+						limit = {
+							character:me_umayyads_066 = {
+								NOT = { is_courtier_of = character:me_umayyads_065 }
+							}
+						}
+						add_courtier = character:me_umayyads_066
+					}
+					if = {
+						limit = {
+							character:me_umayyads_067 = {
+								NOT = { is_courtier_of = character:me_umayyads_065 }
+							}
+						}
+						add_courtier = character:me_umayyads_067
+					}
 				}
 				# Introduction event
 #				trigger_event = {
@@ -1032,6 +1107,53 @@ me_after_game_start = {
 					limit = {
 						is_alive = yes
 						is_landless_adventurer = yes
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ali ibn al-Muqallad al-Munqidhi
+			character:me_kalbids_044 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_legitimists
+					if = {
+						limit = {
+							character:me_kalbids_045 = {
+								NOT = { is_courtier_of = character:me_kalbids_044 }
+							}
+						}
+						add_courtier = character:me_kalbids_045
+					}
+					if = {
+						limit = {
+							character:me_kalbids_061 = {
+								NOT = { is_courtier_of = character:me_kalbids_044 }
+							}
+						}
+						add_courtier = character:me_kalbids_061
+					}
+					if = {
+						limit = {
+							character:me_kalbids_062 = {
+								NOT = { is_courtier_of = character:me_kalbids_044 }
+							}
+						}
+						add_courtier = character:me_kalbids_062
+					}
+					if = {
+						limit = {
+							character:me_kalbids_063 = {
+								NOT = { is_courtier_of = character:me_kalbids_044 }
+							}
+						}
+						add_courtier = character:me_kalbids_063
 					}
 				}
 				# Introduction event
@@ -1181,20 +1303,29 @@ me_after_game_start = {
 #					days = { 1 2 }
 #				}
 			}
-			## Fictional Umayyads 1066
-			character:me_umayyad_fic_001 ?= {
+			## Unlanded Umayyads 1066
+			character:me_umayyads_466 ?= {
 				if = {
 					limit = {
 						is_alive = yes
 						is_landless_adventurer = yes
 					}
+					title:d_laamp_wallada = { set_coa = d_laamp_wallada_other }
 					if = {
 						limit = {
-							character:me_umayyad_fic_002 = {
-								NOT = { is_courtier_of = character:me_umayyad_fic_001 }
+							character:me_umayyads_397 = {
+								NOT = { is_courtier_of = character:me_umayyads_466 }
 							}
 						}
-						add_courtier = character:me_umayyad_fic_002
+						add_courtier = character:me_umayyads_397
+					}
+					if = {
+						limit = {
+							character:me_umayyads_398 = {
+								NOT = { is_courtier_of = character:me_umayyads_466 }
+							}
+						}
+						add_courtier = character:me_umayyads_398
 					}
 				}
 				# Introduction event
@@ -1203,20 +1334,21 @@ me_after_game_start = {
 #					days = { 1 2 }
 #				}
 			}
-			## Fictional Umayyads 1178
-			character:me_umayyad_fic_005 ?= {
+			## Unlanded Umayyads 1178
+			character:me_umayyads_399 ?= {
 				if = {
 					limit = {
 						is_alive = yes
 						is_landless_adventurer = yes
 					}
+					add_realm_law_skip_effects = camp_purpose_scholars
 					if = {
 						limit = {
-							character:me_umayyad_fic_006 = {
-								NOT = { is_courtier_of = character:me_umayyad_fic_005 }
+							character:me_umayyads_400 = {
+								NOT = { is_courtier_of = character:me_umayyads_399 }
 							}
 						}
-						add_courtier = character:me_umayyad_fic_006
+						add_courtier = character:me_umayyads_400
 					}
 				}
 				# Introduction event
@@ -1278,6 +1410,29 @@ me_after_game_start = {
 							}
 						}
 						add_courtier = character:me_persian_005
+					}
+				}
+				# Introduction event
+#				trigger_event = {
+#					id = ###
+#					days = { 1 2 }
+#				}
+			}
+			## Ibn Jubayr
+			character:me_kinanah_006 ?= {
+				if = {
+					limit = {
+						is_alive = yes
+						is_landless_adventurer = yes
+					}
+					add_realm_law_skip_effects = camp_purpose_explorers
+					if = {
+						limit = {
+							character:me_andalusian_013 = {
+								NOT = { is_courtier_of = character:me_kinanah_006 }
+							}
+						}
+						add_courtier = character:me_andalusian_013
 					}
 				}
 				# Introduction event

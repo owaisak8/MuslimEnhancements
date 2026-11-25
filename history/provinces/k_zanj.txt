@@ -1,0 +1,1264 @@
+﻿#k_zanj
+##d_pate
+###c_pate
+####b_pate_island
+12773 = { #PATE_ISLAND
+	culture = swahili
+	rite = ibadi
+	holding = castle_holding
+
+	special_district_slot = swahili_port_pate_district
+	districts = {
+		district = {
+			type = swahili_port_pate_district
+			level = 1
+		}
+	}
+
+	867.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = incense_district
+			}
+			district = {
+				type = swahili_port_pate_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+			}
+			district = {
+				type = manor_houses_district
+				level = 1
+			}
+		}
+
+	}
+	900.1.1 = {
+		rite = ismaili
+	}
+	1066.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+				buildings = {
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = incense_district
+				level = 2
+			}
+			district = {
+				type = swahili_port_pate_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+			district = {
+				type = manor_houses_district
+				level = 1
+			}
+		}
+
+	}
+	1100.1.1 = {
+		rite = shafii
+	}
+	1178.1.1 = {
+		province_size = 3
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = incense_district
+				level = 5
+				buildings = {
+					minor_forestry_2
+				}
+			}
+			district = {
+				type = swahili_port_pate_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 3
+			}
+			district = {
+				type = manor_houses_district
+				level = 1
+			}
+		}
+
+	}
+
+}
+####b_kismayo
+12771 = { #KISMAYO
+	holding = none
+}
+####b_kiunga
+12774 = { #KIUNGA
+	holding = city_holding
+
+	867.1.1 = {
+		districts = {
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = city_holding_district
+				level = 2
+				buildings = {
+					city_magistrate_2
+				}
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+		}
+	}
+
+}
+###c_ewaso_ngiro
+####b_ewaso_ngiro
+12777 = { #EWASO_NGIRO
+	culture = somali
+	rite = waaqism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = wool_district
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = wool_district
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = wool_district
+			}
+		}
+	}
+
+}
+####b_hoosingo
+12772 = { #HOOSINGO
+	holding = none
+}
+###c_lamu
+####b_lamu
+12776 = { #LAMU (Lamu and Manda Islands)
+	culture = swahili
+	rite = ibadi
+	holding = castle_holding
+
+	special_district_slot = swahili_port_lamu_district
+	districts = {
+		district = {
+			type = swahili_port_lamu_district
+			level = 1
+		}
+	}
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = fish_district
+			}
+			district = {
+				type = swahili_port_lamu_district
+				level = 1
+			}
+
+			district = {
+				type = military_district
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1066.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+			}
+			district = {
+				type = fish_district
+				level = 2
+			}
+			district = {
+				type = swahili_port_lamu_district
+				level = 1
+			}
+
+			district = {
+				type = military_district
+				level = 2
+				buildings = {
+					mustering_grounds_1
+				}
+			}
+		}
+
+	}
+	1100.1.1 = {
+		rite = shafii
+	}
+	1178.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = fish_district
+				level = 5
+				buildings = {
+					fish_saltery_2
+				}
+			}
+			district = {
+				type = swahili_port_lamu_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 3
+			}
+		}
+
+	}
+}
+####b_kiangwe
+12775 = { #KIANGWE
+	holding = none
+}
+####b_kipini
+12778 = { #KIPINI
+	holding = city_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = city_holding_district
+				level = 2
+				buildings = {
+					city_town_watch_2
+				}
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+		}
+	}
+
+}
+####b_witu
+12797 = { #WITU
+	holding = none
+}
+##d_mombasa
+###c_mombasa
+####b_mombasa
+12786 = { #MOMBASA
+	culture = swahili
+	rite = ngaiism_pagan
+	holding = castle_holding
+
+	# al-Idrisi declared that Mombasa and Malindi were still mostly pagan in the 12th century
+
+	special_district_slot = swahili_port_mombasa_district
+	districts = {
+		district = {
+			type = swahili_port_mombasa_district
+			level = 1
+		}
+	}
+
+	867.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = fish_district
+			}
+			district = {
+				type = swahili_port_mombasa_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+			}
+		}
+
+	}
+	1066.1.1 = {
+		province_size = 3
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+				buildings = {
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = fish_district
+				level = 2
+			}
+			district = {
+				type = swahili_port_mombasa_district
+				level = 1
+			}
+
+			district = {
+				type = walls_district
+				level = 2
+				buildings = {
+					ramparts_1
+				}
+			}
+			district = {
+				type = urban_housing_district
+				level = 2
+				buildings = {
+					suburb_2
+				}
+			}
+		}
+
+	}
+	1178.1.1 = {
+		province_size = 4
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_court_2
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = fish_district
+				level = 5
+				buildings = {
+					cooper_workshop_2
+				}
+			}
+			district = {
+				type = swahili_port_mombasa_district
+				level = 1
+			}
+
+			district = {
+				type = walls_district
+				level = 3
+				buildings = {
+					city_watch_2
+					gatehouses_2
+				}
+			}
+			district = {
+				type = urban_housing_district
+				level = 3
+				buildings = {
+					foreigners_quarter_2
+				}
+			}
+		}
+
+	}
+	1200.1.1 = {
+		rite = shafii
+	}
+
+}
+####b_mtwapa
+12784 = { #MTWAPA
+	holding = city_holding
+
+	867.1.1 = {
+		districts = {
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = city_holding_district
+				level = 2
+				buildings = {
+					city_local_shrine_2
+				}
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+		}
+	}
+
+}
+###c_malindi
+####b_malindi
+12781 = { #MALINDI
+	culture = swahili
+	rite = ngaiism_pagan
+	holding = castle_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = fish_district
+			}
+			district = {
+				type = villages_district
+			}
+		}
+	}
+
+	1066.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+			}
+			district = {
+				type = fish_district
+				level = 2
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+		}
+
+	}
+	1178.1.1 = {
+		province_size = 3
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = fish_district
+				level = 4
+				buildings = {
+					netmakers_2
+				}
+			}
+			district = {
+				type = urban_housing_district
+				level = 3
+				buildings = {
+					suburb_2
+				}
+			}
+			district = {
+				type = walls_district
+				level = 3
+				buildings = {
+					ramparts_2
+					moats_2
+				}
+			}
+		}
+
+	}
+
+}
+####b_gede
+12795 = { #GEDE
+	# ME: no town before the 12th century. Gedi's earliest evidence is a grave marker radiocarbon dated to 1041-1278,
+	# "placing the original settlement of the site sometime in the eleventh or early twelfth century"; its peak and its
+	# great mosque are 15th century (Ruins of Gedi, Wikipedia). Vanilla had a level 2 temple in 1066, level 3 in 1178.
+	holding = none
+
+	1178.1.1 = {
+		holding = church_holding
+		districts = {
+			district = {
+				type = temple_holding_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
+
+}
+####b_ungwana
+12780 = { #UNGWANA
+	holding = city_holding
+
+	867.1.1 = {
+		districts = {
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+				level = 1
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = city_holding_district
+				level = 2
+				buildings = {
+					city_town_watch_2
+				}
+			}
+			district = {
+				type = villages_district
+				level = 2
+				buildings = {
+					communal_woodland_1
+				}
+			}
+		}
+	}
+
+}
+##d_bonde_la_ufa
+###c_kirinyaga
+####b_kirinyaga
+12805 = { #KIRINYAGA (Mount Kenya)
+	culture = east_bantu
+	rite = ngaiism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = forestry_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = forestry_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				level = 2
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = forestry_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				level = 2
+				buildings = {
+				}
+			}
+		}
+	}
+
+}
+####b_meru
+12804 = {
+	holding = none
+}
+####b_kambu
+12806 = {
+	holding = none
+}
+###c_kilimanjaro
+####b_kilimanjaro
+12802 = { #KILIMANJARO
+	culture = east_bantu
+	rite = ngaiism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = forestry_district
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = forestry_district
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = forestry_district
+			}
+		}
+	}
+
+}
+####b_kwa_mgogo
+12787 = {
+	holding = none
+}
+###c_taveta
+####b_empusel
+12807 = {
+	holding = none
+}
+####b_taveta
+12809 = { #TAVETA
+	culture = east_bantu
+	rite = ngaiism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = mine_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = mine_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				level = 2
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = mine_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				level = 2
+				buildings = {
+				}
+			}
+		}
+	}
+
+}
+####b_saghasa
+12785 = {
+	holding = none
+}
+###c_mto_galana
+####b_mto_galana
+12796 = { #MTO_GALANA
+	culture = east_bantu
+	rite = ngaiism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = horses_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = horses_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				level = 2
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = horses_district
+			}
+			district = {
+				type = tribal_economy_prestige_district
+				level = 2
+				buildings = {
+				}
+			}
+		}
+	}
+
+}
+####b_mto_tsavo
+12783 = { #MTO_TSAVO
+	holding = none
+}
+####b_mto_athi
+12782 = { #MTO_ATHI
+	holding = none
+}
+###c_mto_tana
+####b_garissa
+12808 = { #GARISSA
+	culture = east_bantu
+	rite = ngaiism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = cattle_district
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = cattle_district
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = cattle_district
+			}
+		}
+	}
+
+}
+####b_mto_tana
+12779 = { #MTO_TANA
+	holding = none
+}
+##d_zanzibar
+###c_pemba
+####b_pemba_island_tumbe
+12791 = { #PEMBA_ISLAND_TUMBE
+	culture = swahili
+	rite = ibadi
+	holding = castle_holding
+
+	special_district_slot = swahili_port_pemba_district
+	districts = {
+		district = {
+			type = swahili_port_pemba_district
+			level = 1
+		}
+	}
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = forestry_district
+			}
+			district = {
+				type = swahili_port_pemba_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+			}
+		}
+	}
+
+	900.1.1 = {
+		rite = ismaili
+	}
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+			}
+			district = {
+				type = forestry_district
+				level = 2
+			}
+			district = {
+				type = swahili_port_pemba_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_great_hall_2
+					castle_citadel_2
+				}
+			}
+			district = {
+				type = forestry_district
+				level = 6
+				buildings = {
+					lacquerware_workshop_2
+				}
+			}
+			district = {
+				type = swahili_port_pemba_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 3
+			}
+		}
+	}
+
+}
+####b_pemba_island_ras_mkumbuu
+12798 = { #PEMBA_ISLAND_RAS_MKUMBUU
+	holding = none
+}
+###c_tanga
+####b_tanga
+12788 = {
+	culture = east_bantu		# Digo peoples
+	rite = ngaiism_pagan
+	holding = tribal_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = fish_district
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = tribal_holding_district
+				level = 2
+			}
+			district = {
+				type = fish_district
+			}
+		}
+	}
+
+	1100.1.1 = {
+		holding = castle_holding
+	}
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = fish_district
+				level = 2
+				buildings = {
+				}
+			}
+			district = {
+				type = military_district
+				level = 1
+				buildings = {
+				}
+			}
+		}
+	}
+
+}
+####b_vumba_kuu
+12803 = {
+	holding = none
+}
+###c_zanzibar
+####b_unguja_ukuu
+12792 = { #UNGUJA_UKUU
+	culture = swahili
+	rite = ibadi
+	holding = castle_holding
+
+	special_district_slot = swahili_port_zanzibar_district
+	districts = {
+		district = {
+			type = swahili_port_zanzibar_district
+			level = 1
+		}
+	}
+
+	867.1.1 = {
+		province_size = 3
+		districts = {
+			district = {
+				type = fish_district
+			}
+			district = {
+				type = swahili_port_zanzibar_district
+				level = 1
+			}
+
+			district = {
+				type = walls_district
+				level = 1
+				buildings = {
+				}
+			}
+			district = {
+				type = urban_housing_district
+				level = 1
+				buildings = {
+				}
+			}
+		}
+
+	}
+	1000.1.1 = {
+		rite = shafii
+	}
+	1066.1.1 = {
+		province_size = 2
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+				buildings = {
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = fish_district
+				level = 2
+			}
+			district = {
+				type = swahili_port_zanzibar_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 2
+			}
+			district = {
+				type = manor_houses_district
+				level = 1
+			}
+		}
+
+	}
+	1178.1.1 = {
+		province_size = 1
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_great_hall_2
+					castle_citadel_2
+					castle_training_grounds_2
+				}
+			}
+			district = {
+				type = fish_district
+				level = 6
+				buildings = {
+					fish_saltery_2
+				}
+			}
+			district = {
+				type = swahili_port_zanzibar_district
+				level = 1
+			}
+			district = {
+				type = villages_district
+				level = 3
+			}
+			district = {
+				type = manor_houses_district
+				level = 1
+			}
+		}
+
+	}
+
+}
+####b_tumbatu
+12793 = { #TUMBATU
+	holding = city_holding
+
+	867.1.1 = {
+		districts = {
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+				level = 1
+			}
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = city_holding_district
+				level = 3
+				buildings = {
+					city_magistrate_2
+					city_council_hall_2
+				}
+			}
+			district = {
+				type = villages_district
+				level = 3
+			}
+		}
+	}
+
+}
+###c_mrima
+####b_pangani
+12790 = {
+	culture = swahili
+	rite = ibadi
+	holding = castle_holding
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = honey_district
+			}
+			district = {
+				type = villages_district
+				buildings = {
+				}
+			}
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 2
+			}
+			district = {
+				type = honey_district
+				level = 2
+			}
+			district = {
+				type = villages_district
+				level = 2
+				buildings = {
+					village_butcher_1
+				}
+			}
+		}
+	}
+
+	1100.1.1 = {
+		rite = shafii
+	}
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = castle_holding_district
+				level = 3
+				buildings = {
+					castle_garrison_2
+				}
+			}
+			district = {
+				type = honey_district
+				level = 4
+				buildings = {
+					honey_apothecary_2
+				}
+			}
+			district = {
+				type = villages_district
+				level = 3
+				buildings = {
+					village_butcher_1
+				}
+			}
+		}
+	}
+
+}
+####b_mkwaja
+12789 = { #MKWAJA
+	holding = none
+}
+####b_kaole
+12794 = { #KAOLE
+	# ME: a trading town "originally settled in the 8th century", whose two mosques and tombs date from the 13th
+	# century on (Kaole, Wikipedia). It stays a town through 1178 instead of vanilla's switch to a level 3 temple in 1100.
+	holding = city_holding
+
+	867.1.1 = {
+		districts = {
+		}
+	}
+
+	1066.1.1 = {
+		districts = {
+		}
+	}
+
+	1178.1.1 = {
+		districts = {
+			district = {
+				type = city_holding_district
+				level = 2
+			}
+			district = {
+				type = villages_district
+				level = 2
+				buildings = {
+					communal_woodland_1
+				}
+			}
+		}
+	}
+
+}

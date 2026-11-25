@@ -15,7 +15,7 @@
  
  #Twelver Mahdi Appears
  twelver_imam_event.0002.t:0 "The Mahdi Appears"
- twelver_imam_event.0002.desc:0 "The great Imam [al_askari.GetFirstName] is dead, leaving behind no heir to claim the Imamate.\n\nOr at least, that what we thought at first. Uthman ibn Sa'id, the man who once represented [al_askari.GetFirstName] and [al_hadi.GetFirstName], has revealed that al-Askari had an infant son named Muhammad, who was proclaimed to be the Mahdi, and was kept hidden from the public in fear of his enemies' persecution.\n\nUthman, along with three other men, have come to represent Muhammad al-Mahdi while he is in his minor ghayba."
+ twelver_imam_event.0002.desc:0 "The great Imam [al_askari.GetFirstName] is dead, leaving behind no heir to claim the Imamate.\n\nOr at least, that what we thought at first. Uthman ibn Sa'id, the man who once represented [al_askari.GetFirstName] and [al_hadi.GetFirstName], has revealed that al-Askari had an infant son named Muhammad, who was proclaimed to be the [Glossary( 'Mahdi', 'MAHDI_GLOSS' )], and was kept hidden from the public in fear of his enemies' persecution.\n\nUthman, along with three other men, have come to represent Muhammad al-Mahdi while he is in his minor ghayba."
  twelver_imam_event.0002.a:0 "Allahu Akbar!"
  twelver_imam_event.0002.tt:0 ""
  twelver_imam_event.0004.t:0 "The Great Ghayba"
@@ -47,11 +47,21 @@
  me_misc_religion_event.0001.d:0 "I can do without a copy"
  
  feature_book_title_al_ghazali_revival:0 "Revival of Religious Sciences"
- feature_book_subject_al_ghazali_revival:0 "Islamic Ethics and Philosophy"
+ feature_book_subject_al_ghazali_revival:0 "islamic ethics and philosophy"
  feature_book_topic_al_ghazali_revival:0 "A copy of Revival of Religious Sciences (#EMP Ihya' Ulum ad-Din#!) by al-Ghazali, widely considered to be one of his most important and influential works."
  feature_book_title_al_ghazali_deliverance:0 "Deliverance From Error"
- feature_book_subject_al_ghazali_deliverance:0 "Spiritual Autobiography"
+ feature_book_subject_al_ghazali_deliverance:0 "spiritual autobiography"
  feature_book_topic_al_ghazali_deliverance:0 "A copy of Revival of Deliverance From Error (#EMP al-Munqidh min aḍ-Ḍalal#!), an autobiography written by al-Ghazali towards the end of his life, considered to be a work of major importance."
+ 
+ #Heresiarch Adventeror Faith Creation
+ me_misc_religion_event.0004.t.bab:0 "Bab of the Imams"
+ me_misc_religion_event.0004.t.mahdi:0 "A New Mahdi"
+ me_misc_religion_event.0004.desc.ishaq_ahmar:0 "To be the Bab of the Imams is to be the only gateway towards knowledge and truth, their sole representative and a interpretor of their truth to the world, only #EMP you#! can lead the lost souls of the world towards salvation.\nMany have attempted to claim this title for themselves but none came that were truely worthy of it... until today that is..."
+ me_misc_religion_event.0004.desc.zakarawayhist:0 "To be the Mahdi is to be the savior who will bring justice to this wretched world, every word of yours is truth and every step is towards salvation.\nMany have attempted to claim this title for themselves but none came that were truely worthy of it... until today that is..."
+ me_misc_religion_event.0004.desc.jayshanist:0 "$me_misc_religion_event.0004.desc.zakarawayhist$"
+ me_misc_religion_event.0004.a.bab:0 "I am the Bab of the Imams! Let the world bear witness!"
+ me_misc_religion_event.0004.a.mahdi:0 "I am be the Mahdi! Let the world bear witness!"
+ me_misc_religion_event.0004.b:0 "That has nothing to do with me"
  
  #Egypt 867 ruler event
  me_misc_event.0001.t:0 "Turmoil on the Nile"
@@ -72,7 +82,41 @@
  me_misc_event.0003.t:0 "The Makhzumis of Shewa"
  me_misc_event.0003.desc:0 "Long ago, during the reign of Caliph Umar Ibn al-Khattab, a man from the tribe of Quraysh called Wudd ibn Hisham al-Makhzumi emigrated from Arabia alongside other Muslim Arab migrants into Shewa where we, his descendants, now reign.\n\nHowever, due to us holding no genealogical records of our connection to the house of Makhzum - from which the famed military commander and companion of Prophet Muhammad, Khalid ibn al-Walid, hails - our claims are brought into question."
  me_misc_event.0003.a:0 "The world will know us for who we are one day!"
- me_misc_event.0003.a.tt:0 "If you own #EMP Legends of the Dead#!, you will be able to legitimize your dynasty as Qurashis through a unique legend."
+ me_misc_event.0003.a.tt:0 "If you own #EMP Legends of the Dead#!, you will be able to legitimize your dynasty as Qurayshis through a unique legend."
  me_misc_event.0003.b:0 "There is no question, we #EMP are#! the sons of Wudd"
  me_misc_event.0003.b.tt:0 "You and every member of your dynasty will become part of the [wudd.GetHouse.GetBaseNameNoTooltip] house and will gain the [GetTrait('quraysh').GetName( GetNullCharacter )] trait."
+ 
+ ## 867 Kharijite Rebellion startup
+ me_misc_event.0004.t:0 "Kharijite Fiqh"
+ me_misc_event.0004.desc:0 "A heated debate has been plaguing our army’s leadership for a long time: “Does Allah accept the repentance of a sinner?”\n\nThe majority opinion is the [GetRiteByKey('sufri').GetAdjective] position, which holds that Allah does accept the repentance of a sinner, provided they are sincere.\n\nThe [GetRiteByKey('azariqa').GetAdjective] position, however, which is followed by a large group of our soldiers, states that the act of sin itself takes a person out of the religion and that their repentance will not be accepted.\n\nAs it stands, no matter which position I take, the deviants will ultimately defect from our side and fight against us."
+ me_misc_event.0004.a:0 "All humans sin, it is only natural for Allah to accept the repentance of the sincere"
+ me_misc_event.0004.a.tt:0 "[ubaydah.GetShortUIName|U] will raise an army to fight you over control the region"
+ me_misc_event.0004.b:0 "If they were true belivers they wouldn't have sinned in the first place!"
+ me_misc_event.0004.b.tt:0 "A [GetRiteByKey('sufri').GetAdjective] leader will raise an army to fight you over control the region"
+ me_friend_kharijite:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] bonded over shared zealotry."
+ me_rival_kharijite:0 "[CHARACTER.GetShortUIName|U] and [TARGET_CHARACTER.GetShortUIName] had a strong disagreement over Khariji doctrines."
+ me_kharijite_split_title:0 "Kharijite Group Splits"
+ me_kharijite_split_desc:0 "The Kharijites have split into two competing groups for control of the region"
+ me_khariji_rebel_name:0 "Kharijite Rebellion"
+ 
+ ## Tyre-Ma'ab county exchange events
+ me_misc_event.0005.title:0 "War For The Holy Land"
+ me_misc_event.0005.desc:0 "The Muslims move in droves as thousands of banners with Islamic declarations of faith are raised high, all in the name of retaking the holy land.\n\n#I #DIE1 You have activated the #high Acre-Ma'ab County Exchange#! game rule, meaning that upon winning the war [attacker.GetShortUIName|U] will take [GetTitleByKey('c_maab').GetNameNoTier] but lose [GetTitleByKey('c_acre').GetNameNoTier], simulating the historic borders that occurred upon the Muslims’ retaking of Jerusalem.\n\nIf [attacker.GetShortUIName|U] manages to occupy [GetTitleByKey('c_acre').GetNameNoTier] and the county has not been allowed to recover from the [GetModifier('me_acre_occupied_modifier').GetNameWithTooltip] [county_modifier|E] then they will get to take both counties.#!#!"
+ me_misc_event.0005.a:0 "I understand."
+ me_acre_occupied_modifier:0 "Compromised Fortifications"
+ me_acre_occupied_modifier_desc:0 "The city's once strong fortifications have been compromised by the war, the attacker for the war for Jerusalem will get to keep this city should they win while it remains so."
+ 
+ me_misc_event.0006.title.tyre_taken:0 "The Last Stronghold"
+ me_misc_event.0006.title.tyre_kept:0 "The Fallen Stronghold"
+ me_misc_event.0006.desc.muslim_tyre_taken:0 "What was left of the Crusaders and their leadership have fled in droves to [GetTitleByKey('b_tyre').GetNameNoTier], crowding the city and taking refuge behind its strong fortifications. All of our men’s best efforts to take control of the city have proven fruitless as far too many crusaders now reside behind its walls.\n\nThough the crusaders have managed to keep [GetTitleByKey('b_tyre').GetNameNoTier] under their grasp, they were forced to abandon any strongholds outside of it, allowing us to swoop in and take control."
+ me_misc_event.0006.desc.muslim_tyre_kept:0 "What was left of the Crusaders and their leadership have abandoned their strongholds in the holy land and fled in droves to [GetTitleByKey('b_tyre').GetNameNoTier], hoping to take refuge behind its strong fortifications.\n\nUnfortunately for them, the war has taken its toll on the city’s walls, leaving them vulnerable and forcing their complete surrender."
+ me_misc_event.0006.desc.christian_tyre_taken:0 "The holy city of [GetTitleByKey('c_jerusalem').GetNameNoTier] has fallen yet again under the Saracen yolk, many noble crusaders have given their lives to protect the city only to have their efforts trampled upon by [attacker.GetTitledFirstNameNicknamed|U].\n\nWhat was left of our forces took refuge in the city of [GetTitleByKey('b_tyre').GetNameNoTier], its strong fortifications managing to deter the forces of the Saracen menace, unfortunately they were forced to abandon their other strongholds and allowing them to be overtaken by Saracen forces."
+ me_misc_event.0006.desc.christian_tyre_kept:0 "The holy land has fallen yet again under the Saracen yoke. Many noble Crusaders have given their lives to protect it, only to have their efforts trampled upon by [attacker.GetTitledFirstNameNicknamed|U].\n\nWhat was left of our forces abandoned all other strongholds and took refuge in the city of [GetTitleByKey('b_tyre').GetNameNoTier]. Unfortunately its once strong fortifications were compromised by the war, forcing us to leave the city into the hands of the Saracen menace."
+ me_misc_event.0006.a.muslim_tyre_taken:0 "It won’t remain in their hands for long."
+ me_misc_event.0006.a.muslim_tyre_kept:0 "Allahu Akbar!"
+ me_misc_event.0006.a.christian_tyre_taken:0 "This isn’t over!"
+ me_misc_event.0006.a.christian_tyre_kept:0 "How could this happen?!"
+ me_misc_event.0006.tt.game_rule:0 "This occurred because the #high Acre-Ma'ab County Exchange#! game rule was turned on."
+ me_misc_event.0006.tt.tyre_kept:0 "This occurred because [attacker.GetShortUIName|U] managed to occupy [GetTitleByKey('c_acre').GetNameNoTier], and the war was won while the county had the [GetModifier('me_acre_occupied_modifier').GetNameWithTooltip] [county_modifier|E]."
+ me_misc_event.0006.tt.tyre_taken:0 "This occurred because [attacker.GetShortUIName|U] either failed to occupy [GetTitleByKey('c_acre').GetNameNoTier] or the war was won while the county recovered and lost the [GetModifier('me_acre_occupied_modifier').GetNameWithTooltip] [county_modifier|E]"
  

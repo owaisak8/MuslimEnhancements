@@ -9,7 +9,7 @@
 	}
 }
 
-#hfc_bedouin_counties = {
+hfc_bedouin_counties = {
 	# Duchy: PALMYRA
 #	province:5945 = { # County: Sukhna
 #		set_holding_type = tribal_holding 
@@ -27,16 +27,16 @@
 #	}
 
 	# SINAI
-#	province:6033 = { # Sinai
-#		set_holding_type = tribal_holding 
-#	}
-#	title:c_sinai = { 
+	province:6033 = { # Sinai
+		set_holding_type = tribal_holding 
+	}
+#	title:c_sinai = { ## In Vanilla
 #		set_county_culture = culture:bedouin 
 #	}
-#	province:6030 = { # Firaun
-#		set_holding_type = tribal_holding 
-#	}
-#	title:c_firaun = { 
+	province:6030 = { # Firaun
+		set_holding_type = tribal_holding 
+	}
+#	title:c_firaun = { ## In Vanilla
 #		set_county_culture = culture:bedouin 
 #	}
 #	character:20788 = { 
@@ -91,4 +91,4 @@
 #		set_holding_type = tribal_holding 
 #	}
 
-#}
+}

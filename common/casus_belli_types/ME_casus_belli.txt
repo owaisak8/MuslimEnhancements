@@ -179,7 +179,7 @@ me_nukkari_revolt_war = {
 				}
 			}
 			resolve_title_and_vassal_change = scope:imam_change
-			faith:nukkari = {
+			faith:ibadi = { # 1.20: the Nukkari are a Rite of the Ibadi faith
 				change_fervor = {
 					value = 20
 					desc = fervor_gain_nukkari_imamate_established
@@ -197,12 +197,12 @@ me_nukkari_revolt_war = {
 			region = ghw_region_north_africa
 			custom = me_nukkari_convert_counties_custom
 			limit = {
-				faith = { has_doctrine = special_doctrine_is_ibadi_faith }
+				rite = { rite_has_doctrine = special_doctrine_is_ibadi_faith }
 				NOT = { exists = global_var:nukkari_revolt_end_counties_converted }
 			}
 			random = {
 				chance = 50
-				set_county_faith = faith:nukkari
+				set_county_rite = rite:nukkari
 			}
 			set_global_variable = {
 				name = nukkari_revolt_end_counties_converted
@@ -228,8 +228,6 @@ me_nukkari_revolt_war = {
 			WINNER = scope:attacker
 			FAME_BASE = scope:cb_prestige_factor # Set by 'setup_invasion_cb'
 			IS_RELIGIOUS_WAR = yes
-			WINNER_FAME_SCALE = 10
-			LOSER_FAME_SCALE = -10
 			WINNER_ALLY_FAME_SCALE = 10
 			LOSER_ALLY_FAME_SCALE = 10
 		}
@@ -479,7 +477,7 @@ berberist_invasion_cb = {
 		# Give HoF title
 		scope:attacker = {
 			if = {
-				limit = { faith = faith:hamimist }
+				limit = { rite = rite:hamimist }
 				title:d_hamimist = {
 					change_title_holder = {
 						holder = scope:attacker
@@ -489,7 +487,7 @@ berberist_invasion_cb = {
 				}
 			}
 			else_if = {
-				limit = { faith = faith:kaduist }
+				limit = { rite = rite:kaduist }
 				title:d_kaduist = {
 					change_title_holder = {
 						holder = scope:attacker
@@ -686,7 +684,7 @@ berberist_invasion_cb = {
 						is_imprisoned = no
 					}
 					scope:defender = {
-					imprison = {
+						imprison = {
 							target = PREV
 							type = dungeon
 						}
@@ -882,6 +880,14 @@ me_alid_egypt_revolt_cb = {
 			}
 			else = { custom_tooltip = conquest_title_create_tt }
 		}
+		
+		scope:attacker = {
+			every_held_title = {
+				limit = { has_variable = temporary_title }
+				save_scope_as = destroyable_title
+				scope:attacker = { destroy_title = scope:destroyable_title }
+			}
+		}
 	}
 
 	white_peace_possible = no
@@ -951,7 +957,10 @@ me_alid_egypt_revolt_cb = {
 				}
 			}
 			every_living_character = {
-				limit = { is_courtier_of = scope:attacker }
+				limit = {
+					is_courtier_of = scope:attacker
+					is_imprisoned = no
+				}
 				save_scope_as = courtier_alid
 				scope:defender = {
 					imprison = {
@@ -968,6 +977,11 @@ me_alid_egypt_revolt_cb = {
 					save_scope_as = destroyable_title
 					scope:attacker = { destroy_title = scope:destroyable_title }
 				}
+			}
+			every_held_title = {
+				limit = { has_variable = temporary_title }
+				save_scope_as = destroyable_title
+				scope:attacker = { destroy_title = scope:destroyable_title }
 			}
 		}
 		
@@ -1678,6 +1692,22 @@ me_zirid_sicily_intervention_cb = {
 
 	on_defeat = {
 		me_zirid_intervention_defeat_effect = yes
+		every_player = {
+			if = {
+				limit = {
+					OR = {
+						culture = culture:siqilli
+						capital_province = {
+							OR = {
+								geographical_region = ghw_region_north_africa 
+								geographical_region = special_sicilian_culture_region
+							}
+						}
+					}
+				}
+			trigger_event = ss_wars.0103
+			}
+		}
 		scope:attacker = { show_pow_release_message_effect = yes }
 		
 		# Legitimacy

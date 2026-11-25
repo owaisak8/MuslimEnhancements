@@ -1,7 +1,7 @@
 ﻿l_english:
-
- #
- CHARACTER_TITLED_FIRST_NAME_ONLY_NICKNAMED_PREFIX: "$TIER$ $NICK$ $NAME$"
+ 
+ # Glossaries
+ MAHDI_GLOSS: "The #bold Mahdi#! — an Arabic title meaning "The Guided One" — is a messianic figure in Islamic belief who is traditionally believed to appear at the end of times to rid the world of evil and injustice, with many figures throughout history claiming this title."
 
  # Innovations
  innovation_me_summer_raids:1 "Summer Raids"

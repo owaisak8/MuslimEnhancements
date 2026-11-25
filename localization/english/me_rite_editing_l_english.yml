@@ -1,0 +1,11 @@
+﻿l_english:
+ rule_me_rite_editing:0 "@me_icon! Changes to Muslim Rites"
+ setting_me_rite_editing_guarded:0 "Guarded"
+ setting_me_rite_editing_guarded_desc:0 "AI rulers cannot change the historical Rites of the Muslim faiths: the Hanafi, Maliki, Isma'ili and the rest keep their tenets and doctrines. Rites founded during play may still be changed. Players are not restricted."
+ setting_me_rite_editing_historical_locked:0 "Historical Rites Locked"
+ setting_me_rite_editing_historical_locked_desc:0 "AI rulers cannot change the historical Rites of the Muslim faiths at all: the Hanafi, Maliki, Isma'ili and the rest stay as they were. Rites founded during play may be changed freely. Players are not restricted."
+ setting_me_rite_editing_locked:0 "Locked"
+ setting_me_rite_editing_locked_desc:0 "AI rulers cannot change any Rite of a Muslim faith. Players are not restricted."
+ setting_me_rite_editing_ahistorical:0 "Ahistorical"
+ setting_me_rite_editing_ahistorical_desc:0 "AI rulers change the Rites of the Muslim faiths however they please, exactly as in the unmodded game."
+ me_imam_rite_not_edited_tt:0 "The Ja'fari rite is not rewritten: it belongs to the Imam of the Age"

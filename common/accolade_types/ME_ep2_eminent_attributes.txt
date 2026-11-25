@@ -5,20 +5,17 @@
 house_knight_attribute = {
 	adjective = "accolade_house"
 	noun = "accolade_house_knight"
+	icon = "gfx/interface/icons/knight_badge/icons/accolade_trait_champion_blue.dds"
+	portrait_pose = "personality_honorable"
 	accolade_categories = { eminent relationship dynasty educator defensive champion }
 
-	potential = {
-		prowess >= accolade_prowess_requirement_value
-		exists = house
-		house = liege.house
-		NOT = {
-			has_trait = denounced
-		}
-		dynasty = {
-			has_dynasty_perk = kin_legacy_4
-		}
+	squire_perfect_fit = {
+		house_knight_attribute_trigger = yes
 	}
-	
+	squire_acceptable_fit = {
+		house_knight_attribute_acceptable_trigger = yes
+	}
+
 	weight = {
 		# Should be a pretty common pick if you've bothered to unlock the legacy
 		value = accolade_standard_base_value
@@ -47,8 +44,8 @@ house_knight_attribute = {
 			# Faith
 			if = {
 				limit = {
-					faith = {
-						has_doctrine = tenet_divine_marriage
+					rite = {
+						rite_has_tenet = tenet_divine_marriage
 					}
 				}
 				add = 100
@@ -61,6 +58,7 @@ house_knight_attribute = {
 						has_trait = kinslayer_2
 						has_trait = kinslayer_3
 						has_trait = disinherited
+						has_trait = adopted_no_inheritance
 					}
 				}
 				add = -200
@@ -77,6 +75,7 @@ house_knight_attribute = {
 					has_trait = ubaydi
 					has_trait = saoshyant_descendant
 					has_trait = pure_blooded
+					has_trait = golden_lineage
 				}
 			}
 			add = 200
@@ -114,34 +113,18 @@ house_knight_attribute = {
 	}
 	ranks = {
 		# Rank 1
-		100 = {
+		1 = {
 			accolade_parameters = {
 				accolade_defends_family_low
 			}
 		}
 		# Rank 2
-		300 = {
-			accolade_parameters = {
-				accolade_defends_family_low
-			}
+		2 = {
+			liege_modifier = { monthly_dynasty_prestige_mult = 0.05 }
+			accolade_parameters = { acclaimed_knight_inspires_family accolade_defends_family_medium }
 		}
 		# Rank 3
-		600 = {
-			liege_modifier = { monthly_dynasty_prestige_mult = 0.05 }
-			accolade_parameters = { acclaimed_knight_inspires_family accolade_defends_family_medium }
-		}
-		# Rank 4
-		1000 = {
-			liege_modifier = { monthly_dynasty_prestige_mult = 0.05 }
-			accolade_parameters = { acclaimed_knight_inspires_family accolade_defends_family_medium }
-		}
-		# Rank 5
-		1500 = {
-			liege_modifier = { monthly_dynasty_prestige_mult = 0.15 }
-			accolade_parameters = { acclaimed_knight_inspires_family_high accolade_defends_family_high }
-		}
-		# Rank 6
-		2100 = {
+		3 = {
 			liege_modifier = { monthly_dynasty_prestige_mult = 0.15 }
 			accolade_parameters = { acclaimed_knight_inspires_family_high accolade_defends_family_high }
 		}

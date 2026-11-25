@@ -1,14 +1,14 @@
 ﻿k_jazira = {
-	867.1.1 = {	change_development_level = 5 }
-	1066.1.1 = { change_development_level = 8 }
-	1178.1.1 = { change_development_level = 24 }
+	867.1.1 = {	change_prosperity_level = 5 }
+	1066.1.1 = { change_prosperity_level = 8 }
+	1178.1.1 = { change_prosperity_level = 24 }
 }
 
 d_diyarrabia = {
-	867.1.1 = {	change_development_level = 7 }
-	1066.1.1 = { change_development_level = 10 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 7 }
+	1066.1.1 = { change_prosperity_level = 10 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	765.1.1 = {
 		liege = e_arabia
 		holder = 188643 # Khalid Barmakid
@@ -16,21 +16,36 @@ d_diyarrabia = {
 	782.1.1 = {
 		holder = 0
 	}
-	
+
 	861.1.1 = {
 		liege = "e_arabia"
 	}
 	861.1.1 = {
-		holder = levantine000009
+		holder = levantine000012 # al-Hasan ibn Ayyub ibn Ahmad ibn Umar ibn al-Khattab at-Taghlibi
 	}
-	
-	905.1.1 = {
-		liege = 0
-		holder = 159170
+
+	## Hamdanids
+	935.10.1 = {
+		holder = me_taghlib_124 # 'Nasir ud-Dawlah' al-Hasan ibn Abdullah
+		liege = "e_arabia"
 	}
 	942.1.1 = {
-		holder = 159172
+		liege = 0 # Hamdanids becomes de-facto leaders
 	}
+	967.1.1 = {
+		holder = me_taghlib_125 # 'Uddat ud-Dawlah' Abu Taghlib Fadlullah 'al-Ghandafar' ibn al-Hasan
+	}
+	979.8.29 = {
+		holder = 0 # Buyid takeover
+	}
+
+	#905.1.1 = {
+	#	liege = 0
+	#	holder = 159170
+	#}
+	#942.1.1 = {
+	#	holder = 159172
+	#}
 	999.1.1 = {
 		holder = 159174
 	}
@@ -151,7 +166,7 @@ d_diyarrabia = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -161,10 +176,10 @@ d_diyarrabia = {
 }
 
 c_mosul = {
-	867.1.1 = {	change_development_level = 10 }
-	1066.1.1 = { change_development_level = 16 }
-	1178.1.1 = { change_development_level = 36 }
-	
+	867.1.1 = {	change_prosperity_level = 10 }
+	1066.1.1 = { change_prosperity_level = 16 }
+	1178.1.1 = { change_prosperity_level = 36 }
+
 	## Revolt of Ibn al-Zubayr
 	685.1.1 = {
 #		liege = ###
@@ -183,11 +198,58 @@ c_mosul = {
 		holder = extra_taghlibs_5
 	}
 	861.1.1 = {
-		holder = levantine000009
+		holder = levantine000012 # al-Hasan ibn Ayyub ibn Ahmad ibn Umar ibn al-Khattab at-Taghlibi
 	}
 	874.1.1 = {
 		liege = 0
 	}
+
+	## Hamdanid dynasty
+	905.1.1 = {
+		holder = me_taghlib_110 # 'Abu'l-Hayja' Abdallah ibn Hamdan
+		liege = "e_arabia" # Governor for the Abbasids
+	}
+	#913.1.1 = {
+	#	holder = ### # Abdallah is removed from the position
+	#}
+	#914.1.1 = {
+	#	holder = me_taghlib_110 # Abdallah is regiven the position
+	#}
+	#916.1.1 = {
+	#	holder = ### # Abu'l-Hayja is removed from the position again
+	#}
+	#925.1.1 = {
+	#	holder = me_taghlib_110 # Abdallah is regiven the position for the thrid time
+	#}
+
+	931.10.1 = {
+		holder = me_taghlib_111 # 'Abu'l-Ala' Sa'id ibn Hamdan
+	}
+	934.1.1 = {
+		holder = me_taghlib_124 # 'Nasir ud-Dawlah' al-Hasan ibn Abdullah
+	}
+	934.6.1 = {
+		holder = me_taghlib_111 # Sa'id retakes Mosul
+	}
+	935.1.1 = {
+		holder = me_taghlib_124 # Nasir ud-Dawlah returns after assassinating Sa'id
+	}
+	942.1.1 = {
+		liege = 0 # Hamdanids becomes de-facto leaders
+	}
+	967.1.1 = {
+		holder = me_taghlib_125 # 'Uddat ud-Dawlah' Abu Taghlib Fadlullah 'al-Ghandafar' ibn al-Hasan
+	}
+	#979.8.29 = {
+	#	holder = 0 # Buyid takeover
+	#}
+	989.1.1 = {
+		holder = me_taghlib_133 # 'Abu Tahir' Ibrahim ibn al-Hasan, co-ruling with his brother 'Abu Abdullah' al-Husayn (me_taghlib_135)
+	}
+	#990.1.1 = {
+	#	holder = 0 # Uqaylid takeover
+	#}
+
 	1066.1.1 = {
 		liege = "d_diyarrabia"
 	}
@@ -283,7 +345,7 @@ c_mosul = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -299,12 +361,12 @@ c_ninive = {
 		liege = d_diyarrabia
 		holder = 188657
 	}
-	
+
 	861.1.1 = {
 		liege = "e_arabia"
 	}
 	861.1.1 = {
-		holder = levantine000009
+		holder = levantine000012 # al-Hasan ibn Ayyub ibn Ahmad ibn Umar ibn al-Khattab at-Taghlibi
 	}
 	874.1.1 = {
 		liege = 0
@@ -390,7 +452,7 @@ c_ninive = {
 	}
 	1320.1.1 = {
 		liege = "e_ilkhanate"
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -523,7 +585,7 @@ c_sinjar = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -626,7 +688,7 @@ c_nasibin = {
 	}
 	1320.1.1 = {
 		liege = "e_ilkhanate"
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -636,7 +698,7 @@ c_nasibin = {
 	1336.7.24 = {
 		holder = 478030
 	}
-	
+
 
 }
 
@@ -659,9 +721,15 @@ c_khabur = {
 	#	holder = 0
 	#}
 	866.1.1 = {
-		holder = levantine0001
+		holder = levantine0001 # Malik ibn Tawq al-Attabi at-Taghlibi
 	}
-	#877.1.1 = {
+	873.1.1 = {
+		holder = levantine000009 # Ahmad ibn Malik ibn Tawq al-Attabi at-Taghlibi
+	}
+	883.1.1 = {
+		holder = sogdian0009 # Muhammad ibn Abi Saj
+	}
+	#901.1.1 = {
 	#	liege = 0
 	#}
 	1040.1.1 = {
@@ -832,7 +900,7 @@ c_upper_khabur = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -842,7 +910,7 @@ c_upper_khabur = {
 }
 
 c_edessa = {
-	1178.1.1 = { change_development_level = 36 }
+	1178.1.1 = { change_prosperity_level = 36 }
 
 	638.1.1 = {
 		liege = "d_edessa"
@@ -936,10 +1004,10 @@ c_edessa = {
 
 
 c_harran = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	638.1.1 = {
 		liege = "d_edessa"
 		holder = 146030
@@ -968,6 +1036,27 @@ c_harran = {
 	840.1.1 = {
 		holder = levantine000004
 	}
+
+	## Hamdanids
+	944.10.29 = {
+		holder = me_taghlib_138 # 'Sayf ud-Dawlah' Ali ibn Abdullah
+	}
+	948.1.1 = {
+		holder = me_taghlib_113 # 'Abu Firas' al-Harith ibn Sa'id ibn Hamdan
+	}
+	962.11.1 = {
+		holder = me_taghlib_128 # 'Abu al-Qasim' Hibatullah ibn al-Hasan
+	}
+	964.1.1 = {
+		holder = me_taghlib_138 # 'Sayf ud-Dawlah'
+	}
+	968.4.4 = {
+		holder = me_taghlib_139 # 'Sa'd ud-Dawlah' Abu al-Ma'ali Sharif ibn Ali
+	}
+	991.12.1 = {
+		holder = me_taghlib_140 # 'Sa'id ud-Dawlah' Abu al-Fada'il Sa'id ibn Sharif
+	}
+
 	1040.1.1 = {
 		holder = extra_bedouins_0034
 	}
@@ -1037,13 +1126,13 @@ c_harran = {
 	1236.1.1 = {
 		holder = 144082
 	}
-	1260.1.1 = {	
+	1260.1.1 = {
 		holder = 93462
 	}
-	1260.9.3 = {	
+	1260.9.3 = {
 		holder = 93463
 	}
-	1300.1.1 = {	
+	1300.1.1 = {
 		holder = 93464
 	}
 
@@ -1138,29 +1227,29 @@ c_dausar = {
 	1236.1.1 = {
 		holder = 144082
 	}
-	1260.1.1 = {	
+	1260.1.1 = {
 		holder = 93462
 	}
-	1260.9.3 = {	
+	1260.9.3 = {
 		holder = 93465
 	}
-	1300.1.1 = {	
+	1300.1.1 = {
 		holder = 93466
 	}
 }
 
 d_diyarmudar = {
 	800.1.1 = {
-		change_development_level = 6
+		change_prosperity_level = 6
 	}
 	1000.1.1 = {
-		change_development_level = 10
+		change_prosperity_level = 10
 	}
 	1100.1.1 = {
-		change_development_level = 18
+		change_prosperity_level = 18
 	}
-	1178.1.1 = { change_development_level = 20 }
-	
+	1178.1.1 = { change_prosperity_level = 20 }
+
 	840.1.1 = {
 		liege = "e_arabia"
 	}
@@ -1183,10 +1272,10 @@ d_diyarmudar = {
 }
 
 c_raqqa = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 14 }
-	
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 14 }
+
 	710.1.1 = {
 		liege = "d_palmyra"
 		holder = 146067
@@ -1212,6 +1301,18 @@ c_raqqa = {
 	877.1.1 = {
 		liege = 0
 	}
+
+	## Hamdanids
+	944.10.29 = {
+		holder = me_taghlib_138 # 'Sayf ud-Dawlah' Ali ibn Abdullah
+	}
+	967.2.1 = {
+		holder = me_taghlib_139 # 'Sa'd ud-Dawlah' Abu al-Ma'ali Sharif ibn Ali
+	}
+	971.1.1 = {
+		holder = me_taghlib_125 # 'Uddat ud-Dawlah' Abu Taghlib Fadlullah 'al-Ghandafar' ibn al-Hasan
+	}
+
 	1066.1.1 = {
 		liege = "d_aleppo"
 	}
@@ -1467,7 +1568,7 @@ c_hakkari = {
 	}
 	1320.1.1 = {
 		liege = "e_ilkhanate"
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -1648,7 +1749,7 @@ c_bakriya = {
 
 
 c_amida = {
-	1178.1.1 = { change_development_level = 34 }
+	1178.1.1 = { change_prosperity_level = 34 }
 
 	742.1.1 = {
 		liege = "d_diyarbakr"
@@ -1712,9 +1813,9 @@ c_amida = {
 }
 
 d_euphrates = {
-	867.1.1 = {	change_development_level = 8 }
-	1066.1.1 = { change_development_level = 12 }
-	1178.1.1 = { change_development_level = 17 }
+	867.1.1 = {	change_prosperity_level = 8 }
+	1066.1.1 = { change_prosperity_level = 12 }
+	1178.1.1 = { change_prosperity_level = 17 }
 
 	1066.1.1 = {
 		liege = "e_persia"
@@ -1746,9 +1847,15 @@ c_rahba = {
 	#	holder = 0
 	#}
 	866.1.1 = {
-		holder = levantine0001
+		holder = levantine0001 # Malik ibn Tawq al-Attabi at-Taghlibi
 	}
-	877.1.1 = {
+	873.1.1 = {
+		holder = levantine000009 # Ahmad ibn Malik ibn Tawq al-Attabi at-Taghlibi
+	}
+	883.1.1 = {
+		holder = sogdian0009 # Muhammad ibn Abi Saj
+	}
+	901.1.1 = {
 		liege = 0
 	}
 	1066.1.1 = {
@@ -1779,8 +1886,8 @@ c_rahba = {
 	1320.1.1 = {
 		holder = 93397
 	}
-	
-	
+
+
 
 }
 
@@ -1840,8 +1947,8 @@ c_hadithat-ana = {
 	1320.1.1 = {
 		holder = 93397
 	}
-	
-	
+
+
 
 }
 
@@ -1964,7 +2071,7 @@ c_kurdistan = {
 		liege = d_diyarrabia
 		holder = 188657
 	}
-	
+
 	866.1.1 = {
 		liege = "d_diyarbakr"
 	}
@@ -1975,7 +2082,7 @@ c_kurdistan = {
 	880.1.1 = {
 		liege = 0
 	}
-	
+
 	1066.1.1 = {
 		liege = "d_diyarrabia"
 	}
@@ -2057,7 +2164,7 @@ c_kurdistan = {
 	}
 	1320.1.1 = {
 		liege = "e_ilkhanate"
-	}	
+	}
 	1335.12.1 = {
 		holder = 125528
 	}
@@ -2079,7 +2186,7 @@ c_irbil = {
 		liege = "e_arabia"
 	}
 	861.1.1 = {
-		holder = levantine000009
+		holder = levantine000012 # al-Hasan ibn Ayyub ibn Ahmad ibn Umar ibn al-Khattab at-Taghlibi
 	}
 	874.1.1 = {
 		liege = 0
@@ -2185,7 +2292,7 @@ c_irbil = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
@@ -2200,12 +2307,12 @@ c_shahrazur = {
 		liege = d_diyarrabia
 		holder = 188643 # Khalid Barmakid
 	}
-	
+
 	866.1.1 = {
 		liege = e_arabia
 		holder = extra_turks_0002 #Asategin
 	}
-	
+
 	1066.1.1 = {
 		liege = k_persia
 		holder = 159202 # Mihemed Annazid
@@ -2309,7 +2416,7 @@ c_shahrazur = {
 	}
 	1316.12.16 = {
 		holder = 478006
-	}	
+	}
 	1320.1.1 = {
 		holder = 93307
 	}
