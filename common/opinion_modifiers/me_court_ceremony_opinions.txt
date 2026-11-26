@@ -17,3 +17,17 @@ me_received_khila_opinion = { # Was given a robe of honour (khil'a)
 	decaying = yes
 	years = 5
 }
+
+me_freed_ghulam_opinion = { # Raised and freed by this patron
+	opinion = 40
+}
+
+me_kept_ghulam_opinion = { # Raised at this patron's court and kept in his guard
+	opinion = 15
+}
+
+me_futuwwa_trousers_opinion = { # Received the trousers of the futuwwa from the Caliph
+	opinion = 20
+	decaying = yes
+	years = 10
+}

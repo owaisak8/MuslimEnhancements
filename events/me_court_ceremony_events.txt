@@ -4,6 +4,8 @@
 # ME: court ceremonies of the Muslim rulers
 # 0001 - The Bay'a: the vassals swear allegiance to a new ruler and kiss his hand (on_title_gain_inheritance)
 # 0002 - Robes of honour (khil'a), from me_bestow_khila_decision
+# 0010 - (hidden) a ghulam bought with me_purchase_ghulam_decision comes of age
+# 0011 - his patron decides what to make of him
 #####
 
 # The Bay'a
@@ -193,6 +195,86 @@ me_court_ceremony.0002 = {
 			modifier = {
 				add = 50
 				is_at_war = yes
+			}
+		}
+	}
+}
+
+# A ghulam comes of age (from me_purchase_ghulam_decision). Root: the ghulam.
+me_court_ceremony.0010 = {
+	hidden = yes
+
+	trigger = {
+		is_alive = yes
+		has_character_flag = me_ghulam
+		exists = var:me_ghulam_patron
+		var:me_ghulam_patron = {
+			is_alive = yes
+			is_landed = yes
+		}
+		is_courtier_of = var:me_ghulam_patron
+	}
+
+	immediate = {
+		save_scope_as = ghulam
+		var:me_ghulam_patron = {
+			trigger_event = me_court_ceremony.0011
+		}
+	}
+}
+
+# Root: the patron. scope:ghulam: the ghulam, now sixteen
+# Sources: the Mamluk/Ghulam post (Freamon 2019); al-Mu'tasim and the Turks of Samarra
+me_court_ceremony.0011 = {
+	type = character_event
+	title = me_court_ceremony.0011.t
+	desc = me_court_ceremony.0011.desc
+	theme = education
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:ghulam
+		animation = marshal
+	}
+
+	# Free him and give him command
+	option = {
+		name = me_court_ceremony.0011.a
+		scope:ghulam = {
+			remove_character_flag = blocked_from_leaving
+			set_knight_status = force
+			add_opinion = {
+				target = root
+				modifier = me_freed_ghulam_opinion
+			}
+		}
+		add_prestige = minor_prestige_gain
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	# Keep him in the guard, bound to your service
+	option = {
+		name = me_court_ceremony.0011.b
+		scope:ghulam = {
+			set_knight_status = force
+			add_opinion = {
+				target = root
+				modifier = me_kept_ghulam_opinion
+			}
+		}
+		add_character_modifier = {
+			modifier = me_ghulam_guard_modifier
+			years = 10
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = paranoid
 			}
 		}
 	}

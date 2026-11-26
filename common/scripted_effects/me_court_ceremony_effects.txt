@@ -1,0 +1,16 @@
+﻿# ME: court ceremonies (common/decisions/me_court_ceremony_decisions.txt)
+
+# Scope: the ruler buying the ghulam. CULTURE: the culture key of the boy's origin. Saves scope:new_ghulam.
+me_create_ghulam_effect = {
+	create_character = {
+		age = 12
+		gender_female_chance = 0
+		location = root.capital_province
+		employer = root
+		faith = root.faith
+		culture = culture:$CULTURE$
+		martial = { 6 10 }
+		prowess = { 8 12 }
+		save_scope_as = new_ghulam
+	}
+}

@@ -52,3 +52,196 @@ me_bestow_khila_decision = {
 		}
 	}
 }
+
+# ME: Purchase a Ghulam. Muslim rulers bought boys of the steppe and the mountains (Turks, Kipchaks, Georgians,
+# Habasha) and raised them at court as slave soldiers bound to their patron; al-Mu'tasim built his army from them.
+me_purchase_ghulam_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_muslim_leader.dds"
+	}
+	sort_order = 79
+
+	desc = me_purchase_ghulam_decision_desc
+	selection_tooltip = me_purchase_ghulam_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = {
+			value = major_gold_value
+		}
+	}
+
+	cooldown = { years = 3 }
+
+	effect = {
+		custom_tooltip = me_purchase_ghulam_decision_effect_tooltip
+		hidden_effect = {
+			random_list = {
+				50 = { me_create_ghulam_effect = { CULTURE = kipchak } }
+				25 = { me_create_ghulam_effect = { CULTURE = turkmen } }
+				15 = { me_create_ghulam_effect = { CULTURE = georgian } }
+				10 = { me_create_ghulam_effect = { CULTURE = ethiopian } }
+			}
+			scope:new_ghulam = {
+				add_character_flag = blocked_from_leaving # bound to the court of his patron
+				add_character_flag = me_ghulam
+				add_character_modifier = me_ghulam_modifier
+				set_variable = {
+					name = me_ghulam_patron
+					value = root
+				}
+				trigger_event = {
+					id = me_court_ceremony.0010
+					years = 4 # comes of age at sixteen
+				}
+			}
+		}
+	}
+
+	ai_potential = {
+		is_at_war = no
+		gold >= 400
+	}
+
+	ai_will_do = {
+		base = 5
+		modifier = {
+			add = 15
+			has_trait = ambitious
+		}
+		modifier = {
+			add = 10
+			highest_held_title_tier >= tier_kingdom
+		}
+	}
+}
+
+# ME: Be initiated into the Futuwwa. The brotherhoods of young men (fityan, 'ayyarun, akhis) had their own rites:
+# the initiate drank salt water and received the trousers (sarawil) of the futuwwa in the name of its shaykh.
+# The Caliph al-Nasir was initiated in 1182.
+me_join_futuwwa_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_preacher.dds"
+	}
+	sort_order = 78
+
+	desc = me_join_futuwwa_decision_desc
+	selection_tooltip = me_join_futuwwa_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		NOT = { has_character_flag = me_futuwwa_initiate }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = {
+			value = minor_gold_value
+		}
+	}
+
+	effect = {
+		add_character_flag = me_futuwwa_initiate
+		add_character_modifier = me_futuwwa_initiate_modifier
+	}
+
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 2
+		modifier = {
+			add = 10
+			has_trait = gregarious
+		}
+		modifier = {
+			add = 10
+			has_trait = brave
+		}
+	}
+}
+
+# ME: Invest the princes with the Futuwwa. In his reform of 1207 the Caliph al-Nasir made himself the head of all the
+# futuwwa brotherhoods and sent their insignia to the Zengid, Ayyubid and Seljuk princes, binding them to the Caliphate.
+me_futuwwa_investiture_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_abbasid_palace.dds"
+	}
+	sort_order = 77
+
+	desc = me_futuwwa_investiture_decision_desc
+	selection_tooltip = me_futuwwa_investiture_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		faith.religion = religion:islam_religion
+		has_character_flag = me_futuwwa_initiate
+		any_held_title = { is_head_of_faith = yes }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+	}
+
+	cooldown = { years = 10 }
+
+	effect = {
+		custom_tooltip = me_futuwwa_investiture_decision_effect_tooltip
+		hidden_effect = {
+			every_ruler = {
+				limit = {
+					NOT = { this = root }
+					is_independent_ruler = yes
+					highest_held_title_tier >= tier_duchy
+					faith = root.faith
+				}
+				add_opinion = {
+					target = root
+					modifier = me_futuwwa_trousers_opinion
+				}
+				if = {
+					limit = { NOT = { has_character_flag = me_futuwwa_initiate } }
+					add_character_flag = me_futuwwa_initiate
+					add_character_modifier = me_futuwwa_initiate_modifier
+				}
+			}
+		}
+		add_prestige = major_prestige_gain
+	}
+
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 25
+	}
+}

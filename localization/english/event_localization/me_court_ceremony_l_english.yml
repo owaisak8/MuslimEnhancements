@@ -19,3 +19,38 @@
  me_bestow_khila_decision_desc:0 "A ruler shows his favour by the robes he gives. From Baghdad to Marrakesh to Timbuktu, a man raised to command was clothed by his lord in a garment, a turban and a cloak, and was known thereafter by what he wore."
  me_bestow_khila_decision_tooltip:0 "Clothe your vassals or your warriors in robes of honour."
  me_bestow_khila_decision_effect_tooltip:0 "Choose whether the robes go to your vassals or to your knights."
+
+ # Ghulams
+ me_purchase_ghulam_decision:0 "Purchase a Ghulam"
+ me_purchase_ghulam_decision_desc:0 "Boys from the steppes, the Caucasus and the lands of the Habasha are brought to the slave markets of the Muslim world. Bought young and raised at court, trained in horsemanship and archery and taught the faith, a ghulam knows no family but his comrades and no master but his patron, which is why rulers since al-Mu'tasim have trusted them more than their own kin."
+ me_purchase_ghulam_decision_tooltip:0 "Buy a boy to be raised at your court as a slave soldier."
+ me_purchase_ghulam_decision_effect_tooltip:0 "A twelve-year-old ghulam joins your court. He cannot leave it, and he comes of age in four years."
+ me_court_ceremony.0011.t:0 "The Ghulam Comes of Age"
+ me_court_ceremony.0011.desc:0 "[ghulam.GetFirstName] was a boy when I bought him. Now he rides and shoots as well as any man in my service, and he has known no home but my court. His training is over, and he waits to learn what I will make of him."
+ me_court_ceremony.0011.a:0 "Free him, and give him command."
+ me_court_ceremony.0011.b:0 "He stays in my guard, bound to me."
+ me_ghulam_modifier:0 "Ghulam"
+ me_ghulam_modifier_desc:0 "This character was bought as a boy and raised at court as a slave soldier."
+ me_ghulam_guard_modifier:0 "Guard of Ghulams"
+ me_ghulam_guard_modifier_desc:0 "This character is guarded by slave soldiers who owe everything to their patron."
+ me_freed_ghulam_opinion:0 "Raised and freed me"
+ me_kept_ghulam_opinion:0 "Raised me at court"
+
+ # Futuwwa
+ me_join_futuwwa_decision:0 "Be Initiated into the Futuwwa"
+ me_join_futuwwa_decision_desc:0 "The futuwwa, the way of the fata, the generous and brave young man, has its brotherhoods in every city: the 'ayyarun of Baghdad and Khurasan, the fityan of Syria, the akhis of Anatolia. To join, the initiate drinks salt water and puts on the trousers of the futuwwa in the name of the shaykh. The Caliph al-Nasir himself did so in 1182."
+ me_join_futuwwa_decision_tooltip:0 "Join a futuwwa brotherhood."
+ me_futuwwa_investiture_decision:0 "Invest the Princes with the Futuwwa"
+ me_futuwwa_investiture_decision_desc:0 "As the Caliph al-Nasir did in his reform of 1207, make yourself head of every futuwwa brotherhood and send its trousers to the princes of the faith. A prince who wears them is a brother of the futuwwa, and the futuwwa answers to the Caliph."
+ me_futuwwa_investiture_decision_tooltip:0 "Send the insignia of the futuwwa to the independent rulers of your faith."
+ me_futuwwa_investiture_decision_effect_tooltip:0 "Every independent duke or higher of your faith gains #P +20#! opinion of you, decaying over 10 years, and joins the futuwwa."
+ me_futuwwa_initiate_modifier:0 "Brother of the Futuwwa"
+ me_futuwwa_initiate_modifier_desc:0 "This character has been initiated into a futuwwa brotherhood."
+ me_futuwwa_trousers_opinion:0 "Sent me the trousers of the futuwwa"
+
+ # Opinions and modifiers from the Bay'a and the khil'a
+ me_swore_baya_opinion:0 "Swore the bay'a"
+ me_hand_withheld_opinion:0 "Withheld their hand at the bay'a"
+ me_received_khila_opinion:0 "Gave me a robe of honour"
+ me_khila_troops_modifier:0 "Robes for the Horsemen"
+ me_khila_troops_modifier_desc:0 "This character has clothed their warriors in robes of honour, each according to his rank."

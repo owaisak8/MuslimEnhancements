@@ -5,3 +5,22 @@ me_khila_troops_modifier = { # The warriors of the realm have been clothed by th
 	knight_effectiveness_mult = 0.15
 	monthly_prestige_gain_per_knight_mult = 0.01
 }
+
+me_ghulam_modifier = { # Raised at court as a slave soldier
+	icon = martial_positive
+	martial = 2
+	prowess = 4
+}
+
+me_ghulam_guard_modifier = { # A guard of ghulams bound to their patron
+	icon = martial_positive
+	knight_effectiveness_mult = 0.05
+	monthly_prestige = 0.2
+}
+
+me_futuwwa_initiate_modifier = { # A member of the futuwwa brotherhood
+	icon = social_positive
+	prowess = 2
+	diplomacy = 1
+	monthly_prestige = 0.2
+}
