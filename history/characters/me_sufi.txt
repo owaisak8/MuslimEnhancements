@@ -245,6 +245,7 @@ me_sufi_abd_al_qadir = {
 	dynasty = me_sufi_jilani
 	rite = hanbali
 	culture = persian
+	trait = sayyid # ME: Hasani through his father and Husayni through his mother, as his family and the Qadiri tradition record it
 	trait = education_learning_4
 	trait = generous
 	trait = honest
@@ -275,6 +276,7 @@ me_sufi_abd_al_razzaq = {
 	rite = hanbali
 	culture = persian
 	father = me_sufi_abd_al_qadir
+	trait = sayyid # ME: history characters do not inherit the trait from their father
 	trait = education_learning_4
 	trait = humble
 	trait = temperate
@@ -293,6 +295,7 @@ me_sufi_rifai = {
 	dynasty = me_sufi_rifai
 	rite = shafii
 	culture = "levantine"
+	trait = sayyid # ME: Husayni through Imam Musa al-Kadhim, as the Rifa'i tradition records his line
 	trait = education_learning_4
 	trait = humble
 	trait = compassionate
@@ -469,7 +472,7 @@ me_fatima_masuma = {
 ## Founders remembered as Awliya by their own faiths
 
 me_wasil_ibn_ata = { # Wasil ibn 'Ata' al-Ghazzal, founder of the Mu'tazila; a mawla of the Banu Dabba or Banu Makhzum, his own origin is not known
-	name = "Wasil"
+	name = "Wasil_ibn_Ata_" # ME: a one-off character, so his nasab is part of the name
 	rite = mutazila
 	culture = bedouin
 	trait = education_learning_4
@@ -513,6 +516,129 @@ me_ibn_tumart = { # Muhammad ibn Tumart al-Mahdi, of the Hargha (Masmuda), found
 				FAITH = masmudi
 			}
 			me_wali_revered_by_effect = { FAITH = masmudi }
+		}
+	}
+}
+
+##################################################
+# The Imams of the four Sunni madhhabs
+##################################################
+# Shown as "Imam" through me_imam_flag (see me_title_flavorization.txt). All four died before 867, so they appear only as awliya.
+# Each is registered with the Sunni faith through me_canonize_early_muslim_effect, as their followers are all Sunni today.
+
+# Abu Hanifa al-Nu'man ibn Thabit (80 - 150 AH / 699 - 767), of Kufa, of Persian descent; died in prison in Baghdad.
+me_imam_abu_hanifa = {
+	name = "Nu_man"
+	give_nickname = nick_me_abu_hanifa
+	rite = hanafi
+	culture = persian
+	trait = education_learning_4
+	trait = diligent
+	trait = generous
+	trait = patient
+	699.1.1 = {
+		birth = yes
+		effect = { add_character_flag = me_imam_flag }
+	}
+	767.6.14 = { # Rajab 150 AH
+		death = yes
+	}
+	767.7.14 = {
+		effect_even_if_dead = {
+			# ME: buried at al-A'zamiyya, north of Baghdad; registered at Ukbara, the nearest free province (a province holds one saint)
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:4795
+				FAITH = sunni
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
+		}
+	}
+}
+
+# Malik ibn Anas al-Asbahi (93 - 179 AH / 711 - 795), the Imam of Medina, author of the Muwatta'.
+me_imam_malik = {
+	name = "Malik"
+	give_nickname = nick_me_ibn_anas
+	rite = maliki
+	culture = "bedouin"
+	trait = education_learning_4
+	trait = diligent
+	trait = just
+	trait = calm
+	711.1.1 = {
+		birth = yes
+		effect = { add_character_flag = me_imam_flag }
+	}
+	795.6.1 = { # Rabi' al-Awwal 179 AH
+		death = yes
+	}
+	795.7.1 = {
+		effect_even_if_dead = {
+			# ME: buried in al-Baqi', Medina; registered at Sufaina, the nearest free province (a province holds one saint)
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:6227
+				FAITH = sunni
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
+		}
+	}
+}
+
+# Muhammad ibn Idris al-Shafi'i (150 - 204 AH / 767 - 820), of the Banu al-Muttalib of Quraysh; born at Gaza, died at Fustat.
+me_imam_shafii = {
+	name = "Muhammad"
+	give_nickname = nick_me_al_shafii
+	rite = shafii
+	culture = "bedouin"
+	trait = quraysh
+	trait = education_learning_4
+	trait = diligent
+	trait = generous
+	trait = gregarious
+	767.1.1 = {
+		birth = yes
+		effect = { add_character_flag = me_imam_flag }
+	}
+	820.1.20 = { # end of Rajab 204 AH
+		death = yes
+	}
+	820.2.20 = {
+		effect_even_if_dead = {
+			# ME: buried in the Lesser Qarafa beside Fustat
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:6042 # Cairo
+				FAITH = sunni
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
+		}
+	}
+}
+
+# Ahmad ibn Muhammad ibn Hanbal al-Shaybani (164 - 241 AH / 780 - 855), of Baghdad; flogged in the Mihna for refusing to say the Qur'an was created.
+me_imam_ahmad_ibn_hanbal = {
+	name = "Ahmad"
+	give_nickname = nick_me_ibn_hanbal
+	rite = hanbali
+	culture = "bedouin"
+	trait = education_learning_4
+	trait = zealous
+	trait = patient
+	trait = stubborn
+	780.11.1 = { # Rabi' al-Awwal 164 AH
+		birth = yes
+		effect = { add_character_flag = me_imam_flag }
+	}
+	855.8.2 = { # 12 Rabi' al-Awwal 241 AH
+		death = yes
+	}
+	855.9.2 = {
+		effect_even_if_dead = {
+			# ME: buried in the Bab Harb cemetery, Baghdad; registered at al-Farasa, the nearest free province (a province holds one saint)
+			me_canonize_early_muslim_effect = {
+				PROVINCE = province:4825
+				FAITH = sunni
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
 		}
 	}
 }

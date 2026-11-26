@@ -1838,6 +1838,7 @@
 			me_wali_revered_by_effect = { FAITH = qarmatian }
 			me_wali_revered_by_effect = { FAITH = druze }
 			me_wali_revered_by_effect = { FAITH = zayidi }
+			me_wali_revered_by_effect = { FAITH = mutazila } # ME: the Mu'tazila held the four Rashidun Caliphs rightly guided
 		}
 	}
 }
@@ -2229,6 +2230,7 @@
 			me_wali_revered_by_effect = { FAITH = najdat }
 			me_wali_revered_by_effect = { FAITH = sufri }
 			me_wali_revered_by_effect = { FAITH = quranist }
+			me_wali_revered_by_effect = { FAITH = mutazila } # ME: the Prophet, for the Mu'tazila as well
 		}
 	}
 }
@@ -5574,6 +5576,7 @@
 			me_wali_revered_by_effect = { FAITH = kharijite }
 			me_wali_revered_by_effect = { FAITH = najdat }
 			me_wali_revered_by_effect = { FAITH = sufri }
+			me_wali_revered_by_effect = { FAITH = mutazila } # ME: the Mu'tazila held the four Rashidun Caliphs rightly guided
 		}
 	}
 }
@@ -5613,6 +5616,7 @@
 			me_wali_revered_by_effect = { FAITH = kharijite }
 			me_wali_revered_by_effect = { FAITH = najdat }
 			me_wali_revered_by_effect = { FAITH = sufri }
+			me_wali_revered_by_effect = { FAITH = mutazila } # ME: the Mu'tazila held the four Rashidun Caliphs rightly guided
 		}
 	}
 }
@@ -5723,6 +5727,7 @@
 			}
 			me_wali_revered_by_effect = { FAITH = sunni }
 			me_wali_revered_by_effect = { FAITH = masmudi }
+			me_wali_revered_by_effect = { FAITH = mutazila } # ME: the Mu'tazila held the four Rashidun Caliphs rightly guided
 		}
 	}
 }

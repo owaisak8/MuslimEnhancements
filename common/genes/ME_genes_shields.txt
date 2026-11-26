@@ -365,6 +365,16 @@
 				boy = male
 				girl = female
 			}
+
+			abbas_ibn_ali_shield = { # al-Abbas ibn Ali, Abu al-Fadl, the standard-bearer of Karbala
+				index = 38
+				male = {
+					1 = abbas_ibn_ali_shield
+				}
+				female = male
+				boy = male
+				girl = female
+			}
 		
 			
 

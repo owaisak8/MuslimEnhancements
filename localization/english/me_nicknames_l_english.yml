@@ -15,6 +15,16 @@
  
  ##Miscellaneous Nicknames
  nick_ibn_abihi:0 "Ibn Abihi" # Ancestor of the Ziyadids
+ nick_me_abu_hanifa:0 "Abu Ḥanifa"
+ nick_me_abu_hanifa_desc:0 "Al-Nu'man ibn Thabit, known by his kunya Abu Hanifa: the jurist of Kufa from whose teaching the Hanafi school grew."
+ nick_me_ibn_anas:0 "ibn Anas"
+ nick_me_ibn_anas_desc:0 "The son of Anas, of the Asbahi tribe: the Imam of the Abode of Hijra, author of the Muwatta' and founder of the Maliki school."
+ nick_me_al_shafii:0 "al-Shafi'i"
+ nick_me_al_shafii_desc:0 "Of the line of Shafi' ibn al-Sa'ib of the Banu al-Muttalib: the jurist who set out the principles of jurisprudence and founder of the Shafi'i school."
+ nick_me_ibn_hanbal:0 "ibn Ḥanbal"
+ nick_me_ibn_hanbal_desc:0 "Ahmad ibn Muhammad ibn Hanbal al-Shaybani, the traditionist who would not yield in the Mihna, compiler of the Musnad and founder of the Hanbali school."
+ nick_me_ibn_nafi:0 "ibn Nafi'"
+ nick_me_ibn_nafi_desc:0 "The son of Nafi' ibn Abd al-Qays of the Banu Fihr: the conqueror of Ifriqiya who founded Kairouan and rode his horse into the Atlantic."
  nick_ibn_abihi_desc:1 "Despite the fact that [CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharHaveHas(CHARACTER)] been acknowledged by [CharYourHerHis(CHARACTER)] half-brother to be the son of Abu Sufyan, many have refused to acknowledge it, and instead refer to [CharYouHerHim(CHARACTER)] as Ziyad '$nick_ibn_abihi$' — the Son of his Father."
  nick_al_ahwal:0 "al-Aḥwal"
  nick_al_ahwal_desc:1 "It seems that [CHARACTER.GetShortUINamePossessiveNoTooltipNoFormat|U] deformity is the only thing the world can see about [CharYouHerHim(CHARACTER)], [CharYouSheHe(CHARACTER)] [CharHaveHas(CHARACTER)] come to be known by the name '$nick_al_ahwal$' —  the Cross-Eyed."
@@ -25,7 +35,7 @@
  nick_kaysan:0 "Kaysan"
  nick_kaysan_desc:1 "Nicknamed 'Kayyis' by Ali ibn Abi Talib for his cunning nature as a young boy, and when he became a man, the people would come to call him '$nick_kaysan$' — the Intelligent."
  nick_al_hasna:0 "al-Hasna'"
- nick_al_hasna_desc:1 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharHaveHas(CHARACTER)] been blessed with a great beaty that is known all across the land, and to the people she is known as '$nick_al_hasna$' — the Beautiful."
+ nick_al_hasna_desc:1 "[CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharHaveHas(CHARACTER)] been blessed with a great beauty that is known all across the land, and to the people she is known as '$nick_al_hasna$' — the Beautiful."
  nick_me_jahdha_at_tanburi:0 "Jahdha at-Tanburi"
  nick_me_jahdha_at_tanburi_desc:1 "Praised for his mastery of the lute and ridiculed for his big bulging eyes, [CHARACTER.GetShortUINameNoTooltipNoFormat|U] [CharHaveHas(CHARACTER)] become famous under the name of '$nick_me_jahdha_at_tanburi$' — Jahdha the Lute Player."
  nick_al_waqashi:0 "al-Waqashi"

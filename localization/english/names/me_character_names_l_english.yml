@@ -983,6 +983,7 @@
  Shurahil:0 "Shuraḥil"
  Sidra_i:0 "Sidra'i"
  Subay_:0 "Subay'"
+ Samu_il:0 "Samu'il" # ME: vanilla gives Umar ibn Hafsun this name on his conversion (899) without a key
  Sukun:0 "Sukun"
  Suwar:0 "Suwar"
  Tufayl:0 "Tufayl"
@@ -991,6 +992,7 @@
  Udai:0 "Udai"
  Umayrah:0 "Umayrah"
  Wa_il:0 "Wā'il"
+ Wasil_ibn_Ata_:0 "Wāṣil ibn 'Aṭā'" # ME: shown with his nasab, as there is only one of him
  Wafid:0 "Wafid"
  Wasit:0 "Wasit"
  Wathiq:0 "Wathiq"

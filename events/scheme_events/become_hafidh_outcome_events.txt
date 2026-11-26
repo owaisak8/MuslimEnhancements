@@ -89,6 +89,7 @@ become_hafidh_outcome.1000 = {
 			text = become_hafidh_outcome.1000.a.cynical
 			trigger = { has_trait = cynical }
 		}
+		scope:scheme ?= { end_scheme = yes } # ME: stop here, as the failure event's first option does
 		ai_chance = {
 			base = 100
 		}
@@ -96,9 +97,18 @@ become_hafidh_outcome.1000 = {
 
 	option = {
 		name = become_hafidh_outcome.1000.b
-		start_scheme = {
-			type = become_hafidh
-			target_character = scope:target
+		# ME: the scheme carries on into its next phase; only start a new one if it has already ended
+		if = {
+			limit = {
+				can_start_scheme = {
+					type = become_hafidh
+					target_character = scope:target
+				}
+			}
+			start_scheme = {
+				type = become_hafidh
+				target_character = scope:target
+			}
 		}
 		stress_impact = {
 			lazy = medium_stress_impact_gain
@@ -183,6 +193,8 @@ become_hafidh_outcome.1001 = {
 		scope:owner = {
 			add_piety = massive_piety_value
 		}
+
+		scope:scheme ?= { end_scheme = yes } # ME: the whole Qur'an is memorised, so the scheme is done
 	}
 
 	option = {

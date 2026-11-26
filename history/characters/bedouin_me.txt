@@ -12948,7 +12948,8 @@ me_fihri_008 = {
 }
 
 me_fihri_009 = {
-	name = "Uqbah"
+	name = "Uqbah" # Uqba ibn Nafi al-Fihri, conqueror of Ifriqiya and founder of Kairouan; killed at Tahudha in 683
+	give_nickname = nick_me_ibn_nafi
 	dynasty = 7296 # al-Qurashī
 	rite = "shafii"
 	culture = "bedouin"
@@ -12961,6 +12962,26 @@ me_fihri_009 = {
 	}
 	683.1.1 = {
 		death = yes
+	}
+	683.2.1 = {
+		effect_even_if_dead = {
+			if = {
+				# ME: buried where he fell, at the place now called Sidi Uqba; the barony has no holding once the Hilali tribes take the Zab (1066)
+				limit = { game_start_date < 1066.1.1 }
+				me_canonize_early_muslim_effect = { # ME: no awliya for Sadr al-Islam itself
+					PROVINCE = province:4633
+					FAITH = sunni
+				}
+			}
+			else = { # ME: registered at Biskra, the nearest province with a holding
+				me_canonize_early_muslim_effect = {
+					PROVINCE = province:4621
+					FAITH = sunni
+				}
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
+			me_wali_revered_by_effect = { FAITH = masmudi }
+		}
 	}
 }
 
@@ -13158,6 +13179,17 @@ me_makhzumi_007 = {
 	}
 	642.8.20 = {
 		death = { death_reason = death_me_khalid }
+	}
+	642.9.20 = {
+		effect_even_if_dead = {
+			# ME: buried at Hims, where his mosque and tomb stand
+			me_canonize_early_muslim_effect = { # ME: no awliya for Sadr al-Islam itself
+				PROVINCE = province:5929
+				FAITH = sunni
+			}
+			me_wali_revered_by_effect = { FAITH = sunni }
+			me_wali_revered_by_effect = { FAITH = masmudi }
+		}
 	}
 }
 

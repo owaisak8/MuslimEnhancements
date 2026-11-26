@@ -3969,7 +3969,7 @@
 	}
 
 	## al-Abbas ibn Ali
-	me_hashimid_002_al_abbas_ibn_ali = { # Has no portrait - al-Abbas ibn Ali (no shield texture yet) 
+	me_hashimid_002_al_abbas_ibn_ali = { # Has no portrait - al-Abbas ibn Ali 
 		dna_modifiers = {
 			morph = {
 				mode = replace
@@ -4011,6 +4011,12 @@
 				mode = modify
 				gene = teeth_accessory
 				template = no_teeth
+				value = 0.5
+			}
+			accessory = {
+				mode = add
+				gene = ME_shields
+				template = abbas_ibn_ali_shield
 				value = 0.5
 			}
 			accessory = {

@@ -1892,7 +1892,15 @@
 }
 ####b_sufaina
 6227 = { #SUFAINA
-	holding = none
+	holding = church_holding # ME: a mosque, so that Imam Malik, buried in al-Baqi', Medina, has a tomb here (a province holds one saint)
+
+	867.1.1 = {
+		districts = {
+			district = {
+				type = villages_district
+			}
+		}
+	}
 }
 ##d_mecca
 ###c_mecca

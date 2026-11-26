@@ -64,6 +64,13 @@ nick_me_al_afqam = {}
 
 ##Hashimids
 nick_me_ibn_abi_talib = {}
+
+##The Imams of the four Sunni madhhabs
+nick_me_abu_hanifa = {}
+nick_me_ibn_anas = {}
+nick_me_al_shafii = {}
+nick_me_ibn_hanbal = {}
+nick_me_ibn_nafi = {} # Uqba ibn Nafi
 nick_me_ibn_al_hanafiyyah = {}
 nick_me_al_muthanna = {}
 nick_al_kamil = {}

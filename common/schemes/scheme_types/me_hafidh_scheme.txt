@@ -81,7 +81,7 @@
 						}
 					}
 				}
-				scope:target = { has_relation_guardian = scope:owner }
+				scope:owner = { has_relation_guardian = scope:target } # ME: the teacher is the owner's guardian (was the wrong way round, so a ward could never pick their guardian)
 				AND = { # Courtier - Teacher is liege's court chaplain or court tutor
 					is_landed = no
 					scope:target = {
@@ -593,15 +593,8 @@
 				}
 				trigger_event = become_hafidh_outcome.3000
 			}
-			else_if = {
-				limit = {
-					has_trait_xp = {
-						trait = hafidh
-						value >= 100
-					}
-				}
-				trigger_event = become_hafidh_outcome.1001
-			}
+			# ME: no longer re-fires become_hafidh_outcome.1001 here: that event now ends the scheme itself, and firing it
+			# again on invalidation gave the reward a second time.
 		}
 	}
 }

@@ -219,3 +219,9 @@ abdullah_ibn_umar_shield = {
 	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abdullah_ibn_umar_shield_entity" }
 
 }
+
+abbas_ibn_ali_shield = {
+
+	entity = {	required_tags = "" 	node = "bn_h_head_mid"	entity = "abbas_ibn_ali_shield_entity" }
+
+}
