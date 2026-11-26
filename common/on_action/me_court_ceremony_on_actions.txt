@@ -1,0 +1,30 @@
+﻿# ME: court ceremonies of the Muslim rulers (events/me_court_ceremony_events.txt)
+
+on_title_gain_inheritance = {
+	on_actions = { me_baya_on_inheritance }
+}
+
+# The Bay'a: a Muslim ruler of duke tier or above who inherits receives the oath of allegiance of his vassals.
+# on_title_gain_inheritance fires once per title, so the flag keeps it to one ceremony per succession.
+me_baya_on_inheritance = {
+	trigger = {
+		faith.religion = religion:islam_religion
+		scope:title.tier >= tier_duchy
+		is_landed = yes
+		any_vassal = { count >= 1 }
+		NOR = {
+			has_character_flag = me_baya_received
+			has_character_flag = me_imam_flag # the Imam of the age holds no land (see me_imam_triggers.txt)
+		}
+	}
+	effect = {
+		add_character_flag = {
+			flag = me_baya_received
+			days = 90
+		}
+		trigger_event = {
+			id = me_court_ceremony.0001
+			days = { 7 14 }
+		}
+	}
+}

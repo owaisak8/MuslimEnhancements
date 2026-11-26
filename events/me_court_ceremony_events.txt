@@ -1,0 +1,199 @@
+﻿namespace = me_court_ceremony
+
+#####
+# ME: court ceremonies of the Muslim rulers
+# 0001 - The Bay'a: the vassals swear allegiance to a new ruler and kiss his hand (on_title_gain_inheritance)
+# 0002 - Robes of honour (khil'a), from me_bestow_khila_decision
+#####
+
+# The Bay'a
+# Sources: Marsham, Rituals of Islamic Monarchy; Ghouirgate, L'Ordre almohade (the bay'a khassa and the bay'a 'amma)
+me_court_ceremony.0001 = {
+	type = character_event
+	title = me_court_ceremony.0001.t
+	desc = {
+		desc = me_court_ceremony.0001.desc_opening
+		first_valid = {
+			triggered_desc = { # The Almohads swore the private bay'a of the shaykhs first, then the general one
+				trigger = { faith = faith:masmudi }
+				desc = me_court_ceremony.0001.desc_almohad
+			}
+			desc = me_court_ceremony.0001.desc_general
+		}
+	}
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:baya_vassal
+		animation = admiration
+	}
+	lower_right_portrait = {
+		trigger = { exists = scope:baya_reluctant }
+		character = scope:baya_reluctant
+	}
+
+	trigger = {
+		is_alive = yes
+		is_landed = yes
+		any_vassal = { count >= 1 }
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = { highest_held_title_tier >= tier_duchy }
+			alternative_limit = { highest_held_title_tier >= tier_county }
+			alternative_limit = { always = yes }
+			save_scope_as = baya_vassal
+		}
+		random_vassal = {
+			limit = {
+				NOT = { this = scope:baya_vassal }
+				opinion = {
+					target = root
+					value < 0
+				}
+			}
+			save_scope_as = baya_reluctant
+		}
+	}
+
+	# Extend the right hand to all
+	option = {
+		name = me_court_ceremony.0001.a
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = me_swore_baya_opinion
+			}
+		}
+		add_prestige = medium_prestige_gain
+		stress_impact = {
+			paranoid = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	# Withhold the hand from the one whose loyalty is in doubt
+	option = {
+		name = me_court_ceremony.0001.b
+		trigger = { exists = scope:baya_reluctant }
+		every_vassal = {
+			limit = { NOT = { this = scope:baya_reluctant } }
+			add_opinion = {
+				target = root
+				modifier = me_swore_baya_opinion
+			}
+		}
+		scope:baya_reluctant = {
+			add_opinion = {
+				target = root
+				modifier = me_hand_withheld_opinion
+			}
+		}
+		add_dread = medium_dread_gain
+		add_prestige = minor_prestige_gain
+		stress_impact = {
+			compassionate = medium_stress_impact_gain
+			forgiving = medium_stress_impact_gain
+			vengeful = medium_stress_impact_loss
+		}
+		ai_chance = {
+			base = 25
+			ai_value_modifier = {
+				ai_vengefulness = 1
+				ai_compassion = -1
+			}
+		}
+	}
+
+	# Take it as the Prophet took it at al-Hudaybiyya: "the hand of God is above their hands" (48:10)
+	option = {
+		name = me_court_ceremony.0001.c
+		every_vassal = {
+			limit = { faith = root.faith }
+			add_opinion = {
+				target = root
+				modifier = me_swore_baya_opinion
+			}
+		}
+		add_piety = medium_piety_gain
+		stress_impact = {
+			humble = medium_stress_impact_loss
+			zealous = minor_stress_impact_loss
+			arrogant = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				has_trait = zealous
+			}
+			modifier = {
+				factor = 0
+				has_trait = cynical
+			}
+		}
+	}
+}
+
+# Robes of honour (khil'a)
+# Sources: Ghouirgate, L'Ordre almohade (ch. IV, Habiller le calife); Ibn Battuta, the governor of Timbuktu
+me_court_ceremony.0002 = {
+	type = character_event
+	title = me_court_ceremony.0002.t
+	desc = me_court_ceremony.0002.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		character = scope:khila_vassal
+		animation = admiration
+	}
+
+	immediate = {
+		random_vassal = {
+			limit = { highest_held_title_tier >= tier_county }
+			alternative_limit = { always = yes }
+			save_scope_as = khila_vassal
+		}
+	}
+
+	# Robes for the great men of the realm
+	option = {
+		name = me_court_ceremony.0002.a
+		trigger = { any_vassal = { count >= 1 } }
+		every_vassal = {
+			add_opinion = {
+				target = root
+				modifier = me_received_khila_opinion
+			}
+		}
+		add_prestige = minor_prestige_gain
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	# A full set of clothing (kiswa tamma) for every horseman
+	option = {
+		name = me_court_ceremony.0002.b
+		add_character_modifier = {
+			modifier = me_khila_troops_modifier
+			years = 5
+		}
+		ai_chance = {
+			base = 50
+			modifier = {
+				add = 50
+				is_at_war = yes
+			}
+		}
+	}
+}

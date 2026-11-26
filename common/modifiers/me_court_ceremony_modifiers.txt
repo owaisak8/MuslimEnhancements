@@ -1,0 +1,7 @@
+﻿# ME: court ceremonies (events/me_court_ceremony_events.txt)
+
+me_khila_troops_modifier = { # The warriors of the realm have been clothed by their lord
+	icon = martial_positive
+	knight_effectiveness_mult = 0.15
+	monthly_prestige_gain_per_knight_mult = 0.01
+}

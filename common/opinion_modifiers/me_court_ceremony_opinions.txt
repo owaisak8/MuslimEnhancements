@@ -1,0 +1,19 @@
+﻿# ME: court ceremonies (events/me_court_ceremony_events.txt)
+
+me_swore_baya_opinion = { # Kissed the ruler's hand at the Bay'a
+	opinion = 15
+	decaying = yes
+	years = 10
+}
+
+me_hand_withheld_opinion = { # The ruler would not give his hand to be kissed at the Bay'a
+	opinion = -25
+	decaying = yes
+	years = 10
+}
+
+me_received_khila_opinion = { # Was given a robe of honour (khil'a)
+	opinion = 15
+	decaying = yes
+	years = 5
+}

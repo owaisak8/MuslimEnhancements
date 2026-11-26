@@ -1,0 +1,21 @@
+﻿l_english:
+ # Bay'a
+ me_court_ceremony.0001.t:0 "The Bay'a"
+ me_court_ceremony.0001.desc_opening:0 "My predecessor is laid to rest, and the great men of the realm have come to swear the bay'a to me. Each in turn comes forward, bows, and reaches for my hand, for allegiance is given hand to hand, as the Companions gave it to the Prophet beneath the tree at al-Hudaybiyya and as 'Umar gave it to Abu Bakr in the saqifa of the Banu Sa'ida.\n\n"
+ me_court_ceremony.0001.desc_general:0 "[baya_vassal.GetTitledFirstName] is the first to kiss my right hand and place it to [baya_vassal.GetHerHis] eyes. The others wait their turn. To give my hand is to accept their oath; to withhold it is to tell the whole court that an oath is not wanted."
+ me_court_ceremony.0001.desc_almohad:0 "The shaykhs of the Almohads swore the private bay'a to me on the day itself, before the news was given out; now the general bay'a is read out to each group in turn: obedience in good times and bad, and from me, their pay on time and no campaigning longer than need be. [baya_vassal.GetTitledFirstName] is the first to kiss my blessed hand."
+ me_court_ceremony.0001.a:0 "Let every one of them kiss my hand."
+ me_court_ceremony.0001.b:0 "[baya_reluctant.GetTitledFirstName] will not have my hand."
+ me_court_ceremony.0001.c:0 "The hand of God is above their hands."
+
+ # Khil'a
+ me_court_ceremony.0002.t:0 "Robes of Honour"
+ me_court_ceremony.0002.desc:0 "The bales are opened before the court: turbans, cloaks, linen and silk embroidered with my name, a khil'a for each according to his rank. Whoever wears my robe wears my favour for all to see, and the ledgers will know a man by the robe he was given."
+ me_court_ceremony.0002.a:0 "Robes for the great men of the realm."
+ me_court_ceremony.0002.b:0 "A full set of clothing for every horseman."
+
+ # Decision
+ me_bestow_khila_decision:0 "Bestow Robes of Honour"
+ me_bestow_khila_decision_desc:0 "A ruler shows his favour by the robes he gives. From Baghdad to Marrakesh to Timbuktu, a man raised to command was clothed by his lord in a garment, a turban and a cloak, and was known thereafter by what he wore."
+ me_bestow_khila_decision_tooltip:0 "Clothe your vassals or your warriors in robes of honour."
+ me_bestow_khila_decision_effect_tooltip:0 "Choose whether the robes go to your vassals or to your knights."

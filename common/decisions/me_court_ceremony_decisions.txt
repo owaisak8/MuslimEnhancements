@@ -1,0 +1,54 @@
+﻿# ME: Bestow robes of honour (khil'a), as the Abbasid, Fatimid and Almohad courts did for their great men and their
+# new contingents, and as the governor of Timbuktu did for a Massufa commander (Ibn Battuta).
+me_bestow_khila_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_abbasid_palace.dds"
+	}
+	sort_order = 80
+
+	desc = me_bestow_khila_decision_desc
+	selection_tooltip = me_bestow_khila_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+	}
+
+	cooldown = { years = 5 }
+
+	effect = {
+		custom_tooltip = me_bestow_khila_decision_effect_tooltip
+		trigger_event = me_court_ceremony.0002
+	}
+
+	ai_potential = {
+		is_at_war = no
+		gold >= 200
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = 20
+			has_trait = generous
+		}
+		modifier = {
+			factor = 0
+			has_trait = greedy
+		}
+	}
+}
