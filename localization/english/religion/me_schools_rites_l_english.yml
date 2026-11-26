@@ -1,0 +1,52 @@
+﻿l_english:
+ # Schools & Branches: the lesser madhhabs and branches
+
+ #Zahirism
+ zahiri:0 "Zahirism"
+ zahiri_adj:0 "Zahiri"
+ zahiri_adherent:0 "Zahiri"
+ zahiri_adherent_plural:0 "Zahiris"
+ zahiri_desc:0 "The Zahiris, or Dawudiyya, follow Dawud ibn Khalaf al-Zahiri of Baghdad (d. 883), who broke with every other school. They hold that the law lies in the plain, apparent (zahir) sense of the Quran and the sound hadith, and that analogy (qiyas), personal preference and the blind imitation of earlier jurists (taqlid) have no place beside it. Carried to al-Andalus and made famous there by Ibn Hazm of Cordoba (d. 1064), the school won judges and students across Fars, Iraq and the west, but never the lasting patronage of a great dynasty. Other Sunnis honour its learning, yet many hold that rejecting analogy places it outside the consensus of the schools."
+
+ #Awza'ism
+ awzai:0 "Awza'ism"
+ awzai_adj:0 "Awza'i"
+ awzai_adherent:0 "Awza'i"
+ awzai_adherent_plural:0 "Awza'is"
+ awzai_desc:0 "Named for Abd al-Rahman al-Awza'i (d. 774), the scholar of Baalbek and Beirut, the Awza'i school was for generations the main school of Syria. It was also followed in al-Andalus until al-Hakam I ordered the rulings of Malik to be used instead. Its founder is remembered for pleading against the forced removal of the Christians of Mount Lebanon. In the tenth century the judges of Damascus favoured the Shafi'i school, and by the eleventh century the Awza'is had vanished."
+
+ #Jarirism
+ jariri:0 "Jarirism"
+ jariri_adj:0 "Jariri"
+ jariri_adherent:0 "Jariri"
+ jariri_adherent_plural:0 "Jariris"
+ jariri_desc:0 "Muhammad ibn Jarir al-Tabari of Baghdad (d. 923), the historian and commentator on the Quran, founded a school of his own rather than follow another man's. The Jariris stress independent reasoning (ijtihad) over imitation, restrict consensus to what the Companions agreed on, and condemn juristic preference (istihsan), which set them against the Hanafis. Crowds of Baghdad Hanbalis were hostile to al-Tabari, and he was buried quietly at night. The school flourished for about two centuries after him and then faded."
+
+ #Thawrism
+ thawri:0 "Thawrism"
+ thawri_adj:0 "Thawri"
+ thawri_adherent:0 "Thawri"
+ thawri_adherent_plural:0 "Thawris"
+ thawri_desc:0 "Sufyan al-Thawri of Kufa (d. 778) was among the greatest hadith scholars of his age and one of its most austere men, who refused the gifts and offices of governors and spent his last years in hiding. His school, the Thawriyya, taught a law grounded in tradition and personal renunciation, and kept followers in Iraq and beyond for some generations before it was absorbed into the other schools."
+
+ #Laythism
+ laythi:0 "Laythism"
+ laythi_adj:0 "Laythi"
+ laythi_adherent:0 "Laythi"
+ laythi_adherent_plural:0 "Laythis"
+ laythi_desc:0 "Al-Layth ibn Sa'd (d. 791), a wealthy and open-handed jurist of Fustat, was the leading scholar of Egypt in his day, and the school that bore his name governed the law of the Nile valley for a time. It is reported that al-Shafi'i thought him the better jurist than Malik, but that his students failed to preserve his teaching. Egypt turned to the Maliki and Shafi'i schools in the generations that followed, and the Laythiyya dwindled into a memory."
+
+ #Nasirism
+ nasiri:0 "Nasirism"
+ nasiri_adj:0 "Nasiri"
+ nasiri_adherent:0 "Nasiri"
+ nasiri_adherent_plural:0 "Nasiris"
+ nasiri_desc:0 "The Nasiriyya follow al-Hasan al-Utrush, al-Nasir li'l-Haqq (c. 844-917), the Alid imam who preached to the unconverted Daylamites and Gilites north of the Alborz, founded mosques among them, and in 914 restored Zaydi rule in Tabaristan. The peoples he converted took his name for their form of Zaydism, which differs in practice from that of the Qasimiyya, the followers of Qasim ibn Ibrahim in Tabaristan. His tomb at Amul is a place of pilgrimage, and his descendants keep the name al-Nasir."
+
+ #Hamzism
+ hamzite:0 "Hamzism"
+ hamzite_adj:0 "Hamzi"
+ hamzite_adherent:0 "Hamzi"
+ hamzite_adherent_plural:0 "Hamzis"
+ hamzite_desc:0 "The Hamziyya are the followers of Hamza ibn Adharak (d. 828), a man of landholding stock from southern Afghanistan who raised the standard of Kharijism in Sistan about 795, took the title of Commander of the Faithful, and for thirty years was the leading Kharijite of the East. Counted among the Ajarida, the milder wing of the Kharijites, they nonetheless fought the Abbasids and rival Kharijite bands with equal zeal, sacking Bayhaq and killing tax collectors. Harun al-Rashid marched against Hamza in 808 and died the next year without defeating him."
+

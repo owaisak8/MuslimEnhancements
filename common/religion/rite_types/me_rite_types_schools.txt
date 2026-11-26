@@ -1,0 +1,206 @@
+﻿# Schools & Branches: the lesser madhhabs and branches (from the Madhabs submod).
+# New Rites only. Nothing here redefines another Rite or faith.
+#
+# Tenets: every tenet below is Permitted, or part of the main Rite's core, for the faith that holds the Rite
+# (see history/faiths/00_islam.txt), so the new Rites are accepted Rites of their faith and not heresies.
+# Two exceptions are only Known for the Sunni faith: Unrelenting Faith (Zahiri) and, since 1.10.0,
+# Pursuit of Knowledge (Jariri). Each adds a little divergence; neither makes the Rite a heresy.
+# No two Sunni Rites share the same three tenets (see also me_rite_types_sunni_madhhabs.txt).
+# Doctrines follow the pattern of the existing Rites of the same faith.
+#
+#   Sunni faith          zahiri, awzai, jariri, thawri, laythi
+#   Zaydi faith          nasiri
+#   Kharijite faith      hamzite
+
+		####### SUNNISM - MADHHABS #######
+zahiri = { # The Zahiri (Dawudi) school of Dawud al-Zahiri and Ibn Hazm: the plain sense of the text, no qiyas, no taqlid
+	name = zahiri
+	desc = zahiri_desc
+	faith = sunni
+
+	color = { 0.55 0.40 0.15 }
+	icon = islam_quran_09
+
+	tenets = {
+		tenet_literalism
+		tenet_legalism
+		tenet_unrelenting_faith # Dawud and Ibn Hazm broke with every other school and conceded nothing to qiyas or taqlid
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		doctrine_pluralism_fundamentalist
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+awzai = { # The Awza'i school of al-Awza'i of Beirut: the law of Syria and, for a time, of al-Andalus
+	name = awzai
+	desc = awzai_desc
+	faith = sunni
+
+	color = { 0.75 0.25 0.55 }
+	icon = islam_khatim_03
+
+	tenets = {
+		tenet_struggle_submission # The frontier ribat against Byzantium
+		tenet_legalism
+		tenet_adaptive # Al-Awza'i's leniency towards the dhimmi
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		doctrine_pluralism_pluralistic
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+jariri = { # The Jariri school of Ibn Jarir al-Tabari: independent reasoning over imitation
+	name = jariri
+	desc = jariri_desc
+	faith = sunni
+
+	color = { 0.45 0.30 0.55 }
+	icon = islam_rub_el_hizb_knot_03
+
+	tenets = {
+		tenet_pursuit_of_knowledge
+		tenet_religious_legal_pronouncements
+		tenet_legalism
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+thawri = { # The Thawri school of Sufyan al-Thawri of Kufa: hadith and renunciation
+	name = thawri
+	desc = thawri_desc
+	faith = sunni
+
+	color = { 0.65 0.45 0.35 }
+	icon = islam_prayermat_04
+
+	tenets = {
+		tenet_asceticism
+		tenet_inner_journey
+		tenet_legalism
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		doctrine_pluralism_pluralistic
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+laythi = { # The Laythi school of al-Layth ibn Sa'd of Fustat: the lost law of Egypt
+	name = laythi
+	desc = laythi_desc
+	faith = sunni
+
+	color = { 0.40 0.55 0.80 }
+	icon = islam_alhamdulillah_03
+
+	tenets = {
+		tenet_legalism
+		tenet_communal_identity # The generosity and local custom ('amal ahl Misr) of the Egyptian jurist
+		tenet_religious_legal_pronouncements
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_sunni_doctrine
+		doctrine_temporal_head
+		islam_secondary_group_sunni_orthodox_doctrine # Sunni - Orthodox
+		special_doctrine_jizya
+	}
+}
+
+		####### ZAYDISM #######
+nasiri = { # The Nasiriyya: the Zaydism of the Daylamites and Gilites, after al-Nasir li'l-Haqq al-Utrush
+	name = nasiri
+	desc = nasiri_desc
+	faith = zayidi
+
+	color = { 0.15 0.60 0.50 }
+	icon = islam_zulfiqar_02
+
+	tenets = {
+		tenet_struggle_submission
+		tenet_legalism
+		tenet_religious_legal_pronouncements
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_shia_doctrine
+		doctrine_witchcraft_shunned
+		doctrine_pluralism_pluralistic
+		islam_secondary_group_shia_orthodox_doctrine # Shia - Orthodox
+		special_doctrine_jizya
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+		####### KHARIJISM #######
+hamzite = { # The Hamziyya: the Ajarida Kharijites of Sistan and Khorasan, after Hamza ibn Adharak
+	name = hamzite
+	desc = hamzite_desc
+	faith = kharijite
+
+	color = { 0.45 0.55 0.65 }
+	icon = islam_takbir_05
+
+	tenets = {
+		tenet_struggle_submission
+		tenet_literalism
+		tenet_warmonger
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted # as every Rite of the mod has since CK3 1.21
+		muhammad_succession_muhakkima_doctrine
+		doctrine_temporal_head # Hamza took the title of Commander of the Faithful
+		doctrine_witchcraft_shunned
+		islam_secondary_group_muhakkima_moderate_doctrine # Muhakkima - Moderate
+		special_doctrine_jizya
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}

@@ -195,6 +195,48 @@ me_rite_editing_marks = {
 				set_variable = { name = me_historical_rite value = yes }
 			}
 		}
+		rite:awzai ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:hamzite ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:jariri ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:laythi ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:nasiri ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:thawri ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
+		rite:zahiri ?= { # Schools & Branches
+			if = {
+				limit = { NOT = { has_variable = me_historical_rite } }
+				set_variable = { name = me_historical_rite value = yes }
+			}
+		}
 		faith:sadr_al_islam ?= {
 			if = {
 				limit = { NOT = { has_variable = me_law_faith } }

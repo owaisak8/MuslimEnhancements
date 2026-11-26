@@ -1,0 +1,10 @@
+﻿me_schools_placement = { # Whether the new Rites of Schools & Branches are placed on the map at game start
+	categories = {
+		historicity faith
+	}
+
+	default = me_schools_placement_historical
+
+	me_schools_placement_historical = {}
+	me_schools_placement_none = {}
+}

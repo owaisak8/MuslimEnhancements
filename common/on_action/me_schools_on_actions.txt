@@ -1,0 +1,56 @@
+﻿# Schools & Branches: starting placement of the lesser madhhabs and branches (game rule me_schools_placement).
+# on_game_start is merged with the other files that hook it.
+
+on_game_start = {
+	on_actions = { me_schools_starting_placement }
+}
+
+# Starting placement (game rule me_schools_placement). A county is only changed if it already follows the matching faith
+# (or, for the Nasiri and Hamzite, the matching Rite), so no county ever changes faith.
+me_schools_starting_placement = {
+	effect = {
+		if = {
+			limit = { has_game_rule = me_schools_placement_historical }
+
+			### Awza'i - the main school of Syria until the tenth century (gone by the eleventh)
+			if = {
+				limit = { game_start_date = 867.1.1 }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_damascus TO = awzai }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_baalbek TO = awzai }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_beirut TO = awzai }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_homs TO = awzai }
+			}
+
+			### Zahiri - the Balearics, the western Algarve and Niebla of Ibn Hazm; the judges of Fars
+			if = {
+				limit = { game_start_date = 1066.9.15 }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_mallorca TO = zahiri }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_menorca TO = zahiri }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_niebla TO = zahiri }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_silves TO = zahiri }
+			}
+			if = {
+				limit = { game_start_date >= 1066.9.15 }
+				me_schools_sunni_county_rite_effect = { COUNTY = c_shiraz TO = zahiri }
+			}
+
+			### Nasiri - the Zaydi counties that al-Utrush's converts left behind in Daylam and Tabaristan
+			if = {
+				limit = { game_start_date >= 1066.9.15 }
+				me_schools_convert_county_rite_effect = { COUNTY = c_gilan FROM = zayidi TO = nasiri }
+				me_schools_convert_county_rite_effect = { COUNTY = c_mazandaran FROM = zayidi TO = nasiri }
+				me_schools_convert_county_rite_effect = { COUNTY = c_ruyan FROM = zayidi TO = nasiri }
+				me_schools_convert_county_rite_effect = { COUNTY = c_baduspan FROM = zayidi TO = nasiri }
+				me_schools_convert_county_rite_effect = { COUNTY = c_talish FROM = zayidi TO = nasiri }
+				me_schools_convert_county_rite_effect = { COUNTY = c_gurgan FROM = zayidi TO = nasiri }
+			}
+
+			### Hamzite - the Kharijites of Sistan and Herat, in place of the Azariqa Muslim Enhancements gives them
+			me_schools_convert_county_rite_effect = { COUNTY = c_nih FROM = azariqa TO = hamzite }
+			me_schools_convert_county_rite_effect = { COUNTY = c_farah FROM = azariqa TO = hamzite }
+			me_schools_convert_county_rite_effect = { COUNTY = c_herat FROM = azariqa TO = hamzite }
+			me_schools_convert_county_rite_effect = { COUNTY = c_badghis FROM = azariqa TO = hamzite }
+			me_schools_convert_county_rite_effect = { COUNTY = c_bakharz FROM = azariqa TO = hamzite }
+		}
+	}
+}

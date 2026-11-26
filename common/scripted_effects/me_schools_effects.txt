@@ -1,0 +1,27 @@
+﻿# Schools & Branches
+# Helpers for the starting placement of the new Rites. Both only ever change a county that already follows the right
+# faith, so a wrong or missing county key, or a county that a start date gives to another faith, is simply left alone.
+
+# Scope: none. Moves a county from one named Rite to another named Rite.
+# $COUNTY$ = county title key (e.g. c_gilan), $FROM$ = Rite the county must have now, $TO$ = Rite it receives.
+me_schools_convert_county_rite_effect = {
+	if = {
+		limit = {
+			exists = title:$COUNTY$
+			title:$COUNTY$.rite = rite:$FROM$
+		}
+		title:$COUNTY$ = { set_county_rite = rite:$TO$ }
+	}
+}
+
+# Scope: none. Gives a Sunni county a Rite of the Sunni faith. A county of any other faith is never touched.
+# $COUNTY$ = county title key (e.g. c_mallorca), $TO$ = Rite it receives.
+me_schools_sunni_county_rite_effect = {
+	if = {
+		limit = {
+			exists = title:$COUNTY$
+			title:$COUNTY$.faith = faith:sunni
+		}
+		title:$COUNTY$ = { set_county_rite = rite:$TO$ }
+	}
+}
