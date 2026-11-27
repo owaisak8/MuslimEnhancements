@@ -1,0 +1,81 @@
+﻿# ME: rulers of Multan and Makran missing from the history.
+
+### The Isma'ili emirs of Multan (959-1010)
+# Sources: al-Biruni; al-Maqdisi; Stern, "Isma'ili Propaganda and Fatimid Rule in Sind" (1949); the Emirate of Multan.
+
+me_multan_jalam = { # Jalam ibn Shayban, the Fatimid da'i who took Multan in about 959; still alive about 985
+	name = "Jalam"
+	rite = ismaili
+	culture = bedouin
+	trait = education_learning_3
+	trait = zealous
+	trait = ambitious
+	910.1.1 = {
+		birth = yes
+	}
+	986.1.1 = {
+		death = yes
+	}
+}
+
+me_multan_hamid = { # Shaykh Hamid, Jalam's successor (985-997); his origins are disputed
+	name = "Hamid"
+	dynasty = me_multan_hamidid
+	rite = ismaili
+	culture = bedouin
+	trait = education_diplomacy_2
+	trait = patient
+	925.1.1 = {
+		birth = yes
+	}
+	997.1.1 = {
+		death = yes
+	}
+}
+
+me_multan_nasr = { # Nasr, Hamid's son and Dawud's father; died before his father
+	name = "Nasr"
+	dynasty = me_multan_hamidid
+	rite = ismaili
+	culture = bedouin
+	father = me_multan_hamid
+	945.1.1 = {
+		birth = yes
+	}
+	995.1.1 = {
+		death = yes
+	}
+}
+
+me_multan_dawud = { # Abu'l-Fath Dawud ibn Nasr, emir of Multan; forced by Mahmud of Ghazna to abjure in 1006, imprisoned at Ghurak after his revolt of 1010
+	name = "Dawud"
+	dynasty = me_multan_hamidid
+	rite = ismaili
+	culture = bedouin
+	father = me_multan_nasr
+	trait = education_martial_2
+	trait = stubborn
+	trait = zealous
+	965.1.1 = {
+		birth = yes
+	}
+	1025.1.1 = {
+		death = yes # died in captivity; the year is not known
+	}
+}
+
+### Makran in 867
+me_makran_khariji_01 = { # Fictional. al-Mas'udi reports that the Kharijites held Makran before the Ma'danids rose there
+	name = "Hafs"
+	rite = azariqa
+	culture = brahui
+	trait = education_martial_2
+	trait = wrathful
+	trait = zealous
+	820.1.1 = {
+		birth = yes
+	}
+	885.1.1 = {
+		death = yes
+	}
+}

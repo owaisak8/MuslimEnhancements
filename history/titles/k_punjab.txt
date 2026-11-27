@@ -167,6 +167,15 @@ d_multan = {
 
 	# 863-985: banu Sama rule
 
+	959.1.1 = {
+		holder = me_multan_jalam # ME: Jalam ibn Shayban, Fatimid da'i; Multan becomes Isma'ili
+	}
+	985.1.1 = {
+		holder = me_multan_hamid # ME: Shaykh Hamid (origin disputed)
+	}
+	997.1.1 = {
+		holder = me_multan_dawud # ME: Abu'l-Fath Dawud ibn Nasr, grandson of Hamid
+	}
 	985.1.1 = {
 		liege = k_sindh
 	}
@@ -176,6 +185,12 @@ d_multan = {
 	1008.4.1 = {
 		liege = k_kabulistan
 		# holder = Sukhpal, Ghaznavid governor
+	}
+	1010.1.1 = {
+		holder = 144125 # ME: Mahmud of Ghazna imprisons Dawud at Ghurak and annexes Multan
+	}
+	1030.1.1 = {
+		holder = 144127 # ME: Mas'ud
 	}
 	1035.1.1 = {
 		holder = ghaznavid_vassal_1
@@ -265,8 +280,17 @@ c_multan = {
 
 	# 750-863: Abbasid governors
 
-	863.1.1 = {
-		holder = 178016
+	861.1.1 = {
+		holder = 188532 # ME: Muhammad ibn al-Qasim ibn Munabbih, emir of Multan; the emirs ruled from the city itself
+	}
+	959.1.1 = {
+		holder = me_multan_jalam # ME: Jalam ibn Shayban, Fatimid da'i, takes Multan for the Isma'ilis
+	}
+	985.1.1 = {
+		holder = me_multan_hamid # ME: Shaykh Hamid
+	}
+	997.1.1 = {
+		holder = me_multan_dawud # ME: Abu'l-Fath Dawud, Hamid's grandson
 	}
 
 	866.1.1 = {
@@ -281,6 +305,12 @@ c_multan = {
 	1008.4.1 = {
 		liege = k_kabulistan
 		# holder = Sukhpal, Ghaznavid governor - revolts
+	}
+	1010.1.1 = {
+		holder = 144125 # ME: Mahmud of Ghazna imprisons Dawud and annexes Multan
+	}
+	1030.1.1 = {
+		holder = 144127 # ME: Mas'ud
 	}
 	1035.1.1 = {
 		holder = ghaznavid_vassal_1

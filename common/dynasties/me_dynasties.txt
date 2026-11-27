@@ -760,3 +760,8 @@ me_hawazin_dynasty = {
 	name = "dynn_me_al_Hawazini"
 	culture = "bedouin"
 }
+
+me_multan_hamidid = { # ME: Shaykh Hamid and Abu'l-Fath Dawud, Isma'ili emirs of Multan
+	name = "dynn_me_multan_hamidid"
+	culture = "bedouin"
+}

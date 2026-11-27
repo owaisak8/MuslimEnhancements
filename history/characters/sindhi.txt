@@ -292,7 +292,7 @@ extra_habbaris_6 = {
 
 188355 = {
 	name = "Hamun"
-	dynasty = 214004 # Sumra
+	dynasty = 1042090 # Sumra (ME: one house with Khafif I, Bhungar I and Dodo I)
 	female = yes
 	rite = "shafii"
 	culture = "sindhi"
@@ -306,8 +306,9 @@ extra_habbaris_6 = {
 }
 
 188356 = {
-	name = "Umar" # name made up
-	dynasty = 214004 # Sumra
+	name = "Soomar" # ME: Umar I is "bin Soomar bin Dodo I" in the Soomra lists
+	father = 188352 # ME: Dodo I
+	dynasty = 1042090 # Sumra (ME: one house with Khafif I, Bhungar I and Dodo I)
 	rite = "shafii"
 	culture = "sindhi"
 	1066.1.1 = {
@@ -320,7 +321,7 @@ extra_habbaris_6 = {
 
 188357 = {
 	name = "Khafif" # the II
-	dynasty = 214004 # Sumra (sister-in-law of last Sumra)
+	dynasty = 1042090 # Sumra (ME: one house with Khafif I, Bhungar I and Dodo I)
 	rite = "shafii"
 	culture = "sindhi"
 	father = 188356
@@ -334,7 +335,7 @@ extra_habbaris_6 = {
 
 188358 = {
 	name = "Umar"
-	dynasty = 214004 # Sumra (sister-in-law of last Sumra)
+	dynasty = 1042090 # Sumra (ME: one house with Khafif I, Bhungar I and Dodo I)
 	rite = "shafii"
 	culture = "sindhi"
 	father = 188356
@@ -348,10 +349,10 @@ extra_habbaris_6 = {
 
 188359 = {
 	name = "Doda" # the II
-	dynasty = 214004 # Sumra
+	dynasty = 1042090 # Sumra (ME: one house with Khafif I, Bhungar I and Dodo I)
 	rite = "shafii"
 	culture = "sindhi"
-	father = 188358 # flimsy conjecture, probably a usurper
+	father = 188357 # ME: Dodo II bin Khafif II, as the Soomra lists give him
 	1148.1.1 = {
 		birth = yes
 	}

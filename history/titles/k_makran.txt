@@ -14,7 +14,7 @@ k_makran = {
 	}
 
 	#Saffarid
-	861.1.1 = {
+	861.1.1 = { # ME: the Saffarid realm (Sistan lies in this kingdom); Makran proper stays with the Kharijites in 867
 		holder = 163101
 	}
 	977.1.1 = {
@@ -38,6 +38,22 @@ d_makran = {
 		liege = 0
 	}
 
+	861.1.1 = {
+		holder = me_makran_khariji_01 # ME: fictional; al-Mas'udi says Makran was in the hands of the Kharijites
+	}
+	900.1.1 = {
+		holder = 0
+	}
+	1010.1.1 = {
+		liege = k_kabulistan
+		holder = 188544 # ME: Ma'dan, Ma'danid mahraj of Makran
+	}
+	1025.1.1 = {
+		holder = 188545 # ME: Isa
+	}
+	1031.1.1 = {
+		holder = 188546 # ME: Abu'l-Askar Husayn
+	}
 	1066.1.1 = {
 		liege = k_kabulistan
 		holder = 188546
@@ -57,8 +73,8 @@ c_panjgur = {
 		holder = 188605
 	}
 	861.1.1 = {
-		liege = k_makran
-		holder = 163164 # Amr of Makran
+		liege = 0
+		holder = me_makran_khariji_01 # ME: in place of Amr ibn al-Layth, who never held Makran
 	}
 
 	# Independence for most of the 900s under b Ahmad family and Azariqas
@@ -137,8 +153,8 @@ c_panjgur = {
 c_kiz = {
 	867.1.1 = {
 		government = clan_government
-		holder = 302700	#Placeholder Feraz
-		liege = k_makran
+		holder = me_makran_khariji_01 # ME: Kiz, the seat of Makran, under the Kharijites (fictional ruler)
+		liege = 0
 	}
 
 	977.1.1 = {
@@ -218,8 +234,8 @@ c_kiz = {
 c_sanij = {
 	867.1.1 = {
 		government = tribal_government
-		holder = 163164	#Amr Saffarid
-		liege = k_makran
+		holder = me_makran_khariji_01 # ME: in place of Amr ibn al-Layth, who never held Makran
+		liege = 0
 	}
 
 	977.1.1 = {
