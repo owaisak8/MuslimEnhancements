@@ -45,6 +45,18 @@ me_schools_starting_placement = {
 				me_schools_convert_county_rite_effect = { COUNTY = c_gurgan FROM = zayidi TO = nasiri }
 			}
 
+			### Rustaqi - Rustaq and the Batina, after the schism over Imam al-Salt ibn Malik (886)
+			if = {
+				limit = { game_start_date >= 1066.9.15 }
+				me_schools_convert_county_rite_effect = { COUNTY = c_batina FROM = ibadi TO = rustaqi }
+			}
+
+			### Mutarrifi - the hijras around San'a, from Mutarrif ibn Shihab's time until Imam Abd Allah ibn Hamza
+			if = {
+				limit = { game_start_date >= 1066.9.15 }
+				me_schools_convert_county_rite_effect = { COUNTY = c_sanaa FROM = zayidi TO = mutarrifi }
+			}
+
 			### Hamzite - the Kharijites of Sistan and Herat, in place of the Azariqa Muslim Enhancements gives them
 			me_schools_convert_county_rite_effect = { COUNTY = c_nih FROM = azariqa TO = hamzite }
 			me_schools_convert_county_rite_effect = { COUNTY = c_farah FROM = azariqa TO = hamzite }

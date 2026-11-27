@@ -9,8 +9,12 @@
 # Doctrines follow the pattern of the existing Rites of the same faith.
 #
 #   Sunni faith          zahiri, awzai, jariri, thawri, laythi
-#   Zaydi faith          nasiri
+#   Zaydi faith          nasiri, mutarrifi
 #   Kharijite faith      hamzite
+#   Ibadi faith          rustaqi, khalafi
+#   Isma'ili faith       satpanth
+#   Ghulat faith         mushashai
+#   Alevi faith          hurufi
 
 		####### SUNNISM - MADHHABS #######
 zahiri = { # The Zahiri (Dawudi) school of Dawud al-Zahiri and Ibn Hazm: the plain sense of the text, no qiyas, no taqlid
@@ -190,6 +194,227 @@ hamzite = { # The Hamziyya: the Ajarida Kharijites of Sistan and Khorasan, after
 		doctrine_witchcraft_shunned
 		islam_secondary_group_muhakkima_moderate_doctrine # Muhakkima - Moderate
 		special_doctrine_jizya
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+		####### ZAYDISM (continued) #######
+mutarrifi = { # The Mutarrifiyya of Yemen, after Mutarrif ibn Shihab (11th century): ascetic hijra communities, crushed by Imam Abd Allah ibn Hamza
+	name = mutarrifi
+	desc = mutarrifi_desc
+	faith = zayidi
+
+	color = { 0.35 0.55 0.25 }
+	icon = islam_prayermat_06
+
+	tenets = {
+		tenet_asceticism # The hijras: settlements of prayer, study and withdrawal from the world
+		tenet_legalism
+		tenet_religious_legal_pronouncements
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_shia_doctrine
+		doctrine_witchcraft_shunned
+		doctrine_pluralism_pluralistic
+		islam_secondary_group_shia_orthodox_doctrine # Shia - Orthodox
+		special_doctrine_jizya
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+		####### IBADISM #######
+rustaqi = { # The Rustaqi school of Oman: held the deposition of Imam al-Salt ibn Malik (886) unlawful and dissociated from those who did it
+	name = rustaqi
+	desc = rustaqi_desc
+	faith = ibadi
+
+	color = { 0.55 0.35 0.55 }
+	icon = islam_quran_05
+
+	tenets = {
+		tenet_literalism
+		tenet_legalism
+		tenet_unrelenting_faith # Strict walaya and bara'a: no suspension of judgement on the deposers
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_muhakkima_doctrine
+		doctrine_witchcraft_shunned
+		islam_secondary_group_muhakkima_moderate_doctrine # Muhakkima - Moderate
+		special_doctrine_jizya
+		special_doctrine_is_ibadi_faith # Ibadi Hostility doctrine
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+khalafi = { # The Khalafiyya of Tripolitania, after Khalaf ibn al-Samh (9th century), who claimed a separate imamate against the Rustamids
+	name = khalafi
+	desc = khalafi_desc
+	faith = ibadi
+
+	color = { 0.45 0.25 0.35 }
+	icon = islam_tuareg_03
+
+	tenets = {
+		tenet_literalism
+		tenet_pursuit_of_power # An imamate of Tripolitania's own, not Tahert's
+		tenet_communal_identity
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_muhakkima_doctrine
+		doctrine_witchcraft_shunned
+		islam_secondary_group_muhakkima_moderate_doctrine # Muhakkima - Moderate
+		special_doctrine_jizya
+		special_doctrine_is_ibadi_faith # Ibadi Hostility doctrine
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+		####### ISMA'ILISM #######
+satpanth = { # Satpanth, the Nizari da'wa of Sindh, Multan and Gujarat taught by the pirs in the ginans; the faith of the Khojas
+	name = satpanth
+	desc = satpanth_desc
+	faith = shia
+
+	color = { 0.55 0.75 0.20 }
+	icon = islam_flower_06
+
+	tenets = {
+		tenet_esotericism
+		tenet_mendicant_preachers # The pirs and their da'is
+		tenet_eastern_syncretism # Ali as the tenth avatar, in the language of the Hindu world around it
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_shia_doctrine
+		doctrine_clerical_succession_spiritual_fixed_appointment
+		doctrine_clerical_function_recruitment
+		islam_secondary_group_shia_orthodox_doctrine
+		special_doctrine_jizya
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+		####### GHULAT #######
+mushashai = { # The Musha'sha'iyya of Khuzistan, after Muhammad ibn Falah (1436), who proclaimed himself the veil of the Mahdi
+	name = mushashai
+	desc = mushashai_desc
+	faith = ghulat
+
+	color = { 0.60 0.30 0.20 }
+	icon = islam_zulfiqar_09
+
+	tenets = {
+		tenet_struggle_submission
+		tenet_esotericism
+		tenet_reincarnation # Hulul: Ali's spirit dwelling in the leader
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_zandaqa_doctrine
+		doctrine_witchcraft_shunned
+		islam_secondary_group_zandaqa_ghulat_doctrine # Zandaqa - Ghulat
+		special_doctrine_jizya
+	}
+
+	localization = {
+		PriestMale = islam_shia_priest
+		PriestMalePlural = islam_shia_priest_plural
+		PriestFemale = islam_shia_priest
+		PriestFemalePlural = islam_shia_priest_plural
+		PriestNeuter = islam_shia_priest
+		PriestNeuterPlural = islam_shia_priest_plural
+		ReligiousHeadName = islam_shia_religious_head_title
+		ReligiousHeadNameFemale = islam_shia_religious_head_title
+		ReligiousHeadTitleName = islam_shia_religious_head_title_name
+	}
+}
+
+		####### ALEVISM #######
+hurufi = { # Hurufism, after Fadlallah Astarabadi (d. 1394): the mysticism of letters, carried by Nesimi and the Bektashis
+	name = hurufi
+	desc = hurufi_desc
+	faith = alevi
+
+	color = { 0.30 0.45 0.60 }
+	icon = islam_khatim_filled_04
+
+	tenets = {
+		tenet_esotericism
+		tenet_inner_journey
+		tenet_gnosticism # God revealed in the thirty-two letters and in the face of man
+	}
+
+	doctrines = {
+		doctrine_diet_unrestricted
+		muhammad_succession_zandaqa_doctrine
+		doctrine_adultery_women_crime
+		doctrine_adultery_men_crime
+		doctrine_witchcraft_shunned
+		doctrine_clerical_gender_male_only
+		islam_secondary_group_zandaqa_ghulat_doctrine # Zandaqa - Ghulat
 	}
 
 	localization = {

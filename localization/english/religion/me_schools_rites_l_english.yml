@@ -50,3 +50,45 @@
  hamzite_adherent_plural:0 "Hamzis"
  hamzite_desc:0 "The Hamziyya are the followers of Hamza ibn Adharak (d. 828), a man of landholding stock from southern Afghanistan who raised the standard of Kharijism in Sistan about 795, took the title of Commander of the Faithful, and for thirty years was the leading Kharijite of the East. Counted among the Ajarida, the milder wing of the Kharijites, they nonetheless fought the Abbasids and rival Kharijite bands with equal zeal, sacking Bayhaq and killing tax collectors. Harun al-Rashid marched against Hamza in 808 and died the next year without defeating him."
 
+
+ #Mutarrifism
+ mutarrifi:0 "Mutarrifism"
+ mutarrifi_adj:0 "Mutarrifi"
+ mutarrifi_adherent:0 "Mutarrifi"
+ mutarrifi_adherent_plural:0 "Mutarrifis"
+ mutarrifi_desc:0 "The Mutarrifiyya were a Zaydi movement of Yemen named for Mutarrif ibn Shihab of the eleventh century. They taught that God created the four elements and that the rest of the world arises from their mixing and transformation, and they lived in hijras, settlements of prayer, study and withdrawal from the world, the best known at Waqash near San'a. Other Zaydis called their teaching unbelief, and in the early thirteenth century Imam Abd Allah ibn Hamza destroyed their hijras and put many of them to death."
+
+ #Rustaqism
+ rustaqi:0 "Rustaqism"
+ rustaqi_adj:0 "Rustaqi"
+ rustaqi_adherent:0 "Rustaqi"
+ rustaqi_adherent_plural:0 "Rustaqis"
+ rustaqi_desc:0 "In 886 the Omani Ibadi Imam al-Salt ibn Malik was deposed by Musa ibn Musa and his party, and the Ibadis of Oman split over the deed for centuries afterwards. The school of Rustaq held the deposition unlawful and required every Ibadi to dissociate (bara'a) from those who carried it out; the school of Nizwa preferred to suspend judgement. The quarrel over who deserved walaya and who bara'a divided the imamates and tribes of Oman long after its authors were dead."
+
+ #Khalafism
+ khalafi:0 "Khalafism"
+ khalafi_adj:0 "Khalafi"
+ khalafi_adherent:0 "Khalafi"
+ khalafi_adherent_plural:0 "Khalafis"
+ khalafi_desc:0 "The Khalafiyya followed Khalaf ibn al-Samh, grandson of the Ibadi imam Abu al-Khattab al-Ma'afiri, who governed Tripolitania for the Rustamids and in the ninth century refused to obey the imam at Tahert, claiming that the Ibadis of Tripolitania were entitled to an imam of their own. The Ibadis of Jabal Nafusa fought him for the Rustamids and defeated him, but his followers lived on as a separate community in southern Tripolitania for generations."
+
+ #Satpanth
+ satpanth:0 "Satpanth"
+ satpanth_adj:0 "Satpanthi"
+ satpanth_adherent:0 "Satpanthi"
+ satpanth_adherent_plural:0 "Satpanthis"
+ satpanth_desc:0 "Satpanth, the True Path, is the Nizari Isma'ili teaching carried to Sindh, Multan and Gujarat by the pirs, among them Pir Shams and Pir Sadr al-Din. Their ginans, devotional hymns in Sindhi, Gujarati and Punjabi, speak to a Hindu world in its own language: Ali is the awaited tenth avatar of Vishnu, and the Imam of the age is the guide of the True Path. Its followers, the Khojas, look to the Nizari Imam in Persia."
+
+ #Musha'sha'ism
+ mushashai:0 "Musha'sha'ism"
+ mushashai_adj:0 "Musha'sha'i"
+ mushashai_adherent:0 "Musha'sha'i"
+ mushashai_adherent_plural:0 "Musha'sha'is"
+ mushashai_desc:0 "In 1436 Sayyid Muhammad ibn Falah, a student of the Twelver scholars of Hilla, proclaimed himself the veil of the Hidden Imam among the Arab tribes of the Khuzistan marshes. His followers, the Musha'sha'iyya, took Hoveyzeh and raided as far as Najaf; his son Mawla Ali went further and taught that the spirit of Ali dwelt in him. Their state endured in Khuzistan for generations, and the Twelver scholars who had taught their founder condemned them as ghulat."
+
+ #Hurufism
+ hurufi:0 "Hurufism"
+ hurufi_adj:0 "Hurufi"
+ hurufi_adherent:0 "Hurufi"
+ hurufi_adherent_plural:0 "Hurufis"
+ hurufi_desc:0 "Fadlallah Astarabadi taught that God is revealed in the thirty-two letters of the Persian alphabet and in the lines of the human face, the true image of the Divine. Executed on the orders of Timur's son Miranshah in 1394, he left disciples who carried his teaching across Persia and Anatolia, among them the poet Nesimi, flayed at Aleppo for his verses. Hurufi ideas lived on among the Bektashi dervishes."
