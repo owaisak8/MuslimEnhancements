@@ -1,0 +1,243 @@
+﻿# ME: historical courtiers of Sistan, Khurasan, Ghazna, Lahore and Nishapur at the start dates.
+# Each serves the court where he lived or worked at that date, and can be invited to other courts like any courtier.
+
+me_east_ibn_wasif = { # Muhammad ibn Wasif al-Sijzi, secretary of Ya'qub al-Saffar; wrote the earliest known New Persian court poem
+	name = "Muhammad"
+	give_nickname = nick_me_ibn_wasif
+	rite = shafii
+	culture = persian
+	trait = education_learning_3
+	trait = lifestyle_poet
+	trait = diligent
+	trait = gregarious
+	830.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163101 # Ya'qub al-Saffar, Zaranj
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+me_east_bassam_kurd = { # Bassam-i Kurd, a Kharijite who went over to Ya'qub al-Saffar and praised him in Persian verse
+	name = "Bassam"
+	give_nickname = nick_me_al_kurd
+	rite = azariqa
+	culture = kurdish
+	trait = education_martial_2
+	trait = lifestyle_poet
+	trait = brave
+	trait = zealous
+	830.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163101 # Ya'qub al-Saffar, Zaranj
+	}
+	890.1.1 = {
+		death = yes
+	}
+}
+
+me_east_muslim = { # Muslim ibn al-Hajjaj al-Qushayri of Nishapur (d. 875), compiler of the Sahih
+	name = "Muslim"
+	give_nickname = nick_me_ibn_al_hajjaj
+	rite = shafii
+	culture = bedouin
+	trait = education_learning_4
+	trait = diligent
+	trait = honest
+	trait = patient
+	821.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163100 # the Tahirid governor of Khurasan, Nishapur
+	}
+	875.5.6 = {
+		death = yes
+	}
+}
+
+me_east_yahya_razi = { # Yahya ibn Mu'adh al-Razi (d. 872), the preacher of hope who died in Nishapur
+	name = "Yahya"
+	give_nickname = nick_me_al_razi_sufi
+	rite = shafii
+	culture = persian
+	trait = education_learning_3
+	trait = lifestyle_mystic
+	trait = compassionate
+	trait = gregarious
+	815.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163100 # the Tahirid governor of Khurasan, Nishapur
+	}
+	872.1.1 = {
+		death = yes
+	}
+}
+
+me_east_abu_hafs = { # Abu Hafs Umar al-Haddad of Nishapur (d. c. 879), blacksmith and master of the Malamatiyya
+	name = "Umar"
+	give_nickname = nick_me_al_haddad
+	rite = shafii
+	culture = persian
+	trait = education_learning_3
+	trait = lifestyle_mystic
+	trait = humble
+	trait = diligent
+	800.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163100 # the Tahirid governor of Khurasan, Nishapur
+	}
+	879.1.1 = {
+		death = yes
+	}
+}
+
+me_east_hamdun = { # Hamdun al-Qassar of Nishapur (d. 884), the bleacher, teacher of the 'path of blame' (Malamatiyya)
+	name = "Hamdun"
+	give_nickname = nick_me_al_qassar
+	rite = shafii
+	culture = persian
+	trait = education_learning_3
+	trait = lifestyle_mystic
+	trait = humble
+	trait = temperate
+	810.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163100 # the Tahirid governor of Khurasan, Nishapur
+	}
+	884.1.1 = {
+		death = yes
+	}
+}
+
+me_east_bayhaqi = { # Abu'l-Fadl Bayhaqi (995-1077), secretary of the Ghaznavid chancery and author of the Tarikh-i Bayhaqi
+	name = "Muhammad"
+	give_nickname = nick_me_bayhaqi
+	rite = hanafi
+	culture = persian
+	trait = education_stewardship_4
+	trait = lifestyle_scholar
+	trait = diligent
+	trait = honest
+	995.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 144133 # Sultan Ibrahim of Ghazna
+	}
+	1077.1.1 = {
+		death = yes
+	}
+}
+
+me_east_runi = { # Abu'l-Faraj Runi, court poet of Sultan Ibrahim of Ghazna, from Lahore
+	name = "Faraj"
+	give_nickname = nick_me_runi
+	rite = hanafi
+	culture = persian
+	trait = education_learning_3
+	trait = lifestyle_poet
+	trait = ambitious
+	trait = gregarious
+	1035.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 144133 # Sultan Ibrahim of Ghazna
+	}
+	1095.1.1 = {
+		death = yes
+	}
+}
+
+me_east_masud_sad = { # Mas'ud-i Sa'd-i Salman (1046-1121), the Lahore-born poet, later famous for the verses he wrote in prison
+	name = "Mas_ud"
+	give_nickname = nick_me_sad_i_salman
+	rite = hanafi
+	culture = persian
+	trait = education_learning_2
+	trait = lifestyle_poet
+	trait = ambitious
+	trait = impatient
+	1046.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = ghaznavid_vassal_3 # the Ghaznavid governor of Lahore
+	}
+	1121.1.1 = {
+		death = yes
+	}
+}
+
+me_east_juwayni = { # Abd al-Malik al-Juwayni, Imam al-Haramayn (1028-1085), Shafi'i jurist and Ash'ari theologian, head of the Nizamiyya of Nishapur
+	name = "Abd_al-Malik"
+	give_nickname = nick_me_imam_al_haramayn
+	rite = shafii
+	culture = persian
+	trait = education_learning_5
+	trait = diligent
+	trait = calm
+	trait = zealous
+	1028.2.12 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 3040 # Sultan Alp Arslan, whose vizier Nizam al-Mulk built him the Nizamiyya
+	}
+	1085.8.20 = {
+		death = yes
+	}
+}
+
+me_east_attar = { # Farid al-Din Attar of Nishapur (c. 1145-1221), pharmacist and poet, author of the Conference of the Birds
+	name = "Muhammad"
+	give_nickname = nick_me_attar
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = lifestyle_poet
+	trait = lifestyle_mystic
+	trait = compassionate
+	1145.1.1 = {
+		birth = yes
+	}
+	1178.10.1 = {
+		employer = muayyadid_2 # Toghanshah, ruler of Nishapur
+	}
+	1221.4.1 = {
+		death = yes
+	}
+}
+
+me_east_chishti = { # Mu'in al-Din Hasan Chishti (1143-1236), born in Sistan; later founded the Chishti order in India at Ajmer
+	name = "Hasan"
+	give_nickname = nick_me_chishti
+	rite = hanafi
+	culture = persian
+	trait = education_learning_4
+	trait = lifestyle_mystic
+	trait = humble
+	trait = generous
+	trait = sayyid # a Hasani and Husayni sayyid by his family's tradition
+	1143.1.1 = {
+		birth = yes
+	}
+	1178.10.1 = {
+		employer = 93276 # Taj al-Din Harab, Nasrid ruler of Sistan
+	}
+	1236.3.15 = {
+		death = yes
+	}
+}

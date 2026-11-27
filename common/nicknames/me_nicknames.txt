@@ -71,6 +71,20 @@ nick_me_ibn_anas = {}
 nick_me_al_shafii = {}
 nick_me_ibn_hanbal = {}
 nick_me_ibn_nafi = {} # Uqba ibn Nafi
+
+##Historical courtiers of the East (history/characters/me_courtiers_east.txt)
+nick_me_ibn_wasif = {}
+nick_me_al_kurd = {}
+nick_me_ibn_al_hajjaj = {}
+nick_me_al_razi_sufi = {}
+nick_me_al_haddad = {}
+nick_me_al_qassar = {}
+nick_me_bayhaqi = {}
+nick_me_runi = {}
+nick_me_sad_i_salman = {}
+nick_me_imam_al_haramayn = {}
+nick_me_attar = {}
+nick_me_chishti = {}
 nick_me_ibn_al_hanafiyyah = {}
 nick_me_al_muthanna = {}
 nick_al_kamil = {}
