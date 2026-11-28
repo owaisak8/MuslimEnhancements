@@ -1,0 +1,195 @@
+﻿namespace = me_flavour
+
+#####
+# ME: flavour events for the Muslim world
+# 0001 - Khutba and sikka (me_khutba_sikka_decision)
+# 0002 - A madrasa is founded (me_found_madrasa_decision)
+# 0003 - The Mawlid (me_hold_mawlid_decision)
+# 0004 - A faqih arrives (me_invite_faqih_decision)
+#####
+
+# Khutba and sikka
+me_flavour.0001 = {
+	type = character_event
+	title = me_flavour.0001.t
+	desc = me_flavour.0001.desc
+	theme = realm
+	left_portrait = {
+		character = root
+		animation = personality_honorable
+	}
+	right_portrait = {
+		trigger = { exists = scope:me_hof }
+		character = scope:me_hof
+	}
+
+	immediate = {
+		faith.religious_head ?= {
+			if = {
+				limit = { NOT = { this = root } }
+				save_scope_as = me_hof
+			}
+		}
+		add_character_modifier = me_sikka_modifier
+	}
+
+	# The Head of Faith first, then me
+	option = {
+		name = me_flavour.0001.a
+		trigger = { exists = scope:me_hof }
+		scope:me_hof = {
+			add_opinion = {
+				target = root
+				modifier = me_named_in_khutba_opinion
+			}
+		}
+		add_piety = medium_piety_gain
+		add_prestige = minor_prestige_gain
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	# My name alone
+	option = {
+		name = me_flavour.0001.b
+		add_prestige = major_prestige_gain
+		if = {
+			limit = { exists = scope:me_hof }
+			scope:me_hof = {
+				add_opinion = {
+					target = root
+					modifier = me_left_out_of_khutba_opinion
+				}
+			}
+		}
+		stress_impact = {
+			humble = medium_stress_impact_gain
+		}
+		ai_chance = {
+			base = 25
+			modifier = {
+				add = 50
+				has_trait = ambitious
+			}
+		}
+	}
+}
+
+# A madrasa is founded
+me_flavour.0002 = {
+	type = character_event
+	title = me_flavour.0002.t
+	desc = me_flavour.0002.desc
+	theme = education
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+
+	# For my own school
+	option = {
+		name = me_flavour.0002.a
+		add_piety = medium_piety_gain
+		stress_impact = {
+			zealous = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# Chairs for all the schools, as at the Mustansiriyya
+	option = {
+		name = me_flavour.0002.b
+		add_prestige = minor_prestige_gain
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+# The Mawlid
+me_flavour.0003 = {
+	type = character_event
+	title = me_flavour.0003.t
+	desc = me_flavour.0003.desc
+	theme = faith
+	left_portrait = {
+		character = root
+		animation = happiness
+	}
+
+	# A festival for the whole city, as at Irbil
+	option = {
+		name = me_flavour.0003.a
+		capital_county ?= {
+			add_county_modifier = {
+				modifier = me_mawlid_county_modifier
+				years = 5
+			}
+		}
+		add_prestige = medium_prestige_gain
+		stress_impact = {
+			gregarious = medium_stress_impact_loss
+			shy = minor_stress_impact_gain
+		}
+		ai_chance = {
+			base = 60
+		}
+	}
+
+	# A quiet night of recitation of the Prophet's life
+	option = {
+		name = me_flavour.0003.b
+		add_piety = medium_piety_gain
+		stress_impact = {
+			humble = minor_stress_impact_loss
+		}
+		ai_chance = {
+			base = 40
+		}
+	}
+}
+
+# A faqih arrives. scope:new_faqih: the scholar
+me_flavour.0004 = {
+	type = character_event
+	title = me_flavour.0004.t
+	desc = me_flavour.0004.desc
+	theme = education
+	left_portrait = {
+		character = root
+		animation = personality_rational
+	}
+	right_portrait = {
+		character = scope:new_faqih
+		animation = personality_honorable
+	}
+
+	# Make him qadi of the capital
+	option = {
+		name = me_flavour.0004.a
+		add_piety = minor_piety_gain
+		scope:new_faqih = {
+			add_opinion = {
+				target = root
+				modifier = respect_opinion
+				opinion = 20
+			}
+		}
+		ai_chance = {
+			base = 50
+		}
+	}
+
+	# Let him teach the children of the court
+	option = {
+		name = me_flavour.0004.b
+		add_learning_lifestyle_xp = medium_lifestyle_xp
+		ai_chance = {
+			base = 50
+		}
+	}
+}

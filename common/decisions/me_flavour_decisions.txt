@@ -1,0 +1,218 @@
+﻿# ME: flavour decisions for the Muslim world, from al-Andalus to Sumatra (events/me_flavour_events.txt)
+
+# Khutba and sikka: the two marks of sovereignty. A ruler was named in the Friday sermon and on the coinage.
+me_khutba_sikka_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_muslim_leader.dds"
+	}
+	sort_order = 76
+
+	desc = me_khutba_sikka_decision_desc
+	selection_tooltip = me_khutba_sikka_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		is_independent_ruler = yes
+		highest_held_title_tier >= tier_duchy
+		NOT = { has_character_flag = me_khutba_sikka_done }
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = {
+			value = minor_gold_value
+		}
+	}
+
+	effect = {
+		add_character_flag = me_khutba_sikka_done
+		custom_tooltip = me_khutba_sikka_decision_effect_tooltip
+		trigger_event = me_flavour.0001
+	}
+
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 50
+	}
+}
+
+# Found a madrasa, as Nizam al-Mulk did with his Nizamiyyas and al-Mustansir with the Mustansiriyya of Baghdad.
+me_found_madrasa_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_quran_teacher.dds"
+	}
+	sort_order = 75
+
+	desc = me_found_madrasa_decision_desc
+	selection_tooltip = me_found_madrasa_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		highest_held_title_tier >= tier_duchy
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		custom_tooltip = {
+			text = me_found_madrasa_already_tt
+			capital_county ?= { NOT = { has_county_modifier = me_madrasa_county_modifier } }
+		}
+	}
+
+	cost = {
+		gold = {
+			value = major_gold_value
+		}
+	}
+
+	effect = {
+		capital_county ?= {
+			add_county_modifier = me_madrasa_county_modifier
+		}
+		trigger_event = me_flavour.0002
+	}
+
+	ai_potential = {
+		is_at_war = no
+		gold >= 500
+	}
+
+	ai_will_do = {
+		base = 10
+		modifier = {
+			add = 20
+			has_trait = zealous
+		}
+	}
+}
+
+# Hold the Mawlid, the Prophet's birthday: first kept at the Fatimid court, made a great public festival by Gokbori of Irbil.
+me_hold_mawlid_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/me_decision_ramadan.dds"
+	}
+	sort_order = 74
+
+	desc = me_hold_mawlid_decision_desc
+	selection_tooltip = me_hold_mawlid_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+		is_at_war = no
+	}
+
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+	}
+
+	cooldown = { years = 5 }
+
+	effect = {
+		trigger_event = me_flavour.0003
+	}
+
+	ai_potential = {
+		is_at_war = no
+	}
+
+	ai_will_do = {
+		base = 5
+		modifier = {
+			add = 15
+			has_trait = gregarious
+		}
+	}
+}
+
+# Invite a faqih from the heartlands: the scholars of Fez, Qayrawan, Cairo and Hadramawt who carried Islamic learning
+# to the courts of the Sahel, the Swahili coast, the Horn, India and the islands of the east.
+me_invite_faqih_decision = {
+	picture = {
+		reference = "gfx/interface/illustrations/decisions/decision_preacher.dds"
+	}
+	sort_order = 73
+
+	desc = me_invite_faqih_decision_desc
+	selection_tooltip = me_invite_faqih_decision_tooltip
+
+	ai_check_interval = 120
+
+	is_shown = {
+		is_landed = yes
+		faith.religion = religion:islam_religion
+		culture = {
+			NOR = {
+				has_cultural_pillar = heritage_arabic
+				has_cultural_pillar = heritage_iranian
+			}
+		}
+	}
+
+	is_valid_showing_failures_only = {
+		is_imprisoned = no
+		is_available_adult = yes
+	}
+
+	cost = {
+		gold = {
+			value = medium_gold_value
+		}
+	}
+
+	cooldown = { years = 5 }
+
+	effect = {
+		custom_tooltip = me_invite_faqih_decision_effect_tooltip
+		hidden_effect = {
+			if = {
+				limit = { rite = rite:maliki }
+				me_create_faqih_effect = { CULTURE = maghrebi }
+			}
+			else_if = {
+				limit = { rite = rite:shafii }
+				me_create_faqih_effect = { CULTURE = yemeni } # the Hadrami scholars of the Indian Ocean
+			}
+			else_if = {
+				limit = { rite = rite:hanafi }
+				me_create_faqih_effect = { CULTURE = persian }
+			}
+			else = {
+				me_create_faqih_effect = { CULTURE = egyptian }
+			}
+			trigger_event = me_flavour.0004
+		}
+	}
+
+	ai_potential = {
+		is_at_war = no
+		gold >= 150
+	}
+
+	ai_will_do = {
+		base = 10
+	}
+}

@@ -1,0 +1,18 @@
+﻿# ME: flavour decisions (common/decisions/me_flavour_decisions.txt)
+
+# Scope: the inviting ruler. CULTURE: the culture key of the scholar's homeland. Saves scope:new_faqih.
+me_create_faqih_effect = {
+	create_character = {
+		age = { 30 50 }
+		gender_female_chance = 0
+		location = root.capital_province
+		employer = root
+		faith = root.faith
+		rite = root.rite # a faqih of the ruler's own school
+		culture = culture:$CULTURE$
+		trait = education_learning_3
+		trait = erudite
+		learning = { 12 18 }
+		save_scope_as = new_faqih
+	}
+}

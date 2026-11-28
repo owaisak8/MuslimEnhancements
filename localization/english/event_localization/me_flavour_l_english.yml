@@ -1,0 +1,51 @@
+﻿l_english:
+ # Decisions
+ me_khutba_sikka_decision:0 "Proclaim the Khutba and Sikka"
+ me_khutba_sikka_decision_desc:0 "Two things make a Muslim ruler sovereign: the khutba, the Friday sermon in which he is named, and the sikka, the coins struck in his name. Every new dynasty from Cordoba to Ghazna announced itself in the mosque and at the mint."
+ me_khutba_sikka_decision_tooltip:0 "Have your name read in the Friday sermon and struck on your coins."
+ me_khutba_sikka_decision_effect_tooltip:0 "You decide whether the Head of Faith is named before you."
+ me_found_madrasa_decision:0 "Found a Madrasa"
+ me_found_madrasa_decision_desc:0 "A madrasa, endowed as a waqf with lodgings for its students and salaries for its teachers, trains the judges, preachers and secretaries of the realm. Nizam al-Mulk built one in every great city of the Seljuks, and in 1234 the Caliph al-Mustansir would found one in Baghdad with chairs for all four schools of law."
+ me_found_madrasa_decision_tooltip:0 "Endow a madrasa in your capital."
+ me_found_madrasa_already_tt:0 "Your capital already has a madrasa"
+ me_hold_mawlid_decision:0 "Hold the Mawlid"
+ me_hold_mawlid_decision_desc:0 "The birthday of the Prophet was first kept with ceremony at the Fatimid court of Cairo. Muzaffar al-Din Gokbori of Irbil made it a festival for the whole city, with processions, candles, sermons and feasts that drew visitors from across the region, though stricter scholars called the celebration an innovation."
+ me_hold_mawlid_decision_tooltip:0 "Celebrate the birthday of the Prophet."
+ me_invite_faqih_decision:0 "Invite a Faqih"
+ me_invite_faqih_decision_desc:0 "Far from the old centres of learning, a Muslim court needs men who know the law. Scholars from Fez and Qayrawan travelled to the courts of the Sahel; Hadrami jurists sailed the monsoon to Kilwa, Gujarat and Sumatra; teachers from Khurasan settled in the cities of Hind. A generous ruler can bring one to his court."
+ me_invite_faqih_decision_tooltip:0 "Bring a learned jurist of your school to your court."
+ me_invite_faqih_decision_effect_tooltip:0 "A learned faqih of your faith joins your court."
+
+ # Khutba and sikka
+ me_flavour.0001.t:0 "The Khutba and the Sikka"
+ me_flavour.0001.desc:0 "On Friday the preacher of the great mosque will climb the minbar and pray for the ruler of the age, and the mint has the new dies ready. All that remains is to decide whose name comes first."
+ me_flavour.0001.a:0 "The Commander of the Faithful first, then me."
+ me_flavour.0001.b:0 "My name, and mine alone."
+
+ # Madrasa
+ me_flavour.0002.t:0 "A Madrasa Founded"
+ me_flavour.0002.desc:0 "The endowment deed is sealed before the qadi: the revenues of shops and orchards will keep the madrasa for ever, its teachers paid and its students fed. Only one question remains: whose law will be taught there?"
+ me_flavour.0002.a:0 "The law of my own school."
+ me_flavour.0002.b:0 "Chairs for every school."
+
+ # Mawlid
+ me_flavour.0003.t:0 "The Mawlid"
+ me_flavour.0003.desc:0 "It is the twelfth of Rabi' al-Awwal. The preachers have prepared their sermons on the Prophet's birth, and the people wait to see how their ruler will honour the day."
+ me_flavour.0003.a:0 "Candles, processions and a feast for the whole city!"
+ me_flavour.0003.b:0 "A quiet night of recitation."
+
+ # Faqih
+ me_flavour.0004.t:0 "A Faqih Arrives"
+ me_flavour.0004.desc:0 "After a long journey, [new_faqih.GetTitledFirstName] has reached my court with his books: the works of his school, its commentaries and its collections of rulings. Few here have ever seen such a library."
+ me_flavour.0004.a:0 "Make him qadi of my capital."
+ me_flavour.0004.b:0 "Let him teach the children of the court."
+
+ # Modifiers and opinions
+ me_sikka_modifier:0 "Khutba and Sikka"
+ me_sikka_modifier_desc:0 "This ruler is named in the Friday sermon and on the coinage of the realm."
+ me_madrasa_county_modifier:0 "Madrasa"
+ me_madrasa_county_modifier_desc:0 "A madrasa endowed by the ruler trains the judges and preachers of the county."
+ me_mawlid_county_modifier:0 "The Great Mawlid"
+ me_mawlid_county_modifier_desc:0 "The people still speak of the Mawlid their ruler held here."
+ me_named_in_khutba_opinion:0 "Named me first in the khutba"
+ me_left_out_of_khutba_opinion:0 "Dropped my name from the khutba"

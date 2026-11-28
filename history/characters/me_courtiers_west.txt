@@ -1,0 +1,200 @@
+﻿# ME: historical courtiers of the Abbasid, Umayyad, Aghlabid, Fatimid and Ayyubid courts at the start dates.
+# Each serves the court where he lived or worked at that date, and can be invited to other courts like any courtier.
+
+me_west_buhturi = { # Abu Ubada al-Walid al-Buhturi (821-897), of the Tayyi', court poet of the caliphs at Samarra
+	name = "al-Walid"
+	give_nickname = nick_me_al_buhturi
+	rite = hanafi
+	culture = bedouin
+	trait = education_diplomacy_3
+	trait = lifestyle_poet
+	trait = ambitious
+	trait = gregarious
+	821.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 34014 # the Caliph al-Mu'tazz
+	}
+	897.1.1 = {
+		death = yes
+	}
+}
+
+me_west_ibn_firnas = { # Abbas ibn Firnas (810-887), poet, astronomer and inventor at the Umayyad court of Cordoba, remembered for his attempt at flight
+	name = "Abbas"
+	give_nickname = nick_me_ibn_firnas
+	rite = maliki
+	culture = andalusian
+	trait = education_learning_4
+	trait = lifestyle_poet
+	trait = ambitious
+	trait = diligent
+	trait = eccentric
+	810.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 73683 # Emir Muhammad I of Cordoba
+	}
+	887.1.1 = {
+		death = yes
+	}
+}
+
+me_west_ibn_waddah = { # Muhammad ibn Waddah (815-900), traditionist of Cordoba, grandson of a freedman of Abd al-Rahman I
+	name = "Muhammad"
+	give_nickname = nick_me_ibn_waddah
+	rite = maliki
+	culture = andalusian
+	trait = education_learning_4
+	trait = diligent
+	trait = temperate
+	815.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 73683 # Emir Muhammad I of Cordoba
+	}
+	900.1.1 = {
+		death = yes
+	}
+}
+
+me_west_baqi = { # Baqi ibn Makhlad (817-889), the traditionist of Cordoba whom the Emir protected from the Maliki jurists
+	name = "Baqi"
+	give_nickname = nick_me_ibn_makhlad
+	rite = maliki
+	culture = andalusian
+	trait = education_learning_4
+	trait = diligent
+	trait = stubborn
+	817.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 73683 # Emir Muhammad I of Cordoba
+	}
+	889.1.1 = {
+		death = yes
+	}
+}
+
+me_west_ibn_sahnun = { # Muhammad ibn Sahnun (817-870), Maliki jurist of Qayrawan and son of the author of the Mudawwana
+	name = "Muhammad"
+	give_nickname = nick_me_ibn_sahnun
+	rite = maliki
+	culture = maghrebi
+	trait = education_learning_4
+	trait = diligent
+	trait = just
+	817.1.1 = {
+		birth = yes
+	}
+	867.1.1 = {
+		employer = 163096 # the Aghlabid emir of Ifriqiya
+	}
+	870.1.1 = {
+		death = yes
+	}
+}
+
+me_west_muayyad = { # al-Mu'ayyad fi'l-Din al-Shirazi (c. 1000-1078), chief da'i of the Fatimid da'wa at Cairo
+	name = "Hibatullah"
+	give_nickname = nick_me_muayyad_fi_al_din
+	rite = ismaili
+	culture = persian
+	trait = education_learning_5
+	trait = lifestyle_poet
+	trait = zealous
+	trait = diligent
+	1000.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 3096 # the Caliph al-Mustansir
+	}
+	1078.1.1 = {
+		death = yes
+	}
+}
+
+me_west_abu_ishaq = { # Abu Ishaq al-Shirazi (1003-1083), Shafi'i jurist of Baghdad and first teacher of its Nizamiyya
+	name = "Ibrahim"
+	give_nickname = nick_me_al_shirazi
+	rite = shafii
+	culture = persian
+	trait = education_learning_5
+	trait = humble
+	trait = honest
+	trait = temperate
+	1003.1.1 = {
+		birth = yes
+	}
+	1066.1.1 = {
+		employer = 3084 # the Caliph al-Qa'im
+	}
+	1083.1.1 = {
+		death = yes
+	}
+}
+
+me_west_qadi_fadil = { # al-Qadi al-Fadil (1135-1200), Abd al-Rahim al-Baysani of Ascalon, head of Saladin's chancery
+	name = "Abd_al-Rahim"
+	give_nickname = nick_me_al_qadi_al_fadil
+	rite = shafii
+	culture = levantine
+	trait = education_stewardship_4
+	trait = diligent
+	trait = just
+	trait = calm
+	1135.1.1 = {
+		birth = yes
+	}
+	1178.10.1 = {
+		employer = 226000 # Saladin
+	}
+	1200.1.1 = {
+		death = yes
+	}
+}
+
+me_west_imad = { # Imad al-Din al-Isfahani (1125-1201), secretary and historian of Saladin
+	name = "Muhammad"
+	give_nickname = nick_me_al_katib
+	rite = shafii
+	culture = persian
+	trait = education_learning_4
+	trait = lifestyle_poet
+	trait = diligent
+	trait = gregarious
+	1125.1.1 = {
+		birth = yes
+	}
+	1178.10.1 = {
+		employer = 226000 # Saladin
+	}
+	1201.1.1 = {
+		death = yes
+	}
+}
+
+me_west_ibn_al_jawzi = { # Ibn al-Jawzi (c. 1116-1201), the Hanbali preacher of Baghdad, in high favour with the Caliph al-Mustadi
+	name = "Abdul-Rahman"
+	give_nickname = nick_me_ibn_al_jawzi
+	rite = hanbali
+	culture = bedouin
+	trait = education_learning_5
+	trait = zealous
+	trait = diligent
+	trait = arrogant
+	1116.1.1 = {
+		birth = yes
+	}
+	1178.10.1 = {
+		employer = 144064 # the Caliph al-Mustadi
+	}
+	1201.1.1 = {
+		death = yes
+	}
+}
