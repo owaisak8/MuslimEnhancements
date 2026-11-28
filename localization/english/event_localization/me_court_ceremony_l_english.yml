@@ -54,3 +54,7 @@
  me_received_khila_opinion:0 "Gave me a robe of honour"
  me_khila_troops_modifier:0 "Robes for the Horsemen"
  me_khila_troops_modifier_desc:0 "This character has clothed their warriors in robes of honour, each according to his rank."
+
+ # Abbasid Ahl al-Bayt
+ me_ahl_al_bayt_abbasid_house_modifier:0 "Ahl al-Bayt"
+ me_ahl_al_bayt_abbasid_house_modifier_desc:0 "The Abbasids descend from al-Abbas, the uncle of the Prophet, and are of the Banu Hashim. To the Sunni schools they are of the Prophet's household: al-Shafi'i counted the Banu Hashim and the Banu al-Muttalib as his family, and Ahmad ibn Hanbal named the descendants of al-Abbas among those to whom zakat is forbidden."

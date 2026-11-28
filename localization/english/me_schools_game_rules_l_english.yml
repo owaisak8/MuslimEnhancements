@@ -3,6 +3,6 @@
 
  rule_me_schools_placement:0 "@me_icon! Schools & Branches: Starting Placement"
  setting_me_schools_placement_historical:0 "Historical"
- setting_me_schools_placement_historical_desc:0 "A few counties begin with the new Rites where history puts them: Awza'i in Syria (867), Zahiri in the Balearics, Niebla and Silves (1066) and in Shiraz (1066 and later), Nasiri in the Zaydi counties of Daylam and Tabaristan (1066 and later), Mutarrifi around San'a (1066 and later), Rustaqi in the Batina of Oman (1066 and later), and Hamzite in the Kharijite counties of Sistan and Herat (867). Only counties that already follow the matching faith are changed."
+ setting_me_schools_placement_historical_desc:0 "A few counties begin with the new Rites where history puts them: Awza'i in Syria (867), Zahiri in Mansura, the Habbarid capital (867, in place of Isma'ilism, which only reached Sindh later), Zahiri in the Balearics, Niebla and Silves (1066) and in Shiraz (1066 and later), Nasiri in the Zaydi counties of Daylam and Tabaristan (1066 and later), Mutarrifi around San'a (1066 and later), Rustaqi in the Batina of Oman (1066 and later), and Hamzite in the Kharijite counties of Sistan and Herat (867). Only counties that already follow the matching faith are changed."
  setting_me_schools_placement_none:0 "None"
  setting_me_schools_placement_none_desc:0 "No county is changed at game start. The new Rites exist, but nobody follows them until play spreads them."

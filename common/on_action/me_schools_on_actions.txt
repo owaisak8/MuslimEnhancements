@@ -2,7 +2,22 @@
 # on_game_start is merged with the other files that hook it.
 
 on_game_start = {
-	on_actions = { me_schools_starting_placement }
+	on_actions = {
+		me_schools_starting_placement
+		me_abbasid_ahl_al_bayt
+	}
+}
+
+# The Abbasids are of the Ahl al-Bayt to the Sunni schools (al-Shafi'i, Ahmad ibn Hanbal); shown on their house.
+me_abbasid_ahl_al_bayt = {
+	effect = {
+		house:house_abbasid ?= {
+			if = {
+				limit = { NOT = { has_house_modifier = me_ahl_al_bayt_abbasid_house_modifier } }
+				add_house_modifier = { modifier = me_ahl_al_bayt_abbasid_house_modifier }
+			}
+		}
+	}
 }
 
 # Starting placement (game rule me_schools_placement). A county is only changed if it already follows the matching faith
@@ -19,6 +34,19 @@ me_schools_starting_placement = {
 				me_schools_sunni_county_rite_effect = { COUNTY = c_baalbek TO = awzai }
 				me_schools_sunni_county_rite_effect = { COUNTY = c_beirut TO = awzai }
 				me_schools_sunni_county_rite_effect = { COUNTY = c_homs TO = awzai }
+			}
+
+			### Zahiri - Mansura, seat of the Habbarid emirs of Sindh (al-Muqaddasi found its people Dawudi).
+			### In 867 the Isma'ili da'wa had not yet reached Sindh, so the county is Habbarid Zahiri rather than Isma'ili.
+			if = {
+				limit = { game_start_date = 867.1.1 }
+				if = {
+					limit = {
+						exists = title:c_mansura
+						title:c_mansura.rite = rite:ismaili
+					}
+					title:c_mansura = { set_county_rite = rite:zahiri }
+				}
 			}
 
 			### Zahiri - the Balearics, the western Algarve and Niebla of Ibn Hazm; the judges of Fars

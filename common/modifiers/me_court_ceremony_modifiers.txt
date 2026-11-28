@@ -24,3 +24,9 @@ me_futuwwa_initiate_modifier = { # A member of the futuwwa brotherhood
 	diplomacy = 1
 	monthly_prestige = 0.2
 }
+
+# ME: the Abbasids as Ahl al-Bayt, made explicit (Banu Hashim, through al-Abbas the uncle of the Prophet). House modifier.
+me_ahl_al_bayt_abbasid_house_modifier = {
+	icon = piety_positive
+	same_faith_opinion = 5
+}
